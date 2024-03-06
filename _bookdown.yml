@@ -1,4 +1,5 @@
 output_dir: "docs"
+book_filename: "estatistica"
 delete_merged_file: true
 language:
   ui:
