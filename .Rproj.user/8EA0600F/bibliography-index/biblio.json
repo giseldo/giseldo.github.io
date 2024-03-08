@@ -1,0 +1,431 @@
+{
+    "sources": [
+        {
+            "author": [
+                {
+                    "family": "Adlaon",
+                    "given": "Ritchie Bagcat"
+                }
+            ],
+            "id": "3_2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2012
+                    ]
+                ]
+            },
+            "publisher": "Louisiana State University; Agricultural & Mechanical College",
+            "title": "Assessing effectiveness of concept map as instructional tool in high school biology",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Novak",
+                    "given": "Joseph D"
+                },
+                {
+                    "family": "Gowin",
+                    "given": "D Bob"
+                }
+            ],
+            "id": "novak1984learning",
+            "issued": {
+                "date-parts": [
+                    [
+                        1984
+                    ]
+                ]
+            },
+            "publisher": "cambridge University press",
+            "title": "Learning how to learn",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Lucidchart"
+                }
+            ],
+            "id": "1_1",
+            "issued": {
+                "date-parts": [
+                    [
+                        1984
+                    ]
+                ]
+            },
+            "note": "Accessed: 2024-03-07",
+            "publisher": "https://www.lucidchart.com/pages/concept-map",
+            "title": "What is a concept map",
+            "type": ""
+        },
+        {
+            "author": [
+                {
+                    "family": "Learningcenter"
+                }
+            ],
+            "id": "1_2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2024
+                    ]
+                ]
+            },
+            "note": "Accessed: 2024-03-07",
+            "publisher": "https://learningcenter.unc.edu/tips-and-tools/using-concept-maps/",
+            "title": "Concept maps - learningcenter",
+            "type": ""
+        },
+        {
+            "author": [
+                {
+                    "family": "Ideascale"
+                }
+            ],
+            "id": "2_2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2024
+                    ]
+                ]
+            },
+            "note": "Accessed: 2024-03-07",
+            "publisher": "https://ideascale.com/blog/advantages-of-concept-maps/",
+            "title": "The advantages of concept maps - ideascale",
+            "type": ""
+        },
+        {
+            "author": [
+                {
+                    "family": "Lucidspark"
+                }
+            ],
+            "id": "2_3",
+            "issued": {
+                "date-parts": [
+                    [
+                        2024
+                    ]
+                ]
+            },
+            "note": "Accessed: 2024-03-07",
+            "publisher": "https://lucidspark.com/blog/what-is-a-concept-map",
+            "title": "What is a concept map? - lucidspark",
+            "type": ""
+        },
+        {
+            "author": [
+                {
+                    "family": "Mindmanager."
+                }
+            ],
+            "id": "2_4",
+            "issued": {
+                "date-parts": [
+                    [
+                        2024
+                    ]
+                ]
+            },
+            "note": "Accessed: 2024-03-07",
+            "publisher": "https://www.mindmanager.com/en/features/concept-map/",
+            "title": "Guide to concept mapping - mindmanager",
+            "type": ""
+        },
+        {
+            "author": [
+                {
+                    "family": "AFT"
+                }
+            ],
+            "id": "2_5",
+            "issued": {
+                "date-parts": [
+                    [
+                        2024
+                    ]
+                ]
+            },
+            "note": "Accessed: 2024-03-07",
+            "publisher": "https://www.aft.org/ae/spring2022/sundar",
+            "title": "Concept mapping - AFT",
+            "type": ""
+        },
+        {
+            "URL": "https://www.R-project.org/",
+            "author": [
+                {
+                    "literal": "R Core Team"
+                }
+            ],
+            "id": "R-base",
+            "issued": {
+                "date-parts": [
+                    [
+                        2024
+                    ]
+                ]
+            },
+            "publisher": "R Foundation for Statistical Computing",
+            "publisher-place": "Vienna, Austria",
+            "title": "R: A language and environment for statistical computing",
+            "title-short": "R",
+            "type": "book"
+        },
+        {
+            "URL": "https://github.com/rstudio/bookdown",
+            "author": [
+                {
+                    "family": "Xie",
+                    "given": "Yihui"
+                }
+            ],
+            "id": "R-bookdown",
+            "issued": {
+                "date-parts": [
+                    [
+                        2024
+                    ]
+                ]
+            },
+            "note": "R package version 0.38, https://pkgs.rstudio.com/bookdown/",
+            "title": "Bookdown: Authoring books and technical documents with r markdown",
+            "title-short": "Bookdown",
+            "type": "book"
+        },
+        {
+            "URL": "https://yihui.org/knitr/",
+            "author": [
+                {
+                    "family": "Xie",
+                    "given": "Yihui"
+                }
+            ],
+            "id": "R-knitr",
+            "issued": {
+                "date-parts": [
+                    [
+                        2023
+                    ]
+                ]
+            },
+            "note": "R package version 1.45",
+            "title": "Knitr: A general-purpose package for dynamic report generation in r",
+            "title-short": "Knitr",
+            "type": "book"
+        },
+        {
+            "URL": "https://github.com/rstudio/rmarkdown",
+            "author": [
+                {
+                    "family": "Allaire",
+                    "given": "JJ"
+                },
+                {
+                    "family": "Xie",
+                    "given": "Yihui"
+                },
+                {
+                    "family": "Dervieux",
+                    "given": "Christophe"
+                },
+                {
+                    "family": "McPherson",
+                    "given": "Jonathan"
+                },
+                {
+                    "family": "Luraschi",
+                    "given": "Javier"
+                },
+                {
+                    "family": "Ushey",
+                    "given": "Kevin"
+                },
+                {
+                    "family": "Atkins",
+                    "given": "Aron"
+                },
+                {
+                    "family": "Wickham",
+                    "given": "Hadley"
+                },
+                {
+                    "family": "Cheng",
+                    "given": "Joe"
+                },
+                {
+                    "family": "Chang",
+                    "given": "Winston"
+                },
+                {
+                    "family": "Iannone",
+                    "given": "Richard"
+                }
+            ],
+            "id": "R-rmarkdown",
+            "issued": {
+                "date-parts": [
+                    [
+                        2024
+                    ]
+                ]
+            },
+            "note": "R package version 2.26, https://pkgs.rstudio.com/rmarkdown/",
+            "title": "Rmarkdown: Dynamic documents for r",
+            "title-short": "Rmarkdown",
+            "type": "book"
+        },
+        {
+            "ISBN": "978-1138700109",
+            "URL": "https://bookdown.org/yihui/bookdown",
+            "author": [
+                {
+                    "family": "Xie",
+                    "given": "Yihui"
+                }
+            ],
+            "id": "bookdown2016",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016
+                    ]
+                ]
+            },
+            "publisher": "Chapman; Hall/CRC",
+            "publisher-place": "Boca Raton, Florida",
+            "title": "Bookdown: Authoring books and technical documents with R markdown",
+            "title-short": "Bookdown",
+            "type": "book"
+        },
+        {
+            "URL": "https://yihui.org/knitr/",
+            "author": [
+                {
+                    "family": "Xie",
+                    "given": "Yihui"
+                }
+            ],
+            "edition": "2nd",
+            "id": "knitr2015",
+            "issued": {
+                "date-parts": [
+                    [
+                        2015
+                    ]
+                ]
+            },
+            "note": "ISBN 978-1498716963",
+            "publisher": "Chapman; Hall/CRC",
+            "publisher-place": "Boca Raton, Florida",
+            "title": "Dynamic documents with R and knitr",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Xie",
+                    "given": "Yihui"
+                }
+            ],
+            "container-title": "Implementing reproducible computational research",
+            "editor": [
+                {
+                    "family": "Stodden",
+                    "given": "Victoria"
+                },
+                {
+                    "family": "Leisch",
+                    "given": "Friedrich"
+                },
+                {
+                    "family": "Peng",
+                    "given": "Roger D."
+                }
+            ],
+            "id": "knitr2014",
+            "issued": {
+                "date-parts": [
+                    [
+                        2014
+                    ]
+                ]
+            },
+            "note": "ISBN 978-1466561595",
+            "publisher": "Chapman; Hall/CRC",
+            "title": "Knitr: A comprehensive tool for reproducible research in R",
+            "title-short": "Knitr",
+            "type": "chapter"
+        },
+        {
+            "ISBN": "9781138359338",
+            "URL": "https://bookdown.org/yihui/rmarkdown",
+            "author": [
+                {
+                    "family": "Xie",
+                    "given": "Yihui"
+                },
+                {
+                    "family": "Allaire",
+                    "given": "J. J."
+                },
+                {
+                    "family": "Grolemund",
+                    "given": "Garrett"
+                }
+            ],
+            "id": "rmarkdown2018",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018
+                    ]
+                ]
+            },
+            "publisher": "Chapman; Hall/CRC",
+            "publisher-place": "Boca Raton, Florida",
+            "title": "R markdown: The definitive guide",
+            "title-short": "R markdown",
+            "type": "book"
+        },
+        {
+            "ISBN": "9780367563837",
+            "URL": "https://bookdown.org/yihui/rmarkdown-cookbook",
+            "author": [
+                {
+                    "family": "Xie",
+                    "given": "Yihui"
+                },
+                {
+                    "family": "Dervieux",
+                    "given": "Christophe"
+                },
+                {
+                    "family": "Riederer",
+                    "given": "Emily"
+                }
+            ],
+            "id": "rmarkdown2020",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "publisher": "Chapman; Hall/CRC",
+            "publisher-place": "Boca Raton, Florida",
+            "title": "R markdown cookbook",
+            "type": "book"
+        }
+    ],
+    "project_biblios": [
+        "book.bib",
+        "packages.bib"
+    ]
+}
