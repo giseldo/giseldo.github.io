@@ -1,6 +1,6 @@
 Title: Lista de LLMs
 Date: 2024-09-24 10:30
-Category: AM
+Category: Blog
 
 Uma lista de alguns LLMs
 

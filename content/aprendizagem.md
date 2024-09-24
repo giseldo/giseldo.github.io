@@ -1,6 +1,6 @@
 Title: Aprendizagem de Máquina
 Date: 2024-09-11 10:30
-Category: AM
+Category: Blog
 
 A aprendizagem de máquina (ou *machine learning*) é uma subárea da inteligência artificial (IA) que permite que sistemas de computadores aprendam a partir de dados e façam previsões ou tomem decisões sem serem explicitamente programados para isso. Em vez de seguir instruções rígidas, os algoritmos de aprendizagem de máquina analisam grandes volumes de dados, identificam padrões e ajustam seus comportamentos com base nas informações adquiridas.
 
