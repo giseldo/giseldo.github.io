@@ -1,8 +1,8 @@
-Title: Lista LLMs
+Title: Lista de LLMs
 Date: 2024-09-24 10:30
-Category: Blog
+Category: AM
 
-Uma lista de LLMs atualizada
+Uma lista de alguns LLMs
 
 | Nome  | Empresa   | Tamanho   |
 |-------------- | -------------- | -------------- |

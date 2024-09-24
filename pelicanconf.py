@@ -6,7 +6,7 @@ PATH = "content"
 
 TIMEZONE = 'Europe/Rome'
 
-OUTPUT_PATH='doc'
+OUTPUT_PATH='docs'
 
 DEFAULT_LANG = 'pt'
 
