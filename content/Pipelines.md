@@ -1,0 +1,3 @@
+# Pipelines
+
+O uso de pipelines...
