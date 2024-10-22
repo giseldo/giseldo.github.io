@@ -6,4 +6,4 @@ Um simples chatbot com LLM
 
 Auxilio na reescrita de texto
 
-[NeoTese](NeoTese.html)
+[NeoTese](neotese.html)
