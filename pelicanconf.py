@@ -1,6 +1,6 @@
 AUTHOR = 'Giseldo Neo'
 SITENAME = 'Giseldo Neo'
-SITEURL = "http://127.0.0.1:8000"
+SITEURL = "http://giseldo.github.io"
 
 PATH = "content"
 TIMEZONE = 'Europe/Rome'
