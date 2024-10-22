@@ -1,3 +1,0 @@
-Title: Sobre
-
-Giseldo Neo

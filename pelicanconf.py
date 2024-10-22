@@ -1,10 +1,18 @@
 AUTHOR = 'Giseldo Neo'
-SITENAME = 'GANEO'
-SITEURL = ""
+SITENAME = 'Giseldo Neo'
+SITEURL = "http://127.0.0.1:8000"
 
 PATH = "content"
-
 TIMEZONE = 'Europe/Rome'
+
+# Tema utilizado
+# https://kura.gg/eevee
+# Cores do Tema
+# https://getmdl.io/customize/index.html
+THEME = "eevee"
+
+THEME_PRIMARY = "indigo"
+THEME_ACCENT = "blue"
 
 OUTPUT_PATH='docs'
 
@@ -17,19 +25,24 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
+MENUITEMS = [
+    ("Blog", "/"),
+]
+
 # Blogroll
-# LINKS = (
+#LINKS = (
 #    ("Pelican", "https://getpelican.com/"),
-#    ("Python.org", "https://www.python.org/"),
-#    ("Jinja2", "https://palletsprojects.com/p/jinja/"),
 #)
 
 # Social widget
-#SOCIAL = (
-#    ("You can add links in your config file", "#"),
-#    ("Another social link", "#"),
-#)
+SOCIAL = (
+    ("Instagram", "https://www.instagram.com/neogiseldo"),
+    ("X", "https://x.com/giseldoneo"),
+    ("GitHub", "https://github.com/giseldoneo"),
+)
 
+DISCLAIMER = False
+COPYRIGHT = False
 DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing

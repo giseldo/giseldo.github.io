@@ -1,2 +1,3 @@
 Title: Sobre
-Giseldo Neo
+
+Giseldo Neo é um entusiasta da ciência da computação.

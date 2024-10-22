@@ -1,40 +1,329 @@
 <!DOCTYPE html>
 <html lang="pt">
-<head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="generator" content="Pelican" />
-        <title>Livros</title>
-        <link rel="stylesheet" href="/theme/css/main.css" />
+<head id="head">
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <link rel="alternate" href="http://127.0.0.1:8000" hreflang="pt" />
+<link rel="dns-prefetch" href="http://127.0.0.1:8000">
+<link rel="dns-prefetch" href="//code.getmdl.io">
+    <link rel="shortcut icon" href="http://127.0.0.1:8000/favicon.ico">
+    <title>Livros</title>
 </head>
+<!--
+    (The MIT License)
 
-<body id="index" class="home">
-        <header id="banner" class="body">
-                <h1><a href="/">GANEO</a></h1>
-                <nav><ul>
-                    <li class="active"><a href="/pages/livros.html">Livros</a></li>
-                    <li><a href="/pages/sobre.html">Sobre</a></li>
-                    <li><a href="/category/am.html">AM</a></li>
-                </ul></nav>
-        </header><!-- /#banner -->
-<section id="content" class="body">
-    <h1 class="entry-title">Livros</h1>
-    
-    <p>Regressao Linear com Aprendizagem de Máquina e Python
-<a href="https://">Amazon</a></p>
-<p>Vetorização de Texto com Python
-<a href="https://">Amazon</a></p>
-</section>
-        <section id="extras" class="body">
-        </section><!-- /#extras -->
+    Copyright (c) 2016 Kura
 
-        <footer id="contentinfo" class="body">
-                <address id="about" class="vcard body">
-                Proudly powered by <a rel="nofollow" href="https://getpelican.com/">Pelican</a>, which takes great advantage of <a rel="nofollow" href="https://www.python.org/">Python</a>.
-                </address><!-- /#about -->
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the 'Software'), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
 
-                <p>The theme is by <a rel="nofollow" href="https://www.smashingmagazine.com/2009/08/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
-        </footer><!-- /#contentinfo -->
+    The above copyright notice and this permission notice shall be included in all
+    copies or substantial portions of the Software.
 
+    THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+    SOFTWARE.
+-->
+<body>
+    <div class="eevee-layout mdl-layout mdl-js-layout mdl-color--grey-50">
+        <header class="eevee-header mdl-color--grey-50 mdl-color-text--grey-800"
+                itemscope itemtype="http://schema.org/WPHeader">
+            <div class="mdl-layout__header-row" id="top">
+                <div aria-expanded="false" role="button" tabindex="0"
+                     class="mdl-layout__drawer-button mdl-color-text--accent eevee-mobile-button mdl-layout--small-screen-only">
+                    <i class="material-icons">&#xE5D2;</i>
+                </div>
+                <span class="eevee-logo mdl-color-text--accent mdl-layout-title">
+                    <h2>
+                        <a href="http://127.0.0.1:8000" rel="bookmark"
+                           title="Giseldo Neo">
+                            Giseldo Neo
+                        </a>
+                    </h2>
+                </span>
+                <div class="mdl-layout-spacer" role="presentation"></div>
+                <nav class="eevee-nav mdl-navigation mdl-layout--large-screen-only"
+                     itemscope itemtype="http://schema.org/SiteNavigationElement"
+                     aria-label="Header navigation">
+    <a class="mdl-color-text--accent mdl-navigation__link"
+       href="/" itemprop="url" rel="bookmark">
+        Blog
+    </a>
+        <a class="mdl-color-text--accent mdl-navigation__link"
+           href="http://127.0.0.1:8000/pages/livros.html" itemprop="url"
+           rel="bookmark">
+            Livros
+        </a>
+        <a class="mdl-color-text--accent mdl-navigation__link"
+           href="http://127.0.0.1:8000/pages/pesquisas.html" itemprop="url"
+           rel="bookmark">
+            Pesquisas
+        </a>
+        <a class="mdl-color-text--accent mdl-navigation__link"
+           href="http://127.0.0.1:8000/pages/produtos.html" itemprop="url"
+           rel="bookmark">
+            Produtos
+        </a>
+        <a class="mdl-color-text--accent mdl-navigation__link"
+           href="http://127.0.0.1:8000/pages/sobre.html" itemprop="url"
+           rel="bookmark">
+            Sobre
+        </a>
+                </nav>
+            </div>
+        </header>
+        <div class="eevee-mobile-header mdl-layout__drawer mdl-color--white"
+             aria-hidden="true">
+            <span class="mdl-layout-title">
+                <h2 class="eevee-mobile-logo mdl-color-text--accent">
+                    Giseldo Neo
+                </h2>
+            </span>
+            <div class="mdl-navigation mdl-color--white">
+                <nav class="eevee-nav mdl-navigation" itemscope
+                     itemtype="http://schema.org/SiteNavigationElement"
+                     aria-label="Header navigation">
+                    <a class="mdl-color-text--accent mdl-navigation__link"
+                       href="http://127.0.0.1:8000" itemprop="url" rel="bookmark">
+                        Home
+                    </a>
+    <a class="mdl-color-text--accent mdl-navigation__link"
+       href="/" itemprop="url" rel="bookmark">
+        Blog
+    </a>
+        <a class="mdl-color-text--accent mdl-navigation__link"
+           href="http://127.0.0.1:8000/pages/livros.html" itemprop="url"
+           rel="bookmark">
+            Livros
+        </a>
+        <a class="mdl-color-text--accent mdl-navigation__link"
+           href="http://127.0.0.1:8000/pages/pesquisas.html" itemprop="url"
+           rel="bookmark">
+            Pesquisas
+        </a>
+        <a class="mdl-color-text--accent mdl-navigation__link"
+           href="http://127.0.0.1:8000/pages/produtos.html" itemprop="url"
+           rel="bookmark">
+            Produtos
+        </a>
+        <a class="mdl-color-text--accent mdl-navigation__link"
+           href="http://127.0.0.1:8000/pages/sobre.html" itemprop="url"
+           rel="bookmark">
+            Sobre
+        </a>
+                </nav>
+            </div>
+        </div>
+        <div class="eevee-ribbon mdl-color--primary-dark" role="presentation">
+        </div>
+        <main class="eevee-main mdl-layout__content">
+            <div class="eevee-container mdl-grid">
+                <div role="presentation"
+                     class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone">
+                </div>
+                <div class="eevee-content mdl-color--white mdl-shadow--4dp mdl-color-text--grey-800 mdl-cell mdl-cell--8-col"
+                     aria-label="Main content">
+    <article itemscope itemtype="http://schema.org/WebPage">
+<meta itemprop="accessibilityControl" content="fullKeyboardControl">
+<meta itemprop="accessibilityControl" content="fullMouseControl">
+<meta itemprop="accessibilityControl" content="bookmarks">
+<meta itemprop="accessibilityControl" content="captions">
+<meta itemprop="accessibilityControl" content="alternativeText">
+<meta itemprop="accessibilityControl" content="index">
+<meta itemprop="accessibilityControl" content="readingOrder">
+<meta itemprop="accessibilityControl" content="structuralNavigation">
+<meta itemprop="accessibilityControl" content="tableOfContents">
+<meta itemprop="accessibilityHazard" content="noFlashingHazard">
+<meta itemprop="accessibilityHazard" content="noMotionSimulationHazard">
+<meta itemprop="accessibilityHazard" content="noSoundHazard">
+<meta itemprop="accessibilityAPI" content="ARIA">
+    <div itemprop="author" itemscope
+         itemtype="https://schema.org/Person" role="presentation">
+        <a href="http://127.0.0.1:8000/author/giseldo-neo.html" class="hidden"
+           itemprop="url" role="presentation">
+            <span class="hidden" itemprop="name" role="presentation">
+                Giseldo Neo
+            </span>
+        </a>
+    </div>
+        <meta itemprop="keywords" content="pages">
+    <div class="eevee-meta eevee-share">
+        <div class="mdl-layout-spacer"></div>
+        <div>
+            <ul class="social-share mdl-navigation">
+                <li class="social-share__link social-share__link--twitter">
+                    <a href="https://twitter.com/intent/tweet?text=Livros&amp;url=http%3A//127.0.0.1%3A8000/pages/livros.html"
+                       title="Share 'Livros' on Twitter"
+                       onclick="window.open(this.href, 'twitter-share', 'width=550,height=235'); return false;">
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li class="social-share__link social-share__link--facebook">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//127.0.0.1%3A8000/pages/livros.html"
+                       title="Share 'Livros' on Facebook"
+                       onclick="window.open(this.href, 'facebook-share', 'width=580,height=296'); return false;">
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li class="social-share__link social-share__link--email">
+                    <a href="mailto:?subject=Livros&amp;body=Livros%20-%20http%3A//127.0.0.1%3A8000/pages/livros.html%0A%0ARegress%C3%A3o%20de%20Linear%20com%20Aprendizagem%20de%20M%C3%A1quina%20com%20Python%20Amazon%20Este%20livro%20tem%20como%20objetivo%20fornecer%20uma%20vis%C3%A3o%20inicial%20e%20objetiva%20sobre%20a%20teoria%20e%20a%20aplica%C3%A7%C3%A3o%20pr%C3%A1tica%20da%20regress%C3%A3o%20linear%20no%20contexto%20do%20aprendizado%20de%20m%C3%A1quina%20com%20python.%20Ele%20%C3%A9%20adequado%20para%20iniciantes%20que%20est%C3%A3o%20come%C3%A7ando%20sua%20jornada%20no%20%E2%80%A6' via email">
+                        <i class="material-icons" aria-hidden="true">&#xE0E1;</i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+        <div class="eevee-page-spacer" role="presentation"></div>
+        <div class="eevee-page">
+            <h1 itemprop="name">
+                <a href="http://127.0.0.1:8000/pages/livros.html" rel="bookmark"
+                   title="Permalink to 'Livros'"
+                   itemprop="url">
+                    Livros
+                </a>
+            </h1>
+            <section itemprop="mainContentOfPage" class="page-content">
+                <hr>
+<h1>Regressão de Linear com Aprendizagem de Máquina com Python</h1>
+<p><img alt="Regressão Linear" src="http://127.0.0.1:8000/images/livro/regressao.png"></p>
+<p><a href="https://www.amazon.com.br/gp/product/B0DCT4M7GH">Amazon</a></p>
+<p>Este livro tem como objetivo fornecer uma visão inicial e objetiva sobre a teoria e a aplicação prática da regressão linear no contexto do aprendizado de máquina com python. Ele é adequado para iniciantes que estão começando sua jornada no aprendizado de máquina e da regressão linear, mas que já conhecem o básico da linguagem python. Ao longo dos capítulos, apresentamos os conceitos e suposições da regressão até as aplicações e diagnósticos de modelos, passando por estudos de caso e o uso de bibliotecas de software utilizadas como Python e Scikit-learn. Os exercícios ao final de cada capítulo são elaborados para reforçar este aprendizado.</p>
+<hr>
+<h1>Processamento de Linguagem Natural: Vetorização de Texto com Python</h1>
+<p>O processamento de linguagem natural (PLN) tem se tornado cada vez mais relevante na era da informação, onde a habilidade de transformar dados textuais em insights acionáveis é crucial. Este livro oferece uma introdução concisa, porém abrangente, ao processo de vetorização de texto, uma técnica fundamental em PLN. Espero que este livro seja um ponto de partida útil para suas futuras explorações no mundo do processamento de linguagem natural.</p>
+<p><img alt="Vetorização" src="http://127.0.0.1:8000/images/livro/vetorizacao.png"></p>
+<p><a href="https://www.amazon.com.br/gp/product/B0DGB9W7MW">Amazon</a></p>
+            </section>
+        </div>
+    </article>
+                </div>
+            </div>
+        </main>
+            <div class="eevee-pagination__container eevee-container mdl-grid">
+                <div role="presentation"
+                     class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone">
+                </div>
+                <div class="mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
+<nav class="eevee-pagination mdl-cell mdl-cell--12-col" itemscope
+     itemtype="http://schema.org/SiteNavigationElement"
+     aria-label="Pagination">
+    <div class="eevee-spacer"></div>
+</nav>                </div>
+            </div>
+        <footer class="mdl-mega-footer" itemscope
+                itemtype="http://schema.org/SiteNavigationElement">
+            <div class="mdl-mega-footer--top-section">
+                <div class="mdl-mega-footer--drop-down-section">
+                    <ul class="mdl-mega-footer--link-list">
+                        <li>
+                            <a href="#top" itemprop="url"
+                               title="Back to the top of the page">
+                                Back to the top of the page
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+<div class="mdl-mega-footer--middle-section" itemscope
+     itemtype="http://schema.org/SiteNavigationElement"
+     aria-label="Footer navigation">
+    <div class="mdl-mega-footer--drop-down-section">
+        <h1 class="mdl-mega-footer--heading">Menu</h1>
+        <ul class="mdl-mega-footer--link-list">
+                <li>
+                    <a href="/" itemprop="url" rel="bookmark">
+                        Blog
+                    </a>
+                </li>
+                    <li>
+                        <a href="http://127.0.0.1:8000/pages/livros.html" itemprop="url"
+                           rel="bookmark">
+                            Livros
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://127.0.0.1:8000/pages/pesquisas.html" itemprop="url"
+                           rel="bookmark">
+                            Pesquisas
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://127.0.0.1:8000/pages/produtos.html" itemprop="url"
+                           rel="bookmark">
+                            Produtos
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://127.0.0.1:8000/pages/sobre.html" itemprop="url"
+                           rel="bookmark">
+                            Sobre
+                        </a>
+                    </li>
+        </ul>
+    </div>
+    <div class="mdl-mega-footer--drop-down-section">
+        <h1 class="mdl-mega-footer--heading">Categories</h1>
+        <ul class="mdl-mega-footer--link-list">
+                <li>
+                    <a href="http://127.0.0.1:8000/category/blog.html" itemprop="url"
+                       rel="bookmark">
+                        Blog
+                    </a>
+                </li>
+        </ul>
+    </div>
+    <div class="mdl-mega-footer--drop-down-section">
+        <h1 class="mdl-mega-footer--heading">Social</h1>
+        <ul class="mdl-mega-footer--link-list">
+                <li>
+                    <a href="https://www.instagram.com/neogiseldo" itemprop="url" rel="bookmark">
+                        Instagram
+                    </a>
+                </li>
+                <li>
+                    <a href="https://x.com/giseldoneo" itemprop="url" rel="bookmark">
+                        X
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/giseldoneo" itemprop="url" rel="bookmark">
+                        GitHub
+                    </a>
+                </li>
+        </ul>
+    </div>
+</div>            <div class="mdl-mega-footer--bottom-section">
+                <div class="mdl-logo">
+                    <a href="http://127.0.0.1:8000" rel="bookmark" itemprop="url"
+                       title="Giseldo Neo">
+                        Giseldo Neo
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <link rel="stylesheet"
+          href="//code.getmdl.io/1.1.3/material.indigo-blue.min.css">
+        <link rel="stylesheet" type="text/css"
+              href="http://127.0.0.1:8000/theme/css/font-awesome.css">
+        <link rel="stylesheet" type="text/css"
+              href="http://127.0.0.1:8000/theme/css/material-icons.css">
+        <link rel="stylesheet" type="text/css"
+              href="http://127.0.0.1:8000/theme/css/pygments.css">
+        <link rel="stylesheet" type="text/css"
+              href="http://127.0.0.1:8000/theme/css/eevee.css">
+        <link rel="stylesheet" type="text/css"
+              href="http://127.0.0.1:8000/theme/css/custom.css">
+        <script async src="http://127.0.0.1:8000/theme/js/material.js">
+        </script>
 </body>
 </html>
