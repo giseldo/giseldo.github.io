@@ -1,6 +1,6 @@
 AUTHOR = 'Giseldo Neo'
 SITENAME = 'Giseldo Neo'
-SITEURL = "http://giseldo.github.io"
+SITEURL = ""
 
 PATH = "content"
 TIMEZONE = 'Europe/Rome'
@@ -16,7 +16,7 @@ THEME_ACCENT = "blue"
 
 OUTPUT_PATH='docs'
 
-DEFAULT_LANG = 'pt'
+DEFAULT_LANG = 'en'
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
