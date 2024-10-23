@@ -1,5 +1,5 @@
 AUTHOR = 'Giseldo Neo'
-SITENAME = 'Giseldo Neo'
+SITENAME = 'NeoIA'
 SITEURL = ""
 
 PATH = "content"
@@ -9,7 +9,15 @@ TIMEZONE = 'Europe/Rome'
 # https://kura.gg/eevee
 # Cores do Tema
 # https://getmdl.io/customize/index.html
-THEME = "eevee"
+#THEME = "eevee"
+#THEME = "nikhil-theme"
+#THEME = "aboutwilson"
+#THEME = "chunk"
+#THEME = "genus"
+THEME = "MinimalXY"
+
+SITETITLE ="NeoIA"
+SITESUBTITLE = "Um Blog sobre Inteligência Artificial"
 
 THEME_PRIMARY = "indigo"
 THEME_ACCENT = "blue"
@@ -25,13 +33,19 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
-MENUITEMS = [
-    ("Blog", "/"),
-]
+#MENUITEMS = [
+#    ("Blog", "/"),
+#    ("Produtos", "/pages/produtos"),
+#    ("Livros", "/pages/livros"),
+#    ("Sobre", "/pages/sobre"),
+#]
 
 # Blogroll
 #LINKS = (
-#    ("Pelican", "https://getpelican.com/"),
+#    ("Produtos", "/pages/produtos"),
+#    ("Livros", "/pages/livros"),
+#    ("Sobre", "/pages/sobre"),
+#    ("Blog", "/"),
 #)
 
 # Social widget

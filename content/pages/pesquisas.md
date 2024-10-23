@@ -1,13 +1,7 @@
 Title: Pesquisas
 
-Grupo de Pesquisa GCI
+[Site do Grupo de Pesquisa GCI](https://sites.google.com/view/grupogci){:target="_blank"}
 
-O Grupo de Pesquisa GCI é um grupo de pesquisa da UFAL
-
-
-https://sites.google.com/view/grupogci
-
-***
 Áreas de Interesse
 
 * Inteligência Artificial
@@ -17,3 +11,6 @@ https://sites.google.com/view/grupogci
 * Engenharia de Software
 
 * Informática para educação
+
+
+

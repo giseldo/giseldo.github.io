@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <title>Capítulo 6 Aplicações Práticas | Vetorização de Texto com Python - Giseldo Neo</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" />
+    <!--<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" rel="stylesheet" />-->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="/theme/style.css" rel="stylesheet" />
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body id="index" class="archive">
+    <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="">Giseldo Neo</a>
+        </div>
+        <div class="collapse navbar-collapse navbar-right">
+          <ul class="nav navbar-nav">
+            <li><a href="/tags.html">tags</a></li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+    </nav>
+    <div class="container">
+    <section id="content" class="article content">
+      <header>
+        <h2 class="entry-title">
+          Capítulo 6 Aplicações Práticas | Vetorização de Texto com Python
+        </h2>
+        
+      </header>
+<!-- .entry-content -->
+      <div class="entry-content">
+        
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Vetorização de Texto com Python</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Informações Adicionais</a></li>
+<li class="chapter" data-level="" data-path="prefácio.html"><a href="prefácio.html"><i class="fa fa-check"></i>Prefácio</a></li>
+<li class="chapter" data-level="1" data-path="introdução-à-vetorização-de-texto.html"><a href="introdução-à-vetorização-de-texto.html"><i class="fa fa-check"></i><b>1</b> Introdução à Vetorização de Texto</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="introdução-à-vetorização-de-texto.html"><a href="introdução-à-vetorização-de-texto.html#conceito-de-vetorização-de-texto"><i class="fa fa-check"></i><b>1.1</b> Conceito de Vetorização de Texto</a></li>
+<li class="chapter" data-level="1.2" data-path="introdução-à-vetorização-de-texto.html"><a href="introdução-à-vetorização-de-texto.html#importância-na-análise-de-dados-e-aprendizado-de-máquina"><i class="fa fa-check"></i><b>1.2</b> Importância na Análise de Dados e Aprendizado de Máquina</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="introdução-à-vetorização-de-texto.html"><a href="introdução-à-vetorização-de-texto.html#exemplo-em-python"><i class="fa fa-check"></i><b>1.2.1</b> Exemplo em Python</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="introdução-à-vetorização-de-texto.html"><a href="introdução-à-vetorização-de-texto.html#aplicações-práticas"><i class="fa fa-check"></i><b>1.3</b> Aplicações Práticas</a></li>
+<li class="chapter" data-level="" data-path="introdução-à-vetorização-de-texto.html"><a href="introdução-à-vetorização-de-texto.html#exercícios"><i class="fa fa-check"></i>Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="preparação-do-ambiente.html"><a href="preparação-do-ambiente.html"><i class="fa fa-check"></i><b>2</b> Preparação do Ambiente</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="preparação-do-ambiente.html"><a href="preparação-do-ambiente.html#instalação-do-python"><i class="fa fa-check"></i><b>2.1</b> Instalação do Python</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="preparação-do-ambiente.html"><a href="preparação-do-ambiente.html#instalando-o-python"><i class="fa fa-check"></i><b>2.1.1</b> Instalando o Python</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="preparação-do-ambiente.html"><a href="preparação-do-ambiente.html#instalação-de-bibliotecas-necessárias"><i class="fa fa-check"></i><b>2.2</b> Instalação de Bibliotecas Necessárias</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="preparação-do-ambiente.html"><a href="preparação-do-ambiente.html#instalando-bibliotecas-com-pip"><i class="fa fa-check"></i><b>2.2.1</b> Instalando Bibliotecas com <code>pip</code></a></li>
+<li class="chapter" data-level="2.2.2" data-path="preparação-do-ambiente.html"><a href="preparação-do-ambiente.html#exemplo-em-python-verificando-instalações"><i class="fa fa-check"></i><b>2.2.2</b> Exemplo em Python: Verificando Instalações</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="preparação-do-ambiente.html"><a href="preparação-do-ambiente.html#introdução-ao-jupyter-notebook"><i class="fa fa-check"></i><b>2.3</b> Introdução ao Jupyter Notebook</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="preparação-do-ambiente.html"><a href="preparação-do-ambiente.html#instalando-o-jupyter-notebook"><i class="fa fa-check"></i><b>2.3.1</b> Instalando o Jupyter Notebook</a></li>
+<li class="chapter" data-level="2.3.2" data-path="preparação-do-ambiente.html"><a href="preparação-do-ambiente.html#exemplo-em-python-primeiros-passos-no-jupyter"><i class="fa fa-check"></i><b>2.3.2</b> Exemplo em Python: Primeiros Passos no Jupyter</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="preparação-do-ambiente.html"><a href="preparação-do-ambiente.html#exercícios-1"><i class="fa fa-check"></i>Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="pré-processamento-de-texto.html"><a href="pré-processamento-de-texto.html"><i class="fa fa-check"></i><b>3</b> Pré-processamento de Texto</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="pré-processamento-de-texto.html"><a href="pré-processamento-de-texto.html#limpeza-de-texto"><i class="fa fa-check"></i><b>3.1</b> Limpeza de Texto</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="pré-processamento-de-texto.html"><a href="pré-processamento-de-texto.html#exemplo-em-python-limpeza-de-texto"><i class="fa fa-check"></i><b>3.1.1</b> Exemplo em Python: Limpeza de Texto</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="pré-processamento-de-texto.html"><a href="pré-processamento-de-texto.html#tokenização"><i class="fa fa-check"></i><b>3.2</b> Tokenização</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="pré-processamento-de-texto.html"><a href="pré-processamento-de-texto.html#exemplo-em-python-tokenização"><i class="fa fa-check"></i><b>3.2.1</b> Exemplo em Python: Tokenização</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="pré-processamento-de-texto.html"><a href="pré-processamento-de-texto.html#lematização-e-stemming"><i class="fa fa-check"></i><b>3.3</b> Lematização e Stemming</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="pré-processamento-de-texto.html"><a href="pré-processamento-de-texto.html#exemplo-em-python-lematização-e-stemming"><i class="fa fa-check"></i><b>3.3.1</b> Exemplo em Python: Lematização e Stemming</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="pré-processamento-de-texto.html"><a href="pré-processamento-de-texto.html#exercícios-2"><i class="fa fa-check"></i>Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="vetorização-de-texto.html"><a href="vetorização-de-texto.html"><i class="fa fa-check"></i><b>4</b> Vetorização de Texto</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="vetorização-de-texto.html"><a href="vetorização-de-texto.html#bag-of-words-bow"><i class="fa fa-check"></i><b>4.1</b> Bag of Words (BoW)</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="vetorização-de-texto.html"><a href="vetorização-de-texto.html#exemplo-em-python-bag-of-words"><i class="fa fa-check"></i><b>4.1.1</b> Exemplo em Python: Bag of Words</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="vetorização-de-texto.html"><a href="vetorização-de-texto.html#term-frequency-inverse-document-frequency-tf-idf"><i class="fa fa-check"></i><b>4.2</b> Term Frequency-Inverse Document Frequency (TF-IDF)</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="vetorização-de-texto.html"><a href="vetorização-de-texto.html#exemplo-em-python-tf-idf"><i class="fa fa-check"></i><b>4.2.1</b> Exemplo em Python: TF-IDF</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="vetorização-de-texto.html"><a href="vetorização-de-texto.html#word-embeddings"><i class="fa fa-check"></i><b>4.3</b> Word Embeddings</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="vetorização-de-texto.html"><a href="vetorização-de-texto.html#exemplo-em-python-word2vec"><i class="fa fa-check"></i><b>4.3.1</b> Exemplo em Python: Word2Vec</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="vetorização-de-texto.html"><a href="vetorização-de-texto.html#exercícios-3"><i class="fa fa-check"></i>Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="modelos-avançados-de-vetorização.html"><a href="modelos-avançados-de-vetorização.html"><i class="fa fa-check"></i><b>5</b> Modelos Avançados de Vetorização</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="modelos-avançados-de-vetorização.html"><a href="modelos-avançados-de-vetorização.html#embeddings-contextuais"><i class="fa fa-check"></i><b>5.1</b> Embeddings Contextuais</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="modelos-avançados-de-vetorização.html"><a href="modelos-avançados-de-vetorização.html#exemplo-em-python-usando-bert-para-vetorização"><i class="fa fa-check"></i><b>5.1.1</b> Exemplo em Python: Usando BERT para Vetorização</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="modelos-avançados-de-vetorização.html"><a href="modelos-avançados-de-vetorização.html#análise-de-sentimento-com-embeddings"><i class="fa fa-check"></i><b>5.2</b> Análise de Sentimento com Embeddings</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="modelos-avançados-de-vetorização.html"><a href="modelos-avançados-de-vetorização.html#exemplo-em-python-classificação-de-sentimento-com-bert"><i class="fa fa-check"></i><b>5.2.1</b> Exemplo em Python: Classificação de Sentimento com BERT</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="modelos-avançados-de-vetorização.html"><a href="modelos-avançados-de-vetorização.html#redução-de-dimensionalidade"><i class="fa fa-check"></i><b>5.3</b> Redução de Dimensionalidade</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="modelos-avançados-de-vetorização.html"><a href="modelos-avançados-de-vetorização.html#exemplo-em-python-redução-de-dimensionalidade-com-pca"><i class="fa fa-check"></i><b>5.3.1</b> Exemplo em Python: Redução de Dimensionalidade com PCA</a></li>
+<li class="chapter" data-level="5.3.2" data-path="modelos-avançados-de-vetorização.html"><a href="modelos-avançados-de-vetorização.html#exemplo-em-python-redução-de-dimensionalidade-com-t-sne"><i class="fa fa-check"></i><b>5.3.2</b> Exemplo em Python: Redução de Dimensionalidade com t-SNE</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="modelos-avançados-de-vetorização.html"><a href="modelos-avançados-de-vetorização.html#exercício"><i class="fa fa-check"></i>Exercício</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="aplicações-práticas-1.html"><a href="aplicações-práticas-1.html"><i class="fa fa-check"></i><b>6</b> Aplicações Práticas</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="aplicações-práticas-1.html"><a href="aplicações-práticas-1.html#classificação-de-texto-análise-de-sentimento"><i class="fa fa-check"></i><b>6.1</b> Classificação de Texto: Análise de Sentimento</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="aplicações-práticas-1.html"><a href="aplicações-práticas-1.html#exemplo-em-python-classificação-de-texto-com-tf-idf-e-naive-bayes"><i class="fa fa-check"></i><b>6.1.1</b> Exemplo em Python: Classificação de Texto com TF-IDF e Naive Bayes</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="aplicações-práticas-1.html"><a href="aplicações-práticas-1.html#agrupamento-de-documentos"><i class="fa fa-check"></i><b>6.2</b> Agrupamento de Documentos</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="aplicações-práticas-1.html"><a href="aplicações-práticas-1.html#exemplo-em-python-agrupamento-com-k-means"><i class="fa fa-check"></i><b>6.2.1</b> Exemplo em Python: Agrupamento com k-means</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="aplicações-práticas-1.html"><a href="aplicações-práticas-1.html#detecção-de-tópicos"><i class="fa fa-check"></i><b>6.3</b> Detecção de Tópicos</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="aplicações-práticas-1.html"><a href="aplicações-práticas-1.html#exemplo-em-python-detecção-de-tópicos-com-lda"><i class="fa fa-check"></i><b>6.3.1</b> Exemplo em Python: Detecção de Tópicos com LDA</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="aplicações-práticas-1.html"><a href="aplicações-práticas-1.html#exercícios-4"><i class="fa fa-check"></i>Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="estudo-de-caso.html"><a href="estudo-de-caso.html"><i class="fa fa-check"></i><b>7</b> Estudo de Caso</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="estudo-de-caso.html"><a href="estudo-de-caso.html#análise-de-reviews-de-produtos"><i class="fa fa-check"></i><b>7.1</b> Análise de Reviews de Produtos</a>
+<ul>
+<li class="chapter" data-level="7.1.1" data-path="estudo-de-caso.html"><a href="estudo-de-caso.html#exemplo-em-python-análise-de-sentimentos-em-reviews-de-produtos"><i class="fa fa-check"></i><b>7.1.1</b> Exemplo em Python: Análise de Sentimentos em Reviews de Produtos</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="estudo-de-caso.html"><a href="estudo-de-caso.html#processamento-de-tweets"><i class="fa fa-check"></i><b>7.2</b> Processamento de Tweets</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="estudo-de-caso.html"><a href="estudo-de-caso.html#exemplo-em-python-análise-de-sentimentos-em-tweets"><i class="fa fa-check"></i><b>7.2.1</b> Exemplo em Python: Análise de Sentimentos em Tweets</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="estudo-de-caso.html"><a href="estudo-de-caso.html#análise-de-notícias"><i class="fa fa-check"></i><b>7.3</b> Análise de Notícias</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="estudo-de-caso.html"><a href="estudo-de-caso.html#exemplo-em-python-modelagem-de-tópicos-em-notícias"><i class="fa fa-check"></i><b>7.3.1</b> Exemplo em Python: Modelagem de Tópicos em Notícias</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="estudo-de-caso.html"><a href="estudo-de-caso.html#exercício-1"><i class="fa fa-check"></i>Exercício</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="próximos-passos.html"><a href="próximos-passos.html"><i class="fa fa-check"></i><b>8</b> Próximos Passos</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="próximos-passos.html"><a href="próximos-passos.html#futuras-direções-no-campo-de-vetorização-de-texto"><i class="fa fa-check"></i><b>8.1</b> Futuras Direções no Campo de Vetorização de Texto</a>
+<ul>
+<li class="chapter" data-level="8.1.1" data-path="próximos-passos.html"><a href="próximos-passos.html#modelos-de-linguagem-de-grande-escala"><i class="fa fa-check"></i><b>8.1.1</b> Modelos de Linguagem de Grande Escala</a></li>
+<li class="chapter" data-level="8.1.2" data-path="próximos-passos.html"><a href="próximos-passos.html#multimodalidade"><i class="fa fa-check"></i><b>8.1.2</b> Multimodalidade</a></li>
+<li class="chapter" data-level="8.1.3" data-path="próximos-passos.html"><a href="próximos-passos.html#vetorização-de-texto-em-tempo-real"><i class="fa fa-check"></i><b>8.1.3</b> Vetorização de Texto em Tempo Real</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="próximos-passos.html"><a href="próximos-passos.html#leitura-recomendada"><i class="fa fa-check"></i><b>8.2</b> Leitura Recomendada</a></li>
+<li class="chapter" data-level="8.3" data-path="próximos-passos.html"><a href="próximos-passos.html#próximos-passos-1"><i class="fa fa-check"></i><b>8.3</b> Próximos Passos</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="gabarito-das-questões.html"><a href="gabarito-das-questões.html"><i class="fa fa-check"></i>Gabarito das questões</a></li>
+<li class="chapter" data-level="" data-path="sobre-os-autores.html"><a href="sobre-os-autores.html"><i class="fa fa-check"></i>Sobre os autores</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Vetorização de Texto com Python</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="aplicações-práticas-1" class="section level1 hasAnchor" number="6">
+<h1><span class="header-section-number">Capítulo 6</span> Aplicações Práticas<a href="aplicações-práticas-1.html#aplicações-práticas-1" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Neste capítulo, exploraremos aplicações práticas das técnicas de
+vetorização de texto que discutimos nos capítulos anteriores. Vamos
+focar em três áreas principais: classificação de texto, agrupamento de
+documentos e detecção de tópicos. Cada seção incluirá exemplos práticos
+em Python.</p>
+<div id="classificação-de-texto-análise-de-sentimento" class="section level2 hasAnchor" number="6.1">
+<h2><span class="header-section-number">6.1</span> Classificação de Texto: Análise de Sentimento<a href="aplicações-práticas-1.html#classificação-de-texto-análise-de-sentimento" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A classificação de texto é uma das aplicações mais comuns da vetorização
+de texto. Milhares de pessoas visitam as mídias sociais para expressar
+seus sentimentos, principalmente no antigo Twitter, hoje X,
+<span class="citation">(<a href="#ref-Recuero2016">Recuero and Zago 2016</a>)</span>. Essas mídias reúnem características que viabilizam a
+mineração de texto tais como: mensagens textuais, de perfil público e
+coleta automatizada <span class="citation">(<a href="#ref-Hootsuite2018">Hootsuite 2018</a>)</span>.</p>
+<p>A enorme quantidade de dados gerados por essas mídias e as opiniões e
+sentimentos expressos podem ser analisadas por empresas para diversos
+fins, sendo possível capturar os sentimentos, opiniões e críticas sobre
+os produtos em tempo real, proporcionando à empresa uma nova forma de
+entendimento sobre o comportamento do consumidor
+<span class="citation">(<a href="#ref-NascimentoJunior2012">Nascimento Junior 2012</a>)</span>. Algumas questões podem ser respondidas através
+da análise dos milhares de comentários e respostas expressos nessas
+mídias. Existem evidências que essas postagens são utilizadas na tomada
+de decisão e que podem influenciar eventos acontecendo em tempo real
+<span class="citation">(<a href="#ref-Baldykowski2018">Baldykowski et al. 2018</a>; <a href="#ref-Shamma2009">Shamma, Kennedy, and Churchill 2009</a>)</span>.</p>
+<p>As mídias sociais também vêm sendo utilizadas para inferências e
+predições em vários setores, por exemplo: já foram encontradas relações
+entre o sentimento impresso nas postagens dessas mídias e os movimentos
+do preço do Bitcoin <span class="citation">(<a href="#ref-Santos2019">Santos 2019</a>; <a href="#ref-Nakamoto2008">Nakamoto 2008</a>)</span>; já foram utilizadas
+para prever quais seriam as palavras-chave (hashtags) mais comentadas no
+futuro <span class="citation">(<a href="#ref-Das2015">Das et al. 2015</a>)</span>; para inferir a quantidade de pessoas que irão
+assistir ao filme <span class="citation">(<a href="#ref-Teixeira2011">Teixeira and Azevedo 2011</a>)</span>; até para correlacionar com os
+indicados ao Oscar <span class="citation">(<a href="#ref-TannusCorrea2017">Tannús Corrêa 2017</a>)</span>; para influenciar a visão do
+profissional no ambiente de trabalho, pois, quando os profissionais
+utilizam as mídias sociais nas relações profissionais e adotam um tipo
+de comportamentos de gerenciamento de público e de conteúdo, dados
+apontam uma tendência do profissional ser mais respeitados por seus
+colegas de trabalho <span class="citation">(<a href="#ref-Ferretti2017">Ferretti and Araujo 2017</a>)</span>.</p>
+<p>As mídias sociais também fornecem aos usuários da Internet uma maneira
+fácil e barata de se envolver em discussões políticas e promover pontos
+de vista e interesses. Essas postagens também podem auxiliar no processo
+de decisão de instituições públicas <span class="citation">(<a href="#ref-Georgiadou2020">Georgiadou, Angelopoulos, and Drake 2020</a>)</span>. Alguns candidatos
+utilizam as mídias sociais para fazer propaganda e para aumentar a
+intenção de voto dos seus eleitores, além disso, foram encontradas
+evidências de que essa intenção é influenciada pela opinião do eleitor,
+confiança e imagem do candidato <span class="citation">(<a href="#ref-Almeida2018">Almeida and Oliveira 2018</a>)</span>. O uso da mídia social
+também é utilizado para divulgar notícias falsas, e existem evidências
+de que a exposição a essas notícias pode influenciar os resultados das
+eleições. Nas eleições presidenciais dos EUA em 2016, notícias falsas
+postadas em mídias sociais foram cruciais na eleição do presidente Trump
+<span class="citation">(<a href="#ref-Allcott2017">Allcott and Gentzkow 2017</a>)</span>.</p>
+<p>Métodos automáticos de extração de sentimentos, também chamado de
+mineração de opinião, já foram utilizados para avaliar o desempenho das
+ações na bolsa <span class="citation">(<a href="#ref-Chen2010">Chen and David Zimbra 2010</a>)</span>. O apoio a decisão baseado em sentimentos
+expresso em mídias sociais tem potencial para beneficiar e diminuir os
+custos organizacionais, mas ainda é preciso entender como utilizá-la e
+qual o seu impacto <span class="citation">(<a href="#ref-Saxton2020">Saxton and Guo 2020</a>)</span>.</p>
+<p>Usaremos a técnica TF-IDF para vetorizar documentos e, em seguida,
+aplicaremos um classificador de Naive Bayes para categorizar o texto e
+analisar o sentimento de algumas postagens, como exemplo.</p>
+<div id="exemplo-em-python-classificação-de-texto-com-tf-idf-e-naive-bayes" class="section level3 hasAnchor" number="6.1.1">
+<h3><span class="header-section-number">6.1.1</span> Exemplo em Python: Classificação de Texto com TF-IDF e Naive Bayes<a href="aplicações-práticas-1.html#exemplo-em-python-classificação-de-texto-com-tf-idf-e-naive-bayes" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb29" language="Python" caption="Código Python"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb29-1"><a href="aplicações-práticas-1.html#cb29-1" tabindex="-1"></a><span class="im">from</span> sklearn.feature_extraction.text <span class="im">import</span> TfidfVectorizer</span>
+<span id="cb29-2"><a href="aplicações-práticas-1.html#cb29-2" tabindex="-1"></a><span class="im">from</span> sklearn.naive_bayes <span class="im">import</span> MultinomialNB</span>
+<span id="cb29-3"><a href="aplicações-práticas-1.html#cb29-3" tabindex="-1"></a><span class="im">from</span> sklearn.pipeline <span class="im">import</span> make_pipeline</span>
+<span id="cb29-4"><a href="aplicações-práticas-1.html#cb29-4" tabindex="-1"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> train_test_split</span>
+<span id="cb29-5"><a href="aplicações-práticas-1.html#cb29-5" tabindex="-1"></a><span class="im">from</span> sklearn <span class="im">import</span> metrics</span>
+<span id="cb29-6"><a href="aplicações-práticas-1.html#cb29-6" tabindex="-1"></a></span>
+<span id="cb29-7"><a href="aplicações-práticas-1.html#cb29-7" tabindex="-1"></a><span class="co"># Exemplo de corpus e rótulos</span></span>
+<span id="cb29-8"><a href="aplicações-práticas-1.html#cb29-8" tabindex="-1"></a>documentos <span class="op">=</span> [</span>
+<span id="cb29-9"><a href="aplicações-práticas-1.html#cb29-9" tabindex="-1"></a><span class="st">&quot;Este é um ótimo produto&quot;</span>,</span>
+<span id="cb29-10"><a href="aplicações-práticas-1.html#cb29-10" tabindex="-1"></a><span class="st">&quot;Muito ruim, não gostei&quot;</span>,</span>
+<span id="cb29-11"><a href="aplicações-práticas-1.html#cb29-11" tabindex="-1"></a><span class="st">&quot;Fantástico, recomendo!&quot;</span>,</span>
+<span id="cb29-12"><a href="aplicações-práticas-1.html#cb29-12" tabindex="-1"></a><span class="st">&quot;Não vale a pena, péssimo&quot;</span>,</span>
+<span id="cb29-13"><a href="aplicações-práticas-1.html#cb29-13" tabindex="-1"></a><span class="st">&quot;Excelente qualidade, compraria de novo&quot;</span>,</span>
+<span id="cb29-14"><a href="aplicações-práticas-1.html#cb29-14" tabindex="-1"></a><span class="st">&quot;Horrível, joguei meu dinheiro fora&quot;</span></span>
+<span id="cb29-15"><a href="aplicações-práticas-1.html#cb29-15" tabindex="-1"></a>]</span>
+<span id="cb29-16"><a href="aplicações-práticas-1.html#cb29-16" tabindex="-1"></a>rótulos <span class="op">=</span> [<span class="st">&quot;positivo&quot;</span>, <span class="st">&quot;negativo&quot;</span>, <span class="st">&quot;positivo&quot;</span>, <span class="st">&quot;negativo&quot;</span>, <span class="st">&quot;positivo&quot;</span>, <span class="st">&quot;negativo&quot;</span>]</span>
+<span id="cb29-17"><a href="aplicações-práticas-1.html#cb29-17" tabindex="-1"></a></span>
+<span id="cb29-18"><a href="aplicações-práticas-1.html#cb29-18" tabindex="-1"></a><span class="co"># Dividindo os dados em treino e teste</span></span>
+<span id="cb29-19"><a href="aplicações-práticas-1.html#cb29-19" tabindex="-1"></a>X_train, X_test, y_train, y_test <span class="op">=</span> train_test_split(documentos, rótulos, test_size<span class="op">=</span><span class="fl">0.33</span>, random_state<span class="op">=</span><span class="dv">42</span>)</span>
+<span id="cb29-20"><a href="aplicações-práticas-1.html#cb29-20" tabindex="-1"></a></span>
+<span id="cb29-21"><a href="aplicações-práticas-1.html#cb29-21" tabindex="-1"></a><span class="co"># Criando o pipeline </span></span>
+<span id="cb29-22"><a href="aplicações-práticas-1.html#cb29-22" tabindex="-1"></a>modelo <span class="op">=</span> make_pipeline(TfidfVectorizer(), MultinomialNB())</span>
+<span id="cb29-23"><a href="aplicações-práticas-1.html#cb29-23" tabindex="-1"></a></span>
+<span id="cb29-24"><a href="aplicações-práticas-1.html#cb29-24" tabindex="-1"></a><span class="co"># Treinando o modelo</span></span>
+<span id="cb29-25"><a href="aplicações-práticas-1.html#cb29-25" tabindex="-1"></a>modelo.fit(X_train, y_train)</span>
+<span id="cb29-26"><a href="aplicações-práticas-1.html#cb29-26" tabindex="-1"></a></span>
+<span id="cb29-27"><a href="aplicações-práticas-1.html#cb29-27" tabindex="-1"></a><span class="co"># Fazendo previsões</span></span>
+<span id="cb29-28"><a href="aplicações-práticas-1.html#cb29-28" tabindex="-1"></a>predições <span class="op">=</span> modelo.predict(X_test)</span>
+<span id="cb29-29"><a href="aplicações-práticas-1.html#cb29-29" tabindex="-1"></a></span>
+<span id="cb29-30"><a href="aplicações-práticas-1.html#cb29-30" tabindex="-1"></a><span class="co"># Avaliando o modelo</span></span>
+<span id="cb29-31"><a href="aplicações-práticas-1.html#cb29-31" tabindex="-1"></a><span class="bu">print</span>(metrics.classification_report(y_test, predições))</span></code></pre></div>
+<pre caption="Saída do Console"><code>precision    recall  f1-score   support
+
+negativo       0.50      1.00      0.67         1
+positivo       0.00      0.00      0.00         1
+
+accuracy                           0.50         2
+macro avg       0.25     0.50      0.33         2
+weighted avg    0.25     0.50      0.33         2</code></pre>
+<p>Este exemplo demonstra como classificar textos usando TF-IDF e Naive
+Bayes. Após treinar o modelo, as previsões são feitas no conjunto de
+teste e uma avaliação do desempenho é realizada.</p>
+</div>
+</div>
+<div id="agrupamento-de-documentos" class="section level2 hasAnchor" number="6.2">
+<h2><span class="header-section-number">6.2</span> Agrupamento de Documentos<a href="aplicações-práticas-1.html#agrupamento-de-documentos" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>O agrupamento de documentos é outra aplicação importante da vetorização
+de texto, permitindo que documentos similares sejam automaticamente
+agrupados. Nesta seção, utilizaremos a técnica de <em>k-means clustering</em>.</p>
+<div id="exemplo-em-python-agrupamento-com-k-means" class="section level3 hasAnchor" number="6.2.1">
+<h3><span class="header-section-number">6.2.1</span> Exemplo em Python: Agrupamento com k-means<a href="aplicações-práticas-1.html#exemplo-em-python-agrupamento-com-k-means" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb31" language="Python" caption="Código Python"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb31-1"><a href="aplicações-práticas-1.html#cb31-1" tabindex="-1"></a><span class="im">from</span> sklearn.feature_extraction.text <span class="im">import</span> TfidfVectorizer</span>
+<span id="cb31-2"><a href="aplicações-práticas-1.html#cb31-2" tabindex="-1"></a><span class="im">from</span> sklearn.cluster <span class="im">import</span> KMeans</span>
+<span id="cb31-3"><a href="aplicações-práticas-1.html#cb31-3" tabindex="-1"></a></span>
+<span id="cb31-4"><a href="aplicações-práticas-1.html#cb31-4" tabindex="-1"></a><span class="co"># Exemplo de documentos</span></span>
+<span id="cb31-5"><a href="aplicações-práticas-1.html#cb31-5" tabindex="-1"></a>documentos <span class="op">=</span> [</span>
+<span id="cb31-6"><a href="aplicações-práticas-1.html#cb31-6" tabindex="-1"></a><span class="st">&quot;O gato gosta de peixe&quot;</span>,</span>
+<span id="cb31-7"><a href="aplicações-práticas-1.html#cb31-7" tabindex="-1"></a><span class="st">&quot;O cachorro gosta de osso&quot;</span>,</span>
+<span id="cb31-8"><a href="aplicações-práticas-1.html#cb31-8" tabindex="-1"></a><span class="st">&quot;O peixe não gosta de gato&quot;</span>,</span>
+<span id="cb31-9"><a href="aplicações-práticas-1.html#cb31-9" tabindex="-1"></a><span class="st">&quot;O gato e o cachorro são amigos&quot;</span>,</span>
+<span id="cb31-10"><a href="aplicações-práticas-1.html#cb31-10" tabindex="-1"></a><span class="st">&quot;O peixe vive na água&quot;</span>,</span>
+<span id="cb31-11"><a href="aplicações-práticas-1.html#cb31-11" tabindex="-1"></a><span class="st">&quot;Os cães gostam de ossos&quot;</span></span>
+<span id="cb31-12"><a href="aplicações-práticas-1.html#cb31-12" tabindex="-1"></a>]</span>
+<span id="cb31-13"><a href="aplicações-práticas-1.html#cb31-13" tabindex="-1"></a></span>
+<span id="cb31-14"><a href="aplicações-práticas-1.html#cb31-14" tabindex="-1"></a><span class="co"># Vetorizando os documentos com TF-IDF</span></span>
+<span id="cb31-15"><a href="aplicações-práticas-1.html#cb31-15" tabindex="-1"></a>vectorizer <span class="op">=</span> TfidfVectorizer()</span>
+<span id="cb31-16"><a href="aplicações-práticas-1.html#cb31-16" tabindex="-1"></a>X <span class="op">=</span> vectorizer.fit_transform(documentos)</span>
+<span id="cb31-17"><a href="aplicações-práticas-1.html#cb31-17" tabindex="-1"></a></span>
+<span id="cb31-18"><a href="aplicações-práticas-1.html#cb31-18" tabindex="-1"></a><span class="co"># Aplicando k-means clustering</span></span>
+<span id="cb31-19"><a href="aplicações-práticas-1.html#cb31-19" tabindex="-1"></a>kmeans <span class="op">=</span> KMeans(n_clusters<span class="op">=</span><span class="dv">2</span>, random_state<span class="op">=</span><span class="dv">42</span>)</span>
+<span id="cb31-20"><a href="aplicações-práticas-1.html#cb31-20" tabindex="-1"></a>kmeans.fit(X)</span>
+<span id="cb31-21"><a href="aplicações-práticas-1.html#cb31-21" tabindex="-1"></a></span>
+<span id="cb31-22"><a href="aplicações-práticas-1.html#cb31-22" tabindex="-1"></a><span class="co"># Mostrando os rótulos dos clusters</span></span>
+<span id="cb31-23"><a href="aplicações-práticas-1.html#cb31-23" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Rótulos dos Clusters:&quot;</span>, kmeans.labels_)</span></code></pre></div>
+<pre caption="Saída do Console"><code>Rótulos dos Clusters: [0 0 0 0 0 1]</code></pre>
+<p>Este código realiza o agrupamento dos documentos em dois clusters usando
+k-means. Cada documento é atribuído a um cluster com base na
+similaridade de seu conteúdo.</p>
+</div>
+</div>
+<div id="detecção-de-tópicos" class="section level2 hasAnchor" number="6.3">
+<h2><span class="header-section-number">6.3</span> Detecção de Tópicos<a href="aplicações-práticas-1.html#detecção-de-tópicos" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A detecção de tópicos permite identificar os principais assuntos
+discutidos em um conjunto de documentos. Uma técnica popular para isso é
+a <em>Latent Dirichlet Allocation</em> (LDA), que vamos explorar nesta seção.</p>
+<div id="exemplo-em-python-detecção-de-tópicos-com-lda" class="section level3 hasAnchor" number="6.3.1">
+<h3><span class="header-section-number">6.3.1</span> Exemplo em Python: Detecção de Tópicos com LDA<a href="aplicações-práticas-1.html#exemplo-em-python-detecção-de-tópicos-com-lda" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb33" language="Python" caption="Código Python"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb33-1"><a href="aplicações-práticas-1.html#cb33-1" tabindex="-1"></a><span class="im">from</span> sklearn.decomposition <span class="im">import</span> LatentDirichletAllocation</span>
+<span id="cb33-2"><a href="aplicações-práticas-1.html#cb33-2" tabindex="-1"></a><span class="im">from</span> sklearn.feature_extraction.text <span class="im">import</span> CountVectorizer</span>
+<span id="cb33-3"><a href="aplicações-práticas-1.html#cb33-3" tabindex="-1"></a></span>
+<span id="cb33-4"><a href="aplicações-práticas-1.html#cb33-4" tabindex="-1"></a><span class="co"># Exemplo de documentos</span></span>
+<span id="cb33-5"><a href="aplicações-práticas-1.html#cb33-5" tabindex="-1"></a>documentos <span class="op">=</span> [</span>
+<span id="cb33-6"><a href="aplicações-práticas-1.html#cb33-6" tabindex="-1"></a>    <span class="st">&quot;O gato gosta de peixe&quot;</span>,</span>
+<span id="cb33-7"><a href="aplicações-práticas-1.html#cb33-7" tabindex="-1"></a>    <span class="st">&quot;O cachorro gosta de osso&quot;</span>,</span>
+<span id="cb33-8"><a href="aplicações-práticas-1.html#cb33-8" tabindex="-1"></a>    <span class="st">&quot;O peixe não gosta de gato&quot;</span>,</span>
+<span id="cb33-9"><a href="aplicações-práticas-1.html#cb33-9" tabindex="-1"></a>    <span class="st">&quot;O gato e o cachorro são amigos&quot;</span>,</span>
+<span id="cb33-10"><a href="aplicações-práticas-1.html#cb33-10" tabindex="-1"></a>    <span class="st">&quot;O peixe vive na água&quot;</span>,</span>
+<span id="cb33-11"><a href="aplicações-práticas-1.html#cb33-11" tabindex="-1"></a>    <span class="st">&quot;Os cães gostam de ossos&quot;</span></span>
+<span id="cb33-12"><a href="aplicações-práticas-1.html#cb33-12" tabindex="-1"></a>]</span>
+<span id="cb33-13"><a href="aplicações-práticas-1.html#cb33-13" tabindex="-1"></a></span>
+<span id="cb33-14"><a href="aplicações-práticas-1.html#cb33-14" tabindex="-1"></a><span class="co"># Vetorizando os documentos com CountVectorizer</span></span>
+<span id="cb33-15"><a href="aplicações-práticas-1.html#cb33-15" tabindex="-1"></a>vectorizer <span class="op">=</span> CountVectorizer()</span>
+<span id="cb33-16"><a href="aplicações-práticas-1.html#cb33-16" tabindex="-1"></a>X <span class="op">=</span> vectorizer.fit_transform(documentos)</span>
+<span id="cb33-17"><a href="aplicações-práticas-1.html#cb33-17" tabindex="-1"></a></span>
+<span id="cb33-18"><a href="aplicações-práticas-1.html#cb33-18" tabindex="-1"></a><span class="co"># Aplicando LDA</span></span>
+<span id="cb33-19"><a href="aplicações-práticas-1.html#cb33-19" tabindex="-1"></a>lda <span class="op">=</span> LatentDirichletAllocation(n_components<span class="op">=</span><span class="dv">2</span>, random_state<span class="op">=</span><span class="dv">42</span>)</span>
+<span id="cb33-20"><a href="aplicações-práticas-1.html#cb33-20" tabindex="-1"></a>lda.fit(X)</span>
+<span id="cb33-21"><a href="aplicações-práticas-1.html#cb33-21" tabindex="-1"></a></span>
+<span id="cb33-22"><a href="aplicações-práticas-1.html#cb33-22" tabindex="-1"></a><span class="co"># Mostrando os tópicos</span></span>
+<span id="cb33-23"><a href="aplicações-práticas-1.html#cb33-23" tabindex="-1"></a>tópicos <span class="op">=</span> lda.components_</span>
+<span id="cb33-24"><a href="aplicações-práticas-1.html#cb33-24" tabindex="-1"></a>nomes_palavras <span class="op">=</span> vectorizer.get_feature_names_out()</span>
+<span id="cb33-25"><a href="aplicações-práticas-1.html#cb33-25" tabindex="-1"></a></span>
+<span id="cb33-26"><a href="aplicações-práticas-1.html#cb33-26" tabindex="-1"></a><span class="cf">for</span> idx, tópico <span class="kw">in</span> <span class="bu">enumerate</span>(tópicos):</span>
+<span id="cb33-27"><a href="aplicações-práticas-1.html#cb33-27" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f&quot;Tópico </span><span class="sc">{</span>idx <span class="op">+</span> <span class="dv">1</span><span class="sc">}</span><span class="ss">:&quot;</span>)</span>
+<span id="cb33-28"><a href="aplicações-práticas-1.html#cb33-28" tabindex="-1"></a>    palavras <span class="op">=</span> [nomes_palavras[i] <span class="cf">for</span> i <span class="kw">in</span> tópico.argsort()[:<span class="op">-</span><span class="dv">5</span> <span class="op">-</span> <span class="dv">1</span>:<span class="op">-</span><span class="dv">1</span>]]</span>
+<span id="cb33-29"><a href="aplicações-práticas-1.html#cb33-29" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot; &quot;</span>.join(palavras))</span></code></pre></div>
+<pre caption="Saída do Console"><code>Tópico 1:
+gato peixe gosta de cachorro
+Tópico 2:
+de ossos os gostam cães</code></pre>
+<p>Este exemplo demonstra como usar LDA para identificar tópicos em um
+conjunto de documentos. As palavras mais representativas para cada
+tópico são exibidas.</p>
+<p>Emresumo, as técnicas de vetorização de texto discutidas anteriormente
+têm uma ampla gama de aplicações práticas, desde a classificação e
+agrupamento de documentos até a detecção de tópicos. Essas aplicações
+ilustram a importância de transformar texto em representações numéricas
+para a análise eficiente de dados textuais.</p>
+</div>
+</div>
+<div id="exercícios-4" class="section level2 unnumbered hasAnchor">
+<h2>Exercícios<a href="aplicações-práticas-1.html#exercícios-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Versão on-line destes exercícios</p>
+<p><a href="https://forms.gle/FopDZjLXRVixmGW46" class="uri">https://forms.gle/FopDZjLXRVixmGW46</a></p>
+<ol style="list-style-type: decimal">
+<li><p><strong>Qual é o principal objetivo da classificação de texto?</strong></p>
+<ol style="list-style-type: decimal">
+<li><p>Gerar texto automaticamente.</p></li>
+<li><p>Classificar textos em categorias predefinidas.</p></li>
+<li><p>Traduzir textos entre diferentes idiomas.</p></li>
+<li><p>Aumentar o tamanho do corpus de dados textuais.</p></li>
+</ol></li>
+<li><p><strong>Qual técnica de vetorização é comumente usada em combinação para
+classificação de texto?</strong></p>
+<ol style="list-style-type: decimal">
+<li><p>Dinâmica de Sistemas.</p></li>
+<li><p>TF-IDF ou BoW.</p></li>
+<li><p>Redes de Petri.</p></li>
+<li><p>Automação.</p></li>
+</ol></li>
+<li><p><strong>O que o algoritmo de k-means clustering faz em um conjunto de
+documentos?</strong></p>
+<ol style="list-style-type: decimal">
+<li><p>Agrupa documentos semelhantes em clusters.</p></li>
+<li><p>Classifica documentos em categorias predefinidas.</p></li>
+<li><p>Reduz a dimensionalidade dos vetores de documentos.</p></li>
+<li><p>Gera novos documentos a partir de um conjunto de treinamento.</p></li>
+</ol></li>
+<li><p><strong>Qual técnica é utilizada para identificar os principais tópicos em
+um conjunto de documentos?</strong></p>
+<ol style="list-style-type: decimal">
+<li><p>Classificação de texto.</p></li>
+<li><p>Redução de dimensionalidade.</p></li>
+<li><p>Modelagem de tópicos com LDA.</p></li>
+<li><p>Tokenização.</p></li>
+</ol></li>
+<li><p><strong>Em um modelo de classificação de sentimentos, qual é o propósito
+de utilizar TF-IDF na vetorização de texto?</strong></p>
+<ol style="list-style-type: decimal">
+<li><p>Melhorar a visualização dos dados.</p></li>
+<li><p>Reduzir o número de palavras no texto.</p></li>
+<li><p>Ponderar a importância das palavras com base na frequência no
+documento e no corpus.</p></li>
+<li><p>Gerar novos tópicos a partir dos documentos.</p></li>
+</ol></li>
+</ol>
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0">
+<div id="ref-Allcott2017" class="csl-entry">
+Allcott, Hunt, and Matthew Gentzkow. 2017. <span>“<span class="nocase">Social media and fake news in the 2016 election</span>.”</span> <em>Journal of Economic Perspectives</em> 31 (2): 211–36. <a href="https://doi.org/10.1257/jep.31.2.211">https://doi.org/10.1257/jep.31.2.211</a>.
+</div>
+<div id="ref-Almeida2018" class="csl-entry">
+Almeida, Cláudio Márcio, and Marcelo de Oliveira. 2018. <em><span class="nocase">O Impacto da M<span class="nocase">í</span>dia Social na Inten<span class="nocase">ç</span><span class="nocase">ã</span>o de Voto do Eleitor</span></em>. 1st ed. Vit<span>ó</span>ria: Independently Published. <a href="https://www.amazon.com.br/Impacto-M-CL-Almeida/dp/1720231613">https://www.amazon.com.br/Impacto-M-CL-Almeida/dp/1720231613</a>.
+</div>
+<div id="ref-Baldykowski2018" class="csl-entry">
+Baldykowski, Ariane Lao Saulo Alves de Brito, Sandro A. Miczevski, and Thiago H. Silva. 2018. <span>“<span class="nocase">Cheers to untappd! preferences for beer reflect cultural differences around the world</span>.”</span> <em>Americas Conference on Information Systems 2018: Digital Disruption, AMCIS 2018</em>, no. July.
+</div>
+<div id="ref-Chen2010" class="csl-entry">
+Chen, Hsinchun, and David Zimbra. 2010. <span>“<span class="nocase">AI and opinion mining</span>.”</span> <em>IEEE Intelligent Systems</em> 25 (4): 72–79. <a href="https://doi.org/10.1109/MIS.2010.94">https://doi.org/10.1109/MIS.2010.94</a>.
+</div>
+<div id="ref-Das2015" class="csl-entry">
+Das, Anubrata, Moumita Roy, Soumi Dutta, Saptarshi Ghosh, and Asit Kumar Das. 2015. <span>“<span class="nocase">Predicting Trends in the Twitter Social Network: A Machine Learning Approach</span>.”</span> <em>Lecture Notes in Computer Science (Including Subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics)</em> 8947: 432–44. <a href="https://doi.org/10.1007/978-3-319-20294-5">https://doi.org/10.1007/978-3-319-20294-5</a>.
+</div>
+<div id="ref-Ferretti2017" class="csl-entry">
+Ferretti, Amanda Soares Zambelli, and Bruno Felix Von Borell de Araujo. 2017. <span>“<span class="nocase">Comportamentos nas Redes Sociais Online e seus Impactos nas Rela<span class="nocase">ç</span><span class="nocase">õ</span>es Profissionais</span>.”</span> <em>Revista Administra<span>ç</span><span>ã</span>o Em Di<span>á</span>logo - RAD</em> 19 (2): 91. <a href="https://doi.org/10.20946/rad.v19i2.31143">https://doi.org/10.20946/rad.v19i2.31143</a>.
+</div>
+<div id="ref-Georgiadou2020" class="csl-entry">
+Georgiadou, Elena, Spyros Angelopoulos, and Helen Drake. 2020. <span>“<span class="nocase">Big data analytics and international negotiations: Sentiment analysis of Brexit negotiating outcomes</span>.”</span> <em>International Journal of Information Management</em> 51 (October 2019): 102048. <a href="https://doi.org/10.1016/j.ijinfomgt.2019.102048">https://doi.org/10.1016/j.ijinfomgt.2019.102048</a>.
+</div>
+<div id="ref-Hootsuite2018" class="csl-entry">
+Hootsuite. 2018. <span>“<span class="nocase">Most popular social networks worldwide as of January 2018, ranked by number of active users (in millions)</span>.”</span>
+</div>
+<div id="ref-Nakamoto2008" class="csl-entry">
+Nakamoto, Satoshi. 2008. <span>“<span class="nocase">Bitcoin: A Peer-to-Peer Electronic Cash System</span>.”</span>
+</div>
+<div id="ref-NascimentoJunior2012" class="csl-entry">
+Nascimento Junior, Aldomar. 2012. <span>“<span class="nocase">Com a boca no twitter: a cocria<span class="nocase">ç</span><span class="nocase">ã</span>o e a colabora<span class="nocase">ç</span><span class="nocase">ã</span>o impactando no sucesso do marketing boca a boca on-line</span>.”</span> PhD thesis.
+</div>
+<div id="ref-Recuero2016" class="csl-entry">
+Recuero, Raquel, and Gabriela Zago. 2016. <span>“<span class="nocase">Em busca das redes que importam: redes sociais e capital social no Twitter</span>,”</span> 81–94.
+</div>
+<div id="ref-Santos2019" class="csl-entry">
+Santos, Weuler Borges Santos. 2019. <span>“<span class="nocase">Prevendo o pre<span class="nocase">ç</span>o do Bitcoin com Redes Neurais usando dados do Twitter e de Mercado</span>.”</span>
+</div>
+<div id="ref-Saxton2020" class="csl-entry">
+Saxton, Gregory D., and Chao Guo. 2020. <span>“<span class="nocase">Social media capital: Conceptualizing the nature, acquisition, and expenditure of social media-based organizational resources</span>.”</span> <em>International Journal of Accounting Information Systems</em> 36: 100443. <a href="https://doi.org/10.1016/j.accinf.2019.100443">https://doi.org/10.1016/j.accinf.2019.100443</a>.
+</div>
+<div id="ref-Shamma2009" class="csl-entry">
+Shamma, David A., Lyndon Kennedy, and Elizabeth F. Churchill. 2009. <span>“<span class="nocase">Tweet the debates: Understanding community annotation of uncollected sources</span>.”</span> <em>1st ACM SIGMM International Workshop on Social Media, WSM’09, Co-Located with the 2009 ACM International Conference on Multimedia, MM’09</em>, 3–10. <a href="https://doi.org/10.1145/1631144.1631148">https://doi.org/10.1145/1631144.1631148</a>.
+</div>
+<div id="ref-TannusCorrea2017" class="csl-entry">
+Tannús Corrêa, Igor. 2017. <span>“<span class="nocase">An<span class="nocase">á</span>lise dos sentimentos expressos na rede social Twitter em rela<span class="nocase">ç</span><span class="nocase">ã</span>o aos filmes indicados ao Oscar 2017</span>.”</span> <a href="https://repositorio.ufu.br/bitstream/123456789/20133/1/AnaliseSentimentosExpressos.pdf">https://repositorio.ufu.br/bitstream/123456789/20133/1/AnaliseSentimentosExpressos.pdf</a>.
+</div>
+<div id="ref-Teixeira2011" class="csl-entry">
+Teixeira, Diogo, and Isabel Azevedo. 2011. <span>“<span class="nocase">An<span class="nocase">á</span>lise de opini<span class="nocase">õ</span>es expressas nas redes sociais</span>.”</span> <em>RISTI - Revista Iberica de Sistemas e Tecnologias de Informacao</em>, no. 8: 53–65. <a href="https://doi.org/10.4304/risti.8.53-65">https://doi.org/10.4304/risti.8.53-65</a>.
+</div>
+</div>
+<script async defer src="https://hypothes.is/embed.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet" type="text/css">
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="modelos-avançados-de-vetorização.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="estudo-de-caso.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+      </div>
+<!-- /.entry-content -->
+    </section>    
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <p class="footer-text">&copy; <a href="">Giseldo Neo</a> powered by <a href="http://getpelican.com/">pelican</a> and <a href="http://nodotcom.org">nikhil</a></p>
+      </div>
+    </footer>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  </body>
+</html>

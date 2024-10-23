@@ -1,457 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
-<head id="head">
+  <head>
     <meta charset="utf-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <link rel="alternate" href="" hreflang="en" />
-<link rel="dns-prefetch" href="">
-<link rel="dns-prefetch" href="//code.getmdl.io">
-    <link rel="shortcut icon" href="/favicon.ico">
-    <title>Giseldo Neo</title>
-</head>
-<!--
-    (The MIT License)
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    Copyright (c) 2016 Kura
+    <title>NeoIA</title>
 
-    Permission is hereby granted, free of charge, to any person obtaining a copy
-    of this software and associated documentation files (the 'Software'), to deal
-    in the Software without restriction, including without limitation the rights
-    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-    copies of the Software, and to permit persons to whom the Software is
-    furnished to do so, subject to the following conditions:
+    <!-- Meta -->
+    <meta name="description" content="NeoIA &ndash; Um Blog sobre Inteligência Artificial">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    The above copyright notice and this permission notice shall be included in all
-    copies or substantial portions of the Software.
+    <!-- Social -->
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="NeoIA"/>
+    <meta property="og:description" content="Um Blog sobre Inteligência Artificial"/>
+    <meta property="og:site_name" content="NeoIA" />
+    <meta property="og:url" content=""/>
+    <meta property="og:image" content=""/>
 
-    THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-    SOFTWARE.
--->
-<body>
-    <div class="eevee-layout mdl-layout mdl-js-layout mdl-color--grey-50">
-        <header class="eevee-header mdl-color--grey-50 mdl-color-text--grey-800"
-                itemscope itemtype="http://schema.org/WPHeader">
-            <div class="mdl-layout__header-row" id="top">
-                <div aria-expanded="false" role="button" tabindex="0"
-                     class="mdl-layout__drawer-button mdl-color-text--accent eevee-mobile-button mdl-layout--small-screen-only">
-                    <i class="material-icons">&#xE5D2;</i>
-                </div>
-                <span class="eevee-logo mdl-color-text--accent mdl-layout-title">
-                    <h2>
-                        <a href="" rel="bookmark"
-                           title="Giseldo Neo">
-                            Giseldo Neo
-                        </a>
-                    </h2>
-                </span>
-                <div class="mdl-layout-spacer" role="presentation"></div>
-                <nav class="eevee-nav mdl-navigation mdl-layout--large-screen-only"
-                     itemscope itemtype="http://schema.org/SiteNavigationElement"
-                     aria-label="Header navigation">
-    <a class="mdl-color-text--accent mdl-navigation__link"
-       href="/" itemprop="url" rel="bookmark">
-        Blog
-    </a>
-        <a class="mdl-color-text--accent mdl-navigation__link"
-           href="/pages/livros.html" itemprop="url"
-           rel="bookmark">
-            Livros
-        </a>
-        <a class="mdl-color-text--accent mdl-navigation__link"
-           href="/pages/pesquisas.html" itemprop="url"
-           rel="bookmark">
-            Pesquisas
-        </a>
-        <a class="mdl-color-text--accent mdl-navigation__link"
-           href="/pages/produtos.html" itemprop="url"
-           rel="bookmark">
-            Produtos
-        </a>
-        <a class="mdl-color-text--accent mdl-navigation__link"
-           href="/pages/sobre.html" itemprop="url"
-           rel="bookmark">
-            Sobre
-        </a>
-                </nav>
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="NeoIA">
+    <meta name="twitter:description" content="Um Blog sobre Inteligência Artificial">
+    <meta name="twitter:url" content="">
+    <meta name="twitter:image" content="">
+
+    <!-- Feed -->
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:regular,bold">
+    <link rel="stylesheet" type="text/css" href="/theme/css/w3.css">
+    <link rel="stylesheet" type="text/css" href="/theme/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/theme/css/jqcloud.css">
+    <link rel="stylesheet" type="text/css" href="/theme/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/theme/css/pygments-highlight-github.css">
+
+    <!-- Icon -->
+
+    <!-- JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="/theme/js/jqcloud.min.js"></script>
+  </head>
+
+  <body>
+    <div class="w3-row w3-card w3-white">
+      <header id="header">
+        <a href="" id="header-logo" title="Home">GN</a>
+        <nav id="header-menu">
+          <ul>
+            <li><a href="/pages/livros.html">Livros</a></li>
+            <li><a href="/pages/pesquisas.html">Pesquisas</a></li>
+            <li><a href="/pages/produtos.html">Produtos</a></li>
+            <li><a href="/pages/sobre.html">Sobre</a></li>
+            <li class="w3-bottombar w3-border-white w3-hover-border-green" ><a href="/category/blog.html">Blog</a></li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+
+    <div class="w3-row w3-light-grey w3-border-bottom">
+      <aside id="intro" class="w3-container w3-center w3-padding-32">
+        <div>
+          <span id="intro-description"></span>
+          <ul class="social" style="margin: 0; margin-top: 10px; padding: 0;">
+            <li><a class="sc-Instagram" href="https://www.instagram.com/neogiseldo" target="_blank"><i class="fa fa-Instagram"></i></a></li>
+            <li><a class="sc-X" href="https://x.com/giseldoneo" target="_blank"><i class="fa fa-X"></i></a></li>
+            <li><a class="sc-GitHub" href="https://github.com/giseldoneo" target="_blank"><i class="fa fa-GitHub"></i></a></li>
+          </ul>
+        </div>
+        <div style="line-height: 180px;">
+          <a href="" target="_blank"><img class="avatar" alt="Avatar" src="" onerror="this.src='theme/images/avatar.png'"></a>
+        </div>
+      </aside>
+    </div>
+
+    <br><br><br>
+
+    <section id="listing">
+      <article class="w3-container w3-card-2 w3-white col-main">
+        <header>
+          <h2><a href="/nemotron.html">Nemotron</a></h2>
+          <div class="post-info">
+            <div class="w3-opacity w3-margin-right w3-margin-bottom" style="flex-grow: 1;">
+              <span><time datetime="2024-10-22T00:00:00+02:00">ter 22 outubro 2024</time> in <a href="/category/blog.html" title="All articles in category Blog">Blog</a></span>
             </div>
+            <div class="w3-margin-right">
+              <span class="w3-tag w3-light-grey w3-text-green w3-hover-green">
+                <a href="/tag/redes-neurais.html" title="All articles with Redes Neurais tag">#Redes Neurais</a>
+              </span>
+              <span class="w3-tag w3-light-grey w3-text-green w3-hover-green">
+                <a href="/tag/aprendizagem-de-maquina.html" title="All articles with Aprendizagem De Máquina tag">#Aprendizagem de Máquina</a>
+              </span>
+              <span class="w3-tag w3-light-grey w3-text-green w3-hover-green">
+                <a href="/tag/chatbots.html" title="All articles with Chatbots tag">#Chatbots</a>
+              </span>
+            </div>
+          </div>
         </header>
-        <div class="eevee-mobile-header mdl-layout__drawer mdl-color--white"
-             aria-hidden="true">
-            <span class="mdl-layout-title">
-                <h2 class="eevee-mobile-logo mdl-color-text--accent">
-                    Giseldo Neo
-                </h2>
-            </span>
-            <div class="mdl-navigation mdl-color--white">
-                <nav class="eevee-nav mdl-navigation" itemscope
-                     itemtype="http://schema.org/SiteNavigationElement"
-                     aria-label="Header navigation">
-                    <a class="mdl-color-text--accent mdl-navigation__link"
-                       href="" itemprop="url" rel="bookmark">
-                        Home
-                    </a>
-    <a class="mdl-color-text--accent mdl-navigation__link"
-       href="/" itemprop="url" rel="bookmark">
-        Blog
-    </a>
-        <a class="mdl-color-text--accent mdl-navigation__link"
-           href="/pages/livros.html" itemprop="url"
-           rel="bookmark">
-            Livros
-        </a>
-        <a class="mdl-color-text--accent mdl-navigation__link"
-           href="/pages/pesquisas.html" itemprop="url"
-           rel="bookmark">
-            Pesquisas
-        </a>
-        <a class="mdl-color-text--accent mdl-navigation__link"
-           href="/pages/produtos.html" itemprop="url"
-           rel="bookmark">
-            Produtos
-        </a>
-        <a class="mdl-color-text--accent mdl-navigation__link"
-           href="/pages/sobre.html" itemprop="url"
-           rel="bookmark">
-            Sobre
-        </a>
-                </nav>
-            </div>
+
+        <div class="entry-content">
+          Um primeiro contato com o Nemotron
         </div>
-        <div class="eevee-ribbon mdl-color--primary-dark" role="presentation">
-        </div>
-        <main class="eevee-main mdl-layout__content">
-            <div class="eevee-container mdl-grid">
-                <div role="presentation"
-                     class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone">
-                </div>
-                <div class="eevee-content mdl-color--white mdl-shadow--4dp mdl-color-text--grey-800 mdl-cell mdl-cell--8-col"
-                     aria-label="Main content">
-        <article class="eevee-padding" itemscope
-                 itemtype="http://schema.org/BlogPosting">
-<meta itemprop="accessibilityControl" content="fullKeyboardControl">
-<meta itemprop="accessibilityControl" content="fullMouseControl">
-<meta itemprop="accessibilityControl" content="bookmarks">
-<meta itemprop="accessibilityControl" content="captions">
-<meta itemprop="accessibilityControl" content="alternativeText">
-<meta itemprop="accessibilityControl" content="index">
-<meta itemprop="accessibilityControl" content="readingOrder">
-<meta itemprop="accessibilityControl" content="structuralNavigation">
-<meta itemprop="accessibilityControl" content="tableOfContents">
-<meta itemprop="accessibilityHazard" content="noFlashingHazard">
-<meta itemprop="accessibilityHazard" content="noMotionSimulationHazard">
-<meta itemprop="accessibilityHazard" content="noSoundHazard">
-<meta itemprop="accessibilityAPI" content="ARIA">
-    <div itemprop="author" itemscope
-         itemtype="https://schema.org/Person" role="presentation">
-        <a href="/author/giseldo-neo.html" class="hidden"
-           itemprop="url" role="presentation">
-            <span class="hidden" itemprop="name" role="presentation">
-                Giseldo Neo
-            </span>
-        </a>
-    </div>
-        <meta itemprop="keywords"
-              content="Redes Neurais,Aprendizagem de Máquina,Chatbots">
-        <meta itemprop="keywords" content="Blog">
-            <div class="eevee-meta mdl-color-text--grey-500">
-                <time datetime="2024-10-22T00:00:00+02:00"
-                      itemprop="datePublished">
-                    ter 22 outubro 2024
-                </time>
-            </div>
-            <h2 itemprop="name" class="article-title">
-                <a href="/nemotron.html" rel="bookmark"
-                   title="Permalink to 'Nemotron'"
-                   itemprop="url">
-                Nemotron
-                </a>
-            </h2>
-            <section itemprop="articleBody" class="summary-content">
-                <p>Um primeiro contato com o Nemotron</p>
-            </section>
-                <div class="eevee-divider mdl-color--accent" role="presentation">
-                </div>
-                <div class="eevee-divider-to-top">
-                    <a href="#top" title="Back to the top of the page"
-                       itemprop="url">
-                        Back to the top of the page
-                    </a>
-                </div>
-        </article>
-        <article class="eevee-padding" itemscope
-                 itemtype="http://schema.org/BlogPosting">
-<meta itemprop="accessibilityControl" content="fullKeyboardControl">
-<meta itemprop="accessibilityControl" content="fullMouseControl">
-<meta itemprop="accessibilityControl" content="bookmarks">
-<meta itemprop="accessibilityControl" content="captions">
-<meta itemprop="accessibilityControl" content="alternativeText">
-<meta itemprop="accessibilityControl" content="index">
-<meta itemprop="accessibilityControl" content="readingOrder">
-<meta itemprop="accessibilityControl" content="structuralNavigation">
-<meta itemprop="accessibilityControl" content="tableOfContents">
-<meta itemprop="accessibilityHazard" content="noFlashingHazard">
-<meta itemprop="accessibilityHazard" content="noMotionSimulationHazard">
-<meta itemprop="accessibilityHazard" content="noSoundHazard">
-<meta itemprop="accessibilityAPI" content="ARIA">
-    <div itemprop="author" itemscope
-         itemtype="https://schema.org/Person" role="presentation">
-        <a href="/author/giseldo-neo.html" class="hidden"
-           itemprop="url" role="presentation">
-            <span class="hidden" itemprop="name" role="presentation">
-                Giseldo Neo
-            </span>
-        </a>
-    </div>
-        <meta itemprop="keywords"
-              content="Redes Neurais,Aprendizagem de Máquina">
-        <meta itemprop="keywords" content="Blog">
-            <div class="eevee-meta mdl-color-text--grey-500">
-                <time datetime="2024-10-21T00:00:00+02:00"
-                      itemprop="datePublished">
-                    seg 21 outubro 2024
-                </time>
-            </div>
-            <h2 itemprop="name" class="article-title">
-                <a href="/redes-neurais-primeiro-contato.html" rel="bookmark"
-                   title="Permalink to 'Redes Neurais - Primeiro Contato'"
-                   itemprop="url">
-                Redes Neurais - Primeiro Contato
-                </a>
-            </h2>
-            <section itemprop="articleBody" class="summary-content">
-                <p>Um primeiro contato com redes neurais</p>
-            </section>
-                <div class="eevee-divider mdl-color--accent" role="presentation">
-                </div>
-                <div class="eevee-divider-to-top">
-                    <a href="#top" title="Back to the top of the page"
-                       itemprop="url">
-                        Back to the top of the page
-                    </a>
-                </div>
-        </article>
-        <article class="eevee-padding" itemscope
-                 itemtype="http://schema.org/BlogPosting">
-<meta itemprop="accessibilityControl" content="fullKeyboardControl">
-<meta itemprop="accessibilityControl" content="fullMouseControl">
-<meta itemprop="accessibilityControl" content="bookmarks">
-<meta itemprop="accessibilityControl" content="captions">
-<meta itemprop="accessibilityControl" content="alternativeText">
-<meta itemprop="accessibilityControl" content="index">
-<meta itemprop="accessibilityControl" content="readingOrder">
-<meta itemprop="accessibilityControl" content="structuralNavigation">
-<meta itemprop="accessibilityControl" content="tableOfContents">
-<meta itemprop="accessibilityHazard" content="noFlashingHazard">
-<meta itemprop="accessibilityHazard" content="noMotionSimulationHazard">
-<meta itemprop="accessibilityHazard" content="noSoundHazard">
-<meta itemprop="accessibilityAPI" content="ARIA">
-    <div itemprop="author" itemscope
-         itemtype="https://schema.org/Person" role="presentation">
-        <a href="/author/giseldo-neo.html" class="hidden"
-           itemprop="url" role="presentation">
-            <span class="hidden" itemprop="name" role="presentation">
-                Giseldo Neo
-            </span>
-        </a>
-    </div>
-        <meta itemprop="keywords"
-              content="Regressão Linear,Aprendizagem de Máquina">
-        <meta itemprop="keywords" content="Blog">
-            <div class="eevee-meta mdl-color-text--grey-500">
-                <time datetime="2024-10-20T00:00:00+02:00"
-                      itemprop="datePublished">
-                    dom 20 outubro 2024
-                </time>
-            </div>
-            <h2 itemprop="name" class="article-title">
-                <a href="/regressao-linear-primeiro-contato.html" rel="bookmark"
-                   title="Permalink to 'Regressão Linear - Primeiro Contato'"
-                   itemprop="url">
-                Regressão Linear - Primeiro Contato
-                </a>
-            </h2>
-            <section itemprop="articleBody" class="summary-content">
-                <p>Um primeiro contato com regressão linear</p>
-            </section>
-                <div class="eevee-divider mdl-color--accent" role="presentation">
-                </div>
-                <div class="eevee-divider-to-top">
-                    <a href="#top" title="Back to the top of the page"
-                       itemprop="url">
-                        Back to the top of the page
-                    </a>
-                </div>
-        </article>
-        <article class="eevee-padding" itemscope
-                 itemtype="http://schema.org/BlogPosting">
-<meta itemprop="accessibilityControl" content="fullKeyboardControl">
-<meta itemprop="accessibilityControl" content="fullMouseControl">
-<meta itemprop="accessibilityControl" content="bookmarks">
-<meta itemprop="accessibilityControl" content="captions">
-<meta itemprop="accessibilityControl" content="alternativeText">
-<meta itemprop="accessibilityControl" content="index">
-<meta itemprop="accessibilityControl" content="readingOrder">
-<meta itemprop="accessibilityControl" content="structuralNavigation">
-<meta itemprop="accessibilityControl" content="tableOfContents">
-<meta itemprop="accessibilityHazard" content="noFlashingHazard">
-<meta itemprop="accessibilityHazard" content="noMotionSimulationHazard">
-<meta itemprop="accessibilityHazard" content="noSoundHazard">
-<meta itemprop="accessibilityAPI" content="ARIA">
-    <div itemprop="author" itemscope
-         itemtype="https://schema.org/Person" role="presentation">
-        <a href="/author/giseldo-neo.html" class="hidden"
-           itemprop="url" role="presentation">
-            <span class="hidden" itemprop="name" role="presentation">
-                Giseldo Neo
-            </span>
-        </a>
-    </div>
-        <meta itemprop="keywords"
-              content="Aprendizagem de Máquina">
-        <meta itemprop="keywords" content="Blog">
-            <div class="eevee-meta mdl-color-text--grey-500">
-                <time datetime="2024-10-19T00:00:00+02:00"
-                      itemprop="datePublished">
-                    sáb 19 outubro 2024
-                </time>
-            </div>
-            <h2 itemprop="name" class="article-title">
-                <a href="/aprendizagem-de-maquina-primeiro-contato.html" rel="bookmark"
-                   title="Permalink to 'Aprendizagem de Máquina - Primeiro Contato'"
-                   itemprop="url">
-                Aprendizagem de Máquina - Primeiro Contato
-                </a>
-            </h2>
-            <section itemprop="articleBody" class="summary-content">
-                <p>Um primeiro contato com aprendizagem de máquina</p>
-            </section>
-        </article>
-    <div class="eevee-page-spacer" role="presentation"></div>
-                </div>
-            </div>
-        </main>
-            <div class="eevee-pagination__container eevee-container mdl-grid">
-                <div role="presentation"
-                     class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone">
-                </div>
-                <div class="mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
-<nav class="eevee-pagination mdl-cell mdl-cell--12-col" itemscope
-     itemtype="http://schema.org/SiteNavigationElement"
-     aria-label="Pagination">
-    <div class="eevee-spacer"></div>
-</nav>                </div>
-            </div>
-        <footer class="mdl-mega-footer" itemscope
-                itemtype="http://schema.org/SiteNavigationElement">
-            <div class="mdl-mega-footer--top-section">
-                <div class="mdl-mega-footer--drop-down-section">
-                    <ul class="mdl-mega-footer--link-list">
-                        <li>
-                            <a href="#top" itemprop="url"
-                               title="Back to the top of the page">
-                                Back to the top of the page
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-<div class="mdl-mega-footer--middle-section" itemscope
-     itemtype="http://schema.org/SiteNavigationElement"
-     aria-label="Footer navigation">
-    <div class="mdl-mega-footer--drop-down-section">
-        <h1 class="mdl-mega-footer--heading">Menu</h1>
-        <ul class="mdl-mega-footer--link-list">
-                <li>
-                    <a href="/" itemprop="url" rel="bookmark">
-                        Blog
-                    </a>
-                </li>
-                    <li>
-                        <a href="/pages/livros.html" itemprop="url"
-                           rel="bookmark">
-                            Livros
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/pages/pesquisas.html" itemprop="url"
-                           rel="bookmark">
-                            Pesquisas
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/pages/produtos.html" itemprop="url"
-                           rel="bookmark">
-                            Produtos
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/pages/sobre.html" itemprop="url"
-                           rel="bookmark">
-                            Sobre
-                        </a>
-                    </li>
-        </ul>
-    </div>
-    <div class="mdl-mega-footer--drop-down-section">
-        <h1 class="mdl-mega-footer--heading">Categories</h1>
-        <ul class="mdl-mega-footer--link-list">
-                <li>
-                    <a href="/category/blog.html" itemprop="url"
-                       rel="bookmark">
-                        Blog
-                    </a>
-                </li>
-        </ul>
-    </div>
-    <div class="mdl-mega-footer--drop-down-section">
-        <h1 class="mdl-mega-footer--heading">Social</h1>
-        <ul class="mdl-mega-footer--link-list">
-                <li>
-                    <a href="https://www.instagram.com/neogiseldo" itemprop="url" rel="bookmark">
-                        Instagram
-                    </a>
-                </li>
-                <li>
-                    <a href="https://x.com/giseldoneo" itemprop="url" rel="bookmark">
-                        X
-                    </a>
-                </li>
-                <li>
-                    <a href="https://github.com/giseldoneo" itemprop="url" rel="bookmark">
-                        GitHub
-                    </a>
-                </li>
-        </ul>
-    </div>
-</div>            <div class="mdl-mega-footer--bottom-section">
-                <div class="mdl-logo">
-                    <a href="" rel="bookmark" itemprop="url"
-                       title="Giseldo Neo">
-                        Giseldo Neo
-                    </a>
-                </div>
-            </div>
+
+        <footer>
+          <a class="w3-btn w3-green w3-right" href="/nemotron.html">Read &#10093;</a>
         </footer>
-    </div>
-    <link rel="stylesheet"
-          href="//code.getmdl.io/1.1.3/material.indigo-blue.min.css">
-        <link rel="stylesheet" type="text/css"
-              href="/theme/css/font-awesome.css">
-        <link rel="stylesheet" type="text/css"
-              href="/theme/css/material-icons.css">
-        <link rel="stylesheet" type="text/css"
-              href="/theme/css/pygments.css">
-        <link rel="stylesheet" type="text/css"
-              href="/theme/css/eevee.css">
-        <link rel="stylesheet" type="text/css"
-              href="/theme/css/custom.css">
-        <script async src="/theme/js/material.js">
-        </script>
-</body>
+      </article>
+
+      <br><br><br>
+
+      <article class="w3-container w3-card-2 w3-white col-main">
+        <header>
+          <h2><a href="/redes-neurais-primeiro-contato.html">Redes Neurais - Primeiro Contato</a></h2>
+          <div class="post-info">
+            <div class="w3-opacity w3-margin-right w3-margin-bottom" style="flex-grow: 1;">
+              <span><time datetime="2024-10-21T00:00:00+02:00">seg 21 outubro 2024</time> in <a href="/category/blog.html" title="All articles in category Blog">Blog</a></span>
+            </div>
+            <div class="w3-margin-right">
+              <span class="w3-tag w3-light-grey w3-text-green w3-hover-green">
+                <a href="/tag/redes-neurais.html" title="All articles with Redes Neurais tag">#Redes Neurais</a>
+              </span>
+              <span class="w3-tag w3-light-grey w3-text-green w3-hover-green">
+                <a href="/tag/aprendizagem-de-maquina.html" title="All articles with Aprendizagem De Máquina tag">#Aprendizagem de Máquina</a>
+              </span>
+            </div>
+          </div>
+        </header>
+
+        <div class="entry-content">
+          Um primeiro contato com redes neurais
+        </div>
+
+        <footer>
+          <a class="w3-btn w3-green w3-right" href="/redes-neurais-primeiro-contato.html">Read &#10093;</a>
+        </footer>
+      </article>
+
+      <br><br><br>
+
+      <article class="w3-container w3-card-2 w3-white col-main">
+        <header>
+          <h2><a href="/regressao-linear-primeiro-contato.html">Regressão Linear - Primeiro Contato</a></h2>
+          <div class="post-info">
+            <div class="w3-opacity w3-margin-right w3-margin-bottom" style="flex-grow: 1;">
+              <span><time datetime="2024-10-20T00:00:00+02:00">dom 20 outubro 2024</time> in <a href="/category/blog.html" title="All articles in category Blog">Blog</a></span>
+            </div>
+            <div class="w3-margin-right">
+              <span class="w3-tag w3-light-grey w3-text-green w3-hover-green">
+                <a href="/tag/regressao-linear.html" title="All articles with Regressão Linear tag">#Regressão Linear</a>
+              </span>
+              <span class="w3-tag w3-light-grey w3-text-green w3-hover-green">
+                <a href="/tag/aprendizagem-de-maquina.html" title="All articles with Aprendizagem De Máquina tag">#Aprendizagem de Máquina</a>
+              </span>
+            </div>
+          </div>
+        </header>
+
+        <div class="entry-content">
+          Um primeiro contato com regressão linear
+        </div>
+
+        <footer>
+          <a class="w3-btn w3-green w3-right" href="/regressao-linear-primeiro-contato.html">Read &#10093;</a>
+        </footer>
+      </article>
+
+      <br><br><br>
+
+      <article class="w3-container w3-card-2 w3-white col-main">
+        <header>
+          <h2><a href="/aprendizagem-de-maquina-primeiro-contato.html">Aprendizagem de Máquina - Primeiro Contato</a></h2>
+          <div class="post-info">
+            <div class="w3-opacity w3-margin-right w3-margin-bottom" style="flex-grow: 1;">
+              <span><time datetime="2024-10-19T00:00:00+02:00">sáb 19 outubro 2024</time> in <a href="/category/blog.html" title="All articles in category Blog">Blog</a></span>
+            </div>
+            <div class="w3-margin-right">
+              <span class="w3-tag w3-light-grey w3-text-green w3-hover-green">
+                <a href="/tag/aprendizagem-de-maquina.html" title="All articles with Aprendizagem De Máquina tag">#Aprendizagem de Máquina</a>
+              </span>
+            </div>
+          </div>
+        </header>
+
+        <div class="entry-content">
+          Um primeiro contato com aprendizagem de máquina
+        </div>
+
+        <footer>
+          <a class="w3-btn w3-green w3-right" href="/aprendizagem-de-maquina-primeiro-contato.html">Read &#10093;</a>
+        </footer>
+      </article>
+
+      <br><br><br>
+
+
+
+    </section>
+
+
+    <footer id="footer">
+      <div id="footer-copyright" class="w3-center w3-small w3-text-grey w3-padding-48">
+        <span>&copy;  Giseldo Neo </span>
+      </div>
+    </footer>
+
+
+
+  </body>
 </html>
