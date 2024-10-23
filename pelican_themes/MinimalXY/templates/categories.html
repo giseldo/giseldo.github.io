@@ -1,0 +1,42 @@
+    {% extends "base.html" %}
+
+    {% block title %}Categories &ndash; {{ SITENAME }}{% endblock %}
+
+    {% block content %}
+
+    <br><br><br>
+
+    <article>
+      <header class="w3-container col-main">
+        <h1>Categories for {{ SITENAME }}</h1>
+      </header>
+
+      <br>
+
+      <div class="col-main w3-container">
+        <section id="content">
+          <ul>
+          {% for category, articles in categories %}
+            <li><a href="{{ SITEURL }}/{{ category.url }}">{{ category }} ({{ articles|count }})</a></li>
+          {% endfor %}
+          </ul>
+
+          <hr>
+
+          {% for category, articles in categories %}
+          <h3>{{ category }}</h3>
+          <ul>
+          {% for article in articles %}
+            <li><time datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time> <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></li>
+          {% endfor %}
+          </ul>
+          {% endfor %}
+
+        </section>
+
+        <br><br><br>
+        
+      </div>
+    </article>
+
+    {% endblock content %}

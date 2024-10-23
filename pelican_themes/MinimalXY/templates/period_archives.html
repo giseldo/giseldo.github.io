@@ -1,0 +1,30 @@
+    {% extends "base.html" %}
+
+    {% block title %}Archive for {{ period | reverse | join(' ') }} &ndash; {{ SITENAME }}{% endblock %}
+
+    {% block content %}
+
+    <br><br><br>
+
+    <article>
+      <header class="w3-container col-main">
+        <h1>Archive for {{ period | reverse | join(' ') }}</h1>
+      </header>
+
+      <br>
+
+      <div class="col-main w3-container">
+        <section id="content">
+          <ul>
+          {% for article in dates %}
+          	<li><time datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time> <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></li>
+          {% endfor %}
+          </ul>
+        </section>
+
+        <br><br><br>
+        
+      </div>
+    </article>
+
+    {% endblock content %}

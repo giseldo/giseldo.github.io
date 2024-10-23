@@ -1,6 +1,6 @@
 AUTHOR = 'Giseldo Neo'
 SITENAME = 'NeoIA'
-SITEURL = "http://127.0.0.1:8000/"
+#SITEURL = "http://127.0.0.1:8000/"
 SITEURL = "http://giseldo.github.com/"
 
 PATH = "content"
@@ -15,7 +15,7 @@ TIMEZONE = 'Europe/Rome'
 #THEME = "aboutwilson"
 #THEME = "chunk"
 #THEME = "genus"
-THEME = "MinimalXY"
+THEME = "pelican_themes/MinimalXY"
 
 SITETITLE ="NeoIA"
 SITESUBTITLE = "Um Blog sobre Inteligência Artificial"

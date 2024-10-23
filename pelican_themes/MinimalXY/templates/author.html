@@ -1,0 +1,15 @@
+    {% extends "index.html" %}
+
+    {% block title %}Articles by {{ author }} &ndash; {{ SITENAME }}{% endblock %}
+
+    {% block content_title %}
+
+    <br><br><br>
+
+    <div class="w3-container col-main w3-center">
+      <h2>Articles by {{ author }}</h2>
+      <br>
+      <a href="{{ SITEURL }}/{{ author.url }}" style="display: flex; align-items: center; justify-content: center;"><img style="width: 50px; height: 50px;" src="{{ AUTHOR_AVATAR }}" onerror="this.src='../theme/images/avatar.png'"></img></a>
+    </div>
+
+    {% endblock content_title %}

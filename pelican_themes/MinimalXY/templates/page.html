@@ -1,0 +1,37 @@
+    {% extends "base.html" %}
+
+    {% block title %}{{ page.title }} &ndash; {{ SITENAME }}{% endblock %}
+
+    {% block content %}
+
+    <br><br><br>
+
+    <article>
+      <header class="w3-container col-main">
+        <h1>{{ page.title }}</h1>
+        <div class="post-info">
+          <div class="w3-opacity w3-margin-right w3-margin-bottom" style="flex-grow: 1;">
+            {% import 'translations.html' as translations with context %}
+            {{ translations.translations_for(page) }}
+          </div>
+        </div>
+      </header>
+
+      <br>
+
+      <div class="col-main w3-container">
+        <section id="content">
+          {{ page.content }}
+        </section>
+        
+        {% if page.modified %}
+        <br>
+        <p>Last updated: {{ page.locale_modified }}</p>
+        {% endif %}
+
+        <br><br><br>
+        
+      </div>
+    </article>
+
+    {% endblock content %}

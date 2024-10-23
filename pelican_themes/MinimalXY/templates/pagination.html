@@ -1,0 +1,15 @@
+      {% if DEFAULT_PAGINATION %}
+      <div class="w3-center">
+        <ul class="w3-pagination">
+          {% if articles_page.has_previous() %}
+          <li><a href="{{ SITEURL }}/{{ articles_previous_page.url }}">&#10094;</a></li>
+          {% endif %}
+          {% for page_number in range( 1, 1 + articles_paginator.num_pages ) %}
+          <li><a class="{{ 'w3-green' if page_number == articles_page.number else '' }}" href="{{ SITEURL }}/{{ page_name }}{{ page_number if page_number > 1 else '' }}.html">{{ page_number }}</a></li>
+          {% endfor %}
+          {% if articles_page.has_next() %}
+          <li><a href="{{ SITEURL }}/{{ articles_next_page.url }}">&#10095;</a></li>
+          {% endif %}
+        </ul>
+      </div>
+      {% endif %}
