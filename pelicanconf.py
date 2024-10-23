@@ -1,6 +1,7 @@
 AUTHOR = 'Giseldo Neo'
 SITENAME = 'NeoIA'
-SITEURL = ""
+SITEURL = "http://127.0.0.1:8000/"
+SITEURL = "http://giseldo.github.com/"
 
 PATH = "content"
 TIMEZONE = 'Europe/Rome'
@@ -33,14 +34,22 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
-#MENUITEMS = [
-#    ("Blog", "/"),
-#    ("Produtos", "/pages/produtos"),
-#    ("Livros", "/pages/livros"),
-#    ("Sobre", "/pages/sobre"),
-#]
+#Menu
+#MENUITEMS = (
+#    ('Categories', '/' + CATEGORIES_SAVE_AS),
+#    ('Archive', '/' + ARCHIVES_SAVE_AS),
+#)
 
-# Blogroll
+DISPLAY_PAGES_ON_MENU = False
+DISPLAY_CATEGORIES_ON_MENU = False
+MENUITEMS = [
+    ("Blog", "/category/blog"),
+    ("Livros", "/pages/livros"),
+    ("Produtos", "/pages/produtos"),
+    ("Sobre", "/pages/sobre"),
+]
+
+#Blogroll
 #LINKS = (
 #    ("Produtos", "/pages/produtos"),
 #    ("Livros", "/pages/livros"),
@@ -49,15 +58,54 @@ AUTHOR_FEED_RSS = None
 #)
 
 # Social widget
+#SOCIAL = (
+    #("Instagram", "https://www.instagram.com/neogiseldo"),
+    #("X", "https://x.com/giseldoneo"),
+    #("GitHub", "https://github.com/giseldoneo"),
+    #('linkedin', 'http://www.linkedin.com/in/johndoe'),
+    #('facebook', 'http://www.facebook.com/johndoe'),
+#)
+
 SOCIAL = (
-    ("Instagram", "https://www.instagram.com/neogiseldo"),
-    ("X", "https://x.com/giseldoneo"),
-    ("GitHub", "https://github.com/giseldoneo"),
+    ('facebook', 'http://www.facebook.com/johndoe'),
+    ('twitter', 'http://twitter.com/johndoe'),
+    ('github', 'https://github.com/johndoe'),
+    ('linkedin', 'http://www.linkedin.com/in/johndoe'),
 )
 
 DISCLAIMER = False
 COPYRIGHT = False
 DEFAULT_PAGINATION = 10
+
+PLUGIN_PATHS = ['../pelican-plugins/']
+PLUGINS = ['disqus_static']
+
+#PLUGINS = [u"disqus_static"]
+
+DISQUS_SITENAME = u'giseldo'
+DISQUS_SECRET_KEY = u'fJ5p14YDOc0hF6aEOSdcmCGLyn2PDC9h1NjCvZd9D2hC2zbBe5Nb7iscFQ2QMnNL'
+DISQUS_PUBLIC_KEY = u'3ozrYsRuwR7uXIKYwU8tkmp7BPQRZ0Swy0rtFCjQ1cjxlQmdFoa7auKyxRePOqaq'
+
+# Theme customizations
+#MINIMALXY_CUSTOM_CSS = 'static/custom.css'
+#MINIMALXY_FAVICON = 'favicon.ico'
+#MINIMALXY_START_YEAR = 2009
+#MINIMALXY_CURRENT_YEAR = date.today().year
+
+# Author
+AUTHOR_INTRO = 'Inteligência Artificial Descomplicada'
+AUTHOR_DESCRIPTION = 'Um Blog Sobre Inteligência Artificial'
+AUTHOR_AVATAR = "https://0.gravatar.com/avatar/bfb31708333e29b57ed2284eb347ebe10b82b63bae2bfb08c3d80b000103e3aa?size=256"
+#AUTHOR_AVATAR = 'http://www.gravatar.com/avatar/abcdefghijkl?s=240'
+
+
+#AUTHOR_WEB = 'http://giseldo.github.com'
+
+# Services
+#GOOGLE_ANALYTICS = 'UA-12345678-9'
+#DISQUS_SITENAME = 'johndoe'
+
+
 
 # Uncomment following line if you want document-relative URLs when developing
 # RELATIVE_URLS = True
