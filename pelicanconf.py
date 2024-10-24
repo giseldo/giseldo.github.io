@@ -76,10 +76,8 @@ DISCLAIMER = False
 COPYRIGHT = False
 DEFAULT_PAGINATION = 10
 
-PLUGIN_PATHS = ['/pelican-plugins/']
+PLUGIN_PATHS = ['../pelican-plugins/']
 PLUGINS = ['disqus_static']
-
-#PLUGINS = [u"disqus_static"]
 
 DISQUS_SITENAME = u'giseldo'
 DISQUS_SECRET_KEY = u'fJ5p14YDOc0hF6aEOSdcmCGLyn2PDC9h1NjCvZd9D2hC2zbBe5Nb7iscFQ2QMnNL'
