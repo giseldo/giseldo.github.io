@@ -1,6 +1,6 @@
 AUTHOR = 'Giseldo Neo'
 SITENAME = 'NeoIA'
-SITEURL = ""
+SITEURL = "https://giseldo.github.io/"
 
 PATH = "content"
 TIMEZONE = 'Europe/Rome'
@@ -91,7 +91,7 @@ DISQUS_PUBLIC_KEY = u'3ozrYsRuwR7uXIKYwU8tkmp7BPQRZ0Swy0rtFCjQ1cjxlQmdFoa7auKyxR
 
 # Author
 AUTHOR_INTRO = 'Inteligência Artificial Descomplicada'
-AUTHOR_DESCRIPTION = 'Um Blog Sobre Inteligência Artificial'
+AUTHOR_DESCRIPTION = 'Pesquisador e Professor de informática'
 AUTHOR_AVATAR = "https://0.gravatar.com/avatar/bfb31708333e29b57ed2284eb347ebe10b82b63bae2bfb08c3d80b000103e3aa?size=256"
 #AUTHOR_WEB = 'http://giseldo.github.com'
 
