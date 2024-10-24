@@ -1,6 +1,7 @@
 AUTHOR = 'Giseldo Neo'
 SITENAME = 'giseldo'
-SITEURL = "https://giseldo.github.io/"
+SITEURL = ""
+#SITEURL = "https://giseldo.github.io/"
 
 PATH = "content"
 TIMEZONE = 'Europe/Rome'
@@ -83,7 +84,7 @@ DISQUS_PUBLIC_KEY = u'3ozrYsRuwR7uXIKYwU8tkmp7BPQRZ0Swy0rtFCjQ1cjxlQmdFoa7auKyxR
 
 # Author
 AUTHOR_INTRO = 'Inteligência Artificial Descomplicada'
-AUTHOR_DESCRIPTION = 'É pesquisador e Professor de informática.'
+AUTHOR_DESCRIPTION = 'É pesquisador em inteligência artificial e Professor de Informática.'
 AUTHOR_AVATAR = "https://0.gravatar.com/avatar/bfb31708333e29b57ed2284eb347ebe10b82b63bae2bfb08c3d80b000103e3aa?size=256"
 #AUTHOR_WEB = 'http://giseldo.github.com'
 

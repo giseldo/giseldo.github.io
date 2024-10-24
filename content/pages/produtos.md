@@ -1,9 +1,10 @@
 Title: Produtos
 
-Um simples chatbot com LLM
+## Um simples chatbot
 
 [Chatbot Simples](chatbot-simples.html)
 
-Auxilio na reescrita de texto
+## Ferramentas acadêmicas
 
-[NeoTese](neotese.html)
+[Criar parágrafo com citação ABNT](criar-paragrafos-com-citacao-abnt.html)
+
