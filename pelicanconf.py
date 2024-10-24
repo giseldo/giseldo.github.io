@@ -1,5 +1,5 @@
 AUTHOR = 'Giseldo Neo'
-SITENAME = 'NeoIA'
+SITENAME = 'giseldo'
 SITEURL = "https://giseldo.github.io/"
 
 PATH = "content"
