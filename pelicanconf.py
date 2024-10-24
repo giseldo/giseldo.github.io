@@ -56,20 +56,12 @@ MENUITEMS = [
 #    ("Blog", "/"),
 #)
 
-# Social widget
-#SOCIAL = (
-    #("Instagram", "https://www.instagram.com/neogiseldo"),
-    #("X", "https://x.com/giseldoneo"),
-    #("GitHub", "https://github.com/giseldoneo"),
-    #('linkedin', 'http://www.linkedin.com/in/johndoe'),
-    #('facebook', 'http://www.facebook.com/johndoe'),
-#)
-
 SOCIAL = (
-    ('facebook', 'http://www.facebook.com/johndoe'),
-    ('twitter', 'http://twitter.com/johndoe'),
-    ('github', 'https://github.com/johndoe'),
-    ('linkedin', 'http://www.linkedin.com/in/johndoe'),
+    ('facebook', 'http://www.facebook.com/giseldoneo'),
+    ('twitter', 'https://x.com/giseldoneo'),
+    ('github', 'https://github.com/giseldo'),
+    ('linkedin', 'https://www.linkedin.com/in/giseldo-neo-65b252b/'),
+    ("Instagram", "https://www.instagram.com/neogiseldo"),
 )
 
 DISCLAIMER = False
@@ -91,7 +83,7 @@ DISQUS_PUBLIC_KEY = u'3ozrYsRuwR7uXIKYwU8tkmp7BPQRZ0Swy0rtFCjQ1cjxlQmdFoa7auKyxR
 
 # Author
 AUTHOR_INTRO = 'Inteligência Artificial Descomplicada'
-AUTHOR_DESCRIPTION = 'Pesquisador e Professor de informática'
+AUTHOR_DESCRIPTION = 'É pesquisador e Professor de informática.'
 AUTHOR_AVATAR = "https://0.gravatar.com/avatar/bfb31708333e29b57ed2284eb347ebe10b82b63bae2bfb08c3d80b000103e3aa?size=256"
 #AUTHOR_WEB = 'http://giseldo.github.com'
 
