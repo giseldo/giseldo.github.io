@@ -1,7 +1,6 @@
 AUTHOR = 'Giseldo Neo'
 SITENAME = 'NeoIA'
-#SITEURL = "http://127.0.0.1:8000/"
-SITEURL = "http://giseldo.github.io/"
+SITEURL = ""
 
 PATH = "content"
 TIMEZONE = 'Europe/Rome'
@@ -77,7 +76,7 @@ DISCLAIMER = False
 COPYRIGHT = False
 DEFAULT_PAGINATION = 10
 
-PLUGIN_PATHS = ['../pelican-plugins/']
+PLUGIN_PATHS = ['/pelican-plugins/']
 PLUGINS = ['disqus_static']
 
 #PLUGINS = [u"disqus_static"]
@@ -96,16 +95,10 @@ DISQUS_PUBLIC_KEY = u'3ozrYsRuwR7uXIKYwU8tkmp7BPQRZ0Swy0rtFCjQ1cjxlQmdFoa7auKyxR
 AUTHOR_INTRO = 'Inteligência Artificial Descomplicada'
 AUTHOR_DESCRIPTION = 'Um Blog Sobre Inteligência Artificial'
 AUTHOR_AVATAR = "https://0.gravatar.com/avatar/bfb31708333e29b57ed2284eb347ebe10b82b63bae2bfb08c3d80b000103e3aa?size=256"
-#AUTHOR_AVATAR = 'http://www.gravatar.com/avatar/abcdefghijkl?s=240'
-
-
 #AUTHOR_WEB = 'http://giseldo.github.com'
 
 # Services
 #GOOGLE_ANALYTICS = 'UA-12345678-9'
-#DISQUS_SITENAME = 'johndoe'
-
-
 
 # Uncomment following line if you want document-relative URLs when developing
 # RELATIVE_URLS = True
