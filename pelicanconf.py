@@ -1,7 +1,7 @@
 AUTHOR = 'Giseldo Neo'
 SITENAME = 'giseldo'
-SITEURL = ""
-#SITEURL = "https://giseldo.github.io/"
+#SITEURL = ""
+SITEURL = "https://giseldo.github.io/"
 
 PATH = "content"
 TIMEZONE = 'Europe/Rome'

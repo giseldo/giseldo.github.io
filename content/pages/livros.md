@@ -21,8 +21,3 @@ Este livro tem como objetivo fornecer uma visão inicial e objetiva sobre a teor
 [Comprar livro físico na UICLAP](https://loja.uiclap.com/titulo/ua65564){:target="_blank"} 
 
 O processamento de linguagem natural (PLN) tem se tornado cada vez mais relevante na era da informação, onde a habilidade de transformar dados textuais em insights acionáveis é crucial. Este livro oferece uma introdução concisa, porém abrangente, ao processo de vetorização de texto, uma técnica fundamental em PLN. Espero que este livro seja um ponto de partida útil para suas futuras explorações no mundo do processamento de linguagem natural.
-
-
-
-
-

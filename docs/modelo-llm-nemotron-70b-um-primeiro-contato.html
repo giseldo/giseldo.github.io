@@ -19,35 +19,35 @@
     <meta property="og:title" content="Modelo LLM Nemotron 70B: Um primeiro contato"/>
     <meta property="og:description" content="Um primeiro contato com o LLM Nemotron"/>
     <meta property="og:site_name" content="giseldo" />
-    <meta property="og:url" content="/modelo-llm-nemotron-70b-um-primeiro-contato.html"/>
+    <meta property="og:url" content="https://giseldo.github.io/modelo-llm-nemotron-70b-um-primeiro-contato.html"/>
 
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Modelo LLM Nemotron 70B: Um primeiro contato">
     <meta name="twitter:description" content="Um primeiro contato com o LLM Nemotron">
-    <meta name="twitter:url" content="/modelo-llm-nemotron-70b-um-primeiro-contato.html">
+    <meta name="twitter:url" content="https://giseldo.github.io/modelo-llm-nemotron-70b-um-primeiro-contato.html">
 
     <!-- Feed -->
     <link rel="alternate" type="application/rss+xml" href="http://giseldo.disqus.com/latest.rss" title="giseldo Comments RSS Feed">
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:regular,bold">
-    <link rel="stylesheet" type="text/css" href="/theme/css/w3.css">
-    <link rel="stylesheet" type="text/css" href="/theme/css/style.css">
-    <link rel="stylesheet" type="text/css" href="/theme/css/jqcloud.css">
-    <link rel="stylesheet" type="text/css" href="/theme/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="/theme/css/pygments-highlight-github.css">
+    <link rel="stylesheet" type="text/css" href="https://giseldo.github.io/theme/css/w3.css">
+    <link rel="stylesheet" type="text/css" href="https://giseldo.github.io/theme/css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://giseldo.github.io/theme/css/jqcloud.css">
+    <link rel="stylesheet" type="text/css" href="https://giseldo.github.io/theme/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://giseldo.github.io/theme/css/pygments-highlight-github.css">
 
     <!-- Icon -->
 
     <!-- JavaScript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src="/theme/js/jqcloud.min.js"></script>
+    <script src="https://giseldo.github.io/theme/js/jqcloud.min.js"></script>
   </head>
 
   <body>
     <div class="w3-row w3-card w3-white">
       <header id="header">
-        <a href="" id="header-logo" title="Home">GN</a>
+        <a href="https://giseldo.github.io" id="header-logo" title="Home">GN</a>
         <nav id="header-menu">
           <ul>
             <li class="w3-bottombar w3-border-white w3-hover-border-green"><a href="/category/blog">Blog</a></li>
@@ -68,20 +68,20 @@
         <h1>Modelo LLM Nemotron 70B: Um primeiro contato</h1>
         <div class="post-info">
           <div class="w3-opacity w3-margin-right w3-margin-bottom" style="flex-grow: 1;">
-            <span><time datetime="2024-10-22T00:00:00+02:00">ter 22 outubro 2024</time> in <a href="/category/blog.html" title="All articles in category Blog">Blog</a></span>
+            <span><time datetime="2024-10-22T00:00:00+02:00">ter 22 outubro 2024</time> in <a href="https://giseldo.github.io/category/blog.html" title="All articles in category Blog">Blog</a></span>
           </div>
           <div>
             <span class="w3-tag w3-light-grey w3-text-green w3-hover-green">
-              <a href="/tag/redes-neurais.html" title="All articles with Redes Neurais tag">#Redes Neurais</a>
+              <a href="https://giseldo.github.io/tag/redes-neurais.html" title="All articles with Redes Neurais tag">#Redes Neurais</a>
             </span>
             <span class="w3-tag w3-light-grey w3-text-green w3-hover-green">
-              <a href="/tag/aprendizagem-de-maquina.html" title="All articles with Aprendizagem De Máquina tag">#Aprendizagem de Máquina</a>
+              <a href="https://giseldo.github.io/tag/aprendizagem-de-maquina.html" title="All articles with Aprendizagem De Máquina tag">#Aprendizagem de Máquina</a>
             </span>
             <span class="w3-tag w3-light-grey w3-text-green w3-hover-green">
-              <a href="/tag/chatbots.html" title="All articles with Chatbots tag">#Chatbots</a>
+              <a href="https://giseldo.github.io/tag/chatbots.html" title="All articles with Chatbots tag">#Chatbots</a>
             </span>
             <span class="w3-tag w3-light-grey w3-text-green w3-hover-green">
-              <a href="/tag/llm.html" title="All articles with Llm tag">#LLM</a>
+              <a href="https://giseldo.github.io/tag/llm.html" title="All articles with Llm tag">#LLM</a>
             </span>
           </div>
         </div>
@@ -135,10 +135,10 @@
 <p>O Nemontron pode ser testado em <a href="https://build.nvidia.com">build.nvidia.com</a>, especificamente <a href="https://build.nvidia.com/nvidia/llama-3_1-nemotron-70b-instruct?snippet_tab=Node">neste link</a>. A inscrição concede acesso a 100.000 chamadas de API gratuitas. Além disso, ele está disponível para baixar no <a href="https://huggingface.co/nvidia/Llama-3_1-Nemotron-51B-Instruct">Hugging Face</a>. Porém, haja poder de processamento para uma consulta local a este modelo em uma PC de mesa.</p>
 <p>Realizei algumas consultas no site da NVIDIA (<strong>Figura 1</strong>) e a velocidade da resposta deixou muito a desejar em relação a quantidade de tokens por minuto. Um versão do <a href="https://console.groq.com/playground">Groq</a> disponível no Groq Cloud (<em>Figura 2</em>), que usa uma versão também customizada do Llama, o <em>llama3-groq-70b-8192-tool-use-preview</em>, é muito mais veloz do que a disponibilizada no site da NVIDIA. Provavelmente isto está relacionado mais ao hardware da Groq, que parece ser mais eficiente, independente do modelo. Cabe ressaltar que a versão da NVIDIA deu uma resposta bem mais completa que a versão do Groq, para o mesmo prompt.</p>
 <p><center><strong>Figura 1</strong> - Demonstração do Nemotron 70B no site da NVidea</center></br>
-<img src="/images/democracia_nvidia.png" alt="Exemplo do Nemotron" style="width:100%;"/>
+<img src="https://giseldo.github.io/images/democracia_nvidia.png" alt="Exemplo do Nemotron" style="width:100%;"/>
 <center>Fonte: O Autor (2024)</center></p>
 <p><center><strong>Figura 2</strong> - Demonstração no Groq Cloud do modelo 70B tool use preview</center></br>
-<img src="/images/democracia_groq.png" alt="Exemplo do Groq Cloud" style="width:100%;"/>
+<img src="https://giseldo.github.io/images/democracia_groq.png" alt="Exemplo do Groq Cloud" style="width:100%;"/>
 <center>Fonte: O Autor (2024)</center></p>
 <p>Um LLM geralmente utiliza a arquitetura <em>transformer</em>, e no Nemotron não foi diferente. Esta arquitetura já é conhecida e permite que o modelo capture dependências de longo alcance no texto, tornando-o apto a compreender o contexto e a gerar respostas.</p>
 <p>Outro recurso utilizado é o <em>Attention Multi-Head</em> que permite que o modelo se concentre em diferentes partes da entrada simultaneamente, aprimorando sua capacidade de compreender consultas complexas e produzir resultados diferenciados.</p>
@@ -200,13 +200,13 @@
 
           <p style="font-size:10pt; font-style: italic;">Did you like this article? Share it with your friends!</p>
           <div id="share" class="share">
-            <a href="http://www.facebook.com/sharer.php?u=/modelo-llm-nemotron-70b-um-primeiro-contato.html&amp;t=giseldo%3A%20Modelo%20LLM%20Nemotron%2070B%3A%20Um%20primeiro%20contato" target="_blank" class="w3-btn w3-indigo">
+            <a href="http://www.facebook.com/sharer.php?u=https%3A//giseldo.github.io/modelo-llm-nemotron-70b-um-primeiro-contato.html&amp;t=giseldo%3A%20Modelo%20LLM%20Nemotron%2070B%3A%20Um%20primeiro%20contato" target="_blank" class="w3-btn w3-indigo">
               <i class="fa fa-facebook"></i> <span>Facebook</span>
             </a>
-            <a href="http://twitter.com/share?url=/modelo-llm-nemotron-70b-um-primeiro-contato.html&amp;text=giseldo%3A%20Modelo%20LLM%20Nemotron%2070B%3A%20Um%20primeiro%20contato" target="_blank" class="w3-btn w3-blue">
+            <a href="http://twitter.com/share?url=https%3A//giseldo.github.io/modelo-llm-nemotron-70b-um-primeiro-contato.html&amp;text=giseldo%3A%20Modelo%20LLM%20Nemotron%2070B%3A%20Um%20primeiro%20contato" target="_blank" class="w3-btn w3-blue">
               <i class="fa fa-twitter"></i> <span>Twitter</span>
             </a>
-            <a href="https://plus.google.com/share?url=/modelo-llm-nemotron-70b-um-primeiro-contato.html" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" class="w3-btn w3-red">
+            <a href="https://plus.google.com/share?url=https%3A//giseldo.github.io/modelo-llm-nemotron-70b-um-primeiro-contato.html" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" class="w3-btn w3-red">
               <i class="fa fa-google-plus"></i> <span>Google</span>
             </a>
           </div>
@@ -222,7 +222,7 @@
              */
             
             var disqus_config = function () {
-              this.page.url = '';  // Replace PAGE_URL with your page's canonical URL variable
+              this.page.url = 'https://giseldo.github.io';  // Replace PAGE_URL with your page's canonical URL variable
               this.page.identifier = 'modelo-llm-nemotron-70b-um-primeiro-contato'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
             };
             
