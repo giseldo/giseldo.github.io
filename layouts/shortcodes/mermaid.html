@@ -1,12 +1,7 @@
-<script async type="application/javascript" src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js">
-    var config = {
-      startOnLoad:true,
-      theme:'{{ if .Get "theme" }}{{ .Get "theme" }}{{ else }}neutral{{ end }}',
-      align:'{{ if .Get "align" }}{{ .Get "align" }}{{ else }}center{{ end }}'
-    };
-    mermaid.initialize(config);
-  </script>
-  
-  <div class="mermaid">
-    {{.Inner}}
-  </div>
+<link href="{{"css/mermaid.css" | relURL}}" type="text/css" rel="stylesheet"/>
+<script defer src="{{"js/mermaid.js" | relURL}}">
+    mermaid.initialize({startOnLoad:true});
+</script>
+<div class="mermaid" align="{{ if .Get "align" }}{{ .Get "align" }}{{ else }}center{{ end }}" >
+    {{ safeHTML .Inner  }}
+</div>
