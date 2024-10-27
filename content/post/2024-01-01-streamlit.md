@@ -2,7 +2,7 @@
 title: 'StreamLit Primeiro Contato'
 date: '2024-01-01'
 draft: false
-tags: ["Python", "StreamLit", "Web]
+tags: ["Python", "StreamLit", "Web"]
 ---
 
 ## Introdução
