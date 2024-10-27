@@ -1,0 +1,11 @@
+# incluir o discussq
+# atualizar o gráfico do post da rede neural deixar ele mermaid
+# continuar novo post ai simple
+# incluir o html dos livros
+# incluir formulario de contato
+# incluir o podcast
+# incluir e gravar as aulas do primeiro curso
+# finalizar o livro de metodologia
+# iniciar um livro de banco de dados
+<!-- {{< form-contact action="https://formspree.io/f/xgveoopo"  >}} -->
+
