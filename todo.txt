@@ -1,11 +1,13 @@
-# incluir o discussq
+# atualizar o html dos livros
 # atualizar o gráfico do post da rede neural deixar ele mermaid
 # continuar novo post ai simple
-# incluir o html dos livros
 # incluir formulario de contato
 # incluir o podcast
 # incluir e gravar as aulas do primeiro curso
 # finalizar o livro de metodologia
 # iniciar um livro de banco de dados
 <!-- {{< form-contact action="https://formspree.io/f/xgveoopo"  >}} -->
+site com ótimo template
+https://woliveiras.com.br/posts/melhor-ser-pj-ou-clt
+https://thiagomont-portifolio.gitlab.io/portifolio/page/referencias_tecnicas/
 

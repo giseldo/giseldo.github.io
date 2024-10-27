@@ -9,7 +9,7 @@ weight: 2
 
 - [Adquirir e-pub na Amazon](https://www.amazon.com.br/gp/product/B0DCT4M7GH) 
 - [Adquirir livro físico na UICLAP](https://loja.uiclap.com/titulo/ua63343/) 
-- [Versão on-line](https://giseldo.github.io/livrovetorizacao/) 
+- [Versão on-line](https://giseldo.github.io/livroregressaolinear/) 
 
 {{< columns >}}
 

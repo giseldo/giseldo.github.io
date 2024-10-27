@@ -26,8 +26,17 @@
     <loc>http://localhost:1313/tags/</loc>
     <lastmod>2024-05-01T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/tags/redes-neurais/</loc>
+    <lastmod>2024-04-01T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/post/2024-04-01-redesneurais/</loc>
     <lastmod>2024-04-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/aprendizagem-de-m%C3%A1quina/</loc>
+    <lastmod>2024-03-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/regress%C3%A3o-linear/</loc>
+    <lastmod>2024-03-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/post/2024-03-01-regressaolinear/</loc>
     <lastmod>2024-03-01T00:00:00+00:00</lastmod>
@@ -42,6 +51,9 @@
     <lastmod>2024-01-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/post/2024-01-01-streamlit/</loc>
+    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/web/</loc>
     <lastmod>2024-01-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
