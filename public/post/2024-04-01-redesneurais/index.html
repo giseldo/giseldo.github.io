@@ -1,0 +1,820 @@
+
+
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+ 
+
+
+      <title>Redes Neurais Primeiro Contato - </title>
+
+  <meta name="description" content="Introdução
+As redes neurais são utilizadas em diversas aplicações. De forma resumida elas são compostas por diversos nós interconectados e organizados em camadas. Elas funcionam como um meio de aprendizado a partir da análise de exemplos de treinamento, permitindo a realização de tarefas complexas. Sendo Redes Neurais uma sub-área da aprendizagem de máquina, grande parte dos conceitos de aprendizagem de máquina são equivalentes na aplicação de uma rede neural. Veja na Figura 1 um simples esquema dos conceitos.">
+  <meta name="author" content="Some Person"/><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Inteligência Artificial Descomplicada",
+    
+    "url": "http:\/\/localhost:1313\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "http:\/\/localhost:1313\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "http:\/\/localhost:1313\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "http:\/\/localhost:1313\/post\/2024-04-01-redesneurais\/",
+          "name": "Redes neurais primeiro contato"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Some Person"
+  },
+  "headline": "Redes Neurais Primeiro Contato",
+  "description" : "Introdução As redes neurais são utilizadas em diversas aplicações. De forma resumida elas são compostas por diversos nós interconectados e organizados em camadas. Elas funcionam como um meio de aprendizado a partir da análise de exemplos de treinamento, permitindo a realização de tarefas complexas. Sendo Redes Neurais uma sub-área da aprendizagem de máquina, grande parte dos conceitos de aprendizagem de máquina são equivalentes na aplicação de uma rede neural. Veja na Figura 1 um simples esquema dos conceitos.\n",
+  "inLanguage" : "en",
+  "wordCount":  913 ,
+  "datePublished" : "2024-04-01T00:00:00\u002b00:00",
+  "dateModified" : "2024-04-01T00:00:00\u002b00:00",
+  "image" : "http:\/\/localhost:1313\/img\/avatar-icon.png",
+  "keywords" : [ "" ],
+  "mainEntityOfPage" : "http:\/\/localhost:1313\/post\/2024-04-01-redesneurais\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "http:\/\/localhost:1313\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "http:\/\/localhost:1313\/img\/avatar-icon.png",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+
+<meta property="og:title" content="Redes Neurais Primeiro Contato" />
+<meta property="og:description" content="Introdução
+As redes neurais são utilizadas em diversas aplicações. De forma resumida elas são compostas por diversos nós interconectados e organizados em camadas. Elas funcionam como um meio de aprendizado a partir da análise de exemplos de treinamento, permitindo a realização de tarefas complexas. Sendo Redes Neurais uma sub-área da aprendizagem de máquina, grande parte dos conceitos de aprendizagem de máquina são equivalentes na aplicação de uma rede neural. Veja na Figura 1 um simples esquema dos conceitos.">
+<meta property="og:image" content="http://localhost:1313/img/avatar-icon.png" />
+<meta property="og:url" content="http://localhost:1313/post/2024-04-01-redesneurais/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Inteligência Artificial Descomplicada" />
+
+  <meta name="twitter:title" content="Redes Neurais Primeiro Contato" />
+  <meta name="twitter:description" content="Introdução
+As redes neurais são utilizadas em diversas aplicações. De forma resumida elas são compostas por diversos nós interconectados e organizados em camadas. Elas funcionam como um meio de …">
+  <meta name="twitter:image" content="http://localhost:1313/img/avatar-icon.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@username" />
+  <meta name="twitter:creator" content="@username" />
+  <link href='http://localhost:1313/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta name="generator" content="Hugo 0.136.5">
+  <link rel="alternate" href="http://localhost:1313/index.xml" type="application/rss+xml" title="Inteligência Artificial Descomplicada"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css" integrity="sha384-3UiQGuEI4TTMaFmGIZumfRPtfKQ3trwQE2JgosJxCnGmQpL/lJdjpcHkaaFwHlcI" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous"><link rel="stylesheet" href="http://localhost:1313/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="http://localhost:1313/css/highlight.min.css" /><link rel="stylesheet" href="http://localhost:1313/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://localhost:1313/">Inteligência Artificial Descomplicada</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Livros" href="/page/livros/">Livros</a>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent" role="button" tabindex="0">Produtos</a>
+              <div class="navlinks-children">
+                
+                  <a href="/page/produtos/todos">Todos</a>
+                
+                  <a href="/page/produtos/chatbotsimples">Chatbot Simples</a>
+                
+                  <a href="/page/produtos/criarparagrafo">Criar Paragrafo</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Pesquisas" href="/page/pesquisas/">Pesquisas</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Sobre" href="/page/sobre/">Sobre</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+      <div class="avatar-container">
+        <div class="avatar-img-border">
+          <a title="Inteligência Artificial Descomplicada" href="http://localhost:1313/">
+            <img class="avatar-img" src="http://localhost:1313/img/avatar-icon.png" alt="Inteligência Artificial Descomplicada" />
+           
+          </a>
+        </div>
+      </div>
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>Redes Neurais Primeiro Contato</h1>
+              
+              
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on April 1, 2024
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;5&nbsp;minutes
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;913&nbsp;words
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Some Person
+    
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <h2 id="introdução">Introdução</h2>
+<p>As <strong>redes neurais</strong> são utilizadas em diversas aplicações. De forma resumida elas são compostas por diversos nós interconectados e organizados em camadas. Elas funcionam como um meio de aprendizado a partir da análise de exemplos de treinamento, permitindo a realização de tarefas complexas. Sendo Redes Neurais uma sub-área da aprendizagem de máquina, grande parte dos conceitos de aprendizagem de máquina são equivalentes na aplicação de uma rede neural. Veja na <strong>Figura 1</strong> um simples esquema dos conceitos.</p>
+<p><strong>Figura 1</strong> - Sub-áreas da Inteligência Artificial
+
+<link rel="stylesheet" href="http://localhost:1313/css/hugo-easy-gallery.css" />
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="/images/ia.png" alt="/images/ia.png"/>
+    </div>
+    <a href="/images/ia.png" itemprop="contentUrl"></a>
+  </figure>
+</div>
+
+Fonte: O Autor (2024)</p>
+<h2 id="previsão">Previsão</h2>
+<p>Realizar uma <strong>previsão</strong>, no contexto da inteligência artificial, significa utilizar um modelo para estimar ou inferir um valor futuro ou desconhecido. A previsão é baseada em padrões identificados em dados passados ou exemplos conhecidos, e o objetivo é fornecer uma estimativa ou decisão sobre novos dados ou eventos futuros. A precisão da previsão depende da qualidade dos dados, do modelo utilizado e de quão bem o modelo foi treinado e ajustado.</p>
+<p>Por exemplo, ao treinar um modelo preditivo com imagens de gatos e cachorros, o modelo pode, posteriormente, prever se uma nova imagem contém um gato ou um cachorro, mesmo sem ter visto uma nova imagem específica antes. Veja na <strong>Figura 2</strong> a imagem de um gato e na <strong>Figura 3</strong> um cahorro. Um modelo preditivo poderá dar um chute técnico se a foto contem um gato ou um cachorro, nesse caso é bem simples, mas existem fotos mais difícieis de identificar, tanto para um modelo quanto para o ser humano.</p>
+<!-- raw HTML omitted -->
+<p><strong>Figura 3</strong> - Um cachorro
+
+
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="/images/blog/dog.jpg" alt="/images/blog/dog.jpg"/>
+    </div>
+    <a href="/images/blog/dog.jpg" itemprop="contentUrl"></a>
+  </figure>
+</div>
+
+Fonte: Imagem de <!-- raw HTML omitted -->Ilona Krijgsman<!-- raw HTML omitted --> por <!-- raw HTML omitted -->Pixabay<!-- raw HTML omitted --></p>
+<p>Com uma rede Neural podemos realizar uma previsão. Cabe ressaltar que também podemos realizar previsão com Regressão Linear ou outras técnicas.</p>
+<h2 id="rede-neural">Rede Neural</h2>
+<p>Um modelo preditivo é treinado com dados históricos. Com uma rede neural não é diferente. Os dados fornecidos a uma rede neural variam de acordo com o caso de uso. Em um sistema de reconhecimento de objetos, por exemplo, a rede pode ser alimentada com milhares de imagens rotuladas de gatos, cachorros, carros, casas e outros objetos.</p>
+<p>Muitas das redes neurais seguem um padrão conhecido como <strong>feed-forward</strong>, em que os dados são sempre processados na mesma direção, sem retornos aos nós anteriores. Cada nó na rede recebe entradas, que são multiplicadas por <strong>pesos</strong> específicos e ajustadas por um valor adicional chamado <strong>bias</strong>, que pode ser ajustado durante o treinamento. O resultado desse cálculo é submetido a uma <strong>função de ativação</strong>, como a <strong>ReLU</strong>, que introduz não-linearidade ao modelo, permitindo uma maior flexibilidade na tomada de decisões.</p>
+<p>Durante o treinamento, os <strong>pesos</strong> e as <strong>biases</strong> são inicialmente configurados com valores aleatórios e, com base nos resultados das saídas, esses parâmetros são ajustados para melhorar o desempenho da rede. Esse processo continua até que a rede alcance uma perda (erro) suficientemente baixa, garantindo consistência nos resultados. A perda é uma métrica que quantifica o quão distante a saída da rede está do resultado correto.</p>
+<h2 id="linha-do-tempo">Linha do tempo</h2>
+<p>Á seguir uma linha do tempo resumida destancando os principais avanços em redes neurais.</p>
+<ul>
+<li>
+<p>1943 - Modelo de Neurônio Artificial (McCulloch e Pitts): Warren McCulloch e Walter Pitts propuseram o primeiro modelo matemático de um neurônio, baseando-se no funcionamento dos neurônios biológicos.</p>
+</li>
+<li>
+<p>1958 - Perceptron (Frank Rosenblatt): Frank Rosenblatt desenvolveu o perceptron, uma das primeiras redes neurais artificiais. Esse modelo é capaz de aprender pesos a partir de dados de entrada e foi visto como um avanço na época.</p>
+</li>
+<li>
+<p>1969 - Crítica ao Perceptron (Minsky e Papert): Marvin Minsky e Seymour Papert publicaram o livro Perceptrons, que destacava as limitações do perceptron, especialmente a incapacidade de resolver problemas linearmente inseparáveis. Isso resultou em um declínio no interesse pelas redes neurais por alguns anos.</p>
+</li>
+<li>
+<p>1986 - Backpropagation e Renascimento das Redes Neurais: A redescoberta do algoritmo de backpropagation por Geoffrey Hinton, David Rumelhart e Ronald Williams marcou um novo renascimento no campo das redes neurais. Esse algoritmo permitiu a atualização eficiente dos pesos em redes de múltiplas camadas (deep learning), resolvendo limitações anteriores.</p>
+</li>
+<li>
+<p>1990s - Redes Neurais Convolucionais (Yann LeCun): Yann LeCun introduziu as redes neurais convolucionais (CNNs), que mostraram grande eficácia em tarefas de reconhecimento de padrões, especialmente em imagens.</p>
+</li>
+<li>
+<p>1997 - LSTMs (Hochreiter e Schmidhuber): Sepp Hochreiter e Jürgen Schmidhuber desenvolveram as Long Short-Term Memory (LSTM), um tipo de rede neural recorrente que consegue lidar melhor com dados sequenciais e dependências de longo prazo, superando limitações das redes recorrentes tradicionais.</p>
+</li>
+<li>
+<p>2006 - Aprendizado Profundo (Deep Learning): Geoffrey Hinton e colaboradores publicaram trabalhos que mostravam como redes neurais profundas poderiam ser treinadas de forma eficaz usando novas técnicas, o que marcou a ascensão do deep learning.</p>
+</li>
+<li>
+<p>2012 - AlexNet e Revolução no Reconhecimento de Imagens: A rede AlexNet, desenvolvida por Alex Krizhevsky e Geoffrey Hinton, venceu a competição ImageNet, demonstrando o poder do deep learning em reconhecimento de imagens e levando a um aumento no interesse e na aplicação comercial das redes neurais profundas.</p>
+</li>
+<li>
+<p>2014 - Redes Gerativas Adversárias (GANs): Ian Goodfellow e colegas introduziram as redes gerativas adversárias (GANs), uma inovação que permitiu a criação de modelos gerativos poderosos, usados para gerar imagens, vídeos e outros tipos de dados.</p>
+</li>
+<li>
+<p>2020 - Transformers e Aprendizado de Linguagem: O modelo Transformer, introduzido em 2017 por Vaswani e outros, revolucionou o processamento de linguagem natural, culminando no desenvolvimento de modelos como o GPT, BERT, entre outros, que são amplamente utilizados para tarefas de geração e compreensão de texto.</p>
+</li>
+</ul>
+<p>Por hoje é isso. Nos vemos no próximo post.</p>
+<h2 id="fontes-consultadas">Fontes consultadas</h2>
+<p><a href="https://www.aibutsimple.com/p/neural-networks-explained">Ai but simple Issue #1</a></p>
+
+
+        
+
+        
+            <hr/>
+            <section id="social-share">
+              <div class="list-inline footer-links">
+                
+
+<div class="share-box" aria-hidden="true">
+    <ul class="share">
+      
+      <li>
+        <a href="//twitter.com/share?url=http%3a%2f%2flocalhost%3a1313%2fpost%2f2024-04-01-redesneurais%2f&amp;text=Redes%20Neurais%20Primeiro%20Contato&amp;via=username" target="_blank" title="Share on Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.facebook.com/sharer/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fpost%2f2024-04-01-redesneurais%2f" target="_blank" title="Share on Facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fpost%2f2024-04-01-redesneurais%2f&amp;title=Redes%20Neurais%20Primeiro%20Contato" target="_blank" title="Share on Reddit">
+          <i class="fab fa-reddit"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.linkedin.com/shareArticle?url=http%3a%2f%2flocalhost%3a1313%2fpost%2f2024-04-01-redesneurais%2f&amp;title=Redes%20Neurais%20Primeiro%20Contato" target="_blank" title="Share on LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.stumbleupon.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fpost%2f2024-04-01-redesneurais%2f&amp;title=Redes%20Neurais%20Primeiro%20Contato" target="_blank" title="Share on StumbleUpon">
+          <i class="fab fa-stumbleupon"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.pinterest.com/pin/create/button/?url=http%3a%2f%2flocalhost%3a1313%2fpost%2f2024-04-01-redesneurais%2f&amp;description=Redes%20Neurais%20Primeiro%20Contato" target="_blank" title="Share on Pinterest">
+          <i class="fab fa-pinterest"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+
+              </div>
+            </section>
+        
+
+        
+          
+
+          
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="http://localhost:1313/post/2024-03-01-regressaolinear/" data-toggle="tooltip" data-placement="top" title="Regressão Linear Primeiro Contato">&larr; Previous Post</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="http://localhost:1313/post/2024-05-01-nemotron/" data-toggle="tooltip" data-placement="top" title="Nemotron LLM 70B Um primeiro contato">Next Post &rarr;</a>
+            </li>
+          
+        </ul>
+      
+
+
+      
+      
+      
+      
+      
+        
+      
+
+    </div>
+  </div>
+</div>
+
+      <footer>
+  <div class="container">
+    
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+		
+		  <a href="mailto:youremail@domain.com" title="Email me">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://www.facebook.com/username" title="Facebook">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-facebook fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://github.com/username" title="GitHub">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://gitlab.com/username" title="GitLab">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-gitlab fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://bitbucket.org/username" title="Bitbucket">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-bitbucket fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://twitter.com/username" title="Twitter">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://username.slack.com/" title="Slack">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-slack fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://reddit.com/u/username" title="Reddit">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-reddit-alien fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://linkedin.com/in/username" title="LinkedIn">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://www.xing.com/profile/username" title="Xing">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-xing fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://stackoverflow.com/users/XXXXXXX/username" title="StackOverflow">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-stack-overflow fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://www.snapchat.com/add/username" title="Snapchat">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-snapchat-ghost fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://www.instagram.com/username" title="Instagram">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://www.youtube.com/user/username" title="Youtube">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-youtube fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://soundcloud.com/username" title="SoundCloud">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-soundcloud fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://open.spotify.com/user/username" title="Spotify">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-spotify fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://username.bandcamp.com/" title="Bandcamp">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-bandcamp fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://itch.io/profile/username" title="Itch.io">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-gamepad fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://vk.com/username" title="VK">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-vk fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://paypal.me/username" title="PayPal">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-paypal fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://telegram.me/username" title="Telegram">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-telegram fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://500px.com/username" title="500px">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-500px fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://codepen.io/username" title="CodePen">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-codepen fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://www.kaggle.com/username" title="kaggle">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-kaggle fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a rel="me"href="https://url" title="Mastodon">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-mastodon fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://weibo.com/username" title="Weibo">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-weibo fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://medium.com/@username" title="Medium">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-medium fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://discord.gg/invite%20code%20%28https://discord.gg/XXXXXXX%29" title="Discord">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-discord fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://www.strava.com/athletes/userid" title="Strava">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-strava fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              <a href="yourwebsite.com">Some Person</a>
+            
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2024
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="http://localhost:1313/">Inteligência Artificial Descomplicada</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.136.5</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.js" integrity="sha384-G0zcxDFp5LWZtDuRMnBkk3EphCK1lhEf4UEyEM693ka574TZGwo4IWwS6QLzM/2t" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+<script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha384-w5y/xIeYixWvfM+A1cEbmHPURnvyqmVg5eVENruEdDjcyRLUSNej7512JQGspFUr" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+<script src="http://localhost:1313/js/main.js"></script>
+<script src="http://localhost:1313/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="http://localhost:1313/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+

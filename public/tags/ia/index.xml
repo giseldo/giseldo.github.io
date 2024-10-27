@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ia on Inteligência Artificial Descomplicada</title>
+    <link>http://localhost:1313/tags/ia/</link>
+    <description>Recent content in Ia on Inteligência Artificial Descomplicada</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>youremail@domain.com (Some Person)</managingEditor>
+    <webMaster>youremail@domain.com (Some Person)</webMaster>
+    <lastBuildDate>Wed, 01 May 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/ia/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Nemotron LLM 70B Um primeiro contato</title>
+      <link>http://localhost:1313/post/2024-05-01-nemotron/</link>
+      <pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate><author>youremail@domain.com (Some Person)</author>
+      <guid>http://localhost:1313/post/2024-05-01-nemotron/</guid>
+      <description>&lt;h1 id=&#34;introdução&#34;&gt;Introdução&lt;/h1&gt;&#xA;&lt;p&gt;Em julho de 2024, a Meta lançou um modelo de linguagem (LLM) open-source, o &lt;em&gt;Llama-3.1-70B&lt;/em&gt;. Um pouco depois, em setembro a empresa NVIDIA lançou um derivado deste, o &lt;em&gt;Llama 3.1-Nemotron-51B-Instruct&lt;/em&gt;. E em outubro lançou finalmente um modelo de 70b, o &lt;em&gt;Llama 3.1 nemotron-70b-instruct&lt;/em&gt;.&lt;/p&gt;&#xA;&lt;p&gt;O &lt;em&gt;nemotron-70b&lt;/em&gt; performou melhor, em alguns testes comparativos, do que o GPT-4o. Nos testes, ele liderou em desempenho geral e também se destacou nas categorias chat (&lt;em&gt;chat score&lt;/em&gt;) e raciocínio (&lt;em&gt;reasoning score&lt;/em&gt;). Veja na &lt;strong&gt;Tabela 1&lt;/strong&gt; os dados comparativos com mais detalhes.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

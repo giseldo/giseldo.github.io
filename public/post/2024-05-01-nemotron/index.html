@@ -1,0 +1,863 @@
+
+
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+ 
+
+
+      <title>Nemotron LLM 70B Um primeiro contato - </title>
+
+  <meta name="description" content="Introdução
+Em julho de 2024, a Meta lançou um modelo de linguagem (LLM) open-source, o Llama-3.1-70B. Um pouco depois, em setembro a empresa NVIDIA lançou um derivado deste, o Llama 3.1-Nemotron-51B-Instruct. E em outubro lançou finalmente um modelo de 70b, o Llama 3.1 nemotron-70b-instruct.
+O nemotron-70b performou melhor, em alguns testes comparativos, do que o GPT-4o. Nos testes, ele liderou em desempenho geral e também se destacou nas categorias chat (chat score) e raciocínio (reasoning score). Veja na Tabela 1 os dados comparativos com mais detalhes.">
+  <meta name="author" content="Some Person"/><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Inteligência Artificial Descomplicada",
+    
+    "url": "http:\/\/localhost:1313\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "http:\/\/localhost:1313\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "http:\/\/localhost:1313\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "http:\/\/localhost:1313\/post\/2024-05-01-nemotron\/",
+          "name": "Nemotron llm 70 b um primeiro contato"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Some Person"
+  },
+  "headline": "Nemotron LLM 70B Um primeiro contato",
+  "description" : "Introdução Em julho de 2024, a Meta lançou um modelo de linguagem (LLM) open-source, o Llama-3.1-70B. Um pouco depois, em setembro a empresa NVIDIA lançou um derivado deste, o Llama 3.1-Nemotron-51B-Instruct. E em outubro lançou finalmente um modelo de 70b, o Llama 3.1 nemotron-70b-instruct.\nO nemotron-70b performou melhor, em alguns testes comparativos, do que o GPT-4o. Nos testes, ele liderou em desempenho geral e também se destacou nas categorias chat (chat score) e raciocínio (reasoning score). Veja na Tabela 1 os dados comparativos com mais detalhes.\n",
+  "inLanguage" : "en",
+  "wordCount":  576 ,
+  "datePublished" : "2024-05-01T00:00:00\u002b00:00",
+  "dateModified" : "2024-05-01T00:00:00\u002b00:00",
+  "image" : "http:\/\/localhost:1313\/img\/avatar-icon.png",
+  "keywords" : [ "llm, ia" ],
+  "mainEntityOfPage" : "http:\/\/localhost:1313\/post\/2024-05-01-nemotron\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "http:\/\/localhost:1313\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "http:\/\/localhost:1313\/img\/avatar-icon.png",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+
+<meta property="og:title" content="Nemotron LLM 70B Um primeiro contato" />
+<meta property="og:description" content="Introdução
+Em julho de 2024, a Meta lançou um modelo de linguagem (LLM) open-source, o Llama-3.1-70B. Um pouco depois, em setembro a empresa NVIDIA lançou um derivado deste, o Llama 3.1-Nemotron-51B-Instruct. E em outubro lançou finalmente um modelo de 70b, o Llama 3.1 nemotron-70b-instruct.
+O nemotron-70b performou melhor, em alguns testes comparativos, do que o GPT-4o. Nos testes, ele liderou em desempenho geral e também se destacou nas categorias chat (chat score) e raciocínio (reasoning score). Veja na Tabela 1 os dados comparativos com mais detalhes.">
+<meta property="og:image" content="http://localhost:1313/img/avatar-icon.png" />
+<meta property="og:url" content="http://localhost:1313/post/2024-05-01-nemotron/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Inteligência Artificial Descomplicada" />
+
+  <meta name="twitter:title" content="Nemotron LLM 70B Um primeiro contato" />
+  <meta name="twitter:description" content="Introdução
+Em julho de 2024, a Meta lançou um modelo de linguagem (LLM) open-source, o Llama-3.1-70B. Um pouco depois, em setembro a empresa NVIDIA lançou um derivado deste, o Llama …">
+  <meta name="twitter:image" content="http://localhost:1313/img/avatar-icon.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@username" />
+  <meta name="twitter:creator" content="@username" />
+  <link href='http://localhost:1313/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta name="generator" content="Hugo 0.136.5">
+  <link rel="alternate" href="http://localhost:1313/index.xml" type="application/rss+xml" title="Inteligência Artificial Descomplicada"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css" integrity="sha384-3UiQGuEI4TTMaFmGIZumfRPtfKQ3trwQE2JgosJxCnGmQpL/lJdjpcHkaaFwHlcI" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous"><link rel="stylesheet" href="http://localhost:1313/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="http://localhost:1313/css/highlight.min.css" /><link rel="stylesheet" href="http://localhost:1313/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://localhost:1313/">Inteligência Artificial Descomplicada</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Livros" href="/page/livros/">Livros</a>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent" role="button" tabindex="0">Produtos</a>
+              <div class="navlinks-children">
+                
+                  <a href="/page/produtos/todos">Todos</a>
+                
+                  <a href="/page/produtos/chatbotsimples">Chatbot Simples</a>
+                
+                  <a href="/page/produtos/criarparagrafo">Criar Paragrafo</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Pesquisas" href="/page/pesquisas/">Pesquisas</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Sobre" href="/page/sobre/">Sobre</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+      <div class="avatar-container">
+        <div class="avatar-img-border">
+          <a title="Inteligência Artificial Descomplicada" href="http://localhost:1313/">
+            <img class="avatar-img" src="http://localhost:1313/img/avatar-icon.png" alt="Inteligência Artificial Descomplicada" />
+           
+          </a>
+        </div>
+      </div>
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>Nemotron LLM 70B Um primeiro contato</h1>
+              
+              
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on May 1, 2024
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;3&nbsp;minutes
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;576&nbsp;words
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Some Person
+    
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <h1 id="introdução">Introdução</h1>
+<p>Em julho de 2024, a Meta lançou um modelo de linguagem (LLM) open-source, o <em>Llama-3.1-70B</em>. Um pouco depois, em setembro a empresa NVIDIA lançou um derivado deste, o <em>Llama 3.1-Nemotron-51B-Instruct</em>. E em outubro lançou finalmente um modelo de 70b, o <em>Llama 3.1 nemotron-70b-instruct</em>.</p>
+<p>O <em>nemotron-70b</em> performou melhor, em alguns testes comparativos, do que o GPT-4o. Nos testes, ele liderou em desempenho geral e também se destacou nas categorias chat (<em>chat score</em>) e raciocínio (<em>reasoning score</em>). Veja na <strong>Tabela 1</strong> os dados comparativos com mais detalhes.</p>
+<!-- raw HTML omitted -->
+<table>
+  <thead>
+      <tr>
+          <th>Model</th>
+          <th style="text-align: right">Overall Score</th>
+          <th style="text-align: right">Chat Score</th>
+          <th style="text-align: right">Reasoning Score</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Llama 3.1 Nemotron-70B</td>
+          <td style="text-align: right">94.1</td>
+          <td style="text-align: right">97.5</td>
+          <td style="text-align: right">98.1</td>
+      </tr>
+      <tr>
+          <td>Skywork-Reward-Gemma-2-27B</td>
+          <td style="text-align: right">93.8</td>
+          <td style="text-align: right">95.8</td>
+          <td style="text-align: right">96.1</td>
+      </tr>
+      <tr>
+          <td>TextEval-Llama3.1-70B</td>
+          <td style="text-align: right">93.5</td>
+          <td style="text-align: right">94.1</td>
+          <td style="text-align: right">96.4</td>
+      </tr>
+      <tr>
+          <td>GPT-4o</td>
+          <td style="text-align: right">86.7</td>
+          <td style="text-align: right">96.1</td>
+          <td style="text-align: right">86.6</td>
+      </tr>
+  </tbody>
+</table>
+<!-- raw HTML omitted -->
+<h2 id="testes-de-uso">Testes de uso</h2>
+<p>O Nemontron pode ser testado em <a href="https://build.nvidia.com">build.nvidia.com</a>, especificamente <a href="https://build.nvidia.com/nvidia/llama-3_1-nemotron-70b-instruct?snippet_tab=Node">neste link</a>. A inscrição concede acesso a 100.000 chamadas de API gratuitas. Além disso, ele está disponível para baixar no <a href="https://huggingface.co/nvidia/Llama-3_1-Nemotron-51B-Instruct">Hugging Face</a>. Porém, haja poder de processamento para uma consulta local a este modelo em uma PC de mesa.</p>
+<p>Realizei algumas consultas no site da NVIDIA (<strong>Figura 1</strong>) e a velocidade da resposta deixou muito a desejar em relação a quantidade de tokens por minuto. Um versão do <a href="https://console.groq.com/playground">Groq</a> disponível no Groq Cloud (<em>Figura 2</em>), que usa uma versão também customizada do Llama, o <em>llama3-groq-70b-8192-tool-use-preview</em>, é muito mais veloz do que a disponibilizada no site da NVIDIA. Provavelmente isto está relacionado mais ao hardware da Groq, que parece ser mais eficiente, independente do modelo. Cabe ressaltar que a versão da NVIDIA deu uma resposta bem mais completa que a versão do Groq, para o mesmo prompt.</p>
+<p><strong>Figura 1</strong> - Demonstração do Nemotron 70B no site da NVidia
+
+<link rel="stylesheet" href="http://localhost:1313/css/hugo-easy-gallery.css" />
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="/images/democracia_nvidia.png" alt="/images/democracia_nvidia.png"/>
+    </div>
+    <a href="/images/democracia_nvidia.png" itemprop="contentUrl"></a>
+  </figure>
+</div>
+
+Fonte: O Autor (2024)</p>
+<p><strong>Figura 2</strong> - Demonstração no Groq Cloud do modelo 70B tool use preview
+
+
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="/images/democracia_groq.png" alt="/images/democracia_groq.png"/>
+    </div>
+    <a href="/images/democracia_groq.png" itemprop="contentUrl"></a>
+  </figure>
+</div>
+
+Fonte: O Autor (2024)</p>
+<h2 id="arquitetura">Arquitetura</h2>
+<p>Um LLM geralmente utiliza a arquitetura <em>transformer</em>, e no Nemotron não foi diferente. Esta arquitetura já é conhecida e permite que o modelo capture dependências de longo alcance no texto, tornando-o apto a compreender o contexto e a gerar respostas.</p>
+<p>Outro recurso utilizado é o <em>Attention Multi-Head</em> que permite que o modelo se concentre em diferentes partes da entrada simultaneamente, aprimorando sua capacidade de compreender consultas complexas e produzir resultados diferenciados.</p>
+<p>Por fim, foi implementado no modelo, a <em>normalização de camadas</em>. Ela ajuda a estabilizar o treinamento e a melhorar as taxas de convergência, resultando em um aprendizado mais rápido e eficiente.
+o modelo foi treinado em uma ampla gama de dados licenciados com a licença (CC-BY-4.0), que inclui livros, artigos e conteúdo da web. Ressaltando que o BY da licença exige que o crédito seja dado ao autor.</p>
+<p>De acordo com a NVIDIA, o processo de treinamento do <em>Llama 3.1 Nemotron-70B</em> incluiu:</p>
+<ul>
+<li>aprendizagem supervisionada</li>
+<li>aprendizagem por reforço de feedback humano.</li>
+<li>Modelagem de recompensa: O modelo prevê a qualidade da resposta com base nas interações do usuário. Este mecanismo permite ajustar seus resultados de forma dinâmica, melhorando ao longo do tempo com base no feedback do mundo real.</li>
+</ul>
+<h2 id="código">Código</h2>
+<p>Em relação a código, a consulta ao modelo em python utiliza a mesma API do LLM da OpenAI (conforme pode ser visto no código abaixo), alterando somente a <em>base url</em>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Python" data-lang="Python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">openai</span> <span class="kn">import</span> <span class="n">OpenAI</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">client</span> <span class="o">=</span> <span class="n">OpenAI</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="n">base_url</span> <span class="o">=</span> <span class="s2">&#34;https://integrate.api.nvidia.com/v1&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">api_key</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">completion</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">chat</span><span class="o">.</span><span class="n">completions</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="n">model</span><span class="o">=</span><span class="s2">&#34;nvidia/llama-3.1-nemotron-70b-instruct&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">messages</span><span class="o">=</span><span class="p">[{</span><span class="s2">&#34;role&#34;</span><span class="p">:</span><span class="s2">&#34;user&#34;</span><span class="p">,</span><span class="s2">&#34;content&#34;</span><span class="p">:</span><span class="s2">&#34;What is machine learning?&#34;</span><span class="p">}],</span>
+</span></span><span class="line"><span class="cl">  <span class="n">temperature</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">top_p</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">max_tokens</span><span class="o">=</span><span class="mi">1024</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">stream</span><span class="o">=</span><span class="kc">True</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">chunk</span> <span class="ow">in</span> <span class="n">completion</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="n">chunk</span><span class="o">.</span><span class="n">choices</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">delta</span><span class="o">.</span><span class="n">content</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">chunk</span><span class="o">.</span><span class="n">choices</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">delta</span><span class="o">.</span><span class="n">content</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&#34;&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><p>Nos vemos no próximo post.</p>
+<h2 id="fontes-consultadas">Fontes consultadas</h2>
+<p><a href="https://blog.getbind.co/2024/10/17/llama-3-1-nemotron-70b-is-it-better-for-coding-compared-to-gpt-4o-and-claude-3-5-sonnet/">Bind AI Blog post</a></p>
+<p><a href="https://creativecommons.org/share-your-work/cclicenses/">CC-BY</a></p>
+<p><a href="https://console.groq.com/">GROQ</a></p>
+<p><a href="https://developer.nvidia.com/blog/advancing-the-accuracy-efficiency-frontier-with-llama-3-1-nemotron-51b">NVIDIA Blog post</a></p>
+<p><a href="https://www.reddit.com/r/LocalLLaMA/comments/1fnp2kt/new_llama31nemotron51b_instruct_model_from_nvidia/">Reddit post</a></p>
+
+
+        
+          <div class="blog-tags">
+            
+              
+              <a href="http://localhost:1313/tags/llm/">llm</a>&nbsp;
+            
+              
+              <a href="http://localhost:1313/tags/ia/">ia</a>&nbsp;
+            
+          </div>
+        
+
+        
+            <hr/>
+            <section id="social-share">
+              <div class="list-inline footer-links">
+                
+
+<div class="share-box" aria-hidden="true">
+    <ul class="share">
+      
+      <li>
+        <a href="//twitter.com/share?url=http%3a%2f%2flocalhost%3a1313%2fpost%2f2024-05-01-nemotron%2f&amp;text=Nemotron%20LLM%2070B%20Um%20primeiro%20contato&amp;via=username" target="_blank" title="Share on Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.facebook.com/sharer/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fpost%2f2024-05-01-nemotron%2f" target="_blank" title="Share on Facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fpost%2f2024-05-01-nemotron%2f&amp;title=Nemotron%20LLM%2070B%20Um%20primeiro%20contato" target="_blank" title="Share on Reddit">
+          <i class="fab fa-reddit"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.linkedin.com/shareArticle?url=http%3a%2f%2flocalhost%3a1313%2fpost%2f2024-05-01-nemotron%2f&amp;title=Nemotron%20LLM%2070B%20Um%20primeiro%20contato" target="_blank" title="Share on LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.stumbleupon.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fpost%2f2024-05-01-nemotron%2f&amp;title=Nemotron%20LLM%2070B%20Um%20primeiro%20contato" target="_blank" title="Share on StumbleUpon">
+          <i class="fab fa-stumbleupon"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.pinterest.com/pin/create/button/?url=http%3a%2f%2flocalhost%3a1313%2fpost%2f2024-05-01-nemotron%2f&amp;description=Nemotron%20LLM%2070B%20Um%20primeiro%20contato" target="_blank" title="Share on Pinterest">
+          <i class="fab fa-pinterest"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+
+              </div>
+            </section>
+        
+
+        
+          
+
+          
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="http://localhost:1313/post/2024-04-01-redesneurais/" data-toggle="tooltip" data-placement="top" title="Redes Neurais Primeiro Contato">&larr; Previous Post</a>
+            </li>
+          
+          
+        </ul>
+      
+
+
+      
+      
+      
+      
+      
+        
+      
+
+    </div>
+  </div>
+</div>
+
+      <footer>
+  <div class="container">
+    
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+		
+		  <a href="mailto:youremail@domain.com" title="Email me">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://www.facebook.com/username" title="Facebook">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-facebook fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://github.com/username" title="GitHub">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://gitlab.com/username" title="GitLab">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-gitlab fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://bitbucket.org/username" title="Bitbucket">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-bitbucket fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://twitter.com/username" title="Twitter">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://username.slack.com/" title="Slack">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-slack fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://reddit.com/u/username" title="Reddit">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-reddit-alien fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://linkedin.com/in/username" title="LinkedIn">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://www.xing.com/profile/username" title="Xing">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-xing fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://stackoverflow.com/users/XXXXXXX/username" title="StackOverflow">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-stack-overflow fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://www.snapchat.com/add/username" title="Snapchat">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-snapchat-ghost fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://www.instagram.com/username" title="Instagram">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://www.youtube.com/user/username" title="Youtube">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-youtube fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://soundcloud.com/username" title="SoundCloud">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-soundcloud fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://open.spotify.com/user/username" title="Spotify">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-spotify fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://username.bandcamp.com/" title="Bandcamp">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-bandcamp fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://itch.io/profile/username" title="Itch.io">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-gamepad fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://vk.com/username" title="VK">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-vk fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://paypal.me/username" title="PayPal">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-paypal fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://telegram.me/username" title="Telegram">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-telegram fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://500px.com/username" title="500px">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-500px fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://codepen.io/username" title="CodePen">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-codepen fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://www.kaggle.com/username" title="kaggle">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-kaggle fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a rel="me"href="https://url" title="Mastodon">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-mastodon fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://weibo.com/username" title="Weibo">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-weibo fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://medium.com/@username" title="Medium">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-medium fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://discord.gg/invite%20code%20%28https://discord.gg/XXXXXXX%29" title="Discord">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-discord fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://www.strava.com/athletes/userid" title="Strava">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-strava fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              <a href="yourwebsite.com">Some Person</a>
+            
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2024
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="http://localhost:1313/">Inteligência Artificial Descomplicada</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.136.5</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.js" integrity="sha384-G0zcxDFp5LWZtDuRMnBkk3EphCK1lhEf4UEyEM693ka574TZGwo4IWwS6QLzM/2t" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+<script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha384-w5y/xIeYixWvfM+A1cEbmHPURnvyqmVg5eVENruEdDjcyRLUSNej7512JQGspFUr" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+<script src="http://localhost:1313/js/main.js"></script>
+<script src="http://localhost:1313/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="http://localhost:1313/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+
