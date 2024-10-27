@@ -6,7 +6,7 @@ comments: false
 weight: 6
 ---
 
-Giseldo Neo é  pesquisador e Professor de Informática no Instituto Federal de Alagoas (IFAL). Doutorando em Ciência da Computação (UFCG), Mestre em Modelagem Computacional do Conhecimento(UFAL), Mestre em Contabilidade(FUCAPE). Possui MBA em Gestão e Estratégia Empresarial (ESTACIO), Especialização em Arquitetura e Engenharia de Software(ESTÁCIO), MBA em Gestão de Projetos (UNINTER). Graduação em Análise e Desenvolvimento de Sistemas (ESTÁCIO), Graduação em Processos Gerenciais (UNINTER) e Técnico de Informática (ETF-SE/IFS).
+Giseldo Neo é  pesquisador e Professor de Informática no Instituto Federal de Alagoas (IFAL). Doutorando em Ciência da Computação (UFCG), Mestre em Modelagem Computacional do Conhecimento (UFAL), Mestre em Contabilidade (FUCAPE). Possui MBA em Gestão e Estratégia Empresarial (ESTACIO), Especialização em Arquitetura e Engenharia de Software (ESTÁCIO), MBA em Gestão de Projetos (UNINTER). Graduação em Análise e Desenvolvimento de Sistemas (ESTÁCIO), Graduação em Processos Gerenciais (UNINTER) e Técnico de Informática (IFS).
       
 E-mail para contato: giseldo@gmail.com
       
