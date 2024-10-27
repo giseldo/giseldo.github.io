@@ -1,0 +1,129 @@
+/* Geral */
+
+/* latin */
+@font-face {
+  font-family: 'Arvo';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/arvo/v22/tDbD2oWUg0MKqScQ7Q.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
+p code {
+  white-space: inherit;
+}
+
+pre {
+  word-break: normal;
+  word-wrap: normal;
+}
+
+pre code {
+  white-space: inherit;
+}
+
+img {
+  margin-top: 20px !important;
+  margin-bottom: 30px !important;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal .caption {
+  color: #777;
+  margin-top: -30px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+a:active {
+    color: #E60327;
+}
+h1 {
+    color: #0EADC2;
+}
+h2 {
+    color: #0EADC2;
+}
+h3 {
+    color: #0EADC2;
+}
+
+/* Identidade visual */
+.body-inner {
+    background-color: #f6f6ff;
+} 
+
+.book .book-body .page-wrapper .page-inner {
+    max-width: 1025px;
+}
+
+.book .book-body .page-wrapper .page-inner section {
+    padding: 5px 3em;
+}
+
+.page-inner {
+    max-width: 1025px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    /* padding: 1em 30px 15px; */
+}
+
+.book .book-body .navigation {
+    font-size: 70px;
+    color: #ccc;
+    text-align: center;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal a {
+    color: #E60327;
+}
+
+.book .book-summary {
+  font-family: 'Arvo', serif;
+}
+
+.book.font-family-0 {
+  font-family: 'Arvo', serif;
+}
+
+
+/* Footer with logo */
+
+footer {
+    text-align: center;
+}
+
+/* blockquote */
+
+.book .book-body .page-wrapper .page-inner section.normal blockquote {
+   background-color: #f0f7fb;
+   border-left: solid 4px #0EADC2;
+   background-image: url(img/note.png);
+   background-repeat: no-repeat;
+   background-position: 9px 0;
+   width: 75%;
+   margin: auto;
+   margin-bottom: 10px;
+   min-height: 50px;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal blockquote > p {
+   padding: 12px;
+   margin-bottom: 0;
+   margin-left: 30px;
+   font-size: 0.95em;
+   vertical-align: middle;
+   line-height: 18px;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal blockquote > ul {
+   margin-left: 30px;
+}
+
+/* lista de exercícios */
+
+div[id^='exercícios-'] ul {
+  list-style-type: none;
+}

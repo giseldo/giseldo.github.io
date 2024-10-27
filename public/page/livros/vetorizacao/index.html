@@ -1,0 +1,1366 @@
+
+
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+ 
+
+
+      <title>Inteligência Artificial Descomplicada - </title>
+
+  <meta name="description" content="&lt;!DOCTYPE html&gt;
+
+
+
+  
+  
+  Vetorização de Texto com Python
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+
+
+
+
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+    
+      
+
+
+Vetorização de Texto com Python
+
+
+Informações Adicionais
+Prefácio
+1 Introdução à Vetorização de Texto
+
+1.1 Conceito de Vetorização de Texto
+1.2 Importância na Análise de Dados e Aprendizado de Máquina
+
+1.2.1 Exemplo em Python
+
+1.3 Aplicações Práticas
+Exercícios
+
+2 Preparação do Ambiente
+
+2.1 Instalação do Python
+
+2.1.1 Instalando o Python
+
+2.2 Instalação de Bibliotecas Necessárias
+
+2.2.1 Instalando Bibliotecas com pip
+2.2.2 Exemplo em Python: Verificando Instalações
+
+2.3 Introdução ao Jupyter Notebook
+
+2.3.1 Instalando o Jupyter Notebook
+2.3.2 Exemplo em Python: Primeiros Passos no Jupyter
+
+Exercícios
+
+3 Pré-processamento de Texto
+
+3.1 Limpeza de Texto
+
+3.1.1 Exemplo em Python: Limpeza de Texto
+
+3.2 Tokenização
+
+3.2.1 Exemplo em Python: Tokenização
+
+3.3 Lematização e Stemming
+
+3.3.1 Exemplo em Python: Lematização e Stemming
+
+Exercícios
+
+4 Vetorização de Texto
+
+4.1 Bag of Words (BoW)
+
+4.1.1 Exemplo em Python: Bag of Words
+
+4.2 Term Frequency-Inverse Document Frequency (TF-IDF)
+
+4.2.1 Exemplo em Python: TF-IDF
+
+4.3 Word Embeddings
+
+4.3.1 Exemplo em Python: Word2Vec
+
+Exercícios
+
+5 Modelos Avançados de Vetorização
+
+5.1 Embeddings Contextuais
+
+5.1.1 Exemplo em Python: Usando BERT para Vetorização
+
+5.2 Análise de Sentimento com Embeddings
+
+5.2.1 Exemplo em Python: Classificação de Sentimento com BERT
+
+5.3 Redução de Dimensionalidade
+
+5.3.1 Exemplo em Python: Redução de Dimensionalidade com PCA
+5.3.2 Exemplo em Python: Redução de Dimensionalidade com t-SNE
+
+Exercício
+
+6 Aplicações Práticas
+
+6.1 Classificação de Texto: Análise de Sentimento
+
+6.1.1 Exemplo em Python: Classificação de Texto com TF-IDF e Naive Bayes
+
+6.2 Agrupamento de Documentos
+
+6.2.1 Exemplo em Python: Agrupamento com k-means
+
+6.3 Detecção de Tópicos
+
+6.3.1 Exemplo em Python: Detecção de Tópicos com LDA
+
+Exercícios
+
+7 Estudo de Caso
+
+7.1 Análise de Reviews de Produtos
+
+7.1.1 Exemplo em Python: Análise de Sentimentos em Reviews de Produtos
+
+7.2 Processamento de Tweets
+
+7.2.1 Exemplo em Python: Análise de Sentimentos em Tweets
+
+7.3 Análise de Notícias
+
+7.3.1 Exemplo em Python: Modelagem de Tópicos em Notícias
+
+Exercício
+
+8 Próximos Passos
+
+8.1 Futuras Direções no Campo de Vetorização de Texto
+
+8.1.1 Modelos de Linguagem de Grande Escala
+8.1.2 Multimodalidade
+8.1.3 Vetorização de Texto em Tempo Real
+
+8.2 Leitura Recomendada
+8.3 Próximos Passos
+
+Gabarito das questões
+Sobre os autores
+
+
+      
+    
+
+    
+      
+        
+          
+            Vetorização de Texto com Python
+          
+        
+
+        
+          
+
+            
+
+Vetorização de Texto com Python
+Giseldo Neo">
+  <meta name="author" content="Giseldo Neo"/><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Inteligência Artificial Descomplicada",
+    
+    "url": "http:\/\/localhost:1313\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "http:\/\/localhost:1313\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "http:\/\/localhost:1313\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "http:\/\/localhost:1313\/page\/livros\/vetorizacao\/",
+          "name": ""
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Giseldo Neo"
+  },
+  "headline": "",
+  "description" : "\u003c!DOCTYPE html\u003e\rVetorização de Texto com Python\rVetorização de Texto com Python\rInformações Adicionais\rPrefácio\r1 Introdução à Vetorização de Texto\r1.1 Conceito de Vetorização de Texto\r1.2 Importância na Análise de Dados e Aprendizado de Máquina\r1.2.1 Exemplo em Python\r1.3 Aplicações Práticas\rExercícios\r2 Preparação do Ambiente\r2.1 Instalação do Python\r2.1.1 Instalando o Python\r2.2 Instalação de Bibliotecas Necessárias\r2.2.1 Instalando Bibliotecas com pip\r2.2.2 Exemplo em Python: Verificando Instalações\r2.3 Introdução ao Jupyter Notebook\r2.3.1 Instalando o Jupyter Notebook\r2.3.2 Exemplo em Python: Primeiros Passos no Jupyter\rExercícios\r3 Pré-processamento de Texto\r3.1 Limpeza de Texto\r3.1.1 Exemplo em Python: Limpeza de Texto\r3.2 Tokenização\r3.2.1 Exemplo em Python: Tokenização\r3.3 Lematização e Stemming\r3.3.1 Exemplo em Python: Lematização e Stemming\rExercícios\r4 Vetorização de Texto\r4.1 Bag of Words (BoW)\r4.1.1 Exemplo em Python: Bag of Words\r4.2 Term Frequency-Inverse Document Frequency (TF-IDF)\r4.2.1 Exemplo em Python: TF-IDF\r4.3 Word Embeddings\r4.3.1 Exemplo em Python: Word2Vec\rExercícios\r5 Modelos Avançados de Vetorização\r5.1 Embeddings Contextuais\r5.1.1 Exemplo em Python: Usando BERT para Vetorização\r5.2 Análise de Sentimento com Embeddings\r5.2.1 Exemplo em Python: Classificação de Sentimento com BERT\r5.3 Redução de Dimensionalidade\r5.3.1 Exemplo em Python: Redução de Dimensionalidade com PCA\r5.3.2 Exemplo em Python: Redução de Dimensionalidade com t-SNE\rExercício\r6 Aplicações Práticas\r6.1 Classificação de Texto: Análise de Sentimento\r6.1.1 Exemplo em Python: Classificação de Texto com TF-IDF e Naive Bayes\r6.2 Agrupamento de Documentos\r6.2.1 Exemplo em Python: Agrupamento com k-means\r6.3 Detecção de Tópicos\r6.3.1 Exemplo em Python: Detecção de Tópicos com LDA\rExercícios\r7 Estudo de Caso\r7.1 Análise de Reviews de Produtos\r7.1.1 Exemplo em Python: Análise de Sentimentos em Reviews de Produtos\r7.2 Processamento de Tweets\r7.2.1 Exemplo em Python: Análise de Sentimentos em Tweets\r7.3 Análise de Notícias\r7.3.1 Exemplo em Python: Modelagem de Tópicos em Notícias\rExercício\r8 Próximos Passos\r8.1 Futuras Direções no Campo de Vetorização de Texto\r8.1.1 Modelos de Linguagem de Grande Escala\r8.1.2 Multimodalidade\r8.1.3 Vetorização de Texto em Tempo Real\r8.2 Leitura Recomendada\r8.3 Próximos Passos\rGabarito das questões\rSobre os autores\rVetorização de Texto com Python\rVetorização de Texto com Python\rGiseldo Neo\n",
+  "inLanguage" : "en",
+  "wordCount":  400 ,
+  "datePublished" : "0001-01-01T00:00:00\u002b00:00",
+  "dateModified" : "0001-01-01T00:00:00\u002b00:00",
+  "image" : "http:\/\/localhost:1313\/img\/avatar-icon.png",
+  "keywords" : [ "" ],
+  "mainEntityOfPage" : "http:\/\/localhost:1313\/page\/livros\/vetorizacao\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "http:\/\/localhost:1313\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "http:\/\/localhost:1313\/img\/avatar-icon.png",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+
+<meta property="og:title" content="Inteligência Artificial Descomplicada" />
+<meta property="og:description" content="&lt;!DOCTYPE html&gt;
+
+
+
+  
+  
+  Vetorização de Texto com Python
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+
+
+
+
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+    
+      
+
+
+Vetorização de Texto com Python
+
+
+Informações Adicionais
+Prefácio
+1 Introdução à Vetorização de Texto
+
+1.1 Conceito de Vetorização de Texto
+1.2 Importância na Análise de Dados e Aprendizado de Máquina
+
+1.2.1 Exemplo em Python
+
+1.3 Aplicações Práticas
+Exercícios
+
+2 Preparação do Ambiente
+
+2.1 Instalação do Python
+
+2.1.1 Instalando o Python
+
+2.2 Instalação de Bibliotecas Necessárias
+
+2.2.1 Instalando Bibliotecas com pip
+2.2.2 Exemplo em Python: Verificando Instalações
+
+2.3 Introdução ao Jupyter Notebook
+
+2.3.1 Instalando o Jupyter Notebook
+2.3.2 Exemplo em Python: Primeiros Passos no Jupyter
+
+Exercícios
+
+3 Pré-processamento de Texto
+
+3.1 Limpeza de Texto
+
+3.1.1 Exemplo em Python: Limpeza de Texto
+
+3.2 Tokenização
+
+3.2.1 Exemplo em Python: Tokenização
+
+3.3 Lematização e Stemming
+
+3.3.1 Exemplo em Python: Lematização e Stemming
+
+Exercícios
+
+4 Vetorização de Texto
+
+4.1 Bag of Words (BoW)
+
+4.1.1 Exemplo em Python: Bag of Words
+
+4.2 Term Frequency-Inverse Document Frequency (TF-IDF)
+
+4.2.1 Exemplo em Python: TF-IDF
+
+4.3 Word Embeddings
+
+4.3.1 Exemplo em Python: Word2Vec
+
+Exercícios
+
+5 Modelos Avançados de Vetorização
+
+5.1 Embeddings Contextuais
+
+5.1.1 Exemplo em Python: Usando BERT para Vetorização
+
+5.2 Análise de Sentimento com Embeddings
+
+5.2.1 Exemplo em Python: Classificação de Sentimento com BERT
+
+5.3 Redução de Dimensionalidade
+
+5.3.1 Exemplo em Python: Redução de Dimensionalidade com PCA
+5.3.2 Exemplo em Python: Redução de Dimensionalidade com t-SNE
+
+Exercício
+
+6 Aplicações Práticas
+
+6.1 Classificação de Texto: Análise de Sentimento
+
+6.1.1 Exemplo em Python: Classificação de Texto com TF-IDF e Naive Bayes
+
+6.2 Agrupamento de Documentos
+
+6.2.1 Exemplo em Python: Agrupamento com k-means
+
+6.3 Detecção de Tópicos
+
+6.3.1 Exemplo em Python: Detecção de Tópicos com LDA
+
+Exercícios
+
+7 Estudo de Caso
+
+7.1 Análise de Reviews de Produtos
+
+7.1.1 Exemplo em Python: Análise de Sentimentos em Reviews de Produtos
+
+7.2 Processamento de Tweets
+
+7.2.1 Exemplo em Python: Análise de Sentimentos em Tweets
+
+7.3 Análise de Notícias
+
+7.3.1 Exemplo em Python: Modelagem de Tópicos em Notícias
+
+Exercício
+
+8 Próximos Passos
+
+8.1 Futuras Direções no Campo de Vetorização de Texto
+
+8.1.1 Modelos de Linguagem de Grande Escala
+8.1.2 Multimodalidade
+8.1.3 Vetorização de Texto em Tempo Real
+
+8.2 Leitura Recomendada
+8.3 Próximos Passos
+
+Gabarito das questões
+Sobre os autores
+
+
+      
+    
+
+    
+      
+        
+          
+            Vetorização de Texto com Python
+          
+        
+
+        
+          
+
+            
+
+Vetorização de Texto com Python
+Giseldo Neo">
+<meta property="og:image" content="http://localhost:1313/img/avatar-icon.png" />
+<meta property="og:url" content="http://localhost:1313/page/livros/vetorizacao/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Inteligência Artificial Descomplicada" />
+
+  <meta name="twitter:title" content="Inteligência Artificial Descomplicada" />
+  <meta name="twitter:description" content="&lt;!DOCTYPE html&gt;
+
+
+
+  
+  
+  Vetorização de Texto com Python
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+
+
+
+
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;/!DOCTYPE&gt;">
+  <meta name="twitter:image" content="http://localhost:1313/img/avatar-icon.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@giseldoneo" />
+  <meta name="twitter:creator" content="@giseldoneo" />
+  <link href='http://localhost:1313/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta name="generator" content="Hugo 0.136.5">
+  <link rel="alternate" href="http://localhost:1313/index.xml" type="application/rss+xml" title="Inteligência Artificial Descomplicada"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css" integrity="sha384-3UiQGuEI4TTMaFmGIZumfRPtfKQ3trwQE2JgosJxCnGmQpL/lJdjpcHkaaFwHlcI" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous"><link rel="stylesheet" href="http://localhost:1313/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="http://localhost:1313/css/highlight.min.css" /><link rel="stylesheet" href="http://localhost:1313/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://localhost:1313/">Inteligência Artificial Descomplicada</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Livros" href="/page/livros/">Livros</a>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent" role="button" tabindex="0">Produtos</a>
+              <div class="navlinks-children">
+                
+                  <a href="/page/produtos/todos">Todos</a>
+                
+                  <a href="/page/produtos/chatbotsimples">Chatbot Simples</a>
+                
+                  <a href="/page/produtos/criarparagrafo">Criar Paragrafo</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Pesquisas" href="/page/pesquisas/">Pesquisas</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Sobre" href="/page/sobre/">Sobre</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+      <div class="avatar-container">
+        <div class="avatar-img-border">
+          <a title="Inteligência Artificial Descomplicada" href="http://localhost:1313/">
+            <img class="avatar-img" src="http://localhost:1313/img/avatar-icon.png" alt="Inteligência Artificial Descomplicada" />
+           
+          </a>
+        </div>
+      </div>
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  <div class="intro-header"></div>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Vetorização de Texto com Python</title>
+  <meta name="description" content="Vetorização de Texto com Python" />
+  <meta name="generator" content="bookdown 0.38 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Vetorização de Texto com Python" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Vetorização de Texto com Python" />
+  
+  
+  
+
+<meta name="author" content="Giseldo Neo" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+
+<link rel="next" href="prefácio.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Vetorização de Texto com Python</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Informações Adicionais</a></li>
+<li class="chapter" data-level="" data-path="prefácio.html"><a href="prefácio.html"><i class="fa fa-check"></i>Prefácio</a></li>
+<li class="chapter" data-level="1" data-path="introdução-à-vetorização-de-texto.html"><a href="introdução-à-vetorização-de-texto.html"><i class="fa fa-check"></i><b>1</b> Introdução à Vetorização de Texto</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="introdução-à-vetorização-de-texto.html"><a href="introdução-à-vetorização-de-texto.html#conceito-de-vetorização-de-texto"><i class="fa fa-check"></i><b>1.1</b> Conceito de Vetorização de Texto</a></li>
+<li class="chapter" data-level="1.2" data-path="introdução-à-vetorização-de-texto.html"><a href="introdução-à-vetorização-de-texto.html#importância-na-análise-de-dados-e-aprendizado-de-máquina"><i class="fa fa-check"></i><b>1.2</b> Importância na Análise de Dados e Aprendizado de Máquina</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="introdução-à-vetorização-de-texto.html"><a href="introdução-à-vetorização-de-texto.html#exemplo-em-python"><i class="fa fa-check"></i><b>1.2.1</b> Exemplo em Python</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="introdução-à-vetorização-de-texto.html"><a href="introdução-à-vetorização-de-texto.html#aplicações-práticas"><i class="fa fa-check"></i><b>1.3</b> Aplicações Práticas</a></li>
+<li class="chapter" data-level="" data-path="introdução-à-vetorização-de-texto.html"><a href="introdução-à-vetorização-de-texto.html#exercícios"><i class="fa fa-check"></i>Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="preparação-do-ambiente.html"><a href="preparação-do-ambiente.html"><i class="fa fa-check"></i><b>2</b> Preparação do Ambiente</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="preparação-do-ambiente.html"><a href="preparação-do-ambiente.html#instalação-do-python"><i class="fa fa-check"></i><b>2.1</b> Instalação do Python</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="preparação-do-ambiente.html"><a href="preparação-do-ambiente.html#instalando-o-python"><i class="fa fa-check"></i><b>2.1.1</b> Instalando o Python</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="preparação-do-ambiente.html"><a href="preparação-do-ambiente.html#instalação-de-bibliotecas-necessárias"><i class="fa fa-check"></i><b>2.2</b> Instalação de Bibliotecas Necessárias</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="preparação-do-ambiente.html"><a href="preparação-do-ambiente.html#instalando-bibliotecas-com-pip"><i class="fa fa-check"></i><b>2.2.1</b> Instalando Bibliotecas com <code>pip</code></a></li>
+<li class="chapter" data-level="2.2.2" data-path="preparação-do-ambiente.html"><a href="preparação-do-ambiente.html#exemplo-em-python-verificando-instalações"><i class="fa fa-check"></i><b>2.2.2</b> Exemplo em Python: Verificando Instalações</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="preparação-do-ambiente.html"><a href="preparação-do-ambiente.html#introdução-ao-jupyter-notebook"><i class="fa fa-check"></i><b>2.3</b> Introdução ao Jupyter Notebook</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="preparação-do-ambiente.html"><a href="preparação-do-ambiente.html#instalando-o-jupyter-notebook"><i class="fa fa-check"></i><b>2.3.1</b> Instalando o Jupyter Notebook</a></li>
+<li class="chapter" data-level="2.3.2" data-path="preparação-do-ambiente.html"><a href="preparação-do-ambiente.html#exemplo-em-python-primeiros-passos-no-jupyter"><i class="fa fa-check"></i><b>2.3.2</b> Exemplo em Python: Primeiros Passos no Jupyter</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="preparação-do-ambiente.html"><a href="preparação-do-ambiente.html#exercícios-1"><i class="fa fa-check"></i>Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="pré-processamento-de-texto.html"><a href="pré-processamento-de-texto.html"><i class="fa fa-check"></i><b>3</b> Pré-processamento de Texto</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="pré-processamento-de-texto.html"><a href="pré-processamento-de-texto.html#limpeza-de-texto"><i class="fa fa-check"></i><b>3.1</b> Limpeza de Texto</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="pré-processamento-de-texto.html"><a href="pré-processamento-de-texto.html#exemplo-em-python-limpeza-de-texto"><i class="fa fa-check"></i><b>3.1.1</b> Exemplo em Python: Limpeza de Texto</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="pré-processamento-de-texto.html"><a href="pré-processamento-de-texto.html#tokenização"><i class="fa fa-check"></i><b>3.2</b> Tokenização</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="pré-processamento-de-texto.html"><a href="pré-processamento-de-texto.html#exemplo-em-python-tokenização"><i class="fa fa-check"></i><b>3.2.1</b> Exemplo em Python: Tokenização</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="pré-processamento-de-texto.html"><a href="pré-processamento-de-texto.html#lematização-e-stemming"><i class="fa fa-check"></i><b>3.3</b> Lematização e Stemming</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="pré-processamento-de-texto.html"><a href="pré-processamento-de-texto.html#exemplo-em-python-lematização-e-stemming"><i class="fa fa-check"></i><b>3.3.1</b> Exemplo em Python: Lematização e Stemming</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="pré-processamento-de-texto.html"><a href="pré-processamento-de-texto.html#exercícios-2"><i class="fa fa-check"></i>Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="vetorização-de-texto.html"><a href="vetorização-de-texto.html"><i class="fa fa-check"></i><b>4</b> Vetorização de Texto</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="vetorização-de-texto.html"><a href="vetorização-de-texto.html#bag-of-words-bow"><i class="fa fa-check"></i><b>4.1</b> Bag of Words (BoW)</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="vetorização-de-texto.html"><a href="vetorização-de-texto.html#exemplo-em-python-bag-of-words"><i class="fa fa-check"></i><b>4.1.1</b> Exemplo em Python: Bag of Words</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="vetorização-de-texto.html"><a href="vetorização-de-texto.html#term-frequency-inverse-document-frequency-tf-idf"><i class="fa fa-check"></i><b>4.2</b> Term Frequency-Inverse Document Frequency (TF-IDF)</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="vetorização-de-texto.html"><a href="vetorização-de-texto.html#exemplo-em-python-tf-idf"><i class="fa fa-check"></i><b>4.2.1</b> Exemplo em Python: TF-IDF</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="vetorização-de-texto.html"><a href="vetorização-de-texto.html#word-embeddings"><i class="fa fa-check"></i><b>4.3</b> Word Embeddings</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="vetorização-de-texto.html"><a href="vetorização-de-texto.html#exemplo-em-python-word2vec"><i class="fa fa-check"></i><b>4.3.1</b> Exemplo em Python: Word2Vec</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="vetorização-de-texto.html"><a href="vetorização-de-texto.html#exercícios-3"><i class="fa fa-check"></i>Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="modelos-avançados-de-vetorização.html"><a href="modelos-avançados-de-vetorização.html"><i class="fa fa-check"></i><b>5</b> Modelos Avançados de Vetorização</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="modelos-avançados-de-vetorização.html"><a href="modelos-avançados-de-vetorização.html#embeddings-contextuais"><i class="fa fa-check"></i><b>5.1</b> Embeddings Contextuais</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="modelos-avançados-de-vetorização.html"><a href="modelos-avançados-de-vetorização.html#exemplo-em-python-usando-bert-para-vetorização"><i class="fa fa-check"></i><b>5.1.1</b> Exemplo em Python: Usando BERT para Vetorização</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="modelos-avançados-de-vetorização.html"><a href="modelos-avançados-de-vetorização.html#análise-de-sentimento-com-embeddings"><i class="fa fa-check"></i><b>5.2</b> Análise de Sentimento com Embeddings</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="modelos-avançados-de-vetorização.html"><a href="modelos-avançados-de-vetorização.html#exemplo-em-python-classificação-de-sentimento-com-bert"><i class="fa fa-check"></i><b>5.2.1</b> Exemplo em Python: Classificação de Sentimento com BERT</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="modelos-avançados-de-vetorização.html"><a href="modelos-avançados-de-vetorização.html#redução-de-dimensionalidade"><i class="fa fa-check"></i><b>5.3</b> Redução de Dimensionalidade</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="modelos-avançados-de-vetorização.html"><a href="modelos-avançados-de-vetorização.html#exemplo-em-python-redução-de-dimensionalidade-com-pca"><i class="fa fa-check"></i><b>5.3.1</b> Exemplo em Python: Redução de Dimensionalidade com PCA</a></li>
+<li class="chapter" data-level="5.3.2" data-path="modelos-avançados-de-vetorização.html"><a href="modelos-avançados-de-vetorização.html#exemplo-em-python-redução-de-dimensionalidade-com-t-sne"><i class="fa fa-check"></i><b>5.3.2</b> Exemplo em Python: Redução de Dimensionalidade com t-SNE</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="modelos-avançados-de-vetorização.html"><a href="modelos-avançados-de-vetorização.html#exercício"><i class="fa fa-check"></i>Exercício</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="aplicações-práticas-1.html"><a href="aplicações-práticas-1.html"><i class="fa fa-check"></i><b>6</b> Aplicações Práticas</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="aplicações-práticas-1.html"><a href="aplicações-práticas-1.html#classificação-de-texto-análise-de-sentimento"><i class="fa fa-check"></i><b>6.1</b> Classificação de Texto: Análise de Sentimento</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="aplicações-práticas-1.html"><a href="aplicações-práticas-1.html#exemplo-em-python-classificação-de-texto-com-tf-idf-e-naive-bayes"><i class="fa fa-check"></i><b>6.1.1</b> Exemplo em Python: Classificação de Texto com TF-IDF e Naive Bayes</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="aplicações-práticas-1.html"><a href="aplicações-práticas-1.html#agrupamento-de-documentos"><i class="fa fa-check"></i><b>6.2</b> Agrupamento de Documentos</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="aplicações-práticas-1.html"><a href="aplicações-práticas-1.html#exemplo-em-python-agrupamento-com-k-means"><i class="fa fa-check"></i><b>6.2.1</b> Exemplo em Python: Agrupamento com k-means</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="aplicações-práticas-1.html"><a href="aplicações-práticas-1.html#detecção-de-tópicos"><i class="fa fa-check"></i><b>6.3</b> Detecção de Tópicos</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="aplicações-práticas-1.html"><a href="aplicações-práticas-1.html#exemplo-em-python-detecção-de-tópicos-com-lda"><i class="fa fa-check"></i><b>6.3.1</b> Exemplo em Python: Detecção de Tópicos com LDA</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="aplicações-práticas-1.html"><a href="aplicações-práticas-1.html#exercícios-4"><i class="fa fa-check"></i>Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="estudo-de-caso.html"><a href="estudo-de-caso.html"><i class="fa fa-check"></i><b>7</b> Estudo de Caso</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="estudo-de-caso.html"><a href="estudo-de-caso.html#análise-de-reviews-de-produtos"><i class="fa fa-check"></i><b>7.1</b> Análise de Reviews de Produtos</a>
+<ul>
+<li class="chapter" data-level="7.1.1" data-path="estudo-de-caso.html"><a href="estudo-de-caso.html#exemplo-em-python-análise-de-sentimentos-em-reviews-de-produtos"><i class="fa fa-check"></i><b>7.1.1</b> Exemplo em Python: Análise de Sentimentos em Reviews de Produtos</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="estudo-de-caso.html"><a href="estudo-de-caso.html#processamento-de-tweets"><i class="fa fa-check"></i><b>7.2</b> Processamento de Tweets</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="estudo-de-caso.html"><a href="estudo-de-caso.html#exemplo-em-python-análise-de-sentimentos-em-tweets"><i class="fa fa-check"></i><b>7.2.1</b> Exemplo em Python: Análise de Sentimentos em Tweets</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="estudo-de-caso.html"><a href="estudo-de-caso.html#análise-de-notícias"><i class="fa fa-check"></i><b>7.3</b> Análise de Notícias</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="estudo-de-caso.html"><a href="estudo-de-caso.html#exemplo-em-python-modelagem-de-tópicos-em-notícias"><i class="fa fa-check"></i><b>7.3.1</b> Exemplo em Python: Modelagem de Tópicos em Notícias</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="estudo-de-caso.html"><a href="estudo-de-caso.html#exercício-1"><i class="fa fa-check"></i>Exercício</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="próximos-passos.html"><a href="próximos-passos.html"><i class="fa fa-check"></i><b>8</b> Próximos Passos</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="próximos-passos.html"><a href="próximos-passos.html#futuras-direções-no-campo-de-vetorização-de-texto"><i class="fa fa-check"></i><b>8.1</b> Futuras Direções no Campo de Vetorização de Texto</a>
+<ul>
+<li class="chapter" data-level="8.1.1" data-path="próximos-passos.html"><a href="próximos-passos.html#modelos-de-linguagem-de-grande-escala"><i class="fa fa-check"></i><b>8.1.1</b> Modelos de Linguagem de Grande Escala</a></li>
+<li class="chapter" data-level="8.1.2" data-path="próximos-passos.html"><a href="próximos-passos.html#multimodalidade"><i class="fa fa-check"></i><b>8.1.2</b> Multimodalidade</a></li>
+<li class="chapter" data-level="8.1.3" data-path="próximos-passos.html"><a href="próximos-passos.html#vetorização-de-texto-em-tempo-real"><i class="fa fa-check"></i><b>8.1.3</b> Vetorização de Texto em Tempo Real</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="próximos-passos.html"><a href="próximos-passos.html#leitura-recomendada"><i class="fa fa-check"></i><b>8.2</b> Leitura Recomendada</a></li>
+<li class="chapter" data-level="8.3" data-path="próximos-passos.html"><a href="próximos-passos.html#próximos-passos-1"><i class="fa fa-check"></i><b>8.3</b> Próximos Passos</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="gabarito-das-questões.html"><a href="gabarito-das-questões.html"><i class="fa fa-check"></i>Gabarito das questões</a></li>
+<li class="chapter" data-level="" data-path="sobre-os-autores.html"><a href="sobre-os-autores.html"><i class="fa fa-check"></i>Sobre os autores</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Vetorização de Texto com Python</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">Vetorização de Texto com Python</h1>
+<p class="author"><em>Giseldo Neo</em></p>
+</div>
+<div id="informações-adicionais" class="section level1 unnumbered hasAnchor">
+<h1>Informações Adicionais<a href="index.html#informações-adicionais" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>O repositório com o código-fonte dos exemplos do livro está disponível
+na internet no endereço:</p>
+<p><a href="https://github.com/giseldo/livrovetorizacao.git" class="uri">https://github.com/giseldo/livrovetorizacao.git</a></p>
+<p>Se você encontrou algum erro, deseja enviar alguma sugestão ou está com
+alguma dúvida, envie um e-mail para <a href="mailto:giseldo@gmail.com" class="email">giseldo@gmail.com</a>.</p>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+<a href="prefácio.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": false,
+"twitter": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "night",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
+
+
+        
+
+        
+            <hr/>
+            <section id="social-share">
+              <div class="list-inline footer-links">
+                
+
+<div class="share-box" aria-hidden="true">
+    <ul class="share">
+      
+      <li>
+        <a href="//twitter.com/share?url=http%3a%2f%2flocalhost%3a1313%2fpage%2flivros%2fvetorizacao%2f&amp;text=&amp;via=giseldoneo" target="_blank" title="Share on Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.facebook.com/sharer/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fpage%2flivros%2fvetorizacao%2f" target="_blank" title="Share on Facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fpage%2flivros%2fvetorizacao%2f&amp;title=" target="_blank" title="Share on Reddit">
+          <i class="fab fa-reddit"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.linkedin.com/shareArticle?url=http%3a%2f%2flocalhost%3a1313%2fpage%2flivros%2fvetorizacao%2f&amp;title=" target="_blank" title="Share on LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.stumbleupon.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fpage%2flivros%2fvetorizacao%2f&amp;title=" target="_blank" title="Share on StumbleUpon">
+          <i class="fab fa-stumbleupon"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.pinterest.com/pin/create/button/?url=http%3a%2f%2flocalhost%3a1313%2fpage%2flivros%2fvetorizacao%2f&amp;description=" target="_blank" title="Share on Pinterest">
+          <i class="fab fa-pinterest"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+
+              </div>
+            </section>
+        
+
+        
+          
+
+          
+        
+      </article>
+
+      
+
+
+      
+
+    </div>
+  </div>
+</div>
+
+      
+    <div class="page-meta">
+  
+  
+  
+</div>
+
+
+  <footer>
+  <div class="container">
+    
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+		
+		  <a href="mailto:giseldo@gmail.com" title="Email me">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://github.com/giseldo" title="GitHub">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://twitter.com/giseldoneo" title="Twitter">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://linkedin.com/in/giseldo-neo-65b252b" title="LinkedIn">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://www.instagram.com/neogiseldo" title="Instagram">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://www.youtube.com/user/giseldoneo" title="Youtube">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-youtube fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://www.kaggle.com/giseldo" title="kaggle">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-kaggle fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://discord.gg/NTdaT2Uf37" title="Discord">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-discord fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              <a href="giseldo.github.io">Giseldo Neo</a>
+            
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2024
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="http://localhost:1313/">Inteligência Artificial Descomplicada</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.136.5</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.js" integrity="sha384-G0zcxDFp5LWZtDuRMnBkk3EphCK1lhEf4UEyEM693ka574TZGwo4IWwS6QLzM/2t" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+<script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha384-w5y/xIeYixWvfM+A1cEbmHPURnvyqmVg5eVENruEdDjcyRLUSNej7512JQGspFUr" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+<script src="http://localhost:1313/js/main.js"></script>
+<script src="http://localhost:1313/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="http://localhost:1313/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+

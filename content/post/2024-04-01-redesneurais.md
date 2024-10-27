@@ -2,6 +2,7 @@
 title: Redes Neurais Primeiro Contato
 date: '2024-04-01'
 draft: false
+tags: ["redes neurais", "ia"]
 ---
 
 ## Introdução

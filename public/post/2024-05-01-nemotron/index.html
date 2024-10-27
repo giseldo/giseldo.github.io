@@ -342,8 +342,8 @@ Em julho de 2024, a Meta lançou um modelo de linguagem (LLM) open-source, o Lla
 </table>
 <!-- raw HTML omitted -->
 <h2 id="testes-de-uso">Testes de uso</h2>
-<p>O Nemontron pode ser testado em <a href="https://build.nvidia.com">build.nvidia.com</a>, especificamente <a href="https://build.nvidia.com/nvidia/llama-3_1-nemotron-70b-instruct?snippet_tab=Node">neste link</a>. A inscrição concede acesso a 100.000 chamadas de API gratuitas. Além disso, ele está disponível para baixar no <a href="https://huggingface.co/nvidia/Llama-3_1-Nemotron-51B-Instruct">Hugging Face</a>. Porém, haja poder de processamento para uma consulta local a este modelo em uma PC de mesa.</p>
-<p>Realizei algumas consultas no site da NVIDIA (<strong>Figura 1</strong>) e a velocidade da resposta deixou muito a desejar em relação a quantidade de tokens por minuto. Um versão do <a href="https://console.groq.com/playground">Groq</a> disponível no Groq Cloud (<em>Figura 2</em>), que usa uma versão também customizada do Llama, o <em>llama3-groq-70b-8192-tool-use-preview</em>, é muito mais veloz do que a disponibilizada no site da NVIDIA. Provavelmente isto está relacionado mais ao hardware da Groq, que parece ser mais eficiente, independente do modelo. Cabe ressaltar que a versão da NVIDIA deu uma resposta bem mais completa que a versão do Groq, para o mesmo prompt.</p>
+<p>O Nemontron pode ser testado em <a href="https://build.nvidia.com" target="_blank" rel="noopener">build.nvidia.com</a>, especificamente <a href="https://build.nvidia.com/nvidia/llama-3_1-nemotron-70b-instruct?snippet_tab=Node" target="_blank" rel="noopener">neste link</a>. A inscrição concede acesso a 100.000 chamadas de API gratuitas. Além disso, ele está disponível para baixar no <a href="https://huggingface.co/nvidia/Llama-3_1-Nemotron-51B-Instruct" target="_blank" rel="noopener">Hugging Face</a>. Porém, haja poder de processamento para uma consulta local a este modelo em uma PC de mesa.</p>
+<p>Realizei algumas consultas no site da NVIDIA (<strong>Figura 1</strong>) e a velocidade da resposta deixou muito a desejar em relação a quantidade de tokens por minuto. Um versão do <a href="https://console.groq.com/playground" target="_blank" rel="noopener">Groq</a> disponível no Groq Cloud (<em>Figura 2</em>), que usa uma versão também customizada do Llama, o <em>llama3-groq-70b-8192-tool-use-preview</em>, é muito mais veloz do que a disponibilizada no site da NVIDIA. Provavelmente isto está relacionado mais ao hardware da Groq, que parece ser mais eficiente, independente do modelo. Cabe ressaltar que a versão da NVIDIA deu uma resposta bem mais completa que a versão do Groq, para o mesmo prompt.</p>
 <p><strong>Figura 1</strong> - Demonstração do Nemotron 70B no site da NVidia
 
 <link rel="stylesheet" href="http://localhost:1313/css/hugo-easy-gallery.css" />
@@ -404,11 +404,11 @@ o modelo foi treinado em uma ampla gama de dados licenciados com a licença (CC-
 </span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">chunk</span><span class="o">.</span><span class="n">choices</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">delta</span><span class="o">.</span><span class="n">content</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&#34;&#34;</span><span class="p">)</span>
 </span></span></code></pre></div><p>Nos vemos no próximo post.</p>
 <h2 id="fontes-consultadas">Fontes consultadas</h2>
-<p><a href="https://blog.getbind.co/2024/10/17/llama-3-1-nemotron-70b-is-it-better-for-coding-compared-to-gpt-4o-and-claude-3-5-sonnet/">Bind AI Blog post</a></p>
-<p><a href="https://creativecommons.org/share-your-work/cclicenses/">CC-BY</a></p>
-<p><a href="https://console.groq.com/">GROQ</a></p>
-<p><a href="https://developer.nvidia.com/blog/advancing-the-accuracy-efficiency-frontier-with-llama-3-1-nemotron-51b">NVIDIA Blog post</a></p>
-<p><a href="https://www.reddit.com/r/LocalLLaMA/comments/1fnp2kt/new_llama31nemotron51b_instruct_model_from_nvidia/">Reddit post</a></p>
+<p><a href="https://blog.getbind.co/2024/10/17/llama-3-1-nemotron-70b-is-it-better-for-coding-compared-to-gpt-4o-and-claude-3-5-sonnet/" target="_blank" rel="noopener">Bind AI Blog post</a></p>
+<p><a href="https://creativecommons.org/share-your-work/cclicenses/" target="_blank" rel="noopener">CC-BY</a></p>
+<p><a href="https://console.groq.com/" target="_blank" rel="noopener">GROQ</a></p>
+<p><a href="https://developer.nvidia.com/blog/advancing-the-accuracy-efficiency-frontier-with-llama-3-1-nemotron-51b" target="_blank" rel="noopener">NVIDIA Blog post</a></p>
+<p><a href="https://www.reddit.com/r/LocalLLaMA/comments/1fnp2kt/new_llama31nemotron51b_instruct_model_from_nvidia/" target="_blank" rel="noopener">Reddit post</a></p>
 
 
         
@@ -482,6 +482,17 @@ o modelo foi treinado em uma ampla gama de dados licenciados com a licença (CC-
 
         
           
+            
+          
+
+          
+                  <h4 class="see-also">See also</h4>
+                  <ul>
+                
+                
+                    <li><a href="/post/2024-04-01-redesneurais/">Redes Neurais Primeiro Contato</a></li>
+                
+              </ul>
 
           
         
@@ -504,6 +515,31 @@ o modelo foi treinado em uma ampla gama de dados licenciados com a licença (CC-
       
       
       
+          
+          <div class="disqus-comments">
+            <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "giseldo" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+          </div>
+          
+        
         
       
 

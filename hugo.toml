@@ -14,7 +14,8 @@ pygmentsCodefencesGuessSyntax = true
 
 [Services]
   [Services.Disqus]
-    # Shortname = "XXX"
+    Shortname = "giseldo"
+    shortname = "giseldo"
   [Services.googleAnalytics]
     # id = "XXX"
 
@@ -30,7 +31,7 @@ pygmentsCodefencesGuessSyntax = true
   wordCount = true
   useHLJS = true
   socialShare = true
-  delayDisqus = true
+  #delayDisqus = true
   showRelatedPosts = true
 #  cusdisID = "XXX" # Get your App id from cusdis.com
 #  hideAuthor = true

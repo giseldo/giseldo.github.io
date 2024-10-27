@@ -9,6 +9,7 @@ weight: 2
 
 - [Adquirir e-pub na Amazon](https://www.amazon.com.br/gp/product/B0DCT4M7GH) 
 - [Adquirir livro físico na UICLAP](https://loja.uiclap.com/titulo/ua63343/) 
+- [Versão on-line](https://giseldo.github.io/livrovetorizacao/) 
 
 {{< columns >}}
 
@@ -30,8 +31,8 @@ final de cada capítulo são elaborados para reforçar este aprendizado.
 ## Processamento de Linguagem Natural: Vetorização de Texto com Python
 
 - [Adquirir e-pub na Amazon](https://www.amazon.com.br/gp/product/B0DGB9W7MW)
-
 - [Adquirir livro físico na UICLA](https://loja.uiclap.com/titulo/ua65564)
+- [Versão on-line](https://giseldo.github.io/livrovetorizacao/) 
 
 {{< columns >}}
 
@@ -47,4 +48,3 @@ fundamental em PLN. Espero que este livro seja um ponto de partida útil para
 suas futuras explorações no mundo do processamento de linguagem natural.
 
 {{< endcolumns >}}
-

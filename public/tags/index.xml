@@ -24,5 +24,19 @@
       <guid>http://localhost:1313/tags/llm/</guid>
       <description></description>
     </item>
+    <item>
+      <title>Python</title>
+      <link>http://localhost:1313/tags/python/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate><author>giseldo@gmail.com (Giseldo Neo)</author>
+      <guid>http://localhost:1313/tags/python/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>StreamLit</title>
+      <link>http://localhost:1313/tags/streamlit/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate><author>giseldo@gmail.com (Giseldo Neo)</author>
+      <guid>http://localhost:1313/tags/streamlit/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

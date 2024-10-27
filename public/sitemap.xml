@@ -35,6 +35,12 @@
     <loc>http://localhost:1313/post/2024-02-01-am/</loc>
     <lastmod>2024-02-01T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/tags/python/</loc>
+    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/streamlit/</loc>
+    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/post/2024-01-01-streamlit/</loc>
     <lastmod>2024-01-01T00:00:00+00:00</lastmod>
   </url><url>

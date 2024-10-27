@@ -2,6 +2,7 @@
 title: 'Regressão Linear Primeiro Contato'
 date: '2024-03-01'
 draft: false
+tags: ["regressão linear", "aprendizagem de máquina"]
 ---
 
 ## Introdução
