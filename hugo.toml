@@ -1,10 +1,7 @@
 baseurl = "https://giseldo.github.io"
 DefaultContentLanguage = "en"
 title = "Inteligência Artificial Descomplicada"
-# Using theme as git submodule 
 theme = "beautifulhugo"
-# Or when using theme as hugo module
-# theme = "github.com/halogenica/beautifulhugo"
 pygmentsStyle = "trac"
 pygmentsUseClasses = true
 pygmentsCodeFences = true
@@ -112,6 +109,11 @@ pygmentsCodefencesGuessSyntax = true
     url = "https://giseldo-simple-chatbot.hf.space"
     weight = 3
 
+[[menu.main]]
+    name = "Tags"
+    url = "tags"
+    weight = 3
+
 #[[menu.main]]
 #    identifier = "samples"
 #    name = "Samples"
@@ -134,8 +136,3 @@ pygmentsCodefencesGuessSyntax = true
 #    name = "Code Sample"
 #    url = "post/2016-03-08-code-sample"
 #    weight = 3
-
-[[menu.main]]
-    name = "Tags"
-    url = "tags"
-    weight = 3
