@@ -108,13 +108,13 @@ pygmentsCodefencesGuessSyntax = true
 [[menu.main]]
     parent = "produto"
     name = "Chatbot Simples"
-    url = "page/produtos/chatbotsimples"
+    url = "https://giseldo-simple-chatbot.hf.space"
     weight = 2
 
 [[menu.main]]
     parent = "produto"
     name = "Criar Paragrafo"
-    url = "page/produtos/criarparagrafo"
+    url = "https://giseldo-simple-chatbot.hf.space"
     weight = 3
 
 #[[menu.main]]
