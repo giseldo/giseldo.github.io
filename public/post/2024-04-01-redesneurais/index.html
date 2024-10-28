@@ -66,7 +66,7 @@ As redes neurais são utilizadas em diversas aplicações. De forma resumida ela
   "headline": "Redes Neurais Primeiro Contato",
   "description" : "Introdução As redes neurais são utilizadas em diversas aplicações. De forma resumida elas são compostas por diversos nós interconectados e organizados em camadas. Elas funcionam como um meio de aprendizado a partir da análise de exemplos de treinamento, permitindo a realização de tarefas complexas. Sendo Redes Neurais uma sub-área da aprendizagem de máquina, grande parte dos conceitos de aprendizagem de máquina são equivalentes na aplicação de uma rede neural. Veja na Figura 1 um simples esquema dos conceitos.\n",
   "inLanguage" : "en",
-  "wordCount":  913 ,
+  "wordCount":  949 ,
   "datePublished" : "2024-04-01T00:00:00\u002b00:00",
   "dateModified" : "2024-04-01T00:00:00\u002b00:00",
   "image" : "http:\/\/localhost:1313\/img\/avatar-icon.png",
@@ -146,11 +146,17 @@ As redes neurais são utilizadas em diversas aplicações. De forma resumida ela
                 
                   <a href="/page/produtos/todos">Todos</a>
                 
-                  <a href="/page/produtos/chatbotsimples">Chatbot Simples</a>
+                  <a href="https://giseldo-simple-chatbot.hf.space">Chatbot Simples</a>
                 
-                  <a href="/page/produtos/criarparagrafo">Criar Paragrafo</a>
+                  <a href="https://giseldo-neochatbotoneshot.hf.space">Criar Paragrafo</a>
                 
               </div>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="/tags">Tags</a>
             </li>
           
         
@@ -272,7 +278,7 @@ As redes neurais são utilizadas em diversas aplicações. De forma resumida ela
     &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;5&nbsp;minutes
   
   
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;913&nbsp;words
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;949&nbsp;words
   
   
     
@@ -301,26 +307,46 @@ As redes neurais são utilizadas em diversas aplicações. De forma resumida ela
         <h2 id="introdução">Introdução</h2>
 <p>As <strong>redes neurais</strong> são utilizadas em diversas aplicações. De forma resumida elas são compostas por diversos nós interconectados e organizados em camadas. Elas funcionam como um meio de aprendizado a partir da análise de exemplos de treinamento, permitindo a realização de tarefas complexas. Sendo Redes Neurais uma sub-área da aprendizagem de máquina, grande parte dos conceitos de aprendizagem de máquina são equivalentes na aplicação de uma rede neural. Veja na <strong>Figura 1</strong> um simples esquema dos conceitos.</p>
 <p><strong>Figura 1</strong> - Sub-áreas da Inteligência Artificial
+<script async type="application/javascript" src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js">
+    var config = {
+      startOnLoad:true,
+      theme:'neutral',
+      align:'center'
+    };
+    mermaid.initialize(config);
+  </script>
+  
+  <div class="mermaid">
+    
+flowchart LR
+  A(Inteligência Artificial) --> B(Aprendizagem de Máquina)
+  A --> X(Outras técnicas)
+  B --> C(Redes Neurais)
+  B --> D(Regressao Linear)
+  B --> Y(Outras técnicas)
 
-<link rel="stylesheet" href="http://localhost:1313/css/hugo-easy-gallery.css" />
-<div class="box" >
-  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-    <div class="img">
-      <img itemprop="thumbnail" src="/images/ia.png" alt="/images/ia.png"/>
-    </div>
-    <a href="/images/ia.png" itemprop="contentUrl"></a>
-  </figure>
-</div>
-
+  </div>
 Fonte: O Autor (2024)</p>
 <h2 id="previsão">Previsão</h2>
 <p>Realizar uma <strong>previsão</strong>, no contexto da inteligência artificial, significa utilizar um modelo para estimar ou inferir um valor futuro ou desconhecido. A previsão é baseada em padrões identificados em dados passados ou exemplos conhecidos, e o objetivo é fornecer uma estimativa ou decisão sobre novos dados ou eventos futuros. A precisão da previsão depende da qualidade dos dados, do modelo utilizado e de quão bem o modelo foi treinado e ajustado.</p>
 <p>Por exemplo, ao treinar um modelo preditivo com imagens de gatos e cachorros, o modelo pode, posteriormente, prever se uma nova imagem contém um gato ou um cachorro, mesmo sem ter visto uma nova imagem específica antes. Veja na <strong>Figura 2</strong> a imagem de um gato e na <strong>Figura 3</strong> um cahorro. Um modelo preditivo poderá dar um chute técnico se a foto contem um gato ou um cachorro, nesse caso é bem simples, mas existem fotos mais difícieis de identificar, tanto para um modelo quanto para o ser humano.</p>
-<!-- raw HTML omitted -->
+<p><strong>Figura 2</strong> - Um gato
+
+<link rel="stylesheet" href="http://localhost:1313/css/hugo-easy-gallery.css" />
+<div class="box" style="max-width:150px">
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="/images/blog/cat.jpg" alt="/images/blog/cat.jpg"/>
+    </div>
+    <a href="/images/blog/cat.jpg" itemprop="contentUrl"></a>
+  </figure>
+</div>
+
+Fonte: Imagem de <!-- raw HTML omitted -->Ty Swartz<!-- raw HTML omitted --> por <!-- raw HTML omitted -->Pixabay<!-- raw HTML omitted --></p>
 <p><strong>Figura 3</strong> - Um cachorro
 
 
-<div class="box" >
+<div class="box" style="max-width:150px">
   <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
     <div class="img">
       <img itemprop="thumbnail" src="/images/blog/dog.jpg" alt="/images/blog/dog.jpg"/>

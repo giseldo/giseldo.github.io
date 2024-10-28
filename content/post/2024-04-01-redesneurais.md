@@ -10,7 +10,14 @@ tags: ["redes neurais", "ia"]
 As **redes neurais** são utilizadas em diversas aplicações. De forma resumida elas são compostas por diversos nós interconectados e organizados em camadas. Elas funcionam como um meio de aprendizado a partir da análise de exemplos de treinamento, permitindo a realização de tarefas complexas. Sendo Redes Neurais uma sub-área da aprendizagem de máquina, grande parte dos conceitos de aprendizagem de máquina são equivalentes na aplicação de uma rede neural. Veja na **Figura 1** um simples esquema dos conceitos.
 
 **Figura 1** - Sub-áreas da Inteligência Artificial
-{{< figure src="/images/ia.png" >}}
+{{< mermaid >}}
+flowchart LR
+  A(Inteligência Artificial) --> B(Aprendizagem de Máquina)
+  A --> X(Outras técnicas)
+  B --> C(Redes Neurais)
+  B --> D(Regressao Linear)
+  B --> Y(Outras técnicas)
+{{< /mermaid >}}
 Fonte: O Autor (2024)
 
 ## Previsão
@@ -19,12 +26,12 @@ Realizar uma **previsão**, no contexto da inteligência artificial, significa u
 
 Por exemplo, ao treinar um modelo preditivo com imagens de gatos e cachorros, o modelo pode, posteriormente, prever se uma nova imagem contém um gato ou um cachorro, mesmo sem ter visto uma nova imagem específica antes. Veja na **Figura 2** a imagem de um gato e na **Figura 3** um cahorro. Um modelo preditivo poderá dar um chute técnico se a foto contem um gato ou um cachorro, nesse caso é bem simples, mas existem fotos mais difícieis de identificar, tanto para um modelo quanto para o ser humano.
 
-<center>**Figura 2** - Um gato</center>
-{{< figure src="/images/blog/cat.jpg" >}}
+**Figura 2** - Um gato
+{{< figure src="/images/blog/cat.jpg" width="150px">}}
 Fonte: Imagem de <a href="https://pixabay.com/pt/users/ty_swartz-617282/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=551554">Ty Swartz</a> por <a href="https://pixabay.com/pt//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=551554">Pixabay</a>
 
 **Figura 3** - Um cachorro
-{{< figure src="/images/blog/dog.jpg" >}}
+{{< figure src="/images/blog/dog.jpg" width="150px">}}
 Fonte: Imagem de <a href="https://pixabay.com/pt/users/vlaaitje-1637107/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1047521">Ilona Krijgsman</a> por <a href="https://pixabay.com/pt//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1047521">Pixabay</a>
 
 Com uma rede Neural podemos realizar uma previsão. Cabe ressaltar que também podemos realizar previsão com Regressão Linear ou outras técnicas. 
