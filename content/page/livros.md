@@ -9,7 +9,6 @@ weight: 2
 
 - [Adquirir e-pub na Amazon](https://www.amazon.com.br/gp/product/B0DCT4M7GH) 
 - [Adquirir livro físico na UICLAP](https://loja.uiclap.com/titulo/ua63343/) 
-- [Versão on-line - desatualizada](https://giseldo.github.io/livroregressaolinear/) 
 
 {{< columns >}}
 
@@ -32,7 +31,6 @@ final de cada capítulo são elaborados para reforçar este aprendizado.
 
 - [Adquirir e-pub na Amazon](https://www.amazon.com.br/gp/product/B0DGB9W7MW)
 - [Adquirir livro físico na UICLA](https://loja.uiclap.com/titulo/ua65564)
-- [Versão on-line - desatualizada](https://giseldo.github.io/livrovetorizacao/) 
 
 {{< columns >}}
 
