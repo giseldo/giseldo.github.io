@@ -109,10 +109,10 @@ pygmentsCodefencesGuessSyntax = true
     url = "https://giseldo-neochatbotoneshot.hf.space"
     weight = 3
 
-[[menu.main]]
-    name = "Tags"
-    url = "tags"
-    weight = 3
+#[[menu.main]]
+#    name = "Tags"
+#    url = "tags"
+#    weight = 3
 
 #[[menu.main]]
 #    identifier = "samples"
