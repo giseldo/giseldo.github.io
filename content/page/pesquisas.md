@@ -1,5 +1,5 @@
 ---
-title: 'Pesquisas'
+title: 'Pesquisas Acadêmicas'
 menus: 'main'
 draft: false
 comments: false
