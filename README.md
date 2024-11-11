@@ -4,4 +4,4 @@ Este repositório é o código-fonte do Blog "Inteligência artificial descompli
 
 Autor: Giseldo Neo
 
-[Logo](logo.png)
+[](avatar-icon.png.png)
