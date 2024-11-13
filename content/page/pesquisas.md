@@ -3,7 +3,7 @@ title: 'Pesquisas Acadêmicas'
 menus: 'main'
 draft: false
 comments: false
-weight: 4
+weight: 3
 ---
 
 ## Introdução
