@@ -25,7 +25,7 @@ weight: 4
 * User Story Tutor
   - Slide
 * NeoAVA
-  - Slide
+  - [Slide](https://www.researchgate.net/publication/385778737_NeoAVA_A_virtual_learning_environment_for_Self-Regulated_Learning_to_be_used_by_students_and_teachers)
 * NeoDataset
   - [Slide](https://www.researchgate.net/publication/385778629_NeoDataset_Um_conjunto_de_dados_com_User_Stories_e_Story_Points)
 * AQG
