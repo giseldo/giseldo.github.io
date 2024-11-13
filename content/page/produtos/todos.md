@@ -17,7 +17,7 @@ weight: 4
 ## Ferramentas acadêmicas
 [Cria um parágrafo com citação ABNT](https://giseldo-neochatbotoneshot.hf.space)
 
-## NeoChatbots
+## NeoChatbots - Chatbots Diversos
 
 ### [chatbot 1](https://giseldo-simple-chatbot.hf.space)
 Modelo : HuggingFaceH4/zephyr-7b-beta | Gradio
