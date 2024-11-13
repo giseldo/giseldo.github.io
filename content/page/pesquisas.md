@@ -22,14 +22,14 @@ weight: 4
 
  ## Artigos Publicados
 
-* User Story Tutor
+* NeoUST - User Story Tutor
   - Slide
-* NeoAVA
+* NeoAVA - Um ambiente virtual de aprendizagem
   - [Slide](https://www.researchgate.net/publication/385778737_NeoAVA_A_virtual_learning_environment_for_Self-Regulated_Learning_to_be_used_by_students_and_teachers)
 * NeoDataset
   - [Slide](https://www.researchgate.net/publication/385778629_NeoDataset_Um_conjunto_de_dados_com_User_Stories_e_Story_Points)
-* AQG
-  - [Slide AQG](https://www.researchgate.net/publication/385778557_Revisao_sobre_a_Geracao_Automatica_de_Questoes_na_Educacao_Tecnicas_Conjuntos_de_Dados_e_Metricas_de_Avaliacao)
+* AQG (Answer Question Generator)
+  - [Slide](https://www.researchgate.net/publication/385778557_Revisao_sobre_a_Geracao_Automatica_de_Questoes_na_Educacao_Tecnicas_Conjuntos_de_Dados_e_Metricas_de_Avaliacao)
 * Autorregulação
   - [Slide](https://www.researchgate.net/publication/385778670_Modelagem_de_Autorregulacao_da_Aprendizagem_no_Ensino_Superior_Uma_Ferramenta_para_Automatizar_Levantamento_de_Perfis_e_Recomendacoes_Personalizadas)
  
