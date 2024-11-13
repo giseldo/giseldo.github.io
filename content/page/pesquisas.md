@@ -27,9 +27,9 @@ weight: 4
 * NeoAVA
   - Slide
 * NeoDataset
-  - [Slide] (https://www.researchgate.net/publication/385778629_NeoDataset_Um_conjunto_de_dados_com_User_Stories_e_Story_Points)
+  - [Slide](https://www.researchgate.net/publication/385778629_NeoDataset_Um_conjunto_de_dados_com_User_Stories_e_Story_Points)
 * AQG
-  - Slide
+  - [Slide AQG](https://www.researchgate.net/publication/385778557_Revisao_sobre_a_Geracao_Automatica_de_Questoes_na_Educacao_Tecnicas_Conjuntos_de_Dados_e_Metricas_de_Avaliacao)
 * Autorregulação
   - Slide
  
