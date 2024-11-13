@@ -31,7 +31,7 @@ weight: 4
 * AQG
   - [Slide AQG](https://www.researchgate.net/publication/385778557_Revisao_sobre_a_Geracao_Automatica_de_Questoes_na_Educacao_Tecnicas_Conjuntos_de_Dados_e_Metricas_de_Avaliacao)
 * Autorregulação
-  - Slide
+  - [Slide]https://www.researchgate.net/publication/385778670_Modelagem_de_Autorregulacao_da_Aprendizagem_no_Ensino_Superior_Uma_Ferramenta_para_Automatizar_Levantamento_de_Perfis_e_Recomendacoes_Personalizadas)
  
 
  
