@@ -28,8 +28,8 @@ pygmentsCodefencesGuessSyntax = true
   wordCount = true
   useHLJS = true
   socialShare = true
-  #delayDisqus = true
   showRelatedPosts = true
+  #delayDisqus = true
 #  cusdisID = "XXX" # Get your App id from cusdis.com
 #  hideAuthor = true
 #  gcse = "012345678901234567890:abcdefghijk" # Get your code from google.com/cse. Make sure to go to "Look and Feel" and change Layout to "Full Width" and Theme to "Classic"
@@ -86,28 +86,28 @@ pygmentsCodefencesGuessSyntax = true
     url = ""
     weight = 1
 
-[[menu.main]]
-    identifier = "produto"
-    name = "Produtos"
-    weight = 2
+#[[menu.main]]
+#    identifier = "produto"
+#    name = "Produtos"
+#    weight = 2
 
-[[menu.main]]
-    parent = "produto"
-    name = "Todos"
-    url = "page/produtos/todos"
-    weight = 1
+#[[menu.main]]
+#    parent = "produto"
+#    name = "Todos"
+#    url = "page/produtos/todos"
+#    weight = 1
 
-[[menu.main]]
-    parent = "produto"
-    name = "Chatbot Simples"
-    url = "https://giseldo-simple-chatbot.hf.space"
-    weight = 2
+#[[menu.main]]
+#    parent = "produto"
+#    name = "Chatbot Simples"
+#    url = "https://giseldo-simple-chatbot.hf.space"
+#    weight = 2
 
-[[menu.main]]
-    parent = "produto"
-    name = "Criar Paragrafo"
-    url = "https://giseldo-neochatbotoneshot.hf.space"
-    weight = 3
+#[[menu.main]]
+#    parent = "produto"
+#    name = "Criar Paragrafo"
+#    url = "https://giseldo-neochatbotoneshot.hf.space"
+#    weight = 3
 
 #[[menu.main]]
 #    name = "Tags"
