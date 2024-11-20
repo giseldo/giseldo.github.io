@@ -2,6 +2,7 @@
 title: 'Livros'
 menus: 'main'
 comments: false
+draft: false
 weight: 2
 ---
 
