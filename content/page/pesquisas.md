@@ -8,9 +8,11 @@ weight: 3
 
 ## Introdução
 
-[Site](https://sites.google.com/view/grupogci) do Grupo de Pesquisa em Gestão do Conhecimento e da Inovação pesquisa (GCI) da UFAL.
+Nosso grupo de pesquisa é o GCI - Grupo de Pesquisa em Gestão do Conhecimento e da Inovação pesquisa. Acesse o site instituicional do grupo [Site](https://sites.google.com/view/grupogci) para mais informações dos participantes e dos artigos públicados pelo grupo.
 
 ## Áreas de Interesse
+
+Nossas áreas de interesse e pesquisa são:
 
 * Inteligência Artificial
 * Aprendizagem de máquina
@@ -20,10 +22,10 @@ weight: 3
 * Informática para educação
 
 
- ## Artigos Publicados
+ ## Materiais relacionados a alguns dos nossos Artigos Publicados
 
-* NeoUST - User Story Tutor
-  - Slide
+ Esta seção indexa, alguns materiais relacionados a alguns artigos publicados.
+
 * NeoAVA - Um ambiente virtual de aprendizagem
   - [Slide](https://www.researchgate.net/publication/385778737_NeoAVA_A_virtual_learning_environment_for_Self-Regulated_Learning_to_be_used_by_students_and_teachers)
 * NeoDataset
