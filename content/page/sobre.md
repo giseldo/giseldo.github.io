@@ -8,7 +8,7 @@ weight: 6
 
 ## Equipe
 
-Giseldo Neo e Alana Neo
+Este Site e Blog é mantido por: Giseldo Neo e Alana Neo.
 
 ## Giseldo Neo
 
@@ -45,5 +45,3 @@ Alana Neo é Doutoranda em Ciência da Computação na Universidade Federal de C
 ## Outros Blogs
 
 [Blog de Jogos](http://neojogos.wordpress.com) 
-
-[Blog de Histórias e Contos](http://neohistorias.wordpress.com) 
