@@ -1,8 +1,9 @@
 ---
 title: 'Produtos'
-draft: false
 comments: false
+menus: 'main'
 weight: 4
+draft: false
 ---
 
 ## NeoUST - User Story Tutor
