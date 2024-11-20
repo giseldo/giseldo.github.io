@@ -6,6 +6,6 @@ Este repositório é o código-fonte do Blog "Inteligência artificial descompli
 
 Autor: Giseldo Neo
 
-Entre em contato: giseldo@gmail.com
+Caso queira realizar uma postagem entre em contato: giseldo@gmail.com
 
 
