@@ -8,7 +8,7 @@ weight: 6
 
 ## Equipe
 
-Este Site e Blog é mantido por: Giseldo Neo e Alana Neo.
+Este Site e Blog são mantidos por Giseldo Neo e Alana Neo.
 
 ## Giseldo Neo
 
