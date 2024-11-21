@@ -68,7 +68,7 @@ Fonte: o Autor
 
 Apesar das semelhanças nos nomes, Groq e Grok são soluções de IA com propósitos e funcionalidades distintas, atendendo a diferentes necessidades no campo da inteligência artificial. 
 
-Até o próximo post.
+Deixe um comentário e até o próximo post.
 
 Referências
 -  https://groq.com/
