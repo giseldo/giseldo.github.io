@@ -37,7 +37,7 @@ O Grok (com K) também tem essa modalidade, o Grok chatbot está disponível par
 
 **Figura 5** - Chatbot do Grok 
 ![image](https://github.com/user-attachments/assets/72a03f4b-5870-42f3-89d8-b7fd122c31ab)
-Fonte: o Autor
+Fonte: [tweetdelete](https://tweetdelete.net/pt/recursos/grok-ai-xs-latest-artificial-intelligence-chatbot/)
 
 **Figura 6** - Playground do Grok 
 ![image](https://github.com/user-attachments/assets/306afcae-d203-4a87-ab11-8f03ce87df56)
