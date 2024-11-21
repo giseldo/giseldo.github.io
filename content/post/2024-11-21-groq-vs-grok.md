@@ -25,7 +25,7 @@ Fonte: o autor
 Fonte: o Autor
 {{< endcolumns >}}
 
-o Groq  usa  uma versão do LLama da Meta em seu Chatbot, porém é mais focado em sua API/playground, que funciona no formato pague-pelo-uso. o Chatbot Groq também consome créditos pague-pelo-uso e não tem uma assinatura como o chatbot do ChatGPT. Veja na **Figura 3** o chatbot do Groq e na **Figura 4** o Playground do Groq. Note que no chatbot do Groq, não temos o recurso do histórico como no ChatGPT.
+o Groq  usa  uma versão do LLama da Meta em seu [Chatbot Groq](https://groq.com/#), porém é mais focado em sua [API/playground Groq](https://console.groq.com/playground), que funciona no formato pague-pelo-uso. o Chatbot Groq também consome os mesmos créditos pague-pelo-uso, não tendo uma assinatura aparte, como no caso do chatbot do ChatGPT. Veja na **Figura 3** o chatbot do Groq e na **Figura 4** o Playground do Groq. Note que no chatbot do Groq não temos o recurso do histórico como no ChatGPT.
 
 {{< columns >}}
 **Figura 3** - Chatbot do Groq
@@ -37,7 +37,7 @@ Fonte: o Autor
 Fonte: o Autor
 {{< endcolumns >}}
 
-O Grok (com K) também tem essa modalidade, o Grok chatbot está disponível para quem tem o acesso premium do twitter, enquanto que a API pode ser acessada na forma pague pelo uso, inclusive o Grok está oferecendo este ano 25R$ para quem deseja testar o serviço, ou seja é possível utilizar a API do Grok sem desembolsar recursos neste momento. Mas ele não tem um testador estilo playGround,  para usar a API do Grok é necessário utilizar uma ferramenta ou código externo. Veja na **Figura 5** o chatbot e na **Figura 6** o Playground do Grok.
+O Grok (com K) também tem essa modalidade, o Grok chatbot está disponível para quem tem o acesso premium do twitter, enquanto que a [API Grok](https://console.x.ai/)) pode ser acessada na forma pague pelo uso, inclusive o Grok está oferecendo este ano 25R$ para quem deseja testar o serviço, ou seja é possível utilizar a API do Grok sem desembolsar recursos neste momento. Mas ele não tem um testador estilo playGround,  para usar a API do Grok é necessário utilizar uma ferramenta ou código externo. Veja na **Figura 5** o chatbot e na **Figura 6** o Playground do Grok.
 
 {{< columns >}}
 **Figura 5** - Chatbot do Grok 
