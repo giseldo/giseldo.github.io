@@ -1,6 +1,6 @@
 ---
 title: 'Groq vs Grok'
-date: '2024-11-19'
+date: '2024-11-21'
 draft: false
 tags: ["Large Language Models"]
 ---
