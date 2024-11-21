@@ -13,7 +13,7 @@ Já o o termo Grok é comumente utilizado como referência ao chatbot da empresa
 
 Geralmente a desenvolvedora de um modelo de LLM, fornece uma interface para o usuário comum conversar com o seu modelo em forma de um chatbot 
 e também fornece uma API ou um playground para quem deseja integrar a solução em suas aplicações. 
-Assim é o ChatGPT que cobra mais ou menos 100 R$ (no momento da escrita deste post) para o seu chatbot e um plano (pay-as-you-go) pague pelo uso para a sua API/playground (veja na **Figura 1** uma imagem do chatbot da OpenAI e na **Figura 2** o playground da OpenAO). 
+Assim é o ChatGPT que cobra mais ou menos 100 R$ (no momento da escrita deste post) para o seu chatbot e um plano pague-pelo-uso (em inglês pay-as-you-go) para a sua API/playground. veja na **Figura 1** uma imagem do chatbot da OpenAI e na **Figura 2** o playground da OpenAI. 
 
 **Figura 1** - Chatbot da OpenAI
 ![ChatGPT chatbot interface](https://github.com/user-attachments/assets/d5f1caa9-ad37-4891-9a66-8121f6b54dce)
