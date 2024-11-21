@@ -15,13 +15,15 @@ Geralmente a desenvolvedora de um modelo de LLM, fornece uma interface para o us
 e também fornece uma API ou um playground para quem deseja integrar a solução em suas aplicações. 
 Assim é o ChatGPT que cobra mais ou menos 100 R$ (no momento da escrita deste post) para o seu chatbot e um plano pague-pelo-uso (em inglês pay-as-you-go) para a sua API/playground. veja na **Figura 1** uma imagem do chatbot da OpenAI e na **Figura 2** o playground da OpenAI. 
 
+{{< columns >}}
 **Figura 1** - Chatbot da OpenAI
 ![ChatGPT chatbot interface](https://github.com/user-attachments/assets/d5f1caa9-ad37-4891-9a66-8121f6b54dce)
 Fonte: o autor
-
+{{< column >}}
 **Figura 2** - PlayGround OpenAI
 ![PlayGround OpenAI](https://github.com/user-attachments/assets/46bf1931-62b5-4c51-a3b5-e9e1e246fd08)
 Fonte: o Autor
+{{< endcolumns >}}
 
 o Groq  usa  uma versão do LLama da Meta em seu Chatbot, porém é mais focado em sua API/playground, que funciona no formato pague-pelo-uso. o Chatbot Groq também consome créditos pague-pelo-uso e não tem uma assinatura como o chatbot do ChatGPT. Veja na **Figura 3** o chatbot do Groq e na **Figura 4** o Playground do Groq. Note que no chatbot do Groq, não temos o recurso do histórico como no ChatGPT.
 
