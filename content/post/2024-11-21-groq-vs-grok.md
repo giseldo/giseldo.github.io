@@ -7,13 +7,13 @@ tags: ["Large Language Models"]
 
 Groq e Grok são duas coisas distintas, desenvolvidas por empresas diferentes, com características e finalidades específicas:
 
-Groq (com Q) é uma fornecedora de infraestrutura para inferência em modelos de LLM diversos. 
-Esta empresa vende o serviço de inferência rápida de IA para modelos disponíveis abertamente, como Llama 3.1 da Meta, o Gemma do Google, ou o Mixtral
+Geralmente quando nos referimos ao Groq (com Q), estamos nos referindo a uma fornecedora de infraestrutura para inferência em modelos de LLM diversos. 
+Esta empresa vende um serviço de inferência mais rápida (em relação aos seus concorrentes) de IA para modelos disponíveis abertamente, como Llama 3.1 da Meta, o Gemma do Google, ou o Mixtral
 Já o Grok é um chatbot da empresa X (twitter). 
 
 Geralmente a desenvolvedora de um modelo de LLM, fornece uma interface para o usuário comum conversar com o seu modelo em forma de um chatbot 
-e também uma api/console/playground para quem deseja integrar a solução em suas aplicações. 
-Assim é o ChatGPT que cobra mais ou menos 100 R$ (no momento da escrita deste post) para o seu chatbot e um plano (pay-as-you-go) pague pelo uso para a sua api/console/playground (veja na **Figura 1** e **Figura 2**). 
+e também fornece uma API ou um playground para quem deseja integrar a solução em suas aplicações. 
+Assim é o ChatGPT que cobra mais ou menos 100 R$ (no momento da escrita deste post) para o seu chatbot e um plano (pay-as-you-go) pague pelo uso para a sua API/playground (veja na **Figura 1** uma imagem do chatbot da openAI e na **Figura 2** o playground). 
 
 **Figura 1** - Chatbot da OpenAI
 ![ChatGPT chatbot interface](https://github.com/user-attachments/assets/d5f1caa9-ad37-4891-9a66-8121f6b54dce)
@@ -23,10 +23,15 @@ Fonte: o autor
 ![PlayGround OpenAI](https://github.com/user-attachments/assets/46bf1931-62b5-4c51-a3b5-e9e1e246fd08)
 Fonte: o autor
 
-O Grok (com K) também tem essa modalidade, o Grok chatbot está disponível para quem tem o acesso premium do twitter, enquanto que a api/console/playground pode ser acessada na forma pague pelo uso, 
-inclusive o Grok está oferecendo este ano 25R$ para quem deseja testar o serviço, ou seja é possível utilizar o playground do Grok sem desembolsar recursos neste momento.
+O Grok (com K) também tem essa modalidade, o Grok chatbot está disponível para quem tem o acesso premium do twitter, enquanto que a API pode ser acessada na forma pague pelo uso, inclusive o Grok está oferecendo este ano 25R$ para quem deseja testar o serviço, ou seja é possível utilizar a API do Grok sem desembolsar recursos neste momento. Mas ele não tem um testador estilo playGround,  para usar a API do Grok é necessário utilizar uma ferramenta ou código externo.
 
-o Groq (dessa vez com Q) não tem um chatbot, mas tem uma api/console, que funciona no formato pague pelo uso.
+o Groq (dessa vez com Q) não tem um chatbot próprio completo (como o ChatGPT e o Meta), mas tem uma API/playground, que funciona no formato pague-pelo-uso. 
+
+**Figura 3** - Playground Grok 
+![image](https://github.com/user-attachments/assets/306afcae-d203-4a87-ab11-8f03ce87df56)
+Fonte: o autor
+
+## Resumo
 
 **Groq**:
 - **Desenvolvedora**: Groq Inc., fundada em 2016.
