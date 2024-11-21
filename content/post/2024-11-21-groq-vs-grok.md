@@ -73,3 +73,4 @@ Deixe um comentário e até o próximo post.
 Referências
 -  https://groq.com/
 -  https://x.ai/
+-  https://getstream.io/blog/best-local-llm-tools/
