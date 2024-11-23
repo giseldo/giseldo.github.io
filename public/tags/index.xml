@@ -5,11 +5,39 @@
     <link>http://localhost:1313/tags/</link>
     <description>Recent content in Tags on Inteligência Artificial Descomplicada</description>
     <generator>Hugo</generator>
-    <language>en</language>
+    <language>br</language>
     <managingEditor>giseldo@gmail.com (Giseldo Neo)</managingEditor>
     <webMaster>giseldo@gmail.com (Giseldo Neo)</webMaster>
-    <lastBuildDate>Wed, 01 May 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 22 Nov 2024 18:46:49 -0400</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Large Language Models</title>
+      <link>http://localhost:1313/tags/large-language-models/</link>
+      <pubDate>Fri, 22 Nov 2024 18:46:49 -0400</pubDate><author>giseldo@gmail.com (Giseldo Neo)</author>
+      <guid>http://localhost:1313/tags/large-language-models/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Intligência Artificial</title>
+      <link>http://localhost:1313/tags/intlig%C3%AAncia-artificial/</link>
+      <pubDate>Fri, 22 Nov 2024 00:00:00 +0000</pubDate><author>giseldo@gmail.com (Giseldo Neo)</author>
+      <guid>http://localhost:1313/tags/intlig%C3%AAncia-artificial/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Meta</title>
+      <link>http://localhost:1313/tags/meta/</link>
+      <pubDate>Tue, 19 Nov 2024 00:00:00 +0000</pubDate><author>giseldo@gmail.com (Giseldo Neo)</author>
+      <guid>http://localhost:1313/tags/meta/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Python</title>
+      <link>http://localhost:1313/tags/python/</link>
+      <pubDate>Tue, 19 Nov 2024 00:00:00 +0000</pubDate><author>giseldo@gmail.com (Giseldo Neo)</author>
+      <guid>http://localhost:1313/tags/python/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Ia</title>
       <link>http://localhost:1313/tags/ia/</link>
@@ -43,13 +71,6 @@
       <link>http://localhost:1313/tags/regress%C3%A3o-linear/</link>
       <pubDate>Fri, 01 Mar 2024 00:00:00 +0000</pubDate><author>giseldo@gmail.com (Giseldo Neo)</author>
       <guid>http://localhost:1313/tags/regress%C3%A3o-linear/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Python</title>
-      <link>http://localhost:1313/tags/python/</link>
-      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate><author>giseldo@gmail.com (Giseldo Neo)</author>
-      <guid>http://localhost:1313/tags/python/</guid>
       <description></description>
     </item>
     <item>

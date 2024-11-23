@@ -5,7 +5,7 @@
     <link>http://localhost:1313/tags/streamlit/</link>
     <description>Recent content in StreamLit on Inteligência Artificial Descomplicada</description>
     <generator>Hugo</generator>
-    <language>en</language>
+    <language>br</language>
     <managingEditor>giseldo@gmail.com (Giseldo Neo)</managingEditor>
     <webMaster>giseldo@gmail.com (Giseldo Neo)</webMaster>
     <lastBuildDate>Mon, 01 Jan 2024 00:00:00 +0000</lastBuildDate>
@@ -15,7 +15,7 @@
       <link>http://localhost:1313/post/2024-01-01-streamlit/</link>
       <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate><author>giseldo@gmail.com (Giseldo Neo)</author>
       <guid>http://localhost:1313/post/2024-01-01-streamlit/</guid>
-      <description>&lt;h2 id=&#34;introdução&#34;&gt;Introdução&lt;/h2&gt;&#xA;&lt;p&gt;Streamlit é uma biblioteca de código aberto em Python que facilita a criação de aplicativos web interativos e de visualização de dados de forma rápida e simples. É amplamente utilizada por cientistas de dados, analistas e desenvolvedores que desejam transformar seus scripts de Python em aplicações web interativas sem a necessidade de conhecimentos avançados em desenvolvimento web.&lt;/p&gt;&#xA;&lt;p&gt;As principais características do Streamlit são:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Facilidade de Uso: Permite criar interfaces de usuário com poucas linhas de código, utilizando uma sintaxe intuitiva e fácil de aprender.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Streamlit é uma biblioteca de código aberto em Python que facilita a criação de aplicativos web interativos e de visualização de dados de forma rápida e simples. É amplamente utilizada por cientistas de dados, analistas e desenvolvedores que desejam transformar seus scripts de Python em aplicações web interativas sem a necessidade de conhecimentos avançados em desenvolvimento web.&lt;/p&gt;&#xA;&lt;p&gt;As principais características do Streamlit são:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Facilidade de Uso: Permite criar interfaces de usuário com poucas linhas de código, utilizando uma sintaxe intuitiva e fácil de aprender.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

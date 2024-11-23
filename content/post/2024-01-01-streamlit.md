@@ -1,11 +1,11 @@
 ---
 title: 'StreamLit Primeiro Contato'
+subtitle: "Um framework para desenvolvimento de aplicações Web com Python"
+author: "Giseldo Neo"
 date: '2024-01-01'
 draft: false
 tags: ["Python", "StreamLit", "Web"]
 ---
-
-## Introdução
 
 Streamlit é uma biblioteca de código aberto em Python que facilita a criação de aplicativos web interativos e de visualização de dados de forma rápida e simples. É amplamente utilizada por cientistas de dados, analistas e desenvolvedores que desejam transformar seus scripts de Python em aplicações web interativas sem a necessidade de conhecimentos avançados em desenvolvimento web.
 

@@ -5,17 +5,24 @@
     <link>http://localhost:1313/tags/python/</link>
     <description>Recent content in Python on Inteligência Artificial Descomplicada</description>
     <generator>Hugo</generator>
-    <language>en</language>
+    <language>br</language>
     <managingEditor>giseldo@gmail.com (Giseldo Neo)</managingEditor>
     <webMaster>giseldo@gmail.com (Giseldo Neo)</webMaster>
-    <lastBuildDate>Mon, 01 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 19 Nov 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CodeGPT Primeiro Contato</title>
+      <link>http://localhost:1313/post/2024-11-19-codegpt/</link>
+      <pubDate>Tue, 19 Nov 2024 00:00:00 +0000</pubDate><author>giseldo@gmail.com (Giseldo Neo)</author>
+      <guid>http://localhost:1313/post/2024-11-19-codegpt/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;CodeGPT revoluciona o desenvolvimento de software com IA avançada&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;O &lt;strong&gt;CodeGPT&lt;/strong&gt; se tornou um dos assistentes de codificação mais populares, integrando-se a IDEs como Visual Studio Code e JetBrains. Desde seu lançamento em março de 2023, acumulou mais de &lt;strong&gt;1,4 milhão de downloads&lt;/strong&gt; e está presente em mais de 180 países, ajudando desenvolvedores a aumentar sua produtividade em &lt;strong&gt;30%&lt;/strong&gt; ou mais.&lt;/p&gt;&#xA;&lt;p&gt;A integração com o modelo de linguagem &lt;strong&gt;Llama&lt;/strong&gt;, da Meta, foi um divisor de águas para a plataforma. Com a adoção do Llama 3.2 (90B), o CodeGPT evoluiu de gerador de código para uma solução completa de assistência, capaz de:&lt;/p&gt;</description>
+    </item>
     <item>
       <title>StreamLit Primeiro Contato</title>
       <link>http://localhost:1313/post/2024-01-01-streamlit/</link>
       <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate><author>giseldo@gmail.com (Giseldo Neo)</author>
       <guid>http://localhost:1313/post/2024-01-01-streamlit/</guid>
-      <description>&lt;h2 id=&#34;introdução&#34;&gt;Introdução&lt;/h2&gt;&#xA;&lt;p&gt;Streamlit é uma biblioteca de código aberto em Python que facilita a criação de aplicativos web interativos e de visualização de dados de forma rápida e simples. É amplamente utilizada por cientistas de dados, analistas e desenvolvedores que desejam transformar seus scripts de Python em aplicações web interativas sem a necessidade de conhecimentos avançados em desenvolvimento web.&lt;/p&gt;&#xA;&lt;p&gt;As principais características do Streamlit são:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Facilidade de Uso: Permite criar interfaces de usuário com poucas linhas de código, utilizando uma sintaxe intuitiva e fácil de aprender.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Streamlit é uma biblioteca de código aberto em Python que facilita a criação de aplicativos web interativos e de visualização de dados de forma rápida e simples. É amplamente utilizada por cientistas de dados, analistas e desenvolvedores que desejam transformar seus scripts de Python em aplicações web interativas sem a necessidade de conhecimentos avançados em desenvolvimento web.&lt;/p&gt;&#xA;&lt;p&gt;As principais características do Streamlit são:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Facilidade de Uso: Permite criar interfaces de usuário com poucas linhas de código, utilizando uma sintaxe intuitiva e fácil de aprender.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

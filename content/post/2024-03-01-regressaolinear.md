@@ -1,5 +1,7 @@
 ---
 title: 'Regressão Linear Primeiro Contato'
+subtitle: "Uma introdução breve a regressão linear"
+author: "Giseldo Neo"	
 date: '2024-03-01'
 draft: false
 tags: ["regressão linear", "aprendizagem de máquina"]

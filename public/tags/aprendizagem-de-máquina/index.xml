@@ -5,7 +5,7 @@
     <link>http://localhost:1313/tags/aprendizagem-de-m%C3%A1quina/</link>
     <description>Recent content in Aprendizagem De Máquina on Inteligência Artificial Descomplicada</description>
     <generator>Hugo</generator>
-    <language>en</language>
+    <language>br</language>
     <managingEditor>giseldo@gmail.com (Giseldo Neo)</managingEditor>
     <webMaster>giseldo@gmail.com (Giseldo Neo)</webMaster>
     <lastBuildDate>Fri, 01 Mar 2024 00:00:00 +0000</lastBuildDate>
@@ -22,7 +22,7 @@
       <link>http://localhost:1313/post/2024-02-01-am/</link>
       <pubDate>Thu, 01 Feb 2024 00:00:00 +0000</pubDate><author>giseldo@gmail.com (Giseldo Neo)</author>
       <guid>http://localhost:1313/post/2024-02-01-am/</guid>
-      <description>&lt;h2 id=&#34;introdução&#34;&gt;Introdução&lt;/h2&gt;&#xA;&lt;p&gt;A &lt;strong&gt;aprendizagem de máquina&lt;/strong&gt; (ou &lt;em&gt;machine learning&lt;/em&gt;) é uma subárea da inteligência artificial (IA) que permite que sistemas de computadores aprendam a partir de dados e façam previsões ou tomem decisões sem serem explicitamente programados para isso. Em vez de seguir instruções rígidas, os algoritmos de aprendizagem de máquina analisam grandes volumes de dados, identificam padrões e ajustam seus comportamentos com base nas informações adquiridas.&lt;/p&gt;&#xA;&lt;p&gt;Ela foi motivada pelo desenvolvimento de softwares mais independentes da intervenção humana para extração do conhecimento. Geralmente aplicações de AM utilizam heurísticas (também chamadas de regras do dedão) que buscam por modelos capazes de representar o conhecimento existente nos dados.&lt;/p&gt;</description>
+      <description>&lt;p&gt;A &lt;strong&gt;aprendizagem de máquina&lt;/strong&gt; (ou &lt;em&gt;machine learning&lt;/em&gt;) é uma subárea da inteligência artificial (IA) que permite que sistemas de computadores aprendam a partir de dados e façam previsões ou tomem decisões sem serem explicitamente programados para isso. Em vez de seguir instruções rígidas, os algoritmos de aprendizagem de máquina analisam grandes volumes de dados, identificam padrões e ajustam seus comportamentos com base nas informações adquiridas.&lt;/p&gt;&#xA;&lt;p&gt;Ela foi motivada pelo desenvolvimento de softwares mais independentes da intervenção humana para extração do conhecimento. Geralmente aplicações de AM utilizam heurísticas (também chamadas de regras do dedão) que buscam por modelos capazes de representar o conhecimento existente nos dados.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

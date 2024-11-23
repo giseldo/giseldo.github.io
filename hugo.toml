@@ -1,5 +1,5 @@
 baseurl = "https://giseldo.github.io"
-DefaultContentLanguage = "en"
+DefaultContentLanguage = "br"
 title = "Inteligência Artificial Descomplicada"
 theme = "beautifulhugo"
 pygmentsStyle = "trac"

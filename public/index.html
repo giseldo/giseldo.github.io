@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+<html lang="br" itemscope itemtype="http://schema.org/WebPage">
   <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     
 
@@ -13,6 +13,8 @@
 
 
   
+  <meta name="description" content="Hey Listen!
+Aqui você encontrará notícias e informações relacionadas a inteligência artificial diariamente em nosso Blog. Além disso, informações sobre nossas pesquisas acadêmicas, os produtos de software que desenvolvemos, nossos livros e nosso podcast.">
   <meta name="author" content="Giseldo Neo"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -35,12 +37,16 @@
 </script>
 
 <meta property="og:title" content="Inteligência Artificial Descomplicada" />
+<meta property="og:description" content="Hey Listen!
+Aqui você encontrará notícias e informações relacionadas a inteligência artificial diariamente em nosso Blog. Além disso, informações sobre nossas pesquisas acadêmicas, os produtos de software que desenvolvemos, nossos livros e nosso podcast.">
 <meta property="og:image" content="http://localhost:1313/img/avatar-icon.png" />
 <meta property="og:url" content="http://localhost:1313/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Inteligência Artificial Descomplicada" />
 
   <meta name="twitter:title" content="Inteligência Artificial Descomplicada" />
+  <meta name="twitter:description" content="Hey Listen!
+Aqui você encontrará notícias e informações relacionadas a inteligência artificial diariamente em nosso Blog. Além disso, informações sobre nossas pesquisas acadêmicas, os produtos de …">
   <meta name="twitter:image" content="http://localhost:1313/img/avatar-icon.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@giseldoneo" />
@@ -60,7 +66,7 @@
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
-        <span class="sr-only">Toggle navigation</span>
+        <span class="sr-only">Ver navegação</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -84,29 +90,20 @@
           
         
           
-            <li class="navlinks-container">
-              <a class="navlinks-parent" role="button" tabindex="0">Produtos</a>
-              <div class="navlinks-children">
-                
-                  <a href="/page/produtos/todos">Todos</a>
-                
-                  <a href="https://giseldo-simple-chatbot.hf.space">Chatbot Simples</a>
-                
-                  <a href="https://giseldo-neochatbotoneshot.hf.space">Criar Paragrafo</a>
-                
-              </div>
+            <li>
+              <a title="Pesquisas Acadêmicas" href="/page/pesquisas/">Pesquisas Acadêmicas</a>
             </li>
           
         
           
             <li>
-              <a title="Tags" href="/tags">Tags</a>
+              <a title="Produtos" href="/page/produtos/">Produtos</a>
             </li>
           
         
           
             <li>
-              <a title="Pesquisas" href="/page/pesquisas/">Pesquisas</a>
+              <a title="Podcast" href="/page/podcast/">Podcast</a>
             </li>
           
         
@@ -229,13 +226,23 @@
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         
+          <div class="well">
+            <h2 id="hey-listen">Hey Listen!</h2>
+<p>Aqui você encontrará notícias e informações relacionadas a inteligência artificial diariamente em nosso Blog. Além disso, informações sobre nossas <a href="page/pesquisas/">pesquisas acadêmicas</a>, os <a href="page/produtos/">produtos de software</a> que desenvolvemos, nossos <a href="page/livros/">livros</a> e nosso <a href="page/podcast/">podcast</a>.</p>
+
+          </div>
+        
 
         <div class="posts-list">
           
           
             <article class="post-preview">
-    <a href="http://localhost:1313/post/2024-05-01-nemotron/">
-        <h2 class="post-title">Nemotron LLM 70B Um primeiro contato</h2>
+    <a href="http://localhost:1313/post/2024-11-22-llmshell/">
+        <h2 class="post-title">LlM shell</h2>
+        
+        <h3 class="post-subtitle">
+            Conversando com modelos LLM diversos
+        </h3>
         
         
         
@@ -245,17 +252,19 @@
         <span class="post-meta">
   
   
-  <i class="fas fa-calendar"></i>&nbsp;Posted on May 1, 2024
+  <i class="fas fa-calendar"></i>&nbsp;Postado em November 22, 2024
   
   
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;3&nbsp;minutes
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;2&nbsp;minutos
   
   
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;576&nbsp;words
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;231&nbsp;palavras
   
   
     
-      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Giseldo Neo
+      
+        &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Giseldo Neo
+      
     
   
   
@@ -265,10 +274,244 @@
     </p>
     <div class="post-entry">
         
-        <h1 id="introdução">Introdução</h1>
-<p>Em julho de 2024, a Meta lançou um modelo de linguagem (LLM) open-source, o <em>Llama-3.1-70B</em>. Um pouco depois, em setembro a empresa NVIDIA lançou um derivado deste, o <em>Llama 3.1-Nemotron-51B-Instruct</em>. E em outubro lançou finalmente um modelo de 70b, o <em>Llama 3.1 nemotron-70b-instruct</em>.</p>
+        <p>Existem softwares específicos para utilizar modelos de LLM Locais, ou mesmo acessar vários modelos de LLM on-line mas por uma única interface.</p>
+<p>Entre eles o GPT4ALL, o JEN, o LLMStudio e o exclente Msty.</p>
+<h2 id="gpt4all">GPT4ALL</h2>
+<p>GPT4All é uma plataforma que permite que você execute Modelos de Linguagem Grande (LLMs) em hardware de consumo, incluindo CPUs e GPUs [1]. Esta plataforma é compatível com Mac M Series chips, AMD e NVIDIA GPUs, tornando-a acessível para muitos [1]. Além disso, é possível operar o GPT4All em desktops e laptops comuns, sem a necessidade de chamadas de API ou GPUs [3].</p>
+        <a href="http://localhost:1313/post/2024-11-22-llmshell/" class="post-read-more">[Saiba mais]</a>
+        
+    </div>
+
+    
+    <div class="blog-tags">
+        
+       
+       <a href="http://localhost:1313/tags/large-language-models/">Large Language Models</a>&nbsp;
+         
+    </div>
+    
+
+</article>
+          
+            <article class="post-preview">
+    <a href="http://localhost:1313/post/2024-11-23-ia-not%C3%ADcias/">
+        <h2 class="post-title">IA Notícias 23/11/2024</h2>
+        
+        <h3 class="post-subtitle">
+            Notícias do dia 23/11/2024
+        </h3>
+        
+        
+        
+    </a>
+
+    <p class="post-meta">
+        <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Postado em November 22, 2024
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;2&nbsp;minutos
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;281&nbsp;palavras
+  
+  
+    
+      
+        &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Giseldo Neo
+      
+    
+  
+  
+</span>
+
+
+    </p>
+    <div class="post-entry">
+        
+        <p><strong>Amazon Dobra Investimento na Startup de IA Anthropic</strong></p>
+<p>A Amazon ampliou seu investimento na startup de inteligência artificial Anthropic, adicionando mais US$ 4 bilhões. Com isso, a Amazon mantém sua posição como investidora minoritária e principal parceira de treinamento da Anthropic, que desenvolve o chatbot Claude. Este movimento intensifica a competição da Amazon com Microsoft e Google no fornecimento de ferramentas baseadas em IA na computação em nuvem. <a href="https://www.reuters.com/pt/tecnologia/B2IQQ3ABXVONBLLAQV3YWONK6I-2024-11-22/?utm_source=chatgpt.com" target="_blank" rel="noopener">Link</a></p>
+<p><strong>Perplexity AI Introduz Recursos de Compras</strong></p>
+        <a href="http://localhost:1313/post/2024-11-23-ia-not%C3%ADcias/" class="post-read-more">[Saiba mais]</a>
+        
+    </div>
+
+    
+    <div class="blog-tags">
+        
+       
+       <a href="http://localhost:1313/tags/large-language-models/">Large Language Models</a>&nbsp;
+        
+       
+       <a href="http://localhost:1313/tags/intlig%C3%AAncia-artificial/">Intligência Artificial</a>&nbsp;
+         
+    </div>
+    
+
+</article>
+          
+            <article class="post-preview">
+    <a href="http://localhost:1313/post/2024-11-21-groq-vs-grok/">
+        <h2 class="post-title">Groq vs Grok</h2>
+        
+        <h3 class="post-subtitle">
+            Qual a diferença entre o Groq e o Grok?
+        </h3>
+        
+        
+        
+    </a>
+
+    <p class="post-meta">
+        <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Postado em November 21, 2024
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;4&nbsp;minutos
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;685&nbsp;palavras
+  
+  
+    
+      
+        &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Giseldo Neo
+      
+    
+  
+  
+</span>
+
+
+    </p>
+    <div class="post-entry">
+        
+        <p>Groq e Grok são duas coisas distintas, desenvolvidas por empresas diferentes, com características e finalidades específicas:</p>
+<p>Geralmente quando nos referimos ao <a href="https://groq.com/" target="_blank" rel="noopener">Groq</a> (com Q), estamos nos referindo a uma fornecedora de infraestrutura para inferência em modelos de LLM diversos.
+Esta empresa vende um serviço de inferência mais rápida do que seus concorrentes para modelos disponíveis abertamente, como Llama 3.1 da Meta, o Gemma do Google, ou o Mixtral
+Já <a href="https://x.ai/" target="_blank" rel="noopener">Grok</a> é comumente utilizado em referência ao chatbot da empresa X (twitter).</p>
+        <a href="http://localhost:1313/post/2024-11-21-groq-vs-grok/" class="post-read-more">[Saiba mais]</a>
+        
+    </div>
+
+    
+    <div class="blog-tags">
+        
+       
+       <a href="http://localhost:1313/tags/large-language-models/">Large Language Models</a>&nbsp;
+         
+    </div>
+    
+
+</article>
+          
+            <article class="post-preview">
+    <a href="http://localhost:1313/post/2024-11-19-codegpt/">
+        <h2 class="post-title">CodeGPT Primeiro Contato</h2>
+        
+        <h3 class="post-subtitle">
+            Uma ferramenta de LLM para auxiliar o desenvolvimento
+        </h3>
+        
+        
+        
+    </a>
+
+    <p class="post-meta">
+        <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Postado em November 19, 2024
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;2&nbsp;minutos
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;332&nbsp;palavras
+  
+  
+    
+      
+        &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Giseldo Neo
+      
+    
+  
+  
+</span>
+
+
+    </p>
+    <div class="post-entry">
+        
+        <p><strong>CodeGPT revoluciona o desenvolvimento de software com IA avançada</strong></p>
+<p>O <strong>CodeGPT</strong> se tornou um dos assistentes de codificação mais populares, integrando-se a IDEs como Visual Studio Code e JetBrains. Desde seu lançamento em março de 2023, acumulou mais de <strong>1,4 milhão de downloads</strong> e está presente em mais de 180 países, ajudando desenvolvedores a aumentar sua produtividade em <strong>30%</strong> ou mais.</p>
+<p>A integração com o modelo de linguagem <strong>Llama</strong>, da Meta, foi um divisor de águas para a plataforma. Com a adoção do Llama 3.2 (90B), o CodeGPT evoluiu de gerador de código para uma solução completa de assistência, capaz de:</p>
+        <a href="http://localhost:1313/post/2024-11-19-codegpt/" class="post-read-more">[Saiba mais]</a>
+        
+    </div>
+
+    
+    <div class="blog-tags">
+        
+       
+       <a href="http://localhost:1313/tags/python/">Python</a>&nbsp;
+        
+       
+       <a href="http://localhost:1313/tags/large-language-models/">Large Language Models</a>&nbsp;
+        
+       
+       <a href="http://localhost:1313/tags/meta/">Meta</a>&nbsp;
+         
+    </div>
+    
+
+</article>
+          
+            <article class="post-preview">
+    <a href="http://localhost:1313/post/2024-05-01-nemotron/">
+        <h2 class="post-title">Nemotron LLM 70B Um primeiro contato</h2>
+        
+        <h3 class="post-subtitle">
+            Um novo LLM da Nvidia
+        </h3>
+        
+        
+        
+    </a>
+
+    <p class="post-meta">
+        <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Postado em May 1, 2024
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;3&nbsp;minutos
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;575&nbsp;palavras
+  
+  
+    
+      
+        &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Giseldo Neo
+      
+    
+  
+  
+</span>
+
+
+    </p>
+    <div class="post-entry">
+        
+        <p>Em julho de 2024, a Meta lançou um modelo de linguagem (LLM) open-source, o <em>Llama-3.1-70B</em>. Um pouco depois, em setembro a empresa NVIDIA lançou um derivado deste, o <em>Llama 3.1-Nemotron-51B-Instruct</em>. E em outubro lançou finalmente um modelo de 70b, o <em>Llama 3.1 nemotron-70b-instruct</em>.</p>
 <p>O <em>nemotron-70b</em> performou melhor, em alguns testes comparativos, do que o GPT-4o. Nos testes, ele liderou em desempenho geral e também se destacou nas categorias chat (<em>chat score</em>) e raciocínio (<em>reasoning score</em>). Veja na <strong>Tabela 1</strong> os dados comparativos com mais detalhes.</p>
-        <a href="http://localhost:1313/post/2024-05-01-nemotron/" class="post-read-more">[Read More]</a>
+        <a href="http://localhost:1313/post/2024-05-01-nemotron/" class="post-read-more">[Saiba mais]</a>
         
     </div>
 
@@ -288,7 +531,7 @@
           
             <article class="post-preview">
     <a href="http://localhost:1313/post/2024-04-01-redesneurais/">
-        <h2 class="post-title">Redes Neurais Primeiro Contato</h2>
+        <h2 class="post-title">Uma breve introdução sobre redes neurais</h2>
         
         
         
@@ -298,17 +541,19 @@
         <span class="post-meta">
   
   
-  <i class="fas fa-calendar"></i>&nbsp;Posted on April 1, 2024
+  <i class="fas fa-calendar"></i>&nbsp;Postado em April 1, 2024
   
   
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;5&nbsp;minutes
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;5&nbsp;minutos
   
   
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;949&nbsp;words
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;948&nbsp;palavras
   
   
     
-      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Giseldo Neo
+      
+        &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Giseldo Neo
+      
     
   
   
@@ -318,9 +563,8 @@
     </p>
     <div class="post-entry">
         
-        <h2 id="introdução">Introdução</h2>
-<p>As <strong>redes neurais</strong> são utilizadas em diversas aplicações. De forma resumida elas são compostas por diversos nós interconectados e organizados em camadas. Elas funcionam como um meio de aprendizado a partir da análise de exemplos de treinamento, permitindo a realização de tarefas complexas. Sendo Redes Neurais uma sub-área da aprendizagem de máquina, grande parte dos conceitos de aprendizagem de máquina são equivalentes na aplicação de uma rede neural. Veja na <strong>Figura 1</strong> um simples esquema dos conceitos.</p>
-        <a href="http://localhost:1313/post/2024-04-01-redesneurais/" class="post-read-more">[Read More]</a>
+        <p>As <strong>redes neurais</strong> são utilizadas em diversas aplicações. De forma resumida elas são compostas por diversos nós interconectados e organizados em camadas. Elas funcionam como um meio de aprendizado a partir da análise de exemplos de treinamento, permitindo a realização de tarefas complexas. Sendo Redes Neurais uma sub-área da aprendizagem de máquina, grande parte dos conceitos de aprendizagem de máquina são equivalentes na aplicação de uma rede neural. Veja na <strong>Figura 1</strong> um simples esquema dos conceitos.</p>
+        <a href="http://localhost:1313/post/2024-04-01-redesneurais/" class="post-read-more">[Saiba mais]</a>
         
     </div>
 
@@ -342,6 +586,10 @@
     <a href="http://localhost:1313/post/2024-03-01-regressaolinear/">
         <h2 class="post-title">Regressão Linear Primeiro Contato</h2>
         
+        <h3 class="post-subtitle">
+            Uma introdução breve a regressão linear
+        </h3>
+        
         
         
     </a>
@@ -350,17 +598,19 @@
         <span class="post-meta">
   
   
-  <i class="fas fa-calendar"></i>&nbsp;Posted on March 1, 2024
+  <i class="fas fa-calendar"></i>&nbsp;Postado em March 1, 2024
   
   
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;2&nbsp;minutes
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;2&nbsp;minutos
   
   
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;277&nbsp;words
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;277&nbsp;palavras
   
   
     
-      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Giseldo Neo
+      
+        &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Giseldo Neo
+      
     
   
   
@@ -372,7 +622,7 @@
         
         <h2 id="introdução">Introdução</h2>
 <p>A Regressão linear é um método estatístico utilizado para avaliar a relação causal e quantitativa entre duas variáveis, chamada de variável dependente e variável independente, respectivamente. O modelo de regressão linear tem a seguinte forma: y = a + bx + e, onde y é a variável dependente, x é a variável independente, a é o intercepto, b é a reta inclinada e e é o erro. Com a regressão podemos encontrar um modelo matemático que melhor descreva a relação entre as variáveis (x) e (y).</p>
-        <a href="http://localhost:1313/post/2024-03-01-regressaolinear/" class="post-read-more">[Read More]</a>
+        <a href="http://localhost:1313/post/2024-03-01-regressaolinear/" class="post-read-more">[Saiba mais]</a>
         
     </div>
 
@@ -394,6 +644,10 @@
     <a href="http://localhost:1313/post/2024-02-01-am/">
         <h2 class="post-title">Aprendizagem de Máquina Um Primeiro Contato</h2>
         
+        <h3 class="post-subtitle">
+            Uma introdução a aprendizagem de máquina
+        </h3>
+        
         
         
     </a>
@@ -402,17 +656,19 @@
         <span class="post-meta">
   
   
-  <i class="fas fa-calendar"></i>&nbsp;Posted on February 1, 2024
+  <i class="fas fa-calendar"></i>&nbsp;Postado em February 1, 2024
   
   
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;3&nbsp;minutes
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;3&nbsp;minutos
   
   
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;592&nbsp;words
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;591&nbsp;palavras
   
   
     
-      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Giseldo Neo
+      
+        &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Giseldo Neo
+      
     
   
   
@@ -422,10 +678,9 @@
     </p>
     <div class="post-entry">
         
-        <h2 id="introdução">Introdução</h2>
-<p>A <strong>aprendizagem de máquina</strong> (ou <em>machine learning</em>) é uma subárea da inteligência artificial (IA) que permite que sistemas de computadores aprendam a partir de dados e façam previsões ou tomem decisões sem serem explicitamente programados para isso. Em vez de seguir instruções rígidas, os algoritmos de aprendizagem de máquina analisam grandes volumes de dados, identificam padrões e ajustam seus comportamentos com base nas informações adquiridas.</p>
+        <p>A <strong>aprendizagem de máquina</strong> (ou <em>machine learning</em>) é uma subárea da inteligência artificial (IA) que permite que sistemas de computadores aprendam a partir de dados e façam previsões ou tomem decisões sem serem explicitamente programados para isso. Em vez de seguir instruções rígidas, os algoritmos de aprendizagem de máquina analisam grandes volumes de dados, identificam padrões e ajustam seus comportamentos com base nas informações adquiridas.</p>
 <p>Ela foi motivada pelo desenvolvimento de softwares mais independentes da intervenção humana para extração do conhecimento. Geralmente aplicações de AM utilizam heurísticas (também chamadas de regras do dedão) que buscam por modelos capazes de representar o conhecimento existente nos dados.</p>
-        <a href="http://localhost:1313/post/2024-02-01-am/" class="post-read-more">[Read More]</a>
+        <a href="http://localhost:1313/post/2024-02-01-am/" class="post-read-more">[Saiba mais]</a>
         
     </div>
 
@@ -444,6 +699,10 @@
     <a href="http://localhost:1313/post/2024-01-01-streamlit/">
         <h2 class="post-title">StreamLit Primeiro Contato</h2>
         
+        <h3 class="post-subtitle">
+            Um framework para desenvolvimento de aplicações Web com Python
+        </h3>
+        
         
         
     </a>
@@ -452,17 +711,19 @@
         <span class="post-meta">
   
   
-  <i class="fas fa-calendar"></i>&nbsp;Posted on January 1, 2024
+  <i class="fas fa-calendar"></i>&nbsp;Postado em January 1, 2024
   
   
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;2&nbsp;minutes
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;2&nbsp;minutos
   
   
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;395&nbsp;words
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;394&nbsp;palavras
   
   
     
-      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Giseldo Neo
+      
+        &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Giseldo Neo
+      
     
   
   
@@ -472,13 +733,12 @@
     </p>
     <div class="post-entry">
         
-        <h2 id="introdução">Introdução</h2>
-<p>Streamlit é uma biblioteca de código aberto em Python que facilita a criação de aplicativos web interativos e de visualização de dados de forma rápida e simples. É amplamente utilizada por cientistas de dados, analistas e desenvolvedores que desejam transformar seus scripts de Python em aplicações web interativas sem a necessidade de conhecimentos avançados em desenvolvimento web.</p>
+        <p>Streamlit é uma biblioteca de código aberto em Python que facilita a criação de aplicativos web interativos e de visualização de dados de forma rápida e simples. É amplamente utilizada por cientistas de dados, analistas e desenvolvedores que desejam transformar seus scripts de Python em aplicações web interativas sem a necessidade de conhecimentos avançados em desenvolvimento web.</p>
 <p>As principais características do Streamlit são:</p>
 <ul>
 <li>
 <p>Facilidade de Uso: Permite criar interfaces de usuário com poucas linhas de código, utilizando uma sintaxe intuitiva e fácil de aprender.</p>
-        <a href="http://localhost:1313/post/2024-01-01-streamlit/" class="post-read-more">[Read More]</a>
+        <a href="http://localhost:1313/post/2024-01-01-streamlit/" class="post-read-more">[Saiba mais]</a>
         
     </div>
 
@@ -633,7 +893,7 @@
         </p>
         
         <p class="credits theme-by text-muted">
-          <a href="https://gohugo.io">Hugo v0.136.5</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          <a href="https://gohugo.io">Hugo v0.136.5</a> alimentada &nbsp;&bull;&nbsp; Tema <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adaptado de <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
           
         </p>
       </div>

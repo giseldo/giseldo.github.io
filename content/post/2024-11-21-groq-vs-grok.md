@@ -1,8 +1,11 @@
 ---
-title: 'Groq vs Grok'
-date: '2024-11-21'
+title: "Groq vs Grok"
+subtitle: "Qual a diferença entre o Groq e o Grok?"
+author: "Giseldo Neo"
+date: "2024-11-21"
 draft: false
 tags: ["Large Language Models"]
+bigimg: [{src: "/images/blog/groq.jpg", desc: "Groq"}]
 ---
 
 Groq e Grok são duas coisas distintas, desenvolvidas por empresas diferentes, com características e finalidades específicas:

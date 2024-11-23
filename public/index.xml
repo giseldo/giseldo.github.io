@@ -5,45 +5,87 @@
     <link>http://localhost:1313/</link>
     <description>Recent content on Inteligência Artificial Descomplicada</description>
     <generator>Hugo</generator>
-    <language>en</language>
+    <language>br</language>
     <managingEditor>giseldo@gmail.com (Giseldo Neo)</managingEditor>
     <webMaster>giseldo@gmail.com (Giseldo Neo)</webMaster>
-    <lastBuildDate>Wed, 01 May 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 22 Nov 2024 18:46:49 -0400</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Livros</title>
       <link>http://localhost:1313/page/livros/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>giseldo@gmail.com (Giseldo Neo)</author>
       <guid>http://localhost:1313/page/livros/</guid>
-      <description>&lt;h2 id=&#34;regressão-de-linear-com-aprendizagem-de-máquina-com-python&#34;&gt;Regressão de Linear com Aprendizagem de Máquina com Python&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.amazon.com.br/gp/product/B0DCT4M7GH&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Adquirir e-pub na Amazon&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://loja.uiclap.com/titulo/ua63343/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Adquirir livro físico na UICLAP&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://giseldo.github.io/livroregressaolinear/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Versão on-line - desatualizada&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;div class=&#34;splitbox&#34;&gt;&lt;div class=&#34;left&#34;&gt;&#xD;&#xA;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/livro/regressao.png&#34; alt=&#34;Regressão Linear&#34;&gt;&lt;/p&gt;&#xA;&lt;/div&gt;&lt;div class=&#34;right&#34;&gt;&#xD;&#xA;&#xA;&lt;p&gt;Este livro fornece uma visão inicial e objetiva sobre a teoria e&#xA;a aplicação prática da regressão linear no contexto do aprendizado de máquina com python.&#xA;Ele é adequado para iniciantes que estão começando sua jornada no aprendizado de máquina&#xA;e da regressão linear, mas que já conhecem o básico da linguagem python.&#xA;Ao longo dos capítulos, apresentamos os conceitos e suposições da regressão até as&#xA;aplicações e diagnósticos de modelos, passando por estudos de caso e o uso de bibliotecas&#xA;de software utilizadas como Python e Scikit-learn. Os exercícios ao&#xA;final de cada capítulo são elaborados para reforçar este aprendizado.&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;regressão-de-linear-com-aprendizagem-de-máquina-com-python&#34;&gt;Regressão de Linear com Aprendizagem de Máquina com Python&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.amazon.com.br/gp/product/B0DCT4M7GH&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Adquirir e-pub na Amazon&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://loja.uiclap.com/titulo/ua63343/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Adquirir livro físico na UICLAP&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;div class=&#34;splitbox&#34;&gt;&lt;div class=&#34;left&#34;&gt;&#xD;&#xA;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/livro/regressao.png&#34; alt=&#34;Regressão Linear&#34;&gt;&lt;/p&gt;&#xA;&lt;/div&gt;&lt;div class=&#34;right&#34;&gt;&#xD;&#xA;&#xA;&lt;p&gt;Este livro fornece uma visão inicial e objetiva sobre a teoria e&#xA;a aplicação prática da regressão linear no contexto do aprendizado de máquina com python.&#xA;Ele é adequado para iniciantes que estão começando sua jornada no aprendizado de máquina&#xA;e da regressão linear, mas que já conhecem o básico da linguagem python.&#xA;Ao longo dos capítulos, apresentamos os conceitos e suposições da regressão até as&#xA;aplicações e diagnósticos de modelos, passando por estudos de caso e o uso de bibliotecas&#xA;de software utilizadas como Python e Scikit-learn. Os exercícios ao&#xA;final de cada capítulo são elaborados para reforçar este aprendizado.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Pesquisas</title>
+      <title>Pesquisas Acadêmicas</title>
       <link>http://localhost:1313/page/pesquisas/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>giseldo@gmail.com (Giseldo Neo)</author>
       <guid>http://localhost:1313/page/pesquisas/</guid>
-      <description>&lt;h2 id=&#34;introdução&#34;&gt;Introdução&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://sites.google.com/view/grupogci&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Site&lt;/a&gt; do Grupo de Pesquisa em Gestão do Conhecimento e da Inovação pesquisa (GCI)&lt;/p&gt;&#xA;&lt;h2 id=&#34;áreas-de-interesse&#34;&gt;Áreas de Interesse&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Inteligência Artificial&lt;/li&gt;&#xA;&lt;li&gt;Aprendizagem de máquina&lt;/li&gt;&#xA;&lt;li&gt;Processamento de linguagem natural&lt;/li&gt;&#xA;&lt;li&gt;Engenharia de Software&lt;/li&gt;&#xA;&lt;li&gt;Informática para educação&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;artigos-publicados&#34;&gt;Artigos Publicados&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;User Story Tutor&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;NeoAVA&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;slides-palestras&#34;&gt;Slides Palestras&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Slide 1&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Slide 2&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+      <description>&lt;h2 id=&#34;introdução&#34;&gt;Introdução&lt;/h2&gt;&#xA;&lt;p&gt;Nosso grupo de pesquisa é o GCI - Grupo de Pesquisa em Gestão do Conhecimento e da Inovação pesquisa. Acesse o &lt;a href=&#34;https://sites.google.com/view/grupogci&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;site&lt;/a&gt; instituicional do grupo  para mais informações dos participantes e dos artigos públicados pelo grupo.&lt;/p&gt;&#xA;&lt;h2 id=&#34;áreas-de-interesse&#34;&gt;Áreas de Interesse&lt;/h2&gt;&#xA;&lt;p&gt;Nossas áreas de interesse e pesquisa são:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Inteligência Artificial&lt;/li&gt;&#xA;&lt;li&gt;Aprendizagem de máquina&lt;/li&gt;&#xA;&lt;li&gt;Processamento de linguagem natural&lt;/li&gt;&#xA;&lt;li&gt;Chatbots&lt;/li&gt;&#xA;&lt;li&gt;Engenharia de Software&lt;/li&gt;&#xA;&lt;li&gt;Informática para educação&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;materiais-relacionados-a-alguns-dos-nossos-artigos-publicados&#34;&gt;Materiais relacionados a alguns dos nossos Artigos Publicados&lt;/h2&gt;&#xA;&lt;p&gt;Esta seção indexa, alguns materiais relacionados a alguns artigos publicados.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Produtos</title>
+      <link>http://localhost:1313/page/produtos/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>giseldo@gmail.com (Giseldo Neo)</author>
+      <guid>http://localhost:1313/page/produtos/</guid>
+      <description>&lt;h2 id=&#34;neoust---user-story-tutor&#34;&gt;NeoUST - User Story Tutor&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://huggingface.co/spaces/giseldo/userstory&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;User Story Tutor - Previsão e melhoria de User Stories&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;neoava---um-ambiente-virtual-de-aprendizagem-com-foco-em-recomendação&#34;&gt;NeoAVA - Um Ambiente Virtual de Aprendizagem com foco em recomendação&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://autorregulacao.streamlit.app/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;NeoAVA - Um Ambiente Virtual de Aprendizagem com Autorregulação&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;neose---neo-sistema-especialista&#34;&gt;NeoSE - Neo Sistema Especialista&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://giseldo-neo-sistema-especialista.hf.space&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;NeoSE - Um Sistema Especialista com encadeamento para trás, simples, baseado no Expert Sinta&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;ferramentas-acadêmicas-para-escrita-de-texto&#34;&gt;Ferramentas acadêmicas para escrita de texto&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://giseldo-neochatbotoneshot.hf.space&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Cria um parágrafo com citação ABNT&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;neochatbots---chatbots-diversos&#34;&gt;NeoChatbots - Chatbots Diversos&lt;/h2&gt;&#xA;&lt;h3 id=&#34;chatbot-1httpsgiseldo-simple-chatbothfspace&#34;&gt;&lt;a href=&#34;https://giseldo-simple-chatbot.hf.space&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;chatbot 1&lt;/a&gt;&lt;/h3&gt;&#xA;&lt;p&gt;Modelo : HuggingFaceH4/zephyr-7b-beta | Gradio&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Podcast</title>
+      <link>http://localhost:1313/page/podcast/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>giseldo@gmail.com (Giseldo Neo)</author>
+      <guid>http://localhost:1313/page/podcast/</guid>
+      <description>&lt;h2 id=&#34;gci-podcast&#34;&gt;GCI Podcast&lt;/h2&gt;&#xA;&lt;p&gt;No nosso podcast no spotify discutimos os principais achados e contribuições de nossas pesquisas. Queremos democratizar a ciência. Utilizamos uma linguagem acessível e explicamos nossas pesquisas.&#xA;&lt;a href=&#34;https://open.spotify.com/show/5OpCsJixh1o4gjSi5srRdS&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Link do GCI Research Pocast no Spotify&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Sobre</title>
       <link>http://localhost:1313/page/sobre/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>giseldo@gmail.com (Giseldo Neo)</author>
       <guid>http://localhost:1313/page/sobre/</guid>
-      <description>&lt;h2 id=&#34;equipe&#34;&gt;Equipe&lt;/h2&gt;&#xA;&lt;p&gt;Giseldo Neo e Alana Neo&lt;/p&gt;&#xA;&lt;h2 id=&#34;giseldo-neo&#34;&gt;Giseldo Neo&lt;/h2&gt;&#xA;&lt;p&gt;Giseldo Neo é  pesquisador e Professor de Informática no Instituto Federal de Alagoas (IFAL). Doutorando em Ciência da Computação (UFCG), Mestre em Modelagem Computacional do Conhecimento (UFAL), Mestre em Contabilidade (FUCAPE). Possui MBA em Gestão e Estratégia Empresarial (ESTACIO), Especialização em Arquitetura e Engenharia de Software (ESTÁCIO), MBA em Gestão de Projetos (UNINTER). Graduação em Análise e Desenvolvimento de Sistemas (ESTÁCIO), Graduação em Processos Gerenciais (UNINTER) e Técnico de Informática (IFS).&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;equipe&#34;&gt;Equipe&lt;/h2&gt;&#xA;&lt;p&gt;Este Site e Blog são mantidos por Giseldo Neo e Alana Neo.&lt;/p&gt;&#xA;&lt;h2 id=&#34;giseldo-neo&#34;&gt;Giseldo Neo&lt;/h2&gt;&#xA;&lt;p&gt;E-mail para contato: &lt;a href=&#34;mailto:giseldo@gmail.com&#34;&gt;giseldo@gmail.com&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;div class=&#34;splitbox&#34;&gt;&lt;div class=&#34;left&#34;&gt;&#xD;&#xA;&#xA;&#xD;&#xA;&lt;link rel=&#34;stylesheet&#34; href=&#34;http://localhost:1313/css/hugo-easy-gallery.css&#34; /&gt;&#xD;&#xA;&lt;div class=&#34;box&#34; style=&#34;max-width:50%&#34;&gt;&#xD;&#xA;  &lt;figure  itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;&#xD;&#xA;    &lt;div class=&#34;img&#34;&gt;&#xD;&#xA;      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;http://localhost:1313/images/pages/giseldo.jpg&#34; alt=&#34;/images/pages/giseldo.jpg&#34;/&gt;&#xD;&#xA;    &lt;/div&gt;&#xD;&#xA;    &lt;a href=&#34;http://localhost:1313/images/pages/giseldo.jpg&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;&#xD;&#xA;  &lt;/figure&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xA;&lt;/div&gt;&lt;div class=&#34;right&#34;&gt;&#xD;&#xA;&#xA;Giseldo Neo é  pesquisador e Professor de Informática no Instituto Federal de Alagoas (IFAL). Doutorando em Ciência da Computação (UFCG), Mestre em Modelagem Computacional do Conhecimento (UFAL), Mestre em Contabilidade (FUCAPE). Possui MBA em Gestão e Estratégia Empresarial (ESTACIO), Especialização em Arquitetura e Engenharia de Software (ESTÁCIO), MBA em Gestão de Projetos (UNINTER). Graduação em Análise e Desenvolvimento de Sistemas (ESTÁCIO), Graduação em Processos Gerenciais (UNINTER) e Técnico de Informática (IFS).&#xA;&lt;/div&gt;&lt;div style=&#34;clear:both&#34;&gt;&lt;/div&gt;&lt;/div&gt;&#xD;&#xA;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>LlM shell</title>
+      <link>http://localhost:1313/post/2024-11-22-llmshell/</link>
+      <pubDate>Fri, 22 Nov 2024 18:46:49 -0400</pubDate><author>giseldo@gmail.com (Giseldo Neo)</author>
+      <guid>http://localhost:1313/post/2024-11-22-llmshell/</guid>
+      <description>&lt;p&gt;Existem softwares específicos para utilizar modelos de LLM Locais, ou mesmo acessar vários modelos de LLM on-line mas por uma única interface.&lt;/p&gt;&#xA;&lt;p&gt;Entre eles o GPT4ALL, o JEN, o LLMStudio e o exclente Msty.&lt;/p&gt;&#xA;&lt;h2 id=&#34;gpt4all&#34;&gt;GPT4ALL&lt;/h2&gt;&#xA;&lt;p&gt;GPT4All é uma plataforma que permite que você execute Modelos de Linguagem Grande (LLMs) em hardware de consumo, incluindo CPUs e GPUs [1]. Esta plataforma é compatível com Mac M Series chips, AMD e NVIDIA GPUs, tornando-a acessível para muitos [1]. Além disso, é possível operar o GPT4All em desktops e laptops comuns, sem a necessidade de chamadas de API ou GPUs [3].&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>IA Notícias 23/11/2024</title>
+      <link>http://localhost:1313/post/2024-11-23-ia-not%C3%ADcias/</link>
+      <pubDate>Fri, 22 Nov 2024 00:00:00 +0000</pubDate><author>giseldo@gmail.com (Giseldo Neo)</author>
+      <guid>http://localhost:1313/post/2024-11-23-ia-not%C3%ADcias/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Amazon Dobra Investimento na Startup de IA Anthropic&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;A Amazon ampliou seu investimento na startup de inteligência artificial Anthropic, adicionando mais US$ 4 bilhões. Com isso, a Amazon mantém sua posição como investidora minoritária e principal parceira de treinamento da Anthropic, que desenvolve o chatbot Claude. Este movimento intensifica a competição da Amazon com Microsoft e Google no fornecimento de ferramentas baseadas em IA na computação em nuvem. &lt;a href=&#34;https://www.reuters.com/pt/tecnologia/B2IQQ3ABXVONBLLAQV3YWONK6I-2024-11-22/?utm_source=chatgpt.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Link&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Perplexity AI Introduz Recursos de Compras&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Groq vs Grok</title>
+      <link>http://localhost:1313/post/2024-11-21-groq-vs-grok/</link>
+      <pubDate>Thu, 21 Nov 2024 00:00:00 +0000</pubDate><author>giseldo@gmail.com (Giseldo Neo)</author>
+      <guid>http://localhost:1313/post/2024-11-21-groq-vs-grok/</guid>
+      <description>&lt;p&gt;Groq e Grok são duas coisas distintas, desenvolvidas por empresas diferentes, com características e finalidades específicas:&lt;/p&gt;&#xA;&lt;p&gt;Geralmente quando nos referimos ao &lt;a href=&#34;https://groq.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Groq&lt;/a&gt; (com Q), estamos nos referindo a uma fornecedora de infraestrutura para inferência em modelos de LLM diversos.&#xA;Esta empresa vende um serviço de inferência mais rápida do que seus concorrentes para modelos disponíveis abertamente, como Llama 3.1 da Meta, o Gemma do Google, ou o Mixtral&#xA;Já &lt;a href=&#34;https://x.ai/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Grok&lt;/a&gt; é comumente utilizado em referência ao chatbot da empresa X (twitter).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>CodeGPT Primeiro Contato</title>
+      <link>http://localhost:1313/post/2024-11-19-codegpt/</link>
+      <pubDate>Tue, 19 Nov 2024 00:00:00 +0000</pubDate><author>giseldo@gmail.com (Giseldo Neo)</author>
+      <guid>http://localhost:1313/post/2024-11-19-codegpt/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;CodeGPT revoluciona o desenvolvimento de software com IA avançada&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;O &lt;strong&gt;CodeGPT&lt;/strong&gt; se tornou um dos assistentes de codificação mais populares, integrando-se a IDEs como Visual Studio Code e JetBrains. Desde seu lançamento em março de 2023, acumulou mais de &lt;strong&gt;1,4 milhão de downloads&lt;/strong&gt; e está presente em mais de 180 países, ajudando desenvolvedores a aumentar sua produtividade em &lt;strong&gt;30%&lt;/strong&gt; ou mais.&lt;/p&gt;&#xA;&lt;p&gt;A integração com o modelo de linguagem &lt;strong&gt;Llama&lt;/strong&gt;, da Meta, foi um divisor de águas para a plataforma. Com a adoção do Llama 3.2 (90B), o CodeGPT evoluiu de gerador de código para uma solução completa de assistência, capaz de:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Nemotron LLM 70B Um primeiro contato</title>
       <link>http://localhost:1313/post/2024-05-01-nemotron/</link>
       <pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate><author>giseldo@gmail.com (Giseldo Neo)</author>
       <guid>http://localhost:1313/post/2024-05-01-nemotron/</guid>
-      <description>&lt;h1 id=&#34;introdução&#34;&gt;Introdução&lt;/h1&gt;&#xA;&lt;p&gt;Em julho de 2024, a Meta lançou um modelo de linguagem (LLM) open-source, o &lt;em&gt;Llama-3.1-70B&lt;/em&gt;. Um pouco depois, em setembro a empresa NVIDIA lançou um derivado deste, o &lt;em&gt;Llama 3.1-Nemotron-51B-Instruct&lt;/em&gt;. E em outubro lançou finalmente um modelo de 70b, o &lt;em&gt;Llama 3.1 nemotron-70b-instruct&lt;/em&gt;.&lt;/p&gt;&#xA;&lt;p&gt;O &lt;em&gt;nemotron-70b&lt;/em&gt; performou melhor, em alguns testes comparativos, do que o GPT-4o. Nos testes, ele liderou em desempenho geral e também se destacou nas categorias chat (&lt;em&gt;chat score&lt;/em&gt;) e raciocínio (&lt;em&gt;reasoning score&lt;/em&gt;). Veja na &lt;strong&gt;Tabela 1&lt;/strong&gt; os dados comparativos com mais detalhes.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Em julho de 2024, a Meta lançou um modelo de linguagem (LLM) open-source, o &lt;em&gt;Llama-3.1-70B&lt;/em&gt;. Um pouco depois, em setembro a empresa NVIDIA lançou um derivado deste, o &lt;em&gt;Llama 3.1-Nemotron-51B-Instruct&lt;/em&gt;. E em outubro lançou finalmente um modelo de 70b, o &lt;em&gt;Llama 3.1 nemotron-70b-instruct&lt;/em&gt;.&lt;/p&gt;&#xA;&lt;p&gt;O &lt;em&gt;nemotron-70b&lt;/em&gt; performou melhor, em alguns testes comparativos, do que o GPT-4o. Nos testes, ele liderou em desempenho geral e também se destacou nas categorias chat (&lt;em&gt;chat score&lt;/em&gt;) e raciocínio (&lt;em&gt;reasoning score&lt;/em&gt;). Veja na &lt;strong&gt;Tabela 1&lt;/strong&gt; os dados comparativos com mais detalhes.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Redes Neurais Primeiro Contato</title>
+      <title>Uma breve introdução sobre redes neurais</title>
       <link>http://localhost:1313/post/2024-04-01-redesneurais/</link>
       <pubDate>Mon, 01 Apr 2024 00:00:00 +0000</pubDate><author>giseldo@gmail.com (Giseldo Neo)</author>
       <guid>http://localhost:1313/post/2024-04-01-redesneurais/</guid>
-      <description>&lt;h2 id=&#34;introdução&#34;&gt;Introdução&lt;/h2&gt;&#xA;&lt;p&gt;As &lt;strong&gt;redes neurais&lt;/strong&gt; são utilizadas em diversas aplicações. De forma resumida elas são compostas por diversos nós interconectados e organizados em camadas. Elas funcionam como um meio de aprendizado a partir da análise de exemplos de treinamento, permitindo a realização de tarefas complexas. Sendo Redes Neurais uma sub-área da aprendizagem de máquina, grande parte dos conceitos de aprendizagem de máquina são equivalentes na aplicação de uma rede neural. Veja na &lt;strong&gt;Figura 1&lt;/strong&gt; um simples esquema dos conceitos.&lt;/p&gt;</description>
+      <description>&lt;p&gt;As &lt;strong&gt;redes neurais&lt;/strong&gt; são utilizadas em diversas aplicações. De forma resumida elas são compostas por diversos nós interconectados e organizados em camadas. Elas funcionam como um meio de aprendizado a partir da análise de exemplos de treinamento, permitindo a realização de tarefas complexas. Sendo Redes Neurais uma sub-área da aprendizagem de máquina, grande parte dos conceitos de aprendizagem de máquina são equivalentes na aplicação de uma rede neural. Veja na &lt;strong&gt;Figura 1&lt;/strong&gt; um simples esquema dos conceitos.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Regressão Linear Primeiro Contato</title>
@@ -57,35 +99,14 @@
       <link>http://localhost:1313/post/2024-02-01-am/</link>
       <pubDate>Thu, 01 Feb 2024 00:00:00 +0000</pubDate><author>giseldo@gmail.com (Giseldo Neo)</author>
       <guid>http://localhost:1313/post/2024-02-01-am/</guid>
-      <description>&lt;h2 id=&#34;introdução&#34;&gt;Introdução&lt;/h2&gt;&#xA;&lt;p&gt;A &lt;strong&gt;aprendizagem de máquina&lt;/strong&gt; (ou &lt;em&gt;machine learning&lt;/em&gt;) é uma subárea da inteligência artificial (IA) que permite que sistemas de computadores aprendam a partir de dados e façam previsões ou tomem decisões sem serem explicitamente programados para isso. Em vez de seguir instruções rígidas, os algoritmos de aprendizagem de máquina analisam grandes volumes de dados, identificam padrões e ajustam seus comportamentos com base nas informações adquiridas.&lt;/p&gt;&#xA;&lt;p&gt;Ela foi motivada pelo desenvolvimento de softwares mais independentes da intervenção humana para extração do conhecimento. Geralmente aplicações de AM utilizam heurísticas (também chamadas de regras do dedão) que buscam por modelos capazes de representar o conhecimento existente nos dados.&lt;/p&gt;</description>
+      <description>&lt;p&gt;A &lt;strong&gt;aprendizagem de máquina&lt;/strong&gt; (ou &lt;em&gt;machine learning&lt;/em&gt;) é uma subárea da inteligência artificial (IA) que permite que sistemas de computadores aprendam a partir de dados e façam previsões ou tomem decisões sem serem explicitamente programados para isso. Em vez de seguir instruções rígidas, os algoritmos de aprendizagem de máquina analisam grandes volumes de dados, identificam padrões e ajustam seus comportamentos com base nas informações adquiridas.&lt;/p&gt;&#xA;&lt;p&gt;Ela foi motivada pelo desenvolvimento de softwares mais independentes da intervenção humana para extração do conhecimento. Geralmente aplicações de AM utilizam heurísticas (também chamadas de regras do dedão) que buscam por modelos capazes de representar o conhecimento existente nos dados.&lt;/p&gt;</description>
     </item>
     <item>
       <title>StreamLit Primeiro Contato</title>
       <link>http://localhost:1313/post/2024-01-01-streamlit/</link>
       <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate><author>giseldo@gmail.com (Giseldo Neo)</author>
       <guid>http://localhost:1313/post/2024-01-01-streamlit/</guid>
-      <description>&lt;h2 id=&#34;introdução&#34;&gt;Introdução&lt;/h2&gt;&#xA;&lt;p&gt;Streamlit é uma biblioteca de código aberto em Python que facilita a criação de aplicativos web interativos e de visualização de dados de forma rápida e simples. É amplamente utilizada por cientistas de dados, analistas e desenvolvedores que desejam transformar seus scripts de Python em aplicações web interativas sem a necessidade de conhecimentos avançados em desenvolvimento web.&lt;/p&gt;&#xA;&lt;p&gt;As principais características do Streamlit são:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Facilidade de Uso: Permite criar interfaces de usuário com poucas linhas de código, utilizando uma sintaxe intuitiva e fácil de aprender.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Chatbot Simples</title>
-      <link>http://localhost:1313/page/produtos/chatbotsimples/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>giseldo@gmail.com (Giseldo Neo)</author>
-      <guid>http://localhost:1313/page/produtos/chatbotsimples/</guid>
-      <description>&lt;script&#xD;&#xA;&#x9;type=&#34;module&#34;&#xD;&#xA;&#x9;src=&#34;https://gradio.s3-us-west-2.amazonaws.com/5.0.1/gradio.js&#34;&#xD;&#xA;&gt;&lt;/script&gt;&#xD;&#xA;&#xD;&#xA;&lt;gradio-app src=&#34;https://giseldo-simple-chatbot.hf.space&#34;&gt;&lt;/gradio-app&gt;</description>
-    </item>
-    <item>
-      <title>Criar Parágrafo</title>
-      <link>http://localhost:1313/page/produtos/criarparagrafo/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>giseldo@gmail.com (Giseldo Neo)</author>
-      <guid>http://localhost:1313/page/produtos/criarparagrafo/</guid>
-      <description>&lt;script&#xD;&#xA;&#x9;type=&#34;module&#34;&#xD;&#xA;&#x9;src=&#34;https://gradio.s3-us-west-2.amazonaws.com/5.0.1/gradio.js&#34;&#xD;&#xA;&gt;&lt;/script&gt;&#xD;&#xA;&#xD;&#xA;&lt;gradio-app src=&#34;https://giseldo-neochatbotoneshot.hf.space&#34;&gt;&lt;/gradio-app&gt;</description>
-    </item>
-    <item>
-      <title>Produtos</title>
-      <link>http://localhost:1313/page/produtos/todos/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>giseldo@gmail.com (Giseldo Neo)</author>
-      <guid>http://localhost:1313/page/produtos/todos/</guid>
-      <description>&lt;h2 id=&#34;um-simples-chatbot&#34;&gt;Um simples chatbot&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://giseldo-simple-chatbot.hf.space&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Um simples chatbot&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;ferramentas-acadêmicas&#34;&gt;Ferramentas acadêmicas&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://giseldo-neochatbotoneshot.hf.space&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Cria um parágrafo com citação ABNT&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Streamlit é uma biblioteca de código aberto em Python que facilita a criação de aplicativos web interativos e de visualização de dados de forma rápida e simples. É amplamente utilizada por cientistas de dados, analistas e desenvolvedores que desejam transformar seus scripts de Python em aplicações web interativas sem a necessidade de conhecimentos avançados em desenvolvimento web.&lt;/p&gt;&#xA;&lt;p&gt;As principais características do Streamlit são:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Facilidade de Uso: Permite criar interfaces de usuário com poucas linhas de código, utilizando uma sintaxe intuitiva e fácil de aprender.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

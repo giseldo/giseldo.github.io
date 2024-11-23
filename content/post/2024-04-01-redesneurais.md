@@ -1,11 +1,11 @@
 ---
-title: Redes Neurais Primeiro Contato
+title: "Redes Neurais Primeiro Contato"
+title: "Uma breve introdução sobre redes neurais"
+author: "Giseldo Neo"
 date: '2024-04-01'
 draft: false
 tags: ["redes neurais", "ia"]
 ---
-
-## Introdução
 
 As **redes neurais** são utilizadas em diversas aplicações. De forma resumida elas são compostas por diversos nós interconectados e organizados em camadas. Elas funcionam como um meio de aprendizado a partir da análise de exemplos de treinamento, permitindo a realização de tarefas complexas. Sendo Redes Neurais uma sub-área da aprendizagem de máquina, grande parte dos conceitos de aprendizagem de máquina são equivalentes na aplicação de uma rede neural. Veja na **Figura 1** um simples esquema dos conceitos.
 

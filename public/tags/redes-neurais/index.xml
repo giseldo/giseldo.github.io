@@ -5,17 +5,17 @@
     <link>http://localhost:1313/tags/redes-neurais/</link>
     <description>Recent content in Redes Neurais on Inteligência Artificial Descomplicada</description>
     <generator>Hugo</generator>
-    <language>en</language>
+    <language>br</language>
     <managingEditor>giseldo@gmail.com (Giseldo Neo)</managingEditor>
     <webMaster>giseldo@gmail.com (Giseldo Neo)</webMaster>
     <lastBuildDate>Mon, 01 Apr 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/redes-neurais/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Redes Neurais Primeiro Contato</title>
+      <title>Uma breve introdução sobre redes neurais</title>
       <link>http://localhost:1313/post/2024-04-01-redesneurais/</link>
       <pubDate>Mon, 01 Apr 2024 00:00:00 +0000</pubDate><author>giseldo@gmail.com (Giseldo Neo)</author>
       <guid>http://localhost:1313/post/2024-04-01-redesneurais/</guid>
-      <description>&lt;h2 id=&#34;introdução&#34;&gt;Introdução&lt;/h2&gt;&#xA;&lt;p&gt;As &lt;strong&gt;redes neurais&lt;/strong&gt; são utilizadas em diversas aplicações. De forma resumida elas são compostas por diversos nós interconectados e organizados em camadas. Elas funcionam como um meio de aprendizado a partir da análise de exemplos de treinamento, permitindo a realização de tarefas complexas. Sendo Redes Neurais uma sub-área da aprendizagem de máquina, grande parte dos conceitos de aprendizagem de máquina são equivalentes na aplicação de uma rede neural. Veja na &lt;strong&gt;Figura 1&lt;/strong&gt; um simples esquema dos conceitos.&lt;/p&gt;</description>
+      <description>&lt;p&gt;As &lt;strong&gt;redes neurais&lt;/strong&gt; são utilizadas em diversas aplicações. De forma resumida elas são compostas por diversos nós interconectados e organizados em camadas. Elas funcionam como um meio de aprendizado a partir da análise de exemplos de treinamento, permitindo a realização de tarefas complexas. Sendo Redes Neurais uma sub-área da aprendizagem de máquina, grande parte dos conceitos de aprendizagem de máquina são equivalentes na aplicação de uma rede neural. Veja na &lt;strong&gt;Figura 1&lt;/strong&gt; um simples esquema dos conceitos.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
