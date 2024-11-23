@@ -68,9 +68,9 @@ Durante o treinamento, os **pesos** e as **biases** são inicialmente configurad
 
 * 2020 - Transformers e Aprendizado de Linguagem: O modelo Transformer, introduzido em 2017 por Vaswani e outros, revolucionou o processamento de linguagem natural, culminando no desenvolvimento de modelos como o GPT, BERT, entre outros, que são amplamente utilizados para tarefas de geração e compreensão de texto.
 
-Por hoje é isso. Nos vemos no próximo post.
+Curtiu? Deixei um comentário. Até o próximo post.
 
-## Fontes consultadas
+**Referências**
 
-[Ai but simple Issue #1](https://www.aibutsimple.com/p/neural-networks-explained)
+-[Ai but simple Issue #1](https://www.aibutsimple.com/p/neural-networks-explained)
 

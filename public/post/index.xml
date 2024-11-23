@@ -15,7 +15,7 @@
       <link>http://localhost:1313/post/2024-11-22-llmshell/</link>
       <pubDate>Fri, 22 Nov 2024 18:46:49 -0400</pubDate><author>giseldo@gmail.com (Giseldo Neo)</author>
       <guid>http://localhost:1313/post/2024-11-22-llmshell/</guid>
-      <description>&lt;p&gt;Existem softwares específicos para utilizar modelos de LLM Locais, ou mesmo acessar vários modelos de LLM on-line mas por uma única interface.&lt;/p&gt;&#xA;&lt;p&gt;Entre eles o GPT4ALL, o JEN, o LLMStudio e o exclente Msty.&lt;/p&gt;&#xA;&lt;h2 id=&#34;gpt4all&#34;&gt;GPT4ALL&lt;/h2&gt;&#xA;&lt;p&gt;GPT4All é uma plataforma que permite que você execute Modelos de Linguagem Grande (LLMs) em hardware de consumo, incluindo CPUs e GPUs [1]. Esta plataforma é compatível com Mac M Series chips, AMD e NVIDIA GPUs, tornando-a acessível para muitos [1]. Além disso, é possível operar o GPT4All em desktops e laptops comuns, sem a necessidade de chamadas de API ou GPUs [3].&lt;/p&gt;</description>
+      <description>&lt;p&gt;Existem softwares específicos para utilizar modelos de LLM Locais, ou mesmo acessar vários modelos de LLM on-line mas por uma única interface.&lt;/p&gt;&#xA;&lt;p&gt;Entre eles o GPT4ALL, o JEN, o LLMStudio e o exclente Msty.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;GPT4ALL&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;GPT4All é uma plataforma que permite que você execute Modelos de Linguagem Grande (LLMs) em hardware de consumo, incluindo CPUs e GPUs [1]. Esta plataforma é compatível com Mac M Series chips, AMD e NVIDIA GPUs, tornando-a acessível para muitos [1]. Além disso, é possível operar o GPT4All em desktops e laptops comuns, sem a necessidade de chamadas de API ou GPUs [3].&lt;/p&gt;</description>
     </item>
     <item>
       <title>IA Notícias 23/11/2024</title>

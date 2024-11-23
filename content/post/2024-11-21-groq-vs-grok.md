@@ -8,15 +8,17 @@ tags: ["Large Language Models"]
 bigimg: [{src: "/images/blog/groq.jpg", desc: "Groq"}]
 ---
 
-Groq e Grok são duas coisas distintas, desenvolvidas por empresas diferentes, com características e finalidades específicas:
+Groq e Grok são coisas distintas e desenvolvidas por empresas diferentes, com características e finalidades específicas.
 
 Geralmente quando nos referimos ao [Groq](https://groq.com/) (com Q), estamos nos referindo a uma fornecedora de infraestrutura para inferência em modelos de LLM diversos. 
-Esta empresa vende um serviço de inferência mais rápida do que seus concorrentes para modelos disponíveis abertamente, como Llama 3.1 da Meta, o Gemma do Google, ou o Mixtral
-Já [Grok](https://x.ai/) é comumente utilizado em referência ao chatbot da empresa X (twitter). 
+Esta empresa vende um serviço de inferência mais rápida do que seus concorrentes para modelos disponíveis abertamente, como [Llama](https://www.llama.com/) da Meta, o [Gemma](https://ai.google.dev/gemma) do Google, ou o [Mixtral](https://mistral.ai/) da Mixtral AI.
+Já o [Grok](https://x.ai/) é comumente utilizado em referência ao chatbot da empresa X (twitter). 
 
-É muito comum que a desenvolvedora de um modelo de LLM, forneca uma interface para o usuário conversar com o seu modelo em forma de um chatbot,  
-e também fornecer uma API, ou playground, para quem deseja integrar a solução em suas aplicações. 
-Assim é o [ChatGPT](https://chatgpt.com/), da empresa OpenAI. A empresa cobra 100 R$ para disponibilizar para os assinatnes acesso completo aos recursos do seu chatbot, inclusive o recurso de SearchGPT, uma busca na web com o ChatGPT. Já para  para a API/playground da OpenAI a modalidade de cobrança é pague-pelo-uso. Veja na **Figura 1** uma imagem do chatbot da OpenAI e na **Figura 2** o playground da OpenAI. 
+Geralmente, a desenvolvedora de um modelo LLM fornece uma interface para o usuário conversar com o seu modelo em forma de chatbot e também fornece uma API para quem deseja integrar a solução em suas aplicações. 
+Assim é o [ChatGPT](https://chatgpt.com/), da empresa OpenAI. 
+OpenAI cobra 100 R$ para disponibilizar aos assinantes acesso completo aos recursos do seu chatbot, inclusive o recurso de SearchGPT, uma busca na web com o ChatGPT. 
+Já para para a API da OpenAI a modalidade de cobrança é pague-pelo-uso. 
+Veja na **Figura 1** uma imagem do chatbot da OpenAI e na **Figura 2** o playground da OpenAI. 
 
 {{< columns >}}
 **Figura 1** - Chatbot da OpenAI
@@ -28,7 +30,9 @@ Fonte: o autor
 Fonte: o Autor
 {{< endcolumns >}}
 
-o Groq  usa  uma versão do LLama da Meta em seu [Chatbot Groq](https://groq.com/#), porém sua estrutura é mais focada na [API/playground Groq](https://console.groq.com/playground) que funciona no formato pague-pelo-uso. o Chatbot Groq também consome os mesmos créditos pague-pelo-uso, não tendo uma assinatura aparte, como no caso do chatbot do ChatGPT. Veja na **Figura 3** o chatbot do Groq e na **Figura 4** o Playground do Groq. Note que no chatbot do Groq não exite o recurso de histórico como no ChatGPT.
+o Groq (com Q) usa  uma versão do LLama da Meta em seu [Chatbot Groq](https://groq.com/#), porém  seu foco é a [API/playground Groq](https://console.groq.com/playground) que funciona no formato pague-pelo-uso. 
+o Chatbot Groq também consome os mesmos créditos pague-pelo-uso, não tendo uma assinatura aparte, como no caso do chatbot do ChatGPT. 
+Veja na **Figura 3** o Chatbot do Groq e na **Figura 4** o Playground do Groq. Note que no Chatbot do Groq não exite o recurso de histórico como no ChatGPT.
 
 {{< columns >}}
 **Figura 3** - Chatbot do Groq
@@ -40,7 +44,10 @@ Fonte: o Autor
 Fonte: o Autor
 {{< endcolumns >}}
 
-O Grok (com K) chatbot está disponível para quem tem o acesso premium do twitter, enquanto que a [API Grok](https://console.x.ai/)) pode ser acessada na forma pague-pelo-uso, inclusive o Grok está oferecendo este ano 25 R$ para quem deseja testar o serviço, ou seja, é possível utilizar a API do Grok sem desembolsar nada neste momento. Porém o Grok não tem um playGround avançado, logo,  para usar a API do Grok é necessário utilizar uma ferramenta ou código externo, por exemplo: LLM Studio (https://lmstudio.ai/), JAM, ou GPT4ALL. Veja na **Figura 5** o chatbot do Grok  na **Figura 6** o Playground do Grok.
+O Grok (com K) Chatbot está disponível para quem tem o acesso premium do twitter, enquanto que a [API Grok](https://console.x.ai/)) pode ser acessada na forma pague-pelo-uso. 
+Inclusive o Grok está oferecendo este ano 25 R$ para quem deseja testar o serviço, ou seja, é possível utilizar a API do Grok sem desembolsar nada neste momento. 
+Porém o Grok não tem um playGround avançado, logo, para usar a API do Grok é necessário utilizar uma ferramenta ou código externo, por exemplo: LLM Studio (https://lmstudio.ai/), JAM, GPT4ALL ou o excelente Msty app. 
+Veja na **Figura 5** o Chatbot do Grok  na **Figura 6** o Playground do Grok.
 
 {{< columns >}}
 **Figura 5** - Chatbot do Grok 
@@ -52,7 +59,7 @@ Fonte: [tweetdelete](https://tweetdelete.net/pt/recursos/grok-ai-xs-latest-artif
 Fonte: o Autor
 {{< endcolumns >}}
 
-## Resumo
+**Resumo**
 
 **Groq**:
 - **Desenvolvedora**: Groq Inc., fundada em 2016.
@@ -61,7 +68,8 @@ Fonte: o Autor
 
 **Grok**:
 - **Desenvolvedora**: xAI, empresa de inteligência artificial fundada por Elon Musk.
-- **Características**: Descrito como um chatbot "bem-humorado", com senso de humor sarcástico e politicamente incorreto, inspirado na série de livros "Guia do Mochileiro das Galáxias". Integra-se diretamente à plataforma X (antigo Twitter), oferecendo respostas atualizadas em tempo real e contextualizadas com os trending topics e posts em alta na rede social. 
+- **Características**: Descrito como um chatbot "bem-humorado", com senso de humor sarcástico e politicamente incorreto, inspirado na série de livros "Guia do Mochileiro das Galáxias". 
+Integra-se diretamente à plataforma X (antigo Twitter), oferecendo respostas atualizadas em tempo real e contextualizadas com os trending topics e posts em alta na rede social. 
 - **Aplicações**: Voltado para interações informais e engajamento de usuários na plataforma X, fornecendo respostas rápidas e contextualizadas com o conteúdo da rede social.
 
 **Principais diferenças**:
@@ -71,9 +79,10 @@ Fonte: o Autor
 
 Apesar das semelhanças nos nomes, Groq e Grok são soluções de IA com propósitos e funcionalidades distintas, atendendo a diferentes necessidades no campo da inteligência artificial. 
 
-Deixe um comentário e até o próximo post.
+Curtiu? Deixei um comentário. Até o próximo post.
 
-Referências
+**Referências**
+
 -  https://groq.com/
 -  https://x.ai/
 -  https://getstream.io/blog/best-local-llm-tools/

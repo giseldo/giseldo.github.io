@@ -21,7 +21,7 @@ As principais características do Streamlit são:
 
 * Desempenho: Otimizado para lidar com grandes volumes de dados e processamento intensivo, mantendo um desempenho adequado para aplicações complexas.
 
-## Exemplos
+**Exemplos**
 
 Um simples exemplo com StreamLit:
 
@@ -70,9 +70,9 @@ Fonte: O Autor (2024)
 
 Em resumo, o Streamlit é uma ferramenta poderosa para criar dashboards e visualizações de dados, permitindo compartilhar análises de forma interativa e acessível. Se você está procurando uma maneira rápida e eficiente de transformar suas análises de dados em aplicativos web, o Streamlit é uma excelente escolha.
 
-Até o próximo post.
+Curtiu? Deixei um comentário. Até o próximo post.
 
-## Fontes consultadas
+Referências
 
-[Streamlit](https://streamlit.io/)
+- [Streamlit](https://streamlit.io/)
 
