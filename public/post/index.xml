@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Inteligência Artificial Descomplicada</title>
+    <title>Posts on Neo IA</title>
     <link>http://localhost:1313/post/</link>
-    <description>Recent content in Posts on Inteligência Artificial Descomplicada</description>
+    <description>Recent content in Posts on Neo IA</description>
     <generator>Hugo</generator>
     <language>br</language>
     <managingEditor>giseldo@gmail.com (Giseldo Neo)</managingEditor>
@@ -15,21 +15,21 @@
       <link>http://localhost:1313/post/2024-11-22-llmshell/</link>
       <pubDate>Fri, 22 Nov 2024 18:46:49 -0400</pubDate><author>giseldo@gmail.com (Giseldo Neo)</author>
       <guid>http://localhost:1313/post/2024-11-22-llmshell/</guid>
-      <description>&lt;p&gt;Existem softwares específicos para utilizar modelos de LLM Locais, ou mesmo acessar vários modelos de LLM on-line mas por uma única interface.&lt;/p&gt;&#xA;&lt;p&gt;Entre eles o GPT4ALL, o JEN, o LLMStudio e o exclente Msty.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;GPT4ALL&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;GPT4All é uma plataforma que permite que você execute Modelos de Linguagem Grande (LLMs) em hardware de consumo, incluindo CPUs e GPUs [1]. Esta plataforma é compatível com Mac M Series chips, AMD e NVIDIA GPUs, tornando-a acessível para muitos [1]. Além disso, é possível operar o GPT4All em desktops e laptops comuns, sem a necessidade de chamadas de API ou GPUs [3].&lt;/p&gt;</description>
+      <description>&lt;p&gt;Existem softwares específicos para utilizar modelos de LLM Locais, ou mesmo acessar vários modelos de LLM on-line mas por uma única interface.&lt;/p&gt;&#xA;&lt;p&gt;Entre eles o GPT4ALL, o JEN, o LLMStudio e o exclente Msty.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;GPT4ALL&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;GPT4All é uma plataforma que permite que você execute Modelos de Linguagem Grande (LLMs) em hardware de consumo, incluindo CPUs e GPUs &lt;a href=&#34;https://www.nomic.ai/gpt4all&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;[1]&lt;/a&gt;. Esta plataforma é compatível com Mac M Series chips, AMD e NVIDIA GPUs, tornando-a acessível para muitos &lt;a href=&#34;https://www.nomic.ai/gpt4all&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;[1]&lt;/a&gt;. Além disso, é possível operar o GPT4All em desktops e laptops comuns, sem a necessidade de chamadas de API ou GPUs &lt;a href=&#34;https://github.com/nomic-ai/gpt4all&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;[3]&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>IA Notícias 23/11/2024</title>
       <link>http://localhost:1313/post/2024-11-23-ia-not%C3%ADcias/</link>
       <pubDate>Fri, 22 Nov 2024 00:00:00 +0000</pubDate><author>giseldo@gmail.com (Giseldo Neo)</author>
       <guid>http://localhost:1313/post/2024-11-23-ia-not%C3%ADcias/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Amazon Dobra Investimento na Startup de IA Anthropic&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;A Amazon ampliou seu investimento na startup de inteligência artificial Anthropic, adicionando mais US$ 4 bilhões. Com isso, a Amazon mantém sua posição como investidora minoritária e principal parceira de treinamento da Anthropic, que desenvolve o chatbot Claude. Este movimento intensifica a competição da Amazon com Microsoft e Google no fornecimento de ferramentas baseadas em IA na computação em nuvem. &lt;a href=&#34;https://www.reuters.com/pt/tecnologia/B2IQQ3ABXVONBLLAQV3YWONK6I-2024-11-22/?utm_source=chatgpt.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Link&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Perplexity AI Introduz Recursos de Compras&lt;/strong&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;strong&gt;Amazon Dobra Investimento na Startup de IA Anthropic&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;A Amazon ampliou seu investimento na startup de inteligência artificial Anthropic, adicionando mais US$ 4 bilhões. Com isso, a Amazon mantém sua posição como investidora minoritária e principal parceira de treinamento da Anthropic, que desenvolve o chatbot Claude. Este movimento intensifica a competição da Amazon com Microsoft e Google no fornecimento de ferramentas baseadas em IA na computação em nuvem. &lt;a href=&#34;https://www.reuters.com/pt/tecnologia/B2IQQ3ABXVONBLLAQV3YWONK6I-2024-11-22/?utm_source=chatgpt.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;[1]&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Perplexity AI Introduz Recursos de Compras&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Groq vs Grok</title>
       <link>http://localhost:1313/post/2024-11-21-groq-vs-grok/</link>
       <pubDate>Thu, 21 Nov 2024 00:00:00 +0000</pubDate><author>giseldo@gmail.com (Giseldo Neo)</author>
       <guid>http://localhost:1313/post/2024-11-21-groq-vs-grok/</guid>
-      <description>&lt;p&gt;Groq e Grok são duas coisas distintas, desenvolvidas por empresas diferentes, com características e finalidades específicas:&lt;/p&gt;&#xA;&lt;p&gt;Geralmente quando nos referimos ao &lt;a href=&#34;https://groq.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Groq&lt;/a&gt; (com Q), estamos nos referindo a uma fornecedora de infraestrutura para inferência em modelos de LLM diversos.&#xA;Esta empresa vende um serviço de inferência mais rápida do que seus concorrentes para modelos disponíveis abertamente, como Llama 3.1 da Meta, o Gemma do Google, ou o Mixtral&#xA;Já &lt;a href=&#34;https://x.ai/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Grok&lt;/a&gt; é comumente utilizado em referência ao chatbot da empresa X (twitter).&lt;/p&gt;</description>
+      <description>&lt;p&gt;Groq e Grok são coisas distintas e desenvolvidas por empresas diferentes, com características e finalidades específicas.&lt;/p&gt;&#xA;&lt;p&gt;Geralmente quando nos referimos ao &lt;a href=&#34;https://groq.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Groq&lt;/a&gt; (com Q), estamos nos referindo a uma fornecedora de infraestrutura para inferência em modelos de LLM diversos.&#xA;Esta empresa vende um serviço de inferência mais rápida do que seus concorrentes para modelos disponíveis abertamente, como &lt;a href=&#34;https://www.llama.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Llama&lt;/a&gt; da Meta, o &lt;a href=&#34;https://ai.google.dev/gemma&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Gemma&lt;/a&gt; do Google, ou o &lt;a href=&#34;https://mistral.ai/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Mixtral&lt;/a&gt; da Mixtral AI.&#xA;Já o &lt;a href=&#34;https://x.ai/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Grok&lt;/a&gt; é comumente utilizado em referência ao chatbot da empresa X (twitter).&lt;/p&gt;</description>
     </item>
     <item>
       <title>CodeGPT Primeiro Contato</title>
@@ -57,7 +57,7 @@
       <link>http://localhost:1313/post/2024-03-01-regressaolinear/</link>
       <pubDate>Fri, 01 Mar 2024 00:00:00 +0000</pubDate><author>giseldo@gmail.com (Giseldo Neo)</author>
       <guid>http://localhost:1313/post/2024-03-01-regressaolinear/</guid>
-      <description>&lt;h2 id=&#34;introdução&#34;&gt;Introdução&lt;/h2&gt;&#xA;&lt;p&gt;A Regressão linear é um método estatístico utilizado para avaliar a relação causal e quantitativa entre duas variáveis, chamada de variável dependente e variável independente, respectivamente. O modelo de regressão linear tem a seguinte forma: y = a + bx + e, onde y é a variável dependente, x é a variável independente, a é o intercepto, b é a reta inclinada e e é o erro. Com a regressão podemos encontrar um modelo matemático que melhor descreva a relação entre as variáveis (x) e (y).&lt;/p&gt;</description>
+      <description>&lt;p&gt;A Regressão linear é um método estatístico utilizado para avaliar a relação causal e quantitativa entre duas variáveis, chamada de variável dependente e variável independente, respectivamente. O modelo de regressão linear tem a seguinte forma: y = a + bx + e, onde y é a variável dependente, x é a variável independente, a é o intercepto, b é a reta inclinada e e é o erro. Com a regressão podemos encontrar um modelo matemático que melhor descreva a relação entre as variáveis (x) e (y).&lt;/p&gt;</description>
     </item>
     <item>
       <title>Aprendizagem de Máquina Um Primeiro Contato</title>

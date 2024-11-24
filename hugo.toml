@@ -1,6 +1,6 @@
 baseurl = "https://giseldo.github.io"
 DefaultContentLanguage = "br"
-title = "Inteligência Artificial Descomplicada"
+title = "Neo IA"
 theme = "beautifulhugo"
 pygmentsStyle = "trac"
 pygmentsUseClasses = true
@@ -14,9 +14,11 @@ pygmentsCodefencesGuessSyntax = true
     Shortname = "giseldo"
     shortname = "giseldo"
   [Services.googleAnalytics]
-    # id = "XXX"
+    id = "G-GFJR491N4J"
 
 [Params]
+  homeTitle = "Neo IA Blog" 
+  subtitle = "Um blog com informações técnicas sobre IA e AM"
   mainSections = ["post","posts"]
   logo = "img/avatar-icon.png" # Expecting square dimensions
   favicon = "img/favicon.ico"
