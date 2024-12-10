@@ -2,10 +2,6 @@
 
 # Inteligência artificial descomplicada
 
-Este repositório é o código-fonte do Blog "Inteligência artificial descomplicada"
+Este repositório é o código-fonte do Site "Neo IA"
 
 Autor: Giseldo Neo
-
-Caso queira realizar uma postagem entre em contato: giseldo@gmail.com
-
-
