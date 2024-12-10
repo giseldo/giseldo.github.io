@@ -13,76 +13,15 @@
     <loc>http://localhost:1313/page/sobre/</loc>
   </url><url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2024-11-22T18:46:49-04:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/large-language-models/</loc>
-    <lastmod>2024-11-22T18:46:49-04:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/post/2024-11-22-llmshell/</loc>
-    <lastmod>2024-11-22T18:46:49-04:00</lastmod>
+    <lastmod>2017-03-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/post/</loc>
-    <lastmod>2024-11-22T18:46:49-04:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2024-11-22T18:46:49-04:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/post/2024-11-23-ia-not%C3%ADcias/</loc>
-    <lastmod>2024-11-22T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/intlig%C3%AAncia-artificial/</loc>
-    <lastmod>2024-11-22T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/post/2024-11-21-groq-vs-grok/</loc>
-    <lastmod>2024-11-21T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/post/2024-11-19-codegpt/</loc>
-    <lastmod>2024-11-19T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/meta/</loc>
-    <lastmod>2024-11-19T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/python/</loc>
-    <lastmod>2024-11-19T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/ia/</loc>
-    <lastmod>2024-05-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/llm/</loc>
-    <lastmod>2024-05-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/post/2024-05-01-nemotron/</loc>
-    <lastmod>2024-05-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/redes-neurais/</loc>
-    <lastmod>2024-04-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/post/2024-04-01-redesneurais/</loc>
-    <lastmod>2024-04-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/aprendizagem-de-m%C3%A1quina/</loc>
-    <lastmod>2024-03-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/regress%C3%A3o-linear/</loc>
-    <lastmod>2024-03-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/post/2024-03-01-regressaolinear/</loc>
-    <lastmod>2024-03-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/post/2024-02-01-am/</loc>
-    <lastmod>2024-02-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/streamlit/</loc>
-    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/post/2024-01-01-streamlit/</loc>
-    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/web/</loc>
-    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
+    <lastmod>2017-03-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
   </url><url>
     <loc>http://localhost:1313/page/</loc>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
   </url>
 </urlset>

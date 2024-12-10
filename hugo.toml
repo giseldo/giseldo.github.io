@@ -17,9 +17,9 @@ pygmentsCodefencesGuessSyntax = true
     id = "G-GFJR491N4J"
 
 [Params]
-  homeTitle = "Neo IA Blog" 
-  subtitle = "Um blog com informações técnicas sobre IA e AM"
-  mainSections = ["post","posts"]
+  homeTitle = "Neo IA" 
+  subtitle = "Inteligência artificial com Giseldo Neo"
+  # mainSections = ["post","posts"]
   logo = "img/avatar-icon.png" # Expecting square dimensions
   favicon = "img/favicon.ico"
   dateFormat = "January 2, 2006"
@@ -85,7 +85,12 @@ pygmentsCodefencesGuessSyntax = true
 
 [[menu.main]]
     name = "Blog"
-    url = ""
+    url = "http://giseldo.github.io/blog/"
+    weight = 1
+
+[[menu.main]]
+    name = "Cursos"
+    url = "http://giseldo.github.io/cursos/"
     weight = 1
 
 #[[menu.main]]
