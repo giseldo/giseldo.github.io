@@ -32,6 +32,14 @@ Calendário de eventos científicos em ciência da computação
 
 ---
 
+## Chatbot Eliza 
+Um chatbot baseado no chatbot Eliza de 1966
+
+- [Versão do Eliza com casamento de padrão](https://giseldo-eliza-raiz.hf.space)
+- [Versão do Eliza com LLM](https://huggingface.co/spaces/giseldo/eliza_llm)
+  
+---
+
 ## NeoUST - User Story Tutor
 Um software para Previsão e melhoria de User Stories
 
