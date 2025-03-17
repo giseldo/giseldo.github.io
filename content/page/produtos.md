@@ -11,10 +11,14 @@ Um chatbot que conversa sobre o manual do aluno e outro sobre o regimento do IFA
 
 [Chatbot IFAL](https://giseldo.github.io/ifal/)
 
+--
+
 ## NeoStudy - Um Gerador de Plano de estudo com IA
 Um gerador de plano de estudo personalizado com inteligência artificial
 
 [Study Plan](https://giseldo.github.io/study/)
+
+--
 
 ## NeoCalendar - Calendário de eventos científicos
 Calendário de eventos científicos em ciência da computação
