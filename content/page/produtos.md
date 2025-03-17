@@ -6,7 +6,7 @@ weight: 4
 draft: false
 ---
 
-## NeoChatbots
+## NeoChatbots - Chatbots com RAG
 - Um chatbot que conversa sobre o manual do aluno do IFAL
 - Um chatbot que conversa sobre o regimento do IFAL
 
