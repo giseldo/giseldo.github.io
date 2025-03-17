@@ -1,5 +1,5 @@
 ---
-title: 'Pesquisas Acadêmicas'
+title: 'Pesquisas'
 menus: 'main'
 draft: false
 comments: false
@@ -8,7 +8,7 @@ weight: 3
 
 ## Introdução
 
-Nosso grupo de pesquisa é o GCI - Grupo de Pesquisa em Gestão do Conhecimento e da Inovação pesquisa. Acesse o [site](https://sites.google.com/view/grupogci) instituicional do grupo  para mais informações dos participantes e dos artigos públicados pelo grupo.
+Nosso grupo de pesquisa é o [GCI - Grupo de Pesquisa em Gestão do Conhecimento e da Inovação pesquisa]((https://sites.google.com/view/grupogci). Acesse o [site](https://sites.google.com/view/grupogci) instituicional do grupo  para mais informações dos participantes e dos artigos públicados pelo grupo.
 
 ## Áreas de Interesse
 
