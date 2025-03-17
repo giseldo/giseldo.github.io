@@ -6,9 +6,9 @@ weight: 4
 draft: false
 ---
 
-## NeoChat - Dois Chatbots (com RAG)
+## NeoChatbots
 - Um chatbot que conversa sobre o manual do aluno do IFAL
-- Outro chatbot que conversa sobre o regimento do IFAL
+- Um chatbot que conversa sobre o regimento do IFAL
 
 [Chatbot RAG](https://giseldo.github.io/ifal/)
 
