@@ -6,6 +6,15 @@ weight: 4
 draft: false
 ---
 
+## Chatbot para o IFAL
+[Chatbot IFAL](https://giseldo.github.io/ifal/)
+
+## Gerador de Plano de estudo
+[Study Plan](https://giseldo.github.io/study/)
+
+## CAlendário de eventos
+[Calendário de eventos](https://giseldo-eventos.hf.space)
+
 ## NeoUST - User Story Tutor
 [User Story Tutor - Previsão e melhoria de User Stories](https://huggingface.co/spaces/giseldo/userstory) 
 
@@ -17,19 +26,3 @@ draft: false
 
 ## Ferramentas acadêmicas para escrita de texto
 [Cria um parágrafo com citação ABNT](https://giseldo-neochatbotoneshot.hf.space)
-
-## NeoChatbots - Chatbots Diversos
-
-### [chatbot 1](https://giseldo-simple-chatbot.hf.space)
-Modelo : HuggingFaceH4/zephyr-7b-beta | Gradio
-
-### [chatbot 2](https://giseldo-chattj.hf.space)
-Modelo : LLama 3.1 70B | StreamLit
-
-### [chatbot 3](https://giseldo-chattj.hf.space)
-Modelo : llama-3.1-8b-instant | Gradio | LangChain
-
-      
-
-
-
