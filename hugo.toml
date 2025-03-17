@@ -85,7 +85,7 @@ pygmentsCodefencesGuessSyntax = true
 
 [[menu.main]]
     name = "Blog"
-    url = "http://giseldo.github.io/blog/"
+    url = "http://giseldo.hashnode.dev/"
     weight = 1
 
 [[menu.main]]
