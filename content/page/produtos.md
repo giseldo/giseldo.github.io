@@ -21,6 +21,9 @@ Calendário de eventos científicos em ciência da computação
 
 [Calendário de eventos](https://giseldo-eventos-v2.hf.space)
 
+## Previsão de Notas
+[Previsão de Notas de estudante com aprendizagem de máquina](https://giseldo-predictstudentperformance.hf.space)
+
 ## NeoUST - User Story Tutor
 Um software para Previsão e melhoria de User Stories
 
