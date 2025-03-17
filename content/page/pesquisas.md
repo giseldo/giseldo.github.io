@@ -10,11 +10,7 @@ weight: 3
 
 Nosso grupo de pesquisa é o [GCI - Grupo de Pesquisa em Gestão do Conhecimento e da Inovação pesquisa](https://sites.google.com/view/grupogci). Acesse o [site](https://sites.google.com/view/grupogci) instituicional do grupo  para mais informações dos participantes e dos artigos públicados pelo grupo.
 
-Para mais informações sobre artigos publicados verifique o meu perfil no [research gate](https://www.researchgate.net/profile/Giseldo-Neo)
-
 ## Áreas de Interesse
-
-Nossas áreas de interesse e pesquisa são:
 
 * Inteligência Artificial
 * Aprendizagem de máquina
@@ -23,10 +19,11 @@ Nossas áreas de interesse e pesquisa são:
 * Engenharia de Software
 * Informática para educação
 
-
  ## Materiais relacionados a alguns dos nossos Artigos Publicados
 
- Esta seção indexa, alguns materiais relacionados a alguns artigos publicados.
+
+Para mais informações sobre artigos publicados acesse o [research gate](https://www.researchgate.net/profile/Giseldo-Neo).
+
 
 * NeoAVA - Um ambiente virtual de aprendizagem
   - [Slide](https://www.researchgate.net/publication/385778737_NeoAVA_A_virtual_learning_environment_for_Self-Regulated_Learning_to_be_used_by_students_and_teachers)
