@@ -10,7 +10,7 @@ draft: false
 - Um chatbot que conversa sobre o manual do aluno do IFAL
 - Um chatbot que conversa sobre o regimento do IFAL
 
-[Chatbot RAG](https://giseldo.github.io/ifal/)
+[NeoChatbots](https://giseldo.github.io/ifal/)
 
 ---
 
