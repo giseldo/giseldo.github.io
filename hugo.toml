@@ -84,11 +84,11 @@ pygmentsCodefencesGuessSyntax = true
   #strava = "userid"
 
 [[menu.main]]
-    name = "Blog"
+    name = "Blog (↗)"
     url = "http://giseldo.hashnode.dev/"
     weight = 1
 
 [[menu.main]]
-    name = "Cursos"
+    name = "Cursos (↗)"
     url = "http://giseldo.github.io/cursos/"
     weight = 1
