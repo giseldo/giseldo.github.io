@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Math on Giseldo Neo Site</title>
+    <link>http://localhost:1313/tags/math/</link>
+    <description>Recent content in Math on Giseldo Neo Site</description>
+    <generator>Hugo</generator>
+    <language>br</language>
+    <managingEditor>giseldo@gmail.com (Giseldo Neo)</managingEditor>
+    <webMaster>giseldo@gmail.com (Giseldo Neo)</webMaster>
+    <lastBuildDate>Sun, 05 Mar 2017 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/math/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Math Sample</title>
+      <link>http://localhost:1313/post/old/2017-03-05-math-sample/</link>
+      <pubDate>Sun, 05 Mar 2017 00:00:00 +0000</pubDate><author>giseldo@gmail.com (Giseldo Neo)</author>
+      <guid>http://localhost:1313/post/old/2017-03-05-math-sample/</guid>
+      <description>&lt;p&gt;KaTeX can be used to generate complex math formulas server-side.&lt;/p&gt;&#xA;&lt;p&gt;$$&#xA;\phi = \frac{(1+\sqrt{5})}{2} = 1.6180339887\cdots&#xA;$$&lt;/p&gt;&#xA;&lt;p&gt;Additional details can be found on &lt;a href=&#34;https://github.com/KaTeX/KaTeX&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHub&lt;/a&gt; or on the &lt;a href=&#34;https://katex.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;project homepage&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>To be</title>
+      <link>http://localhost:1313/post/old/2015-02-13-hamlet-monologue/</link>
+      <pubDate>Fri, 13 Feb 2015 00:00:00 +0000</pubDate><author>giseldo@gmail.com (Giseldo Neo)</author>
+      <guid>http://localhost:1313/post/old/2015-02-13-hamlet-monologue/</guid>
+      <description>&lt;p&gt;To be, or not to be&amp;ndash;that is the question:&#xA;Whether &amp;rsquo;tis nobler in the mind to suffer&#xA;The slings and arrows of outrageous fortune&#xA;Or to take arms against a sea of troubles&#xA;And by opposing end them. To die, to sleep&amp;ndash;&#xA;No more&amp;ndash;and by a sleep to say we end&#xA;The heartache, and the thousand natural shocks&#xA;That flesh is heir to. &amp;lsquo;Tis a consummation&#xA;Devoutly to be wished. To die, to sleep&amp;ndash;&#xA;To sleep&amp;ndash;perchance to dream: ay, there&amp;rsquo;s the rub,&#xA;For in that sleep of death what dreams may come&#xA;When we have shuffled off this mortal coil,&#xA;Must give us pause. There&amp;rsquo;s the respect&#xA;That makes calamity of so long life.&#xA;For who would bear the whips and scorns of time,&#xA;Th&amp;rsquo; oppressor&amp;rsquo;s wrong, the proud man&amp;rsquo;s contumely&#xA;The pangs of despised love, the law&amp;rsquo;s delay,&#xA;The insolence of office, and the spurns&#xA;That patient merit of th&amp;rsquo; unworthy takes,&#xA;When he himself might his quietus make&#xA;With a bare bodkin? Who would fardels bear,&#xA;To grunt and sweat under a weary life,&#xA;But that the dread of something after death,&#xA;The undiscovered country, from whose bourn&#xA;No traveller returns, puzzles the will,&#xA;And makes us rather bear those ills we have&#xA;Than fly to others that we know not of?&#xA;Thus conscience does make cowards of us all,&#xA;And thus the native hue of resolution&#xA;Is sicklied o&amp;rsquo;er with the pale cast of thought,&#xA;And enterprise of great pitch and moment&#xA;With this regard their currents turn awry&#xA;And lose the name of action. &amp;ndash; Soft you now,&#xA;The fair Ophelia! &amp;ndash; Nymph, in thy orisons&#xA;Be all my sins remembered.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

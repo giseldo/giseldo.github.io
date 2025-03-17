@@ -1,14 +1,91 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Neo IA</title>
+    <title>Posts on Giseldo Neo Site</title>
     <link>http://localhost:1313/post/</link>
-    <description>Recent content in Posts on Neo IA</description>
+    <description>Recent content in Posts on Giseldo Neo Site</description>
     <generator>Hugo</generator>
     <language>br</language>
     <managingEditor>giseldo@gmail.com (Giseldo Neo)</managingEditor>
     <webMaster>giseldo@gmail.com (Giseldo Neo)</webMaster>
-    <lastBuildDate></lastBuildDate>
+    <lastBuildDate>Mon, 20 Mar 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Photoswipe Gallery Sample</title>
+      <link>http://localhost:1313/post/old/2017-03-20-photoswipe-gallery-sample/</link>
+      <pubDate>Mon, 20 Mar 2017 00:00:00 +0000</pubDate><author>giseldo@gmail.com (Giseldo Neo)</author>
+      <guid>http://localhost:1313/post/old/2017-03-20-photoswipe-gallery-sample/</guid>
+      <description>&lt;p&gt;Beautiful Hugo adds a few custom shortcodes created by &lt;a href=&#34;https://www.liwen.id.au/heg/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Li-Wen Yip&lt;/a&gt; and &lt;a href=&#34;https://github.com/GjjvdBurg/HugoPhotoSwipe&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Gert-Jan van den Berg&lt;/a&gt; for making galleries with &lt;a href=&#34;https://photoswipe.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;PhotoSwipe&lt;/a&gt; .&lt;/p&gt;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&lt;div class=&#34;gallery caption-position-bottom caption-effect-fade hover-effect-zoom hover-transition&#34; itemscope itemtype=&#34;http://schema.org/ImageGallery&#34;&gt;&#xD;&#xA;&#x9;  &#xD;&#xA;  &#xD;&#xA;  &lt;link rel=&#34;stylesheet&#34; href=&#34;http://localhost:1313/css/hugo-easy-gallery.css&#34; /&gt;&#xD;&#xA;  &lt;div class=&#34;box&#34; &gt;&#xD;&#xA;    &lt;figure  itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;&#xD;&#xA;      &lt;div class=&#34;img&#34; style=&#34;background-image: url(&#39;http://localhost:1313//img/hexagon-thumb.jpg&#39;);&#34;&gt;&#xD;&#xA;        &lt;img itemprop=&#34;thumbnail&#34; src=&#34;http://localhost:1313/img/hexagon-thumb.jpg&#34; alt=&#34;/img/hexagon-thumb.jpg&#34;/&gt;&#xD;&#xA;      &lt;/div&gt;&#xD;&#xA;      &lt;a href=&#34;http://localhost:1313/img/hexagon.jpg&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;&#xD;&#xA;    &lt;/figure&gt;&#xD;&#xA;  &lt;/div&gt;&#xD;&#xA;&#xD;&#xA;  &#xD;&#xA;  &#xD;&#xA;  &lt;div class=&#34;box&#34; &gt;&#xD;&#xA;    &lt;figure  itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;&#xD;&#xA;      &lt;div class=&#34;img&#34; style=&#34;background-image: url(&#39;http://localhost:1313//img/sphere-thumb.jpg&#39;);&#34;&gt;&#xD;&#xA;        &lt;img itemprop=&#34;thumbnail&#34; src=&#34;http://localhost:1313/img/sphere-thumb.jpg&#34; alt=&#34;Sphere&#34;/&gt;&#xD;&#xA;      &lt;/div&gt;&#xD;&#xA;      &lt;a href=&#34;http://localhost:1313/img/sphere.jpg&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;&#xD;&#xA;        &lt;figcaption&gt;&#xD;&#xA;            &lt;p&gt;Sphere&lt;/p&gt;&#xD;&#xA;        &lt;/figcaption&gt;&#xD;&#xA;    &lt;/figure&gt;&#xD;&#xA;  &lt;/div&gt;&#xD;&#xA;&#xD;&#xA;  &#xD;&#xA;  &#xD;&#xA;  &lt;div class=&#34;box&#34; &gt;&#xD;&#xA;    &lt;figure  itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;&#xD;&#xA;      &lt;div class=&#34;img&#34; style=&#34;background-image: url(&#39;http://localhost:1313//img/triangle-thumb.jpg&#39;);&#34;&gt;&#xD;&#xA;        &lt;img itemprop=&#34;thumbnail&#34; src=&#34;http://localhost:1313/img/triangle-thumb.jpg&#34; alt=&#34;This is a long comment about a triangle&#34;/&gt;&#xD;&#xA;      &lt;/div&gt;&#xD;&#xA;      &lt;a href=&#34;http://localhost:1313/img/triangle.jpg&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;&#xD;&#xA;        &lt;figcaption&gt;&#xD;&#xA;            &lt;p&gt;Triangle&lt;/p&gt;&#xD;&#xA;        &lt;/figcaption&gt;&#xD;&#xA;    &lt;/figure&gt;&#xD;&#xA;  &lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&lt;/div&gt;</description>
+    </item>
+    <item>
+      <title>Big Image Sample</title>
+      <link>http://localhost:1313/post/old/2017-03-07-bigimg-sample/</link>
+      <pubDate>Tue, 07 Mar 2017 00:00:00 +0000</pubDate><author>giseldo@gmail.com (Giseldo Neo)</author>
+      <guid>http://localhost:1313/post/old/2017-03-07-bigimg-sample/</guid>
+      <description>&lt;p&gt;The image banners at the top of the page are refered to as &amp;ldquo;bigimg&amp;rdquo; in this theme. They are optional, and one more more can be specified. If more than one is specified, the images rotate every 10 seconds. In the front matter, bigimgs are specified using an array of hashes.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Math Sample</title>
+      <link>http://localhost:1313/post/old/2017-03-05-math-sample/</link>
+      <pubDate>Sun, 05 Mar 2017 00:00:00 +0000</pubDate><author>giseldo@gmail.com (Giseldo Neo)</author>
+      <guid>http://localhost:1313/post/old/2017-03-05-math-sample/</guid>
+      <description>&lt;p&gt;KaTeX can be used to generate complex math formulas server-side.&lt;/p&gt;&#xA;&lt;p&gt;$$&#xA;\phi = \frac{(1+\sqrt{5})}{2} = 1.6180339887\cdots&#xA;$$&lt;/p&gt;&#xA;&lt;p&gt;Additional details can be found on &lt;a href=&#34;https://github.com/KaTeX/KaTeX&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHub&lt;/a&gt; or on the &lt;a href=&#34;https://katex.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;project homepage&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Code Sample</title>
+      <link>http://localhost:1313/post/old/2016-03-08-code-sample/</link>
+      <pubDate>Tue, 08 Mar 2016 00:00:00 +0000</pubDate><author>giseldo@gmail.com (Giseldo Neo)</author>
+      <guid>http://localhost:1313/post/old/2016-03-08-code-sample/</guid>
+      <description>&lt;p&gt;The following are two code samples using syntax highlighting.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Flake it till you make it</title>
+      <link>http://localhost:1313/post/old/2015-02-26-flake-it-till-you-make-it/</link>
+      <pubDate>Thu, 26 Feb 2015 00:00:00 +0000</pubDate><author>giseldo@gmail.com (Giseldo Neo)</author>
+      <guid>http://localhost:1313/post/old/2015-02-26-flake-it-till-you-make-it/</guid>
+      <description>&lt;p&gt;Under what circumstances should we step off a path? When is it essential that we finish what we start? If I bought a bag of peanuts and had an allergic reaction, no one would fault me if I threw it out. If I ended a relationship with a woman who hit me, no one would say that I had a commitment problem. But if I walk away from a seemingly secure route because my soul has other ideas, I am a flake?&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Test markdown</title>
+      <link>http://localhost:1313/post/old/2015-02-20-test-markdown/</link>
+      <pubDate>Fri, 20 Feb 2015 00:00:00 +0000</pubDate><author>giseldo@gmail.com (Giseldo Neo)</author>
+      <guid>http://localhost:1313/post/old/2015-02-20-test-markdown/</guid>
+      <description>&lt;p&gt;You can write regular &lt;a href=&#34;https://markdowntutorial.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;markdown&lt;/a&gt; here and &lt;a href=&#34;https://gohugo.io&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hugo&lt;/a&gt; will automatically convert it to a nice webpage.  I strongly encourage you to &lt;a href=&#34;https://markdowntutorial.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;take 5 minutes to learn how to write in markdown&lt;/a&gt; - it&amp;rsquo;ll teach you how to transform regular text into bold/italics/headings/tables/etc.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Here is some bold text&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;here-is-a-secondary-heading&#34;&gt;Here is a secondary heading&lt;/h2&gt;&#xA;&lt;p&gt;Here&amp;rsquo;s a useless table:&lt;/p&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th style=&#34;text-align: left&#34;&gt;Number&lt;/th&gt;&#xA;          &lt;th style=&#34;text-align: left&#34;&gt;Next number&lt;/th&gt;&#xA;          &lt;th style=&#34;text-align: left&#34;&gt;Previous number&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td style=&#34;text-align: left&#34;&gt;Five&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: left&#34;&gt;Six&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: left&#34;&gt;Four&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td style=&#34;text-align: left&#34;&gt;Ten&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: left&#34;&gt;Eleven&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: left&#34;&gt;Nine&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td style=&#34;text-align: left&#34;&gt;Seven&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: left&#34;&gt;Eight&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: left&#34;&gt;Six&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td style=&#34;text-align: left&#34;&gt;Two&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: left&#34;&gt;Three&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: left&#34;&gt;One&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;p&gt;How about a yummy crepe?&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>To be</title>
+      <link>http://localhost:1313/post/old/2015-02-13-hamlet-monologue/</link>
+      <pubDate>Fri, 13 Feb 2015 00:00:00 +0000</pubDate><author>giseldo@gmail.com (Giseldo Neo)</author>
+      <guid>http://localhost:1313/post/old/2015-02-13-hamlet-monologue/</guid>
+      <description>&lt;p&gt;To be, or not to be&amp;ndash;that is the question:&#xA;Whether &amp;rsquo;tis nobler in the mind to suffer&#xA;The slings and arrows of outrageous fortune&#xA;Or to take arms against a sea of troubles&#xA;And by opposing end them. To die, to sleep&amp;ndash;&#xA;No more&amp;ndash;and by a sleep to say we end&#xA;The heartache, and the thousand natural shocks&#xA;That flesh is heir to. &amp;lsquo;Tis a consummation&#xA;Devoutly to be wished. To die, to sleep&amp;ndash;&#xA;To sleep&amp;ndash;perchance to dream: ay, there&amp;rsquo;s the rub,&#xA;For in that sleep of death what dreams may come&#xA;When we have shuffled off this mortal coil,&#xA;Must give us pause. There&amp;rsquo;s the respect&#xA;That makes calamity of so long life.&#xA;For who would bear the whips and scorns of time,&#xA;Th&amp;rsquo; oppressor&amp;rsquo;s wrong, the proud man&amp;rsquo;s contumely&#xA;The pangs of despised love, the law&amp;rsquo;s delay,&#xA;The insolence of office, and the spurns&#xA;That patient merit of th&amp;rsquo; unworthy takes,&#xA;When he himself might his quietus make&#xA;With a bare bodkin? Who would fardels bear,&#xA;To grunt and sweat under a weary life,&#xA;But that the dread of something after death,&#xA;The undiscovered country, from whose bourn&#xA;No traveller returns, puzzles the will,&#xA;And makes us rather bear those ills we have&#xA;Than fly to others that we know not of?&#xA;Thus conscience does make cowards of us all,&#xA;And thus the native hue of resolution&#xA;Is sicklied o&amp;rsquo;er with the pale cast of thought,&#xA;And enterprise of great pitch and moment&#xA;With this regard their currents turn awry&#xA;And lose the name of action. &amp;ndash; Soft you now,&#xA;The fair Ophelia! &amp;ndash; Nymph, in thy orisons&#xA;Be all my sins remembered.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Dear diary</title>
+      <link>http://localhost:1313/post/old/2015-01-27-dear-diary/</link>
+      <pubDate>Tue, 27 Jan 2015 00:00:00 +0000</pubDate><author>giseldo@gmail.com (Giseldo Neo)</author>
+      <guid>http://localhost:1313/post/old/2015-01-27-dear-diary/</guid>
+      <description>&lt;p&gt;What is it with that Mary girl?  Dragging me to school every day. As if I had a choice.  What you don&amp;rsquo;t hear in those nursery rhymes is that she starves me if I don&amp;rsquo;t go to school with her; it&amp;rsquo;s the only way I can stay alive!  I&amp;rsquo;m thinking about being adopted by Little Bo Peep, sure I may get lost, but anything is better than being with Mary and those little brats at school (shudder, shudder).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Soccer</title>
+      <link>http://localhost:1313/post/old/2015-01-19-soccer/</link>
+      <pubDate>Mon, 19 Jan 2015 00:00:00 +0000</pubDate><author>giseldo@gmail.com (Giseldo Neo)</author>
+      <guid>http://localhost:1313/post/old/2015-01-19-soccer/</guid>
+      <description>&lt;p&gt;From Wikipedia:&lt;/p&gt;&#xA;&lt;p&gt;Association football, more commonly known as football or soccer,[2] is a sport played between two teams of eleven players with a spherical ball. It is played by 250 million players in over 200 countries, making it the world&amp;rsquo;s most popular sport.[3][4][5][6] The game is played on a rectangular field with a goal at each end. The object of the game is to score by getting the ball into the opposing goal.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Pirates arrrr</title>
+      <link>http://localhost:1313/post/old/2015-01-15-pirates/</link>
+      <pubDate>Thu, 15 Jan 2015 00:00:00 +0000</pubDate><author>giseldo@gmail.com (Giseldo Neo)</author>
+      <guid>http://localhost:1313/post/old/2015-01-15-pirates/</guid>
+      <description>&lt;p&gt;Piracy is typically an act of robbery or criminal violence at sea. The term can include acts committed on land, in the air, or in other major bodies of water or on a shore. It does not normally include crimes committed against persons traveling on the same vessel as the perpetrator (e.g. one passenger stealing from others on the same vessel). The term has been used throughout history to refer to raids across land borders by non-state agents.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>First post!</title>
+      <link>http://localhost:1313/post/old/2015-01-04-first-post/</link>
+      <pubDate>Mon, 05 Jan 2015 00:00:00 +0000</pubDate><author>giseldo@gmail.com (Giseldo Neo)</author>
+      <guid>http://localhost:1313/post/old/2015-01-04-first-post/</guid>
+      <description>&lt;p&gt;This is my first post, how exciting!&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>
