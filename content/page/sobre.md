@@ -6,9 +6,7 @@ comments: false
 weight: 6
 ---
 
-## Equipe
-
-Este Site e Blog são mantidos por Giseldo Neo e Alana Neo.
+# Equipe
 
 ## Giseldo Neo
 E-mail para contato: giseldo@gmail.com
