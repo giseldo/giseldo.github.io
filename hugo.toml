@@ -18,7 +18,7 @@ pygmentsCodefencesGuessSyntax = true
 
 [Params]
   homeTitle = "Neo IA" 
-  subtitle = "Inteligência artificial com Giseldo Neo"
+  subtitle = "Inteligência Artificial com Giseldo Neo"
   # mainSections = ["post","posts"]
   logo = "img/avatar-icon.png" # Expecting square dimensions
   favicon = "img/favicon.ico"
