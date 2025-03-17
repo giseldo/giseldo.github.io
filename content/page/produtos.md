@@ -36,14 +36,14 @@ Calendário de eventos científicos em ciência da computação
 Um chatbot baseado no chatbot Eliza de 1966
 
 - [Versão do Eliza com casamento de padrão](https://giseldo-eliza-raiz.hf.space)
-- [Versão do Eliza com LLM](https://huggingface.co/spaces/giseldo/eliza_llm)
+- [Versão do Eliza com LLM](https://giseldo-eliza-llm.hf.space)
   
 ---
 
 ## NeoUST - User Story Tutor
 Um software para Previsão e melhoria de User Stories
 
-[User Story Tutor](https://huggingface.co/spaces/giseldo/userstory) 
+[User Story Tutor](https://giseldo-userstory.static.hf.space) 
 
 ---
 
@@ -58,10 +58,3 @@ Um Ambiente Virtual de Aprendizagem com foco em recomendação
 Um Sistema Especialista com encadeamento para trás, bem simples, baseado no Expert Sinta
 
 [NeoSE](https://giseldo-neo-sistema-especialista.hf.space)
-
----
-
-## NeoAcadêmcio - Ferramentas acadêmicas para escrita de texto
-Cria um parágrafo com citação ABNT com GPT
-
-[Neo IA Writing](https://giseldo-neochatbotoneshot.hf.space)
