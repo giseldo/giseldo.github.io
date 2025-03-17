@@ -10,6 +10,8 @@ weight: 3
 
 Nosso grupo de pesquisa é o [GCI - Grupo de Pesquisa em Gestão do Conhecimento e da Inovação pesquisa](https://sites.google.com/view/grupogci). Acesse o [site](https://sites.google.com/view/grupogci) instituicional do grupo  para mais informações dos participantes e dos artigos públicados pelo grupo.
 
+Para mais informações sobre artigos publicados verifique o meu perfil no [research gate](https://www.researchgate.net/profile/Giseldo-Neo)
+
 ## Áreas de Interesse
 
 Nossas áreas de interesse e pesquisa são:
