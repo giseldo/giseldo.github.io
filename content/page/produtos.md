@@ -14,6 +14,8 @@ Chatbots com inteligência artificial
 
 [NeoChatbots](https://giseldo.github.io/ifal/)
 
+{{< figure src="/images/pages/chatbots.png" width="50%" >}}
+
 ---
 
 ## NeoStudy - Um Gerador de Plano de estudo com IA
@@ -28,10 +30,14 @@ Calendário de eventos científicos em ciência da computação
 
 [Calendário de eventos](https://giseldo-eventos-v2.hf.space)
 
+{{< figure src="/images/pages/calendario.png" width="50%" >}}
+
 ---
 
 ## Previsão de Notas
 [Previsão de Notas de estudante com aprendizagem de máquina](https://giseldo-predictstudentperformance.hf.space)
+
+{{< figure src="/images/pages/previsao.png" width="50%" >}}
 
 ---
 

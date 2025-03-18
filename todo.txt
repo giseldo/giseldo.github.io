@@ -1,8 +1,5 @@
 # atualizar o html dos livros
-# atualizar o gráfico do post da rede neural deixar ele mermaid
-# continuar novo post ai simple
 # incluir formulario de contato
-# incluir o podcast
 # incluir e gravar as aulas do primeiro curso
 # finalizar o livro de metodologia
 # iniciar um livro de banco de dados

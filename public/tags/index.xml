@@ -8,49 +8,6 @@
     <language>br</language>
     <managingEditor>giseldo@gmail.com (Giseldo Neo)</managingEditor>
     <webMaster>giseldo@gmail.com (Giseldo Neo)</webMaster>
-    <lastBuildDate>Mon, 20 Mar 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Example</title>
-      <link>http://localhost:1313/tags/example/</link>
-      <pubDate>Mon, 20 Mar 2017 00:00:00 +0000</pubDate><author>giseldo@gmail.com (Giseldo Neo)</author>
-      <guid>http://localhost:1313/tags/example/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Photoswipe</title>
-      <link>http://localhost:1313/tags/photoswipe/</link>
-      <pubDate>Mon, 20 Mar 2017 00:00:00 +0000</pubDate><author>giseldo@gmail.com (Giseldo Neo)</author>
-      <guid>http://localhost:1313/tags/photoswipe/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Bigimg</title>
-      <link>http://localhost:1313/tags/bigimg/</link>
-      <pubDate>Tue, 07 Mar 2017 00:00:00 +0000</pubDate><author>giseldo@gmail.com (Giseldo Neo)</author>
-      <guid>http://localhost:1313/tags/bigimg/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Math</title>
-      <link>http://localhost:1313/tags/math/</link>
-      <pubDate>Sun, 05 Mar 2017 00:00:00 +0000</pubDate><author>giseldo@gmail.com (Giseldo Neo)</author>
-      <guid>http://localhost:1313/tags/math/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Code</title>
-      <link>http://localhost:1313/tags/code/</link>
-      <pubDate>Tue, 08 Mar 2016 00:00:00 +0000</pubDate><author>giseldo@gmail.com (Giseldo Neo)</author>
-      <guid>http://localhost:1313/tags/code/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Markdown</title>
-      <link>http://localhost:1313/tags/markdown/</link>
-      <pubDate>Fri, 20 Feb 2015 00:00:00 +0000</pubDate><author>giseldo@gmail.com (Giseldo Neo)</author>
-      <guid>http://localhost:1313/tags/markdown/</guid>
-      <description></description>
-    </item>
   </channel>
 </rss>
