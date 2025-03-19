@@ -1,7 +1,9 @@
 ## Hey Listen!
 
-No nosso [blog IA descomplicada](https://giseldo.hashnode.dev/) você terá acesso a informações técnicas relacionadas a inteligência artificial. Além disso, escrevemos também no [medium](https://medium.com/@giseldoneo) e no [substack](https://giseldo.substack.com/).
+No [blog](https://giseldo.hashnode.dev/) você terá acesso a informações técnicas relacionadas a inteligência artificial. Além disso, escrevemos também no [medium](https://medium.com/@giseldoneo) e no [substack](https://giseldo.substack.com/).
 
-No site de [cursos IA](http://giseldo.github.io/cursos) você encontrará cursos relacionados a inteligência artificial, aprendizagem de máquina e chatbots.
+No site de [cursos](http://giseldo.github.io/cursos) você encontrará cursos relacionados a inteligência artificial, aprendizagem de máquina e chatbots.
 
-Você também pode acompanhar nossas [pesquisas](page/pesquisas/), nossos [produtos](page/produtos/), nossos [livros](page/livros/) e ouvir nosso [podcast](page/podcast/). E não deixe de visitar nosso canal no [youtube](http://youtube.com/giseldoneo).
+Você também pode acompanhar nossas [pesquisas acadêmicas](page/pesquisas/), nossos [produtos de software](page/produtos/), nossos [livros técnicos](page/livros/) e ouvir nosso [podcast soobre as peesquisas](page/podcast/). 
+
+Visite nosso canal no [youtube](http://youtube.com/giseldoneo).
