@@ -1,6 +1,6 @@
 baseurl = "https://giseldo.github.io"
 DefaultContentLanguage = "br"
-title = "Giseldo Neo Site"
+title = "IA com GN"
 theme = "beautifulhugo"
 pygmentsStyle = "trac"
 pygmentsUseClasses = true

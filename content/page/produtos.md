@@ -23,6 +23,8 @@ Um gerador de plano de estudo personalizado com inteligência artificial
 
 [Study Plan](https://giseldo.github.io/study/)
 
+{{< figure src="/images/pages/planoestudo.png" width="50%" >}}
+
 ---
 
 ## NeoCalendar - Calendário de eventos científicos

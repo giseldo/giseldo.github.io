@@ -6,7 +6,7 @@ comments: false
 weight: 3
 ---
 
-## Introdução
+Para mais informações sobre artigos publicados acesse o [research gate](https://www.researchgate.net/profile/Giseldo-Neo).
 
 Nosso grupo de pesquisa é o [GCI - Grupo de Pesquisa em Gestão do Conhecimento e da Inovação pesquisa](https://sites.google.com/view/grupogci). Acesse o [site](https://sites.google.com/view/grupogci) instituicional do grupo  para mais informações dos participantes e dos artigos públicados pelo grupo.
 
@@ -20,9 +20,6 @@ Nosso grupo de pesquisa é o [GCI - Grupo de Pesquisa em Gestão do Conhecimento
 * Informática para educação
 
  ## Materiais relacionados a alguns dos nossos Artigos Publicados
-
-
-Para mais informações sobre artigos publicados acesse o [research gate](https://www.researchgate.net/profile/Giseldo-Neo).
 
 
 * NeoAVA - Um ambiente virtual de aprendizagem
