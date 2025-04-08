@@ -6,6 +6,6 @@ No site de [cursos](http://giseldo.github.io/cursos) você encontrará cursos re
 
 Você também pode acompanhar nossas [pesquisas acadêmicas](page/pesquisas/), nossos [produtos de software](page/produtos/), nossos [livros técnicos](page/livros/) e ouvir nosso [podcast soobre as peesquisas](page/podcast/). 
 
-Visite nosso canal no [youtube](http://youtube.com/giseldoneo).
+Canal no [youtube](http://youtube.com/giseldoneo).
 
 Nova seção de [Jogos](page/jogos).

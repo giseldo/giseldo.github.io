@@ -49,3 +49,13 @@ pygmentsCodefencesGuessSyntax = true
     name = "Cursos (↗)"
     url = "http://giseldo.github.io/cursos/"
     weight = 2
+
+[[menu.main]]
+    name = "Youtube (↗)"
+    url = "http://youtube.com/giseldoneo"
+    weight = 3
+
+[[menu.main]]
+    name = "Jogos"
+    url = "page/jogos"
+    weight = 4
