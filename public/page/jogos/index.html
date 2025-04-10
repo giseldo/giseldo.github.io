@@ -14,19 +14,8 @@
 
       <title>IA com GN - Inteligência Artificial</title>
 
-  <meta name="description" content="&lt;!DOCTYPE html&gt;
-
-
-  Dinossauro Runner
-  
-
-
-  
-  Pressione ESPAÇO para pular
-  By Giseldo Neo at giseldo@gmail.com
-  
-
-">
+  <meta name="description" content="Space Invaders Clone
+Cat Runner">
   <meta name="author" content="Giseldo Neo"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -75,9 +64,9 @@
     "name" : "Giseldo Neo"
   },
   "headline": "",
-  "description" : "\u003c!DOCTYPE html\u003e\rDinossauro Runner\rPressione ESPAÇO para pular\rBy Giseldo Neo at giseldo@gmail.com\r",
+  "description" : "Space Invaders Clone\nCat Runner\n",
   "inLanguage" : "br",
-  "wordCount":  13 ,
+  "wordCount":  5 ,
   "datePublished" : "0001-01-01T00:00:00\u002b00:00",
   "dateModified" : "0001-01-01T00:00:00\u002b00:00",
   "image" : "http:\/\/localhost:1313\/img\/avatar-icon.png",
@@ -98,30 +87,16 @@
 
 
 <meta property="og:title" content="IA com GN" />
-<meta property="og:description" content="&lt;!DOCTYPE html&gt;
-
-
-  Dinossauro Runner
-  
-
-
-  
-  Pressione ESPAÇO para pular
-  By Giseldo Neo at giseldo@gmail.com
-  
-
-">
+<meta property="og:description" content="Space Invaders Clone
+Cat Runner">
 <meta property="og:image" content="http://localhost:1313/img/avatar-icon.png" />
 <meta property="og:url" content="http://localhost:1313/page/jogos/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="IA com GN" />
 
   <meta name="twitter:title" content="IA com GN" />
-  <meta name="twitter:description" content="&lt;!DOCTYPE html&gt;
-
-
-  Dinossauro Runner
-  &lt;/!DOCTYPE&gt;">
+  <meta name="twitter:description" content="Space Invaders Clone
+Cat Runner">
   <meta name="twitter:image" content="http://localhost:1313/img/avatar-icon.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@giseldoneo" />
@@ -295,357 +270,8 @@
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
-        <!DOCTYPE html>
-<html>
-<head>
-  <title>Dinossauro Runner</title>
-  <style>
-    /* Estilos do jogo */
-    canvas {
-      border: 1px solid black;
-    }
-    body {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      font-family: Arial, sans-serif;
-    }
-    .controles {
-      margin-top: 10px;
-    }
-  </style>
-</head>
-<body>
-  <canvas id="canvas" width="800" height="400"></canvas>
-  <div class="controles">Pressione ESPAÇO para pular</div>
-  <div class="controles"><small>By Giseldo Neo at giseldo@gmail.com</small></div>
-  <script>
-    
-    let canvas = document.getElementById('canvas');
-    let ctx = canvas.getContext('2d');
-    let dino = { x: 50, y: 200, largura: 50, altura: 50, velocidadeY: 0 };
-    let obstaculos = [];
-    let placar = 0;
-    let gravidade = 0.5;
-    let pulo = -10;
-    let estaNoChao = true;
-    let velocidadeJogo = 5;
-    let gameOver = false;
-
-    // Adicionar som para quando passar pelo obstáculo
-    let somPonto = new Audio('page/ponto.mp3');
-    // Adicionar som para game over
-    let somGameOver = new Audio('page/gameover.mp3');
-
-    // Variável para controlar a animação das pernas
-    let passo = 0;
-
-    // Hi-Score
-    let hiScore = 0;
-
-    // Montanhas
-    const montanha1 = { x: 0, y: 200, largura: 200, altura: 50, cor: '#D2B48C', velocidade: 0.2 };
-    const montanha2 = { x: 400, y: 220, largura: 300, altura: 30, cor: '#DEB887', velocidade: 0.1 };
-
-    // Nuvens
-    const nuvens = [
-      { x: 100, y: 50, largura: 80, altura: 30, velocidade: 0.05 },
-      { x: 300, y: 80, largura: 100, altura: 40, velocidade: 0.03 },
-      { x: 600, y: 60, largura: 120, altura: 50, velocidade: 0.07 }
-    ];
-    
-    // Tipos de obstáculos
-    const TIPOS_OBSTACULOS = [
-      { largura: 30, altura: 30, cor: 'red', y: 220 },           // Pequeno
-      { largura: 30, altura: 60, cor: 'darkred', y: 190 },       // Alto
-      { largura: 60, altura: 30, cor: 'brown', y: 220 },         // Largo
-      { largura: 40, altura: 40, cor: 'orange', y: 210 }         // Médio
-    ];
-
-    // Função para desenhar o cenário
-    function desenharCenario() {
-      // Desenhar céu
-      ctx.fillStyle = '#87CEEB';
-      ctx.fillRect(0, 0, canvas.width, 250);
-
-      // Desenhar nuvens
-      desenharNuvens();
-
-      // Desenhar montanhas triangulares
-      desenharMontanhaTriangular(montanha1);
-      desenharMontanhaTriangular(montanha2);
-
-      // Desenhar chão
-      ctx.fillStyle = '#aaa';
-      ctx.fillRect(0, 250, canvas.width, 2);
-    }
-
-    function desenharMontanhaTriangular(montanha) {
-      ctx.fillStyle = montanha.cor;
-      ctx.beginPath();
-      ctx.moveTo(montanha.x, 250); // Ponto base esquerdo
-      ctx.lineTo(montanha.x + montanha.largura / 2, 250 - montanha.altura); // Ponto do pico
-      ctx.lineTo(montanha.x + montanha.largura, 250); // Ponto base direito
-      ctx.closePath();
-      ctx.fill();
-    }
-
-    function desenharNuvens() {
-      ctx.fillStyle = 'white';
-      for (let i = 0; i < nuvens.length; i++) {
-        const nuvem = nuvens[i];
-        ctx.fillRect(nuvem.x, nuvem.y, nuvem.largura, nuvem.altura);
-      }
-    }
-    
-    function desenharDino() {
-      // Desenhar corpo do gato
-      ctx.fillStyle = 'gray';
-      ctx.fillRect(dino.x, dino.y, dino.largura, dino.altura - 10);
-
-      // Desenhar cabeça do gato
-      ctx.fillStyle = 'darkgray';
-      ctx.fillRect(dino.x + 30, dino.y - 15, dino.largura - 30, 20);
-
-      // // Desenhar orelha do gato
-      // ctx.fillStyle = 'lightgray';
-      // ctx.beginPath();
-      // ctx.moveTo(dino.x + 30, dino.y - 15);
-      // ctx.lineTo(dino.x + 25, dino.y - 30);
-      // ctx.lineTo(dino.x + 35, dino.y - 30);
-      // ctx.closePath();
-      // ctx.fill();
-
-      // Desenhar olho do gato
-      // ctx.fillStyle = 'black';
-      // ctx.fillRect(dino.x + 35, dino.y - 5, 5, 5);
-
-      // Desenhar rabo do gato
-      ctx.fillStyle = 'gray';
-      ctx.fillRect(dino.x - 10, dino.y + 10, 10, 5);
-      
-      // Desenhar pernas do gato com animação de corrida
-      ctx.fillStyle = 'darkgray';
-      if (passo < 5) {
-        // Perna da frente esticada, perna de trás encolhida
-        ctx.fillRect(dino.x + 10, dino.y + dino.altura - 10, 5, 10);
-        ctx.fillRect(dino.x + 35, dino.y + dino.altura - 5, 5, 5);
-      } else {
-        // Perna da frente encolhida, perna de trás esticada
-        ctx.fillRect(dino.x + 10, dino.y + dino.altura - 5, 5, 5);
-        ctx.fillRect(dino.x + 35, dino.y + dino.altura - 10, 5, 10);
-      }
-    }
-
-    // Função para desenhar obstáculos
-    function desenharObstaculos() {
-      for (let i = 0; i < obstaculos.length; i++) {
-        const obs = obstaculos[i];
-        ctx.fillStyle = obs.cor;
-        ctx.fillRect(obs.x, obs.y, obs.largura, obs.altura);
-      }
-    }
-
-    // Função para verificar colisão precisa
-    function verificarColisao(a, b) {
-      // Reduzir um pouco a área de colisão para ser mais justo
-      const margemColisao = 5;
-      return a.x + a.largura - margemColisao > b.x + margemColisao &&
-             a.x + margemColisao < b.x + b.largura - margemColisao &&
-             a.y + a.altura - margemColisao > b.y + margemColisao &&
-             a.y + margemColisao < b.y + b.altura - margemColisao;
-    }
-
-    // Função para criar novo obstáculo
-    function criarObstaculo() {
-      const tipoObstaculo = TIPOS_OBSTACULOS[Math.floor(Math.random() * TIPOS_OBSTACULOS.length)];
-      
-      obstaculos.push({
-        x: canvas.width,
-        y: tipoObstaculo.y,
-        largura: tipoObstaculo.largura,
-        altura: tipoObstaculo.altura,
-        cor: tipoObstaculo.cor
-      });
-    }
-
-    // Função para fim de jogo
-    function fimDeJogo() {
-      gameOver = true;
-      // Tocar som de game over
-      somGameOver.play();
-      ctx.font = 'bold 36px Arial';
-      ctx.fillStyle = 'red';
-      ctx.textAlign = 'center';
-      ctx.fillText('Game Over!', canvas.width / 2, canvas.height / 2 - 20);
-      
-      ctx.font = '24px Arial';
-      ctx.fillStyle = 'black';
-      ctx.fillText('Placar: ' + placar, canvas.width / 2, canvas.height / 2 + 20);
-      
-      ctx.font = '18px Arial';
-      ctx.fillText('Pressione R para reiniciar', canvas.width / 2, canvas.height / 2 + 50);
-    }
-
-    // Função para atualizar o jogo
-    function atualizar() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-      // Se o jogo acabou, só mostrar tela de game over
-      if (gameOver) {
-        desenharCenario();
-        desenharDino();
-        desenharObstaculos();
-        fimDeJogo();
-        return;
-      }
-
-      // Atualizar dinossauro
-      if (!estaNoChao) {
-        dino.y += dino.velocidadeY;
-        dino.velocidadeY += gravidade;
-        if (dino.y > 200) {
-          dino.y = 200;
-          estaNoChao = true;
-          dino.velocidadeY = 0;
-        }
-      }
-
-      // Atualizar obstáculos
-      for (let i = 0; i < obstaculos.length; i++) {
-        obstaculos[i].x -= velocidadeJogo;
-        if (obstaculos[i].x < -obstaculos[i].largura) {
-          obstaculos.splice(i, 1);
-          placar++;
-          
-          // Tocar som ao marcar ponto
-          somPonto.play();
-
-          // Aumentar velocidade a cada 50 pontos
-          if (placar % 10 === 0) {
-            velocidadeJogo += 0.5;
-          }
-          i--;
-        }
-      }
-
-      // Mover montanhas com efeito parallax
-      montanha1.x -= montanha1.velocidade;
-      montanha2.x -= montanha2.velocidade;
-
-      // Mover nuvens com efeito parallax
-      for (let i = 0; i < nuvens.length; i++) {
-        nuvens[i].x -= nuvens[i].velocidade;
-        if (nuvens[i].x + nuvens[i].largura < 0) {
-          nuvens[i].x = canvas.width;
-        }
-      }
-
-      // Resetar posição das montanhas quando saem da tela
-      if (montanha1.x + 200 < 0) {
-        montanha1.x = canvas.width;
-      }
-      if (montanha2.x + 300 < 0) {
-        montanha2.x = canvas.width;
-      }
-
-      // Verificar colisões
-      for (let i = 0; i < obstaculos.length; i++) {
-        if (verificarColisao(dino, obstaculos[i])) {
-          gameOver = true;
-        }
-      }
-
-      // Desenhar elementos
-      desenharCenario();
-      desenharDino();
-      desenharObstaculos();
-
-      // Atualizar a animação das pernas
-      passo = (passo + 1) % 10;
-
-      // Adicionar obstáculos (chance aumenta com a pontuação)
-      const chanceObstaculo = 0.01 + (placar / 500); // Máximo de 0.05
-      if (Math.random() < Math.min(chanceObstaculo, 0.05) && obstaculos.length < 3) {
-        // Verificar se o último obstáculo está longe o suficiente
-        const ultimoObstaculo = obstaculos[obstaculos.length - 1];
-        if (!ultimoObstaculo || canvas.width - ultimoObstaculo.x > 300) {
-          criarObstaculo();
-        }
-      }
-
-      // Desenhar placar
-      ctx.font = '24px Arial';
-      ctx.fillStyle = 'black';
-      ctx.textAlign = 'left';
-      ctx.fillText('Placar: ' + placar, 10, 30);
-
-      // Desenhar Hi-Score no canto superior direito
-      ctx.textAlign = 'right';
-      ctx.fillText('Hi-Score: ' + hiScore, canvas.width - 10, 30);
-      
-      // Desenhar velocímetro no canto inferior direito
-      desenharVelocimetro(velocidadeJogo, canvas.width - 60, canvas.height - 50, 50);
-
-      // Atualizar Hi-Score
-      if (placar > hiScore) {
-        hiScore = placar;
-      }
-
-      requestAnimationFrame(atualizar);
-    }
-
-    function desenharVelocimetro(velocidade, x, y, raio) {
-      // Desenhar fundo do velocímetro
-      ctx.beginPath();
-      ctx.arc(x, y, raio, Math.PI, 0, false);
-      ctx.fillStyle = '#eee';
-      ctx.fill();
-      ctx.stroke();
-
-      // Desenhar ponteiro
-      const angulo = Math.PI + (velocidade / 20) * Math.PI; // Ajuste conforme necessário
-      const xPonteiro = x + Math.cos(angulo) * (raio - 10);
-      const yPonteiro = y + Math.sin(angulo) * (raio - 10);
-
-      ctx.beginPath();
-      ctx.moveTo(x, y);
-      ctx.lineTo(xPonteiro, yPonteiro);
-      ctx.strokeStyle = 'red';
-      ctx.lineWidth = 3;
-      ctx.stroke();
-      ctx.lineWidth = 1;
-
-      // Desenhar valor da velocidade
-      ctx.font = '12px Arial';
-      ctx.fillStyle = 'black';
-      ctx.textAlign = 'center';
-      ctx.fillText(velocidade.toFixed(1) + ' km/h', x, y + raio / 2);
-    }
-
-    // Eventos de teclado
-    document.addEventListener('keydown', (e) => {
-      if (e.key === ' ' && estaNoChao && !gameOver) {
-        dino.velocidadeY = pulo;
-        estaNoChao = false;
-      }
-      if (e.key === 'r' && gameOver) {
-        // Reiniciar jogo
-        dino = { x: 50, y: 200, largura: 50, altura: 50, velocidadeY: 0 };
-        obstaculos = [];
-        placar = 0;
-        estaNoChao = true;
-        velocidadeJogo = 5;
-        gameOver = false;
-        atualizar();
-      }
-    });
-
-    // Iniciar o jogo
-    atualizar();
-  </script>
-</body>
-</html>
+        <p><a href="https://giseldo.github.io/jogo_fantech-space_invaders_clone/" target="_blank" rel="noopener">Space Invaders Clone</a></p>
+<p><a href="https://giseldo.github.io/jogo_fantech-space_invaders_clone/catrunner.html" target="_blank" rel="noopener">Cat Runner</a></p>
 
 
         
