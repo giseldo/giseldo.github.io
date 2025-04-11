@@ -10,6 +10,13 @@
     <webMaster>giseldo@gmail.com (Giseldo Neo)</webMaster>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Jogos</title>
+      <link>http://localhost:1313/page/jogos/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>giseldo@gmail.com (Giseldo Neo)</author>
+      <guid>http://localhost:1313/page/jogos/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://giseldo.github.io/jogo_fantech-space_invaders_clone/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Space Invaders Clone (↗)&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://giseldo.github.io/jogo_fantech-space_invaders_clone/catrunner.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Cat Runner&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Livros</title>
       <link>http://localhost:1313/page/livros/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>giseldo@gmail.com (Giseldo Neo)</author>
@@ -43,13 +50,6 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>giseldo@gmail.com (Giseldo Neo)</author>
       <guid>http://localhost:1313/page/sobre/</guid>
       <description>&lt;h1 id=&#34;equipe&#34;&gt;Equipe&lt;/h1&gt;&#xA;&lt;h2 id=&#34;giseldo-neo&#34;&gt;Giseldo Neo&lt;/h2&gt;&#xA;&lt;p&gt;E-mail para contato: &lt;a href=&#34;mailto:giseldo@gmail.com&#34;&gt;giseldo@gmail.com&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;div class=&#34;splitbox&#34;&gt;&lt;div class=&#34;left&#34;&gt;&#xD;&#xA;&#xA;&#xD;&#xA;&lt;link rel=&#34;stylesheet&#34; href=&#34;http://localhost:1313/css/hugo-easy-gallery.css&#34; /&gt;&#xD;&#xA;&lt;div class=&#34;box&#34; style=&#34;max-width:50%&#34;&gt;&#xD;&#xA;  &lt;figure  itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;&#xD;&#xA;    &lt;div class=&#34;img&#34;&gt;&#xD;&#xA;      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;http://localhost:1313/images/pages/giseldo.jpg&#34; alt=&#34;/images/pages/giseldo.jpg&#34;/&gt;&#xD;&#xA;    &lt;/div&gt;&#xD;&#xA;    &lt;a href=&#34;http://localhost:1313/images/pages/giseldo.jpg&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;&#xD;&#xA;  &lt;/figure&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xA;&lt;/div&gt;&lt;div class=&#34;right&#34;&gt;&#xD;&#xA;&#xA;Giseldo Neo é  pesquisador e Professor de Informática no Instituto Federal de Alagoas (IFAL). Doutorando em Ciência da Computação (UFCG), Mestre em Modelagem Computacional do Conhecimento (UFAL), Mestre em Administração e Contabilidade (FUCAPE). Possui MBA em Gestão e Estratégia Empresarial (ESTACIO), Especialização em Arquitetura e Engenharia de Software (ESTÁCIO), MBA em Gestão de Projetos (UNINTER). Graduação em Análise e Desenvolvimento de Sistemas (ESTÁCIO), Graduação em Processos Gerenciais (UNINTER) e Técnico de Informática pela ETF-SE (Escola técnica federal de sergipe).&#xA;&lt;/div&gt;&lt;div style=&#34;clear:both&#34;&gt;&lt;/div&gt;&lt;/div&gt;&#xD;&#xA;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title></title>
-      <link>http://localhost:1313/page/jogos/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>giseldo@gmail.com (Giseldo Neo)</author>
-      <guid>http://localhost:1313/page/jogos/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://giseldo.github.io/jogo_fantech-space_invaders_clone/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Space Invaders Clone&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://giseldo.github.io/jogo_fantech-space_invaders_clone/catrunner.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Cat Runner&lt;/a&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

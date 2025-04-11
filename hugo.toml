@@ -55,7 +55,3 @@ pygmentsCodefencesGuessSyntax = true
     url = "http://youtube.com/giseldoneo"
     weight = 3
 
-[[menu.main]]
-    name = "Jogos"
-    url = "page/jogos"
-    weight = 4
