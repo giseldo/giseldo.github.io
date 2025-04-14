@@ -8,6 +8,8 @@ toc: True
 ---
 
 
-[Space Invaders Clone (↗)](https://giseldo.github.io/jogo_fantech-space_invaders_clone/)
+[Space Invaders Clone v1 (↗)](https://giseldo.github.io/jogo_space_invaders_v1/)
 
-[Cat Runner](https://giseldo.github.io/jogo_fantech-space_invaders_clone/catrunner.html)
+[Space Invaders Clone v2 (↗)](https://giseldo.github.io/jogo_space_invaders_v2/)
+
+[Cat Runner](https://giseldo.github.io/jogo_runnner/)
