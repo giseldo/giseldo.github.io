@@ -1,0 +1,20 @@
+# Hugo build output
+/public/
+/resources/
+
+# Hugo server generated files
+hugo_stats.json
+
+# Logs and temporary files
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+
+# Node.js dependencies (if using npm/yarn)
+node_modules/
+
+# Backup files
+*.bak
+*.swp
+*.swo
