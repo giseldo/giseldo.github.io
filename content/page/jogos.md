@@ -12,4 +12,4 @@ toc: True
 
 [Space Invaders Clone v2 (↗)](https://giseldo.github.io/jogo_space_invaders_v2/)
 
-[Cat Runner](https://giseldo.github.io/jogo_runnner/)
+[Cat Runner](https://giseldo.github.io/jogo_runner/)
