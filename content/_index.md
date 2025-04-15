@@ -1,11 +1,15 @@
-## Hey Listen!
+## Bem-vindo!
 
-No [blog](https://giseldo.hashnode.dev/) você terá acesso a informações técnicas relacionadas a inteligência artificial. Além disso, escrevemos também no [medium](https://medium.com/@giseldoneo) e no [substack](https://giseldo.substack.com/).
+Aqui você encontra conteúdos exclusivos sobre inteligência artificial, aprendizado de máquina e desenvolvimento de software.
 
-No site de [cursos](http://giseldo.github.io/cursos) você encontrará cursos relacionados a inteligência artificial, aprendizagem de máquina e chatbots.
+Acompanhe meus artigos técnicos no [blog](https://giseldo.hashnode.dev/), além de publicações no [Medium](https://medium.com/@giseldoneo) e no [Substack](https://giseldo.substack.com/).
 
-Você também pode acompanhar nossas [pesquisas acadêmicas](page/pesquisas/), nossos [produtos de software](page/produtos/), nossos [livros técnicos](page/livros/) e ouvir nosso [podcast soobre as peesquisas](page/podcast/). 
+No site de [cursos](http://giseldo.github.io/cursos), ofereço formações práticas e atualizadas em inteligência artificial, machine learning, chatbots e outras áreas da tecnologia.
 
-Canal no [youtube](http://youtube.com/giseldoneo).
+Explore também minhas [pesquisas acadêmicas](page/pesquisas/), [produtos de software](page/produtos/), [livros técnicos](page/livros/) e ouça o [podcast sobre pesquisas e tendências](page/podcast/).
 
-Nova seção de [Jogos](page/jogos).
+Inscreva-se no canal do [YouTube](http://youtube.com/giseldoneo) para videoaulas, tutoriais e debates sobre tecnologia.
+
+Confira ainda a nova seção de [Jogos](page/jogos).
+
+Sinta-se à vontade para explorar, aprender e se conectar!
