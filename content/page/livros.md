@@ -51,3 +51,17 @@ suas futuras explorações no mundo do processamento de linguagem natural.
 - [Adquirir e-pub na Amazon (↗)](https://www.amazon.com.br/gp/product/B0DGB9W7MW)
 - [Adquirir livro físico na UICLA (↗)](https://loja.uiclap.com/titulo/ua65564)
 {{< endcolumns >}}
+
+
+---
+
+## Contos do Sistema Solar (ficção)
+
+{{< columns >}}
+{{< figure src="/images/livro/vetorizacao/capa.png" width="75%" >}}
+{{< column >}}
+
+- [Livro Download PDF (↗)](/images/livro/contos/contos.pdf) 
+
+{{< endcolumns >}}
+
