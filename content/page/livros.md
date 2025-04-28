@@ -13,8 +13,6 @@ toc: True
 {{< figure src="/images/livro/chatbot/capa.png" width="75%" >}}
 {{< column >}}
 
-
-
 Este livro explora o universo dos chatbots, desde suas definições e contexto histórico, com foco no pioneiro ELIZA e sua mecânica baseada em correspondência de padrões e regras de transformação. O material aborda a Artificial Intelligence Markup Language (AIML) como uma linguagem para construir agentes conversacionais e demonstra uma implementação simplificada do ELIZA em Python. Além disso, discute o uso de Large Language Models (LLMs) como o ChatGPT com a ajuda do LangChain e a técnica de engenharia de prompts para criar chatbots avançados. 
 
 - [Livro Download PDF (↗)](/images/livro/chatbot/chatbot.pdf) 
@@ -52,16 +50,14 @@ suas futuras explorações no mundo do processamento de linguagem natural.
 - [Adquirir livro físico na UICLA (↗)](https://loja.uiclap.com/titulo/ua65564)
 {{< endcolumns >}}
 
-
 ---
 
 ## Contos do Sistema Solar (ficção)
 
 {{< columns >}}
-{{< figure src="/images/livro/vetorizacao/capa.png" width="75%" >}}
+{{< figure src="/images/livro/contos/capa.png" width="75%" >}}
 {{< column >}}
 
 - [Livro Download PDF (↗)](/images/livro/contos/contos.pdf) 
 
 {{< endcolumns >}}
-
