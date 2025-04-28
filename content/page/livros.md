@@ -7,7 +7,14 @@ weight: 2
 toc: True
 ---
 
-## Chatbot Book (com Python)
+## Sumário
+
+- [Chatbot Book (com Python)](#chatbot-book-com-python)
+- [Regressão Linear com Aprendizagem de Máquina com Python](#regressao-linear-com-aprendizagem-de-maquina-com-python)
+- [Processamento de Linguagem Natural: Vetorização de Texto com Python](#processamento-de-linguagem-natural-vetorizacao-de-texto-com-python)
+- [Contos do Sistema Solar (ficção)](#contos-do-sistema-solar-ficcao)
+
+## ChatbotBook com Python
 
 {{< columns >}}
 {{< figure src="/images/livro/chatbot/capa.png" width="75%" >}}
