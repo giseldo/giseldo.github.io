@@ -60,6 +60,6 @@ suas futuras explorações no mundo do processamento de linguagem natural.
 {{< figure src="/images/livro/contos/capa.png" width="75%" >}}
 {{< column >}}
 
-- [Livro Download PDF (↗)](/images/livro/contos/contos.pdf) 
+- [Livro Download PDF (↗)](https://raw.githubusercontent.com/giseldo/Contos-do-Sistema-Solar/main/main.pdf) 
 
 {{< endcolumns >}}
