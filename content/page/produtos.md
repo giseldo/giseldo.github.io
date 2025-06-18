@@ -72,6 +72,18 @@ Exlui páginas do PDF e realiza Merge
 
 ---
 
+## Text Readability Analyzer 
+
+Text Readability Analyzer
+
+- [Demo on-line (↗)](https://thunderous-khapse-fc8aec.netlify.app)
+
+- [Código-fonte (↗)](https://github.com/giseldo/readability-metrics)
+
+{{< figure src="/images/readability.png" width="50%" >}}
+
+---
+
 ## Neo Google Sala de Aula (protótipo)
 
 Um Google Sala de aula com métricas
