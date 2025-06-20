@@ -6,7 +6,7 @@ weight: 4
 draft: false
 ---
 
-## Um simples editor de Markdow
+## Um simples editor de Markdow (lovable)
 
 - [Demo on-line(↗)](https://clean-markdown-canvas.lovable.app/)
 
@@ -17,7 +17,7 @@ draft: false
 
 ---
 
-## Um simples editor de Latex
+## Um simples editor de Latex (lovable)
 
 - [Demo on-line (↗)](https://clean-latex-canvas.lovable.app/)
 
@@ -27,7 +27,7 @@ draft: false
 
 ---
 
-## Um simples editor de Mermaid
+## Um simples editor de Mermaid (lovable)
 
 - [Demo on-line(↗)](https://clean-mermaid.lovable.app/)
 
@@ -38,7 +38,7 @@ draft: false
 
 ---
 
-## Neo Cursos (v2) - Venda de cursos on-line
+## Neo Cursos (v2) - Venda de cursos on-line (lovable)
 
 - [Demo on-line (↗)](https://skill-up-course-portal.lovable.app/)
 
@@ -48,7 +48,7 @@ draft: false
 
 ---
 
-## Construtor de Chatbots com PLN (intenção e response)
+## Construtor de Chatbots com PLN (intenção e response) (lovable)
 
 - [Demo on-line (↗)](https://flow-buddy-chat.lovable.app/)
 
@@ -60,7 +60,7 @@ draft: false
 
 ---
 
-## Neo PDF Editor 
+## Neo PDF Editor  (lovable)
 
 Exlui páginas do PDF e realiza Merge
 
@@ -72,7 +72,7 @@ Exlui páginas do PDF e realiza Merge
 
 ---
 
-## Text Readability Analyzer 
+## Text Readability Analyzer (bolt)
 
 Text Readability Analyzer
 
@@ -84,7 +84,7 @@ Text Readability Analyzer
 
 ---
 
-## Neo Google Sala de Aula (protótipo)
+## Neo Google Sala de Aula (protótipo) (lovable)
 
 Um Google Sala de aula com métricas
 
@@ -95,6 +95,26 @@ Um Google Sala de aula com métricas
 {{< figure src="/images/neometrics1.png" width="50%" >}}
 
 {{< figure src="/images/neometrics2.png" width="50%" >}}
+
+---
+
+## Crie diagramas BPMN conversando (v0)
+
+- [Demo on-line (↗)](https://v0-business-process-modeler.vercel.app/)
+
+- [Código-fonte (↗)](https://github.com/giseldo/bpmn-flow)
+
+{{< figure src="/images/bpmn.png" width="50%" >}}
+
+---
+
+## Estimador de Story Points (v0)
+
+- [Demo on-line (↗)](https://neosp.vercel.app)
+
+- [Código-fonte (↗)](https://github.com/giseldo/estimador_de_story_points)
+
+{{< figure src="/images/estimador.png" width="50%" >}}
 
 ---
 
