@@ -118,6 +118,30 @@ Um Google Sala de aula com métricas
 
 ---
 
+## Detecção de fraudes em contratos (v0)
+
+- [Demo on-line (↗)](https://v0-fraud-detection-in-contracts.vercel.app/)
+
+- [Código-fonte (↗)](https://github.com/giseldo/fraud-detection)
+
+{{< figure src="/images/estimador.png" width="50%" >}}
+
+---
+
+## Chatbot Eliza (hugging face)
+
+Um chatbot baseado no chatbot Eliza de 1966
+
+- [Versão do Eliza com casamento de padrão](https://giseldo-eliza-raiz.hf.space)
+
+{{< figure src="/images/elizaraiz.png" width="50%" >}}
+
+- [Versão do Eliza com LLM](https://giseldo-eliza-llm.hf.space)
+
+{{< figure src="/images/elizallm.png" width="50%" >}}
+
+---
+
 ## NeoChatbots - Chatbots com RAG
 Chatbots com inteligência artificial
 
@@ -131,7 +155,6 @@ Chatbots com inteligência artificial
 ---
 
 ## NeoStudy - Um Gerador de Plano de estudo com IA
-Um gerador de plano de estudo personalizado com inteligência artificial
 
 [Study Plan](https://giseldo.github.io/study/)
 
@@ -153,14 +176,6 @@ Calendário de eventos científicos em ciência da computação
 
 {{< figure src="/images/pages/previsao.png" width="50%" >}}
 
----
-
-## Chatbot Eliza 
-Um chatbot baseado no chatbot Eliza de 1966
-
-- [Versão do Eliza com casamento de padrão](https://giseldo-eliza-raiz.hf.space)
-- [Versão do Eliza com LLM](https://giseldo-eliza-llm.hf.space)
-  
 ---
 
 ## NeoUST - User Story Tutor
