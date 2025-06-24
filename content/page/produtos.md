@@ -6,6 +6,8 @@ weight: 4
 draft: false
 ---
 
+---
+
 ## Um simples editor de Markdow (lovable)
 
 - [Demo on-line(↗)](https://clean-markdown-canvas.lovable.app/)
@@ -84,20 +86,6 @@ Text Readability Analyzer
 
 ---
 
-## Neo Google Sala de Aula (protótipo) (lovable)
-
-Um Google Sala de aula com métricas
-
-- [Demo on-line (↗)](https://student-insight-classroom-metrics.lovable.app/)
-
-- [Código-fonte (↗)](https://github.com/giseldo/student-insight-classroom-metrics)
-
-{{< figure src="/images/neometrics1.png" width="50%" >}}
-
-{{< figure src="/images/neometrics2.png" width="50%" >}}
-
----
-
 ## Crie diagramas BPMN conversando (v0)
 
 - [Demo on-line (↗)](https://v0-business-process-modeler.vercel.app/)
@@ -128,25 +116,37 @@ Um Google Sala de aula com métricas
 
 ---
 
-## Chatbot Eliza (hugging face)
+## NeoAVA - Ambiente Virtual de Aprendizagem com Autorregulação (streamlit)
 
-Um chatbot baseado no chatbot Eliza de 1966
+[NeoAVA](https://autorregulacao.streamlit.app/)
 
-- [Versão do Eliza com casamento de padrão](https://giseldo-eliza-raiz.hf.space)
+{{< figure src="/images/neoava.png" width="50%" >}}
+
+---
+
+## Chatbot baseado no chatbot Eliza de 1966 (hugging face)
+
+**Versão do Eliza com casamento de padrão**
+
+- [Demo on-line (↗)(↗)](https://giseldo-eliza-raiz.hf.space)
+
+- [Código-fonte (↗)](https://huggingface.co/spaces/giseldo/eliza_raiz/tree/main)
 
 {{< figure src="/images/elizaraiz.png" width="50%" >}}
 
-- [Versão do Eliza com LLM](https://giseldo-eliza-llm.hf.space)
+**Versão do Eliza com LLM**
+
+- [Demo on-line (↗)(↗)](https://giseldo-eliza-llm.hf.space)
+
+- [Código-fonte (↗)](https://huggingface.co/spaces/giseldo/eliza_raiz/tree/main)
 
 {{< figure src="/images/elizallm.png" width="50%" >}}
 
 ---
 
 ## NeoChatbots - Chatbots com RAG
-Chatbots com inteligência artificial
 
-- Um chatbot que conversa sobre o manual do aluno do IFAL
-- Um chatbot que conversa sobre o regimento do IFAL
+Chatbots com inteligência artificial. Um chatbot que conversa sobre o manual do aluno do IFAL e outro que conversa sobre o regimento do IFAL
 
 [NeoChatbots](https://giseldo.github.io/ifal/)
 
@@ -183,12 +183,7 @@ Um software para Previsão e melhoria de User Stories
 
 [User Story Tutor](https://giseldo-userstory.static.hf.space) 
 
----
 
-## NeoAVA - Ambiente Virtual de Aprendizagem com Autorregulação
-Um Ambiente Virtual de Aprendizagem com foco em recomendação
-
-[NeoAVA](https://autorregulacao.streamlit.app/)
 
 ---
 
@@ -196,3 +191,19 @@ Um Ambiente Virtual de Aprendizagem com foco em recomendação
 Um Sistema Especialista com encadeamento para trás, bem simples, baseado no Expert Sinta
 
 [NeoSE](https://giseldo-neo-sistema-especialista.hf.space)
+
+---
+
+## Neo Google Sala de Aula (protótipo) (lovable)
+
+Um Google Sala de aula com métricas
+
+- [Demo on-line (↗)](https://student-insight-classroom-metrics.lovable.app/)
+
+- [Código-fonte (↗)](https://github.com/giseldo/student-insight-classroom-metrics)
+
+{{< figure src="/images/neometrics1.png" width="50%" >}}
+
+{{< figure src="/images/neometrics2.png" width="50%" >}}
+
+---
