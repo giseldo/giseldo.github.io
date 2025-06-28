@@ -7,7 +7,7 @@ weight: 2
 toc: True
 ---
 
-## ChatbotBook com Python
+<!-- ## ChatbotBook com Python
 
 {{< columns >}}
 {{< figure src="/images/livro/chatbot/capa.png" width="75%" >}}
@@ -21,7 +21,7 @@ Este livro explora o universo dos chatbots, desde suas definições e contexto h
 
 {{< endcolumns >}}
 
----
+--- -->
 
 ## Regressão Linear com Aprendizagem de Máquina com Python
 
