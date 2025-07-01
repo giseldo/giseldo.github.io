@@ -8,6 +8,8 @@ draft: false
 
 # Produtos Homologados
 
+---
+
 ## Um Gerador de Questões com IA(v0)
 
 - [Demo on-line(↗)](https://v0-gerador-de-questoes.vercel.app/)
@@ -18,6 +20,7 @@ draft: false
 
 ![image](https://github.com/user-attachments/assets/dcca33c8-8cb5-4bd5-b727-b71339a75d01)
 
+---
 
 ## Um Editor markdown com IA (v0)
 
@@ -30,6 +33,20 @@ draft: false
   ![image](https://github.com/user-attachments/assets/c3e9a58e-25f4-4508-b56f-805b3bc56d9b)
 
   ![image](https://github.com/user-attachments/assets/3fb3666c-c381-4254-b380-0034e1d5463a)
+
+---
+
+## Um Criador de Dinâmica de Sistemas (versão beta) (v0)
+
+- [Demo on-line(↗)](https://v0-dynamic-system-diagrams.vercel.app/)
+
+- [Código-fonte (↗)](https://github.com/giseldo/neodinamicasistemas-v0)
+
+![image](https://github.com/user-attachments/assets/e94d03bb-c9e9-4207-943c-fefb1fda3a25)
+
+![image](https://github.com/user-attachments/assets/0cbfc7ea-ee5d-49f3-9b0a-17724a96ee1c)
+
+---
 
 ## Um simples modelador de BPMN (bolt)
 
