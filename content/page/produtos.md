@@ -24,7 +24,7 @@ draft: false
 
 - [Código-fonte (↗)](https://github.com/giseldo/neobpmn)
 
-{{< figure src="https://github.com/user-attachments/assets/7ad8a67e-d100-423f-9013-697a74eeb614" width="50%" >}}
+![image](https://github.com/user-attachments/assets/7ad8a67e-d100-423f-9013-697a74eeb614)
 
 ---
 
