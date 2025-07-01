@@ -8,7 +8,15 @@ draft: false
 
 # Produtos Homologados
 
-## Um simples modelador de BPMN (bolt)
+## Um Gerador de Questões com LLM (v0)
+
+- [Demo on-line(↗)]([https://giseldo.github.io/neobpmn/](https://v0-gerador-de-questoes.vercel.app/))
+
+- [Código-fonte (↗)](https://github.com/giseldo/v0-gerador-de-questoes)
+
+![image](https://github.com/user-attachments/assets/109c274a-f27a-4990-9fa7-f62fc6a599cd)
+
+## Um simples modelador de BPMN com LLM (bolt)
 
 - [Demo on-line(↗)](https://giseldo.github.io/neobpmn/)
 
