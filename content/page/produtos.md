@@ -6,6 +6,15 @@ weight: 4
 draft: false
 ---
 
+
+## Um simples modelador de BPMN (bolt)
+
+- [Demo on-line(↗)](https://giseldo.github.io/neobpmn/)
+
+- [Código-fonte (↗)](https://github.com/giseldo/neobpmn)
+
+{{< figure src="https://github.com/user-attachments/assets/7ad8a67e-d100-423f-9013-697a74eeb614" width="50%" >}}
+
 ---
 
 ## Um simples editor de Markdow (lovable)
