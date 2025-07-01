@@ -8,15 +8,28 @@ draft: false
 
 # Produtos Homologados
 
-## Um Gerador de Questões (v0)
+## Um Gerador de Questões com IA(v0)
 
-- [Demo on-line(↗)]([https://giseldo.github.io/neobpmn/](https://v0-gerador-de-questoes.vercel.app/))
+- [Demo on-line(↗)](https://v0-gerador-de-questoes.vercel.app/)
 
 - [Código-fonte (↗)](https://github.com/giseldo/v0-gerador-de-questoes)
 
 ![image](https://github.com/user-attachments/assets/109c274a-f27a-4990-9fa7-f62fc6a599cd)
 
 ![image](https://github.com/user-attachments/assets/dcca33c8-8cb5-4bd5-b727-b71339a75d01)
+
+
+## Um Editor markdown com IA (v0)
+
+- [Demo on-line(↗)](https://v0-editor-wysiwyg.vercel.app/)
+
+- [Código-fonte (↗)](https://github.com/giseldo/markdown-editor)
+
+  ![image](https://github.com/user-attachments/assets/de486c47-ced7-496f-9271-ef058706a245)
+
+  ![image](https://github.com/user-attachments/assets/c3e9a58e-25f4-4508-b56f-805b3bc56d9b)
+
+  ![image](https://github.com/user-attachments/assets/3fb3666c-c381-4254-b380-0034e1d5463a)
 
 ## Um simples modelador de BPMN (bolt)
 
