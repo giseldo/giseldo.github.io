@@ -6,6 +6,7 @@ weight: 4
 draft: false
 ---
 
+# Produtos Homologados
 
 ## Um simples modelador de BPMN (bolt)
 
@@ -115,16 +116,6 @@ Text Readability Analyzer
 
 ---
 
-## Detecção de fraudes em contratos (v0)
-
-- [Demo on-line (↗)](https://v0-fraud-detection-in-contracts.vercel.app/)
-
-- [Código-fonte (↗)](https://github.com/giseldo/fraud-detection)
-
-{{< figure src="/images/estimador.png" width="50%" >}}
-
----
-
 ## NeoAVA - Ambiente Virtual de Aprendizagem com Autorregulação (streamlit)
 
 [NeoAVA](https://autorregulacao.streamlit.app/)
@@ -137,7 +128,7 @@ Text Readability Analyzer
 
 **Versão do Eliza com casamento de padrão**
 
-- [Demo on-line (↗)(↗)](https://giseldo-eliza-raiz.hf.space)
+- [Demo on-line (↗)](https://giseldo-eliza-raiz.hf.space)
 
 - [Código-fonte (↗)](https://huggingface.co/spaces/giseldo/eliza_raiz/tree/main)
 
@@ -150,6 +141,10 @@ Text Readability Analyzer
 - [Código-fonte (↗)](https://huggingface.co/spaces/giseldo/eliza_raiz/tree/main)
 
 {{< figure src="/images/elizallm.png" width="50%" >}}
+
+
+
+# Produtos em fase Beta
 
 ---
 
@@ -192,8 +187,6 @@ Um software para Previsão e melhoria de User Stories
 
 [User Story Tutor](https://giseldo-userstory.static.hf.space) 
 
-
-
 ---
 
 ## NeoSE - Um simples Sistema Especialista
@@ -216,3 +209,12 @@ Um Google Sala de aula com métricas
 {{< figure src="/images/neometrics2.png" width="50%" >}}
 
 ---
+
+## Detecção de fraudes em contratos (v0)
+
+- [Demo on-line (↗)](https://v0-fraud-detection-in-contracts.vercel.app/)
+
+- [Código-fonte (↗)](https://github.com/giseldo/fraud-detection)
+
+{{< figure src="/images/estimador.png" width="50%" >}}
+
