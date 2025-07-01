@@ -8,7 +8,7 @@ draft: false
 
 # Produtos Homologados
 
-## Um Gerador de Questões com LLM (v0)
+## Um Gerador de Questões (v0)
 
 - [Demo on-line(↗)]([https://giseldo.github.io/neobpmn/](https://v0-gerador-de-questoes.vercel.app/))
 
@@ -16,7 +16,9 @@ draft: false
 
 ![image](https://github.com/user-attachments/assets/109c274a-f27a-4990-9fa7-f62fc6a599cd)
 
-## Um simples modelador de BPMN com LLM (bolt)
+![image](https://github.com/user-attachments/assets/dcca33c8-8cb5-4bd5-b727-b71339a75d01)
+
+## Um simples modelador de BPMN (bolt)
 
 - [Demo on-line(↗)](https://giseldo.github.io/neobpmn/)
 
@@ -31,7 +33,6 @@ draft: false
 - [Demo on-line(↗)](https://clean-markdown-canvas.lovable.app/)
 
 - [Código-fonte (↗)](https://github.com/giseldo/clean-markdown-canvas)
-
 
 {{< figure src="/images/markdowneditor.png" width="50%" >}}
 
