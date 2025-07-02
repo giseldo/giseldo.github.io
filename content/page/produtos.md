@@ -10,7 +10,7 @@ draft: false
 
 ---
 
-## Um Gerador de Questões com IA(v0)
+## Um Gerador de Questões com IA (v0)
 
 - [Demo on-line(↗)](https://v0-gerador-de-questoes.vercel.app/)
 
@@ -45,6 +45,18 @@ draft: false
 ![image](https://github.com/user-attachments/assets/e94d03bb-c9e9-4207-943c-fefb1fda3a25)
 
 ![image](https://github.com/user-attachments/assets/0cbfc7ea-ee5d-49f3-9b0a-17724a96ee1c)
+
+---
+
+## Kambam Pomodoro (v0)
+
+- [Demo on-line(↗)]([https://v0-gerador-de-questoes.vercel.app/](https://v0-kambam-setup.vercel.app/))
+
+- [Código-fonte (↗)](https://github.com/giseldo/v0-gerador-de-questoes)
+
+![image](https://github.com/user-attachments/assets/62cafb0b-86e8-478b-b5e3-f764ec850aa9)
+
+![image](https://github.com/user-attachments/assets/889aadc9-165e-4691-8e3a-cba542059153)
 
 ---
 
