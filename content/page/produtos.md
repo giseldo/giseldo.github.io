@@ -126,8 +126,7 @@ Quando o sistema usa banco de dados, por causa da  limitação da conta gratuita
 
 - [Código-fonte (↗)](https://github.com/giseldo/clean-markdown-canvas)
 
-{{< figure src="/images/markdowneditor.png" width="50%" >}}
-
+![image](/images/markdowneditor.png)
 ---
 
 ## NeoLatex - Um simples editor de Latex (lovable) (não usa banco de dados)
