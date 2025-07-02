@@ -6,9 +6,7 @@ weight: 4
 draft: false
 ---
 
-# Produtos Homologados
-
-Quando o sistema usa banco de dados, por causa dde uma limitação da conta gratuita do supabase, é necessário iniciar o servidor. Portanto envie um email para giseldo@gmail.com com o nome do projeto que deseja testar se o mesmo utilizar banco de dados.
+Quando o sistema usa banco de dados, por causa da  limitação da conta gratuita do supabase, é necessário iniciar o servidor. Portanto envie um email para giseldo@gmail.com com o nome do projeto que deseja testar se o mesmo utilizar banco de dados para superar esta limitação.
 
 ---
 
@@ -75,7 +73,7 @@ Quando o sistema usa banco de dados, por causa dde uma limitação da conta grat
 
 ---
 
-## Detecção de fraudes em contratos com IA (v0) (não usa banco de dados)
+## Detecção de fraudes em contratos com IA (v0) (não usa banco de dados) (beta)
 
 - [Demo on-line (↗)](https://v0-fraud-detection-in-contracts.vercel.app/)
 
@@ -84,8 +82,6 @@ Quando o sistema usa banco de dados, por causa dde uma limitação da conta grat
 ![image](https://github.com/user-attachments/assets/ccfd5619-ede1-42f2-8d40-e184e8967caf)
 
 ![image](https://github.com/user-attachments/assets/e0c933cb-f394-424c-802e-8e80aa068f62)
-
-
 
 ---
 
