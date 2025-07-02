@@ -50,13 +50,26 @@ draft: false
 
 ## Kambam Pomodoro (v0)
 
-- [Demo on-line(↗)]([https://v0-gerador-de-questoes.vercel.app/](https://v0-kambam-setup.vercel.app/))
+- [Demo on-line(↗)](https://v0-kambam-setup.vercel.app/)
 
 - [Código-fonte (↗)](https://github.com/giseldo/v0-gerador-de-questoes)
 
 ![image](https://github.com/user-attachments/assets/62cafb0b-86e8-478b-b5e3-f764ec850aa9)
 
 ![image](https://github.com/user-attachments/assets/889aadc9-165e-4691-8e3a-cba542059153)
+
+
+---
+
+## Cria Chatbot com AIML (v0)
+
+- [Demo on-line(↗)](https://v0-aiml-chatbot-editor.vercel.app)
+
+- [Código-fonte (↗)](https://github.com/giseldo/v0-gerador-de-questoes)
+
+![image](https://github.com/user-attachments/assets/7e755dad-0a59-4e5f-bd18-5e5e4ca61f28)
+
+![image](https://github.com/user-attachments/assets/36962e37-b04c-4a23-9479-72d611818059)
 
 ---
 
