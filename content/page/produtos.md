@@ -8,9 +8,11 @@ draft: false
 
 # Produtos Homologados
 
+* Quando o sistema usa banco de dados, por causa dde uma limitação da conta gratuita do supabase, é necessário iniciar o servidor. Portanto envie um email para giseldo@gmail.com com o nome do projeto que deseja testar se o mesmo utilizar banco de dados.
+
 ---
 
-## Um Gerador de Questões com IA (v0)
+## NeoGeradorQuestoes - Um Gerador de Questões com IA (v0) (não usa banco de dados)
 
 - [Demo on-line(↗)](https://v0-gerador-de-questoes.vercel.app/)
 
@@ -22,7 +24,7 @@ draft: false
 
 ---
 
-## Um Editor markdown com IA (v0)
+## NeoMarkdowV - Um Editor markdown com IA (v0) (não usa banco de dados)
 
 - [Demo on-line(↗)](https://v0-editor-wysiwyg.vercel.app/)
 
@@ -36,7 +38,7 @@ draft: false
 
 ---
 
-## Um Criador de Dinâmica de Sistemas (versão beta) (v0)
+## NeoDinamicaSistemas - Um Criador de Dinâmica de Sistemas (versão beta) (v0) (não usa banco de dados)
 
 - [Demo on-line(↗)](https://v0-dynamic-system-diagrams.vercel.app/)
 
@@ -48,7 +50,7 @@ draft: false
 
 ---
 
-## Kambam Pomodoro (v0)
+## NeoKambamPomodoro - Um Kambam com Pomodoro (v0) (não usa banco de dados)
 
 - [Demo on-line(↗)](https://v0-kambam-setup.vercel.app/)
 
@@ -61,7 +63,7 @@ draft: false
 
 ---
 
-## Cria Chatbot com AIML (v0)
+## NeoAIMLEditor - Cria Chatbots com AIML (v0) (não usa banco de dados)
 
 - [Demo on-line(↗)](https://v0-aiml-chatbot-editor.vercel.app)
 
@@ -73,7 +75,7 @@ draft: false
 
 ---
 
-## Um simples modelador de BPMN (bolt)
+## NeoBPMNEditor - Um simples modelador visual de BPMN (bolt) (não usa banco de dados)
 
 - [Demo on-line(↗)](https://giseldo.github.io/neobpmn/)
 
@@ -83,7 +85,7 @@ draft: false
 
 ---
 
-## Um simples editor de Markdow (lovable)
+## NeoMarkdowL - Um simples editor de Markdow (lovable) (não usa banco de dados)
 
 - [Demo on-line(↗)](https://clean-markdown-canvas.lovable.app/)
 
@@ -93,7 +95,7 @@ draft: false
 
 ---
 
-## Um simples editor de Latex (lovable)
+## NeoLatex - Um simples editor de Latex (lovable) (não usa banco de dados)
 
 - [Demo on-line (↗)](https://clean-latex-canvas.lovable.app/)
 
@@ -103,7 +105,7 @@ draft: false
 
 ---
 
-## Um simples editor de Mermaid (lovable)
+## NeoMermaid - Um simples editor de Mermaid (lovable) (não usa banco de dados)
 
 - [Demo on-line(↗)](https://clean-mermaid.lovable.app/)
 
@@ -114,7 +116,7 @@ draft: false
 
 ---
 
-## Neo Cursos (v2) - Venda de cursos on-line (lovable)
+## NeoCursos - Venda de cursos on-line (lovable) (com banco de dados)
 
 - [Demo on-line (↗)](https://skill-up-course-portal.lovable.app/)
 
@@ -124,7 +126,7 @@ draft: false
 
 ---
 
-## Construtor de Chatbots com PLN (intenção e response) (lovable)
+## NeoPLNChatbot - Construtor de Chatbots com PLN (intenção e response) (lovable) (não usa banco de dados)
 
 - [Demo on-line (↗)](https://flow-buddy-chat.lovable.app/)
 
@@ -136,7 +138,7 @@ draft: false
 
 ---
 
-## Neo PDF Editor  (lovable)
+## NeoPDFEditor - Neo PDF Editor (lovable) (não usa banco de dados)
 
 Exlui páginas do PDF e realiza Merge
 
@@ -148,7 +150,7 @@ Exlui páginas do PDF e realiza Merge
 
 ---
 
-## Text Readability Analyzer (bolt)
+## NeoReadability - Text Readability Analyzer (bolt) (não usa banco de dados)
 
 Text Readability Analyzer
 
@@ -160,7 +162,7 @@ Text Readability Analyzer
 
 ---
 
-## Crie diagramas BPMN conversando (v0)
+## NeoBPMNEditorIO - Crie diagramas BPMN conversando (v0) (não usa banco de dados)
 
 - [Demo on-line (↗)](https://v0-business-process-modeler.vercel.app/)
 
@@ -170,7 +172,7 @@ Text Readability Analyzer
 
 ---
 
-## Estimador de Story Points (v0)
+## NeoSP - Estimador de Story Points (v0) (não usa banco de dados)
 
 - [Demo on-line (↗)](https://neosp.vercel.app)
 
@@ -184,7 +186,7 @@ Text Readability Analyzer
 
 ---
 
-## NeoAVA - Ambiente Virtual de Aprendizagem com Autorregulação (streamlit)
+## NeoAVA - Ambiente Virtual de Aprendizagem com Autorregulação (streamlit) 
 
 [NeoAVA](https://autorregulacao.streamlit.app/)
 
