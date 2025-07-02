@@ -72,7 +72,6 @@ Quando o sistema usa banco de dados, por causa da  limitação da conta gratuita
 
 ![image](https://github.com/user-attachments/assets/889aadc9-165e-4691-8e3a-cba542059153)
 
-
 ---
 
 ## NeoAIMLEditor - Cria Chatbots com AIML (v0) (não usa banco de dados)
@@ -106,6 +105,18 @@ Quando o sistema usa banco de dados, por causa da  limitação da conta gratuita
 - [Código-fonte (↗)](https://github.com/giseldo/neobpmn)
 
 ![image](https://github.com/user-attachments/assets/7ad8a67e-d100-423f-9013-697a74eeb614)
+
+---
+
+## NeoAdvocate - Um software de gestão de advocacia (bolt) (não usa banco de dados) (beta)
+
+- [Demo on-line(↗)](https://v0-new-project-rvge2mxlgpt.vercel.app/)
+
+- [Código-fonte (↗)](https://github.com/giseldo/neoadvocate)
+
+![image](https://github.com/user-attachments/assets/c8d9dffa-9bb3-44e8-a077-ef0c4f2f6bc6)
+
+![image](https://github.com/user-attachments/assets/b5cbf3f0-6518-46e0-8a0c-0fe1998f4185)
 
 ---
 
