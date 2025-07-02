@@ -151,7 +151,11 @@ Text Readability Analyzer
 
 - [Código-fonte (↗)](https://github.com/giseldo/estimador_de_story_points)
 
-{{< figure src="/images/estimador.png" width="50%" >}}
+![image](https://github.com/user-attachments/assets/c7c83382-4655-413c-b658-c28f39933d46)
+
+![image](https://github.com/user-attachments/assets/7e6c2397-7d8c-4154-bf32-e4c56d11b825)
+
+![image](https://github.com/user-attachments/assets/3bcaab4c-4d4d-4c4b-90ba-43d9f938bde9)
 
 ---
 
