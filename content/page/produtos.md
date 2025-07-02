@@ -8,7 +8,7 @@ draft: false
 
 # Produtos Homologados
 
-* Quando o sistema usa banco de dados, por causa dde uma limitação da conta gratuita do supabase, é necessário iniciar o servidor. Portanto envie um email para giseldo@gmail.com com o nome do projeto que deseja testar se o mesmo utilizar banco de dados.
+Quando o sistema usa banco de dados, por causa dde uma limitação da conta gratuita do supabase, é necessário iniciar o servidor. Portanto envie um email para giseldo@gmail.com com o nome do projeto que deseja testar se o mesmo utilizar banco de dados.
 
 ---
 
@@ -72,6 +72,20 @@ draft: false
 ![image](https://github.com/user-attachments/assets/7e755dad-0a59-4e5f-bd18-5e5e4ca61f28)
 
 ![image](https://github.com/user-attachments/assets/36962e37-b04c-4a23-9479-72d611818059)
+
+---
+
+## Detecção de fraudes em contratos com IA (v0) (não usa banco de dados)
+
+- [Demo on-line (↗)](https://v0-fraud-detection-in-contracts.vercel.app/)
+
+- [Código-fonte (↗)](https://github.com/giseldo/fraud-detection)
+
+![image](https://github.com/user-attachments/assets/ccfd5619-ede1-42f2-8d40-e184e8967caf)
+
+![image](https://github.com/user-attachments/assets/e0c933cb-f394-424c-802e-8e80aa068f62)
+
+
 
 ---
 
@@ -280,11 +294,5 @@ Um Google Sala de aula com métricas
 
 ---
 
-## Detecção de fraudes em contratos (v0)
 
-- [Demo on-line (↗)](https://v0-fraud-detection-in-contracts.vercel.app/)
-
-- [Código-fonte (↗)](https://github.com/giseldo/fraud-detection)
-
-{{< figure src="/images/estimador.png" width="50%" >}}
 
