@@ -4,6 +4,7 @@ comments: false
 menus: 'main'
 weight: 4
 draft: false
+toc: true
 ---
 
 Quando o sistema usa banco de dados, por causa da  limitação da conta gratuita do supabase, é necessário iniciar o servidor. Portanto envie um email para giseldo@gmail.com com o nome do projeto que deseja testar se o mesmo utilizar banco de dados para superar esta limitação.
