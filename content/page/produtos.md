@@ -13,9 +13,21 @@ Quando o sistema usa banco de dados, por causa da  limitação da conta gratuita
 
 ## V0 
 
+### NeoSistemaEspecialista - Um sistema especialista (v0) (usa banco de dados)
+
+- [Demo on-line(↗)]([https://neosp.vercel.app](https://neosistemaespecialista.vercel.app/))
+
+- [Código-fonte (↗)](https://github.com/giseldo/v0-supabase-expert-sistema)
+
+![image](https://github.com/user-attachments/assets/081d44eb-761b-4eb3-9fbd-2d8befcd2a9f)
+
+![image](https://github.com/user-attachments/assets/f2458aa0-6a68-4148-9fab-c7d8c58e13c6)
+
+---
+
 ### NeoSP - Estimador de Story Points (v0) (não usa banco de dados)
 
-- (streamlit)(https://neosp.vercel.app)
+- [Demo on-line(↗)](https://neosp.vercel.app)
 
 - [Código-fonte (↗)](https://github.com/giseldo/estimador_de_story_points)
 
