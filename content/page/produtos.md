@@ -10,7 +10,9 @@ Quando o sistema usa banco de dados, por causa da  limitação da conta gratuita
 
 ---
 
-## NeoSP - Estimador de Story Points (v0) (não usa banco de dados)
+## V0 
+
+### NeoSP - Estimador de Story Points (v0) (não usa banco de dados)
 
 - [Demo on-line (↗)](https://neosp.vercel.app)
 
@@ -24,7 +26,7 @@ Quando o sistema usa banco de dados, por causa da  limitação da conta gratuita
 
 ---
 
-## NeoGeradorQuestoes - Um Gerador de Questões com IA (v0) (não usa banco de dados)
+### NeoGeradorQuestoes - Um Gerador de Questões com IA (v0) (não usa banco de dados)
 
 - [Demo on-line(↗)](https://v0-gerador-de-questoes.vercel.app/)
 
@@ -36,7 +38,7 @@ Quando o sistema usa banco de dados, por causa da  limitação da conta gratuita
 
 ---
 
-## NeoMarkdowV - Um Editor markdown com IA (v0) (não usa banco de dados)
+### NeoMarkdowV - Um Editor markdown com IA (v0) (não usa banco de dados)
 
 - [Demo on-line(↗)](https://v0-editor-wysiwyg.vercel.app/)
 
@@ -50,7 +52,7 @@ Quando o sistema usa banco de dados, por causa da  limitação da conta gratuita
 
 ---
 
-## NeoDinamicaSistemas - Um Criador de Dinâmica de Sistemas (versão beta) (v0) (não usa banco de dados)
+### NeoDinamicaSistemas - Um Criador de Dinâmica de Sistemas (versão beta) (v0) (não usa banco de dados)
 
 - [Demo on-line(↗)](https://v0-dynamic-system-diagrams.vercel.app/)
 
@@ -62,7 +64,7 @@ Quando o sistema usa banco de dados, por causa da  limitação da conta gratuita
 
 ---
 
-## NeoKambamPomodoro - Um Kambam com Pomodoro (v0) (não usa banco de dados)
+### NeoKambamPomodoro - Um Kambam com Pomodoro (v0) (não usa banco de dados)
 
 - [Demo on-line(↗)](https://v0-kambam-setup.vercel.app/)
 
@@ -74,7 +76,7 @@ Quando o sistema usa banco de dados, por causa da  limitação da conta gratuita
 
 ---
 
-## NeoAIMLEditor - Cria Chatbots com AIML (v0) (não usa banco de dados)
+### NeoAIMLEditor - Cria Chatbots com AIML (v0) (não usa banco de dados)
 
 - [Demo on-line(↗)](https://v0-aiml-chatbot-editor.vercel.app)
 
@@ -86,7 +88,7 @@ Quando o sistema usa banco de dados, por causa da  limitação da conta gratuita
 
 ---
 
-## Detecção de fraudes em contratos com IA (v0) (não usa banco de dados) (beta)
+### Neodeteccaofraude -  Detecção de fraudes em contratos com IA (v0) (não usa banco de dados) (beta)
 
 - [Demo on-line (↗)](https://v0-fraud-detection-in-contracts.vercel.app/)
 
@@ -98,17 +100,9 @@ Quando o sistema usa banco de dados, por causa da  limitação da conta gratuita
 
 ---
 
-## NeoBPMNEditor - Um simples modelador visual de BPMN (bolt) (não usa banco de dados)
+## Bolt
 
-- [Demo on-line(↗)](https://giseldo.github.io/neobpmn/)
-
-- [Código-fonte (↗)](https://github.com/giseldo/neobpmn)
-
-![image](https://github.com/user-attachments/assets/7ad8a67e-d100-423f-9013-697a74eeb614)
-
----
-
-## NeoAdvocate - Um software de gestão de advocacia (bolt) (não usa banco de dados) (beta)
+### NeoAdvocate - Um software de gestão de advocacia (bolt) (não usa banco de dados) (beta)
 
 - [Demo on-line(↗)](https://v0-new-project-rvge2mxlgpt.vercel.app/)
 
@@ -120,67 +114,13 @@ Quando o sistema usa banco de dados, por causa da  limitação da conta gratuita
 
 ---
 
-## NeoMarkdowL - Um simples editor de Markdow (lovable) (não usa banco de dados)
+### NeoBPMNEditor - Um simples modelador visual de BPMN (bolt) (não usa banco de dados)
 
-- [Demo on-line(↗)](https://clean-markdown-canvas.lovable.app/)
+- [Demo on-line(↗)](https://giseldo.github.io/neobpmn/)
 
-- [Código-fonte (↗)](https://github.com/giseldo/clean-markdown-canvas)
+- [Código-fonte (↗)](https://github.com/giseldo/neobpmn)
 
-![image](/images/markdowneditor.png)
----
-
-## NeoLatex - Um simples editor de Latex (lovable) (não usa banco de dados)
-
-- [Demo on-line (↗)](https://clean-latex-canvas.lovable.app/)
-
-- [Código-fonte (↗)](https://github.com/giseldo/clean-latex-canvas)
-
-{{< figure src="/images/latexeditor.png" width="50%" >}}
-
----
-
-## NeoMermaid - Um simples editor de Mermaid (lovable) (não usa banco de dados)
-
-- [Demo on-line(↗)](https://clean-mermaid.lovable.app/)
-
-- [Código-fonte (↗)](https://github.com/giseldo/clean-mermaid)
-
-
-{{< figure src="/images/mermaideditor.png" width="50%" >}}
-
----
-
-## NeoCursos - Venda de cursos on-line (lovable) (com banco de dados)
-
-- [Demo on-line (↗)](https://skill-up-course-portal.lovable.app/)
-
-- [Código-fonte (↗)](https://github.com/giseldo/skill-up-course-portal)
-
-{{< figure src="/images/neocursos.png" width="50%" >}}
-
----
-
-## NeoPLNChatbot - Construtor de Chatbots com PLN (intenção e response) (lovable) (não usa banco de dados)
-
-- [Demo on-line (↗)](https://flow-buddy-chat.lovable.app/)
-
-- [Código-fonte (↗)](https://github.com/giseldo/flow-buddy-chat)
-
-{{< figure src="/images/construtorchatbot1.png" width="50%" >}}
-
-{{< figure src="/images/construtorchatbot2.png" width="50%" >}}
-
----
-
-## NeoPDFEditor - Neo PDF Editor (lovable) (não usa banco de dados)
-
-Exlui páginas do PDF e realiza Merge
-
-- [Demo on-line (↗)](https://neo-pdf-editor.lovable.app)
-
-- [Código-fonte (↗)](https://github.com/giseldo/neo-pdf-editor)
-
-{{< figure src="/images/neopdfeditor.png" width="50%" >}}
+![image](https://github.com/user-attachments/assets/7ad8a67e-d100-423f-9013-697a74eeb614)
 
 ---
 
@@ -192,7 +132,73 @@ Text Readability Analyzer
 
 - [Código-fonte (↗)](https://github.com/giseldo/readability-metrics)
 
-{{< figure src="/images/readability.png" width="50%" >}}
+![image](/images/readability.png)
+
+---
+
+## Lovable
+
+### NeoMarkdowL - Um simples editor de Markdow (lovable) (não usa banco de dados)
+
+- [Demo on-line(↗)](https://clean-markdown-canvas.lovable.app/)
+
+- [Código-fonte (↗)](https://github.com/giseldo/clean-markdown-canvas)
+
+![image](/images/markdowneditor.png)
+---
+
+### NeoLatex - Um simples editor de Latex (lovable) (não usa banco de dados)
+
+- [Demo on-line (↗)](https://clean-latex-canvas.lovable.app/)
+
+- [Código-fonte (↗)](https://github.com/giseldo/clean-latex-canvas)
+
+![image](/images/latexeditor.png)
+
+---
+
+### NeoMermaid - Um simples editor de Mermaid (lovable) (não usa banco de dados)
+
+- [Demo on-line(↗)](https://clean-mermaid.lovable.app/)
+
+- [Código-fonte (↗)](https://github.com/giseldo/clean-mermaid)
+
+
+![image](/images/mermaideditor.png)
+
+---
+
+### NeoCursos - Venda de cursos on-line (lovable) (com banco de dados)
+
+- [Demo on-line (↗)](https://skill-up-course-portal.lovable.app/)
+
+- [Código-fonte (↗)](https://github.com/giseldo/skill-up-course-portal)
+
+![image](/images/neocursos.png)
+
+---
+
+### NeoPLNChatbot - Construtor de Chatbots com PLN (intenção e response) (lovable) (não usa banco de dados)
+
+- [Demo on-line (↗)](https://flow-buddy-chat.lovable.app/)
+
+- [Código-fonte (↗)](https://github.com/giseldo/flow-buddy-chat)
+
+![image](/images/construtorchatbot1.png)
+
+![image](/images/construtorchatbot2.png)
+
+---
+
+### NeoPDFEditor - Neo PDF Editor (lovable) (não usa banco de dados)
+
+Exlui páginas do PDF e realiza Merge
+
+- [Demo on-line (↗)](https://neo-pdf-editor.lovable.app)
+
+- [Código-fonte (↗)](https://github.com/giseldo/neo-pdf-editor)
+
+![image](/images/neopdfeditor.png)
 
 ---
 
@@ -202,7 +208,7 @@ Text Readability Analyzer
 
 - [Código-fonte (↗)](https://github.com/giseldo/bpmn-flow)
 
-{{< figure src="/images/bpmn.png" width="50%" >}}
+![image](/images/bpmn.png)
 
 ---
 
@@ -210,7 +216,7 @@ Text Readability Analyzer
 
 [NeoAVA](https://autorregulacao.streamlit.app/)
 
-{{< figure src="/images/neoava.png" width="50%" >}}
+![image](/images/neoava.png)
 
 ---
 
@@ -222,7 +228,7 @@ Text Readability Analyzer
 
 - [Código-fonte (↗)](https://huggingface.co/spaces/giseldo/eliza_raiz/tree/main)
 
-{{< figure src="/images/elizaraiz.png" width="50%" >}}
+![image](/images/elizaraiz.png)
 
 **Versão do Eliza com LLM**
 
@@ -230,9 +236,7 @@ Text Readability Analyzer
 
 - [Código-fonte (↗)](https://huggingface.co/spaces/giseldo/eliza_raiz/tree/main)
 
-{{< figure src="/images/elizallm.png" width="50%" >}}
-
-
+![image](/images/elizallm.png)
 
 # Produtos em fase Beta
 
@@ -244,7 +248,7 @@ Chatbots com inteligência artificial. Um chatbot que conversa sobre o manual do
 
 [NeoChatbots](https://giseldo.github.io/ifal/)
 
-{{< figure src="/images/pages/chatbots.png" width="50%" >}}
+![image](/images/pages/chatbots.png)
 
 ---
 
@@ -252,7 +256,7 @@ Chatbots com inteligência artificial. Um chatbot que conversa sobre o manual do
 
 [Study Plan](https://giseldo.github.io/study/)
 
-{{< figure src="/images/pages/planoestudo.png" width="50%" >}}
+![image](/images/pages/planoestudo.png)
 
 ---
 
@@ -261,14 +265,14 @@ Calendário de eventos científicos em ciência da computação
 
 [Calendário de eventos](https://giseldo-eventos-v2.hf.space)
 
-{{< figure src="/images/pages/calendario.png" width="50%" >}}
+![image](/images/pages/calendario.png)
 
 ---
 
 ## Previsão de Notas
 [Previsão de Notas de estudante com aprendizagem de máquina](https://giseldo-predictstudentperformance.hf.space)
 
-{{< figure src="/images/pages/previsao.png" width="50%" >}}
+![image](/images/pages/previsao.png)
 
 ---
 
@@ -294,9 +298,9 @@ Um Google Sala de aula com métricas
 
 - [Código-fonte (↗)](https://github.com/giseldo/student-insight-classroom-metrics)
 
-{{< figure src="/images/neometrics1.png" width="50%" >}}
+![image](/images/neometrics1.png)
 
-{{< figure src="/images/neometrics2.png" width="50%" >}}
+![image](/images/neometrics2.png)
 
 ---
 
