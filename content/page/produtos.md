@@ -44,11 +44,11 @@ Quando o sistema usa banco de dados, por causa da  limitação da conta gratuita
 
 - [Código-fonte (↗)](https://github.com/giseldo/markdown-editor)
 
-  ![image](https://github.com/user-attachments/assets/de486c47-ced7-496f-9271-ef058706a245)
+![image](https://github.com/user-attachments/assets/de486c47-ced7-496f-9271-ef058706a245)
 
-  ![image](https://github.com/user-attachments/assets/c3e9a58e-25f4-4508-b56f-805b3bc56d9b)
+![image](https://github.com/user-attachments/assets/c3e9a58e-25f4-4508-b56f-805b3bc56d9b)
 
-  ![image](https://github.com/user-attachments/assets/3fb3666c-c381-4254-b380-0034e1d5463a)
+![image](https://github.com/user-attachments/assets/3fb3666c-c381-4254-b380-0034e1d5463a)
 
 ---
 
@@ -163,7 +163,6 @@ Text Readability Analyzer
 
 - [Código-fonte (↗)](https://github.com/giseldo/clean-mermaid)
 
-
 ![image](/images/mermaideditor.png)
 
 ---
@@ -202,7 +201,7 @@ Exlui páginas do PDF e realiza Merge
 
 ---
 
-## NeoBPMNEditorIO - Crie diagramas BPMN conversando (v0) (não usa banco de dados)
+### NeoBPMNEditorIO - Crie diagramas BPMN conversando (v0) (não usa banco de dados)
 
 - [Demo on-line (↗)](https://v0-business-process-modeler.vercel.app/)
 
@@ -212,7 +211,7 @@ Exlui páginas do PDF e realiza Merge
 
 ---
 
-## NeoAVA - Ambiente Virtual de Aprendizagem com Autorregulação (streamlit) 
+### NeoAVA - Ambiente Virtual de Aprendizagem com Autorregulação (streamlit) 
 
 [NeoAVA](https://autorregulacao.streamlit.app/)
 
@@ -220,7 +219,7 @@ Exlui páginas do PDF e realiza Merge
 
 ---
 
-## Chatbot baseado no chatbot Eliza de 1966 (hugging face)
+### Chatbot baseado no chatbot Eliza de 1966 (hugging face)
 
 **Versão do Eliza com casamento de padrão**
 
@@ -238,11 +237,9 @@ Exlui páginas do PDF e realiza Merge
 
 ![image](/images/elizallm.png)
 
-# Produtos em fase Beta
-
 ---
 
-## NeoChatbots - Chatbots com RAG
+### NeoChatbots - Chatbots com RAG (fora do ar)
 
 Chatbots com inteligência artificial. Um chatbot que conversa sobre o manual do aluno do IFAL e outro que conversa sobre o regimento do IFAL
 
@@ -252,7 +249,7 @@ Chatbots com inteligência artificial. Um chatbot que conversa sobre o manual do
 
 ---
 
-## NeoStudy - Um Gerador de Plano de estudo com IA
+### NeoStudy - Um Gerador de Plano de estudo com IA (fora do ar)
 
 [Study Plan](https://giseldo.github.io/study/)
 
@@ -260,8 +257,7 @@ Chatbots com inteligência artificial. Um chatbot que conversa sobre o manual do
 
 ---
 
-## NeoCalendar - Calendário de eventos científicos
-Calendário de eventos científicos em ciência da computação
+### NeoCalendar - Calendário de eventos científicos (fora do ar)
 
 [Calendário de eventos](https://giseldo-eventos-v2.hf.space)
 
@@ -269,28 +265,15 @@ Calendário de eventos científicos em ciência da computação
 
 ---
 
-## Previsão de Notas
+### Previsão de Notas com aprendizagem de máquina (hugging face)
+
 [Previsão de Notas de estudante com aprendizagem de máquina](https://giseldo-predictstudentperformance.hf.space)
 
 ![image](/images/pages/previsao.png)
 
 ---
 
-## NeoUST - User Story Tutor
-Um software para Previsão e melhoria de User Stories
-
-[User Story Tutor](https://giseldo-userstory.static.hf.space) 
-
----
-
-## NeoSE - Um simples Sistema Especialista
-Um Sistema Especialista com encadeamento para trás, bem simples, baseado no Expert Sinta
-
-[NeoSE](https://giseldo-neo-sistema-especialista.hf.space)
-
----
-
-## Neo Google Sala de Aula (protótipo) (lovable)
+### Neo Google Sala de Aula (protótipo) (lovable)
 
 Um Google Sala de aula com métricas
 
@@ -304,5 +287,12 @@ Um Google Sala de aula com métricas
 
 ---
 
+### NeoUST - User Story Tutor - Um software para Previsão e melhoria de User Stories
 
+[User Story Tutor](https://giseldo-userstory.static.hf.space) 
 
+---
+
+### NeoSE - Um simples Sistema Especialista
+
+[NeoSE](https://giseldo-neo-sistema-especialista.hf.space)
