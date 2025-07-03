@@ -15,7 +15,7 @@ Quando o sistema usa banco de dados, por causa da  limitação da conta gratuita
 
 ### NeoSP - Estimador de Story Points (v0) (não usa banco de dados)
 
-- [Demo on-line (↗)](https://neosp.vercel.app)
+- (streamlit)(https://neosp.vercel.app)
 
 - [Código-fonte (↗)](https://github.com/giseldo/estimador_de_story_points)
 
@@ -214,7 +214,7 @@ Exlui páginas do PDF e realiza Merge
 
 ### NeoAVA - Ambiente Virtual de Aprendizagem com Autorregulação (streamlit) 
 
-[NeoAVA](https://autorregulacao.streamlit.app/)
+- [Demo on-line (↗)](https://autorregulacao.streamlit.app/)
 
 ![image](/images/neoava.png)
 
@@ -244,7 +244,7 @@ Exlui páginas do PDF e realiza Merge
 
 Chatbots com inteligência artificial. Um chatbot que conversa sobre o manual do aluno do IFAL e outro que conversa sobre o regimento do IFAL
 
-[NeoChatbots](https://giseldo.github.io/ifal/)
+- [Demo on-line (↗)](https://giseldo.github.io/ifal/)
 
 ![image](/images/pages/chatbots.png)
 
@@ -252,7 +252,7 @@ Chatbots com inteligência artificial. Um chatbot que conversa sobre o manual do
 
 ### NeoStudy - Um Gerador de Plano de estudo com IA (fora do ar)
 
-[Study Plan](https://giseldo.github.io/study/)
+- [Demo on-line (↗)](https://giseldo.github.io/study/)
 
 ![image](/images/pages/planoestudo.png)
 
@@ -260,7 +260,7 @@ Chatbots com inteligência artificial. Um chatbot que conversa sobre o manual do
 
 ### NeoCalendar - Calendário de eventos científicos (fora do ar)
 
-[Calendário de eventos](https://giseldo-eventos-v2.hf.space)
+- [Demo on-line (↗)](https://giseldo-eventos-v2.hf.space)
 
 ![image](/images/pages/calendario.png)
 
@@ -268,7 +268,7 @@ Chatbots com inteligência artificial. Um chatbot que conversa sobre o manual do
 
 ### Previsão de Notas com aprendizagem de máquina (hugging face)
 
-[Previsão de Notas de estudante com aprendizagem de máquina](https://giseldo-predictstudentperformance.hf.space)
+- [Demo on-line (↗)](https://giseldo-predictstudentperformance.hf.space)
 
 ![image](/images/pages/previsao.png)
 
@@ -288,12 +288,12 @@ Um Google Sala de aula com métricas
 
 ---
 
-### NeoUST - User Story Tutor - Um software para Previsão e melhoria de User Stories
+### NeoUST - User Story Tutor - Um software para Previsão e melhoria de User Stories (streamlit)
 
 [User Story Tutor](https://giseldo-userstory.static.hf.space) 
 
 ---
 
-### NeoSE - Um simples Sistema Especialista
+### NeoSE - Um simples Sistema Especialista (streamlit) (versão beta)
 
 [NeoSE](https://giseldo-neo-sistema-especialista.hf.space)
