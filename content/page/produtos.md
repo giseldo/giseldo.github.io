@@ -15,7 +15,7 @@ Quando o sistema usa banco de dados, por causa da  limitação da conta gratuita
 
 ### NeoSistemaEspecialista - Um sistema especialista (v0) (usa banco de dados)
 
-- [Demo on-line(↗)]([https://neosp.vercel.app](https://neosistemaespecialista.vercel.app/))
+- [Demo on-line(↗)](https://neosistemaespecialista.vercel.app/)
 
 - [Código-fonte (↗)](https://github.com/giseldo/v0-supabase-expert-sistema)
 
