@@ -12,6 +12,20 @@ Quando o sistema usa banco de dados, por causa da  limitação da conta gratuita
 ---
 ---
 
+## NeoScholarSearch - Um busca de artigos no Semantic Scholar
+
+- [Demo on-line(↗)](https://v0-neo-scholar-search.vercel.app)
+
+- [Código-fonte (↗)](https://github.com/giseldo/v0-supabase-expert-sistema)
+
+![image](https://github.com/user-attachments/assets/162a4c2d-ec63-4703-ba92-4ede7c230a51)
+
+![image](https://github.com/user-attachments/assets/688f55ea-47d0-4e0f-8203-0a5e10a7932e)
+
+---
+
+https://v0-neo-scholar-search.vercel.app/search
+
 ## NeoSistemaEspecialista - Um sistema especialista (usa banco de dados - supabase)
 
 - [Demo on-line(↗)](https://neosistemaespecialista.vercel.app/)
