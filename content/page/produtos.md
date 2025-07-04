@@ -51,7 +51,7 @@ Quando o sistema usa banco de dados, por causa da  limitação da conta gratuita
 
 ---
 
-### NeoMarkdowV - Um Editor markdown com IA (v0) (não usa banco de dados)
+### NeoMarkdow - Um Editor markdown com IA (v0) (não usa banco de dados)
 
 - [Demo on-line(↗)](https://v0-editor-wysiwyg.vercel.app/)
 
@@ -79,7 +79,7 @@ Quando o sistema usa banco de dados, por causa da  limitação da conta gratuita
 
 ### NeoKambamPomodoro - Um Kambam com Pomodoro (v0) (não usa banco de dados)
 
-- [Demo on-line(↗)](https://v0-kambam-setup.vercel.app/)
+- [Demo on-line(↗)](https://neokanbampomodoro.vercel.app/)
 
 - [Código-fonte (↗)](https://github.com/giseldo/v0-gerador-de-questoes)
 
