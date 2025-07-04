@@ -309,3 +309,5 @@ Um Google Sala de aula com métricas
 ### NeoSE - Um simples Sistema Especialista (streamlit) (versão beta)
 
 [NeoSE](https://giseldo-neo-sistema-especialista.hf.space)
+
+![image](https://github.com/user-attachments/assets/72a0aded-fecd-4d85-803f-6de38c58d161)
