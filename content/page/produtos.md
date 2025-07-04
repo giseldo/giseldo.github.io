@@ -129,7 +129,7 @@ https://v0-neo-scholar-search.vercel.app/search
 
 ## Bolt
 
-### NeoAdvocate - Um software de gestão de advocacia (bolt) (não usa banco de dados) (beta)
+<!-- ### NeoAdvocate - Um software de gestão de advocacia (bolt) (não usa banco de dados) (beta)
 
 - [Demo on-line(↗)](https://v0-new-project-rvge2mxlgpt.vercel.app/)
 
@@ -137,7 +137,7 @@ https://v0-neo-scholar-search.vercel.app/search
 
 ![image](https://github.com/user-attachments/assets/c8d9dffa-9bb3-44e8-a077-ef0c4f2f6bc6)
 
-![image](https://github.com/user-attachments/assets/b5cbf3f0-6518-46e0-8a0c-0fe1998f4185)
+![image](https://github.com/user-attachments/assets/b5cbf3f0-6518-46e0-8a0c-0fe1998f4185) -->
 
 ---
 
