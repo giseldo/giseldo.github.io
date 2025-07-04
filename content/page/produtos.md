@@ -50,7 +50,7 @@ Neo Gestão Turma V0 (neon)
   - [Chatbot baseado no chatbot Eliza de 1966 (hugging face)](#chatbot-baseado-no-chatbot-eliza-de-1966-hugging-face)
   - [NeoChatbots - Chatbots com RAG (fora do ar) (hugging face)](#neochatbots---chatbots-com-rag-fora-do-ar-hugging-face)
   - [NeoStudy - Um Gerador de Plano de estudo com IA (fora do ar) (hugging face)](#neostudy---um-gerador-de-plano-de-estudo-com-ia-fora-do-ar-hugging-face)
-  - [NeoCalendar - Calendário de eventos científicos (fora do ar) (hugging face)](#neocalendar---calendário-de-eventos-científicos-fora-do-ar-hugging-face)
+  - [NeoCalendar - Calendário de eventos científicos (hugging face)](#neocalendar---calendário-de-eventos-científicos-hugging-face)
   - [Previsão de Notas com aprendizagem de máquina (hugging face)](#previsão-de-notas-com-aprendizagem-de-máquina-hugging-face)
   - [Neo Google Sala de Aula (protótipo) (lovable)](#neo-google-sala-de-aula-protótipo-lovable)
   - [NeoUST - User Story Tutor - Um software para Previsão e melhoria de User Stories (streamlit)](#neoust---user-story-tutor---um-software-para-previsão-e-melhoria-de-user-stories-streamlit)
@@ -329,7 +329,7 @@ Chatbots com inteligência artificial. Um chatbot que conversa sobre o manual do
 
 ---
 
-### NeoCalendar - Calendário de eventos científicos (fora do ar) (hugging face)
+### NeoCalendar - Calendário de eventos científicos (hugging face)
 
 - [Demo on-line (↗)](https://giseldo-eventos-v2.hf.space)
 
