@@ -25,7 +25,7 @@ toc: true
 
 https://v0-neo-scholar-search.vercel.app/search
 
-## NeoSistemaEspecialista - Um sistema especialista (usa banco de dados - supabase)
+## NeoSistemaEspecialista - Um sistema especialista (supabase)
 
 - [Demo on-line(↗)](https://neosistemaespecialista.vercel.app/)
 
@@ -37,7 +37,7 @@ https://v0-neo-scholar-search.vercel.app/search
 
 ---
 
-## NeoSP - Estimador de Story Points com Inteligência Artificial (não usa banco de dados)
+## NeoSP - Estimador de Story Points com Inteligência Artificial
 
 - [Demo on-line(↗)](https://neosp.vercel.app)
 
@@ -51,7 +51,7 @@ https://v0-neo-scholar-search.vercel.app/search
 
 ---
 
-## NeoGeradorQuestoes - Um Gerador de Questões com Inteligência Artificial  (não usa banco de dados)
+## NeoGeradorQuestoes - Um Gerador de Questões com Inteligência Artificial
 
 - [Demo on-line(↗)](https://neogeradordequestoes.vercel.app/)
 
@@ -63,7 +63,7 @@ https://v0-neo-scholar-search.vercel.app/search
 
 ---
 
-### NeoMarkdow - Um Editor markdown com Inteligência Artificial (não usa banco de dados)
+### NeoMarkdow - Um Editor markdown com Inteligência Artificial
 
 - [Demo on-line(↗)](https://neomarkdowneditor.vercel.app/)
 
@@ -77,7 +77,7 @@ https://v0-neo-scholar-search.vercel.app/search
 
 ---
 
-### NeoDinamicaSistemas - Um Criador de Dinâmica de Sistemas (versão beta) (não usa banco de dados)
+<!-- ### NeoDinamicaSistemas - Um Criador de Dinâmica de Sistemas (versão beta) (não usa banco de dados)
 
 - [Demo on-line(↗)](https://v0-dynamic-system-diagrams.vercel.app/)
 
@@ -85,11 +85,11 @@ https://v0-neo-scholar-search.vercel.app/search
 
 ![image](https://github.com/user-attachments/assets/e94d03bb-c9e9-4207-943c-fefb1fda3a25)
 
-![image](https://github.com/user-attachments/assets/0cbfc7ea-ee5d-49f3-9b0a-17724a96ee1c)
+![image](https://github.com/user-attachments/assets/0cbfc7ea-ee5d-49f3-9b0a-17724a96ee1c) 
 
----
+--- -->
 
-### NeoKambamPomodoro - Um Kambam com Pomodoro (banco de dados neon)
+### NeoKambamPomodoro - Um Kambam com Pomodoro (neon)
 
 - [Demo on-line(↗)](https://neokanbampomodoro.vercel.app/)
 
@@ -101,7 +101,7 @@ https://v0-neo-scholar-search.vercel.app/search
 
 ---
 
-### NeoAIMLEditor - Cria Chatbots com AIML (não usa banco de dados)
+### NeoAIMLEditor - Cria Chatbots com AIML
 
 - [Demo on-line(↗)](https://v0-aiml-chatbot-editor.vercel.app)
 
@@ -113,7 +113,7 @@ https://v0-neo-scholar-search.vercel.app/search
 
 ---
 
-### Neodeteccaofraude -  Detecção de fraudes em contratos com IA (v0) (não usa banco de dados) (beta)
+### Neodeteccaofraude -  Detecção de fraudes em contratos com IA (versão beta)
 
 - [Demo on-line (↗)](https://neodetccaofraude.vercel.app/)
 
@@ -124,9 +124,16 @@ https://v0-neo-scholar-search.vercel.app/search
 ![image](https://github.com/user-attachments/assets/e0c933cb-f394-424c-802e-8e80aa068f62)
 
 ---
----
 
-## Bolt
+### NeoBPMNEditorIO - Crie diagramas BPMN conversando com BPMN.io
+
+- [Demo on-line (↗)](https://v0-business-process-modeler.vercel.app/)
+
+- [Código-fonte (↗)](https://github.com/giseldo/bpmn-flow)
+
+![image](/images/bpmn.png)
+
+---
 
 <!-- ### NeoAdvocate - Um software de gestão de advocacia (bolt) (não usa banco de dados) (beta)
 
@@ -138,7 +145,7 @@ https://v0-neo-scholar-search.vercel.app/search
 
 ![image](https://github.com/user-attachments/assets/b5cbf3f0-6518-46e0-8a0c-0fe1998f4185) -->
 
----
+## Bolt
 
 ### NeoBPMNEditor - Um simples modelador visual de BPMN (bolt) (não usa banco de dados)
 
@@ -150,7 +157,7 @@ https://v0-neo-scholar-search.vercel.app/search
 
 ---
 
-## NeoReadability - Text Readability Analyzer (bolt) (não usa banco de dados)
+### NeoReadability - Text Readability Analyzer (bolt) (não usa banco de dados)
 
 Text Readability Analyzer
 
@@ -164,7 +171,7 @@ Text Readability Analyzer
 
 ## Lovable
 
-### NeoMarkdowL - Um simples editor de Markdow (lovable) (não usa banco de dados)
+### NeoMarkdowL - Um simples editor de Markdow
 
 - [Demo on-line(↗)](https://clean-markdown-canvas.lovable.app/)
 
@@ -173,7 +180,7 @@ Text Readability Analyzer
 ![image](/images/markdowneditor.png)
 ---
 
-### NeoLatex - Um simples editor de Latex (lovable) (não usa banco de dados)
+### NeoLatex - Um simples editor de Latex
 
 - [Demo on-line (↗)](https://clean-latex-canvas.lovable.app/)
 
@@ -183,7 +190,7 @@ Text Readability Analyzer
 
 ---
 
-### NeoMermaid - Um simples editor de Mermaid (lovable) (não usa banco de dados)
+### NeoMermaid - Um simples editor de Mermaid
 
 - [Demo on-line(↗)](https://clean-mermaid.lovable.app/)
 
@@ -193,7 +200,7 @@ Text Readability Analyzer
 
 ---
 
-### NeoCursos - Venda de cursos on-line (lovable) (com banco de dados)
+### NeoCursos - Venda de cursos on-line (supabase)
 
 - [Demo on-line (↗)](https://skill-up-course-portal.lovable.app/)
 
@@ -203,7 +210,7 @@ Text Readability Analyzer
 
 ---
 
-### NeoPLNChatbot - Construtor de Chatbots com PLN (intenção e response) (lovable) (não usa banco de dados)
+### NeoPLNChatbot - Construtor de Chatbots com PLN (intenção e response)
 
 - [Demo on-line (↗)](https://flow-buddy-chat.lovable.app/)
 
@@ -215,7 +222,7 @@ Text Readability Analyzer
 
 ---
 
-### NeoPDFEditor - Neo PDF Editor (lovable) (não usa banco de dados)
+### NeoPDFEditor - Neo PDF Editor 
 
 Exlui páginas do PDF e realiza Merge
 
@@ -227,15 +234,7 @@ Exlui páginas do PDF e realiza Merge
 
 ---
 
-### NeoBPMNEditorIO - Crie diagramas BPMN conversando (v0) (não usa banco de dados)
-
-- [Demo on-line (↗)](https://v0-business-process-modeler.vercel.app/)
-
-- [Código-fonte (↗)](https://github.com/giseldo/bpmn-flow)
-
-![image](/images/bpmn.png)
-
----
+## Outros
 
 ### NeoAVA - Ambiente Virtual de Aprendizagem com Autorregulação (streamlit) 
 
@@ -265,7 +264,7 @@ Exlui páginas do PDF e realiza Merge
 
 ---
 
-### NeoChatbots - Chatbots com RAG (fora do ar)
+### NeoChatbots - Chatbots com RAG (fora do ar) (hugging face)
 
 Chatbots com inteligência artificial. Um chatbot que conversa sobre o manual do aluno do IFAL e outro que conversa sobre o regimento do IFAL
 
@@ -275,7 +274,7 @@ Chatbots com inteligência artificial. Um chatbot que conversa sobre o manual do
 
 ---
 
-### NeoStudy - Um Gerador de Plano de estudo com IA (fora do ar)
+### NeoStudy - Um Gerador de Plano de estudo com IA (fora do ar) (hugging face)
 
 - [Demo on-line (↗)](https://giseldo.github.io/study/)
 
@@ -283,7 +282,7 @@ Chatbots com inteligência artificial. Um chatbot que conversa sobre o manual do
 
 ---
 
-### NeoCalendar - Calendário de eventos científicos (fora do ar)
+### NeoCalendar - Calendário de eventos científicos (fora do ar) (hugging face)
 
 - [Demo on-line (↗)](https://giseldo-eventos-v2.hf.space)
 
@@ -319,7 +318,7 @@ Um Google Sala de aula com métricas
 
 ---
 
-### NeoSE - Um simples Sistema Especialista (streamlit) (versão beta)
+### NeoSE - Um simples Sistema Especialista (streamlit) (versão beta) (hugging face)
 
 [NeoSE](https://giseldo-neo-sistema-especialista.hf.space)
 
