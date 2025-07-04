@@ -9,6 +9,38 @@ toc: true
 
 <!-- Quando o sistema usa banco de dados, por causa da  limitação da conta gratuita do supabase, é necessário iniciar o servidor. Portanto envie um email para giseldo@gmail.com com o nome do projeto que deseja testar se o mesmo utilizar banco de dados para superar esta limitação. -->
 
+## Índice
+
+- [NeoScholarSearch - Um busca de artigos no Semantic Scholar](#neoscholarsearch---um-busca-de-artigos-no-semantic-scholar)
+- [NeoSistemaEspecialista - Um sistema especialista (supabase)](#neosistemaespecialista---um-sistema-especialista-supabase)
+- [NeoSP - Estimador de Story Points com Inteligência Artificial](#neosp---estimador-de-story-points-com-inteligência-artificial)
+- [NeoGeradorQuestoes - Um Gerador de Questões com Inteligência Artificial](#neogeradorquestoes---um-gerador-de-questões-com-inteligência-artificial)
+  - [NeoMarkdow - Um Editor markdown com Inteligência Artificial](#neomarkdow---um-editor-markdown-com-inteligência-artificial)
+  - [NeoKambamPomodoro - Um Kambam com Pomodoro (neon)](#neokambampomodoro---um-kambam-com-pomodoro-neon)
+  - [NeoAIMLEditor - Cria Chatbots com AIML](#neoaimleditor---cria-chatbots-com-aiml)
+  - [Neodeteccaofraude -  Detecção de fraudes em contratos com IA (versão beta)](#neodeteccaofraude---detecção-de-fraudes-em-contratos-com-ia-versão-beta)
+  - [NeoBPMNEditorIO - Crie diagramas BPMN conversando com BPMN.io](#neobpmneditorio---crie-diagramas-bpmn-conversando-com-bpmnio)
+- [Bolt](#bolt)
+  - [NeoBPMNEditor - Um simples modelador visual de BPMN (bolt)](#neobpmneditor---um-simples-modelador-visual-de-bpmn-bolt)
+  - [NeoReadability - Text Readability Analyzer (bolt)](#neoreadability---text-readability-analyzer-bolt)
+- [Lovable](#lovable)
+  - [NeoMarkdowL - Um simples editor de Markdow](#neomarkdowl---um-simples-editor-de-markdow)
+  - [NeoLatex - Um simples editor de Latex](#neolatex---um-simples-editor-de-latex)
+  - [NeoMermaid - Um simples editor de Mermaid](#neomermaid---um-simples-editor-de-mermaid)
+  - [NeoCursos - Venda de cursos on-line (supabase)](#neocursos---venda-de-cursos-on-line-supabase)
+  - [NeoPLNChatbot - Construtor de Chatbots com PLN (intenção e response)](#neoplnchatbot---construtor-de-chatbots-com-pln-intenção-e-response)
+  - [NeoPDFEditor - Neo PDF Editor](#neopdfeditor---neo-pdf-editor)
+- [Outros](#outros)
+  - [NeoAVA - Ambiente Virtual de Aprendizagem com Autorregulação (streamlit)](#neoava---ambiente-virtual-de-aprendizagem-com-autorregulação-streamlit)
+  - [Chatbot baseado no chatbot Eliza de 1966 (hugging face)](#chatbot-baseado-no-chatbot-eliza-de-1966-hugging-face)
+  - [NeoChatbots - Chatbots com RAG (fora do ar) (hugging face)](#neochatbots---chatbots-com-rag-fora-do-ar-hugging-face)
+  - [NeoStudy - Um Gerador de Plano de estudo com IA (fora do ar) (hugging face)](#neostudy---um-gerador-de-plano-de-estudo-com-ia-fora-do-ar-hugging-face)
+  - [NeoCalendar - Calendário de eventos científicos (fora do ar) (hugging face)](#neocalendar---calendário-de-eventos-científicos-fora-do-ar-hugging-face)
+  - [Previsão de Notas com aprendizagem de máquina (hugging face)](#previsão-de-notas-com-aprendizagem-de-máquina-hugging-face)
+  - [Neo Google Sala de Aula (protótipo) (lovable)](#neo-google-sala-de-aula-protótipo-lovable)
+  - [NeoUST - User Story Tutor - Um software para Previsão e melhoria de User Stories (streamlit)](#neoust---user-story-tutor---um-software-para-previsão-e-melhoria-de-user-stories-streamlit)
+  - [NeoSE - Um simples Sistema Especialista (streamlit)](#neose---um-simples-sistema-especialista-streamlit)
+
 ---
 
 ## NeoScholarSearch - Um busca de artigos no Semantic Scholar
