@@ -23,8 +23,6 @@ toc: true
 
 ---
 
-https://v0-neo-scholar-search.vercel.app/search
-
 ## NeoSistemaEspecialista - Um sistema especialista (supabase)
 
 - [Demo on-line(↗)](https://neosistemaespecialista.vercel.app/)
