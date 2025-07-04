@@ -10,10 +10,9 @@ toc: true
 Quando o sistema usa banco de dados, por causa da  limitação da conta gratuita do supabase, é necessário iniciar o servidor. Portanto envie um email para giseldo@gmail.com com o nome do projeto que deseja testar se o mesmo utilizar banco de dados para superar esta limitação.
 
 ---
+---
 
-## V0 
-
-### NeoSistemaEspecialista - Um sistema especialista (v0) (usa banco de dados)
+## NeoSistemaEspecialista - Um sistema especialista (usa banco de dados - supabase)
 
 - [Demo on-line(↗)](https://neosistemaespecialista.vercel.app/)
 
@@ -25,7 +24,7 @@ Quando o sistema usa banco de dados, por causa da  limitação da conta gratuita
 
 ---
 
-### NeoSP - Estimador de Story Points (v0) (não usa banco de dados)
+## NeoSP - Estimador de Story Points com Inteligência Artificial (não usa banco de dados)
 
 - [Demo on-line(↗)](https://neosp.vercel.app)
 
@@ -39,9 +38,9 @@ Quando o sistema usa banco de dados, por causa da  limitação da conta gratuita
 
 ---
 
-### NeoGeradorQuestoes - Um Gerador de Questões com IA (v0) (não usa banco de dados)
+## NeoGeradorQuestoes - Um Gerador de Questões com Inteligência Artificial  (não usa banco de dados)
 
-- [Demo on-line(↗)](https://v0-gerador-de-questoes.vercel.app/)
+- [Demo on-line(↗)](https://neogeradordequestoes.vercel.app/)
 
 - [Código-fonte (↗)](https://github.com/giseldo/v0-gerador-de-questoes)
 
@@ -51,9 +50,9 @@ Quando o sistema usa banco de dados, por causa da  limitação da conta gratuita
 
 ---
 
-### NeoMarkdow - Um Editor markdown com IA (v0) (não usa banco de dados)
+### NeoMarkdow - Um Editor markdown com Inteligência Artificial (não usa banco de dados)
 
-- [Demo on-line(↗)](https://v0-editor-wysiwyg.vercel.app/)
+- [Demo on-line(↗)](https://neomarkdowneditor.vercel.app/)
 
 - [Código-fonte (↗)](https://github.com/giseldo/markdown-editor)
 
@@ -65,7 +64,7 @@ Quando o sistema usa banco de dados, por causa da  limitação da conta gratuita
 
 ---
 
-### NeoDinamicaSistemas - Um Criador de Dinâmica de Sistemas (versão beta) (v0) (não usa banco de dados)
+### NeoDinamicaSistemas - Um Criador de Dinâmica de Sistemas (versão beta) (não usa banco de dados)
 
 - [Demo on-line(↗)](https://v0-dynamic-system-diagrams.vercel.app/)
 
@@ -77,7 +76,7 @@ Quando o sistema usa banco de dados, por causa da  limitação da conta gratuita
 
 ---
 
-### NeoKambamPomodoro - Um Kambam com Pomodoro (v0) (não usa banco de dados)
+### NeoKambamPomodoro - Um Kambam com Pomodoro (banco de dados neon)
 
 - [Demo on-line(↗)](https://neokanbampomodoro.vercel.app/)
 
@@ -89,7 +88,7 @@ Quando o sistema usa banco de dados, por causa da  limitação da conta gratuita
 
 ---
 
-### NeoAIMLEditor - Cria Chatbots com AIML (v0) (não usa banco de dados)
+### NeoAIMLEditor - Cria Chatbots com AIML (não usa banco de dados)
 
 - [Demo on-line(↗)](https://v0-aiml-chatbot-editor.vercel.app)
 
@@ -103,7 +102,7 @@ Quando o sistema usa banco de dados, por causa da  limitação da conta gratuita
 
 ### Neodeteccaofraude -  Detecção de fraudes em contratos com IA (v0) (não usa banco de dados) (beta)
 
-- [Demo on-line (↗)](https://v0-fraud-detection-in-contracts.vercel.app/)
+- [Demo on-line (↗)](https://neodetccaofraude.vercel.app/)
 
 - [Código-fonte (↗)](https://github.com/giseldo/fraud-detection)
 
@@ -111,6 +110,7 @@ Quando o sistema usa banco de dados, por causa da  limitação da conta gratuita
 
 ![image](https://github.com/user-attachments/assets/e0c933cb-f394-424c-802e-8e80aa068f62)
 
+---
 ---
 
 ## Bolt
