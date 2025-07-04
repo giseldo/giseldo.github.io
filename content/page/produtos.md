@@ -22,8 +22,8 @@ toc: true
   - [Neodeteccaofraude -  Detecção de fraudes em contratos com IA (versão beta)](#neodeteccaofraude---detecção-de-fraudes-em-contratos-com-ia-versão-beta)
   - [NeoBPMNEditorIO - Crie diagramas BPMN conversando com BPMN.io](#neobpmneditorio---crie-diagramas-bpmn-conversando-com-bpmnio)
 - [Bolt](#bolt)
-  - [NeoBPMNEditor - Um simples modelador visual de BPMN (bolt)](#neobpmneditor---um-simples-modelador-visual-de-bpmn-bolt)
-  - [NeoReadability - Text Readability Analyzer (bolt)](#neoreadability---text-readability-analyzer-bolt)
+  - [NeoBPMNEditor - Um simples modelador visual de BPMN](#neobpmneditor---um-simples-modelador-visual-de-bpmn)
+  - [NeoReadability - Text Readability Analyzer](#neoreadability---text-readability-analyzer)
 - [Lovable](#lovable)
   - [NeoMarkdowL - Um simples editor de Markdow](#neomarkdowl---um-simples-editor-de-markdow)
   - [NeoLatex - Um simples editor de Latex](#neolatex---um-simples-editor-de-latex)
@@ -180,7 +180,7 @@ toc: true
 
 ## Bolt
 
-### NeoBPMNEditor - Um simples modelador visual de BPMN (bolt) (não usa banco de dados)
+### NeoBPMNEditor - Um simples modelador visual de BPMN
 
 - [Demo on-line(↗)](https://giseldo.github.io/neobpmn/)
 
@@ -190,7 +190,7 @@ toc: true
 
 ---
 
-### NeoReadability - Text Readability Analyzer (bolt) (não usa banco de dados)
+### NeoReadability - Text Readability Analyzer
 
 Text Readability Analyzer
 
