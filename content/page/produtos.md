@@ -11,6 +11,11 @@ toc: true
 
 ## Índice
 
+<!-- 
+Neo ClassRoom
+https://v0.dev/chat/neo-classroom-clone-D6qhyfkw8hvhttps://v0.dev/chat/neo-classroom-clone-D6qhyfkw8hv 
+-->
+
 - [V0](#V0)
   - [NeoScholarSearch - Um busca de artigos no Semantic Scholar](#neoscholarsearch---um-busca-de-artigos-no-semantic-scholar)
   - [NeoSistemaEspecialista - Um sistema especialista (supabase)](#neosistemaespecialista---um-sistema-especialista-supabase)
