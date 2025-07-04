@@ -19,7 +19,7 @@ toc: true
   - [NeoMarkdow - Um Editor markdown com Inteligência Artificial](#neomarkdow---um-editor-markdown-com-inteligência-artificial)
   - [NeoKambamPomodoro - Um Kambam com Pomodoro (neon)](#neokambampomodoro---um-kambam-com-pomodoro-neon)
   - [NeoAIMLEditor - Cria Chatbots com AIML](#neoaimleditor---cria-chatbots-com-aiml)
-  - [Neodeteccaofraude -  Detecção de fraudes em contratos com IA (versão beta)](#neodeteccaofraude---detecção-de-fraudes-em-contratos-com-ia-versão-beta)
+  - [Neodeteccaofraude -  Detecção de fraudes em contratos com IA (beta)](#neodeteccaofraude---detecção-de-fraudes-em-contratos-com-ia-beta)
   - [NeoBPMNEditorIO - Crie diagramas BPMN conversando com BPMN.io](#neobpmneditorio---crie-diagramas-bpmn-conversando-com-bpmnio)
 - [Bolt](#bolt)
   - [NeoBPMNEditor - Um simples modelador visual de BPMN](#neobpmneditor---um-simples-modelador-visual-de-bpmn)
@@ -146,7 +146,7 @@ toc: true
 
 ---
 
-### Neodeteccaofraude -  Detecção de fraudes em contratos com IA (versão beta)
+### Neodeteccaofraude -  Detecção de fraudes em contratos com IA (beta)
 
 - [Demo on-line (↗)](https://neodetccaofraude.vercel.app/)
 
@@ -168,7 +168,7 @@ toc: true
 
 ---
 
-<!-- ### NeoAdvocate - Um software de gestão de advocacia (bolt) (não usa banco de dados) (beta)
+<!-- ### NeoAdvocate - Um software de gestão de advocacia (prototipo)
 
 - [Demo on-line(↗)](https://v0-new-project-rvge2mxlgpt.vercel.app/)
 
