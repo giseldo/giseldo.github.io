@@ -18,7 +18,7 @@ toc: True
 
 Este livro apresenta os chatbots clássicos, baseados em AIML, e por que expressões regulares ainda são ferramentas utilizadas no desenvolvimento de bots. Em capítulos dedicados ao Processamento de Linguagem Natural (PLN), técnicas como tokenização, lematização e análise sintática ganham vida por meio de exemplos aplicáveis, preparando o leitor para dar seus próprios passos no mundo da IA conversacional. Transformers, Word2Vec e os Modelos de Linguagem Grande (LLMs), incluindo BERT, GPT e LLaMA.
 
-- [Livro Download PDF (↗)](/images/livro/jornada/ajornadadoschatbots.pdf) 
+- [Livro Download PDF (↗)](/images/livro/jornada/jornada.pdf) 
 
 {{< endcolumns >}}
 
