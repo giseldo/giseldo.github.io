@@ -1,0 +1,207 @@
+/* Reset mínimo */
+* {
+    box-sizing: border-box;
+}
+
+/* Corpo geral */
+body {
+    font-family: "Georgia", "Times New Roman", serif;
+    font-size: 18px;
+    line-height: 1.55;
+    color: #1a1a1a;
+    background: #ffffff;
+    margin: 0;
+}
+
+/* Layout geral */
+.layout {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 64px 32px;
+}
+
+/* Menu lateral fixo */
+.menu {
+    position: fixed;
+    top: 64px;
+    left: 32px;
+    width: 260px;
+    height: calc(100vh - 128px);
+    overflow-y: auto;
+    padding-right: 20px;
+
+    font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.9em;
+    line-height: 1.5;
+    color: #333;
+}
+
+/* TOC */
+.menu #TOC ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.menu #TOC li {
+    margin-bottom: 12px;
+}
+
+/* Links principais */
+.menu #TOC > ul > li > a {
+    font-weight: 600;
+    color: #222;
+}
+
+/* Subníveis */
+.menu #TOC ul ul {
+    margin-top: 6px;
+    margin-left: 14px;
+}
+
+.menu #TOC ul ul li {
+    margin-bottom: 6px;
+}
+
+.menu #TOC ul ul a {
+    font-weight: 400;
+    color: #555;
+    font-size: 0.95em;
+}
+
+/* Links */
+.menu #TOC a {
+    text-decoration: none;
+    display: block;
+    padding: 2px 0;
+}
+
+.menu #TOC a:hover {
+    color: #1a5fb4;
+    text-decoration: underline;
+}
+
+
+/* Conteúdo principal */
+.content {
+    max-width: 720px;
+    margin-left: 320px; /* espaço para o menu fixo */
+}
+
+/* Leitura */
+.content p {
+    margin: 1.4em 0;
+    text-align: justify;
+}
+
+/* Títulos */
+.content h1,
+.content h2,
+.content h3,
+.content h4 {
+    font-family: "Georgia", "Times New Roman", serif;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-top: 3em;
+    margin-bottom: 1em;
+}
+
+.content h1 {
+    font-size: 2.1em;
+}
+
+.content h2 {
+    font-size: 1.6em;
+}
+
+.content h3 {
+    font-size: 1.3em;
+}
+
+/* Listas */
+.content ul,
+.content ol {
+    margin: 1.4em 0 1.4em 2em;
+}
+
+/* Citações */
+.content blockquote {
+    margin: 2em 0;
+    padding-left: 1.5em;
+    border-left: 3px solid #d0d0d0;
+    color: #444;
+}
+
+/* Código */
+.content pre,
+.content code {
+    font-family: "Courier New", monospace;
+    background: #f5f5f5;
+}
+
+.content pre {
+    padding: 16px;
+    overflow-x: auto;
+    margin: 2em 0;
+    font-size: 0.9em;
+}
+
+.content code {
+    padding: 2px 4px;
+}
+
+/* Figuras */
+.content figure {
+    margin: 2.5em 0;
+    text-align: center;
+}
+
+.content figcaption {
+    font-size: 0.9em;
+    color: #555;
+    margin-top: 0.6em;
+}
+
+/* Links no texto */
+.content a {
+    color: #1a5fb4;
+    text-decoration: underline;
+}
+
+/* Rolagem suave */
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Código */
+pre, code {
+    font-family: "Courier New", monospace;
+    background: #f5f5f5;
+}
+
+pre {
+    padding: 20px;
+    overflow-x: auto;
+    border-left: 4px solid #1a5fb4;
+    margin: 1.5em 0;
+}
+
+code {
+    padding: 3px 6px;
+}
+
+/* Citações */
+blockquote {
+    margin: 2em 0;
+    padding: 1em 1.5em;
+    background: #fafafa;
+    border-left: 4px solid #cccccc;
+    color: #555;
+}

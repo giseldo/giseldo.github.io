@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>$title$</title>
+
+  $if(author)$
+  <meta name="author" content="$author$" />
+  $endif$
+
+  $if(date)$
+  <meta name="date" content="$date$" />
+  $endif$
+
+  $if(css)$
+  <link rel="stylesheet" href="$css$" />
+  $endif$
+
+  $if(mathjax)$
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  $endif$
+
+  $for(header-includes)$
+  $header-includes$
+  $endfor$
+</head>
+
+<body>
+
+  <div class="layout">
+
+    <!-- Menu lateral automático -->
+    <nav class="menu">
+      $if(toc)$
+      $toc$
+      $endif$
+    </nav>
+
+    <!-- Conteúdo principal -->
+    <main class="content">
+      $body$
+    </main>
+
+  </div>
+
+</body>
+</html>
