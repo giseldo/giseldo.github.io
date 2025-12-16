@@ -154,7 +154,7 @@ Alana Neo" />
             id="toc-introdução-2">Introdução</a></li>
             <li><a href="#arquitetura-geral-do-transformer"
             id="toc-arquitetura-geral-do-transformer">Arquitetura Geral
-            do <em>Transformer</em></a>
+            do Transformer</a>
             <ul>
             <li><a
             href="#bert-bidirectional-encoder-representations-from-transformers"
@@ -168,17 +168,15 @@ Alana Neo" />
             id="toc-distilbert-base-uncased">distilbert-base-uncased</a></li>
             </ul></li>
             <li><a href="#fine-tuning-de-modelos-pré-treinados"
-            id="toc-fine-tuning-de-modelos-pré-treinados"><em>Fine-Tuning</em>
-            de Modelos Pré-Treinados</a></li>
+            id="toc-fine-tuning-de-modelos-pré-treinados">Fine-Tuning de
+            Modelos Pré-Treinados</a></li>
             <li><a href="#few-shot-e-zero-shot-learning"
             id="toc-few-shot-e-zero-shot-learning">Few Shot e Zero Shot
             Learning</a></li>
             <li><a href="#retrieval-augmented-generation"
             id="toc-retrieval-augmented-generation">Retrieval-Augmented
             Generation</a></li>
-            <li><a href="#llama-modelos-pequenos-e-eficientes"
-            id="toc-llama-modelos-pequenos-e-eficientes">LLaMA: Modelos
-            Pequenos e Eficientes</a>
+            <li><a href="#llama" id="toc-llama">LLaMA</a>
             <ul>
             <li><a href="#arquitetura-do-llama"
             id="toc-arquitetura-do-llama">Arquitetura do LLaMA</a></li>
@@ -197,18 +195,17 @@ Alana Neo" />
             <li><a href="#hugging-face-pipeline"
             id="toc-hugging-face-pipeline">Hugging Face
             Pipeline</a></li>
-            <li><a href="#usando-um-llm-local-com-ollama"
-            id="toc-usando-um-llm-local-com-ollama">Usando um LLM Local
-            com Ollama</a></li>
+            <li><a href="#llm-local-com-ollama"
+            id="toc-llm-local-com-ollama">LLM Local com Ollama</a></li>
             <li><a href="#tokenizador-no-llm"
             id="toc-tokenizador-no-llm">Tokenizador no LLM</a></li>
             <li><a href="#langchain"
             id="toc-langchain">LangChain</a></li>
             <li><a href="#mangaba.ai"
             id="toc-mangaba.ai">Mangaba.AI</a></li>
-            <li><a href="#fluxos-em-llm-engenharia-de-prompts"
-            id="toc-fluxos-em-llm-engenharia-de-prompts">Fluxos em LLM
-            (Engenharia de Prompts)</a></li>
+            <li><a href="#fluxos-em-llm-ou-engenharia-de-prompts"
+            id="toc-fluxos-em-llm-ou-engenharia-de-prompts">Fluxos em
+            LLM (ou Engenharia de Prompts)</a></li>
             <li><a href="#como-funciona" id="toc-como-funciona">Como
             Funciona?</a></li>
             <li><a href="#exemplos-de-requisitos"
@@ -316,7 +313,7 @@ Alana Neo</p>
       </tr>
       <tr>
       <td style="text-align: right;"></td>
-      <td style="text-align: left;">versão 0.7 (gerado em
+      <td style="text-align: left;">versão 0.8 (gerado em
       2025-12-16)</td>
       </tr>
       <tr>
@@ -3367,27 +3364,15 @@ Palavras semelhantes a &#39;economy&#39; com FastText: [(&#39;economic&#39;, 0.9
       relações semânticas entre palavras e suas aplicações em tarefas de
       PLN.</p>
       <h2 id="exercícios-1">Exercícios</h2>
-      <ol>
-      <li><p><strong>O que é vetorização de texto no contexto de
-      processamento de linguagem natural?</strong></p>
-      <ol>
-      <li><p>A compressão de textos longos para reduzir o tamanho dos
-      arquivos.</p></li>
-      <li><p>A transformação de palavras ou documentos em representações
-      numéricas.</p></li>
-      <li><p>A categorização de textos em diferentes classes.</p></li>
-      <li><p>A separação de um texto em frases ou parágrafos
-      distintos.</p></li>
-      </ol></li>
-      <li><p><strong>Qual das seguintes técnicas de vetorização é
-      baseada na frequência de termos em um documento?</strong></p>
+      <p><strong>Qual das seguintes técnicas de vetorização é baseada na
+      frequência de termos em um documento?</strong></p>
       <ol>
       <li><p>Word2Vec</p></li>
       <li><p>TF-IDF</p></li>
       <li><p>Bag of Words (BoW)</p></li>
       <li><p>Embeddings de Palavras</p></li>
-      </ol></li>
-      <li><p><strong>O que é a técnica Bag of Words (BoW)?</strong></p>
+      </ol>
+      <p><strong>O que é a técnica Bag of Words (BoW)?</strong></p>
       <ol>
       <li><p>Um método de combinar várias palavras em uma única
       representação vetorial.</p></li>
@@ -3396,8 +3381,8 @@ Palavras semelhantes a &#39;economy&#39; com FastText: [(&#39;economic&#39;, 0.9
       <li><p>Um algoritmo de compressão de texto.</p></li>
       <li><p>Uma técnica para traduzir texto entre diferentes
       idiomas.</p></li>
-      </ol></li>
-      <li><p><strong>Qual das alternativas a seguir é uma desvantagem do
+      </ol>
+      <p><strong>Qual das alternativas a seguir é uma desvantagem do
       modelo Bag of Words?</strong></p>
       <ol>
       <li><p>Ele não consegue capturar a ordem das palavras.</p></li>
@@ -3405,8 +3390,8 @@ Palavras semelhantes a &#39;economy&#39; com FastText: [(&#39;economic&#39;, 0.9
       <li><p>Ele não suporta múltiplos idiomas.</p></li>
       <li><p>Ele exige uma grande quantidade de dados para
       funcionar.</p></li>
-      </ol></li>
-      <li><p><strong>O que é um embedding de palavras?</strong></p>
+      </ol>
+      <p><strong>O que é um embedding de palavras?</strong></p>
       <ol>
       <li><p>Uma matriz de números binários que representa a presença ou
       ausência de palavras em um texto.</p></li>
@@ -3415,6 +3400,62 @@ Palavras semelhantes a &#39;economy&#39; com FastText: [(&#39;economic&#39;, 0.9
       <li><p>Um conjunto de palavras agrupadas por temas
       semelhantes.</p></li>
       <li><p>Uma técnica para compactar arquivos de texto.</p></li>
+      </ol>
+      <ol>
+      <li><p><strong>Qual é a principal diferença entre o modelo
+      Word2Vec e a técnica TF-IDF?</strong></p>
+      <ol>
+      <li><p>Word2Vec captura relações semânticas entre palavras,
+      enquanto TF-IDF mede a importância de uma palavra em um
+      documento.</p></li>
+      <li><p>TF-IDF é um modelo de aprendizado profundo, enquanto
+      Word2Vec não é.</p></li>
+      <li><p>Word2Vec utiliza a frequência de termos em um documento,
+      enquanto TF-IDF utiliza redes neurais.</p></li>
+      <li><p>Word2Vec é usado apenas para classificação de texto,
+      enquanto TF-IDF é usado para tradução automática.</p></li>
+      </ol>
+      <p><strong>O que significa a sigla TF-IDF?</strong></p>
+      <ol>
+      <li><p>Term Frequency - Inverse Document Frequency</p></li>
+      <li><p>Term Frequency - Inverse Data Frequency</p></li>
+      <li><p>Total Frequency - Inverse Document Frequency</p></li>
+      <li><p>Text Frequency - Inverse Data Frequency</p></li>
+      </ol>
+      <p><strong>No contexto do Word2Vec, o que significa
+      "skip-gram"?</strong></p>
+      <ol>
+      <li><p>Um método de usar uma palavra central para prever palavras
+      de contexto ao seu redor.</p></li>
+      <li><p>Um método de ignorar palavras raras em um texto.</p></li>
+      <li><p>Um algoritmo para classificar palavras por
+      frequência.</p></li>
+      <li><p>Uma técnica para comprimir textos longos.</p></li>
+      </ol>
+      <p><strong>Qual é o principal objetivo do modelo
+      TF-IDF?</strong></p>
+      <ol>
+      <li><p>Classificar documentos por sua relevância.</p></li>
+      <li><p>Converter palavras em vetores numéricos que capturam seu
+      significado semântico.</p></li>
+      <li><p>Identificar as palavras mais importantes em um documento,
+      levando em conta a frequência dessas palavras em um conjunto de
+      documentos.</p></li>
+      <li><p>Traduzir automaticamente textos entre diferentes
+      idiomas.</p></li>
+      </ol>
+      <p><strong>Como o modelo Word2Vec aprende a representar palavras
+      em um espaço vetorial?</strong></p>
+      <ol>
+      <li><p>Através da análise de frequência de palavras em um único
+      documento.</p></li>
+      <li><p>Usando a coocorrência de palavras em um grande corpus de
+      textos, para aprender vetores que representam o significado
+      semântico das palavras.</p></li>
+      <li><p>Convertendo palavras em números aleatórios e ajustando-os
+      conforme a necessidade.</p></li>
+      <li><p>Usando apenas o contexto imediato de uma palavra em uma
+      frase.</p></li>
       </ol></li>
       </ol>
       <h1 id="cap:LLM">Modelos de Linguagem Grande (LLM)</h1>
@@ -3540,7 +3581,7 @@ Palavras semelhantes a &#39;economy&#39; com FastText: [(&#39;economic&#39;, 0.9
       abordados no Capítulo <a href="#conclusao"
       data-reference-type="ref" data-reference="conclusao">6</a>.</p>
       <h2 id="arquitetura-geral-do-transformer">Arquitetura Geral do
-      <em>Transformer</em></h2>
+      Transformer</h2>
       <p>Os LLMs modernos são em grande parte fundamentados na
       arquitetura <em>Transformer</em>, proposta originalmente por <span
       class="citation" data-cites="vaswani2017attention"></span>. Essa
@@ -3886,8 +3927,8 @@ grad_fn=&lt;NativeLayerNormBackward0&gt;)</code></pre>
       para os modelos do tipo BERT e para outros modelos simplifica a
       reprodutibilidade e a integração em pipelines de tarefas de
       processamento de linguagem natural.</p>
-      <h2 id="fine-tuning-de-modelos-pré-treinados"><em>Fine-Tuning</em>
-      de Modelos Pré-Treinados</h2>
+      <h2 id="fine-tuning-de-modelos-pré-treinados">Fine-Tuning de
+      Modelos Pré-Treinados</h2>
       <p>Modelos pré-treinados como BERT e GPT demonstraram capacidade
       de compreender nuances semânticas em texto e transferir esse
       conhecimento para diversas tarefas específicas através de
@@ -4274,8 +4315,7 @@ grad_fn=&lt;NativeLayerNormBackward0&gt;)</code></pre>
       componentes de recuperação e geração de maneira conjunta pode ser
       complexo e requer grandes volumes de dados.</p></li>
       </ul>
-      <h2 id="llama-modelos-pequenos-e-eficientes">LLaMA: Modelos
-      Pequenos e Eficientes</h2>
+      <h2 id="llama">LLaMA</h2>
       <p>LLaMA é uma família de modelos de linguagem grandes (LLMs) que
       são menores em tamanho, mas ainda mantêm a capacidade de realizar
       tarefas complexas de PLN. A abordagem de LLaMA é baseada em uma
@@ -4431,8 +4471,7 @@ grad_fn=&lt;NativeLayerNormBackward0&gt;)</code></pre>
       treinado em um grande dataset. Também é possível ajustar
       (fine-tune) um modelo pré-treinado em seus próprios dados para
       obter resultados melhores.</p>
-      <h3 id="usando-um-llm-local-com-ollama">Usando um LLM Local com
-      Ollama</h3>
+      <h3 id="llm-local-com-ollama">LLM Local com Ollama</h3>
       <p>Nesta seção, descreveremos detalhes da instalação do software
       Ollama, baixaremos o modelo LLM Qwen2 0.5B e exploraremos suas
       capacidades com algumas perguntas simples.</p>
@@ -4781,8 +4820,8 @@ grad_fn=&lt;NativeLayerNormBackward0&gt;)</code></pre>
 <span id="cb112-18"><a href="#cb112-18" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb112-19"><a href="#cb112-19" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb112-20"><a href="#cb112-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(result.output)</span></code></pre></div>
-      <h3 id="fluxos-em-llm-engenharia-de-prompts">Fluxos em LLM
-      (Engenharia de Prompts)</h3>
+      <h3 id="fluxos-em-llm-ou-engenharia-de-prompts">Fluxos em LLM (ou
+      Engenharia de Prompts)</h3>
       <p>Modelos de Linguagem Grandes (LLMs), como a família GPT, são
       utilizados na compreensão e geração de texto. Uma maneira eficaz e
       relativamente rápida de criar um chatbot funcional é através da
