@@ -13,11 +13,143 @@ body {
     margin: 0;
 }
 
+/* Botão hambúrguer */
+.menu-toggle {
+    display: none;
+    position: fixed;
+    top: 16px;
+    left: 16px;
+    z-index: 1001;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 0;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background: #1a1a1a;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.menu-toggle[aria-expanded="true"] span:nth-child(1) {
+    transform: rotate(45deg) translate(9px, 9px);
+}
+
+.menu-toggle[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle[aria-expanded="true"] span:nth-child(3) {
+    transform: rotate(-45deg) translate(8px, -8px);
+}
+
+/* Botão toggle do menu lateral (desktop) */
+.sidebar-toggle {
+    position: fixed;
+    top: 16px;
+    left: 440px;
+    z-index: 1002;
+    width: 32px;
+    height: 32px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-toggle:hover {
+    background: #f0f0f0;
+    border-color: #999;
+}
+
+.sidebar-toggle-icon {
+    width: 16px;
+    height: 16px;
+    position: relative;
+}
+
+.sidebar-toggle-icon::before,
+.sidebar-toggle-icon::after {
+    content: "";
+    position: absolute;
+    background: #666;
+    transition: all 0.3s ease;
+}
+
+/* Seta para esquerda (ocultar) */
+.sidebar-toggle-icon::before {
+    width: 8px;
+    height: 2px;
+    top: 4px;
+    left: 2px;
+    transform: rotate(-45deg);
+}
+
+.sidebar-toggle-icon::after {
+    width: 8px;
+    height: 2px;
+    bottom: 4px;
+    left: 2px;
+    transform: rotate(45deg);
+}
+
+/* Seta para direita (exibir) quando menu está oculto */
+.menu-hidden .sidebar-toggle-icon::before {
+    transform: rotate(45deg);
+    left: 6px;
+}
+
+.menu-hidden .sidebar-toggle-icon::after {
+    transform: rotate(-45deg);
+    left: 6px;
+}
+
+/* Estado do menu oculto */
+.menu-hidden .menu {
+    transform: translateX(-100%);
+}
+
+.menu-hidden .content {
+    margin-left: 0;
+    max-width: 900px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.menu-hidden .sidebar-toggle {
+    left: 16px;
+}
+
+/* Transições suaves */
+.menu {
+    transition: transform 0.3s ease;
+}
+
+.content {
+    transition: margin-left 0.3s ease, max-width 0.3s ease;
+}
+
 /* Layout geral */
 .layout {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 64px 32px;
+    padding: 0 32px;
+    display: flex;
 }
 
 /* Menu lateral no estilo 3Blue1Brown */
@@ -25,7 +157,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 400px;
+    width: 480px;
     height: 100vh;
     padding: 32px 24px;
     overflow-y: auto;
@@ -34,13 +166,13 @@ body {
     border-right: 1px solid #e0e0e0;
 
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    font-size: 15px;
+    font-size: 17px;
     line-height: 1.4;
 }
 
 /* Título "Table of Contents" */
 .menu #TOC > h2 {
-    font-size: 0.85rem;
+    font-size: 0.95rem;
     font-weight: 600;
     letter-spacing: 0.04em;
     text-transform: uppercase;
@@ -81,7 +213,7 @@ body {
 }
 
 .menu #TOC ul ul a {
-    font-size: 0.95em;
+    font-size: 1em;
     color: #444;
 }
 
@@ -94,15 +226,10 @@ body {
 
 /* Conteúdo deslocado corretamente */
 .content {
-    margin-left: 340px;
+    margin-left: 420px;
     max-width: 760px;
-}
-
-
-/* Conteúdo principal */
-.content {
-    max-width: 720px;
-    margin-left: 320px; /* espaço para o menu fixo */
+    flex: 1;
+    padding-top: 64px;
 }
 
 /* Leitura */
@@ -190,13 +317,6 @@ html {
     scroll-behavior: smooth;
 }
 
-
-
-html {
-    scroll-behavior: smooth;
-}
-
-
 /* Código */
 pre, code {
     font-family: "Courier New", monospace;
@@ -238,66 +358,95 @@ blockquote {
 
 /* TOC colapsável */
 .menu #TOC li.has-children {
-  position: relative;
-  padding-left: 18px; /* espaço pro botão */
+    position: relative;
+    padding-left: 0;
+}
+
+.menu #TOC li.has-children > a {
+    display: inline;
 }
 
 .menu #TOC button.toc-toggle {
-  position: absolute;
-  left: 0;
-  top: 6px;
-  width: 18px;
-  height: 18px;
-  border: 0;
-  background: transparent;
-  cursor: pointer;
-  font: inherit;
-  line-height: 1;
-  opacity: 0.7;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    margin-left: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background: #fff;
+    cursor: pointer;
+    font-family: system-ui, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+    color: #666;
+    opacity: 0.85;
+    transition: all 0.15s ease;
+    vertical-align: middle;
 }
 
 .menu #TOC button.toc-toggle:hover {
-  opacity: 1;
+    opacity: 1;
+    background: #f0f0f0;
+    border-color: #999;
+    color: #333;
 }
 
 .menu #TOC li.collapsed > ul {
-  display: none;
+    display: none;
 }
 
-/* Indicador visual (triângulo) */
 .menu #TOC button.toc-toggle::before {
-  content: "▸";
+    content: "+";
 }
 
 .menu #TOC li:not(.collapsed) > button.toc-toggle::before {
-  content: "▾";
+    content: "−";
 }
 
 nav.menu li.has-children {
-  position: relative;
-  padding-left: 18px;
+    position: relative;
+    padding-left: 0;
+}
+
+nav.menu li.has-children > a {
+    display: inline;
 }
 
 nav.menu button.toc-toggle {
-  position: absolute;
-  left: 0;
-  top: 6px;
-  width: 18px;
-  height: 18px;
-  border: 0;
-  background: transparent;
-  cursor: pointer;
-  font: inherit;
-  line-height: 1;
-  opacity: 0.7;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    margin-left: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background: #fff;
+    cursor: pointer;
+    font-family: system-ui, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+    color: #666;
+    opacity: 0.85;
+    transition: all 0.15s ease;
+    vertical-align: middle;
 }
 
-nav.menu button.toc-toggle:hover { opacity: 1; }
+nav.menu button.toc-toggle:hover {
+    opacity: 1;
+    background: #f0f0f0;
+    border-color: #999;
+    color: #333;
+}
 
 nav.menu li.collapsed > ul { display: none; }
 
-nav.menu button.toc-toggle::before { content: "▸"; }
-nav.menu li:not(.collapsed) > button.toc-toggle::before { content: "▾"; }
+nav.menu button.toc-toggle::before { content: "+"; }
+nav.menu li:not(.collapsed) > button.toc-toggle::before { content: "−"; }
 
 nav.menu ul {
   list-style: none;
@@ -308,9 +457,195 @@ nav.menu ul {
 nav.menu ul ul {
   list-style: none;
   margin-left: 0;
-  padding-left: 1em; /* mantém o recuo hierárquico sem bolinha */
+  padding-left: 1em;
 }
 
 nav.menu li {
   list-style: none;
+}
+
+/* Controles de expansão/colapso */
+.toc-controls {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.toc-expand-all,
+.toc-collapse-all {
+  flex: 1;
+  padding: 6px 8px;
+  border: 1px solid #ccc;
+  background: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85em;
+  color: #333;
+  transition: background 0.15s ease, border-color 0.15s ease;
+  font-weight: 500;
+}
+
+.toc-expand-all:hover,
+.toc-collapse-all:hover {
+  background: #f0f0f0;
+  border-color: #999;
+}
+
+.toc-expand-all:active,
+.toc-collapse-all:active {
+  background: #e8e8e8;
+}
+
+/* ========== RESPONSIVIDADE ========== */
+
+/* Tablets e telas médias (até 1024px) */
+@media (max-width: 1024px) {
+    .layout {
+        padding: 48px 24px;
+    }
+
+    .menu {
+        width: 350px;
+    }
+
+    .content {
+        margin-left: 300px;
+        max-width: 600px;
+    }
+
+    .content h1 {
+        font-size: 1.8em;
+    }
+
+    .content h2 {
+        font-size: 1.4em;
+    }
+}
+
+/* Dispositivos móveis (até 768px) */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .sidebar-toggle {
+        display: none;
+    }
+
+    .layout {
+        padding: 32px 16px;
+        padding-top: 60px;
+    }
+
+    .menu {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        max-width: 300px;
+        height: 100vh;
+        background: #f7f7f7;
+        z-index: 1000;
+        transition: left 0.3s ease;
+        box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+        padding-top: 60px;
+    }
+
+    .menu.active {
+        left: 0;
+    }
+
+    .content {
+        margin-left: 0;
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .content p {
+        text-align: left;
+    }
+
+    .content h1 {
+        font-size: 1.8em;
+    }
+
+    .content h2 {
+        font-size: 1.4em;
+    }
+
+    .content h3 {
+        font-size: 1.15em;
+    }
+
+    body {
+        font-size: 16px;
+    }
+
+    .document-title h1 {
+        font-size: 2em;
+    }
+
+    .content ul,
+    .content ol {
+        margin: 1.2em 0 1.2em 1.5em;
+    }
+}
+
+/* Smartphones pequenos (até 480px) */
+@media (max-width: 480px) {
+    .layout {
+        padding: 24px 12px;
+        padding-top: 50px;
+    }
+
+    .menu-toggle {
+        top: 12px;
+        left: 12px;
+        width: 36px;
+        height: 36px;
+    }
+
+    .menu-toggle span {
+        width: 24px;
+        height: 2px;
+    }
+
+    .menu {
+        max-width: 100%;
+        padding: 16px;
+        padding-top: 50px;
+    }
+
+    body {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    .content h1 {
+        font-size: 1.5em;
+        margin-top: 1.5em;
+    }
+
+    .content h2 {
+        font-size: 1.2em;
+    }
+
+    .content h3 {
+        font-size: 1.05em;
+    }
+
+    .document-title h1 {
+        font-size: 1.6em;
+    }
+
+    .content pre {
+        padding: 12px;
+        font-size: 0.85em;
+    }
+
+    .menu #TOC > h2 {
+        font-size: 0.85rem;
+    }
 }

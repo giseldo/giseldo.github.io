@@ -19,10 +19,26 @@ Alana Neo" />
 
 <body>
 
+  <!-- Botão hambúrguer para mobile -->
+  <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <!-- Botão para ocultar/exibir menu lateral (desktop) -->
+  <button class="sidebar-toggle" aria-label="Ocultar menu" aria-expanded="true" title="Ocultar menu lateral">
+    <span class="sidebar-toggle-icon"></span>
+  </button>
+
   <div class="layout">
 
     <!-- Menu lateral automático -->
     <nav class="menu">
+      <div class="toc-controls">
+        <button class="toc-expand-all" title="Expandir todos os menus">Expandir tudo</button>
+        <button class="toc-collapse-all" title="Colapsar todos os menus">Colapsar tudo</button>
+      </div>
             <ul>
             <li><a href="#agradecimentos"
             id="toc-agradecimentos">Agradecimentos</a></li>
@@ -6988,19 +7004,52 @@ Inicie a conversa agora seguindo o passo 1.</code></pre>
 
   <script>
 document.addEventListener("DOMContentLoaded", () => {
-  const menu = document.querySelector("nav.menu");
-  if (!menu) return;
+  // Controle do toggle do menu lateral (desktop)
+  const sidebarToggle = document.querySelector(".sidebar-toggle");
+  const layout = document.querySelector(".layout");
 
-  const rootUl = menu.querySelector("ul");
+  if (sidebarToggle && layout) {
+    sidebarToggle.addEventListener("click", () => {
+      layout.classList.toggle("menu-hidden");
+      const isHidden = layout.classList.contains("menu-hidden");
+      sidebarToggle.setAttribute("aria-expanded", String(!isHidden));
+      sidebarToggle.setAttribute("aria-label", isHidden ? "Exibir menu" : "Ocultar menu");
+      sidebarToggle.setAttribute("title", isHidden ? "Exibir menu lateral" : "Ocultar menu lateral");
+    });
+  }
+
+  // Controle do menu hambúrguer
+  const menuToggle = document.querySelector(".menu-toggle");
+  const menu = document.querySelector("nav.menu");
+
+  if (menuToggle && menu) {
+    menuToggle.addEventListener("click", () => {
+      menu.classList.toggle("active");
+      const isOpen = menu.classList.contains("active");
+      menuToggle.setAttribute("aria-expanded", isOpen);
+    });
+
+    // Fechar menu ao clicar em um link
+    menu.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        menu.classList.remove("active");
+        menuToggle.setAttribute("aria-expanded", "false");
+      });
+    });
+  }
+
+  // Menu colapsável
+  const rootUl = menu?.querySelector("ul");
   if (!rootUl) return;
 
+  const toggleButtons = [];
+
   rootUl.querySelectorAll("li").forEach(li => {
-    // submenu direto do item
     const childUl = Array.from(li.children).find(el => el.tagName === "UL");
     const link = Array.from(li.children).find(el => el.tagName === "A");
     if (!childUl || !link) return;
 
-    li.classList.add("has-children", "collapsed"); // começa fechado
+    li.classList.add("has-children", "collapsed");
 
     const btn = document.createElement("button");
     btn.type = "button";
@@ -7015,8 +7064,31 @@ document.addEventListener("DOMContentLoaded", () => {
       btn.setAttribute("aria-expanded", String(!collapsed));
     });
 
-    li.insertBefore(btn, link);
+    toggleButtons.push({ button: btn, li: li });
+    link.insertAdjacentElement('afterend', btn);
   });
+
+  // Botões para expandir/colapsar tudo
+  const expandAllBtn = document.querySelector(".toc-expand-all");
+  const collapseAllBtn = document.querySelector(".toc-collapse-all");
+
+  if (expandAllBtn) {
+    expandAllBtn.addEventListener("click", () => {
+      toggleButtons.forEach(({ button, li }) => {
+        li.classList.remove("collapsed");
+        button.setAttribute("aria-expanded", "true");
+      });
+    });
+  }
+
+  if (collapseAllBtn) {
+    collapseAllBtn.addEventListener("click", () => {
+      toggleButtons.forEach(({ button, li }) => {
+        li.classList.add("collapsed");
+        button.setAttribute("aria-expanded", "false");
+      });
+    });
+  }
 });
 </script>
 
