@@ -7,8 +7,10 @@
   <title>Construindo Chatbots: Do AIML e PLN até os Modernos
 LLMs</title>
 
-    <meta name="author" content="Giseldo Neo" />
+    <meta name="author" content="Giseldo Neo<br />
+Alana Neo" />
   
+    <meta name="date" content="2025-12-16" />
   
     <link rel="stylesheet" href="styles.css" />
   
@@ -24,11 +26,9 @@ LLMs</title>
             <ul>
             <li><a href="#agradecimentos"
             id="toc-agradecimentos">Agradecimentos</a></li>
-            <li><a href="#prefácio" id="toc-prefácio">Prefácio</a>
-            <ul>
+            <li><a href="#prefácio" id="toc-prefácio">Prefácio</a></li>
             <li><a href="#informações"
             id="toc-informações">Informações</a></li>
-            </ul></li>
             <li><a href="#resumo" id="toc-resumo">Resumo</a></li>
             <li><a href="#chatbots" id="toc-chatbots">Chatbots</a>
             <ul>
@@ -275,6 +275,12 @@ LLMs</title>
 
     <!-- Conteúdo principal -->
     <main class="content">
+      <header class="document-title">
+    <h1>Construindo Chatbots: Do AIML e PLN até os Modernos LLMs</h1>
+          <p class="author">Giseldo Neo<br />
+Alana Neo</p>
+              <p class="date">2025-12-16</p>
+      </header>
       <div class="center">
       <p><strong><strong></strong></strong></p>
       <p><strong><strong></strong></strong></p>
@@ -365,9 +371,8 @@ LLMs</title>
       apresentação do ELIZA; ao Professor José Antão Beltrão Moura
       (UFCG) pela inspiração e dedicação ao ensino; e agradeço ao
       Professor Otávio Monteiro Pereira (IFAL) pelo apoio relacionado à
-      ética dos chatbots.</p>
-      <p>Agradeço ao Instituto Federal de Alagoas e a seus servidores
-      que permitiram que esta obra fosse realizada.</p>
+      ética dos chatbots. Agradeço também ao Instituto Federal de
+      Alagoas e a seus servidores.</p>
       <p>Estendo meus agradecimentos a todos que, de forma direta ou
       indireta, colaboraram com ideias, discussões e sugestões que
       enriqueceram o conteúdo apresentado.</p>
@@ -429,7 +434,7 @@ LLMs</title>
       <div class="flushright">
       <p>Boa leitura!</p>
       </div>
-      <h2 class="unnumbered" id="informações">Informações</h2>
+      <h1 id="informações">Informações</h1>
       <p>O código-fonte do livro está disponível no endereço: <a
       href="https://github.com/giseldo/Livro-A-jornada-dos-Chatbots---Verde---C-digos"
       class="uri">https://github.com/giseldo/Livro-A-jornada-dos-Chatbots---Verde---C-digos</a>.</p>
@@ -534,7 +539,7 @@ LLMs</title>
       <p>Uma descrição detalhada do funcionamento do ELIZA e o roteiro
       DOCTOR, com exemplos em Python, será apresentada no Capítulo <a
       href="#cap:ELIZA" data-reference-type="ref"
-      data-reference="cap:ELIZA">2</a>.</p>
+      data-reference="cap:ELIZA">3</a>.</p>
       </div>
       <p>Outro chatbot famoso é o ChatGPT da OpenAI. Ele é um programa
       capaz de gerar texto muito semelhante ao criado por humanos. Ele
@@ -585,7 +590,7 @@ LLMs</title>
       tendência é corroborada pelo aumento do interesse de busca pelo
       termo “chatbots”, conforme análise de dados do Google Trends no
       período entre 2020 e 2025 (Figura <a href="#fig:trends"
-      data-reference-type="ref" data-reference="fig:trends">1.1</a>).
+      data-reference-type="ref" data-reference="fig:trends">2.1</a>).
       Nesta figura, os valores representam o interesse relativo de busca
       ao longo do tempo, onde 100 indica o pico de popularidade no
       período analisado e 0 (ou a ausência de dados) indica interesse
@@ -607,10 +612,10 @@ LLMs</title>
       percebe seu ambiente por meio de sensores e atua sobre esse
       ambiente por meio de atuadores.</p>
       <p>Nesse contexto, um chatbot (Figura <a href="#fig:chatbot"
-      data-reference-type="ref" data-reference="fig:chatbot">1.3</a>)
+      data-reference-type="ref" data-reference="fig:chatbot">2.3</a>)
       pode ser considerado uma instanciação específica de um agente -
       veja na Figura <a href="#fig:agente" data-reference-type="ref"
-      data-reference="fig:agente">1.2</a> a arquitetura conceitual de
+      data-reference="fig:agente">2.2</a> a arquitetura conceitual de
       alto nível para um agente - cujo propósito primário é a interação
       conversacional em linguagem natural.</p>
       <figure id="fig:agente">
@@ -674,7 +679,7 @@ LLMs</title>
       o propósito do sistema.</p>
       <p>Um exemplo esquemático de um fluxo conversacional é apresentado
       na Figura <a href="#fig:fluxo" data-reference-type="ref"
-      data-reference="fig:fluxo">1.4</a>. Nesta figura, o fluxo de
+      data-reference="fig:fluxo">2.4</a>. Nesta figura, o fluxo de
       conversação inicia quando o usuário entra com o texto: I WANT
       PIZZA, o chatbot responde com uma pergunta: HI I AM THE PIZZA BOT.
       CAN I CONFIRM THIS DELIVERY TO YOUR HOUSE? O usuário então pode
@@ -696,7 +701,7 @@ LLMs</title>
       <p>Um outro tipo de fluxo para um chatbot que vende roupas online
       está representado na Figura <a
       href="#fig:representacaodeumaarvore" data-reference-type="ref"
-      data-reference="fig:representacaodeumaarvore">1.5</a>.</p>
+      data-reference="fig:representacaodeumaarvore">2.5</a>.</p>
       <figure id="fig:representacaodeumaarvore">
       <p><img src="./fig/image14.png" style="width:70.0%" alt="image" />
       <span id="fig:representacaodeumaarvore"
@@ -727,7 +732,7 @@ LLMs</title>
       processo de inscrição para o Exame Nacional do Ensino Médio (ENEM)
       foi disponibilizado por meio de uma interface conversacional
       baseada em chatbot (Figura <a href="#fig:enem"
-      data-reference-type="ref" data-reference="fig:enem">1.6</a>).</p>
+      data-reference-type="ref" data-reference="fig:enem">2.6</a>).</p>
       <figure id="fig:enem">
       <p><img src="./fig/enem.png" style="width:70.0%" alt="image" />
       <span id="fig:enem" data-label="fig:enem"></span></p>
@@ -850,7 +855,7 @@ LLMs</title>
       constituem uma ferramenta visual de representação para este
       problema. Uma explicação detalhada do AIML será apresentada no
       Capítulo <a href="#cap:ELIZA" data-reference-type="ref"
-      data-reference="cap:ELIZA">2</a>.</p>
+      data-reference="cap:ELIZA">3</a>.</p>
       <p>Os chatbots baseados em AIML apresentam desvantagens
       específicas. Por exemplo, o conhecimento é representado como
       instâncias de arquivos AIML. Se esse conhecimento for criado com
@@ -1021,7 +1026,7 @@ LLMs</title>
       carregando um script diferente, sem alterar o código do programa
       (veja na Figura <a href="#fig:elizaeditor"
       data-reference-type="ref"
-      data-reference="fig:elizaeditor">2.1</a>). Também foi codificado
+      data-reference="fig:elizaeditor">3.1</a>). Também foi codificado
       um editor de texto para as alterações do próprio script.</p>
       <figure id="fig:elizaeditor">
       <p><img src="./fig/eliza.png" style="width:90.0%" alt="image" />
@@ -1252,7 +1257,7 @@ DOES THAT HAVE ANYTHING TO DO WITH THE FACT THAT YOUR BOYFRIEND MADE YOU COME HE
       Transformer</em> (GPT), que utilizam redes neurais de milhões (ou
       trilhões) de parâmetros e mecanismos de atenção. Mais detalhes
       sobre LLM no Capítulo <a href="#cap:LLM" data-reference-type="ref"
-      data-reference="cap:LLM">4</a>.</p>
+      data-reference="cap:LLM">5</a>.</p>
       <p>No ELIZA, a “importância” de uma palavra era determinada
       manualmente pelo programador através de pesos ou rankings
       atribuídos a certas palavras-chave no script. Ou seja, o programa
@@ -1386,7 +1391,7 @@ Eliza: Você disse: Eu estou alegre</code></pre>
       chatbot inspirado no paradigma ELIZA. Esta implementação demonstra
       a utilização de expressões regulares - mais sobre expressões
       regulares no Capítulo <a href="#cap:PLN" data-reference-type="ref"
-      data-reference="cap:PLN">3</a> - para a identificação de padrões
+      data-reference="cap:PLN">4</a> - para a identificação de padrões
       textuais (palavras-chave) na entrada fornecida pelo usuário e a
       subsequente geração de respostas, fundamentada em regras de
       transformação predefinidas manualmente.</p>
@@ -1467,7 +1472,7 @@ Bot: How do you feel about your parents?</code></pre>
       são dinamicamente substituídos pelo conteúdo dos grupos capturados
       pela expressão regular (mais detalhes sobre expressão regular no
       Capítulo <a href="#cap:PLN" data-reference-type="ref"
-      data-reference="cap:PLN">3</a> na entrada original do usuário).
+      data-reference="cap:PLN">4</a> na entrada original do usuário).
       Por exemplo, se a entrada for <em>“I am sad”</em> e esta
       corresponder a um padrão como <code>r“I am (.*)”</code>, o grupo
       capturado (<code>(.*)</code>) conterá a string <em>“sad”</em>. Se
@@ -1541,7 +1546,7 @@ Bot: Tell me more about your family.</code></pre>
       aparecerá com um campo de texto. Experimente digitar “olá” ou
       “tchau” e veja as respostas. Veja na Figura <a
       href="#fig:chatsimplesgradio" data-reference-type="ref"
-      data-reference="fig:chatsimplesgradio">2.2</a> um print da tela do
+      data-reference="fig:chatsimplesgradio">3.2</a> um print da tela do
       chatbot já em execução.</p>
       <figure id="fig:chatsimplesgradio">
       <p><img src="fig/chatsimplesgradio.png" style="width:90.0%"
@@ -1575,7 +1580,7 @@ Bot: Tell me more about your family.</code></pre>
 <span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a>demo.launch()</span></code></pre></div>
       <p>Na Figura <a href="#fig:respaleatoria"
       data-reference-type="ref"
-      data-reference="fig:respaleatoria">2.3</a> é possível visualizar o
+      data-reference="fig:respaleatoria">3.3</a> é possível visualizar o
       print da tela de um chatbot que responde de forma aleatória. Logo
       abaixo, o código-fonte que deu origem ao chatbot.</p>
       <div class="sourceCode" id="cb12" data-language="Python"
@@ -1627,7 +1632,7 @@ Bot: Tell me more about your family.</code></pre>
       data-cites="Wallace2009"></span>. A arquitetura fundamental de um
       interpretador AIML genérico é ilustrada na Figura <a
       href="#fig:interpretador" data-reference-type="ref"
-      data-reference="fig:interpretador">2.4</a>.</p>
+      data-reference="fig:interpretador">3.4</a>.</p>
       <figure id="fig:interpretador">
       <p><img src="./fig/aimlbase.png" style="width:80.0%"
       alt="image" /> <span id="fig:interpretador"
@@ -1664,7 +1669,7 @@ Bot: Tell me more about your family.</code></pre>
       representação visual desta estrutura de conhecimento é apresentada
       na Figura <a href="#fig:representacaovisual"
       data-reference-type="ref"
-      data-reference="fig:representacaovisual">2.5</a>.</p>
+      data-reference="fig:representacaovisual">3.5</a>.</p>
       <figure id="fig:representacaovisual">
       <p><img src="./fig/image9.png" style="width:90.0%" alt="image" />
       <span id="fig:representacaovisual"
@@ -1685,7 +1690,7 @@ Bot: Tell me more about your family.</code></pre>
       reativa ou de estímulo-resposta <span class="citation"
       data-cites="Wallace2000"></span>, conforme esquematizado na
       Figura <a href="#fig:teoriaestimulo" data-reference-type="ref"
-      data-reference="fig:teoriaestimulo">2.6</a>. Vale notar que a
+      data-reference="fig:teoriaestimulo">3.6</a>. Vale notar que a
       própria técnica de RBC já foi integrada a interpretadores AIML
       como um mecanismo para consultar fontes de dados externas e
       expandir a base de conhecimento do agente <span class="citation"
@@ -1774,7 +1779,7 @@ Bot: Tell me more about your family.</code></pre>
       (<em>Symbolic Reduction Artificial Intelligence</em>), que
       redireciona o fluxo de processamento (ver Figura <a
       href="#fig:sodatagsrai" data-reference-type="ref"
-      data-reference="fig:sodatagsrai">2.8</a>). Dessa forma, um
+      data-reference="fig:sodatagsrai">3.8</a>). Dessa forma, um
       <em>chatbot</em> AIML pode gerenciar intenções distintas dentro de
       seu domínio, como realizar um pedido ou verificar o status de
       entrega.</p>
@@ -2078,7 +2083,7 @@ Bot: Olá! Como posso ajudar você?</code></pre>
       Matemática da Universidade Dartmouth College <span
       class="citation" data-cites="blipblog"></span> (Figura <a
       href="#fig:jhonalan" data-reference-type="ref"
-      data-reference="fig:jhonalan">3.3</a>). Ele organizou uma
+      data-reference="fig:jhonalan">4.3</a>). Ele organizou uma
       conferência com duração de oito semanas com outros colegas em
       1956, alguns anos após a Segunda Guerra, e desde então o termo vem
       sendo utilizado para designar parte de conteúdos estudados em
@@ -2118,7 +2123,7 @@ Bot: Olá! Como posso ajudar você?</code></pre>
       dessa abordagem. Veja um exemplo de software que implementa um
       motor de inferência baseado na teoria dos SE na Figura <a
       href="#fig:expert" data-reference-type="ref"
-      data-reference="fig:expert">3.4</a>.</p>
+      data-reference="fig:expert">4.4</a>.</p>
       <figure id="fig:expert">
       <p><img src="fig/expert.jpg" style="width:60.0%" alt="image" />
       <span id="fig:expert" data-label="fig:expert"></span></p>
@@ -2140,7 +2145,7 @@ Bot: Olá! Como posso ajudar você?</code></pre>
       indução para buscar modelos capazes de representar o conhecimento
       existente nos dados.</p>
       <p>Na Figura <a href="#fig:exemplosam" data-reference-type="ref"
-      data-reference="fig:exemplosam">3.5</a>, é possível identificar
+      data-reference="fig:exemplosam">4.5</a>, é possível identificar
       alguns usos de AM integrado em algumas atividades cotidianas. São
       elas: (a) um smartphone com um assistente de voz fornecendo
       atualizações meteorológicas; (b) um sistema de casa inteligente
@@ -2816,7 +2821,7 @@ Texto sem stopwords: [&#39;Chatbots&#39;, &#39;tornando&#39;, &#39;populares&#39
       modelagem de linguagem, análise de sentimentos e reconhecimento de
       entidades nomeadas (NER) baseadas em aprendizado de máquina, são
       indispensáveis e serão apresentadas no Capítulo <a href="#cap:LLM"
-      data-reference-type="ref" data-reference="cap:LLM">4</a>.</p>
+      data-reference-type="ref" data-reference="cap:LLM">5</a>.</p>
       <h2 id="entendimento-de-linguagem-natural">Entendimento de
       Linguagem Natural</h2>
       <p>O Entendimento de Linguagem Natural (ULN) é um subdomínio
@@ -3480,7 +3485,7 @@ Palavras semelhantes a &#39;economy&#39; com FastText: [(&#39;economic&#39;, 0.9
       uso responsável da inteligência artificial, aspectos que vêm sendo
       discutidos intensamente pela comunidade científica e que serão
       abordados no Capítulo <a href="#conclusao"
-      data-reference-type="ref" data-reference="conclusao">5</a>.</p>
+      data-reference-type="ref" data-reference="conclusao">6</a>.</p>
       <h2 id="arquitetura-geral-do-transformer">Arquitetura Geral do
       <em>Transformer</em></h2>
       <p>Os LLMs modernos são em grande parte fundamentados na
@@ -4396,7 +4401,7 @@ grad_fn=&lt;NativeLayerNormBackward0&gt;)</code></pre>
       de instalado, o Ollama já está pronto para ser usado pelo
       terminal. Veja na Figura <a href="#fig:downloadollama"
       data-reference-type="ref"
-      data-reference="fig:downloadollama">4.3</a> a página do site do
+      data-reference="fig:downloadollama">5.3</a> a página do site do
       Ollama para download.</p>
       <figure id="fig:downloadollama">
       <p><img src="fig/ollama1.png" style="width:90.0%" alt="image" />
@@ -4409,7 +4414,7 @@ grad_fn=&lt;NativeLayerNormBackward0&gt;)</code></pre>
       confirmar que a instalação deu certo. Você verá uma lista de
       comandos disponíveis. Veja na Figura <a
       href="#fig:comandolistarollama" data-reference-type="ref"
-      data-reference="fig:comandolistarollama">4.4</a> o resultado da
+      data-reference="fig:comandolistarollama">5.4</a> o resultado da
       saída do comando list no prompt de comando.</p>
       <figure id="fig:comandolistarollama">
       <p><img src="fig/ollama2.png" style="width:90.0%" alt="image" />
@@ -4429,7 +4434,7 @@ grad_fn=&lt;NativeLayerNormBackward0&gt;)</code></pre>
       “Models”, você encontra vários modelos disponíveis. Veja na
       Figura <a href="#fig:sitebuscaollamaprint"
       data-reference-type="ref"
-      data-reference="fig:sitebuscaollamaprint">4.5</a> um print de tela
+      data-reference="fig:sitebuscaollamaprint">5.5</a> um print de tela
       do navegador do site do Ollama com o resultado da busca de um
       modelo LLM.</p>
       <figure id="fig:sitebuscaollamaprint">
@@ -4444,7 +4449,7 @@ grad_fn=&lt;NativeLayerNormBackward0&gt;)</code></pre>
       ideal para máquinas mais simples, como um computador com
       processador Pentium Gold sem GPU. Veja na Figura <a
       href="#fig:detalheswen" data-reference-type="ref"
-      data-reference="fig:detalheswen">4.6</a> um print de tela do
+      data-reference="fig:detalheswen">5.6</a> um print de tela do
       navegador do site do Ollama com o resultado do detalhamento do
       modelo Qwen2.5.</p>
       <figure id="fig:detalheswen">
@@ -4462,7 +4467,7 @@ grad_fn=&lt;NativeLayerNormBackward0&gt;)</code></pre>
       <p>Esse comando vai baixar o modelo e abrir uma interface de texto
       interativa para você começar a conversar com ele. Veja na
       Figura <a href="#fig:promptrunollama" data-reference-type="ref"
-      data-reference="fig:promptrunollama">4.7</a> um print de tela do
+      data-reference="fig:promptrunollama">5.7</a> um print de tela do
       navegador com o resultado do prompt do comando “run”.</p>
       <figure id="fig:promptrunollama">
       <p><img src="fig/ollama6.png" style="width:90.0%" alt="image" />
@@ -4482,7 +4487,7 @@ grad_fn=&lt;NativeLayerNormBackward0&gt;)</code></pre>
       no console (ou prompt de comando) do Ollama instalado e com um
       modelo LLM carregado. Veja na Figura <a
       href="#fig:prompsaidaollamaaprendizagem" data-reference-type="ref"
-      data-reference="fig:prompsaidaollamaaprendizagem">4.8</a> um print
+      data-reference="fig:prompsaidaollamaaprendizagem">5.8</a> um print
       do prompt de comando com a resposta do LLM Qwen carregado em
       memória e respondendo ao prompt: o que é aprendizagem de
       máquina.</p>
@@ -4507,7 +4512,7 @@ grad_fn=&lt;NativeLayerNormBackward0&gt;)</code></pre>
       machine learning?”. Perguntando em inglês, a resposta costuma ser
       mais precisa. Figura <a href="#fig:promptrunollamaingles"
       data-reference-type="ref"
-      data-reference="fig:promptrunollamaingles">4.9</a> um resultado da
+      data-reference="fig:promptrunollamaingles">5.9</a> um resultado da
       resposta (output) do LLM em inglês.</p>
       <pre
       data-caption="Prompt que será enviado para o LLM em inglês"><code>What is machine learning?</code></pre>
@@ -4528,7 +4533,7 @@ grad_fn=&lt;NativeLayerNormBackward0&gt;)</code></pre>
       <p>Vamos facilitar, perguntando uma coisa simples, em que o modelo
       teria facilidade em perguntas: “O que é Ollama?”. Veja na
       Figura <a href="#fig:perguntasimples" data-reference-type="ref"
-      data-reference="fig:perguntasimples">4.10</a> a saída desta
+      data-reference="fig:perguntasimples">5.10</a> a saída desta
       pergunta.</p>
       <pre data-caption="Pergunta simples"><code>O que é Ollama?</code></pre>
       <figure id="fig:perguntasimples">
@@ -4943,7 +4948,7 @@ Siga EXATAMENTE estes passos:
 Inicie a conversa agora seguindo o passo 1.</code></pre>
       <p>Veja na Figura <a href="#fig:chat_chatgpt_pizza"
       data-reference-type="ref"
-      data-reference="fig:chat_chatgpt_pizza">4.11</a> um exemplo de
+      data-reference="fig:chat_chatgpt_pizza">5.11</a> um exemplo de
       implementação e diálogo quando utilizado o ChatGPT.</p>
       <figure id="fig:chat_chatgpt_pizza">
       <p><img src="./fig/chat_chatgpt_pizza.png" style="width:90.0%"
@@ -4997,7 +5002,7 @@ Inicie a conversa agora seguindo o passo 1.</code></pre>
       resposta baseada na entrada e nas informações recuperadas. Por
       fim, a resposta gerada é enviada de volta ao usuário. Veja na
       Figura <a href="#fig:fluxodadoschatbot" data-reference-type="ref"
-      data-reference="fig:fluxodadoschatbot">4.12</a> um diagrama visual
+      data-reference="fig:fluxodadoschatbot">5.12</a> um diagrama visual
       deste procedimento.</p>
       <figure id="fig:fluxodadoschatbot">
       <p><img src="fig/fluxo_llm_rag2.png" style="width:90.0%"
@@ -5115,9 +5120,9 @@ Inicie a conversa agora seguindo o passo 1.</code></pre>
       com o recurso de SearchGPT (uma busca na web), lousa, geração de
       vídeos, imagens etc. Já para acesso à API, a modalidade de
       cobrança é paga-pelo-uso. Veja na Figura <a href="#fig:chat1"
-      data-reference-type="ref" data-reference="fig:chat1">4.13</a> uma
+      data-reference-type="ref" data-reference="fig:chat1">5.13</a> uma
       imagem do chatbot da OpenAI e na Figura <a href="#fig:chat2"
-      data-reference-type="ref" data-reference="fig:chat2">4.14</a> o
+      data-reference-type="ref" data-reference="fig:chat2">5.14</a> o
       playground da OpenAI.</p>
       <figure id="fig:chat1">
       <p><img src="fig/chatgpt1.png" style="width:90.0%" alt="image" />
@@ -5144,9 +5149,9 @@ Inicie a conversa agora seguindo o passo 1.</code></pre>
       O Chatbot GROQ também consome os mesmos créditos pague-pelo-uso,
       não tendo uma assinatura à parte, como no caso do chatbot do
       ChatGPT. Veja na Figura <a href="#fig:chat3"
-      data-reference-type="ref" data-reference="fig:chat3">4.15</a> o
+      data-reference-type="ref" data-reference="fig:chat3">5.15</a> o
       Chatbot do GROQ e na Figura <a href="#fig:chat4"
-      data-reference-type="ref" data-reference="fig:chat4">4.16</a> o
+      data-reference-type="ref" data-reference="fig:chat4">5.16</a> o
       Playground do GROQ. Note que no Chatbot do GROQ não existe o
       recurso de histórico como no ChatGPT.</p>
       <figure id="fig:chat3">
@@ -5169,9 +5174,9 @@ Inicie a conversa agora seguindo o passo 1.</code></pre>
       usar a API do Grok é necessário utilizar uma ferramenta gráfica ou
       código externo, por exemplo: LLM Studio, JAN AI, GPT4ALL ou o
       excelente Msty app. Veja na Figura <a href="#fig:chat5"
-      data-reference-type="ref" data-reference="fig:chat5">4.17</a> o
+      data-reference-type="ref" data-reference="fig:chat5">5.17</a> o
       chatbot do Grok e na Figura <a href="#fig:chat6"
-      data-reference-type="ref" data-reference="fig:chat6">4.18</a> o
+      data-reference-type="ref" data-reference="fig:chat6">5.18</a> o
       playground do Grok.</p>
       <figure id="fig:chat5">
       <p><img src="fig/chatgpt5.png" style="width:90.0%" alt="image" />
