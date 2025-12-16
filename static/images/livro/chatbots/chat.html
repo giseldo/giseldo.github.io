@@ -70,7 +70,7 @@ Alana Neo" />
             id="toc-criando-um-eliza-simples-com-interface-e-gradio">Criando
             um ELIZA Simples com Interface e Gradio</a></li>
             <li><a href="#cap:AIML" id="toc-cap:AIML">Artificial
-            Intelligence Markup Language</a>
+            Intelligence Markup Language (AIML)</a>
             <ul>
             <li><a href="#tags-do-aiml" id="toc-tags-do-aiml">Tags do
             AIML</a></li>
@@ -129,10 +129,7 @@ Alana Neo" />
             id="toc-one-hot-encoding">One-Hot Encoding</a></li>
             <li><a href="#bag-of-words-bow"
             id="toc-bag-of-words-bow">Bag of Words (BoW)</a></li>
-            <li><a
-            href="#tf-idf-term-frequency-inverse-document-frequency"
-            id="toc-tf-idf-term-frequency-inverse-document-frequency">TF-IDF
-            (Term Frequency-Inverse Document Frequency)</a></li>
+            <li><a href="#tf-idf" id="toc-tf-idf">TF-IDF</a></li>
             <li><a href="#comparação-de-técnicas-de-vetorização"
             id="toc-comparação-de-técnicas-de-vetorização">Comparação de
             Técnicas de Vetorização</a></li>
@@ -140,10 +137,15 @@ Alana Neo" />
             id="toc-implementação-em-projetos-reais">Implementação em
             Projetos Reais</a></li>
             <li><a href="#embeddings-de-palavras"
-            id="toc-embeddings-de-palavras">Embeddings de
-            Palavras</a></li>
+            id="toc-embeddings-de-palavras">Embeddings de Palavras
+            </a></li>
+            <li><a href="#word2vec" id="toc-word2vec">Word2Vec</a></li>
+            <li><a href="#glove" id="toc-glove">GloVe</a></li>
+            <li><a href="#fasttext" id="toc-fasttext">FastText</a></li>
             </ul></li>
             <li><a href="#resumo-1" id="toc-resumo-1">Resumo</a></li>
+            <li><a href="#exercícios-1"
+            id="toc-exercícios-1">Exercícios</a></li>
             </ul></li>
             <li><a href="#cap:LLM" id="toc-cap:LLM">Modelos de Linguagem
             Grande (LLM)</a>
@@ -314,8 +316,8 @@ Alana Neo</p>
       </tr>
       <tr>
       <td style="text-align: right;"></td>
-      <td style="text-align: left;">versão 0.5 (gerado em
-      11/12/2025)</td>
+      <td style="text-align: left;">versão 0.7 (gerado em
+      2025-12-16)</td>
       </tr>
       <tr>
       <td style="text-align: right;"></td>
@@ -481,8 +483,8 @@ Alana Neo</p>
       fingem tão bem — este livro é para você.</p>
       <h1 id="chatbots">Chatbots</h1>
       <div class="epigraph">
-      <p>Podemos ver apenas uma curta distância à frente, mas pode-se
-      ver muito que precisa ser feito.</p>
+      <p>“Podemos ver apenas uma curta distância à frente, mas pode-se
+      ver muito que precisa ser feito.”</p>
       <p>Alan Turing</p>
       </div>
       <div class="myboxobj">
@@ -1002,7 +1004,7 @@ Alana Neo</p>
       </ol>
       <h1 id="cap:ELIZA">Eliza: O primeiro chatbot</h1>
       <div class="epigraph">
-      <p>Somos autómatos em três quartas partes das nossas ações.</p>
+      <p>“Somos autómatos em três quartas partes das nossas ações.”</p>
       <p>Wilhelm Leibniz</p>
       </div>
       <div class="myboxobj">
@@ -1619,7 +1621,8 @@ Bot: Tell me more about your family.</code></pre>
       cliente. Este é apenas um exemplo básico, e você pode adicionar
       mais lógica e funcionalidades ao seu chatbot para torná-lo mais
       útil.</p>
-      <h2 id="cap:AIML">Artificial Intelligence Markup Language</h2>
+      <h2 id="cap:AIML">Artificial Intelligence Markup Language
+      (AIML)</h2>
       <p>Décadas depois do Eliza, as técnicas de programação avançaram,
       surgiu a web e as linguagens de marcação como o HTML ganharam
       tração. É neste cenário que é criado o Artificial Intelligence
@@ -2012,8 +2015,8 @@ Bot: Olá! Como posso ajudar você?</code></pre>
 <span id="cb31-10"><a href="#cb31-10" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">aiml</span>&gt;</span></code></pre></div>
       <h1 id="cap:PLN">Processamento de Linguagem Natural (PLN)</h1>
       <div class="epigraph">
-      <p>Os ignorantes afirmam, os sábios duvidam, os sensatos
-      refletem.</p>
+      <p>“Os ignorantes afirmam, os sábios duvidam, os sensatos
+      refletem.”</p>
       <p>Aristóteles</p>
       </div>
       <div class="myboxobj">
@@ -2071,13 +2074,14 @@ Bot: Olá! Como posso ajudar você?</code></pre>
       simula uma inteligência artificial. Convenhamos que praticamente
       qualquer coisa cabe neste conceito.</p>
       <p>Sobre este tema, o livro de Russell e Norvig (um dos livros
-      mais lidos em todas as universidades do mundo) tem uma boa
-      definição sobre o tema: “O campo da inteligência artificial [...]
-      tenta não apenas compreender, mas também construir entidades
-      inteligentes” (tradução nossa) <span class="citation"
-      data-cites="Russel2013"></span>. Em outras palavras, a
-      inteligência artificial da ciência da computação tem o audacioso
-      objetivo de construir agentes dotados de inteligência.</p>
+      mais lidos em todas as universidades do mundo sobre o tema) tem
+      uma boa definição sobre o tema: “O campo da inteligência
+      artificial [...] tenta não apenas compreender, mas também
+      construir entidades inteligentes” (tradução nossa) <span
+      class="citation" data-cites="Russel2013"></span>. Em outras
+      palavras, a inteligência artificial da ciência da computação tem o
+      audacioso objetivo de construir agentes dotados de
+      inteligência.</p>
       <p>A origem do termo “inteligência artificial”, na ciência da
       computação, é geralmente atribuída a John McCarthy, professor de
       Matemática da Universidade Dartmouth College <span
@@ -3073,8 +3077,7 @@ Bag of Words Matrix:
       cada coluna representando a contagem de uma palavra específica no
       documento. No entanto, essa técnica também não leva em
       consideração o contexto ou a ordem das palavras.</p>
-      <h3 id="tf-idf-term-frequency-inverse-document-frequency">TF-IDF
-      (Term Frequency-Inverse Document Frequency)</h3>
+      <h3 id="tf-idf">TF-IDF</h3>
       <p>TF-IDF é uma técnica que combina a frequência de termos (TF)
       com a frequência inversa de documentos (IDF). Esta abordagem ajuda
       a dar mais peso a palavras que são raras no corpus, mas aparecem
@@ -3166,7 +3169,7 @@ weighted avg  0.25    0.50      0.33         2</code></pre>
       simples, como o Naive Bayes. Esse pipeline pode ser adaptado para
       tarefas mais complexas, incluindo a integração de vetorização com
       modelos mais avançados.</p>
-      <h3 id="embeddings-de-palavras">Embeddings de Palavras</h3>
+      <h3 id="embeddings-de-palavras">Embeddings de Palavras </h3>
       <p>Embeddings de palavras são representações vetoriais densas de
       palavras que capturam as relações semânticas entre elas. Ao
       contrário de técnicas como One-Hot Encoding ou Bag of Words, que
@@ -3185,7 +3188,7 @@ weighted avg  0.25    0.50      0.33         2</code></pre>
       para medir similaridade semântica entre produtos ou serviços
       descritos em texto.</p></li>
       </ul>
-      <h4 id="word2vec">Word2Vec</h4>
+      <h3 id="word2vec">Word2Vec</h3>
       <p>Word2Vec, introduzido por <span class="citation"
       data-cites="mikolov2013efficient"></span> em 2013, é uma das
       técnicas mais influentes para aprender embeddings de palavras.
@@ -3256,8 +3259,7 @@ Palavras semelhantes a &#39;economy&#39;: [(&#39;additional&#39;, 0.995071172714
 <span id="cb73-12"><a href="#cb73-12" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> model.wv.most_similar(positive<span class="op">=</span>[<span class="st">&#39;king&#39;</span>, <span class="st">&#39;woman&#39;</span>], negative<span class="op">=</span>[<span class="st">&#39;man&#39;</span>])</span>
 <span id="cb73-13"><a href="#cb73-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Resultado da analogia:&quot;</span>, result)</span></code></pre></div>
       <pre><code>Resultado da analogia: [(&#39;kid&#39;, 0.8575360178947449), (&#39;missed&#39;, 0.8566135764122009), (&#39;load&#39;, 0.854703426361084), (&#39;normally&#39;, 0.8536292314529419), (&#39;advisers&#39;, 0.8517050743103027), (&#39;Place&#39;, 0.8516084551811218), (&#39;Vieth&#39;, 0.8513892292976379), (&#39;yield&#39;, 0.8511804938316345), (&#39;decline&#39;, 0.8500499725341797), (&#39;Coe&#39;, 0.8490973114967346)]</code></pre>
-      <h4 id="glove-global-vectors-for-word-representation">GloVe
-      (Global Vectors for Word Representation)</h4>
+      <h3 id="glove">GloVe</h3>
       <p>Embora o Word2Vec seja amplamente utilizado, outros modelos
       também oferecem técnicas avançadas para aprender embeddings de
       palavras. O GloVe, desenvolvido por <span class="citation"
@@ -3305,7 +3307,7 @@ Palavras semelhantes a &#39;economy&#39;: [(&#39;additional&#39;, 0.995071172714
       <pre><code>Conversão concluída.
 Vetor para &#39;economy&#39; com GloVe: [-1.2027e-01 -7.2505e-01  8.7014e-01 -6.3944e-01  1.7259e-01 -3.5168e-01 [...] 4.9483e-01 -1.0151e+00  8.9959e-02  4.6090e-01  1.7585e-03  6.2182e-01
 1.1893e+00  8.4410e-02]</code></pre>
-      <h4 id="fasttext">FastText</h4>
+      <h3 id="fasttext">FastText</h3>
       <p>O FastText, desenvolvido pelo Facebook AI Research, estende o
       Word2Vec ao considerar subpalavras, o que permite gerar embeddings
       para palavras que não estão no vocabulário, lidando melhor com
@@ -3364,10 +3366,61 @@ Palavras semelhantes a &#39;economy&#39; com FastText: [(&#39;economic&#39;, 0.9
       como GloVe e FastText. Demonstramos como esses embeddings capturam
       relações semânticas entre palavras e suas aplicações em tarefas de
       PLN.</p>
+      <h2 id="exercícios-1">Exercícios</h2>
+      <ol>
+      <li><p><strong>O que é vetorização de texto no contexto de
+      processamento de linguagem natural?</strong></p>
+      <ol>
+      <li><p>A compressão de textos longos para reduzir o tamanho dos
+      arquivos.</p></li>
+      <li><p>A transformação de palavras ou documentos em representações
+      numéricas.</p></li>
+      <li><p>A categorização de textos em diferentes classes.</p></li>
+      <li><p>A separação de um texto em frases ou parágrafos
+      distintos.</p></li>
+      </ol></li>
+      <li><p><strong>Qual das seguintes técnicas de vetorização é
+      baseada na frequência de termos em um documento?</strong></p>
+      <ol>
+      <li><p>Word2Vec</p></li>
+      <li><p>TF-IDF</p></li>
+      <li><p>Bag of Words (BoW)</p></li>
+      <li><p>Embeddings de Palavras</p></li>
+      </ol></li>
+      <li><p><strong>O que é a técnica Bag of Words (BoW)?</strong></p>
+      <ol>
+      <li><p>Um método de combinar várias palavras em uma única
+      representação vetorial.</p></li>
+      <li><p>Um método de contar a frequência de palavras em um
+      documento sem considerar a ordem das palavras.</p></li>
+      <li><p>Um algoritmo de compressão de texto.</p></li>
+      <li><p>Uma técnica para traduzir texto entre diferentes
+      idiomas.</p></li>
+      </ol></li>
+      <li><p><strong>Qual das alternativas a seguir é uma desvantagem do
+      modelo Bag of Words?</strong></p>
+      <ol>
+      <li><p>Ele não consegue capturar a ordem das palavras.</p></li>
+      <li><p>Ele é muito difícil de implementar.</p></li>
+      <li><p>Ele não suporta múltiplos idiomas.</p></li>
+      <li><p>Ele exige uma grande quantidade de dados para
+      funcionar.</p></li>
+      </ol></li>
+      <li><p><strong>O que é um embedding de palavras?</strong></p>
+      <ol>
+      <li><p>Uma matriz de números binários que representa a presença ou
+      ausência de palavras em um texto.</p></li>
+      <li><p>Um vetor de números que representa o significado semântico
+      de uma palavra no contexto de um grande corpus de textos.</p></li>
+      <li><p>Um conjunto de palavras agrupadas por temas
+      semelhantes.</p></li>
+      <li><p>Uma técnica para compactar arquivos de texto.</p></li>
+      </ol></li>
+      </ol>
       <h1 id="cap:LLM">Modelos de Linguagem Grande (LLM)</h1>
       <div class="epigraph">
-      <p>A “inteligência” desses sistemas é uma miragem — o que se vê
-      não é compreensão, mas um ajuste estatístico de padrões.</p>
+      <p>“A inteligência desses sistemas é uma miragem — o que se vê não
+      é compreensão, mas um ajuste estatístico de padrões.”</p>
       <p>Emily Bender</p>
       </div>
       <div class="myboxobj">
@@ -3678,7 +3731,7 @@ grad_fn=&lt;NativeLayerNormBackward0&gt;)</code></pre>
       LLMs mais conhecidos. Ele é treinado de forma autoregressiva, o
       que significa que prediz a próxima palavra em uma sequência, dada
       a entrada anterior. Isso o torna excelente para tarefas de geração
-      de texto. O GPT foi uma versão inicial do GPT, contendo 1,5
+      de texto. O GPT 2 foi uma versão inicial do GPT, contendo 1,5
       bilhões de parâmetros. Ele mostrou que, ao ser treinado em grandes
       quantidades de texto, poderia gerar conteúdo coerente e complexo.
       GPT é uma evolução ainda maior, com 175 bilhões de parâmetros.
@@ -5257,9 +5310,9 @@ Inicie a conversa agora seguindo o passo 1.</code></pre>
       desenvolvimento de sistemas de diálogo eficientes.</p>
       <h1 id="conclusao">Conclusão</h1>
       <div class="epigraph">
-      <p>Uma vez que um programa é explicado em linguagem
+      <p>“Uma vez que um programa é explicado em linguagem
       suficientemente simples o observador diz para si mesmo “Eu poderia
-      ter escrito isso”.</p>
+      ter escrito isso” ”.</p>
       <p>Joseph Weizembaum</p>
       </div>
       <div class="myboxobj">
