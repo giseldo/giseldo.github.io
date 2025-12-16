@@ -20,7 +20,7 @@ Este livro apresenta os chatbots clássicos, baseados em AIML, e por que express
 
 <a href="/images/livro/chatbots/chat.html" target="_blank">Versão HTML (↗)</a> 
 </br>
-<a href="/images/livro/chatbots/construindo_chatbots.pdf" target="_blank">Download do Livro em PDF (↗)</a> 
+<a href="/images/livro/chatbots/chatbots.pdf" target="_blank">Download do Livro em PDF (↗)</a> 
 </br>
 <a href="https://github.com/giseldo/Livro-A-jornada-dos-Chatbots---Verde---C-digos" target="_blank">Código-fonte do Livro em Python (↗)</a> 
 
