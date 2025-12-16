@@ -54,5 +54,43 @@
 
   </div>
 
+  
+
+  <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const menu = document.querySelector("nav.menu");
+  if (!menu) return;
+
+  const rootUl = menu.querySelector("ul");
+  if (!rootUl) return;
+
+  rootUl.querySelectorAll("li").forEach(li => {
+    // submenu direto do item
+    const childUl = Array.from(li.children).find(el => el.tagName === "UL");
+    const link = Array.from(li.children).find(el => el.tagName === "A");
+    if (!childUl || !link) return;
+
+    li.classList.add("has-children", "collapsed"); // começa fechado
+
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "toc-toggle";
+    btn.setAttribute("aria-label", "Abrir/fechar submenu");
+    btn.setAttribute("aria-expanded", "false");
+
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const collapsed = li.classList.toggle("collapsed");
+      btn.setAttribute("aria-expanded", String(!collapsed));
+    });
+
+    li.insertBefore(btn, link);
+  });
+});
+</script>
+
+
+
 </body>
 </html>
