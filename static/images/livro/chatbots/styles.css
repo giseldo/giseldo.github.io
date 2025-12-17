@@ -1,19 +1,186 @@
-/* Reset mínimo */
+/* ========== RESET E BASE ========== */
 * {
     box-sizing: border-box;
 }
 
-/* Corpo geral */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "Georgia", "Times New Roman", serif;
     font-size: 18px;
     line-height: 1.55;
     color: #1a1a1a;
-    background: #ffffff;
+    background: #fff;
     margin: 0;
 }
 
-/* Botão hambúrguer */
+/* ========== LAYOUT ========== */
+.layout {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 32px;
+    display: flex;
+}
+
+/* ========== MENU LATERAL ========== */
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 320px;
+    height: 100vh;
+    padding: 32px 20px;
+    overflow-y: auto;
+    background: #f7f7f7;
+    border-right: 1px solid #e0e0e0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 15px;
+    line-height: 1.4;
+    transition: transform 0.3s ease;
+}
+
+/* Listas do menu */
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu ul ul {
+    margin-left: 12px;
+    padding-left: 1em;
+}
+
+.menu li {
+    list-style: none;
+    margin: 4px 0;
+}
+
+/* Links do menu */
+.menu a {
+    display: block;
+    padding: 6px 8px;
+    text-decoration: none;
+    color: #222;
+    border-radius: 4px;
+    transition: background 0.15s ease, color 0.15s ease;
+}
+
+.menu a:hover {
+    background: #e9e9e9;
+}
+
+.menu ul ul a {
+    font-size: 1em;
+    color: #444;
+}
+
+.menu a.active {
+    background: #d8efff;
+    color: #0b5ed7;
+    font-weight: 500;
+}
+
+/* Título do TOC */
+.menu #TOC > h2 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #666;
+    margin-bottom: 16px;
+}
+
+/* TOC colapsável */
+.menu li.has-children {
+    position: relative;
+    padding-left: 0;
+}
+
+.menu li.has-children > a {
+    display: inline;
+}
+
+.menu li.collapsed > ul {
+    display: none;
+}
+
+.menu button.toc-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    margin-left: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background: #fff;
+    cursor: pointer;
+    font-family: system-ui, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+    color: #666;
+    opacity: 0.85;
+    transition: all 0.15s ease;
+    vertical-align: middle;
+}
+
+.menu button.toc-toggle:hover {
+    opacity: 1;
+    background: #f0f0f0;
+    border-color: #999;
+    color: #333;
+}
+
+.menu button.toc-toggle::before {
+    content: "+";
+}
+
+.menu li:not(.collapsed) > button.toc-toggle::before {
+    content: "−";
+}
+
+/* Controles de expansão/colapso */
+.toc-controls {
+    display: flex;
+    gap: 8px;
+    margin-top: 24px;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.toc-expand-all,
+.toc-collapse-all {
+    flex: 1;
+    padding: 6px 8px;
+    border: 1px solid #ccc;
+    background: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85em;
+    color: #333;
+    font-weight: 500;
+    transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.toc-expand-all:hover,
+.toc-collapse-all:hover {
+    background: #f0f0f0;
+    border-color: #999;
+}
+
+.toc-expand-all:active,
+.toc-collapse-all:active {
+    background: #e8e8e8;
+}
+
+/* ========== BOTÕES DE CONTROLE ========== */
+
+/* Botão hambúrguer (mobile) */
 .menu-toggle {
     display: none;
     position: fixed;
@@ -57,7 +224,7 @@ body {
 .sidebar-toggle {
     position: fixed;
     top: 16px;
-    left: 440px;
+    left: 290px;
     z-index: 1002;
     width: 32px;
     height: 32px;
@@ -87,28 +254,38 @@ body {
 .sidebar-toggle-icon::after {
     content: "";
     position: absolute;
+    width: 8px;
+    height: 2px;
+    left: 2px;
     background: #666;
     transition: all 0.3s ease;
 }
 
-/* Seta para esquerda (ocultar) */
 .sidebar-toggle-icon::before {
-    width: 8px;
-    height: 2px;
     top: 4px;
-    left: 2px;
     transform: rotate(-45deg);
 }
 
 .sidebar-toggle-icon::after {
-    width: 8px;
-    height: 2px;
     bottom: 4px;
-    left: 2px;
     transform: rotate(45deg);
 }
 
-/* Seta para direita (exibir) quando menu está oculto */
+/* Estado do menu oculto */
+.menu-hidden .menu {
+    transform: translateX(-100%);
+}
+
+.menu-hidden .content {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 900px;
+}
+
+.menu-hidden .sidebar-toggle {
+    left: 16px;
+}
+
 .menu-hidden .sidebar-toggle-icon::before {
     transform: rotate(45deg);
     left: 6px;
@@ -119,120 +296,16 @@ body {
     left: 6px;
 }
 
-/* Estado do menu oculto */
-.menu-hidden .menu {
-    transform: translateX(-100%);
-}
-
-.menu-hidden .content {
-    margin-left: 0;
-    max-width: 900px;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-.menu-hidden .sidebar-toggle {
-    left: 16px;
-}
-
-/* Transições suaves */
-.menu {
-    transition: transform 0.3s ease;
-}
-
+/* ========== CONTEÚDO PRINCIPAL ========== */
 .content {
+    margin-left: 360px;
+    margin-right: auto;
+    max-width: 800px;
+    flex: 1;
+    padding-top: 64px;
     transition: margin-left 0.3s ease, max-width 0.3s ease;
 }
 
-/* Layout geral */
-.layout {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 32px;
-    display: flex;
-}
-
-/* Menu lateral no estilo 3Blue1Brown */
-.menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 480px;
-    height: 100vh;
-    padding: 32px 24px;
-    overflow-y: auto;
-
-    background: #f7f7f7;
-    border-right: 1px solid #e0e0e0;
-
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    font-size: 17px;
-    line-height: 1.4;
-}
-
-/* Título "Table of Contents" */
-.menu #TOC > h2 {
-    font-size: 0.95rem;
-    font-weight: 600;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    color: #666;
-    margin-bottom: 16px;
-}
-
-/* Lista base */
-.menu #TOC ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-/* Itens */
-.menu #TOC li {
-    margin: 4px 0;
-}
-
-/* Links principais */
-.menu #TOC a {
-    display: block;
-    padding: 6px 8px;
-    text-decoration: none;
-    color: #222;
-    border-radius: 4px;
-    transition: background 0.15s ease, color 0.15s ease;
-}
-
-/* Hover */
-.menu #TOC a:hover {
-    background: #e9e9e9;
-}
-
-/* Subníveis */
-.menu #TOC ul ul {
-    margin-left: 12px;
-}
-
-.menu #TOC ul ul a {
-    font-size: 1em;
-    color: #444;
-}
-
-/* Seção ativa (Pandoc adiciona .active) */
-.menu #TOC a.active {
-    background: #d8efff;
-    color: #0b5ed7;
-    font-weight: 500;
-}
-
-/* Conteúdo deslocado corretamente */
-.content {
-    margin-left: 420px;
-    max-width: 760px;
-    flex: 1;
-    padding-top: 64px;
-}
-
-/* Leitura */
 .content p {
     margin: 1.4em 0;
     text-align: justify;
@@ -250,17 +323,9 @@ body {
     margin-bottom: 1em;
 }
 
-.content h1 {
-    font-size: 2.1em;
-}
-
-.content h2 {
-    font-size: 1.6em;
-}
-
-.content h3 {
-    font-size: 1.3em;
-}
+.content h1 { font-size: 2.1em; }
+.content h2 { font-size: 1.6em; }
+.content h3 { font-size: 1.3em; }
 
 /* Listas */
 .content ul,
@@ -268,30 +333,10 @@ body {
     margin: 1.4em 0 1.4em 2em;
 }
 
-/* Citações */
-.content blockquote {
-    margin: 2em 0;
-    padding-left: 1.5em;
-    border-left: 3px solid #d0d0d0;
-    color: #444;
-}
-
-/* Código */
-.content pre,
-.content code {
-    font-family: "Courier New", monospace;
-    background: #f5f5f5;
-}
-
-.content pre {
-    padding: 16px;
-    overflow-x: auto;
-    margin: 2em 0;
-    font-size: 0.9em;
-}
-
-.content code {
-    padding: 2px 4px;
+/* Links */
+.content a {
+    color: #1a5fb4;
+    text-decoration: underline;
 }
 
 /* Figuras */
@@ -306,43 +351,7 @@ body {
     margin-top: 0.6em;
 }
 
-/* Links no texto */
-.content a {
-    color: #1a5fb4;
-    text-decoration: underline;
-}
-
-/* Rolagem suave */
-html {
-    scroll-behavior: smooth;
-}
-
-/* Código */
-pre, code {
-    font-family: "Courier New", monospace;
-    background: #f5f5f5;
-}
-
-pre {
-    padding: 20px;
-    overflow-x: auto;
-    border-left: 4px solid #1a5fb4;
-    margin: 1.5em 0;
-}
-
-code {
-    padding: 3px 6px;
-}
-
-/* Citações */
-blockquote {
-    margin: 2em 0;
-    padding: 1em 1.5em;
-    background: #fafafa;
-    border-left: 4px solid #cccccc;
-    color: #555;
-}
-
+/* Título do documento */
 .document-title h1 {
     font-size: 3em;
     margin-top: 0;
@@ -356,146 +365,31 @@ blockquote {
     margin: 0;
 }
 
-/* TOC colapsável */
-.menu #TOC li.has-children {
-    position: relative;
-    padding-left: 0;
+/* ========== CÓDIGO ========== */
+pre, code {
+    font-family: "Courier New", monospace;
+    background: #f5f5f5;
 }
 
-.menu #TOC li.has-children > a {
-    display: inline;
+pre {
+    padding: 20px;
+    overflow-x: auto;
+    border-left: 4px solid #1a5fb4;
+    margin: 2em 0;
+    font-size: 0.9em;
 }
 
-.menu #TOC button.toc-toggle {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 20px;
-    height: 20px;
-    margin-left: 8px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    background: #fff;
-    cursor: pointer;
-    font-family: system-ui, sans-serif;
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 1;
-    color: #666;
-    opacity: 0.85;
-    transition: all 0.15s ease;
-    vertical-align: middle;
+code {
+    padding: 3px 6px;
 }
 
-.menu #TOC button.toc-toggle:hover {
-    opacity: 1;
-    background: #f0f0f0;
-    border-color: #999;
-    color: #333;
-}
-
-.menu #TOC li.collapsed > ul {
-    display: none;
-}
-
-.menu #TOC button.toc-toggle::before {
-    content: "+";
-}
-
-.menu #TOC li:not(.collapsed) > button.toc-toggle::before {
-    content: "−";
-}
-
-nav.menu li.has-children {
-    position: relative;
-    padding-left: 0;
-}
-
-nav.menu li.has-children > a {
-    display: inline;
-}
-
-nav.menu button.toc-toggle {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 20px;
-    height: 20px;
-    margin-left: 8px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    background: #fff;
-    cursor: pointer;
-    font-family: system-ui, sans-serif;
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 1;
-    color: #666;
-    opacity: 0.85;
-    transition: all 0.15s ease;
-    vertical-align: middle;
-}
-
-nav.menu button.toc-toggle:hover {
-    opacity: 1;
-    background: #f0f0f0;
-    border-color: #999;
-    color: #333;
-}
-
-nav.menu li.collapsed > ul { display: none; }
-
-nav.menu button.toc-toggle::before { content: "+"; }
-nav.menu li:not(.collapsed) > button.toc-toggle::before { content: "−"; }
-
-nav.menu ul {
-  list-style: none;
-  margin: 0;
-  padding-left: 0;
-}
-
-nav.menu ul ul {
-  list-style: none;
-  margin-left: 0;
-  padding-left: 1em;
-}
-
-nav.menu li {
-  list-style: none;
-}
-
-/* Controles de expansão/colapso */
-.toc-controls {
-  display: flex;
-  gap: 8px;
-  margin-bottom: 16px;
-  padding-bottom: 12px;
-  border-bottom: 1px solid #e0e0e0;
-}
-
-.toc-expand-all,
-.toc-collapse-all {
-  flex: 1;
-  padding: 6px 8px;
-  border: 1px solid #ccc;
-  background: #fff;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 0.85em;
-  color: #333;
-  transition: background 0.15s ease, border-color 0.15s ease;
-  font-weight: 500;
-}
-
-.toc-expand-all:hover,
-.toc-collapse-all:hover {
-  background: #f0f0f0;
-  border-color: #999;
-}
-
-.toc-expand-all:active,
-.toc-collapse-all:active {
-  background: #e8e8e8;
+/* ========== CITAÇÕES ========== */
+blockquote {
+    margin: 2em 0;
+    padding: 1em 1.5em;
+    background: #fafafa;
+    border-left: 4px solid #ccc;
+    color: #555;
 }
 
 /* ========== RESPONSIVIDADE ========== */
@@ -507,12 +401,12 @@ nav.menu li {
     }
 
     .menu {
-        width: 350px;
+        width: 280px;
     }
 
     .content {
         margin-left: 300px;
-        max-width: 600px;
+        max-width: 650px;
     }
 
     .content h1 {
