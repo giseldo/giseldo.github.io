@@ -17,65 +17,13 @@
     <loc>http://localhost:1313/</loc>
     <lastmod>2017-03-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/example/</loc>
-    <lastmod>2017-03-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/photoswipe/</loc>
-    <lastmod>2017-03-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/post/old/2017-03-20-photoswipe-gallery-sample/</loc>
-    <lastmod>2017-03-20T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/post/</loc>
     <lastmod>2017-03-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2017-03-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/post/old/2017-03-07-bigimg-sample/</loc>
-    <lastmod>2017-03-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/bigimg/</loc>
-    <lastmod>2017-03-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/math/</loc>
-    <lastmod>2017-03-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/post/old/2017-03-05-math-sample/</loc>
-    <lastmod>2017-03-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/code/</loc>
-    <lastmod>2016-03-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/post/old/2016-03-08-code-sample/</loc>
-    <lastmod>2016-03-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/post/old/2015-02-26-flake-it-till-you-make-it/</loc>
-    <lastmod>2015-02-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/markdown/</loc>
-    <lastmod>2015-02-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/post/old/2015-02-20-test-markdown/</loc>
-    <lastmod>2015-02-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/post/old/2015-02-13-hamlet-monologue/</loc>
-    <lastmod>2015-02-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/post/old/2015-01-27-dear-diary/</loc>
-    <lastmod>2015-01-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/post/old/2015-01-19-soccer/</loc>
-    <lastmod>2015-01-19T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/post/old/2015-01-15-pirates/</loc>
-    <lastmod>2015-01-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/post/old/2015-01-04-first-post/</loc>
-    <lastmod>2015-01-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
   </url><url>
     <loc>http://localhost:1313/page/</loc>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
   </url>
 </urlset>

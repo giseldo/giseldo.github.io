@@ -13,7 +13,9 @@ toc: True
 {{< figure src="/images/livro/chatbots/capa.png" width="75%" >}}
 {{< column >}}
 
-## Contruindo Chatbots: Do AIML e PLN até os LLMs - Teoria e Prática com Python
+## Construindo Chatbots: do Artificial Inteligence Markup Language e PLN até os Modernos Large Language Models
+
+### Teoria e Prática com Python
 
 Este livro apresenta os chatbots clássicos, baseados em AIML, e por que expressões regulares ainda são ferramentas utilizadas no desenvolvimento de bots. Em capítulos dedicados ao Processamento de Linguagem Natural (PLN), técnicas como tokenização, lematização e análise sintática ganham vida por meio de exemplos aplicáveis, preparando o leitor para dar seus próprios passos no mundo da IA conversacional. Transformers, Word2Vec e os Modelos de Linguagem Grande (LLMs), incluindo BERT, GPT e LLaMA.
 
