@@ -2,13 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on IA com GN</title>
-    <link>http://localhost:1313/post/</link>
+    <link>http://localhost:56712/post/</link>
     <description>Recent content in Posts on IA com GN</description>
     <generator>Hugo</generator>
     <language>br</language>
     <managingEditor>giseldo@gmail.com (Giseldo Neo)</managingEditor>
     <webMaster>giseldo@gmail.com (Giseldo Neo)</webMaster>
     <lastBuildDate></lastBuildDate>
-    <atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:56712/post/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

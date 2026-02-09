@@ -35,6 +35,7 @@ Este livro apresenta os chatbots clássicos, baseados em AIML, e por que express
   
 Este livro fornece uma visão inicial e objetiva sobre a teoria e a aplicação prática da regressão linear no contexto do aprendizado de máquina com python. Ele é adequado para iniciantes que estão começando sua jornada no aprendizado de máquina e da regressão linear, mas que já conhecem o básico da linguagem python. Ao longo dos capítulos, apresentamos os conceitos e suposições da regressão até as aplicações e diagnósticos de modelos, passando por estudos de caso e o uso de bibliotecas de software utilizadas como Python e Scikit-learn. Os exercícios ao final de cada capítulo são elaborados para reforçar este aprendizado.
 
+<a href="/images/livro/reg/_book/index.html" target="_blank">Versão HTML (↗)</a></br>
 <a href="/images/livro/reg/reg.pdf" target="_blank">Download do Livro em PDF (↗)</a> 
 </br>
 <a href="https://www.amazon.com.br/gp/product/B0DCT4M7GH" target="_blank">Adquirir e-pub na Amazon (↗)</a> 

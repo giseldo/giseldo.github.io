@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>2&nbsp; Introdução – Livro</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../sections/3_introdu-o-regress-o-linear.html" rel="next">
+<link href="../sections/1_pref-cio-pref-cio-unnumbered.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-d9ea66fcd6c317012447f26e9c021348.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../sections/2_introdu-o.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introdução</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Livro</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Regressao Linear com Python</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sections/1_pref-cio-pref-cio-unnumbered.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Prefácio</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sections/2_introdu-o.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introdução</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sections/3_introdu-o-regress-o-linear.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Introdução à Regressão Linear</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sections/4_regress-o-linear-na-estat-stica-e-na-am.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Regressão Linear na Estatística e na AM</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sections/5_fundamentos-matem-ticos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Fundamentos Matemáticos</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sections/6_tipos-de-regress-o-linear.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Tipos de Regressão Linear</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sections/7_assun-es-da-regress-o-linear.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Assunções da Regressão Linear</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sections/8_m-tricas-de-avalia-o.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Métricas de Avaliação</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sections/9_implementa-o-pr-tica.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Implementação Prática</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sections/10_diagn-stico-de-modelos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Diagnóstico de Modelos</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sections/11_melhorando-o-modelo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Melhorando o Modelo</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sections/12_aplica-es-avan-adas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Aplicações Avançadas</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sections/13_estudos-de-caso.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Estudos de Caso</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sections/14_ferramentas-e-bibliotecas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Ferramentas e Bibliotecas</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sections/15_conclus-o-e-futuras-perspectivas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Conclusão e Futuras Perspectivas</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sections/16_gabarito-dos-exerc-cios-gabarito-dos-exerc-cios-unnumbered.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gabarito dos exercícios</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sections/17_sobre-os-autores-sobre-os-autores-unnumbered.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Sobre os autores</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sections/18_informa-es-adicionais-informa-es-adicionais-unnumbered.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Informações Adicionais</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#inteligência-artificial" id="toc-inteligência-artificial" class="nav-link active" data-scroll-target="#inteligência-artificial"><span class="header-section-number">2.1</span> Inteligência Artificial</a></li>
+  <li><a href="#aprendizado-de-máquina-am" id="toc-aprendizado-de-máquina-am" class="nav-link" data-scroll-target="#aprendizado-de-máquina-am"><span class="header-section-number">2.2</span> Aprendizado de Máquina (AM)</a></li>
+  <li><a href="#regressão-linear" id="toc-regressão-linear" class="nav-link" data-scroll-target="#regressão-linear"><span class="header-section-number">2.3</span> Regressão Linear</a>
+  <ul class="collapse">
+  <li><a href="#exemplo-com-conjunto-de-dados-fictício" id="toc-exemplo-com-conjunto-de-dados-fictício" class="nav-link" data-scroll-target="#exemplo-com-conjunto-de-dados-fictício">Exemplo com conjunto de dados fictício</a></li>
+  <li><a href="#exemplo-com-outro-conjunto-de-dados" id="toc-exemplo-com-outro-conjunto-de-dados" class="nav-link" data-scroll-target="#exemplo-com-outro-conjunto-de-dados">Exemplo com outro conjunto de dados</a></li>
+  </ul></li>
+  <li><a href="#exercícios" id="toc-exercícios" class="nav-link" data-scroll-target="#exercícios"><span class="header-section-number">2.4</span> Exercícios</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introdução</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="myboxobj">
+<p>Objetivo do capítulo Apresentar a inteligência artificial, o aprendizado de máquina e a regressão linear.</p>
+</div>
+<section id="inteligência-artificial" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="inteligência-artificial"><span class="header-section-number">2.1</span> Inteligência Artificial</h2>
+<p>A <em>inteligência</em> tem definições que dependem do contexto. Isso pode trazer certa confusão no entendimento e delimitação do tema. Menos abrangente, porém mais confuso ainda, é o termo <em>artificial</em>. Portanto, dado as diversas definições de <em>inteligência artificial</em> (IA) delimitaremos um pouco o escopo da inteligência em questão.</p>
+<p>Nós humanos somos da espécie <em>Homo-Sapiens</em>. Esta definição vem do latim e significa homem sábio <span class="citation" data-cites="wikipediahumano">[@wikipediahumano]</span>. A importância da sapiência (sinônimo de inteligência) é tamanha que define a nossa espécie. A IA já vem sendo objeto da imaginação humana a muito tempo. Por exemplo, ela já apareceu em nossa cultura de diversas formas, tais como, a IA falante HAL 9000, que controla uma nave espacial, no filme “2001 uma Odisseia no Espaço”, clássico de Stanley Kubrick, ou como a IA do filme “Ela”, com o ator Joaquin Phoenix, onde um humano se apaixona por um sistema operacional. No entanto, a IA já apareceu na literatura a milhares de anos. Na Grécia Antiga já era pensado e discutido os impactos de um ser artificial capaz de desenvolver tarefas humanas. Um exemplo é o Gigante Talos de Creta, um autômato proveniente da mitologia grega [20]. Outros exemplos relacionados a inteligência artificial podem ser encontrados no livro “Artificial Intelligence: An Illustrated History: From Medieval Robots to Neural Networks” em <span class="citation" data-cites="pickover2021artificial">[@pickover2021artificial]</span>. Porém, neste contexto consideramos que outras espécies além dos Homo-Sapiens, tais como um gato, um cachorro ou uma abelha, também são dotados de inteligência. Portanto, seremos mais contidos e reservados quanto ao significado do termo inteligência.</p>
+<p>Inteligência e artificial são palavras que têm significado implícito para pessoas que não são da área de computação. Naturalmente, médicos, advogados, engenheiros (só para citar alguns) querem verificar como a IA pode ser inserida em sua rotina diária. Meu dentista já quis saber como a IA iria afetar seus procedimentos odontológicos. Porém, ele nunca me perguntou em como a “Transformada de Fourier” poderia melhorar o seu dia-a-dia, mesmo sabendo que a transformada já é utilizada em vários domínios do conhecimento e com entusiasmo <span class="citation" data-cites="wikipediafourier">[@wikipediafourier]</span>.</p>
+<p>Uma definição mais formal da IA ainda é necessária. A IA da computação está mais relacionada com a capacidade de realizar coisas que seres inteligentes (tais como, um gato, um bebê, uma abelha, ou um humano) realizam, como, por exemplo, puxar a mão (ou pata) instantaneamente ao tocar em uma superfície quente, realizar uma prova objetiva de anatomia, ou elaborar um recurso para a anulação de uma questão de concurso. Se um programa realiza uma ação geralmente realizada por uma entidade dotada de inteligência, ele pode ser encarado como um programa que simula uma inteligência de forma artificial. Convenhamos que praticamente qualquer coisa cabe neste conceito. Também poderíamos chamar esta área com qualquer outro nome sem sofrer nenhum prejuízo, mas o termo trouxe essas associações que as vezes ajudam e outras vezes confundem o interessado. Sobre a definição de IA, o livro de Russel e Norvig, tem uma boa definição sobre o tema: “O campo da inteligência artificial [...] tenta não apenas compreender, mas também construir entidades inteligentes” (tradução nossa) <span class="citation" data-cites="norvig2002">[@norvig2002]</span>. Em outras palavras, a inteligência artificial da ciência da computação tem o audacioso objetivo de construir agentes dotados de inteligência.</p>
+<p>A origem do termo “inteligência artificial”, na ciência da computação, é geralmente atribuída a John McCarthy, professor de Matemática da Universidade Dartmouth College <span class="citation" data-cites="blipblog">[@blipblog]</span> (Figura&nbsp;<a href="#fig:jhonalan" data-reference-type="ref" data-reference="fig:jhonalan">1.3</a>). Ele organizou uma conferência com duração de oito semanas com outros colegas em 1956, alguns anos após a segunda guerra, e desde então o termo vem sendo utilizado para designar parte de conteúdos estudados em ciência da computação. Um pouco antes, o artigo seminal de Alan Turing já apresentava reflexões sobre a inteligência que uma máquina poderia possuir <span class="citation" data-cites="Turing1950">[@Turing1950]</span>. Cabe ressaltar que Alan Turing e John McCarthy já trabalhavam em conjunto. Outros pesquisadores também foram relevantes para a área em questão, tais como, Warren McCulloch, Walter Pitts, Allen Newell, Herbert A. Simon, Cliff Shaw e Frank Rosenblatt, entre outros.</p>
+<figure id="fig:jhonalan" class="figure">
+<figure id="fig:jhon" class="figure">
+<img src="figuras/John_McCarthy_Stanford.png" style="width:50.0%" class="figure-img">
+<figcaption>
+Jhon MacCarthy
+</figcaption>
+</figure>
+<figure id="fig:alan" class="figure">
+<img src="figuras/alan_turing.png" style="width:50.0%" class="figure-img">
+<figcaption>
+Alan Turing
+</figcaption>
+</figure>
+<figcaption>
+Figure 1: Jhon Maccarthy e Alan Turing.
+</figcaption>
+</figure>
+<p>Podemos classificar as diversas técnicas de IA em dois grupos: dedução e indução. A dedução faz inferências a partir de regras gerais, enquanto que a indução realiza inferências a partir da generalização de eventos individuais. Veja na Figura <a href="#fig:iadeducao" data-reference-type="ref" data-reference="fig:iadeducao">1.4</a>.</p>
+<div id="fig:iadeducao" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="figuras/ia-deducao-inducao.png" class="img-fluid figure-img" style="width:90.0%"></p>
+<figcaption>Figure 2: Esquema de dedução e indução da IA. Fonte: o Autor (2024)</figcaption>
+</figure>
+</div>
+<p>Foi na década de 1970 que o uso da inteligência artificial começou a ser mais difundido. Uma das primeiras abordagens com relativo sucesso foram os Sistemas Especialistas (SE). Eles dependiam dos especialistas do domínio para transformar o conhecimento tácito (baseado em sua experiência) em explícito (formalizado, documentado), que era então codificado na forma de regras em lógica formal. O processo de aquisição desse conhecimento acabou sendo um grande obstáculo na adoção em massa dessa abordagem. Veja um exemplo de software que implementa um motor de inferência baseado na teoria dos SE na Figura&nbsp;<a href="#fig:expert" data-reference-type="ref" data-reference="fig:expert">1.5</a></p>
+<div id="fig:expert" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="figuras/expert.jpg" class="img-fluid figure-img" style="width:90.0%"></p>
+<figcaption>Figure 3: Interface de um Sistema Especialista ExpertSinta. Fonte: o Autor (2024)</figcaption>
+</figure>
+</div>
+<p>A superação de algumas limitações (tais como, o aumento da capacidade de processamento e armazenamento dos computadores, a geração de grandes volumes de dados, novidades científicas e tecnológicos, chips supercondutores e a eficiência energética) permitiu o avanço de outras técnicas. Uma das técnicas que tem ganhado notoriedade, por causa destes avanços, é o Aprendizado de máquina (Figura&nbsp;<a href="#fig:iaam" data-reference-type="ref" data-reference="fig:iaam">1.6</a>).</p>
+<figure id="fig:iaam" class="figure">
+<p>
+<img src="figuras/ia_arvore.png" style="width:90.0%" alt="image" class="figure-img"> <span id="fig:iaam" data-label="fig:iaam"></span>
+</p>
+<figcaption>
+Figure 4: AM é uma parte da IA. Fonte: o Autor (2024)
+</figcaption>
+</figure>
+</section>
+<section id="aprendizado-de-máquina-am" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="aprendizado-de-máquina-am"><span class="header-section-number">2.2</span> Aprendizado de Máquina (AM)</h2>
+<p>O Aprendizado de Máquina (AM) é uma subárea da IA motivada pelo desenvolvimento de softwares mais independentes da intervenção humana para extração do conhecimento, o que era uma dificuldade nos Sistemas Especialistas. Geralmente aplicações de AM utilizam indução para buscar por modelos capazes de representar o conhecimento existente nos dados.</p>
+<p>Na Figura&nbsp;<a href="#fig:exemplosam" data-reference-type="ref" data-reference="fig:exemplosam">1.7</a>, é possível identificar alguns usos de AM integrado em algumas atividades cotidianas. São elas, (a) um smartphone com um assistente de voz fornecendo atualizações meteorológicas; (b) um sistema de casa inteligente ajustando o termostato com base nas preferências do usuário; (c) um carro autônomo dirigindo em uma rua movimentada da cidade; (d) uma plataforma de compras online recomendando produtos a um usuário com base em suas compras anteriores. Essa figura foi criada inclusive com uma inteligência artificial chamada Dalle3, disponível no ChatGPT. ChatGPT é um chatbot que ganhou notoriedade sendo foi um dos aplicativos que mais ganhou usuários rapidamente no mundo.</p>
+<div id="fig:exemplosam" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="figuras/exemplos_am.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>Figure 5: Exemplos AM. O Autor (2024) com auxilio da inteligência artificial chatGPT.</figcaption>
+</figure>
+</div>
+<p>As tarefas de aprendizado de máquina podem ser divididas entre tarefas <strong>preditivas</strong> e <strong>descritivas</strong>. As tarefas de aprendizado preditivas visam inferir o atributo alvo de uma nova entrada a partir da exposição prévia aos dados durante o treinamento do modelo. As tarefas descritivas buscam extrair padrões e correlações, além disso, não existe esta distinção entre atributos alvo e preditivos.</p>
+<figure id="fig:indutivo" class="figure">
+<p>
+<img src="figuras/calssificacao.png" style="width:100.0%" alt="image" class="figure-img"> <span id="fig:indutivo" data-label="fig:indutivo"></span>
+</p>
+<figcaption>
+Figure 6: Classificação de AM. O Autor (2024)
+</figcaption>
+</figure>
+<p>Ambas as tarefas podem ser categorizadas sob o conceito de aprendizado indutivo, sendo a capacidade de generalizar a partir de exemplos específicos, isto é, do conjunto de dados de treinamento. Em se tratando de tarefas preditivas, os algoritmos poderão implementar tarefas de <strong>classificação</strong>, nas quais o atributo alvo é <strong>qualitativo discreto</strong> (ou categórico), ou de <strong>regressão</strong>, em que o atributo alvo é <strong>quantitativo contínuo</strong> (ou numérico). Já as tarefas descritivas podem ser: <em>agrupamento</em>, que busca por similaridades, <em>associação</em>, que busca por padrões frequentes, e <em>sumarização</em>, que resulta em um resumo do conjunto de dados.</p>
+<p>No entanto, outras técnicas de aprendizagem de máquina supervisionadas e não supervisionadas, com exceção da regressão linear estão fora do escopo deste livro. Importante não confundir a regressão linear com a classificação <em>regressão</em> da aprendizagem de máquina. Regressão linear é um algoritmo que será utilizado para realizar, por exemplo, um aprendizado supervisionado.</p>
+</section>
+<section id="regressão-linear" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="regressão-linear"><span class="header-section-number">2.3</span> Regressão Linear</h2>
+<p>A regressão linear é uma técnica estatística utilizada para modelar e analisar a relação entre uma variável dependente e uma ou mais variáveis independentes. Ela fornece uma maneira de entender como a variável dependente muda à medida que uma ou mais variáveis independentes se alteram. Através da análise da tendência dos dados, a regressão linear permite fazer previsões e identificar padrões. Esta técnica é amplamente utilizada em áreas como economia, ciências sociais, engenharia, medicina e muitas outras.</p>
+<p>Na regressão linear, a variável dependente é representada como uma combinação linear das variáveis independentes, onde os coeficientes da combinação linear são estimados a partir dos dados observados. Isso possibilita a criação de um modelo matemático que descreve a relação entre as variáveis. Alguns conceitos básicos incluem a equação da linha de regressão, o coeficiente de inclinação, o coeficiente de intercepto e a noção de erro residual. Compreender estes conceitos é fundamental para aplicar e interpretar corretamente a regressão linear.</p>
+<section id="exemplo-com-conjunto-de-dados-fictício" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="exemplo-com-conjunto-de-dados-fictício">Exemplo com conjunto de dados fictício</h3>
+<p>Na aprendizagem de máquina, a regressão linear é frequentemente utilizada como um ponto de partida para a modelagem preditiva. Sua simplicidade e interpretabilidade fazem dela uma ferramenta valiosa para explorar dados e entender relações entre variáveis. Ela é a base para muitos algoritmos de aprendizagem supervisionada e serve como um <em>benchmark</em> (ou linha de base, em inglês <em>baseline</em>) para modelos mais complexos. Além disso, ela é amplamente utilizada em áreas como economia, finanças, biologia, e engenharia, onde a previsão de valores contínuos é necessária.</p>
+<p>Para exemplificar criaremos um modelo preditivo a partir de um conjunto de dados com 2 atributos preditores <span class="math inline">\(X1\)</span> e <span class="math inline">\(X2\)</span> e um atributo alvo <span class="math inline">\(Y\)</span>. <span class="math inline">\(X1\)</span> poderia ser, por exemplo, os anos de estudo, e <span class="math inline">\(X2\)</span> a idade, <span class="math inline">\(Y\)</span> poderia ser o salário.</p>
+<p>Existe uma função que gerou os dados de treino e ela é desconhecida. Essa função é também designada por <em>god function</em>, <span class="math inline">\(g(x)\)</span>. Queremos encontrar outra função <span class="math inline">\(f(x)\)</span>, num universo de funções disponíveis que mais se aproxima de <span class="math inline">\(g(x)\)</span>. A premissa é que o engenheiro de aprendizagem de máquina não conhece e nunca conhecerá a função <span class="math inline">\(g(x)\)</span>, que gerou os dados, mas ele irá dar um melhor chute técnico para esta função, que será chamará de <span class="math inline">\(f(x)\)</span>, como ela é uma função aproximada e estimada, colocaremos um chapéu, portanto ela será chamada de <span class="math inline">\(\hat{f}(x)\)</span>.</p>
+<p>Primeiro tentaremos inferir esta função <span class="math inline">\(\hat{f}(x)\)</span> com nossa inteligência humana. Em seguida utilizaremos um modelo preditivo e compararemos se a técnica de inteligência artificial de aprendizagem de máquina chegou em um resultado similar.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">X1</th>
+<th style="text-align: center;">X2</th>
+<th style="text-align: center;">y</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">-4</td>
+<td style="text-align: center;">-4</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">-3</td>
+<td style="text-align: center;">-3</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">-2</td>
+<td style="text-align: center;">-2</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">-1</td>
+<td style="text-align: center;">-1</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">1</td>
+</tr>
+</tbody>
+</table>
+<p>O conjunto de dados está disposto na Tabela&nbsp;<a href="#tb:dadosficticios" data-reference-type="ref" data-reference="tb:dadosficticios">[tb:dadosficticios]</a>. Note que este é um exemplo didático, geralmente os conjuntos de dados são bem mais complexos. Neste exemplo a tabela é todo o nosso conjunto de dados. Neste formato, também a chamamos de matriz. A coluna <span class="math inline">\(X1\)</span> e <span class="math inline">\(X2\)</span> equivale a dois atributos, onde cada atributo/coluna pode ser representado por um vetor (que nada mais é que uma matriz com uma única coluna), juntos eles formam uma matriz de preditores <span class="math inline">\(X_{pred}\)</span> de duas dimensões. Já <span class="math inline">\(y\)</span> é uma coluna que pode ser entendida como um vetor (ou uma matriz com uma única coluna) contendo um atributo alvo.</p>
+<p>Utilize a sua intuição. A partir dos dados de treino da Tabela&nbsp;<a href="#tb:dadosficticios" data-reference-type="ref" data-reference="tb:dadosficticios">[tb:dadosficticios]</a>, qual seria o valor de <span class="math inline">\(y\)</span> para uma nova observação com os valores <span class="math inline">\(X1=8\)</span> e <span class="math inline">\(X2=8\)</span>?</p>
+<p>Após ter utilizado a sua intuição (ou lógica) - com a sua inteligência humana - é a vez da inteligência artificial. A máquina irá fazer o mesmo que você fez, ou seja, dar um melhor chute utilizando uma técnica específica para inferir o valor de uma nova observação. Utilizaremos a regressão logística (que é bem próximo da regressão linear) implementada na famosa biblioteca <em>scikit-learn</em>, com a linguagem Python, para construção deste preditor, treino e previsão.</p>
+<p>No exemplo a seguir implementamos um preditor com a técnica de regressão logística. E realizaremos uma previsão de uma nova observação com os atributos (<span class="math inline">\(X1=8\)</span> e <span class="math inline">\(X2=8\)</span>). Previsão esta que foi realizada pela inteligência humana do leitor anteriormente.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-language="Python" data-caption="Exemplo de código que usa regressão logística"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Carregando as bibliotecas necessárias</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.linear_model <span class="im">import</span> LogisticRegression</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># carregando dados fictícios </span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> np.array([[<span class="op">-</span><span class="dv">3</span>,<span class="op">-</span><span class="dv">3</span>], [<span class="op">-</span><span class="dv">2</span>,<span class="op">-</span><span class="dv">2</span>], [<span class="op">-</span><span class="dv">1</span>,<span class="op">-</span><span class="dv">1</span>], [<span class="dv">0</span>,<span class="dv">0</span>], [<span class="dv">1</span>,<span class="dv">1</span>], [<span class="dv">2</span>,<span class="dv">2</span>], [<span class="dv">3</span>,<span class="dv">3</span>],</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>[<span class="dv">4</span>,<span class="dv">4</span>], [<span class="dv">5</span>,<span class="dv">5</span>], [<span class="dv">6</span>,<span class="dv">6</span>]])</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> np.array([<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>])</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Treino do modelo</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> LogisticRegression()</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>model.fit(X, y)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Previsão</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Previsão: y ='</span>, model.predict([[<span class="dv">8</span>, <span class="dv">8</span>]]))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<pre data-caption="Saída do console"><code>Previsão: y= [1]</code></pre>
+<p>O resultado do modelo preditivo para os dados de teste <span class="math inline">\(X1=8\)</span> e <span class="math inline">\(X2=8\)</span> foi <span class="math inline">\(y=1\)</span>. Compare-o com o que você havia imaginado. A máquina artificialmente chegou no mesmo resultado que você?</p>
+</section>
+<section id="exemplo-com-outro-conjunto-de-dados" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="exemplo-com-outro-conjunto-de-dados">Exemplo com outro conjunto de dados</h3>
+<p>No exemplo a seguir apresentamos um modelo preditivo em Python utilizando a mesma biblioteca (scikit-learn). O modelo utiliza o algoritmo Regressão Logística e o conjunto de dados <em>iris</em>, sendo um conjunto de dados com a medida da pétala e sépala, além do nome das flores. O Iris é conhecido e bastante utilizado em outros livros e sites, pois seus dados são linearmente separáveis.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" data-language="Python" data-caption="Exemplo de código que usa AM"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Carregando as bibliotecas</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.linear_model <span class="im">import</span> LogisticRegression</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.datasets <span class="im">import</span> load_iris</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Carregando os dados</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>iris <span class="op">=</span> load_iris()</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> iris.data</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> iris.target</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Treinando o modelo</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>reg <span class="op">=</span> LogisticRegression()</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>reg.fit(X, y)</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Realizando a previsão</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Previsão: y='</span>, reg.predict([[<span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span>]]))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<pre data-caption="Saída do console"><code>Previsão: y=[0]</code></pre>
+<p>Não se preocupe agora em entender o código ou as métricas do modelo neste momento. Nos próximos capítulos iremos nos aprofundar nos conceitos necessários para o entendimento completo destes exemplos.</p>
+<p>No final de cada capítulo tem uma lista de questões para reforçar o aprendizado. O gabarito está no final do livro. Bons estudos.</p>
+</section>
+</section>
+<section id="exercícios" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="exercícios"><span class="header-section-number">2.4</span> Exercícios</h2>
+<ol type="1">
+<li><p>Qual é a principal definição de inteligência artificial (IA)?</p>
+<ol type="1">
+<li><p>A capacidade das máquinas de realizar operações matemáticas complexas.</p></li>
+<li><p>A construção de máquinas que podem simular o comportamento humano.</p></li>
+<li><p>O desenvolvimento de sistemas que realizam tarefas consideradas inteligentes por humanos.</p></li>
+<li><p>A criação de softwares para automação industrial.</p></li>
+</ol></li>
+<li><p>Quem é creditado com a origem do termo “inteligência artificial?”</p>
+<ol type="1">
+<li><p>Alan Turing</p></li>
+<li><p>John McCarthy</p></li>
+<li><p>William Gibson</p></li>
+<li><p>Norvig e Russel</p></li>
+</ol></li>
+<li><p>Qual foi uma das primeiras abordagens de IA com relativo sucesso?</p>
+<ol type="1">
+<li><p>Aprendizado de máquina</p></li>
+<li><p>Redes neurais</p></li>
+<li><p>Sistemas Especialistas</p></li>
+<li><p>Algoritmos genéticos</p></li>
+</ol></li>
+<li><p>Qual é uma vantagem do aprendizado de máquina em relação aos Sistemas Especialistas?</p>
+<ol type="1">
+<li><p>Maior dependência da intervenção humana.</p></li>
+<li><p>Extração de conhecimento mais independente da intervenção humana.</p></li>
+<li><p>Implementação mais complexa e cara.</p></li>
+<li><p>Necessidade de menos dados para treinamento.</p></li>
+</ol></li>
+<li><p>Qual é uma das principais razões para o avanço das técnicas de inteligência artificial nas últimas décadas?</p>
+<ol type="1">
+<li><p>A diminuição do interesse em IA após os anos 1970.</p></li>
+<li><p>O aumento da capacidade de processamento e armazenamento dos computadores.</p></li>
+<li><p>A redução da necessidade de dados para treinamento dos modelos.</p></li>
+<li><p>O desenvolvimento de sistemas totalmente independentes de intervenção humana.</p></li>
+</ol></li>
+</ol>
+
+
+</section>
+
+</main> <!-- /main -->
+﻿<script>
+(function () {
+  function isTypingTarget(el) {
+    if (!el) return false;
+    var tag = el.tagName ? el.tagName.toLowerCase() : '';
+    return tag === 'input' || tag === 'textarea' || tag === 'select' || el.isContentEditable;
+  }
+
+  function findLink(rel, fallbackSelector) {
+    var byRel = document.querySelector('a[rel="' + rel + '"]');
+    if (byRel) return byRel;
+    return document.querySelector(fallbackSelector);
+  }
+
+  document.addEventListener('keydown', function (e) {
+    if (e.defaultPrevented) return;
+    if (isTypingTarget(e.target)) return;
+
+    if (e.key === 'ArrowRight') {
+      var nextLink = findLink('next', '.nav-page-next a');
+      if (nextLink && nextLink.href) {
+        window.location.href = nextLink.href;
+      }
+    } else if (e.key === 'ArrowLeft') {
+      var prevLink = findLink('prev', '.nav-page-previous a');
+      if (prevLink && prevLink.href) {
+        window.location.href = prevLink.href;
+      }
+    }
+  });
+})();
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../sections/1_pref-cio-pref-cio-unnumbered.html" class="pagination-link" aria-label="Prefácio">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Prefácio</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../sections/3_introdu-o-regress-o-linear.html" class="pagination-link" aria-label="Introdução à Regressão Linear">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Introdução à Regressão Linear</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
