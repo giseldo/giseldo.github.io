@@ -2,28 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:50532/page/jogos/</loc>
+    <loc>http://localhost:1313/page/jogos/</loc>
   </url><url>
-    <loc>http://localhost:50532/page/livros/</loc>
+    <loc>http://localhost:1313/page/livros/</loc>
   </url><url>
-    <loc>http://localhost:50532/page/pesquisas/</loc>
+    <loc>http://localhost:1313/page/pesquisas/</loc>
   </url><url>
-    <loc>http://localhost:50532/page/produtos/</loc>
+    <loc>http://localhost:1313/page/produtos/</loc>
   </url><url>
-    <loc>http://localhost:50532/page/podcast/</loc>
+    <loc>http://localhost:1313/page/podcast/</loc>
   </url><url>
-    <loc>http://localhost:50532/page/sobre/</loc>
+    <loc>http://localhost:1313/page/sobre/</loc>
   </url><url>
-    <loc>http://localhost:50532/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2017-03-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:50532/post/</loc>
+    <loc>http://localhost:1313/post/</loc>
     <lastmod>2017-03-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:50532/categories/</loc>
+    <loc>http://localhost:1313/categories/</loc>
   </url><url>
-    <loc>http://localhost:50532/page/</loc>
+    <loc>http://localhost:1313/page/</loc>
   </url><url>
-    <loc>http://localhost:50532/tags/</loc>
+    <loc>http://localhost:1313/tags/</loc>
   </url>
 </urlset>
