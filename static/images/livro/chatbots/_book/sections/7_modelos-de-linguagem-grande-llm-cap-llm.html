@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>5&nbsp; Modelos de Linguagem Grande (LLM) – Construindo Chatbots</title>
+<title>4&nbsp; Modelos de Linguagem Grande (LLM) – Construindo Chatbots</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -118,7 +118,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../sections/7_modelos-de-linguagem-grande-llm-cap-llm.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Modelos de Linguagem Grande (LLM)</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../sections/7_modelos-de-linguagem-grande-llm-cap-llm.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Modelos de Linguagem Grande (LLM)</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -134,6 +134,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="../">Construindo Chatbots</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -146,7 +153,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Construindo Chatbots</span></span></a>
+ <span class="menu-text">Bem vindo</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -170,31 +177,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../sections/4_introdu-o.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introdução</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introdução</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../sections/5_eliza-e-aiml-cap-eliza.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">ELIZA e AIML</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">ELIZA e AIML</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../sections/6_processamento-de-linguagem-natural-pln-cap-pln.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Processamento de Linguagem Natural (PLN)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Processamento de Linguagem Natural (PLN)</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../sections/7_modelos-de-linguagem-grande-llm-cap-llm.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Modelos de Linguagem Grande (LLM)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Modelos de Linguagem Grande (LLM)</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../sections/8_conclus-o-conclusao.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Conclusão</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Conclusão</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -219,38 +226,38 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#introdução" id="toc-introdução" class="nav-link active" data-scroll-target="#introdução"><span class="header-section-number">5.1</span> Introdução</a></li>
-  <li><a href="#arquitetura-geral-do-transformer" id="toc-arquitetura-geral-do-transformer" class="nav-link" data-scroll-target="#arquitetura-geral-do-transformer"><span class="header-section-number">5.2</span> Arquitetura Geral do Transformer</a>
+  <li><a href="#introdução" id="toc-introdução" class="nav-link active" data-scroll-target="#introdução"><span class="header-section-number">4.1</span> Introdução</a></li>
+  <li><a href="#arquitetura-geral-do-transformer" id="toc-arquitetura-geral-do-transformer" class="nav-link" data-scroll-target="#arquitetura-geral-do-transformer"><span class="header-section-number">4.2</span> Arquitetura Geral do Transformer</a>
   <ul class="collapse">
-  <li><a href="#bert-bidirectional-encoder-representations-from-transformers" id="toc-bert-bidirectional-encoder-representations-from-transformers" class="nav-link" data-scroll-target="#bert-bidirectional-encoder-representations-from-transformers"><span class="header-section-number">5.2.1</span> BERT (<em>Bidirectional Encoder Representations from Transformers</em>)</a></li>
-  <li><a href="#gpt-generative-pre-trained-transformer" id="toc-gpt-generative-pre-trained-transformer" class="nav-link" data-scroll-target="#gpt-generative-pre-trained-transformer"><span class="header-section-number">5.2.2</span> GPT (<em>Generative Pre-trained Transformer</em>)</a></li>
-  <li><a href="#distilbert-base-uncased" id="toc-distilbert-base-uncased" class="nav-link" data-scroll-target="#distilbert-base-uncased"><span class="header-section-number">5.2.3</span> distilbert-base-uncased</a></li>
+  <li><a href="#bert-bidirectional-encoder-representations-from-transformers" id="toc-bert-bidirectional-encoder-representations-from-transformers" class="nav-link" data-scroll-target="#bert-bidirectional-encoder-representations-from-transformers"><span class="header-section-number">4.2.1</span> BERT (<em>Bidirectional Encoder Representations from Transformers</em>)</a></li>
+  <li><a href="#gpt-generative-pre-trained-transformer" id="toc-gpt-generative-pre-trained-transformer" class="nav-link" data-scroll-target="#gpt-generative-pre-trained-transformer"><span class="header-section-number">4.2.2</span> GPT (<em>Generative Pre-trained Transformer</em>)</a></li>
+  <li><a href="#distilbert-base-uncased" id="toc-distilbert-base-uncased" class="nav-link" data-scroll-target="#distilbert-base-uncased"><span class="header-section-number">4.2.3</span> distilbert-base-uncased</a></li>
   </ul></li>
-  <li><a href="#fine-tuning-de-modelos-pré-treinados" id="toc-fine-tuning-de-modelos-pré-treinados" class="nav-link" data-scroll-target="#fine-tuning-de-modelos-pré-treinados"><span class="header-section-number">5.3</span> Fine-Tuning de Modelos Pré-Treinados</a></li>
-  <li><a href="#few-shot-e-zero-shot-learning" id="toc-few-shot-e-zero-shot-learning" class="nav-link" data-scroll-target="#few-shot-e-zero-shot-learning"><span class="header-section-number">5.4</span> Few Shot e Zero Shot Learning</a></li>
-  <li><a href="#retrieval-augmented-generation-rag" id="toc-retrieval-augmented-generation-rag" class="nav-link" data-scroll-target="#retrieval-augmented-generation-rag"><span class="header-section-number">5.5</span> Retrieval-Augmented Generation (RAG)</a></li>
-  <li><a href="#llama" id="toc-llama" class="nav-link" data-scroll-target="#llama"><span class="header-section-number">5.6</span> LLaMA</a>
+  <li><a href="#fine-tuning-de-modelos-pré-treinados" id="toc-fine-tuning-de-modelos-pré-treinados" class="nav-link" data-scroll-target="#fine-tuning-de-modelos-pré-treinados"><span class="header-section-number">4.3</span> Fine-Tuning de Modelos Pré-Treinados</a></li>
+  <li><a href="#few-shot-e-zero-shot-learning" id="toc-few-shot-e-zero-shot-learning" class="nav-link" data-scroll-target="#few-shot-e-zero-shot-learning"><span class="header-section-number">4.4</span> Few Shot e Zero Shot Learning</a></li>
+  <li><a href="#retrieval-augmented-generation-rag" id="toc-retrieval-augmented-generation-rag" class="nav-link" data-scroll-target="#retrieval-augmented-generation-rag"><span class="header-section-number">4.5</span> Retrieval-Augmented Generation (RAG)</a></li>
+  <li><a href="#llama" id="toc-llama" class="nav-link" data-scroll-target="#llama"><span class="header-section-number">4.6</span> LLaMA</a>
   <ul class="collapse">
-  <li><a href="#arquitetura-do-llama" id="toc-arquitetura-do-llama" class="nav-link" data-scroll-target="#arquitetura-do-llama"><span class="header-section-number">5.6.1</span> Arquitetura do LLaMA</a></li>
-  <li><a href="#exemplo-de-uso-do-llama" id="toc-exemplo-de-uso-do-llama" class="nav-link" data-scroll-target="#exemplo-de-uso-do-llama"><span class="header-section-number">5.6.2</span> Exemplo de uso do LLaMA</a></li>
-  <li><a href="#aplicações-de-llama" id="toc-aplicações-de-llama" class="nav-link" data-scroll-target="#aplicações-de-llama"><span class="header-section-number">5.6.3</span> Aplicações de LLaMA</a></li>
-  <li><a href="#comparação-com-outros-modelos" id="toc-comparação-com-outros-modelos" class="nav-link" data-scroll-target="#comparação-com-outros-modelos"><span class="header-section-number">5.6.4</span> Comparação com Outros Modelos</a></li>
+  <li><a href="#arquitetura-do-llama" id="toc-arquitetura-do-llama" class="nav-link" data-scroll-target="#arquitetura-do-llama"><span class="header-section-number">4.6.1</span> Arquitetura do LLaMA</a></li>
+  <li><a href="#exemplo-de-uso-do-llama" id="toc-exemplo-de-uso-do-llama" class="nav-link" data-scroll-target="#exemplo-de-uso-do-llama"><span class="header-section-number">4.6.2</span> Exemplo de uso do LLaMA</a></li>
+  <li><a href="#aplicações-de-llama" id="toc-aplicações-de-llama" class="nav-link" data-scroll-target="#aplicações-de-llama"><span class="header-section-number">4.6.3</span> Aplicações de LLaMA</a></li>
+  <li><a href="#comparação-com-outros-modelos" id="toc-comparação-com-outros-modelos" class="nav-link" data-scroll-target="#comparação-com-outros-modelos"><span class="header-section-number">4.6.4</span> Comparação com Outros Modelos</a></li>
   </ul></li>
-  <li><a href="#llm-na-prática" id="toc-llm-na-prática" class="nav-link" data-scroll-target="#llm-na-prática"><span class="header-section-number">5.7</span> LLM na prática</a>
+  <li><a href="#llm-na-prática" id="toc-llm-na-prática" class="nav-link" data-scroll-target="#llm-na-prática"><span class="header-section-number">4.7</span> LLM na prática</a>
   <ul class="collapse">
-  <li><a href="#hugging-face-pipeline" id="toc-hugging-face-pipeline" class="nav-link" data-scroll-target="#hugging-face-pipeline"><span class="header-section-number">5.7.1</span> Hugging Face Pipeline</a></li>
-  <li><a href="#llm-local-com-ollama" id="toc-llm-local-com-ollama" class="nav-link" data-scroll-target="#llm-local-com-ollama"><span class="header-section-number">5.7.2</span> LLM Local com Ollama</a></li>
-  <li><a href="#tokenizador-no-llm" id="toc-tokenizador-no-llm" class="nav-link" data-scroll-target="#tokenizador-no-llm"><span class="header-section-number">5.7.3</span> Tokenizador no LLM</a></li>
-  <li><a href="#langchain" id="toc-langchain" class="nav-link" data-scroll-target="#langchain"><span class="header-section-number">5.7.4</span> LangChain</a></li>
-  <li><a href="#mangaba.ai" id="toc-mangaba.ai" class="nav-link" data-scroll-target="#mangaba.ai"><span class="header-section-number">5.7.5</span> Mangaba.AI</a></li>
-  <li><a href="#fluxos-em-llm-ou-engenharia-de-prompts" id="toc-fluxos-em-llm-ou-engenharia-de-prompts" class="nav-link" data-scroll-target="#fluxos-em-llm-ou-engenharia-de-prompts"><span class="header-section-number">5.7.6</span> Fluxos em LLM (ou Engenharia de Prompts)</a></li>
+  <li><a href="#hugging-face-pipeline" id="toc-hugging-face-pipeline" class="nav-link" data-scroll-target="#hugging-face-pipeline"><span class="header-section-number">4.7.1</span> Hugging Face Pipeline</a></li>
+  <li><a href="#llm-local-com-ollama" id="toc-llm-local-com-ollama" class="nav-link" data-scroll-target="#llm-local-com-ollama"><span class="header-section-number">4.7.2</span> LLM Local com Ollama</a></li>
+  <li><a href="#tokenizador-no-llm" id="toc-tokenizador-no-llm" class="nav-link" data-scroll-target="#tokenizador-no-llm"><span class="header-section-number">4.7.3</span> Tokenizador no LLM</a></li>
+  <li><a href="#langchain" id="toc-langchain" class="nav-link" data-scroll-target="#langchain"><span class="header-section-number">4.7.4</span> LangChain</a></li>
+  <li><a href="#mangaba.ai" id="toc-mangaba.ai" class="nav-link" data-scroll-target="#mangaba.ai"><span class="header-section-number">4.7.5</span> Mangaba.AI</a></li>
+  <li><a href="#fluxos-em-llm-ou-engenharia-de-prompts" id="toc-fluxos-em-llm-ou-engenharia-de-prompts" class="nav-link" data-scroll-target="#fluxos-em-llm-ou-engenharia-de-prompts"><span class="header-section-number">4.7.6</span> Fluxos em LLM (ou Engenharia de Prompts)</a></li>
   <li><a href="#como-funciona" id="toc-como-funciona" class="nav-link" data-scroll-target="#como-funciona">Como Funciona?</a></li>
   <li><a href="#exemplos-de-requisitos" id="toc-exemplos-de-requisitos" class="nav-link" data-scroll-target="#exemplos-de-requisitos">Exemplos de requisitos</a></li>
   </ul></li>
-  <li><a href="#integração-de-técnicas" id="toc-integração-de-técnicas" class="nav-link" data-scroll-target="#integração-de-técnicas"><span class="header-section-number">5.8</span> Integração de Técnicas</a></li>
-  <li><a href="#api-e-playground" id="toc-api-e-playground" class="nav-link" data-scroll-target="#api-e-playground"><span class="header-section-number">5.9</span> API e Playground</a></li>
-  <li><a href="#resumo" id="toc-resumo" class="nav-link" data-scroll-target="#resumo"><span class="header-section-number">5.10</span> Resumo</a></li>
-  <li><a href="#exercícios" id="toc-exercícios" class="nav-link" data-scroll-target="#exercícios"><span class="header-section-number">5.11</span> Exercícios</a></li>
+  <li><a href="#integração-de-técnicas" id="toc-integração-de-técnicas" class="nav-link" data-scroll-target="#integração-de-técnicas"><span class="header-section-number">4.8</span> Integração de Técnicas</a></li>
+  <li><a href="#api-e-playground" id="toc-api-e-playground" class="nav-link" data-scroll-target="#api-e-playground"><span class="header-section-number">4.9</span> API e Playground</a></li>
+  <li><a href="#resumo" id="toc-resumo" class="nav-link" data-scroll-target="#resumo"><span class="header-section-number">4.10</span> Resumo</a></li>
+  <li><a href="#exercícios" id="toc-exercícios" class="nav-link" data-scroll-target="#exercícios"><span class="header-section-number">4.11</span> Exercícios</a></li>
   </ul>
 </nav>
     </div>
@@ -259,7 +266,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="cap:LLM" class="quarto-section-identifier"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Modelos de Linguagem Grande (LLM)</span></span></h1>
+<h1 class="title"><span id="cap:LLM" class="quarto-section-identifier"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Modelos de Linguagem Grande (LLM)</span></span></h1>
 </div>
 
 
@@ -283,8 +290,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="myboxobj">
 <p>Objetivo Discutir a arquitetura de <em>Transformers</em>, modelos como BERT, GPT e LLaMA, <em>Fine-Tuning</em> e RAG, mostrando como essas técnicas são aplicadas na construção de chatbots modernos.</p>
 </div>
-<section id="introdução" class="level2" data-number="5.1">
-<h2 data-number="5.1" class="anchored" data-anchor-id="introdução"><span class="header-section-number">5.1</span> Introdução</h2>
+<section id="introdução" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="introdução"><span class="header-section-number">4.1</span> Introdução</h2>
 <p>Um <em>Large Language Model</em> (LLM) - em inglês, Large Language Models - pode ser definido como um sistema computacional fundamentado em técnicas de aprendizado de máquina, cuja finalidade consiste em gerar texto a partir de uma sequência textual fornecida como entrada. Nesse contexto, o texto de entrada é denominado <em>prompt</em>, também referido em inglês como <em>input</em>, enquanto o texto produzido pelo modelo é denominado resposta, ou <em>output</em>. A figura a seguir apresenta uma representação esquemática do processo de entrada e saída de texto em um LLM.</p>
 <figure id="fig:placeholder2" class="figure">
 <p>
@@ -322,8 +329,8 @@ Trecho de Assis, Machado. Todos os Romances: Machado de Assis (Portuguese Editio
 <p>Antes dessa arquitetura, os modelos de PLN eram dominados por RNNs (<em>Recurrent Neural Networks</em>) e LSTMs (<em>Long Short-Term Memory Networks</em>). Embora funcionais, esses métodos apresentavam limitações significativas: dificuldade em capturar dependências de longo alcance devido ao problema do <em>vanishing gradient</em> e restrições de desempenho, já que processavam o texto de maneira estritamente sequencial, reduzindo o potencial de paralelização. O <em>Transformer</em> superou essas limitações ao considerar todas as palavras de entrada simultaneamente, ponderando sua importância relativa por meio da atenção.</p>
 <p>Com isso, os LLMs não apenas aumentaram a precisão em tarefas tradicionais de PLN, como também ampliaram o escopo de aplicações, abrangendo geração criativa de texto, tradução contextualizada e correção gramatical automática. Por outro lado, o avanço desses modelos também trouxe questionamentos relacionados à ética, viés e uso responsável da inteligência artificial, aspectos que vêm sendo discutidos intensamente pela comunidade científica e que serão abordados no Capítulo&nbsp;<a href="8_conclus-o-conclusao.html" data-reference-type="ref" data-reference="conclusao">5</a>.</p>
 </section>
-<section id="arquitetura-geral-do-transformer" class="level2" data-number="5.2">
-<h2 data-number="5.2" class="anchored" data-anchor-id="arquitetura-geral-do-transformer"><span class="header-section-number">5.2</span> Arquitetura Geral do Transformer</h2>
+<section id="arquitetura-geral-do-transformer" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="arquitetura-geral-do-transformer"><span class="header-section-number">4.2</span> Arquitetura Geral do Transformer</h2>
 <p>Os LLMs modernos são em grande parte fundamentados na arquitetura <em>Transformer</em>, proposta originalmente por <span class="citation" data-cites="vaswani2017attention">@vaswani2017attention</span>. Essa arquitetura se tornou a base de inúmeros avanços no processamento de linguagem natural porque oferece uma forma eficiente e escalável de lidar com sequências de texto. Diferente de abordagens anteriores, que processavam as palavras uma a uma em ordem, os <em>Transformers</em> permitem que todo o contexto seja considerado em paralelo, o que torna o treinamento e a inferência mais rápidos e flexíveis.</p>
 <p>A estrutura geral de um <em>Transformer</em> é composta por blocos que se repetem, cada um deles combinando mecanismos de atenção e redes neurais totalmente conectadas (<em>feedforward</em>). Em sua formulação original, a arquitetura possui dois grandes componentes: o <strong>encoder</strong>, responsável por transformar a sequência de entrada em uma representação interna, e o <strong>decoder</strong>, que utiliza essa representação para gerar uma saída, como no caso da tradução automática. Embora alguns modelos atuais utilizem apenas a parte do encoder (como o BERT) ou apenas o decoder (como o GPT), o princípio fundamental continua o mesmo: ambos dependem intensamente do mecanismo de atenção.</p>
 <p>Cada camada do encoder e do decoder contém três elementos centrais:</p>
@@ -336,8 +343,8 @@ Trecho de Assis, Machado. Todos os Romances: Machado de Assis (Portuguese Editio
 <p>Um aspecto central da arquitetura é que todo esse processamento ocorre de forma paralela. Diferente das redes recorrentes (<em>RNNs</em>) ou das LSTMs, que analisavam o texto palavra por palavra em sequência, o <em>Transformer</em> avalia a frase inteira de uma só vez. Essa mudança de paradigma permitiu que modelos fossem treinados em coleções massivas de texto, chegando a bilhões de parâmetros e escalando para tamanhos sem precedentes.</p>
 <p>Além de sua eficiência estrutural, o <em>Transformer</em> também é flexível: pode ser adaptado a diferentes tarefas com pequenas modificações. Modelos <strong>autoregressivos</strong>, como a família GPT, são baseados apenas no decoder e são treinados para prever a próxima palavra em uma sequência de forma unidirecional. Já os modelos <strong>bidirecionais</strong>, como o BERT, exploram tanto o contexto à esquerda quanto o à direita, o que os torna particularmente eficazes em tarefas de compreensão textual.</p>
 <p>O impacto da arquitetura <em>Transformer</em> é amplo e vai além do processamento de linguagem natural em sua forma mais básica. A combinação entre paralelismo, capacidade de capturar dependências de longo alcance e flexibilidade estrutural abriu caminho para a criação de famílias inteiras de modelos com diferentes finalidades. Alguns deles utilizam apenas o encoder, outros apenas o decoder, e há ainda os que combinam os dois de formas distintas. Essa diversidade deu origem a arquiteturas conhecidas, como BERT, GPT, T5 e LLaMA, que se tornaram referências na área e serão discutidas a seguir em maior detalhe.</p>
-<section id="bert-bidirectional-encoder-representations-from-transformers" class="level3" data-number="5.2.1">
-<h3 data-number="5.2.1" class="anchored" data-anchor-id="bert-bidirectional-encoder-representations-from-transformers"><span class="header-section-number">5.2.1</span> BERT (<em>Bidirectional Encoder Representations from Transformers</em>)</h3>
+<section id="bert-bidirectional-encoder-representations-from-transformers" class="level3" data-number="4.2.1">
+<h3 data-number="4.2.1" class="anchored" data-anchor-id="bert-bidirectional-encoder-representations-from-transformers"><span class="header-section-number">4.2.1</span> BERT (<em>Bidirectional Encoder Representations from Transformers</em>)</h3>
 <p>O BERT (<em>Bidirectional Encoder Representations from Transformers</em>) introduziu uma nova forma de treinamento em larga escala, na qual o modelo considera tanto o contexto à esquerda quanto o contexto à direita de uma palavra-alvo. Essa abordagem permitiu uma compreensão mais rica da linguagem em comparação com modelos anteriores, que eram predominantemente unidirecionais.</p>
 <p>O BERT é construído sobre a pilha de <em>encoders</em> do <em>Transformer</em>. Isso significa que ele não é projetado para gerar texto de forma autoregressiva, mas sim para produzir representações contextuais profundas de palavras e frases, que podem depois ser utilizadas em diversas tarefas de PLN. Essa característica torna o BERT especialmente adequado para problemas de compreensão textual, como classificação, resposta a perguntas e extração de informações.</p>
 <p>O modelo é pré-treinado em uma grande quantidade de texto utilizando duas tarefas principais:</p>
@@ -404,8 +411,8 @@ Trecho de Assis, Machado. Todos os Romances: Machado de Assis (Portuguese Editio
 <span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>grad_fn<span class="op">=&lt;</span>NativeLayerNormBackward0<span class="op">&gt;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="gpt-generative-pre-trained-transformer" class="level3" data-number="5.2.2">
-<h3 data-number="5.2.2" class="anchored" data-anchor-id="gpt-generative-pre-trained-transformer"><span class="header-section-number">5.2.2</span> GPT (<em>Generative Pre-trained Transformer</em>)</h3>
+<section id="gpt-generative-pre-trained-transformer" class="level3" data-number="4.2.2">
+<h3 data-number="4.2.2" class="anchored" data-anchor-id="gpt-generative-pre-trained-transformer"><span class="header-section-number">4.2.2</span> GPT (<em>Generative Pre-trained Transformer</em>)</h3>
 <p>O <em>Generative Pre-trained Transformer</em> (GPT) é um dos LLMs mais conhecidos. Ele é treinado de forma autoregressiva, o que significa que prediz a próxima palavra em uma sequência, dada a entrada anterior. Isso o torna excelente para tarefas de geração de texto. O GPT 2 foi uma versão inicial do GPT, contendo 1,5 bilhões de parâmetros. Ele mostrou que, ao ser treinado em grandes quantidades de texto, poderia gerar conteúdo coerente e complexo. GPT é uma evolução ainda maior, com 175 bilhões de parâmetros. Esse modelo pode realizar uma ampla gama de tarefas de PLN sem a necessidade de ajustes finos específicos, simplesmente recebendo exemplos de como a tarefa deve ser executada (aprendizado por poucos exemplos, ou few-shot learning).</p>
 <div class="listing">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> transformers <span class="im">import</span> GPT2Tokenizer, GPT2LMHeadModel</span>
@@ -513,15 +520,15 @@ Trecho de Assis, Machado. Todos os Romances: Machado de Assis (Portuguese Editio
 <pre class="text"><code>Texto gerado com XLNet: Natural Language Processing is and in and in [...]</code></pre>
 </div>
 </section>
-<section id="distilbert-base-uncased" class="level3" data-number="5.2.3">
-<h3 data-number="5.2.3" class="anchored" data-anchor-id="distilbert-base-uncased"><span class="header-section-number">5.2.3</span> distilbert-base-uncased</h3>
+<section id="distilbert-base-uncased" class="level3" data-number="4.2.3">
+<h3 data-number="4.2.3" class="anchored" data-anchor-id="distilbert-base-uncased"><span class="header-section-number">4.2.3</span> distilbert-base-uncased</h3>
 <p>O modelo distilbert-base-uncased <span class="citation" data-cites="akhila2023comparative">[@akhila2023comparative]</span> foi lançado em 2019, sendo menor e mais rápido que o BERT e otimizado para tarefas que processam frases ou sentenças. Sua versão <em>uncased</em> é útil para descrições de código e problemas, já que não considera diferenças de maiúsculas/minúsculas. Ele é pré-treinado em um grande corpus, o que ajuda na generalização, e tem uma boa arquitetura para esse tipo de tarefa, além de exigir hardware acessível.</p>
 <p>O <em>distilbert</em> resulta de um processo de knowledge distillation que reduz em aproximadamente 40% o número de parâmetros e acelera a inferência em cerca de 60%, preservando 95–97% da acurácia do BERT-base (original) em benchmarks de compreensão de linguagem natural <span class="citation" data-cites="Sanh2019">[@Sanh2019]</span>. Essa compacidade de fornecer representações ricas com custo computacional inferior é particularmente vantajosa em ambientes de hardware moderado. Com apenas 67M de parâmetros <span class="citation" data-cites="Sanh2019">[@Sanh2019]</span>, a variante uncased cabe em uma GPU modesta (por exemplo, 6 GB de RAM da placa de vídeo), possibilitando fine-tuning e inferência dentro de recursos computacionais restritos. Assim, torna-se viável re-treinar o modelo à medida que novos dados de projeto se acumulam, mantendo a acurácia sem investir em infraestruturas onerosas.</p>
 <p>Por fim, o amplo suporte no ecossistema <em>Hugging Face</em> para os modelos do tipo BERT e para outros modelos simplifica a reprodutibilidade e a integração em pipelines de tarefas de processamento de linguagem natural.</p>
 </section>
 </section>
-<section id="fine-tuning-de-modelos-pré-treinados" class="level2" data-number="5.3">
-<h2 data-number="5.3" class="anchored" data-anchor-id="fine-tuning-de-modelos-pré-treinados"><span class="header-section-number">5.3</span> Fine-Tuning de Modelos Pré-Treinados</h2>
+<section id="fine-tuning-de-modelos-pré-treinados" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="fine-tuning-de-modelos-pré-treinados"><span class="header-section-number">4.3</span> Fine-Tuning de Modelos Pré-Treinados</h2>
 <p>Modelos pré-treinados como BERT e GPT demonstraram capacidade de compreender nuances semânticas em texto e transferir esse conhecimento para diversas tarefas específicas através de Fine-Tuning. <span class="citation" data-cites="Minaee2025">[@Minaee2025]</span>.</p>
 <p>O <em>Fine-Tuning</em> de modelos pré-treinados é uma técnica fundamental no Processamento de Linguagem Natural (PLN) moderno, especialmente ao trabalhar com Modelos de Linguagem Grande (LLMs). <em>Fine-Tuning</em> permite adaptar um modelo geral para tarefas específicas, como classificação de texto, análise de sentimentos ou geração de linguagem, utilizando um conjunto de dados menor e específico.</p>
 <p><em>Fine-Tuning</em> é o processo de tomar um modelo pré-treinado em uma grande quantidade de dados gerais e adaptá-lo para uma tarefa específica. Este processo envolve ajustar os pesos do modelo, mas com uma taxa de aprendizado menor para não “desaprender” o que foi aprendido durante o pré-treinamento. Modelos como BERT <span class="citation" data-cites="devlin2019bert">[@devlin2019bert]</span>, GPT <span class="citation" data-cites="radford2019language">[@radford2019language]</span>, e T5 <span class="citation" data-cites="raffel2020exploring">[@raffel2020exploring]</span> são comumente fine-tuned para tarefas específicas.</p>
@@ -610,13 +617,13 @@ Trecho de Assis, Machado. Todos os Romances: Machado de Assis (Portuguese Editio
 <li><p><strong>Tradução Automática</strong>: Adaptação de modelos de tradução para dialetos ou linguagens específicas.</p></li>
 </ul>
 </section>
-<section id="few-shot-e-zero-shot-learning" class="level2" data-number="5.4">
-<h2 data-number="5.4" class="anchored" data-anchor-id="few-shot-e-zero-shot-learning"><span class="header-section-number">5.4</span> Few Shot e Zero Shot Learning</h2>
+<section id="few-shot-e-zero-shot-learning" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="few-shot-e-zero-shot-learning"><span class="header-section-number">4.4</span> Few Shot e Zero Shot Learning</h2>
 <p><strong>Zero Shot</strong>: A abordagem LLM zero-shot learning refere-se à capacidade dos LLMs de resolver tarefas sem a necessidade de exemplos explícitos fornecidos durante a inferência. Nesse contexto, a tarefa de processamento de linguagem natural <em>text classification</em> é especificada unicamente por meio de uma instrução textual (prompt), e o modelo deve inferir a ação esperada com base em seu conhecimento prévio adquirido durante o pré-treinamento <span class="citation" data-cites="radford2019language">[@radford2019language]</span>.</p>
 <p><strong>Few Shot</strong>: Já o few-shot learning caracteriza-se pela inclusão de um pequeno conjunto de exemplos da tarefa no próprio prompt, com o objetivo de guiar a geração do modelo durante a inferência. Essa técnica permite ao modelo identificar padrões desejados com base nos exemplos fornecidos e aplicá-los a novos casos, mesmo sem reconfiguração ou ajuste de parâmetros. Trata-se de uma abordagem intermediária entre o zero-shot e o treinamento supervisionado tradicional, sendo especialmente eficaz em tarefas de classificação com variações contextuais <span class="citation" data-cites="raschka2024build">[@raschka2024build]</span>. Sua principal vantagem está na adaptação rápida a novas tarefas com custo computacional reduzido.</p>
 </section>
-<section id="retrieval-augmented-generation-rag" class="level2" data-number="5.5">
-<h2 data-number="5.5" class="anchored" data-anchor-id="retrieval-augmented-generation-rag"><span class="header-section-number">5.5</span> Retrieval-Augmented Generation (RAG)</h2>
+<section id="retrieval-augmented-generation-rag" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="retrieval-augmented-generation-rag"><span class="header-section-number">4.5</span> Retrieval-Augmented Generation (RAG)</h2>
 <p>O <em>Retrieval-Augmented Generation</em> (RAG) é uma abordagem que combina duas técnicas na área de processamento de linguagem natural: recuperação de informações e geração de texto. A ideia central do RAG é aprimorar a capacidade de um modelo de linguagem ao integrá-lo com um sistema de recuperação que busca informações relevantes de uma base de dados ou de um conjunto de documentos.</p>
 <p>Na prática, o RAG opera em duas etapas. Primeiro, quando uma consulta ou pergunta é feita, um mecanismo de recuperação é acionado para identificar e extrair informações pertinentes de um repositório de dados. Isso pode incluir documentos, artigos ou qualquer outro tipo de conteúdo textual que possa fornecer contexto e detalhes adicionais sobre o tema em questão. Essa fase garante que o modelo de linguagem tenha acesso a informações atualizadas e específicas, em vez de depender apenas do conhecimento prévio que foi incorporado durante seu treinamento.</p>
 <p>Em seguida, na segunda etapa, o modelo de linguagem utiliza as informações recuperadas para gerar uma resposta mais rica e contextualizada. Essa geração não se limita a reproduzir o conteúdo recuperado, mas sim a integrar esses dados de forma coesa, criando uma resposta que não apenas responde à pergunta, mas também fornece uma narrativa mais completa e informativa. Isso resulta em respostas que são mais precisas e relevantes, pois são fundamentadas em dados concretos e atualizados.</p>
@@ -747,22 +754,22 @@ Trecho de Assis, Machado. Todos os Romances: Machado de Assis (Portuguese Editio
 <li><p><strong>Treinamento Conjunto</strong>: Treinar os componentes de recuperação e geração de maneira conjunta pode ser complexo e requer grandes volumes de dados.</p></li>
 </ul>
 </section>
-<section id="llama" class="level2" data-number="5.6">
-<h2 data-number="5.6" class="anchored" data-anchor-id="llama"><span class="header-section-number">5.6</span> LLaMA</h2>
+<section id="llama" class="level2" data-number="4.6">
+<h2 data-number="4.6" class="anchored" data-anchor-id="llama"><span class="header-section-number">4.6</span> LLaMA</h2>
 <p>LLaMA é uma família de modelos de linguagem grandes (LLMs) que são menores em tamanho, mas ainda mantêm a capacidade de realizar tarefas complexas de PLN. A abordagem de LLaMA é baseada em uma arquitetura de <em>Transformer</em>, semelhante a outros LLMs, mas otimizada para eficiência em termos de parâmetros e recursos computacionais.</p>
-<section id="características-principais" class="level4" data-number="5.6.0.1">
-<h4 data-number="5.6.0.1" class="anchored" data-anchor-id="características-principais"><span class="header-section-number">5.6.0.1</span> Características Principais</h4>
+<section id="características-principais" class="level4" data-number="4.6.0.1">
+<h4 data-number="4.6.0.1" class="anchored" data-anchor-id="características-principais"><span class="header-section-number">4.6.0.1</span> Características Principais</h4>
 <ul>
 <li><p><strong>Tamanho Reduzido</strong>: LLaMA é projetado para ser mais leve que os modelos gigantescos, com diferentes variantes que variam de 7B a 65B parâmetros.</p></li>
 <li><p><strong>Eficiência Computacional</strong>: Devido ao seu design otimizado, o LLaMA pode ser treinado em menos tempo e com menos recursos, tornando-o acessível para organizações menores e pesquisadores.</p></li>
 <li><p><strong>Versatilidade</strong>: Apesar de seu tamanho reduzido, o LLaMA é capaz de realizar uma ampla gama de tarefas de PLN, incluindo geração de texto, tradução, e compreensão de linguagem.</p></li>
 </ul>
 </section>
-<section id="arquitetura-do-llama" class="level3" data-number="5.6.1">
-<h3 data-number="5.6.1" class="anchored" data-anchor-id="arquitetura-do-llama"><span class="header-section-number">5.6.1</span> Arquitetura do LLaMA</h3>
+<section id="arquitetura-do-llama" class="level3" data-number="4.6.1">
+<h3 data-number="4.6.1" class="anchored" data-anchor-id="arquitetura-do-llama"><span class="header-section-number">4.6.1</span> Arquitetura do LLaMA</h3>
 <p>A arquitetura do LLaMA é baseada no <em>Transformer</em>, mas com várias otimizações que permitem que ele mantenha uma alta qualidade de predição, enquanto usa menos parâmetros e recursos computacionais.</p>
-<section id="camadas-transformer-otimizadas" class="level4" data-number="5.6.1.1">
-<h4 data-number="5.6.1.1" class="anchored" data-anchor-id="camadas-transformer-otimizadas"><span class="header-section-number">5.6.1.1</span> Camadas <em>Transformer</em> Otimizadas</h4>
+<section id="camadas-transformer-otimizadas" class="level4" data-number="4.6.1.1">
+<h4 data-number="4.6.1.1" class="anchored" data-anchor-id="camadas-transformer-otimizadas"><span class="header-section-number">4.6.1.1</span> Camadas <em>Transformer</em> Otimizadas</h4>
 <p>O LLaMA utiliza camadas <em>Transformer</em> com melhorias específicas para otimizar o uso de memória e tempo de processamento. As principais diferenças incluem:</p>
 <ul>
 <li><p><strong>Atenção Multi-Head Otimizada</strong>: Reduz a redundância ao calcular a atenção em múltiplas cabeças.</p></li>
@@ -770,13 +777,13 @@ Trecho de Assis, Machado. Todos os Romances: Machado de Assis (Portuguese Editio
 <li><p><strong>Parâmetros Compactos</strong>: Redução do número de parâmetros, mantendo a capacidade de capturar relações complexas na linguagem.</p></li>
 </ul>
 </section>
-<section id="treinamento-e-escalabilidade" class="level4" data-number="5.6.1.2">
-<h4 data-number="5.6.1.2" class="anchored" data-anchor-id="treinamento-e-escalabilidade"><span class="header-section-number">5.6.1.2</span> Treinamento e Escalabilidade</h4>
+<section id="treinamento-e-escalabilidade" class="level4" data-number="4.6.1.2">
+<h4 data-number="4.6.1.2" class="anchored" data-anchor-id="treinamento-e-escalabilidade"><span class="header-section-number">4.6.1.2</span> Treinamento e Escalabilidade</h4>
 <p>O LLaMA foi treinado em grandes corpora de dados textuais, incluindo múltiplos idiomas e domínios. A arquitetura permite que o modelo seja escalado de maneira eficiente, com versões menores (7B parâmetros) adequadas para tarefas menos intensivas e versões maiores (65B parâmetros) competindo com modelos de ponta como GPT-3.</p>
 </section>
 </section>
-<section id="exemplo-de-uso-do-llama" class="level3" data-number="5.6.2">
-<h3 data-number="5.6.2" class="anchored" data-anchor-id="exemplo-de-uso-do-llama"><span class="header-section-number">5.6.2</span> Exemplo de uso do LLaMA</h3>
+<section id="exemplo-de-uso-do-llama" class="level3" data-number="4.6.2">
+<h3 data-number="4.6.2" class="anchored" data-anchor-id="exemplo-de-uso-do-llama"><span class="header-section-number">4.6.2</span> Exemplo de uso do LLaMA</h3>
 <p>Embora o LLaMA seja relativamente novo, é possível utilizar as ferramentas da Hugging Face para trabalhar com variantes do modelo ou implementações semelhantes.</p>
 <p>Vamos utilizar uma versão de LLaMA para realizar uma tarefa simples de geração de texto. Assumiremos que a variante LLaMA foi integrada à <em>Hugging Face Transformers</em>.</p>
 <p>Para executar o código abaixo, recomendamos o Google Colab. É necessário informar a sua chave do Hugging Face e solicitar acesso ao modelo LLaMa no próprio Hugging Face.</p>
@@ -812,8 +819,8 @@ Trecho de Assis, Machado. Todos os Romances: Machado de Assis (Portuguese Editio
 </div>
 <p>Neste exemplo, carregamos o tokenizer e o modelo LLaMA e geramos um texto baseado em um prompt de entrada. O código pode ser ajustado para diferentes tamanhos de modelos e diferentes tarefas de geração de texto.</p>
 </section>
-<section id="aplicações-de-llama" class="level3" data-number="5.6.3">
-<h3 data-number="5.6.3" class="anchored" data-anchor-id="aplicações-de-llama"><span class="header-section-number">5.6.3</span> Aplicações de LLaMA</h3>
+<section id="aplicações-de-llama" class="level3" data-number="4.6.3">
+<h3 data-number="4.6.3" class="anchored" data-anchor-id="aplicações-de-llama"><span class="header-section-number">4.6.3</span> Aplicações de LLaMA</h3>
 <p>Devido a sua eficiência e versatilidade, LLaMA pode ser aplicado em uma variedade de cenários, incluindo:</p>
 <ul>
 <li><p><strong>Assistentes Virtuais</strong>: Implementação de assistentes que podem ser executados em dispositivos com recursos limitados.</p></li>
@@ -822,8 +829,8 @@ Trecho de Assis, Machado. Todos os Romances: Machado de Assis (Portuguese Editio
 <li><p><strong>Análise de Sentimentos</strong>: Aplicações que exigem processamento eficiente de grandes volumes de dados textuais.</p></li>
 </ul>
 </section>
-<section id="comparação-com-outros-modelos" class="level3" data-number="5.6.4">
-<h3 data-number="5.6.4" class="anchored" data-anchor-id="comparação-com-outros-modelos"><span class="header-section-number">5.6.4</span> Comparação com Outros Modelos</h3>
+<section id="comparação-com-outros-modelos" class="level3" data-number="4.6.4">
+<h3 data-number="4.6.4" class="anchored" data-anchor-id="comparação-com-outros-modelos"><span class="header-section-number">4.6.4</span> Comparação com Outros Modelos</h3>
 <p>Quando comparado com modelos maiores como GPT-3, o LLaMA oferece um excelente equilíbrio entre desempenho e eficiência. Ele é particularmente útil em cenários onde os recursos computacionais são limitados ou onde a implantação em escala é uma consideração chave.</p>
 <p>Algumas Vantagens do LLaMA:</p>
 <ul>
@@ -838,10 +845,10 @@ Trecho de Assis, Machado. Todos os Romances: Machado de Assis (Portuguese Editio
 </ul>
 </section>
 </section>
-<section id="llm-na-prática" class="level2" data-number="5.7">
-<h2 data-number="5.7" class="anchored" data-anchor-id="llm-na-prática"><span class="header-section-number">5.7</span> LLM na prática</h2>
-<section id="hugging-face-pipeline" class="level3" data-number="5.7.1">
-<h3 data-number="5.7.1" class="anchored" data-anchor-id="hugging-face-pipeline"><span class="header-section-number">5.7.1</span> Hugging Face Pipeline</h3>
+<section id="llm-na-prática" class="level2" data-number="4.7">
+<h2 data-number="4.7" class="anchored" data-anchor-id="llm-na-prática"><span class="header-section-number">4.7</span> LLM na prática</h2>
+<section id="hugging-face-pipeline" class="level3" data-number="4.7.1">
+<h3 data-number="4.7.1" class="anchored" data-anchor-id="hugging-face-pipeline"><span class="header-section-number">4.7.1</span> Hugging Face Pipeline</h3>
 <p>A biblioteca <em>Transformer</em> da <em>Hugging Face</em> torna muito mais fácil trabalhar com modelos pré-treinados como o GPT-2. Aqui está um exemplo de como gerar texto usando o GPT-2 pré-treinado:</p>
 <div class="listing">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> transformers <span class="im">import</span> pipeline</span>
@@ -859,8 +866,8 @@ Trecho de Assis, Machado. Todos os Romances: Machado de Assis (Portuguese Editio
 </div>
 <p>Este código é simples porque ele usa um modelo que já foi treinado em um grande dataset. Também é possível ajustar (fine-tune) um modelo pré-treinado em seus próprios dados para obter resultados melhores.</p>
 </section>
-<section id="llm-local-com-ollama" class="level3" data-number="5.7.2">
-<h3 data-number="5.7.2" class="anchored" data-anchor-id="llm-local-com-ollama"><span class="header-section-number">5.7.2</span> LLM Local com Ollama</h3>
+<section id="llm-local-com-ollama" class="level3" data-number="4.7.2">
+<h3 data-number="4.7.2" class="anchored" data-anchor-id="llm-local-com-ollama"><span class="header-section-number">4.7.2</span> LLM Local com Ollama</h3>
 <p>Nesta seção, descreveremos detalhes da instalação do software Ollama, baixaremos o modelo LLM Qwen2 0.5B e exploraremos suas capacidades com algumas perguntas simples.</p>
 <p>O Ollama é uma plataforma baseada em linha de comando que facilita o uso de modelos de IA localmente; existem outras, porém a ideia geral é bem semelhante. Com ele, você pode baixar modelos pré-treinados, gerar texto e fazer inferências sem precisar de uma placa de vídeo potente. Sua simplicidade e rapidez o tornam perfeito para quem quer experimentar LLMs em computadores mais modestos.</p>
 <p>Baixando e Instalando o Ollama: Acesse o site oficial do Ollama e baixe o instalador para o seu sistema operacional. Os procedimentos descritos nesta seção são baseados no Windows, mas o Ollama também funciona no macOS e Linux.</p>
@@ -973,8 +980,8 @@ Figure 27: Prompt de comando exibindo a saída do LLM em português.
 <p>O Ollama funciona em computadores simples, tornando a IA acessível a todos; com ele é possível uma execução local pois não depende de serviços na nuvem, garantindo privacidade e controle. Sua configuração é rápida e sua interface de linha de comando é ideal para desenvolvedores que preferem um fluxo de trabalho minimalista e baseado em texto; por fim, embora existam plataformas mais visuais para rodar LLMs, a velocidade e o baixo consumo de recursos do Ollama o tornam uma ótima escolha para experimentos rápidos.</p>
 </section>
 </section>
-<section id="tokenizador-no-llm" class="level3" data-number="5.7.3">
-<h3 data-number="5.7.3" class="anchored" data-anchor-id="tokenizador-no-llm"><span class="header-section-number">5.7.3</span> Tokenizador no LLM</h3>
+<section id="tokenizador-no-llm" class="level3" data-number="4.7.3">
+<h3 data-number="4.7.3" class="anchored" data-anchor-id="tokenizador-no-llm"><span class="header-section-number">4.7.3</span> Tokenizador no LLM</h3>
 <p>O tokenizador é responsável por dividir o texto em partes menores (tokens) que o modelo pode entender. Depois, precisamos de um modelo. O modelo é a parte que realmente faz o trabalho de entender e gerar texto. Vamos usar um tokenizador já existente no Hugging Face.</p>
 <div class="listing">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="co"># pip install transformers[torch]</span></span>
@@ -990,8 +997,8 @@ Figure 27: Prompt de comando exibindo a saída do LLM em português.
 <p>A saída deste código será um dicionário com os ids dos tokens e a máscara de atenção. O id do token é o número que representa cada palavra ou parte da palavra no vocabulário do modelo. A máscara de atenção indica quais tokens devem ser considerados pelo modelo durante o processamento.</p>
 <p>Attention mask é uma lista de 1s e 0s que indica quais tokens devem ser considerados pelo modelo durante o processamento. Um valor de 1 significa que o token correspondente deve ser considerado, enquanto um valor de 0 significa que ele deve ser ignorado.</p>
 </section>
-<section id="langchain" class="level3" data-number="5.7.4">
-<h3 data-number="5.7.4" class="anchored" data-anchor-id="langchain"><span class="header-section-number">5.7.4</span> LangChain</h3>
+<section id="langchain" class="level3" data-number="4.7.4">
+<h3 data-number="4.7.4" class="anchored" data-anchor-id="langchain"><span class="header-section-number">4.7.4</span> LangChain</h3>
 <p>LangChain é uma biblioteca de software de código aberto projetada para simplificar a interação com Modelos de Linguagem Grande (LLMs) e construir aplicativos de processamento de linguagem natural robustos. Ele fornece uma camada de abstração de alto nível sobre as complexidades de trabalhar diretamente com modelos de linguagem, tornando mais acessível a criação de aplicativos de compreensão e geração de linguagem.</p>
 <p>Trabalhar com LLMs pode ser complexo devido à sua natureza sofisticada e aos requisitos de recursos computacionais. LangChain lida com muitos detalhes complexos em segundo plano, permitindo que os desenvolvedores se concentrem na construção de aplicativos de linguagem eficazes. Aqui estão algumas vantagens do uso do LangChain:</p>
 <ul>
@@ -1029,8 +1036,8 @@ Figure 27: Prompt de comando exibindo a saída do LLM em português.
 </div>
 <p>Este exemplo básico demonstra a simplicidade de usar o LangChain para interagir com LLMs. No entanto, o LangChain oferece muito mais recursos e funcionalidades para construir aplicativos de chatbot mais robustos.</p>
 </section>
-<section id="mangaba.ai" class="level3" data-number="5.7.5">
-<h3 data-number="5.7.5" class="anchored" data-anchor-id="mangaba.ai"><span class="header-section-number">5.7.5</span> Mangaba.AI</h3>
+<section id="mangaba.ai" class="level3" data-number="4.7.5">
+<h3 data-number="4.7.5" class="anchored" data-anchor-id="mangaba.ai"><span class="header-section-number">4.7.5</span> Mangaba.AI</h3>
 <p>O Mangaba.AI é um framework escrito em Python para a criação de agentes de IA autônomos que colaboram em equipe para resolver tarefas complexas. Ele permite montar equipes de agentes com funções especializadas — por exemplo, um agente pesquisador, outro analista, outro redator — que compartilham memória contextual (isto é, histórico de interações e resultados) para dar continuidade ao trabalho de forma inteligente. Além disso, o Mangaba integra modelos avançados (incluindo os modelos Gemini do Google), permite o uso de ferramentas externas via APIs e opera de forma assíncrona para executar múltiplas tarefas em paralelo, a que melhora a eficiência e a velocidade. Ele pode ser acessado em <a href="mangaba-ai.vercel.app" class="uri">mangaba-ai.vercel.app</a>.</p>
 <p>Entre seus usos práticos, o Mangaba.AI pode ser aplicado para automação de processos repetitivos, geração de relatórios com base em dados complexos, análise e extração de informações de grandes volumes de documentos, construção de assistentes virtuais, e apoio à pesquisa e desenvolvimento. Ele procura facilitar a vida de desenvolvedores ao fornecer uma API simples e intuitiva para definir agentes, atribuir papéis, configurar equipes, e delegar tarefas inteiras para essa equipe de IA colaborativa.</p>
 <div class="listing">
@@ -1056,8 +1063,8 @@ Figure 27: Prompt de comando exibindo a saída do LLM em português.
 <span id="cb34-20"><a href="#cb34-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(result.output)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="fluxos-em-llm-ou-engenharia-de-prompts" class="level3" data-number="5.7.6">
-<h3 data-number="5.7.6" class="anchored" data-anchor-id="fluxos-em-llm-ou-engenharia-de-prompts"><span class="header-section-number">5.7.6</span> Fluxos em LLM (ou Engenharia de Prompts)</h3>
+<section id="fluxos-em-llm-ou-engenharia-de-prompts" class="level3" data-number="4.7.6">
+<h3 data-number="4.7.6" class="anchored" data-anchor-id="fluxos-em-llm-ou-engenharia-de-prompts"><span class="header-section-number">4.7.6</span> Fluxos em LLM (ou Engenharia de Prompts)</h3>
 <p>Modelos de Linguagem Grandes (LLMs), como a família GPT, são utilizados na compreensão e geração de texto. Uma maneira eficaz e relativamente rápida de criar um chatbot funcional é através da <strong>engenharia de prompts</strong>. Em vez de codificar regras complexas e árvores de decisão manualmente, você "programa" o LLM fornecendo-lhe um conjunto detalhado de instruções iniciais (o prompt).</p>
 <p>O prompt é o texto inicial que você fornece ao LLM. Ele define:</p>
 <ol type="1">
@@ -1267,8 +1274,8 @@ Figure 28: Chatbot criado com LLM (via ChatGPT).
 </section>
 </section>
 </section>
-<section id="integração-de-técnicas" class="level2" data-number="5.8">
-<h2 data-number="5.8" class="anchored" data-anchor-id="integração-de-técnicas"><span class="header-section-number">5.8</span> Integração de Técnicas</h2>
+<section id="integração-de-técnicas" class="level2" data-number="4.8">
+<h2 data-number="4.8" class="anchored" data-anchor-id="integração-de-técnicas"><span class="header-section-number">4.8</span> Integração de Técnicas</h2>
 <p>Nesta seção, vamos explorar como integrar as técnicas discutidas nas seções anteriores para construir chatbots eficientes. Abordaremos a utilização de Modelos de Linguagem Grande (LLMs), <em>Fine-Tuning</em>, Retrieval-Augmented Generation (RAG) e LLaMA em um único sistema, visando criar experiências de diálogo sofisticadas e personalizadas.</p>
 <p>Desenhando um Chatbot: A construção de um chatbot avançado requer a combinação de várias técnicas para garantir que ele seja capaz de entender, processar e responder a uma ampla gama de consultas de usuários. Vamos revisar os principais componentes:</p>
 <ul>
@@ -1361,8 +1368,8 @@ Figure 29: Fluxo de dados em um chatbot.
 <p>Neste exemplo, o chatbot gera uma resposta baseada na combinação da entrada do usuário e na informação relevante recuperada, criando uma resposta informativa e contextualizada.</p>
 <p>Desafios na Implementação de Chatbots: Implementar chatbots com múltiplas técnicas apresenta vários desafios, tais como: combinar modelos como LLaMA e DPR pode ser computacionalmente intensivo, especialmente em aplicações em tempo real; o <em>Fine-Tuning</em> e a configuração de modelos precisam ser bem ajustados para garantir que o chatbot seja eficaz e relevante em suas respostas; além disso, garantir que os diferentes componentes (recuperação, geração, etc.) funcionem de maneira coesa pode ser desafiador. Mesmo assim, os chatbots podem ser aplicados em uma variedade de cenários, como: fornecer suporte automatizado, personalizado, em tempo real; ajudar na triagem de sintomas ou fornecer informações médicas básicas; ou mesmo criar tutores virtuais que podem responder a perguntas de estudantes de maneira precisa e contextualizada.</p>
 </section>
-<section id="api-e-playground" class="level2" data-number="5.9">
-<h2 data-number="5.9" class="anchored" data-anchor-id="api-e-playground"><span class="header-section-number">5.9</span> API e Playground</h2>
+<section id="api-e-playground" class="level2" data-number="4.9">
+<h2 data-number="4.9" class="anchored" data-anchor-id="api-e-playground"><span class="header-section-number">4.9</span> API e Playground</h2>
 <p>Geralmente, a desenvolvedora de um modelo LLM fornece uma interface web para o usuário conversar com o seu modelo em forma de chatbot e fornece uma API (com um playground) para quem deseja integrar a solução em suas aplicações. Assim é o ChatGPT, da empresa OpenAI. Ela cobra um valor fixo para disponibilizar aos assinantes acesso completo aos recursos do seu chatbot, inclusive com o recurso de SearchGPT (uma busca na web), lousa, geração de vídeos, imagens etc. Já para acesso à API, a modalidade de cobrança é paga-pelo-uso. Veja na Figura&nbsp;<a href="#fig:chat1" data-reference-type="ref" data-reference="fig:chat1">4.13</a> uma imagem do chatbot da OpenAI e na Figura&nbsp;<a href="#fig:chat2" data-reference-type="ref" data-reference="fig:chat2">4.14</a> o playground da OpenAI.</p>
 <figure id="fig:chat1" class="figure">
 <p>
@@ -1416,8 +1423,8 @@ Figure 35: Playground do Grok.
 </figcaption>
 </figure>
 </section>
-<section id="resumo" class="level2" data-number="5.10">
-<h2 data-number="5.10" class="anchored" data-anchor-id="resumo"><span class="header-section-number">5.10</span> Resumo</h2>
+<section id="resumo" class="level2" data-number="4.10">
+<h2 data-number="4.10" class="anchored" data-anchor-id="resumo"><span class="header-section-number">4.10</span> Resumo</h2>
 <p>Os Modelos de Linguagem Grande (LLMs) têm desempenhado um papel central na revolução do Processamento de Linguagem Natural (PLN). Esses modelos, que incluem variantes como GPT, BERT, e seus sucessores, são capazes de realizar uma ampla gama de tarefas, desde geração de texto até compreensão profunda de linguagem, graças ao seu treinamento em grandes volumes de dados textuais.</p>
 <p>Esses modelos são alimentados por vastos conjuntos de dados textuais e utilizam técnicas de aprendizado profundo, particularmente redes neurais, para aprender padrões, contextos e nuances da linguagem. Eles são capazes de realizar uma variedade de tarefas linguísticas, incluindo tradução automática, geração de texto, resumo de informações, resposta a perguntas e até mesmo a criação de diálogos interativos. Funcionam com base em arquiteturas complexas, como a <em>Transformer</em>, que permite que o modelo preste atenção a diferentes partes de um texto simultaneamente, facilitando a compreensão do contexto e das relações semânticas entre palavras e frases.</p>
 <p>O treinamento desses modelos envolve a exposição a enormes quantidades de texto, o que lhes permite desenvolver uma compreensão profunda da gramática, do vocabulário e dos estilos de comunicação. No entanto, essa capacidade de gerar texto coerente e relevante também levanta questões éticas e de responsabilidade, especialmente em relação à desinformação, viés algorítmico e privacidade.</p>
@@ -1429,8 +1436,8 @@ Figure 35: Playground do Grok.
 <p>Também, exploramos o LLaMA, um modelo de linguagem projetado para ser eficiente e acessível sem comprometer a capacidade de realizar tarefas complexas de PLN. Com uma arquitetura otimizada e foco em eficiência computacional, LLaMA oferece uma alternativa prática para modelos gigantescos como o GPT-3. Vimos também como implementar LLaMA em Python para tarefas de geração de texto e discutimos suas aplicações e limitações.</p>
 <p>Além disso, integramos várias técnicas discutidas em capítulos anteriores para criar um chatbot capaz de fornecer respostas precisas e contextualizadas utilizando LLaMA e RAG. A implementação dessas técnicas oferece uma pequena base para o desenvolvimento de sistemas de diálogo eficientes.</p>
 </section>
-<section id="exercícios" class="level2" data-number="5.11">
-<h2 data-number="5.11" class="anchored" data-anchor-id="exercícios"><span class="header-section-number">5.11</span> Exercícios</h2>
+<section id="exercícios" class="level2" data-number="4.11">
+<h2 data-number="4.11" class="anchored" data-anchor-id="exercícios"><span class="header-section-number">4.11</span> Exercícios</h2>
 <ol type="1">
 <li><p><strong>Qual é a principal inovação introduzida pelos Transformers em relação a modelos anteriores?</strong></p>
 <ol type="1">
@@ -1746,7 +1753,7 @@ Figure 35: Playground do Grok.
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/giseldo\.github\.io\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
@@ -2076,16 +2083,29 @@ Figure 35: Playground do Grok.
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="../sections/6_processamento-de-linguagem-natural-pln-cap-pln.html" class="pagination-link" aria-label="Processamento de Linguagem Natural (PLN)">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Processamento de Linguagem Natural (PLN)</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Processamento de Linguagem Natural (PLN)</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="../sections/8_conclus-o-conclusao.html" class="pagination-link" aria-label="Conclusão">
-        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Conclusão</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Conclusão</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Construindo Chatbotr (2e) foi escrito por Giseldo Neo e Alana Neo.</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Este html foi gerado com o <a href="https://quarto.org/">Quarto</a>.</p>
+</div>
+  </div>
+</footer>
 
 
 

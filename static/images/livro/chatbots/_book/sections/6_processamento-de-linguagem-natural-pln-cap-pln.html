@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>4&nbsp; Processamento de Linguagem Natural (PLN) – Construindo Chatbots</title>
+<title>3&nbsp; Processamento de Linguagem Natural (PLN) – Construindo Chatbots</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -118,7 +118,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../sections/6_processamento-de-linguagem-natural-pln-cap-pln.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Processamento de Linguagem Natural (PLN)</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../sections/6_processamento-de-linguagem-natural-pln-cap-pln.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Processamento de Linguagem Natural (PLN)</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -134,6 +134,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="../">Construindo Chatbots</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -146,7 +153,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Construindo Chatbots</span></span></a>
+ <span class="menu-text">Bem vindo</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -170,31 +177,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../sections/4_introdu-o.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introdução</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introdução</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../sections/5_eliza-e-aiml-cap-eliza.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">ELIZA e AIML</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">ELIZA e AIML</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../sections/6_processamento-de-linguagem-natural-pln-cap-pln.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Processamento de Linguagem Natural (PLN)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Processamento de Linguagem Natural (PLN)</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../sections/7_modelos-de-linguagem-grande-llm-cap-llm.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Modelos de Linguagem Grande (LLM)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Modelos de Linguagem Grande (LLM)</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../sections/8_conclus-o-conclusao.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Conclusão</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Conclusão</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -219,40 +226,40 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#inteligência-artificial" id="toc-inteligência-artificial" class="nav-link active" data-scroll-target="#inteligência-artificial"><span class="header-section-number">4.1</span> Inteligência Artificial</a></li>
-  <li><a href="#aprendizado-de-máquina" id="toc-aprendizado-de-máquina" class="nav-link" data-scroll-target="#aprendizado-de-máquina"><span class="header-section-number">4.2</span> Aprendizado de Máquina</a></li>
-  <li><a href="#processamento-de-linguagem-natural" id="toc-processamento-de-linguagem-natural" class="nav-link" data-scroll-target="#processamento-de-linguagem-natural"><span class="header-section-number">4.3</span> Processamento de Linguagem Natural</a></li>
-  <li><a href="#instalação-do-python" id="toc-instalação-do-python" class="nav-link" data-scroll-target="#instalação-do-python"><span class="header-section-number">4.4</span> Instalação do Python</a></li>
-  <li><a href="#principais-técnicas-de-pln" id="toc-principais-técnicas-de-pln" class="nav-link" data-scroll-target="#principais-técnicas-de-pln"><span class="header-section-number">4.5</span> Principais Técnicas de PLN</a>
+  <li><a href="#inteligência-artificial" id="toc-inteligência-artificial" class="nav-link active" data-scroll-target="#inteligência-artificial"><span class="header-section-number">3.1</span> Inteligência Artificial</a></li>
+  <li><a href="#aprendizado-de-máquina" id="toc-aprendizado-de-máquina" class="nav-link" data-scroll-target="#aprendizado-de-máquina"><span class="header-section-number">3.2</span> Aprendizado de Máquina</a></li>
+  <li><a href="#processamento-de-linguagem-natural" id="toc-processamento-de-linguagem-natural" class="nav-link" data-scroll-target="#processamento-de-linguagem-natural"><span class="header-section-number">3.3</span> Processamento de Linguagem Natural</a></li>
+  <li><a href="#instalação-do-python" id="toc-instalação-do-python" class="nav-link" data-scroll-target="#instalação-do-python"><span class="header-section-number">3.4</span> Instalação do Python</a></li>
+  <li><a href="#principais-técnicas-de-pln" id="toc-principais-técnicas-de-pln" class="nav-link" data-scroll-target="#principais-técnicas-de-pln"><span class="header-section-number">3.5</span> Principais Técnicas de PLN</a>
   <ul class="collapse">
-  <li><a href="#tokenização" id="toc-tokenização" class="nav-link" data-scroll-target="#tokenização"><span class="header-section-number">4.5.1</span> Tokenização</a></li>
-  <li><a href="#lematização" id="toc-lematização" class="nav-link" data-scroll-target="#lematização"><span class="header-section-number">4.5.2</span> Lematização</a></li>
-  <li><a href="#stemização" id="toc-stemização" class="nav-link" data-scroll-target="#stemização"><span class="header-section-number">4.5.3</span> Stemização</a></li>
-  <li><a href="#stopwords" id="toc-stopwords" class="nav-link" data-scroll-target="#stopwords"><span class="header-section-number">4.5.4</span> Stopwords</a></li>
+  <li><a href="#tokenização" id="toc-tokenização" class="nav-link" data-scroll-target="#tokenização"><span class="header-section-number">3.5.1</span> Tokenização</a></li>
+  <li><a href="#lematização" id="toc-lematização" class="nav-link" data-scroll-target="#lematização"><span class="header-section-number">3.5.2</span> Lematização</a></li>
+  <li><a href="#stemização" id="toc-stemização" class="nav-link" data-scroll-target="#stemização"><span class="header-section-number">3.5.3</span> Stemização</a></li>
+  <li><a href="#stopwords" id="toc-stopwords" class="nav-link" data-scroll-target="#stopwords"><span class="header-section-number">3.5.4</span> Stopwords</a></li>
   </ul></li>
-  <li><a href="#outras-técnicas-de-pln" id="toc-outras-técnicas-de-pln" class="nav-link" data-scroll-target="#outras-técnicas-de-pln"><span class="header-section-number">4.6</span> Outras técnicas de PLN</a></li>
-  <li><a href="#expressões-regulares" id="toc-expressões-regulares" class="nav-link" data-scroll-target="#expressões-regulares"><span class="header-section-number">4.7</span> Expressões Regulares</a></li>
-  <li><a href="#entendimento-de-linguagem-natural" id="toc-entendimento-de-linguagem-natural" class="nav-link" data-scroll-target="#entendimento-de-linguagem-natural"><span class="header-section-number">4.8</span> Entendimento de Linguagem Natural</a>
+  <li><a href="#outras-técnicas-de-pln" id="toc-outras-técnicas-de-pln" class="nav-link" data-scroll-target="#outras-técnicas-de-pln"><span class="header-section-number">3.6</span> Outras técnicas de PLN</a></li>
+  <li><a href="#expressões-regulares" id="toc-expressões-regulares" class="nav-link" data-scroll-target="#expressões-regulares"><span class="header-section-number">3.7</span> Expressões Regulares</a></li>
+  <li><a href="#entendimento-de-linguagem-natural" id="toc-entendimento-de-linguagem-natural" class="nav-link" data-scroll-target="#entendimento-de-linguagem-natural"><span class="header-section-number">3.8</span> Entendimento de Linguagem Natural</a>
   <ul class="collapse">
-  <li><a href="#intents" id="toc-intents" class="nav-link" data-scroll-target="#intents"><span class="header-section-number">4.8.1</span> Intents</a></li>
-  <li><a href="#sec:intents_utterances" id="toc-sec:intents_utterances" class="nav-link" data-scroll-target="#sec\:intents_utterances"><span class="header-section-number">4.8.2</span> Utterances</a></li>
-  <li><a href="#sec:intents_entities" id="toc-sec:intents_entities" class="nav-link" data-scroll-target="#sec\:intents_entities"><span class="header-section-number">4.8.3</span> Entities</a></li>
-  <li><a href="#desafios" id="toc-desafios" class="nav-link" data-scroll-target="#desafios"><span class="header-section-number">4.8.4</span> Desafios</a></li>
+  <li><a href="#intents" id="toc-intents" class="nav-link" data-scroll-target="#intents"><span class="header-section-number">3.8.1</span> Intents</a></li>
+  <li><a href="#sec:intents_utterances" id="toc-sec:intents_utterances" class="nav-link" data-scroll-target="#sec\:intents_utterances"><span class="header-section-number">3.8.2</span> Utterances</a></li>
+  <li><a href="#sec:intents_entities" id="toc-sec:intents_entities" class="nav-link" data-scroll-target="#sec\:intents_entities"><span class="header-section-number">3.8.3</span> Entities</a></li>
+  <li><a href="#desafios" id="toc-desafios" class="nav-link" data-scroll-target="#desafios"><span class="header-section-number">3.8.4</span> Desafios</a></li>
   </ul></li>
-  <li><a href="#vetorização-e-representação-de-texto" id="toc-vetorização-e-representação-de-texto" class="nav-link" data-scroll-target="#vetorização-e-representação-de-texto"><span class="header-section-number">4.9</span> Vetorização e Representação de Texto</a>
+  <li><a href="#vetorização-e-representação-de-texto" id="toc-vetorização-e-representação-de-texto" class="nav-link" data-scroll-target="#vetorização-e-representação-de-texto"><span class="header-section-number">3.9</span> Vetorização e Representação de Texto</a>
   <ul class="collapse">
-  <li><a href="#one-hot-encoding" id="toc-one-hot-encoding" class="nav-link" data-scroll-target="#one-hot-encoding"><span class="header-section-number">4.9.1</span> One-Hot Encoding</a></li>
-  <li><a href="#bag-of-words-bow" id="toc-bag-of-words-bow" class="nav-link" data-scroll-target="#bag-of-words-bow"><span class="header-section-number">4.9.2</span> Bag of Words (BoW)</a></li>
-  <li><a href="#tf-idf" id="toc-tf-idf" class="nav-link" data-scroll-target="#tf-idf"><span class="header-section-number">4.9.3</span> TF-IDF</a></li>
-  <li><a href="#comparação-de-técnicas-de-vetorização" id="toc-comparação-de-técnicas-de-vetorização" class="nav-link" data-scroll-target="#comparação-de-técnicas-de-vetorização"><span class="header-section-number">4.9.4</span> Comparação de Técnicas de Vetorização</a></li>
-  <li><a href="#implementação-em-projetos-reais" id="toc-implementação-em-projetos-reais" class="nav-link" data-scroll-target="#implementação-em-projetos-reais"><span class="header-section-number">4.9.5</span> Implementação em Projetos Reais</a></li>
-  <li><a href="#embeddings-de-palavras" id="toc-embeddings-de-palavras" class="nav-link" data-scroll-target="#embeddings-de-palavras"><span class="header-section-number">4.9.6</span> Embeddings de Palavras</a></li>
-  <li><a href="#word2vec" id="toc-word2vec" class="nav-link" data-scroll-target="#word2vec"><span class="header-section-number">4.9.7</span> Word2Vec</a></li>
-  <li><a href="#glove" id="toc-glove" class="nav-link" data-scroll-target="#glove"><span class="header-section-number">4.9.8</span> GloVe</a></li>
-  <li><a href="#fasttext" id="toc-fasttext" class="nav-link" data-scroll-target="#fasttext"><span class="header-section-number">4.9.9</span> FastText</a></li>
+  <li><a href="#one-hot-encoding" id="toc-one-hot-encoding" class="nav-link" data-scroll-target="#one-hot-encoding"><span class="header-section-number">3.9.1</span> One-Hot Encoding</a></li>
+  <li><a href="#bag-of-words-bow" id="toc-bag-of-words-bow" class="nav-link" data-scroll-target="#bag-of-words-bow"><span class="header-section-number">3.9.2</span> Bag of Words (BoW)</a></li>
+  <li><a href="#tf-idf" id="toc-tf-idf" class="nav-link" data-scroll-target="#tf-idf"><span class="header-section-number">3.9.3</span> TF-IDF</a></li>
+  <li><a href="#comparação-de-técnicas-de-vetorização" id="toc-comparação-de-técnicas-de-vetorização" class="nav-link" data-scroll-target="#comparação-de-técnicas-de-vetorização"><span class="header-section-number">3.9.4</span> Comparação de Técnicas de Vetorização</a></li>
+  <li><a href="#implementação-em-projetos-reais" id="toc-implementação-em-projetos-reais" class="nav-link" data-scroll-target="#implementação-em-projetos-reais"><span class="header-section-number">3.9.5</span> Implementação em Projetos Reais</a></li>
+  <li><a href="#embeddings-de-palavras" id="toc-embeddings-de-palavras" class="nav-link" data-scroll-target="#embeddings-de-palavras"><span class="header-section-number">3.9.6</span> Embeddings de Palavras</a></li>
+  <li><a href="#word2vec" id="toc-word2vec" class="nav-link" data-scroll-target="#word2vec"><span class="header-section-number">3.9.7</span> Word2Vec</a></li>
+  <li><a href="#glove" id="toc-glove" class="nav-link" data-scroll-target="#glove"><span class="header-section-number">3.9.8</span> GloVe</a></li>
+  <li><a href="#fasttext" id="toc-fasttext" class="nav-link" data-scroll-target="#fasttext"><span class="header-section-number">3.9.9</span> FastText</a></li>
   </ul></li>
-  <li><a href="#resumo" id="toc-resumo" class="nav-link" data-scroll-target="#resumo"><span class="header-section-number">4.10</span> Resumo</a></li>
-  <li><a href="#exercícios" id="toc-exercícios" class="nav-link" data-scroll-target="#exercícios"><span class="header-section-number">4.11</span> Exercícios</a></li>
+  <li><a href="#resumo" id="toc-resumo" class="nav-link" data-scroll-target="#resumo"><span class="header-section-number">3.10</span> Resumo</a></li>
+  <li><a href="#exercícios" id="toc-exercícios" class="nav-link" data-scroll-target="#exercícios"><span class="header-section-number">3.11</span> Exercícios</a></li>
   </ul>
 </nav>
     </div>
@@ -261,7 +268,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="cap:PLN" class="quarto-section-identifier"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Processamento de Linguagem Natural (PLN)</span></span></h1>
+<h1 class="title"><span id="cap:PLN" class="quarto-section-identifier"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Processamento de Linguagem Natural (PLN)</span></span></h1>
 </div>
 
 
@@ -285,8 +292,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="myboxobj">
 <p>Objetivo Introduzir técnicas essenciais de PLN, como tokenização, lematização, POS tagging e NER, para capacitar o leitor a processar e analisar linguagem natural em projetos de chatbot; demonstrar o uso de expressões regulares; apresentar métodos de representação de texto, como Bag-of-Words, TF-IDF e embeddings; além disso, descrever como configurar o Python para executar os códigos.</p>
 </div>
-<section id="inteligência-artificial" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="inteligência-artificial"><span class="header-section-number">4.1</span> Inteligência Artificial</h2>
+<section id="inteligência-artificial" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="inteligência-artificial"><span class="header-section-number">3.1</span> Inteligência Artificial</h2>
 <p>A inteligência artificial (IA) é a força tecnológica mais transformadora do século XXI <span class="citation" data-cites="ribeiro2025eraIA">[@ribeiro2025eraIA]</span>. Mas o que é IA? As definições de IA dependem do contexto e isso pode trazer confusão no entendimento e delimitação do tema. Menos abrangente, porém mais confuso ainda, é o termo “inteligência artificial”. Portanto, dado as diversas definições de inteligência artificial (IA), ou <em>artificial inteligence</em> em inglês, delimitaremos um pouco o escopo da inteligência em questão.</p>
 <p>A IA aparece em nossa cultura de diversas formas, tais como, o HAL 9000 do filme “2001: uma Odisseia no Espaço”, clássico de Stanley Kubrick, ou como a IA do filme “Ela”, com o ator Joaquin Phoenix, onde um humano se apaixona por um sistema operacional.</p>
 <p>Espero que você leitor seja um membro da espécie Homo-Sapiens. O termo “Homo-Sapiens” vem do latim e significa homem sábio <span class="citation" data-cites="wikipediahumano">[@wikipediahumano]</span>. A importância da sapiência (sinônimo de inteligência) é tamanha que define a nossa espécie. Porém, neste contexto, consideramos que um gato ou cachorro também é dotado de inteligência. Uma abelha é praticamente uma cientista <span class="citation" data-cites="wikipediaabelhas">[@wikipediaabelhas]</span>. Portanto, seremos mais contidos e reservados quanto ao significado do termo inteligência.</p>
@@ -306,8 +313,8 @@ Figure 15: Interface de um Sistema Especialista ExpertSinta.
 </figure>
 <p>A superação de algumas limitações (tais como o aumento da capacidade de processamento e armazenamento dos computadores, a geração de grandes volumes de dados, novidades científicas e tecnológicas, chips supercondutores e a eficiência energética) permitiu o avanço de outras técnicas. Uma das técnicas que têm ganho notoriedade, por causa desses avanços, é o Aprendizado de Máquina.</p>
 </section>
-<section id="aprendizado-de-máquina" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="aprendizado-de-máquina"><span class="header-section-number">4.2</span> Aprendizado de Máquina</h2>
+<section id="aprendizado-de-máquina" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="aprendizado-de-máquina"><span class="header-section-number">3.2</span> Aprendizado de Máquina</h2>
 <p>O Aprendizado de Máquina (AM) é uma subárea da IA motivada pelo desenvolvimento de softwares mais independentes da intervenção humana para extração do conhecimento, o que era uma dificuldade nos Sistemas Especialistas. Geralmente, aplicações de AM utilizam indução para buscar modelos capazes de representar o conhecimento existente nos dados.</p>
 <p>Na Figura&nbsp;<a href="#fig:exemplosam" data-reference-type="ref" data-reference="fig:exemplosam">3.2</a>, é possível identificar alguns usos de AM integrado em algumas atividades cotidianas. São elas: (a) um smartphone com um assistente de voz fornecendo atualizações meteorológicas; (b) um sistema de casa inteligente ajustando o termostato com base nas preferências do usuário; (c) um carro autônomo dirigindo em uma rua movimentada da cidade; (d) uma plataforma de compras online recomendando produtos a um usuário com base em suas compras anteriores. Essa figura foi criada inclusive com uma inteligência artificial chamada DALL·E 3, disponível no ChatGPT. ChatGPT é um chatbot que ganhou notoriedade, sendo um dos aplicativos que mais ganhou usuários rapidamente no mundo.</p>
 <figure id="fig:exemplosam" class="figure">
@@ -329,8 +336,8 @@ Figure 17: Classificação de AM.
 </figure>
 <p>Ambas as tarefas podem ser categorizadas sob o conceito de aprendizado indutivo, sendo a capacidade de generalizar a partir de exemplos específicos, isto é, do conjunto de dados de treinamento. Em se tratando de tarefas preditivas, os algoritmos poderão implementar tarefas de <strong>classificação</strong>, nas quais o atributo alvo é <strong>qualitativo discreto</strong> (ou categórico), ou de <strong>regressão</strong>, em que o atributo alvo é <strong>quantitativo contínuo</strong> (ou numérico). Já as tarefas descritivas podem ser: <em>agrupamento</em>, que busca por similaridades, <em>associação</em>, que busca por padrões frequentes, e <em>sumarização</em>, que resulta em um resumo do conjunto de dados. No entanto, outras técnicas de aprendizagem de máquina supervisionadas e não supervisionadas estão fora do escopo deste livro.</p>
 </section>
-<section id="processamento-de-linguagem-natural" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="processamento-de-linguagem-natural"><span class="header-section-number">4.3</span> Processamento de Linguagem Natural</h2>
+<section id="processamento-de-linguagem-natural" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="processamento-de-linguagem-natural"><span class="header-section-number">3.3</span> Processamento de Linguagem Natural</h2>
 <p>O Processamento de Linguagem Natural (PLN) é um campo ligado à inteligência artificial, dedicando-se a equipar computadores com a capacidade de analisar e compreender a linguagem humana. Ele emprega técnicas computacionais com o propósito de aprender, compreender e produzir conteúdo em linguagem humana <span class="citation" data-cites="Zhao2020">[@Zhao2020]</span>. Os sistemas de PLN podem suportar diferentes níveis ou combinações de níveis de análise linguística <span class="citation" data-cites="Zhao2020">[@Zhao2020]</span>. Os níveis de análise linguística referem-se à análise fonética, morfológica, léxica, sintática, semântica, de discurso e análise pragmática da linguagem; existe uma suposição de que os seres humanos normalmente utilizam todos esses níveis para produzir ou compreender a linguagem <span class="citation" data-cites="Zhao2020">[@Zhao2020]</span>.</p>
 <p>As abordagens de PLN podem ser classificadas em dois grandes grupos: o PLN simbólico e o PLN estatístico <span class="citation" data-cites="Zhao2020">[@Zhao2020]</span>. Embora ambos os tipos de PLN tenham sido investigados ao mesmo tempo, foi o PLN simbólico que dominou o campo por algum tempo. Porém, abordagens estatísticas ganharam força principalmente após a divulgação do ChatGPT <span class="citation" data-cites="OpenAI2023">[@OpenAI2023]</span>.</p>
 <p>Com o advento das abordagens estatísticas, em vez de depender exclusivamente de regras feitas à mão, os pesquisadores passaram a explorar os métodos estatísticos e probabilísticos alimentados por grandes coleções de textos. Nessa fase, algoritmos de aprendizado de máquina começaram a extrair padrões e regularidades a partir de grandes textos (também chamados de corpora). Essa abordagem empírica demonstrou ser mais robusta para lidar com a variabilidade intrínseca da língua – afinal, o sistema “aprende” com exemplos reais, capturando nuances que seriam difíceis de enumerar manualmente <span class="citation" data-cites="rcelebrone2025">[@rcelebrone2025]</span>. Técnicas estatísticas impulsionaram aplicações como corretores ortográficos, sistemas de tradução automática e assistentes de voz, marcando uma mudança fundamental de estratégia no campo o PLN.</p>
@@ -341,8 +348,8 @@ Figure 17: Classificação de AM.
 <p>Usando as técnicas de PLN adequadas os chatbots podem gerar respostas cada vez mais humanas. Nas gerações anteriores, muitos bots recorriam a respostas prontas ou scripts pré-definidos, conforme visto no Eliza, resultando em interações engessadas e repetitivas. Hoje, com os modelos de linguagem Grande (que serão discutidos no próximo capítulo), os chatbots podem produzir respostas inéditas, elaboradas em tempo real. Com isso o chatbot pode responder com frases gramaticalmente corretas, coerentes com o contexto da conversa e até ajustadas ao tom apropriado para o usuário.</p>
 <p>Portanto, neste capítulo conheceremos algumas das principais técnicas individualmente que não são apenas teorias acadêmicas, com elas temos um canivete suíço de partes que serão usadas de acordo com a necessidade do botmaster (o engenheiro que cria o chatbot algumas vezes é chamado de botmaster, enquanto quem conversa com ele é definido como usuário). Porém antes vamos configurar o Python que será a linguagem de programação utilizada durante todo o capítulo.</p>
 </section>
-<section id="instalação-do-python" class="level2" data-number="4.4">
-<h2 data-number="4.4" class="anchored" data-anchor-id="instalação-do-python"><span class="header-section-number">4.4</span> Instalação do Python</h2>
+<section id="instalação-do-python" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="instalação-do-python"><span class="header-section-number">3.4</span> Instalação do Python</h2>
 <p>Nesta seção, abordaremos como preparar o ambiente necessário para trabalhar com vetorização de texto em Python. Isso inclui a instalação do Python e das bibliotecas necessárias, além de uma breve introdução ao uso do Jupyter Notebook.</p>
 <div class="mdframed">
 <p><span class="smallcaps">NOTA SOBRE REPRODUÇÃO DOS CÓDIGOS</span></p>
@@ -402,10 +409,10 @@ SpaCy version: 3.7.6</code></pre>
 </div>
 <p>Este exemplo demonstra a simplicidade e interatividade que o Jupyter Notebook oferece, permitindo que você execute código Python célula por célula e veja os resultados imediatamente. Em resumo, configuramos o ambiente necessário para trabalhar com Python e as principais bibliotecas instaladas, além da configuração do Jupyter Notebook.</p>
 </section>
-<section id="principais-técnicas-de-pln" class="level2" data-number="4.5">
-<h2 data-number="4.5" class="anchored" data-anchor-id="principais-técnicas-de-pln"><span class="header-section-number">4.5</span> Principais Técnicas de PLN</h2>
-<section id="tokenização" class="level3" data-number="4.5.1">
-<h3 data-number="4.5.1" class="anchored" data-anchor-id="tokenização"><span class="header-section-number">4.5.1</span> Tokenização</h3>
+<section id="principais-técnicas-de-pln" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="principais-técnicas-de-pln"><span class="header-section-number">3.5</span> Principais Técnicas de PLN</h2>
+<section id="tokenização" class="level3" data-number="3.5.1">
+<h3 data-number="3.5.1" class="anchored" data-anchor-id="tokenização"><span class="header-section-number">3.5.1</span> Tokenização</h3>
 <p>Tokenização é o processo de dividir um texto em unidades menores chamadas “tokens” que podem ser palavras, frases ou até mesmo sentenças <span class="citation" data-cites="jurafskyspeech">[@jurafskyspeech]</span>. A tokenização é o primeiro passo em muitos algoritmos de PLN, pois permite que os dados textuais sejam manipulados de forma programática.</p>
 <p>Tokenizar não é só separar por espaços, mas também lidar com pontuações, contrações e outros aspectos que podem afetar a análise. Um exemplo simples seria a frase “Eu estou feliz.”, que seria tokenizada em [“Eu”, “estou”, “feliz”, “.”]. Não necessariamente uma palavra equivale a um token. Em alguns casos, como em palavras compostas ou expressões idiomáticas, um único token pode representar uma ideia ou conceito mais amplo. Por exemplo, “São Paulo” poderia ser considerado um único token em vez de dois (“São” e “Paulo”).</p>
 <p>Existem diferentes abordagens para tokenização, incluindo tokenização baseada em regras, onde padrões específicos são definidos para identificar tokens (geralmente utilizando expressões regulares), e tokenização baseada em aprendizado de máquina, onde algoritmos aprendem a segmentar o texto com base em exemplos anteriores.</p>
@@ -455,8 +462,8 @@ Tokens de sentenças: ['Chatbots estão se tornando cada vez mais populares.', '
 <pre class="text"><code>Tokens: ['Chatbots', 'estão', 'se', 'tornando', 'cada', 'vez', 'mais', 'populares', '.']</code></pre>
 </div>
 </section>
-<section id="lematização" class="level3" data-number="4.5.2">
-<h3 data-number="4.5.2" class="anchored" data-anchor-id="lematização"><span class="header-section-number">4.5.2</span> Lematização</h3>
+<section id="lematização" class="level3" data-number="3.5.2">
+<h3 data-number="3.5.2" class="anchored" data-anchor-id="lematização"><span class="header-section-number">3.5.2</span> Lematização</h3>
 <p>Lematização é o processo de reduzir palavras flexionadas ao seu lema, ou forma base <span class="citation" data-cites="singh2019building">[@singh2019building]</span>. Diferente da stemização, a lematização leva em consideração o contexto e a gramática da palavra para obter a forma correta.</p>
 <div class="listing">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># pip install nltk</span></span>
@@ -504,8 +511,8 @@ Tokens de sentenças: ['Chatbots estão se tornando cada vez mais populares.', '
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>Palavras lematizadas: ['chatbots', 'estar', 'se', 'tornar', 'cada', 'vez', 'mais', 'popular', '.']</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="stemização" class="level3" data-number="4.5.3">
-<h3 data-number="4.5.3" class="anchored" data-anchor-id="stemização"><span class="header-section-number">4.5.3</span> Stemização</h3>
+<section id="stemização" class="level3" data-number="3.5.3">
+<h3 data-number="3.5.3" class="anchored" data-anchor-id="stemização"><span class="header-section-number">3.5.3</span> Stemização</h3>
 <p>A stemização é o processo de reduzir as palavras às suas raízes ou “stems”. É uma técnica mais simples que a lematização e, geralmente, não considera o contexto, o que pode levar a resultados menos precisos.</p>
 <div class="listing">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># pip install nltk</span></span>
@@ -525,8 +532,8 @@ Tokens de sentenças: ['Chatbots estão se tornando cada vez mais populares.', '
 <pre class="text"><code>Stems das palavras: ['correndo', 'correu', 'corredor']</code></pre>
 </div>
 </section>
-<section id="stopwords" class="level3" data-number="4.5.4">
-<h3 data-number="4.5.4" class="anchored" data-anchor-id="stopwords"><span class="header-section-number">4.5.4</span> Stopwords</h3>
+<section id="stopwords" class="level3" data-number="3.5.4">
+<h3 data-number="3.5.4" class="anchored" data-anchor-id="stopwords"><span class="header-section-number">3.5.4</span> Stopwords</h3>
 <p>Stopwords são palavras comuns em um idioma (como “o”, “a”, “e”, “de”, “que”, etc.) que geralmente são removidas durante o pré-processamento de texto, pois não contribuem significativamente para o significado do texto <span class="citation" data-cites="Raj2019">[@Raj2019]</span>. A remoção dessas palavras pode melhorar a eficácia de certos algoritmos de PLN, focando nas palavras mais informativas do texto.</p>
 <div class="listing">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># pip install nltk</span></span>
@@ -578,15 +585,15 @@ Texto sem stopwords: ['Chatbots', 'tornando', 'populares', '.']</code></pre>
 </div>
 </section>
 </section>
-<section id="outras-técnicas-de-pln" class="level2" data-number="4.6">
-<h2 data-number="4.6" class="anchored" data-anchor-id="outras-técnicas-de-pln"><span class="header-section-number">4.6</span> Outras técnicas de PLN</h2>
+<section id="outras-técnicas-de-pln" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="outras-técnicas-de-pln"><span class="header-section-number">3.6</span> Outras técnicas de PLN</h2>
 <p>Marcação Morfossintática (POS Tagging): Esta técnica consiste em atribuir a cada <em>token</em> em um texto uma categoria gramatical, como substantivo, verbo, adjetivo, advérbio, etc. A marcação POS é utilizada para identificar entidades e compreender a estrutura gramatical das frases. Por exemplo, na frase “Eu estou aprendendo como construir chatbots”, a marcação POS poderia identificar “Eu” como um pronome (PRON), “estou aprendendo” como um verbo (VERB) e “chatbots” como um substantivo (NOUN).</p>
 <p>Reconhecimento de Entidades Nomeadas (NER): O NER é a tarefa de identificar e classificar entidades nomeadas em um texto, como nomes de pessoas (PERSON), organizações (ORG), localizações geográficas (GPE, LOC), datas (DATE), valores monetários (MONEY), etc. Por exemplo, na frase “Google tem sua sede em Mountain View, Califórnia, com uma receita de 109,65 bilhões de dólares americanos”, o NER identificaria “Google” como uma organização (ORG), “Mountain View” e “Califórnia” como localizações geográficas (GPE) e “109,65 bilhões de dólares americanos” como um valor monetário (MONEY). Essa capacidade é vital para que chatbots compreendam os detalhes relevantes nas <em>utterances</em> dos usuários.</p>
 <p>Análise de Dependências (Dependency Parsing): Esta técnica examina as relações gramaticais entre as palavras em uma frase, revelando a estrutura sintática e as dependências entre os <em>tokens</em>. A análise de dependências pode ajudar a entender quem está fazendo o quê a quem. Por exemplo, na frase “Reserve um voo de Corumbá para Maceió”, a análise de dependências pode identificar “Corumbá” e “Maceió” como modificadores de “voo” através das preposições “de” e “para”, respectivamente, e “Reserve” como a raiz da ação. Essa análise é útil para extrair informações sobre as intenções do usuário, mesmo em frases mais complexas.</p>
 <p>Classificação de Texto: Uma técnica de aprendizado de máquina que atribui um texto a uma ou mais categorias predefinidas. No contexto de chatbots, a classificação de texto é fundamental para a detecção de intenção (mais sobre detecção de <em>intenção</em> será apresentada nas seções seguintes), onde as categorias representam as diferentes intenções do usuário. Algoritmos como o <em>Naïve Bayes</em> são modelos estatísticos populares para essa tarefa, baseados no teorema de Bayes e em fortes suposições de independência entre as características. O treinamento desses classificadores requer um <em>corpus</em> de dados rotulados, onde cada <em>utterance</em> (entrada do usuário) é associada a uma intenção específica.</p>
 </section>
-<section id="expressões-regulares" class="level2" data-number="4.7">
-<h2 data-number="4.7" class="anchored" data-anchor-id="expressões-regulares"><span class="header-section-number">4.7</span> Expressões Regulares</h2>
+<section id="expressões-regulares" class="level2" data-number="3.7">
+<h2 data-number="3.7" class="anchored" data-anchor-id="expressões-regulares"><span class="header-section-number">3.7</span> Expressões Regulares</h2>
 <p>Expressões regulares, frequentemente abreviadas como <em>regex</em>, são sequências de caracteres que definem padrões de busca. Elas são utilizadas em chatbots para diversas tarefas relacionadas ao processamento e à análise de texto fornecido pelos usuários.</p>
 <p>Frameworks populares para desenvolvimento de chatbots frequentemente integram o uso de expressões regulares para aprimorar a extração de entidades. Por exemplo, as regex podem ser definidas nos dados de treinamento para ajudar o sistema a reconhecer padrões específicos como nomes de ruas ou códigos de produtos. Essa abordagem permite melhorar a precisão do reconhecimento de entidades, um componente importante para a compreensão da intenção do usuário.</p>
 <p>A sintaxe das expressões regulares consiste em uma combinação de caracteres literais (que correspondem a si mesmos) e metacaracteres, que possuem significados especiais e permitem definir padrões de busca mais complexos. As expressões regulares podem ser aplicadas em uma variedade de cenários no desenvolvimento de chatbots. Algumas das aplicações de regex nos chatbots incluem:</p>
@@ -695,8 +702,8 @@ Texto sem stopwords: ['Chatbots', 'tornando', 'populares', '.']</code></pre>
 <p>Porém, para tarefas que exigem uma compreensão mais profunda do significado e da intenção por trás das palavras, técnicas avançadas de Processamento de Linguagem Natural (PLN), como modelagem de linguagem, análise de sentimentos e reconhecimento de entidades nomeadas (NER) baseadas em aprendizado de máquina, são indispensáveis e serão apresentadas no Capítulo&nbsp;<a href="7_modelos-de-linguagem-grande-llm-cap-llm.html" data-reference-type="ref" data-reference="cap:LLM">4</a>.</p>
 </section>
 </section>
-<section id="entendimento-de-linguagem-natural" class="level2" data-number="4.8">
-<h2 data-number="4.8" class="anchored" data-anchor-id="entendimento-de-linguagem-natural"><span class="header-section-number">4.8</span> Entendimento de Linguagem Natural</h2>
+<section id="entendimento-de-linguagem-natural" class="level2" data-number="3.8">
+<h2 data-number="3.8" class="anchored" data-anchor-id="entendimento-de-linguagem-natural"><span class="header-section-number">3.8</span> Entendimento de Linguagem Natural</h2>
 <p>O Entendimento de Linguagem Natural (ULN) é um subdomínio específico dentro do universo mais vasto do PLN. Enquanto o PLN abarca um conjunto diversificado de operações sobre a linguagem, o ULN se concentra de maneira particular na habilidade da máquina de aprender e interpretar a linguagem natural tal como ela é comunicada pelos seres humanos. Em outras palavras, o ULN é o ramo do PLN dedicado à extração de significado e à identificação da intenção por trás do texto inserido pelo usuário. As aplicações do ULN são extensas e incluem funcionalidades cruciais para chatbots, como a capacidade de responder a perguntas, realizar buscas em linguagem natural, identificar relações entre entidades, analisar o sentimento expresso no texto, sumarizar informações textuais e auxiliar em processos de descoberta legal.</p>
 <p>No cerne da funcionalidade de um chatbot reside a sua capacidade de compreender as mensagens dos usuários e responder de forma adequada. O PLN desempenha um papel central nesse processo, permitindo que o chatbot: (i) detecte a intenção do usuário; (ii) extraia entidades relevantes; e (iii) processe linguagem variada e informal; e (iv) mantenha o contexto da conversa.</p>
 <p>(i) Detecção da Intenção do Usuário: O objetivo por trás da mensagem do usuário é o primeiro passo. Isso é frequentemente abordado como um problema de classificação de texto, onde o chatbot tenta classificar a <em>utterance</em> do usuário em uma das intenções predefinidas. Para detecção da intenção, é possível utilizar técnicas de aprendizado de máquina, como o algoritmo <em>Naïve Bayes</em>, para construir esses classificadores. Plataformas como Rasa NLU (<a href="https://rasa.com/" class="uri">https://rasa.com/</a>), LUIS.ai (<a href="https://www.luis.ai/" class="uri">https://www.luis.ai/</a>) e Dialogflow (<a href="https://dialogflow.cloud.google.com/" class="uri">https://dialogflow.cloud.google.com/</a>) simplificam significativamente o processo de treinamento e implantação desses modelos de intenção.</p>
@@ -706,25 +713,25 @@ Texto sem stopwords: ['Chatbots', 'tornando', 'populares', '.']</code></pre>
 <p>(iii) Processe Linguagem Variada e Informal: Os usuários podem se comunicar com chatbots usando uma ampla gama de vocabulário, gramática e estilo, incluindo erros de digitação, abreviações e linguagem informal. As técnicas de PLN, como stemming, lematização e busca por similaridade, ajudam o chatbot a lidar com essa variabilidade e a compreender a essência da mensagem, mesmo que não seja expressa de forma perfeitamente gramatical.</p>
 <p>A arquitetura típica de um chatbot envolve uma camada de processamento de linguagem natural (NLP/NLU engine) que recebe a entrada de texto do usuário. Essa camada é responsável por realizar as tarefas de PLN mencionadas anteriormente: tokenização, análise morfossintática, extração de entidades, detecção de intenção, etc. O resultado desse processamento é uma representação estruturada da mensagem do usuário, que pode ser entendida pela lógica de negócios do chatbot.</p>
 <p>Com base nessa representação estruturada, um motor de decisão (<em>decision engine</em>) no chatbot pode então corresponder à intenção do usuário a fluxos de trabalho preconfigurados ou a regras de negócio específicas. Em alguns casos, a geração de linguagem natural (NLG), outro subcampo do PLN, é utilizada para formular a resposta do chatbot ao usuário.</p>
-<section id="intents" class="level3" data-number="4.8.1">
-<h3 data-number="4.8.1" class="anchored" data-anchor-id="intents"><span class="header-section-number">4.8.1</span> Intents</h3>
+<section id="intents" class="level3" data-number="3.8.1">
+<h3 data-number="3.8.1" class="anchored" data-anchor-id="intents"><span class="header-section-number">3.8.1</span> Intents</h3>
 <p>Os Intents representam a intenção ou o propósito por trás da mensagem de um usuário ao interagir com o chatbot <span class="citation" data-cites="Khan2018">[@Khan2018]</span>. Em termos mais simples, é o que o usuário deseja que o chatbot faça ou sobre o que ele quer saber.</p>
 <p>Um intent é usado para identificar programaticamente a intenção da pessoa que está usando o chatbot. O chatbot deve ser capaz de executar alguma ação com base no “intent” que detecta na mensagem do usuário. Cada tarefa que o chatbot deve realizar define um intent. A aplicação prática dos intents varia conforme o domínio do chatbot, veja o exemplo:</p>
 <p>Por exemplo, para um chatbot de uma loja de moda, exemplos de intents seriam “busca de um produto” (quando um usuário quer ver produtos) e “endereço loja” (quando um usuário pergunta sobre lojas); em um chatbot para pedir comida, “consultar preços” e “realizar pedido” podem ser intents distintos.</p>
 <p>Detectar o <em>intent</em> da mensagem do usuário é um problema conhecido de aprendizado de máquina, realizado por meio de uma técnica chamada classificação de texto. O objetivo é classificar frases em múltiplas classes (os intents). O modelo de aprendizado de máquina é treinado com um conjunto de dados que contém exemplos de mensagens e seus intents correspondentes. Após o treinamento, o modelo pode prever o intent de novas mensagens que não foram vistas antes.</p>
 </section>
-<section id="sec:intents_utterances" class="level3" data-number="4.8.2">
-<h3 data-number="4.8.2" class="anchored" data-anchor-id="sec:intents_utterances"><span class="header-section-number">4.8.2</span> Utterances</h3>
+<section id="sec:intents_utterances" class="level3" data-number="3.8.2">
+<h3 data-number="3.8.2" class="anchored" data-anchor-id="sec:intents_utterances"><span class="header-section-number">3.8.2</span> Utterances</h3>
 <p>Cada intent pode ser expresso de várias maneiras pelo usuário. Essas diferentes formas são chamadas de <em>utterances</em> ou expressões do usuário.</p>
 <p>Por exemplo, para o intent <code>realizar pedido</code>, as utterances poderiam ser “Eu gostaria de fazer um pedido”, “Quero pedir comida”, “Como faço para pedir?”, etc. Cada uma dessas expressões representa a mesma intenção, mas com palavras diferentes. O modelo de aprendizado de máquina deve ser capaz de reconhecer todas essas variações como pertencentes ao mesmo intent.</p>
 <p>É sugerido fornecer um número ótimo de utterances variadas por intent para garantir um bom treinamento do modelo de reconhecimento.</p>
 </section>
-<section id="sec:intents_entities" class="level3" data-number="4.8.3">
-<h3 data-number="4.8.3" class="anchored" data-anchor-id="sec:intents_entities"><span class="header-section-number">4.8.3</span> Entities</h3>
+<section id="sec:intents_entities" class="level3" data-number="3.8.3">
+<h3 data-number="3.8.3" class="anchored" data-anchor-id="sec:intents_entities"><span class="header-section-number">3.8.3</span> Entities</h3>
 <p>As entidades extraídas permitem ao chatbot refinar sua resposta ou ação. Os Intents frequentemente contêm metadados importantes chamados <em>Entities</em>. Estas são palavras-chave ou frases dentro da utterance do usuário que ajudam o chatbot a identificar detalhes específicos sobre o pedido, permitindo fornecer informações mais direcionadas. Por exemplo, na frase “Eu quero pedir uma pizza de calabreza com borda recheada”, as entidades podem incluir: Para o <em>intent</em> <em>realizar pedido</em> e para as <em>Entities</em>: <em>pizza</em>, <em>calabreza</em> e <em>borda recheada</em>.</p>
 </section>
-<section id="desafios" class="level3" data-number="4.8.4">
-<h3 data-number="4.8.4" class="anchored" data-anchor-id="desafios"><span class="header-section-number">4.8.4</span> Desafios</h3>
+<section id="desafios" class="level3" data-number="3.8.4">
+<h3 data-number="3.8.4" class="anchored" data-anchor-id="desafios"><span class="header-section-number">3.8.4</span> Desafios</h3>
 <p>O processo de treinamento envolve a construção de um modelo de aprendizado de máquina. Este modelo aprende a partir do conjunto definido de intents, suas utterances associadas e as entidades anotadas. O objetivo do treinamento é capacitar o modelo a categorizar corretamente novas utterances (que não foram vistas durante o treinamento) no intent apropriado e a extrair as entidades relevantes.</p>
 <p>Quando o chatbot processa uma nova mensagem do usuário, o modelo de reconhecimento de intent não apenas classifica a mensagem em um dos intents definidos, mas também fornece uma <em>pontuação de confiança</em> (geralmente entre 0 e 1). Essa pontuação indica o quão seguro o modelo está e que a classificação está correta. É comum definir um <em>limite (threshold)</em> de confiança. Se a pontuação do intent detectado estiver abaixo desse limite, o chatbot pode pedir esclarecimentos ao usuário em vez de executar uma ação baseada em uma suposição incerta.</p>
 <p>Uma vez que um intent é detectado com confiança suficiente, o chatbot pode executar a ação correspondente. Isso pode envolver consultar um banco de dados, chamar uma API externa, fornecer uma resposta estática ou iniciar um fluxo de diálogo mais complexo. Além disso, a análise dos intents mais frequentemente capturados fornece insights valiosos sobre como os usuários estão interagindo com o chatbot e quais são suas principais necessidades. Essas análises são importantes tanto para a otimização do bot quanto para as decisões de negócio.</p>
@@ -732,11 +739,11 @@ Texto sem stopwords: ['Chatbots', 'tornando', 'populares', '.']</code></pre>
 <p>A <em>geração de texto coerente</em> é um desafio porque envolve não apenas a escolha de palavras, mas também a construção de frases que façam sentido no contexto da conversa. A <em>sintaxe e gramática</em> são importantes para garantir que o texto gerado seja gramaticalmente correto e compreensível. A <em>semântica</em> se refere ao significado das palavras e frases, e é importante para garantir que o texto gerado transmita a mensagem correta. O <em>contexto</em> é importante para entender o que foi dito anteriormente na conversa e como isso afeta a resposta atual. A <em>ambiguidade</em> pode surgir quando uma palavra ou frase tem múltiplos significados, tornando difícil para o modelo determinar qual interpretação é a correta.</p>
 </section>
 </section>
-<section id="vetorização-e-representação-de-texto" class="level2" data-number="4.9">
-<h2 data-number="4.9" class="anchored" data-anchor-id="vetorização-e-representação-de-texto"><span class="header-section-number">4.9</span> Vetorização e Representação de Texto</h2>
+<section id="vetorização-e-representação-de-texto" class="level2" data-number="3.9">
+<h2 data-number="3.9" class="anchored" data-anchor-id="vetorização-e-representação-de-texto"><span class="header-section-number">3.9</span> Vetorização e Representação de Texto</h2>
 <p>A vetorização de texto é um passo importante no Processamento de Linguagem Natural (PLN), pois permite transformar dados textuais em uma forma que os modelos de aprendizado de máquina podem entender e processar. Nesta seção, exploraremos algumas técnicas de vetorização, incluindo One-Hot Encoding, Bag of Words e TF-IDF (Term Frequency-Inverse Document Frequency), juntamente com implementações práticas em Python.</p>
-<section id="one-hot-encoding" class="level3" data-number="4.9.1">
-<h3 data-number="4.9.1" class="anchored" data-anchor-id="one-hot-encoding"><span class="header-section-number">4.9.1</span> One-Hot Encoding</h3>
+<section id="one-hot-encoding" class="level3" data-number="3.9.1">
+<h3 data-number="3.9.1" class="anchored" data-anchor-id="one-hot-encoding"><span class="header-section-number">3.9.1</span> One-Hot Encoding</h3>
 <p>One-Hot Encoding é uma das formas mais simples de vetorização de texto, onde cada palavra em um vocabulário é representada como um vetor binário. Cada posição no vetor corresponde a uma palavra do vocabulário, e apenas a posição da palavra que está sendo representada tem valor 1, enquanto todas as outras têm valor 0.</p>
 <div class="listing">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="co"># pip install scikit-learn</span></span>
@@ -777,8 +784,8 @@ One-Hot Encoding:
 </div>
 <p>Embora seja fácil de entender e implementar, o One-Hot Encoding não leva em consideração a semântica das palavras, resultando em vetores muito esparsos e de alta dimensionalidade, especialmente para vocabulários grandes.</p>
 </section>
-<section id="bag-of-words-bow" class="level3" data-number="4.9.2">
-<h3 data-number="4.9.2" class="anchored" data-anchor-id="bag-of-words-bow"><span class="header-section-number">4.9.2</span> Bag of Words (BoW)</h3>
+<section id="bag-of-words-bow" class="level3" data-number="3.9.2">
+<h3 data-number="3.9.2" class="anchored" data-anchor-id="bag-of-words-bow"><span class="header-section-number">3.9.2</span> Bag of Words (BoW)</h3>
 <p>A técnica de Bag of Words (BoW) é uma melhoria em relação ao One-Hot Encoding. Aqui, em vez de vetores binários, usamos contagens de palavras. Para cada documento, construímos um vetor com a frequência de cada palavra no vocabulário.</p>
 <div class="listing">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co"># pip install scikit-learn</span></span>
@@ -803,8 +810,8 @@ Bag of Words Matrix:
 </div>
 <p>A matriz resultante tem cada linha representando um documento e cada coluna representando a contagem de uma palavra específica no documento. No entanto, essa técnica também não leva em consideração o contexto ou a ordem das palavras.</p>
 </section>
-<section id="tf-idf" class="level3" data-number="4.9.3">
-<h3 data-number="4.9.3" class="anchored" data-anchor-id="tf-idf"><span class="header-section-number">4.9.3</span> TF-IDF</h3>
+<section id="tf-idf" class="level3" data-number="3.9.3">
+<h3 data-number="3.9.3" class="anchored" data-anchor-id="tf-idf"><span class="header-section-number">3.9.3</span> TF-IDF</h3>
 <p>TF-IDF é uma técnica que combina a frequência de termos (TF) com a frequência inversa de documentos (IDF). Esta abordagem ajuda a dar mais peso a palavras que são raras no corpus, mas aparecem frequentemente em um documento específico, o que geralmente indica sua importância.</p>
 <div class="listing">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="co"># pip install scikit-learn</span></span>
@@ -829,8 +836,8 @@ TF-IDF Matrix:
 </div>
 <p>A matriz TF-IDF dá valores diferentes para as palavras, não apenas com base em sua frequência, mas também na relevância, ajudando a reduzir o peso de palavras comuns que não são muito informativas para o contexto.</p>
 </section>
-<section id="comparação-de-técnicas-de-vetorização" class="level3" data-number="4.9.4">
-<h3 data-number="4.9.4" class="anchored" data-anchor-id="comparação-de-técnicas-de-vetorização"><span class="header-section-number">4.9.4</span> Comparação de Técnicas de Vetorização</h3>
+<section id="comparação-de-técnicas-de-vetorização" class="level3" data-number="3.9.4">
+<h3 data-number="3.9.4" class="anchored" data-anchor-id="comparação-de-técnicas-de-vetorização"><span class="header-section-number">3.9.4</span> Comparação de Técnicas de Vetorização</h3>
 <p>As três técnicas abordadas têm seus prós e contras:</p>
 <ul>
 <li><p>One-Hot Encoding: Simples e fácil de implementar, mas resulta em vetores esparsos e de alta dimensionalidade.</p></li>
@@ -839,8 +846,8 @@ TF-IDF Matrix:
 </ul>
 <p>A escolha da técnica depende do caso de uso específico. Por exemplo, para tarefas simples de classificação de texto, BoW ou TF-IDF podem ser suficientes. Entretanto, para tarefas que exigem uma compreensão mais profunda do contexto, abordagens mais avançadas como Word2Vec ou embeddings de palavras podem ser mais adequadas.</p>
 </section>
-<section id="implementação-em-projetos-reais" class="level3" data-number="4.9.5">
-<h3 data-number="4.9.5" class="anchored" data-anchor-id="implementação-em-projetos-reais"><span class="header-section-number">4.9.5</span> Implementação em Projetos Reais</h3>
+<section id="implementação-em-projetos-reais" class="level3" data-number="3.9.5">
+<h3 data-number="3.9.5" class="anchored" data-anchor-id="implementação-em-projetos-reais"><span class="header-section-number">3.9.5</span> Implementação em Projetos Reais</h3>
 <p>A vetorização de texto é frequentemente usada em pipelines de PLN para tarefas como classificação de texto, análise de sentimentos e sistemas de recomendação. Vamos ver um exemplo simples de como essas técnicas podem ser integradas em um pipeline completo.</p>
 <div class="listing">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="co"># pip install scikit-learn</span></span>
@@ -880,8 +887,8 @@ weighted avg  0.25    0.50      0.33         2</code></pre>
 </div>
 <p>Este exemplo mostra como transformar texto em vetores utilizando TF-IDF e depois aplicar um modelo de classificação simples, como o Naive Bayes. Esse pipeline pode ser adaptado para tarefas mais complexas, incluindo a integração de vetorização com modelos mais avançados.</p>
 </section>
-<section id="embeddings-de-palavras" class="level3" data-number="4.9.6">
-<h3 data-number="4.9.6" class="anchored" data-anchor-id="embeddings-de-palavras"><span class="header-section-number">4.9.6</span> Embeddings de Palavras</h3>
+<section id="embeddings-de-palavras" class="level3" data-number="3.9.6">
+<h3 data-number="3.9.6" class="anchored" data-anchor-id="embeddings-de-palavras"><span class="header-section-number">3.9.6</span> Embeddings de Palavras</h3>
 <p>Embeddings de palavras são representações vetoriais densas de palavras que capturam as relações semânticas entre elas. Ao contrário de técnicas como One-Hot Encoding ou Bag of Words, que resultam em vetores esparsos e de alta dimensionalidade, embeddings de palavras mapeiam palavras em um espaço vetorial de dimensões mais baixas, onde palavras com significados semelhantes estão mais próximas. Elas têm várias aplicações em PLN, tais como:</p>
 <ul>
 <li><p><strong>Classificação de texto</strong>: Representar documentos usando a média dos embeddings das palavras contidas nele.</p></li>
@@ -889,8 +896,8 @@ weighted avg  0.25    0.50      0.33         2</code></pre>
 <li><p><strong>Sistemas de recomendação</strong>: Usar embeddings para medir similaridade semântica entre produtos ou serviços descritos em texto.</p></li>
 </ul>
 </section>
-<section id="word2vec" class="level3" data-number="4.9.7">
-<h3 data-number="4.9.7" class="anchored" data-anchor-id="word2vec"><span class="header-section-number">4.9.7</span> Word2Vec</h3>
+<section id="word2vec" class="level3" data-number="3.9.7">
+<h3 data-number="3.9.7" class="anchored" data-anchor-id="word2vec"><span class="header-section-number">3.9.7</span> Word2Vec</h3>
 <p>Word2Vec, introduzido por <span class="citation" data-cites="mikolov2013efficient">@mikolov2013efficient</span> em 2013, é uma das técnicas mais influentes para aprender embeddings de palavras. Existem duas abordagens principais no Word2Vec: <strong>Skip-gram</strong> e <strong>CBOW (Continuous Bag of Words)</strong>.</p>
 <p>Skip-gram: O modelo Skip-gram prevê as palavras contextuais (palavras ao redor) para uma palavra-alvo. A ideia é maximizar a probabilidade de prever palavras no contexto de uma palavra-alvo específica.</p>
 <p>CBOW (Continuous Bag of Words): O modelo CBOW, ao contrário do Skip-gram, prevê a palavra-alvo com base no contexto. Este modelo é útil para capturar o sentido de uma palavra com base em seu ambiente.</p>
@@ -947,8 +954,8 @@ Palavras semelhantes a 'economy': [('additional', 0.9950711727142334), ('provide
 <pre class="text"><code>Resultado da analogia: [('kid', 0.8575360178947449), ('missed', 0.8566135764122009), ('load', 0.854703426361084), ('normally', 0.8536292314529419), ('advisers', 0.8517050743103027), ('Place', 0.8516084551811218), ('Vieth', 0.8513892292976379), ('yield', 0.8511804938316345), ('decline', 0.8500499725341797), ('Coe', 0.8490973114967346)]</code></pre>
 </div>
 </section>
-<section id="glove" class="level3" data-number="4.9.8">
-<h3 data-number="4.9.8" class="anchored" data-anchor-id="glove"><span class="header-section-number">4.9.8</span> GloVe</h3>
+<section id="glove" class="level3" data-number="3.9.8">
+<h3 data-number="3.9.8" class="anchored" data-anchor-id="glove"><span class="header-section-number">3.9.8</span> GloVe</h3>
 <p>Embora o Word2Vec seja amplamente utilizado, outros modelos também oferecem técnicas avançadas para aprender embeddings de palavras. O GloVe, desenvolvido por <span class="citation" data-cites="pennington2014glove">@pennington2014glove</span>. em 2014, é uma abordagem baseada em matrizes de ocorrência que combina as vantagens do Word2Vec com informações globais sobre o corpus. Este código a seguir demora um pouco; ele fará o download de um arquivo para seu computador, se estiver usando o Python localmente.</p>
 <div class="listing">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb44"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="co"># pip install requests</span></span>
@@ -992,8 +999,8 @@ Vetor para 'economy' com GloVe: [-1.2027e-01 -7.2505e-01  8.7014e-01 -6.3944e-01
 1.1893e+00  8.4410e-02]</code></pre>
 </div>
 </section>
-<section id="fasttext" class="level3" data-number="4.9.9">
-<h3 data-number="4.9.9" class="anchored" data-anchor-id="fasttext"><span class="header-section-number">4.9.9</span> FastText</h3>
+<section id="fasttext" class="level3" data-number="3.9.9">
+<h3 data-number="3.9.9" class="anchored" data-anchor-id="fasttext"><span class="header-section-number">3.9.9</span> FastText</h3>
 <p>O FastText, desenvolvido pelo Facebook AI Research, estende o Word2Vec ao considerar subpalavras, o que permite gerar embeddings para palavras que não estão no vocabulário, lidando melhor com palavras raras e morfologicamente ricas.</p>
 <div class="listing">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb46"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="co"># pip install gensim nltk</span></span>
@@ -1024,14 +1031,14 @@ Palavras semelhantes a 'economy' com FastText: [('economic', 0.9999745488166809)
 </div>
 </section>
 </section>
-<section id="resumo" class="level2" data-number="4.10">
-<h2 data-number="4.10" class="anchored" data-anchor-id="resumo"><span class="header-section-number">4.10</span> Resumo</h2>
+<section id="resumo" class="level2" data-number="3.10">
+<h2 data-number="3.10" class="anchored" data-anchor-id="resumo"><span class="header-section-number">3.10</span> Resumo</h2>
 <p>Nesta seção, cobrimos os fundamentos de Processamento de Linguagem Natural (PLN), incluindo tokenização, lemmatização, stemização e remoção de stopwords. Também vimos como implementar essas técnicas em Python, utilizando as bibliotecas NLTK e SpaCy.</p>
 <p>Além disso, explicamos o que são Intents, um conceito central na arquitetura de chatbots modernos baseados em NLU (Natural Language Understanding). Eles representam o objetivo do usuário e permitem que o chatbot compreenda a intenção por trás das mensagens para agir de forma adequada. Os Intents estão intrinsecamente ligados a outros conceitos fundamentais: (i) Entities: Fornecem os detalhes específicos dentro de um intent. (ii) Utterances: São as diversas maneiras como um usuário pode expressar um mesmo intent. (iii) Actions/Responses: São as tarefas ou respostas que o chatbot executa após identificar um intent. A definição cuidadosa, o treinamento robusto e o gerenciamento contínuo dos intents são relevantes para a eficácia, a inteligência e a qualidade da experiência do usuário oferecida por um chatbot.</p>
 <p>Também exploramos várias técnicas de vetorização de texto, desde as mais simples, como One-Hot Encoding, até abordagens mais sofisticadas, como TF-IDF. Com exemplos práticos em Python, demonstramos como essas técnicas podem ser aplicadas em pipelines de PLN. Além disso, abordamos o conceito de embeddings de palavras, com ênfase no Word2Vec, e exploramos outras técnicas como GloVe e FastText. Demonstramos como esses embeddings capturam relações semânticas entre palavras e suas aplicações em tarefas de PLN.</p>
 </section>
-<section id="exercícios" class="level2" data-number="4.11">
-<h2 data-number="4.11" class="anchored" data-anchor-id="exercícios"><span class="header-section-number">4.11</span> Exercícios</h2>
+<section id="exercícios" class="level2" data-number="3.11">
+<h2 data-number="3.11" class="anchored" data-anchor-id="exercícios"><span class="header-section-number">3.11</span> Exercícios</h2>
 <ol type="1">
 <li><p><strong>O que é vetorização de texto no contexto de processamento de linguagem natural?</strong></p>
 <ol type="1">
@@ -1221,7 +1228,7 @@ Palavras semelhantes a 'economy' com FastText: [('economic', 0.9999745488166809)
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/giseldo\.github\.io\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
@@ -1551,16 +1558,29 @@ Palavras semelhantes a 'economy' com FastText: [('economic', 0.9999745488166809)
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="../sections/5_eliza-e-aiml-cap-eliza.html" class="pagination-link" aria-label="ELIZA e AIML">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">ELIZA e AIML</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">ELIZA e AIML</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="../sections/7_modelos-de-linguagem-grande-llm-cap-llm.html" class="pagination-link" aria-label="Modelos de Linguagem Grande (LLM)">
-        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Modelos de Linguagem Grande (LLM)</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Modelos de Linguagem Grande (LLM)</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Construindo Chatbotr (2e) foi escrito por Giseldo Neo e Alana Neo.</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Este html foi gerado com o <a href="https://quarto.org/">Quarto</a>.</p>
+</div>
+  </div>
+</footer>
 
 
 

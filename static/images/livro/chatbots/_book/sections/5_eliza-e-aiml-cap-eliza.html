@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>3&nbsp; ELIZA e AIML – Construindo Chatbots</title>
+<title>2&nbsp; ELIZA e AIML – Construindo Chatbots</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -118,7 +118,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../sections/5_eliza-e-aiml-cap-eliza.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">ELIZA e AIML</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../sections/5_eliza-e-aiml-cap-eliza.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">ELIZA e AIML</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -134,6 +134,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="../">Construindo Chatbots</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -146,7 +153,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Construindo Chatbots</span></span></a>
+ <span class="menu-text">Bem vindo</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -170,31 +177,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../sections/4_introdu-o.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introdução</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introdução</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../sections/5_eliza-e-aiml-cap-eliza.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">ELIZA e AIML</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">ELIZA e AIML</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../sections/6_processamento-de-linguagem-natural-pln-cap-pln.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Processamento de Linguagem Natural (PLN)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Processamento de Linguagem Natural (PLN)</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../sections/7_modelos-de-linguagem-grande-llm-cap-llm.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Modelos de Linguagem Grande (LLM)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Modelos de Linguagem Grande (LLM)</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../sections/8_conclus-o-conclusao.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Conclusão</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Conclusão</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -219,20 +226,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#introdução" id="toc-introdução" class="nav-link active" data-scroll-target="#introdução"><span class="header-section-number">3.1</span> Introdução</a></li>
-  <li><a href="#processamento" id="toc-processamento" class="nav-link" data-scroll-target="#processamento"><span class="header-section-number">3.2</span> Processamento</a></li>
-  <li><a href="#regras-de-transformação" id="toc-regras-de-transformação" class="nav-link" data-scroll-target="#regras-de-transformação"><span class="header-section-number">3.3</span> Regras de Transformação</a></li>
-  <li><a href="#implementação-e-variações" id="toc-implementação-e-variações" class="nav-link" data-scroll-target="#implementação-e-variações"><span class="header-section-number">3.4</span> Implementação e Variações</a></li>
-  <li><a href="#mecanismo-de-pesos" id="toc-mecanismo-de-pesos" class="nav-link" data-scroll-target="#mecanismo-de-pesos"><span class="header-section-number">3.5</span> Mecanismo de Pesos</a></li>
-  <li><a href="#geração-de-texto" id="toc-geração-de-texto" class="nav-link" data-scroll-target="#geração-de-texto"><span class="header-section-number">3.6</span> Geração de Texto</a></li>
-  <li><a href="#eliza-com-python" id="toc-eliza-com-python" class="nav-link" data-scroll-target="#eliza-com-python"><span class="header-section-number">3.7</span> ELIZA com Python</a></li>
-  <li><a href="#eliza-com-python-e-gradio" id="toc-eliza-com-python-e-gradio" class="nav-link" data-scroll-target="#eliza-com-python-e-gradio"><span class="header-section-number">3.8</span> ELIZA com Python e Gradio</a></li>
-  <li><a href="#cap:AIML" id="toc-cap:AIML" class="nav-link" data-scroll-target="#cap\:AIML"><span class="header-section-number">3.9</span> Artificial Intelligence Markup Language (AIML)</a>
+  <li><a href="#introdução" id="toc-introdução" class="nav-link active" data-scroll-target="#introdução"><span class="header-section-number">2.1</span> Introdução</a></li>
+  <li><a href="#processamento" id="toc-processamento" class="nav-link" data-scroll-target="#processamento"><span class="header-section-number">2.2</span> Processamento</a></li>
+  <li><a href="#regras-de-transformação" id="toc-regras-de-transformação" class="nav-link" data-scroll-target="#regras-de-transformação"><span class="header-section-number">2.3</span> Regras de Transformação</a></li>
+  <li><a href="#implementação-e-variações" id="toc-implementação-e-variações" class="nav-link" data-scroll-target="#implementação-e-variações"><span class="header-section-number">2.4</span> Implementação e Variações</a></li>
+  <li><a href="#mecanismo-de-pesos" id="toc-mecanismo-de-pesos" class="nav-link" data-scroll-target="#mecanismo-de-pesos"><span class="header-section-number">2.5</span> Mecanismo de Pesos</a></li>
+  <li><a href="#geração-de-texto" id="toc-geração-de-texto" class="nav-link" data-scroll-target="#geração-de-texto"><span class="header-section-number">2.6</span> Geração de Texto</a></li>
+  <li><a href="#eliza-com-python" id="toc-eliza-com-python" class="nav-link" data-scroll-target="#eliza-com-python"><span class="header-section-number">2.7</span> ELIZA com Python</a></li>
+  <li><a href="#eliza-com-python-e-gradio" id="toc-eliza-com-python-e-gradio" class="nav-link" data-scroll-target="#eliza-com-python-e-gradio"><span class="header-section-number">2.8</span> ELIZA com Python e Gradio</a></li>
+  <li><a href="#cap:AIML" id="toc-cap:AIML" class="nav-link" data-scroll-target="#cap\:AIML"><span class="header-section-number">2.9</span> Artificial Intelligence Markup Language (AIML)</a>
   <ul class="collapse">
-  <li><a href="#tags-do-aiml" id="toc-tags-do-aiml" class="nav-link" data-scroll-target="#tags-do-aiml"><span class="header-section-number">3.9.1</span> Tags do AIML</a></li>
-  <li><a href="#exemplo-em-python" id="toc-exemplo-em-python" class="nav-link" data-scroll-target="#exemplo-em-python"><span class="header-section-number">3.9.2</span> Exemplo em Python</a></li>
+  <li><a href="#tags-do-aiml" id="toc-tags-do-aiml" class="nav-link" data-scroll-target="#tags-do-aiml"><span class="header-section-number">2.9.1</span> Tags do AIML</a></li>
+  <li><a href="#exemplo-em-python" id="toc-exemplo-em-python" class="nav-link" data-scroll-target="#exemplo-em-python"><span class="header-section-number">2.9.2</span> Exemplo em Python</a></li>
   </ul></li>
-  <li><a href="#exercícios" id="toc-exercícios" class="nav-link" data-scroll-target="#exercícios"><span class="header-section-number">3.10</span> Exercícios</a></li>
+  <li><a href="#exercícios" id="toc-exercícios" class="nav-link" data-scroll-target="#exercícios"><span class="header-section-number">2.10</span> Exercícios</a></li>
   </ul>
 </nav>
     </div>
@@ -241,7 +248,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="cap:ELIZA" class="quarto-section-identifier"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">ELIZA e AIML</span></span></h1>
+<h1 class="title"><span id="cap:ELIZA" class="quarto-section-identifier"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">ELIZA e AIML</span></span></h1>
 </div>
 
 
@@ -265,8 +272,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="myboxobj">
 <p>Objetivo Explorar o funcionamento do ELIZA, suas regras de transformação, implementação e legado histórico, evidenciando as bases dos sistemas conversacionais. Além de explicar a linguagem AIML, mostrando como ela possibilitou a construção de chatbots mais robustos e modulares.</p>
 </div>
-<section id="introdução" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="introdução"><span class="header-section-number">3.1</span> Introdução</h2>
+<section id="introdução" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="introdução"><span class="header-section-number">2.1</span> Introdução</h2>
 <p>O chatbot ELIZA foi um marco histórico e um dos primeiros programas de processamento de linguagem natural e foi apresentado em 1966 por Joseph Weizenbaum no MIT <span class="citation" data-cites="Weizenbaum1996">[@Weizenbaum1996]</span>.</p>
 <p>O conjunto de padrões e respostas predefinidas constitui o que Weizenbaum chamou de “roteiro” (ou script) de conversa. O mecanismo do ELIZA separa o motor de processamento dos dados, sendo o algoritmo de busca de palavras-chave e aplicação de regras, do script em si. Isso significa que ELIZA podia, em teoria, simular diferentes personalidades ou tópicos apenas carregando um script diferente, sem alterar o código do programa (veja na Figura&nbsp;<a href="#fig:elizaeditor" data-reference-type="ref" data-reference="fig:elizaeditor">2.1</a>). Também foi codificado um editor de texto para as alterações do próprio script.</p>
 <figure id="fig:elizaeditor" class="figure">
@@ -313,8 +320,8 @@ Bullies.
 DOES THAT HAVE ANYTHING TO DO WITH THE FACT THAT YOUR BOYFRIEND MADE YOU COME HERE </code></pre>
 </div>
 </section>
-<section id="processamento" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="processamento"><span class="header-section-number">3.2</span> Processamento</h2>
+<section id="processamento" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="processamento"><span class="header-section-number">2.2</span> Processamento</h2>
 <p>O funcionamento do ELIZA baseia-se em correspondência de padrões por palavras-chave <span class="citation" data-cites="mittmann2021ElizaOZ">[@mittmann2021ElizaOZ]</span>. Técnica também chamada “casamento de padrão”, em inglês <em>pattner matching</em>, seu paradigma também se encaixa na técnica baseada em regras (ou <em>rule-based</em>). A cada turno do diálogo, o texto de entrada do usuário é analisado em busca de palavras-chave predefinidas. O ELIZA faz uma varredura da sentença da esquerda para a direita, identificando se alguma palavra correspondia a uma palavra-chave do script. Caso encontre uma palavra-chave no script, ELIZA empilha essa palavra até o final da frase. Depois, ele seleciona a palavra-chave mais “importante” até encontrar uma pontuação. Para isso, ele mantém uma lista de pesos associados a cada palavra-chave.</p>
 <p>Por exemplo, o script DOCTOR definia palavras-chave como “<em>ALIKE</em>” ou “<em>SAME</em>” com alta prioridade; assim, na frase “<em>Men are all alike</em>.” o programa detectava a palavra “<em>ALIKE</em>” e disparava uma resposta associada a ela (no caso: “<em>In what way?</em>”). Se múltiplas palavras-chave aparecessem, ELIZA escolhia aquela de maior peso para formular a resposta.</p>
 <p>Primeiro o texto de entrada digitado pelo usuário era separado em palavras, em uma técnica que hoje chamamos de tokenização de palavras, mas que ainda não existia na época. A palavra-chave era identificada, comparando-a sequencialmente até o fim das palavras existentes, ou até ser encontrada uma pontuação. Caso fosse encontrada uma pontuação (ponto final ou vírgula), o texto após a pontuação era ignorado se já tivesse sido identificada uma palavra-chave. Assim, cada processamento da resposta utiliza uma única frase do usuário. Se várias palavras-chave fossem encontradas antes da pontuação, a de maior peso era selecionada.</p>
@@ -322,8 +329,8 @@ DOES THAT HAVE ANYTHING TO DO WITH THE FACT THAT YOUR BOYFRIEND MADE YOU COME HE
 <p>Se nenhuma palavra-chave fosse encontrada na entrada, ELIZA recorria a frases genéricas programadas, chamadas de respostas vazias ou sem conteúdo. Nesses casos, o chatbot emitia mensagens do tipo “<em>I see</em>.” ou “<em>Please, go on</em>.”. Esse mecanismo evitava silêncio quando o usuário dizia algo fora do escopo do script.</p>
 <p>Além disso, a implementação original incluía uma estrutura de memória: algumas declarações recentes do usuário eram armazenadas e, se uma entrada subsequente não contivesse novas <em>keywords</em>, ELIZA poderia recuperar um tópico anterior e introduzi-lo na conversa. Por exemplo, se o usuário mencionasse família (em inglês <em>family</em>) em um momento e depois fizesse uma afirmação vaga, o programa poderia responder retomando o assunto da família (“<em>DOES THAT HAVE ANYTHING TO DO WITH YOUR FAMILY?</em>”). Essa estratégia dava uma pseudo-continuidade ao diálogo, simulando que o sistema “lembrava” de informações fornecidas anteriormente.</p>
 </section>
-<section id="regras-de-transformação" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="regras-de-transformação"><span class="header-section-number">3.3</span> Regras de Transformação</h2>
+<section id="regras-de-transformação" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="regras-de-transformação"><span class="header-section-number">2.3</span> Regras de Transformação</h2>
 <p>Encontrada a palavra-chave, ELIZA aplicava uma regra de transformação associada a ela para gerar a resposta. As regras são definidas em pares: um padrão de análise (<em>decomposition rule</em>) e um modelo de reconstrução de frase (<em>reassembly rule</em>).</p>
 <p>Primeiro, a frase do usuário é decomposta conforme um padrão que identifica a contexto mínimo em torno da palavra-chave. Essa decomposição frequentemente envolve separar a frase em partes e reconhecer pronomes ou estruturas gramaticais relevantes. Por exemplo, considere a entrada “<em>You are very helpful</em>.”. Uma regra de decomposição pode identificar a estrutura “<em>You are X</em>” — onde “<em>X</em>” representa o restante da frase — e extrair o complemento “<em>very helpful</em>” como um componente separado.</p>
 <p>Em seguida, a regra de reassembly correspondente é aplicada, remontando uma sentença de resposta em que “X” é inserido em um template pré-definido. No exemplo dado, o template de resposta poderia ser “<em>What makes you think I am X?</em>”; ao inserir X = “<em>very helpful</em>”, gera-se “<em>What makes you think I am very helpful?</em>”. Observe que há uma inversão de pessoa: o pronome “<em>you</em>” do usuário foi trocado por “<em>I</em>” na resposta do bot.</p>
@@ -360,16 +367,16 @@ DOES THAT HAVE ANYTHING TO DO WITH THE FACT THAT YOUR BOYFRIEND MADE YOU COME HE
 <span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="implementação-e-variações" class="level2" data-number="3.4">
-<h2 data-number="3.4" class="anchored" data-anchor-id="implementação-e-variações"><span class="header-section-number">3.4</span> Implementação e Variações</h2>
+<section id="implementação-e-variações" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="implementação-e-variações"><span class="header-section-number">2.4</span> Implementação e Variações</h2>
 <p>A implementação original de ELIZA foi feita em uma linguagem chamada MAD-SLIP (um dialeto de Lisp) rodando em um mainframe IBM 7094 no sistema CTSS do MIT. O código-fonte do programa principal continha o mecanismo de correspondência, enquanto as regras de conversação (script DOCTOR) eram fornecidas separadamente em formato de listas associativas, similar a uma lista em Lisp. Infelizmente, Weizenbaum não publicou o código completo no artigo de 1966 (o que era comum na época), mas décadas depois o código em MAD-SLIP foi recuperado nos arquivos do MIT, comprovando os detalhes de implementação <span class="citation" data-cites="Lane2025">[@Lane2025]</span>. De qualquer forma, a arquitetura descrita no artigo influenciou inúmeras reimplementações acadêmicas e didáticas nos anos seguintes.</p>
 <p>Diversos entusiastas e pesquisadores reescreveram ELIZA em outras linguagens de programação, dada a simplicidade relativa de seu algoritmo. Ao longo dos anos, surgiram versões em Lisp, PL/I, BASIC, Pascal, Prolog, Java, Python, OZ, JavaScript, entre muitas outras. Cada versão normalmente incluía o mesmo conjunto de regras do script terapeuta ou pequenas variações.</p>
 <p>As ideias de ELIZA também inspiraram chatbots mais avançados. Poucos anos depois, em 1972, surgiu PARRY, escrito pelo psiquiatra Kenneth Colby, que simulava um paciente paranoico. PARRY tinha um modelo interno de estado emocional e atitudes, mas na camada de linguagem ainda usava muitas respostas baseadas em regras, chegando a “conversar” com o próprio ELIZA em experimentos da época.</p>
 <p>Em 1995, Richard Wallace desenvolveu o chatbot ALICE (Artificial Linguistic Internet Computer Entity), que levava o paradigma de ELIZA a uma escala muito maior. ALICE utilizava um formato XML chamado AIML (Artificial Intelligence Markup Language) para definir milhares de categorias de padrões e respostas. Com mais de 16.000 templates mapeando entradas para saídas <span class="citation" data-cites="Wallace2000">[@Wallace2000]</span>, ALICE conseguia manter diálogos bem mais naturais e abrangentes que o ELIZA original, embora o princípio básico de correspondência de padrões permanecesse. Esse avanço rendeu a ALICE três vitórias no Prêmio Loebner (competição de chatbots) no início dos anos 2000 <span class="citation" data-cites="Wallace2000">[@Wallace2000]</span>.</p>
 <p>Outras variações e sucessores notáveis incluem Jabberwacky (1988) – que já aprendia novas frases – e uma profusão de assistentes virtuais e bots de domínio específico nas décadas seguintes <span class="citation" data-cites="Wallace2000">[@Wallace2000]</span>. Em suma, o legado de ELIZA perdurou por meio de inúmeros chatbots baseados em regras, até a transição para abordagens estatísticas e de aprendizado de máquina no final do século XX.</p>
 </section>
-<section id="mecanismo-de-pesos" class="level2" data-number="3.5">
-<h2 data-number="3.5" class="anchored" data-anchor-id="mecanismo-de-pesos"><span class="header-section-number">3.5</span> Mecanismo de Pesos</h2>
+<section id="mecanismo-de-pesos" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="mecanismo-de-pesos"><span class="header-section-number">2.5</span> Mecanismo de Pesos</h2>
 <p>A técnica de ELIZA, baseada em palavras-chave com respostas predefinidas, contrasta fortemente com os métodos de Modelos de Linguagem Grande (LLMs) atuais, como o <em>Generative Pre-trained Transformer</em> (GPT), que utilizam redes neurais de milhões (ou trilhões) de parâmetros e mecanismos de atenção. Mais detalhes sobre LLM no Capítulo&nbsp;<a href="7_modelos-de-linguagem-grande-llm-cap-llm.html" data-reference-type="ref" data-reference="cap:LLM">4</a>.</p>
 <p>No ELIZA, a “importância” de uma palavra era determinada manualmente pelo programador através de pesos ou rankings atribuídos a certas palavras-chave no script. Ou seja, o programa não aprendia quais termos focar – ele seguia uma lista fixa de gatilhos. Por exemplo, termos como “sempre” ou “igual” tinham prioridade alta no script DOCTOR para garantir respostas apropriadas.</p>
 <p>Em contraste, modelos modernos como o GPT não possuem uma lista fixa de palavras importantes; em vez disso, eles utilizam o mecanismo de <em>self-attention</em> para calcular dinamicamente pesos entre todas as palavras da entrada conforme o contexto <span class="citation" data-cites="vaswani2017attention">[@vaswani2017attention]</span>.</p>
@@ -377,8 +384,8 @@ DOES THAT HAVE ANYTHING TO DO WITH THE FACT THAT YOUR BOYFRIEND MADE YOU COME HE
 <p>Além disso, o “vocabulário” efetivo de um LLM é imenso – um modelo GPT pode ser treinado com trilhões de palavras e ter ajustado seus parâmetros para modelar estatisticamente a linguagem humana <span class="citation" data-cites="vaswani2017attention">[@vaswani2017attention]</span>. Como resultado, pode-se dizer metaforicamente que os LLMs têm uma lista de “palavras-chave” milhões de vezes maior (na prática, distribuída em vetores contínuos) e um método bem mais sofisticado de calcular respostas do que o ELIZA.</p>
 <p>Enquanto ELIZA dependia de coincidências exatas de termos para disparar regras, modelos como GPT avaliam similaridades semânticas e contexto histórico graças às representações densas (embeddings) aprendidas durante o treinamento de rede neural.</p>
 </section>
-<section id="geração-de-texto" class="level2" data-number="3.6">
-<h2 data-number="3.6" class="anchored" data-anchor-id="geração-de-texto"><span class="header-section-number">3.6</span> Geração de Texto</h2>
+<section id="geração-de-texto" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="geração-de-texto"><span class="header-section-number">2.6</span> Geração de Texto</h2>
 <p>Devido à sua abordagem baseada em regras locais, o ELIZA tinha capacidade de contextualização muito limitada. Cada input do usuário era tratado quase isoladamente: o programa não construía uma representação acumulada da conversa, além de artifícios simples como repetir algo mencionado (a estrutura de memória) ou usar pronomes para manter a ilusão de continuidade. Se o usuário mudasse de tópico abruptamente, o ELIZA não “perceberia” – ele apenas buscaria a próxima palavra-chave disponível ou recorreria a frases genéricas.</p>
 <p>Em contraste, modelos de linguagem modernos levam em conta um longo histórico de diálogo. Chatbots que usam GPT podem manter um contexto de centenas ou milhares de tokens (palavras ou fragmentos) em sua janela de atenção, o que significa que eles conseguem referenciar informações mencionadas vários parágrafos atrás e integrá-las na resposta corrente. O mecanismo de self-attention, em particular, permite que o modelo incorpore relações contextuais complexas: cada palavra gerada pode considerar influências de palavras distantes no texto de entrada <span class="citation" data-cites="vaswani2017attention">[@vaswani2017attention]</span>.</p>
 <p>Por exemplo, ao conversar com um LLM, se você mencionar no início da conversa que tem um irmão chamado Alex e depois perguntar “ele pode me ajudar com o problema?”, o modelo entenderá que “ele” se refere ao Alex mencionado anteriormente (desde que dentro da janela de contexto). Já o ELIZA original não teria como fazer essa ligação, a menos que houvesse uma regra explícita para “ele” e algum armazenamento específico do nome – algo impraticável de antecipar via regras fixas para todos os casos.</p>
@@ -386,8 +393,8 @@ DOES THAT HAVE ANYTHING TO DO WITH THE FACT THAT YOUR BOYFRIEND MADE YOU COME HE
 <p>Em termos de fluência e variedade, os modelos modernos superam o ELIZA amplamente. O ELIZA frequentemente se repetia ou caía em loops verbais quando confrontado com inputs fora do roteiro – um limite claro de sistemas por regras estáticas. Os LLMs produzem linguagem muito mais natural e adaptável, a ponto de muitas vezes enganarem os usuários sobre estarem conversando com uma máquina (um efeito buscado desde o Teste de Turing). Ironicamente, ELIZA nos anos 60 já provocou um precursor desse fenômeno – o chamado <em>Efeito ELIZA</em>, em que pessoas atribuem compreensão ou sentimentos a respostas de computador que, na verdade, são superficiais. Hoje, em chatbots GPT, esse efeito se intensifica pela qualidade das respostas, mas a distinção fundamental permanece: ELIZA seguia scripts sem compreender, enquanto LLMs inferem padrões e significados de forma estatística, sem entendimento consciente, mas atingindo resultados que simulam compreensão de maneira muito mais convincente.</p>
 <p>Em resumo, os avanços de arquitetura (especialmente o mecanismo de atenção) ampliaram drasticamente a capacidade de contextualização e geração dos chatbots modernos, marcando uma evolução significativa desde o mecanismo simples, porém pioneiro, de ELIZA.</p>
 </section>
-<section id="eliza-com-python" class="level2" data-number="3.7">
-<h2 data-number="3.7" class="anchored" data-anchor-id="eliza-com-python"><span class="header-section-number">3.7</span> ELIZA com Python</h2>
+<section id="eliza-com-python" class="level2" data-number="2.7">
+<h2 data-number="2.7" class="anchored" data-anchor-id="eliza-com-python"><span class="header-section-number">2.7</span> ELIZA com Python</h2>
 <p>A seguir o código-fonte de um programa que retorna o que o usuário digitou na linguagem de programação Python, inspirado no paradigma ELIZA.</p>
 <div class="listing">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># método que processa a entrada do usuário</span></span>
@@ -492,8 +499,8 @@ Bot: Tell me more about your family.</code></pre>
 </div>
 <p>Observa-se na interação que o chatbot inicialmente respondeu à saudação (<em>“Hello...”</em>) com base na regra 1. Em seguida, a entrada <em>“I am sad”</em> ativou a regra 2, resultando em uma resposta que incorpora o termo <em>“sad”</em>. A interação prossegue com o sistema respondendo a entradas iniciadas por <em>“Because...”</em> (regra 8) e <em>“Maybe...”</em> (regra 7), entre outras. Cada resposta gerada foi determinada pela regra correspondente ativada e pelo conteúdo específico da sentença do usuário, mimetizando o comportamento baseado em padrões do sistema ELIZA original <span class="citation" data-cites="Abdul-Kader2015">[@Abdul-Kader2015]</span>.</p>
 </section>
-<section id="eliza-com-python-e-gradio" class="level2" data-number="3.8">
-<h2 data-number="3.8" class="anchored" data-anchor-id="eliza-com-python-e-gradio"><span class="header-section-number">3.8</span> ELIZA com Python e Gradio</h2>
+<section id="eliza-com-python-e-gradio" class="level2" data-number="2.8">
+<h2 data-number="2.8" class="anchored" data-anchor-id="eliza-com-python-e-gradio"><span class="header-section-number">2.8</span> ELIZA com Python e Gradio</h2>
 <p>Nesta seção, vamos explorar como criar um chatbot usando a biblioteca Gradio e Python.</p>
 <p>O Gradio é uma biblioteca de código aberto que permite criar interfaces de usuário para modelos de machine learning de forma rápida e fácil. Com Gradio, você pode criar aplicativos web interativos para visualizar e testar seus modelos, sem precisar de conhecimentos em frontend ou backend.</p>
 <p>Antes de começar, certifique-se de ter o Python e o pip instalados em sua máquina. Em seguida, instale a biblioteca Gradio usando o comando:</p>
@@ -583,8 +590,8 @@ Figure 9: Print do chatbot com respostas aleatórias e um pouco de lógica Concl
 </figure>
 <p>Criar um chatbot com Gradio e Python é uma tarefa relativamente simples e rápida. Com essa biblioteca, você pode criar interfaces de usuário interativas para seus modelos de aprendizagem de máquina e criar chatbots para automação de tarefas ou suporte ao cliente. Este é apenas um exemplo básico, e você pode adicionar mais lógica e funcionalidades ao seu chatbot para torná-lo mais útil.</p>
 </section>
-<section id="cap:AIML" class="level2" data-number="3.9">
-<h2 data-number="3.9" class="anchored" data-anchor-id="cap:AIML"><span class="header-section-number">3.9</span> Artificial Intelligence Markup Language (AIML)</h2>
+<section id="cap:AIML" class="level2" data-number="2.9">
+<h2 data-number="2.9" class="anchored" data-anchor-id="cap:AIML"><span class="header-section-number">2.9</span> Artificial Intelligence Markup Language (AIML)</h2>
 <p>Décadas depois do Eliza, as técnicas de programação avançaram, surgiu a web e as linguagens de marcação como o HTML ganharam tração. É neste cenário que é criado o Artificial Intelligence Markup Language (AIML), uma especificação baseada em XML, proposta por <span class="citation" data-cites="Wallace2009">@Wallace2009</span>, destinada à programação de chatbots. A concepção da linguagem prioriza o minimalismo, característica que simplifica o processo de criação de bases de conhecimento por indivíduos sem experiência prévia em programação <span class="citation" data-cites="Wallace2009">[@Wallace2009]</span>. A arquitetura fundamental de um interpretador AIML genérico é ilustrada na Figura&nbsp;<a href="#fig:interpretador" data-reference-type="ref" data-reference="fig:interpretador">2.4</a>.</p>
 <figure id="fig:interpretador" class="figure">
 <p>
@@ -644,8 +651,8 @@ Figure 14: Uso da tag <code>&lt;srai&gt;</code>.<br> Retirado de <span class="ci
 </figure>
 <p>Os chatbots baseados em AIML têm obtido sucesso significativo em competições como o Prêmio Loebner. Notavelmente, o chatbot Mitsuku[^3], desenvolvido por Steve Worswick, conquistou múltiplos títulos [^4], seguindo vitórias anteriores do ALICE <span class="citation" data-cites="Wallace2000">[@Wallace2000]</span>.</p>
 <p>Adicionalmente, Mitsuku foi classificado em primeiro lugar numa análise comparativa envolvendo oito chatbots <span class="citation" data-cites="Sharma2020">[@Sharma2020]</span>. Nesse estudo, que avaliou atributos conversacionais com base em um conjunto padronizado de perguntas, o Google Assistant obteve a segunda posição, seguido pela Siri em terceiro. O <em>chatbot</em> ALICE alcançou a quarta posição, enquanto o ELIZA ficou na última colocação entre os sistemas comparados <span class="citation" data-cites="Sharma2020">[@Sharma2020]</span>.</p>
-<section id="tags-do-aiml" class="level3" data-number="3.9.1">
-<h3 data-number="3.9.1" class="anchored" data-anchor-id="tags-do-aiml"><span class="header-section-number">3.9.1</span> Tags do AIML</h3>
+<section id="tags-do-aiml" class="level3" data-number="2.9.1">
+<h3 data-number="2.9.1" class="anchored" data-anchor-id="tags-do-aiml"><span class="header-section-number">2.9.1</span> Tags do AIML</h3>
 <p>Esta seção descreve as principais tags do AIML, versão 1.0.</p>
 <section id="aiml" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="aiml"><code>&lt;aiml&gt;</code></h4>
@@ -812,8 +819,8 @@ Figure 14: Uso da tag <code>&lt;srai&gt;</code>.<br> Retirado de <span class="ci
 </div>
 </section>
 </section>
-<section id="exemplo-em-python" class="level3" data-number="3.9.2">
-<h3 data-number="3.9.2" class="anchored" data-anchor-id="exemplo-em-python"><span class="header-section-number">3.9.2</span> Exemplo em Python</h3>
+<section id="exemplo-em-python" class="level3" data-number="2.9.2">
+<h3 data-number="2.9.2" class="anchored" data-anchor-id="exemplo-em-python"><span class="header-section-number">2.9.2</span> Exemplo em Python</h3>
 <p>A seguir um exemplo do uso de um interpretador AIML em Python. O arquivo “cerebro.aiml” deve existir anteriormente. Use uma versão compatível com a biblioteca aiml que é somente compatível com versões antigas do Python, do Python 3.6 para trás, ou seja, não funciona no Python 3.12.</p>
 <div class="listing">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co"># pip install aiml</span></span>
@@ -866,8 +873,8 @@ Bot: Olá! Como posso ajudar você?</code></pre>
 </div>
 </section>
 </section>
-<section id="exercícios" class="level2" data-number="3.10">
-<h2 data-number="3.10" class="anchored" data-anchor-id="exercícios"><span class="header-section-number">3.10</span> Exercícios</h2>
+<section id="exercícios" class="level2" data-number="2.10">
+<h2 data-number="2.10" class="anchored" data-anchor-id="exercícios"><span class="header-section-number">2.10</span> Exercícios</h2>
 <ol type="1">
 <li><p><strong>Assinale a alternativa que melhor descreve a principal diferença entre um chatbot conversacional e um chatbot orientado a tarefas:</strong></p>
 <ol type="1">
@@ -1020,7 +1027,7 @@ Bot: Olá! Como posso ajudar você?</code></pre>
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/giseldo\.github\.io\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
@@ -1350,16 +1357,29 @@ Bot: Olá! Como posso ajudar você?</code></pre>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="../sections/4_introdu-o.html" class="pagination-link" aria-label="Introdução">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introdução</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introdução</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="../sections/6_processamento-de-linguagem-natural-pln-cap-pln.html" class="pagination-link" aria-label="Processamento de Linguagem Natural (PLN)">
-        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Processamento de Linguagem Natural (PLN)</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Processamento de Linguagem Natural (PLN)</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Construindo Chatbotr (2e) foi escrito por Giseldo Neo e Alana Neo.</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Este html foi gerado com o <a href="https://quarto.org/">Quarto</a>.</p>
+</div>
+  </div>
+</footer>
 
 
 
