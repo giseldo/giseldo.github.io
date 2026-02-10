@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>5&nbsp; Modelos Avançados de Vetorização – Processamento de Linguagem Natural</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../sections/8_aplica-es-pr-ticas.html" rel="next">
+<link href="../sections/6_vetoriza-o-de-texto.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-d9ea66fcd6c317012447f26e9c021348.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../sections/7_modelos-avan-ados-de-vetoriza-o.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Modelos Avançados de Vetorização</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Processamento de Linguagem Natural</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bem vindo</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sections/1_informa-es-adicionais-informa-es-adicionais-unnumbered.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Informações Adicionais</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sections/2_pref-cio-pref-cio-unnumbered.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Prefácio</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sections/3_introdu-o-vetoriza-o-de-texto.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introdução à Vetorização de Texto</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sections/4_prepara-o-do-ambiente.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Preparação do Ambiente</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sections/5_pr-processamento-de-texto.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Pré-processamento de Texto</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sections/6_vetoriza-o-de-texto.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Vetorização de Texto</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sections/7_modelos-avan-ados-de-vetoriza-o.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Modelos Avançados de Vetorização</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sections/8_aplica-es-pr-ticas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Aplicações Práticas</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sections/9_estudo-de-caso.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Estudo de Caso</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sections/10_pr-ximos-passos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Próximos Passos</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sections/11_gabarito-das-quest-es-gabarito-das-quest-es-unnumbered.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gabarito das questões</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sections/12_sobre-os-autores-sobre-os-autores-unnumbered.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Sobre os autores</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#embeddings-contextuais" id="toc-embeddings-contextuais" class="nav-link active" data-scroll-target="#embeddings-contextuais"><span class="header-section-number">5.1</span> Embeddings Contextuais</a>
+  <ul class="collapse">
+  <li><a href="#exemplo-em-python-usando-bert-para-vetorização" id="toc-exemplo-em-python-usando-bert-para-vetorização" class="nav-link" data-scroll-target="#exemplo-em-python-usando-bert-para-vetorização"><span class="header-section-number">5.1.1</span> Exemplo em Python: Usando BERT para Vetorização</a></li>
+  </ul></li>
+  <li><a href="#análise-de-sentimento-com-embeddings" id="toc-análise-de-sentimento-com-embeddings" class="nav-link" data-scroll-target="#análise-de-sentimento-com-embeddings"><span class="header-section-number">5.2</span> Análise de Sentimento com Embeddings</a>
+  <ul class="collapse">
+  <li><a href="#exemplo-em-python-classificação-de-sentimento-com-bert" id="toc-exemplo-em-python-classificação-de-sentimento-com-bert" class="nav-link" data-scroll-target="#exemplo-em-python-classificação-de-sentimento-com-bert"><span class="header-section-number">5.2.1</span> Exemplo em Python: Classificação de Sentimento com BERT</a></li>
+  </ul></li>
+  <li><a href="#redução-de-dimensionalidade" id="toc-redução-de-dimensionalidade" class="nav-link" data-scroll-target="#redução-de-dimensionalidade"><span class="header-section-number">5.3</span> Redução de Dimensionalidade</a>
+  <ul class="collapse">
+  <li><a href="#exemplo-em-python-redução-de-dimensionalidade-com-pca" id="toc-exemplo-em-python-redução-de-dimensionalidade-com-pca" class="nav-link" data-scroll-target="#exemplo-em-python-redução-de-dimensionalidade-com-pca"><span class="header-section-number">5.3.1</span> Exemplo em Python: Redução de Dimensionalidade com PCA</a></li>
+  <li><a href="#exemplo-em-python-redução-de-dimensionalidade-com-t-sne" id="toc-exemplo-em-python-redução-de-dimensionalidade-com-t-sne" class="nav-link" data-scroll-target="#exemplo-em-python-redução-de-dimensionalidade-com-t-sne"><span class="header-section-number">5.3.2</span> Exemplo em Python: Redução de Dimensionalidade com t-SNE</a></li>
+  </ul></li>
+  <li><a href="#exercício" id="toc-exercício" class="nav-link" data-scroll-target="#exercício">Exercício</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Modelos Avançados de Vetorização</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Neste capítulo, vamos explorar modelos avançados de vetorização de texto, que vão além das técnicas tradicionais como Bag of Words e TF-IDF. Vamos discutir embeddings contextuais, como o BERT e o GPT, e a aplicação de redução de dimensionalidade usando técnicas como PCA e t-SNE. A seguir, forneceremos exemplos práticos em Python para cada um desses métodos.</p>
+<section id="embeddings-contextuais" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="embeddings-contextuais"><span class="header-section-number">5.1</span> Embeddings Contextuais</h2>
+<p>Embeddings contextuais são vetores que capturam o significado de uma palavra com base no contexto em que ela aparece. Diferente de embeddings como Word2Vec e GloVe, que geram uma única representação para cada palavra, modelos como BERT (Bidirectional Encoder Representations from Transformers) e GPT (Generative Pretrained Transformer) produzem diferentes embeddings para a mesma palavra, dependendo do seu contexto.</p>
+<section id="exemplo-em-python-usando-bert-para-vetorização" class="level3" data-number="5.1.1">
+<h3 data-number="5.1.1" class="anchored" data-anchor-id="exemplo-em-python-usando-bert-para-vetorização"><span class="header-section-number">5.1.1</span> Exemplo em Python: Usando BERT para Vetorização</h3>
+<div class="mybox">
+<p>Código Python</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-language="Python"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> transformers <span class="im">import</span> BertTokenizer, BertModel</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> torch</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Carregando o tokenizer e o modelo BERT</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>tokenizer <span class="op">=</span> BertTokenizer.from_pretrained(<span class="st">"bert-base-uncased"</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> BertModel.from_pretrained(<span class="st">"bert-base-uncased"</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Exemplo de texto</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>texto <span class="op">=</span> <span class="st">"O gato está sentado no tapete."</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Tokenização do texto e conversão para tensores</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>inputs <span class="op">=</span> tokenizer(texto, return_tensors<span class="op">=</span><span class="st">"pt"</span>)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Obtenção dos embeddings a partir do modelo BERT</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> torch.no_grad():</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    outputs <span class="op">=</span> model(<span class="op">**</span>inputs)</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Extraindo os embeddings da última camada oculta</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>embeddings <span class="op">=</span> outputs.last_hidden_state</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Embeddings para cada token:"</span>, embeddings)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="mybox">
+<p>Saída do Console</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" data-language="Bash"><pre class="sourceCode Bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Embeddings</span> para cada token: tensor<span class="er">(</span><span class="ex">[[[-8.4815e-01,</span> <span class="at">-3.2018e-01,</span> <span class="at">-6.1327e-02,</span>  ..., <span class="at">-3.2507e-01,</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">7.6626e-02,</span>  9.1921e-01],</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="ex">[-1.1552e+00,</span> <span class="at">-8.0612e-02,</span> <span class="at">-3.9960e-01,</span>  ..., <span class="at">-1.1649e-01,</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="ex">9.8960e-02,</span>  1.0148e+00],</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="ex">...,</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="bu">[</span> 6.6603e-01, -7.9354e-02,  1.1458e-02,  <span class="er">...,</span> <span class="ex">-4.0039e-02,</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="ex">-7.0081e-01,</span>  2.2797e-02]]]<span class="kw">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Este exemplo mostra como usar o BERT para gerar embeddings contextuais. O modelo BERT é capaz de gerar um vetor de embeddings para cada token no texto, considerando o contexto de toda a frase.</p>
+</section>
+</section>
+<section id="análise-de-sentimento-com-embeddings" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="análise-de-sentimento-com-embeddings"><span class="header-section-number">5.2</span> Análise de Sentimento com Embeddings</h2>
+<p>Modelos de embeddings contextuais, como o BERT, podem ser utilizados em tarefas de análise de sentimento, fornecendo representações mais ricas e precisas das palavras. A seguir, aplicamos BERT em uma tarefa de classificação de sentimento.</p>
+<section id="exemplo-em-python-classificação-de-sentimento-com-bert" class="level3" data-number="5.2.1">
+<h3 data-number="5.2.1" class="anchored" data-anchor-id="exemplo-em-python-classificação-de-sentimento-com-bert"><span class="header-section-number">5.2.1</span> Exemplo em Python: Classificação de Sentimento com BERT</h3>
+<div class="mybox">
+<p>Código Python</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" data-language="Python"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> transformers <span class="im">import</span> BertTokenizer, BertForSequenceClassification</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> torch.nn.functional <span class="im">import</span> softmax</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Carregando o tokenizer e o modelo BERT para classificação de sequência</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>tokenizer <span class="op">=</span> BertTokenizer.from_pretrained(<span class="st">'bert-base-uncased'</span>)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> BertForSequenceClassification.from_pretrained(<span class="st">'bert-base-uncased'</span>, num_labels<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Exemplo de texto</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>texto <span class="op">=</span> <span class="st">"Eu adoro gatos, eles são fofos"</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Tokenização do texto e conversão para tensores</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>inputs <span class="op">=</span> tokenizer(texto, return_tensors<span class="op">=</span><span class="st">'pt'</span>)</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Fazendo a previsão</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> torch.no_grad():</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>    outputs <span class="op">=</span> model(<span class="op">**</span>inputs)</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Aplicando softmax para obter as probabilidades das classes</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>probabilidades <span class="op">=</span> softmax(outputs.logits, dim<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Probabilidade de sentimento positivo:"</span>, probabilidades[<span class="dv">0</span>][<span class="dv">1</span>].item())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="mybox">
+<p>Saída do Console</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4" data-language="Bash"><pre class="sourceCode Bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Probabilidade</span> de sentimento positivo: 0.6633508801460266</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Este código ilustra como utilizar o BERT para classificar o sentimento de um texto. Aqui, o modelo é capaz de prever a probabilidade de um sentimento positivo ou negativo para a frase fornecida.</p>
+</section>
+</section>
+<section id="redução-de-dimensionalidade" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="redução-de-dimensionalidade"><span class="header-section-number">5.3</span> Redução de Dimensionalidade</h2>
+<p>Vetores de alta dimensionalidade podem ser difíceis de manipular e visualizar. Técnicas como Análise de Componentes Principais (PCA) e t-SNE (t-Distributed Stochastic Neighbor Embedding) são comumente usadas para reduzir a dimensionalidade dos dados de forma a manter as informações mais importantes.</p>
+<section id="exemplo-em-python-redução-de-dimensionalidade-com-pca" class="level3" data-number="5.3.1">
+<h3 data-number="5.3.1" class="anchored" data-anchor-id="exemplo-em-python-redução-de-dimensionalidade-com-pca"><span class="header-section-number">5.3.1</span> Exemplo em Python: Redução de Dimensionalidade com PCA</h3>
+<div class="mybox">
+<p>Código Python</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5" data-language="Python"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.decomposition <span class="im">import</span> PCA</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> transformers <span class="im">import</span> BertTokenizer, BertModel</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> torch</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Carregando o tokenizer e o modelo BERT</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>tokenizer <span class="op">=</span> BertTokenizer.from_pretrained(<span class="st">"bert-base-uncased"</span>)</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> BertModel.from_pretrained(<span class="st">"bert-base-uncased"</span>)</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Exemplo de texto</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>texto <span class="op">=</span> <span class="st">"Eu adoro gatos, eles são fofos"</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Tokenização do texto e conversão para tensores</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>inputs <span class="op">=</span> tokenizer(texto, return_tensors<span class="op">=</span><span class="st">"pt"</span>)</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Obtenção dos embeddings a partir do modelo BERT</span></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> torch.no_grad():</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>outputs <span class="op">=</span> model(<span class="op">**</span>inputs)</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Extraindo os embeddings da última camada oculta</span></span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>embeddings <span class="op">=</span> outputs.last_hidden_state</span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Exemplo de vetores de alta dimensionalidade (usaremos os embeddings do BERT)</span></span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>vetores <span class="op">=</span> embeddings.squeeze().numpy()  <span class="co"># Convertendo de tensor para numpy array</span></span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Aplicando PCA para reduzir para 2 dimensões</span></span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>pca <span class="op">=</span> PCA(n_components<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>vetores_reduzidos <span class="op">=</span> pca.fit_transform(vetores)</span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a><span class="co"># Plotando os vetores em 2D</span></span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>plt.scatter(vetores_reduzidos[:, <span class="dv">0</span>], vetores_reduzidos[:, <span class="dv">1</span>])</span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Vetores de palavras reduzidos para 2D usando PCA"</span>)</span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figuras/pca.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>image</figcaption>
+</figure>
+</div>
+<p>Neste exemplo, utilizamos PCA para reduzir os embeddings gerados pelo BERT para duas dimensões, facilitando a visualização.</p>
+</section>
+<section id="exemplo-em-python-redução-de-dimensionalidade-com-t-sne" class="level3" data-number="5.3.2">
+<h3 data-number="5.3.2" class="anchored" data-anchor-id="exemplo-em-python-redução-de-dimensionalidade-com-t-sne"><span class="header-section-number">5.3.2</span> Exemplo em Python: Redução de Dimensionalidade com t-SNE</h3>
+<div class="mybox">
+<p>Código Python</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6" data-language="Python"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.manifold <span class="im">import</span> TSNE</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> transformers <span class="im">import</span> BertTokenizer, BertModel</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> torch</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Carregando o tokenizer e o modelo BERT</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>tokenizer <span class="op">=</span> BertTokenizer.from_pretrained(<span class="st">"bert-base-uncased"</span>)</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> BertModel.from_pretrained(<span class="st">"bert-base-uncased"</span>)</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Exemplo de texto</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>texto <span class="op">=</span> <span class="st">"Eu adoro gatos, eles são fofos"</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Tokenização do texto e conversão para tensores</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>inputs <span class="op">=</span> tokenizer(texto, return_tensors<span class="op">=</span><span class="st">"pt"</span>)</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Obtenção dos embeddings a partir do modelo BERT</span></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> torch.no_grad():</span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>outputs <span class="op">=</span> model(<span class="op">**</span>inputs)</span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Extraindo os embeddings da última camada oculta</span></span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>embeddings <span class="op">=</span> outputs.last_hidden_state</span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>vetores <span class="op">=</span> embeddings.squeeze().numpy()  <span class="co"># Convertendo de tensor para numpy array</span></span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Aplicando t-SNE para reduzir para 2 dimensões</span></span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>tsne <span class="op">=</span> TSNE(n_components<span class="op">=</span><span class="dv">2</span>, perplexity<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>vetores_reduzidos_tsne <span class="op">=</span> tsne.fit_transform(vetores)</span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a><span class="co"># Plotando os vetores em 2D</span></span>
+<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a>plt.scatter(vetores_reduzidos_tsne[:, <span class="dv">0</span>], vetores_reduzidos_tsne[:, <span class="dv">1</span>])</span>
+<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Vetores de palavras reduzidos para 2D usando t-SNE"</span>)</span>
+<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figuras/vet.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>image</figcaption>
+</figure>
+</div>
+<p>Aqui, usamos t-SNE para reduzir os embeddings para duas dimensões. O t-SNE é especialmente útil para a visualização de dados em espaços de alta dimensionalidade.</p>
+<p>Em resumo, exploramos modelos avançados de vetorização de texto, incluindo embeddings contextuais com BERT e GPT, e técnicas de redução de dimensionalidade como PCA e t-SNE. Esses métodos fornecem ferramentas poderosas para capturar e visualizar informações complexas em dados textuais.</p>
+</section>
+</section>
+<section id="exercício" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="exercício">Exercício</h2>
+<p>Versão on-line destes exercícios</p>
+<p><a href="https://forms.gle/hh4BgCZVhJLMyFiy6" class="uri">https://forms.gle/hh4BgCZVhJLMyFiy6</a></p>
+<ol type="1">
+<li><p><strong>Qual é a principal vantagem dos embeddings contextuais, como BERT, em comparação com embeddings tradicionais Word2Vec?</strong></p>
+<ol type="1">
+<li><p>Embeddings contextuais capturam o significado das palavras com base em seu contexto específico.</p></li>
+<li><p>Embeddings contextuais são sempre mais rápidos de treinar.</p></li>
+<li><p>Embeddings contextuais geram representações esparsas das palavras.</p></li>
+<li><p>Embeddings contextuais são menos precisos do que os embeddings tradicionais.</p></li>
+</ol></li>
+<li><p><strong>O que a técnica de PCA (Análise de Componentes Principais) realiza em dados de alta dimensionalidade?</strong></p>
+<ol type="1">
+<li><p>Aumenta o número de dimensões nos dados.</p></li>
+<li><p>Reduz a dimensionalidade dos dados mantendo a maior variabilidade possível.</p></li>
+<li><p>Gera novas características que não são correlacionadas.</p></li>
+<li><p>Elimina completamente a variabilidade dos dados.</p></li>
+</ol></li>
+<li><p><strong>Qual é a função principal da técnica t-SNE?</strong></p>
+<ol type="1">
+<li><p>Agrupar dados de alta dimensionalidade.</p></li>
+<li><p>Visualizar dados de alta dimensionalidade em espaços de menor dimensão.</p></li>
+<li><p>Normalizar dados textuais.</p></li>
+<li><p>Criar novas features a partir dos dados originais.</p></li>
+</ol></li>
+<li><p><strong>Por que técnicas de redução de dimensionalidade, como PCA, são úteis em vetorização de texto?</strong></p>
+<ol type="1">
+<li><p>Elas aumentam a precisão dos modelos de aprendizado de máquina.</p></li>
+<li><p>Elas eliminam a necessidade de embeddings contextuais.</p></li>
+<li><p>Elas reduzem a quantidade de dados de entrada para tornar o processamento mais eficiente e visualizável.</p></li>
+<li><p>Elas criam novas features para melhorar o desempenho de modelos de deep learning.</p></li>
+</ol></li>
+<li><p><strong>Em qual cenário a redução de dimensionalidade é particularmente útil?</strong></p>
+<ol type="1">
+<li><p>Quando se deseja aumentar a complexidade do modelo.</p></li>
+<li><p>Quando os dados têm poucas features e baixa variabilidade.</p></li>
+<li><p>Quando os dados têm muitas dimensões e se deseja melhorar a visualização ou performance do modelo.</p></li>
+<li><p>Quando se deseja eliminar o ruído dos dados, independentemente da dimensionalidade.</p></li>
+</ol></li>
+</ol>
+
+
+</section>
+
+</main> <!-- /main -->
+﻿<script>
+(function () {
+  function isTypingTarget(el) {
+    if (!el) return false;
+    var tag = el.tagName ? el.tagName.toLowerCase() : '';
+    return tag === 'input' || tag === 'textarea' || tag === 'select' || el.isContentEditable;
+  }
+
+  function findLink(rel, fallbackSelector) {
+    var byRel = document.querySelector('a[rel="' + rel + '"]');
+    if (byRel) return byRel;
+    return document.querySelector(fallbackSelector);
+  }
+
+  document.addEventListener('keydown', function (e) {
+    if (e.defaultPrevented) return;
+    if (isTypingTarget(e.target)) return;
+
+    if (e.key === 'ArrowRight') {
+      var nextLink = findLink('next', '.nav-page-next a');
+      if (nextLink && nextLink.href) {
+        window.location.href = nextLink.href;
+      }
+    } else if (e.key === 'ArrowLeft') {
+      var prevLink = findLink('prev', '.nav-page-previous a');
+      if (prevLink && prevLink.href) {
+        window.location.href = prevLink.href;
+      }
+    }
+  });
+})();
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/giseldo\.github\.io\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../sections/6_vetoriza-o-de-texto.html" class="pagination-link" aria-label="Vetorização de Texto">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Vetorização de Texto</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../sections/8_aplica-es-pr-ticas.html" class="pagination-link" aria-label="Aplicações Práticas">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Aplicações Práticas</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Construindo Chatbotr (2e) foi escrito por Giseldo Neo e Alana Neo.</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Este html foi gerado com o <a href="https://quarto.org/">Quarto</a>.</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

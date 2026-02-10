@@ -13,7 +13,9 @@ toc: True
 {{< figure src="/images/livro/chatbots/capa.png" width="75%" >}}
 {{< column >}}
 
-## Construindo Chatbots: do Artificial Inteligence Markup Language e PLN até os Modernos Large Language Models
+## Construindo Chatbots
+
+### do Artificial Inteligence Markup Language e PLN até os Modernos Large Language Models
 
 ### Teoria e Prática com Python
 
@@ -27,12 +29,14 @@ Este livro apresenta os chatbots clássicos, baseados em AIML, e por que express
 
 ---
 
-## Regressão Linear com Aprendizagem de Máquina com Python
-
 {{< columns >}}
 {{< figure src="/images/livro/reg/capa.png" width="75%" >}}
 {{< column >}}
-  
+
+## Regressão Linear com Aprendizagem de Máquina com Python
+
+### Teoria e Prática com Python
+
 Este livro fornece uma visão inicial e objetiva sobre a teoria e a aplicação prática da regressão linear no contexto do aprendizado de máquina com python. Ele é adequado para iniciantes que estão começando sua jornada no aprendizado de máquina e da regressão linear, mas que já conhecem o básico da linguagem python. Ao longo dos capítulos, apresentamos os conceitos e suposições da regressão até as aplicações e diagnósticos de modelos, passando por estudos de caso e o uso de bibliotecas de software utilizadas como Python e Scikit-learn. Os exercícios ao final de cada capítulo são elaborados para reforçar este aprendizado.
 
 <a href="/images/livro/reg/_book/index.html" target="_blank">Versão HTML (↗)</a></br>
@@ -46,19 +50,23 @@ Este livro fornece uma visão inicial e objetiva sobre a teoria e a aplicação 
 
 ---
 
-## Processamento de Linguagem Natural: Vetorização de Texto com Python
 
 {{< columns >}}
 {{< figure src="/images/livro/vetorizacao/capa.png" width="75%" >}}
 {{< column >}}
 
+## Processamento de Linguagem Natural 
+
+### Vetorização de Texto com Python
+
+### Teoria e Prática com Python
+
 O processamento de linguagem natural (PLN) tem se tornado cada vez mais relevante na era da informação, onde a habilidade de transformar dados textuais em insights acionáveis é crucial. Este livro oferece uma introdução concisa, porém abrangente, ao processo de vetorização de texto, uma técnica fundamental em PLN. Espero que este livro seja um ponto de partida útil para 
 suas futuras explorações no mundo do processamento de linguagem natural.
 
-<a href="/images/livro/vetorizacao/vetorizacao.pdf" target="_blank">Download do Livro em PDF (↗)</a> 
-</br>
-<a href="https://www.amazon.com.br/gp/product/B0DGB9W7MW" target="_blank">Adquirir e-pub na Amazon (↗)</a> 
-</br>
+<a href="/images/livro/vetorizacao/_book/index.html" target="_blank">Versão HTML (↗)</a></br>
+<a href="/images/livro/vetorizacao/vetorizacao.pdf" target="_blank">Download do Livro em PDF (↗)</a> </br>
+<a href="https://www.amazon.com.br/gp/product/B0DGB9W7MW" target="_blank">Adquirir e-pub na Amazon (↗)</a> </br>
 <a href="https://loja.uiclap.com/titulo/ua65564" target="_blank">Adquirir PDF na UICLAP (↗)</a> 
 
 {{< endcolumns >}}
