@@ -15,7 +15,7 @@ toc: True
 
 ## Construindo Chatbots
 
-### do Artificial Inteligence Markup Language e PLN até os Modernos Large Language Models
+### do Artificial Inteligence Markup Language e PLN até os modernos Large Language Models
 
 ### Teoria e Prática com Python
 
@@ -78,7 +78,7 @@ suas futuras explorações no mundo do processamento de linguagem natural.
 {{< figure src="/images/livro/contos/capa.png" width="75%" >}}
 {{< column >}}
 
-
+<a href="/images/livro/contos/_book/index.html" target="_blank">Versão HTML (↗)</a></br>
 <a href="/images/livro/contos/contos.pdf" target="_blank">Download do Livro em PDF (↗)</a> 
 
 {{< endcolumns >}}
