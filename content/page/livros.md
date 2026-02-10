@@ -33,7 +33,7 @@ Este livro apresenta os chatbots clássicos, baseados em AIML, e por que express
 {{< figure src="/images/livro/reg/capa.png" width="75%" >}}
 {{< column >}}
 
-## Regressão Linear com Aprendizagem de Máquina com Python
+## Regressão Linear com Aprendizagem de Máquina
 
 ### Teoria e Prática com Python
 
@@ -50,14 +50,13 @@ Este livro fornece uma visão inicial e objetiva sobre a teoria e a aplicação 
 
 ---
 
-
 {{< columns >}}
 {{< figure src="/images/livro/vetorizacao/capa.png" width="75%" >}}
 {{< column >}}
 
 ## Processamento de Linguagem Natural 
 
-### Vetorização de Texto com Python
+### Vetorização de Texto
 
 ### Teoria e Prática com Python
 
