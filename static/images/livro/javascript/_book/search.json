@@ -1,0 +1,1372 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "JavaScript com Alana",
+    "section": "",
+    "text": "Bem Vindo",
+    "crumbs": [
+      "Bem Vindo"
+    ]
+  },
+  {
+    "objectID": "sections/0-introducao.html",
+    "href": "sections/0-introducao.html",
+    "title": "1  Introdução",
+    "section": "",
+    "text": "1.1 Como estudar este livro\nEste livro foi preparado para estudantes do ensino médio técnico que estão começando em JavaScript e querem aprender de forma prática.\nAo longo dos capítulos, você vai sair do básico (variáveis e decisões) até temas mais avançados, como módulos, orientação a objetos, eventos de interface, APIs e testes.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introdução</span>"
+    ]
+  },
+  {
+    "objectID": "sections/0-introducao.html#como-estudar-este-livro",
+    "href": "sections/0-introducao.html#como-estudar-este-livro",
+    "title": "1  Introdução",
+    "section": "",
+    "text": "Estude um capítulo por vez, na ordem.\nDigite os exemplos no seu computador, em vez de só ler.\nFaça pequenas mudanças no código para observar o que acontece.\nResolva os exercícios antes de olhar soluções prontas.\nUse o projeto final para consolidar os conceitos.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introdução</span>"
+    ]
+  },
+  {
+    "objectID": "sections/0-introducao.html#o-que-você-vai-construir-como-estudante",
+    "href": "sections/0-introducao.html#o-que-você-vai-construir-como-estudante",
+    "title": "1  Introdução",
+    "section": "1.2 O que você vai construir como estudante",
+    "text": "1.2 O que você vai construir como estudante\n\nprogramas simples de cálculo (média, desconto, orçamento);\npequenos sistemas com listas (tarefas, alunos, produtos);\npáginas com interação (DOM e eventos);\nconsumo de APIs para trazer dados reais;\ntestes para verificar se funções estão corretas.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introdução</span>"
+    ]
+  },
+  {
+    "objectID": "sections/0-introducao.html#pré-requisitos",
+    "href": "sections/0-introducao.html#pré-requisitos",
+    "title": "1  Introdução",
+    "section": "1.3 Pré-requisitos",
+    "text": "1.3 Pré-requisitos\n\nlógica de programação básica;\neditor de código (VS Code recomendado);\nnavegador atualizado (Chrome, Edge ou Firefox);\nNode.js (recomendado a partir dos capítulos de módulos e testes).",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introdução</span>"
+    ]
+  },
+  {
+    "objectID": "sections/0-introducao.html#preparando-o-ambiente",
+    "href": "sections/0-introducao.html#preparando-o-ambiente",
+    "title": "1  Introdução",
+    "section": "1.4 Preparando o ambiente",
+    "text": "1.4 Preparando o ambiente\n\n1.4.1 1) Criar uma pasta de estudos\nCrie uma pasta chamada javascript-estudos e, dentro dela, uma pasta por capítulo.\n\n\n1.4.2 2) Teste no navegador\nCrie um arquivo index.html:\n&lt;!DOCTYPE html&gt;\n&lt;html lang=\"pt-BR\"&gt;\n&lt;head&gt;\n  &lt;meta charset=\"UTF-8\" /&gt;\n  &lt;title&gt;Teste JavaScript&lt;/title&gt;\n&lt;/head&gt;\n&lt;body&gt;\n  &lt;h1&gt;Meu primeiro teste&lt;/h1&gt;\n  &lt;script&gt;\n    console.log(\"JavaScript rodando no navegador\");\n  &lt;/script&gt;\n&lt;/body&gt;\n&lt;/html&gt;\nAbra esse arquivo no navegador e depois abra o console com F12.\n\n\n1.4.3 3) Teste no Node.js\nCrie um arquivo app.js:\nconsole.log(\"JavaScript rodando com Node.js\");\nNo terminal:\nnode app.js",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introdução</span>"
+    ]
+  },
+  {
+    "objectID": "sections/0-introducao.html#dica-de-rotina-semanal",
+    "href": "sections/0-introducao.html#dica-de-rotina-semanal",
+    "title": "1  Introdução",
+    "section": "1.5 Dica de rotina semanal",
+    "text": "1.5 Dica de rotina semanal\n\nSegunda: leitura de teoria (30 min).\nTerça: prática de exemplos (40 min).\nQuarta: exercícios (40 min).\nQuinta: revisão dos erros (20 min).\nSexta: mini desafio com código próprio (30 min).",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introdução</span>"
+    ]
+  },
+  {
+    "objectID": "sections/0-introducao.html#erros-comuns-de-quem-está-começando",
+    "href": "sections/0-introducao.html#erros-comuns-de-quem-está-começando",
+    "title": "1  Introdução",
+    "section": "1.6 Erros comuns de quem está começando",
+    "text": "1.6 Erros comuns de quem está começando\n\nCopiar código sem testar.\nPular exercícios.\nTentar aprender tudo em um único dia.\nNão ler mensagens de erro no console.\nDesistir ao primeiro bug.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introdução</span>"
+    ]
+  },
+  {
+    "objectID": "sections/0-introducao.html#objetivo-final",
+    "href": "sections/0-introducao.html#objetivo-final",
+    "title": "1  Introdução",
+    "section": "1.7 Objetivo final",
+    "text": "1.7 Objetivo final\nNo último capítulo, você vai montar um projeto completo conectando os conteúdos estudados. A ideia é terminar com segurança para continuar aprendendo frameworks e desenvolvimento web moderno.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introdução</span>"
+    ]
+  },
+  {
+    "objectID": "sections/1-o-que-e.html",
+    "href": "sections/1-o-que-e.html",
+    "title": "2  O que é JavaScript?",
+    "section": "",
+    "text": "2.1 Por que aprender JavaScript?\nJavaScript é uma linguagem de programação criada para dar interatividade às páginas web.\nCom o tempo, ela também passou a ser usada no servidor, em aplicativos mobile, desktop e automações.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>O que é JavaScript?</span>"
+    ]
+  },
+  {
+    "objectID": "sections/1-o-que-e.html#por-que-aprender-javascript",
+    "href": "sections/1-o-que-e.html#por-que-aprender-javascript",
+    "title": "2  O que é JavaScript?",
+    "section": "",
+    "text": "É a linguagem principal da web.\nTem grande mercado de trabalho.\nPermite criar projetos completos (front-end e back-end).\nÉ ótima para começar lógica e programação prática.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>O que é JavaScript?</span>"
+    ]
+  },
+  {
+    "objectID": "sections/1-o-que-e.html#onde-o-javascript-roda",
+    "href": "sections/1-o-que-e.html#onde-o-javascript-roda",
+    "title": "2  O que é JavaScript?",
+    "section": "2.2 Onde o JavaScript roda?",
+    "text": "2.2 Onde o JavaScript roda?\n\nnavegador (Chrome, Edge, Firefox);\nservidor com Node.js;\naplicações desktop e mobile usando frameworks.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>O que é JavaScript?</span>"
+    ]
+  },
+  {
+    "objectID": "sections/1-o-que-e.html#seu-primeiro-programa",
+    "href": "sections/1-o-que-e.html#seu-primeiro-programa",
+    "title": "2  O que é JavaScript?",
+    "section": "2.3 Seu primeiro programa",
+    "text": "2.3 Seu primeiro programa\nconsole.log(\"Olá, mundo!\");\nEsse comando imprime uma mensagem no console.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>O que é JavaScript?</span>"
+    ]
+  },
+  {
+    "objectID": "sections/1-o-que-e.html#rodando-no-navegador",
+    "href": "sections/1-o-que-e.html#rodando-no-navegador",
+    "title": "2  O que é JavaScript?",
+    "section": "2.4 Rodando no navegador",
+    "text": "2.4 Rodando no navegador\nCrie um arquivo index.html:\n&lt;!DOCTYPE html&gt;\n&lt;html lang=\"pt-BR\"&gt;\n&lt;head&gt;\n  &lt;meta charset=\"UTF-8\" /&gt;\n  &lt;title&gt;Primeiro JS&lt;/title&gt;\n&lt;/head&gt;\n&lt;body&gt;\n  &lt;h1&gt;Teste JavaScript&lt;/h1&gt;\n  &lt;script&gt;\n    console.log(\"Executando no navegador\");\n  &lt;/script&gt;\n&lt;/body&gt;\n&lt;/html&gt;",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>O que é JavaScript?</span>"
+    ]
+  },
+  {
+    "objectID": "sections/1-o-que-e.html#rodando-com-node.js",
+    "href": "sections/1-o-que-e.html#rodando-com-node.js",
+    "title": "2  O que é JavaScript?",
+    "section": "2.5 Rodando com Node.js",
+    "text": "2.5 Rodando com Node.js\nCrie app.js:\nconsole.log(\"Executando com Node.js\");\nNo terminal:\nnode app.js",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>O que é JavaScript?</span>"
+    ]
+  },
+  {
+    "objectID": "sections/1-o-que-e.html#javascript-no-dia-a-dia-de-um-estudante",
+    "href": "sections/1-o-que-e.html#javascript-no-dia-a-dia-de-um-estudante",
+    "title": "2  O que é JavaScript?",
+    "section": "2.6 JavaScript no dia a dia de um estudante",
+    "text": "2.6 JavaScript no dia a dia de um estudante\nExemplo: calcular tempo de deslocamento até a escola.\nconst distanciaKm = 4;\nconst velocidadeKmH = 5;\nconst tempoHoras = distanciaKm / velocidadeKmH;\n\nconsole.log(`Tempo estimado: ${tempoHoras} hora(s)`);\nExemplo: simular gasto diário com lanche.\nconst salgado = 8;\nconst suco = 6;\nconst total = salgado + suco;\n\nconsole.log(`Gasto de hoje: R$ ${total}`);",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>O que é JavaScript?</span>"
+    ]
+  },
+  {
+    "objectID": "sections/1-o-que-e.html#comentários-no-código",
+    "href": "sections/1-o-que-e.html#comentários-no-código",
+    "title": "2  O que é JavaScript?",
+    "section": "2.7 Comentários no código",
+    "text": "2.7 Comentários no código\n// Comentário de uma linha\n\n/*\n  Comentário\n  de múltiplas linhas\n*/\nUse comentários para explicar decisões importantes, não para repetir o óbvio.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>O que é JavaScript?</span>"
+    ]
+  },
+  {
+    "objectID": "sections/1-o-que-e.html#boas-práticas-iniciais",
+    "href": "sections/1-o-que-e.html#boas-práticas-iniciais",
+    "title": "2  O que é JavaScript?",
+    "section": "2.8 Boas práticas iniciais",
+    "text": "2.8 Boas práticas iniciais\n\nNomeie variáveis com clareza.\nMantenha o código identado.\nTeste em pequenos passos.\nLeia mensagens de erro com atenção.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>O que é JavaScript?</span>"
+    ]
+  },
+  {
+    "objectID": "sections/1-o-que-e.html#exercícios",
+    "href": "sections/1-o-que-e.html#exercícios",
+    "title": "2  O que é JavaScript?",
+    "section": "2.9 Exercícios",
+    "text": "2.9 Exercícios\n\nMostre seu nome, turma e cidade no console.\nCrie um programa que calcule o custo de 5 passagens de ônibus.\nCrie um HTML com botão e, no &lt;script&gt;, mostre no console \"Página carregada\".\nDesafio: simule o custo semanal de transporte para a escola.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>O que é JavaScript?</span>"
+    ]
+  },
+  {
+    "objectID": "sections/2-variaveis-tipos.html",
+    "href": "sections/2-variaveis-tipos.html",
+    "title": "3  Variáveis e Tipos",
+    "section": "",
+    "text": "3.1 let, const e var\nVariável é um espaço na memória usado para armazenar dados durante a execução do programa.\nEm JavaScript, variáveis servem para guardar valores que podem ser usados, combinados e transformados ao longo do programa. Entender bem como declarar e manipular variáveis evita muitos erros comuns em código iniciante.\nQuando possível, prefira const. Isso ajuda a deixar claro o que nao deve mudar. Use let quando a variavel realmente precisar ser atualizada.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Variáveis e Tipos</span>"
+    ]
+  },
+  {
+    "objectID": "sections/2-variaveis-tipos.html#let-const-e-var",
+    "href": "sections/2-variaveis-tipos.html#let-const-e-var",
+    "title": "3  Variáveis e Tipos",
+    "section": "",
+    "text": "let: valor pode mudar.\nconst: valor não pode ser reatribuído.\nvar: forma antiga, evite em novos projetos.\n\n\nlet idade = 16;\nconst escola = \"Escola Técnica\";\n\nidade = 17;\n\nconsole.log(idade);\nconsole.log(escola);\n\n3.1.1 Escopo (onde a variavel existe)\n\nlet e const tem escopo de bloco: so existem dentro de chaves { }.\nvar tem escopo de funcao: pode vazar para fora de blocos e causar bugs.\n\nif (true) {\n    let dentro = \"ok\";\n    var fora = \"opa\";\n}\n\n// console.log(dentro); // erro: dentro nao existe aqui\nconsole.log(fora); // funciona, mas e perigoso\n\n\n3.1.2 Reatribuicao vs. mutacao\nconst impede reatribuicao, mas nao impede mutar objetos e arrays.\nconst aluno = { nome: \"Joao\", nota: 8 };\naluno.nota = 9; // ok\n\n// aluno = { nome: \"Maria\" }; // erro",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Variáveis e Tipos</span>"
+    ]
+  },
+  {
+    "objectID": "sections/2-variaveis-tipos.html#regras-de-nome-de-variáveis",
+    "href": "sections/2-variaveis-tipos.html#regras-de-nome-de-variáveis",
+    "title": "3  Variáveis e Tipos",
+    "section": "3.2 Regras de nome de variáveis",
+    "text": "3.2 Regras de nome de variáveis\n\nComece com letra, _ ou $.\nNão use espaços.\nEvite nomes genéricos como x, y, z em projetos reais.\nUse nomes claros: notaFinal, valorTotal, nomeAluno.\n\nBoas praticas:\n\nUse camelCase em nomes de variaveis e funcoes.\nEvite abreviacoes confusas.\nPrefira nomes que indiquem o papel do dado: quantidadeItens, estaAtivo.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Variáveis e Tipos</span>"
+    ]
+  },
+  {
+    "objectID": "sections/2-variaveis-tipos.html#tipos-primitivos",
+    "href": "sections/2-variaveis-tipos.html#tipos-primitivos",
+    "title": "3  Variáveis e Tipos",
+    "section": "3.3 Tipos primitivos",
+    "text": "3.3 Tipos primitivos\n\nstring (texto)\nnumber (número)\nboolean (true ou false)\nnull\nundefined\nbigint\nsymbol\n\nOutros tipos importantes:\n\nobject: estruturas como arrays, objetos e datas.\nfunction: funcoes tambem sao valores.\n\nconst nome = \"Ana\";\nconst nota = 8.5;\nconst aprovado = true;\n\nconsole.log(typeof nome);     // string\nconsole.log(typeof nota);     // number\nconsole.log(typeof aprovado); // boolean\n\n3.3.1 null vs undefined\n\nundefined: valor nao definido (variavel declarada mas sem valor).\nnull: valor vazio definido pelo programador.\n\nlet resultado;\nconst vazio = null;\n\nconsole.log(resultado); // undefined\nconsole.log(vazio); // null\nCuriosidade: typeof null retorna object por um detalhe historico.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Variáveis e Tipos</span>"
+    ]
+  },
+  {
+    "objectID": "sections/2-variaveis-tipos.html#conversão-de-tipos",
+    "href": "sections/2-variaveis-tipos.html#conversão-de-tipos",
+    "title": "3  Variáveis e Tipos",
+    "section": "3.4 Conversão de tipos",
+    "text": "3.4 Conversão de tipos\nQuando um valor de texto precisa virar numero, use Number. Para conversoes mais tolerantes, use parseInt ou parseFloat.\nconst textoNumero = \"42\";\nconst numero = Number(textoNumero);\n\nconsole.log(numero + 8); // 50\nconsole.log(parseInt(\"12px\", 10)); // 12\nconsole.log(parseFloat(\"10.5em\")); // 10.5\nOutras conversões úteis:\nconsole.log(String(150));     // \"150\"\nconsole.log(Boolean(1));      // true\nconsole.log(Boolean(0));      // false\n\n3.4.1 Valores truthy e falsy\nEm condicoes, alguns valores sao considerados false:\n\nfalse, 0, \"\", null, undefined, NaN\n\nTodo o resto e true.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Variáveis e Tipos</span>"
+    ]
+  },
+  {
+    "objectID": "sections/2-variaveis-tipos.html#nan-e-validação-de-número",
+    "href": "sections/2-variaveis-tipos.html#nan-e-validação-de-número",
+    "title": "3  Variáveis e Tipos",
+    "section": "3.5 NaN e validação de número",
+    "text": "3.5 NaN e validação de número\nNaN significa “Not a Number”, quando uma operação numérica falha.\nconst entrada = \"abc\";\nconst valor = Number(entrada);\n\nconsole.log(valor); // NaN\nconsole.log(Number.isNaN(valor)); // true\nUse Number.isNaN para validar numeros depois de conversoes. isNaN global pode confundir porque converte tipos antes de testar.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Variáveis e Tipos</span>"
+    ]
+  },
+  {
+    "objectID": "sections/2-variaveis-tipos.html#template-strings",
+    "href": "sections/2-variaveis-tipos.html#template-strings",
+    "title": "3  Variáveis e Tipos",
+    "section": "3.6 Template strings",
+    "text": "3.6 Template strings\nTemplate string usa crase para montar frases com variáveis.\nconst aluno = \"Carlos\";\nconst media = 7.8;\nconsole.log(`Aluno: ${aluno} | Média: ${media}`);\nTemplate strings tambem permitem quebrar linhas com facilidade:\nconst aviso = `Aluno: ${aluno}\nMedia: ${media}`;\nconsole.log(aviso);",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Variáveis e Tipos</span>"
+    ]
+  },
+  {
+    "objectID": "sections/2-variaveis-tipos.html#exemplo-prático-orçamento-de-passeio",
+    "href": "sections/2-variaveis-tipos.html#exemplo-prático-orçamento-de-passeio",
+    "title": "3  Variáveis e Tipos",
+    "section": "3.8 Exemplo prático: orçamento de passeio",
+    "text": "3.8 Exemplo prático: orçamento de passeio\nconst transporte = 50;\nconst alimentacao = 45;\nconst ingresso = 30;\n\nconst total = transporte + alimentacao + ingresso;\nconsole.log(`Custo total do passeio: R$ ${total}`);",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Variáveis e Tipos</span>"
+    ]
+  },
+  {
+    "objectID": "sections/2-variaveis-tipos.html#exemplo-prático-situação-do-estudante",
+    "href": "sections/2-variaveis-tipos.html#exemplo-prático-situação-do-estudante",
+    "title": "3  Variáveis e Tipos",
+    "section": "3.9 Exemplo prático: situação do estudante",
+    "text": "3.9 Exemplo prático: situação do estudante\nconst faltas = 12;\nconst limite = 15;\nconst podeFaltarMais = faltas &lt; limite;\n\nconsole.log(`Pode faltar mais? ${podeFaltarMais}`);",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Variáveis e Tipos</span>"
+    ]
+  },
+  {
+    "objectID": "sections/2-variaveis-tipos.html#exercícios",
+    "href": "sections/2-variaveis-tipos.html#exercícios",
+    "title": "3  Variáveis e Tipos",
+    "section": "3.10 Exercícios",
+    "text": "3.10 Exercícios\n\nDeclare variáveis para nome, idade e cidade e exiba no console.\nConverta a string \"150\" para número e some com 25.\nCrie uma mensagem com template string informando produto e preço.\nCrie um programa que receba preço e quantidade e exiba o total.\nDesafio: leia uma string numérica e valide se a conversão resultou em número válido.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Variáveis e Tipos</span>"
+    ]
+  },
+  {
+    "objectID": "sections/3-operadores-controle.html",
+    "href": "sections/3-operadores-controle.html",
+    "title": "4  Operadores e Estruturas de Controle",
+    "section": "",
+    "text": "4.1 Operadores aritméticos\nNeste capítulo, você vai aprender a tomar decisões no código e repetir tarefas com laços.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Operadores e Estruturas de Controle</span>"
+    ]
+  },
+  {
+    "objectID": "sections/3-operadores-controle.html#operadores-aritméticos",
+    "href": "sections/3-operadores-controle.html#operadores-aritméticos",
+    "title": "4  Operadores e Estruturas de Controle",
+    "section": "",
+    "text": "const a = 10;\nconst b = 3;\n\nconsole.log(a + b); // soma\nconsole.log(a - b); // subtração\nconsole.log(a * b); // multiplicação\nconsole.log(a / b); // divisão\nconsole.log(a % b); // resto",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Operadores e Estruturas de Controle</span>"
+    ]
+  },
+  {
+    "objectID": "sections/3-operadores-controle.html#operadores-relacionais",
+    "href": "sections/3-operadores-controle.html#operadores-relacionais",
+    "title": "4  Operadores e Estruturas de Controle",
+    "section": "4.2 Operadores relacionais",
+    "text": "4.2 Operadores relacionais\nconsole.log(8 &gt; 5);   // true\nconsole.log(8 &gt;= 8);  // true\nconsole.log(8 &lt; 5);   // false\nconsole.log(8 === 8); // true\nconsole.log(8 !== 7); // true",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Operadores e Estruturas de Controle</span>"
+    ]
+  },
+  {
+    "objectID": "sections/3-operadores-controle.html#operadores-lógicos",
+    "href": "sections/3-operadores-controle.html#operadores-lógicos",
+    "title": "4  Operadores e Estruturas de Controle",
+    "section": "4.3 Operadores lógicos",
+    "text": "4.3 Operadores lógicos\n\n&& (E): tudo precisa ser verdadeiro.\n|| (OU): ao menos uma condição verdadeira.\n! (NÃO): inverte.\n\nconst nota = 7;\nconst frequencia = 80;\n\nconst aprovado = nota &gt;= 6 && frequencia &gt;= 75;\nconsole.log(aprovado);",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Operadores e Estruturas de Controle</span>"
+    ]
+  },
+  {
+    "objectID": "sections/3-operadores-controle.html#if-else-if-else",
+    "href": "sections/3-operadores-controle.html#if-else-if-else",
+    "title": "4  Operadores e Estruturas de Controle",
+    "section": "4.4 if, else if, else",
+    "text": "4.4 if, else if, else\nconst temperatura = 18;\n\nif (temperatura &lt; 15) {\n  console.log(\"Frio\");\n} else if (temperatura &lt;= 25) {\n  console.log(\"Agradável\");\n} else {\n  console.log(\"Quente\");\n}",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Operadores e Estruturas de Controle</span>"
+    ]
+  },
+  {
+    "objectID": "sections/3-operadores-controle.html#exemplo-escolar-status-do-aluno",
+    "href": "sections/3-operadores-controle.html#exemplo-escolar-status-do-aluno",
+    "title": "4  Operadores e Estruturas de Controle",
+    "section": "4.5 Exemplo escolar: status do aluno",
+    "text": "4.5 Exemplo escolar: status do aluno\nconst media = 6.2;\n\nif (media &gt;= 7) {\n  console.log(\"Aprovado\");\n} else if (media &gt;= 5) {\n  console.log(\"Recuperação\");\n} else {\n  console.log(\"Reprovado\");\n}",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Operadores e Estruturas de Controle</span>"
+    ]
+  },
+  {
+    "objectID": "sections/3-operadores-controle.html#switch",
+    "href": "sections/3-operadores-controle.html#switch",
+    "title": "4  Operadores e Estruturas de Controle",
+    "section": "4.6 switch",
+    "text": "4.6 switch\nconst dia = 3;\n\nswitch (dia) {\n  case 1:\n    console.log(\"Domingo\");\n    break;\n  case 2:\n    console.log(\"Segunda\");\n    break;\n  case 3:\n    console.log(\"Terça\");\n    break;\n  default:\n    console.log(\"Dia inválido\");\n}",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Operadores e Estruturas de Controle</span>"
+    ]
+  },
+  {
+    "objectID": "sections/3-operadores-controle.html#operador-ternário",
+    "href": "sections/3-operadores-controle.html#operador-ternário",
+    "title": "4  Operadores e Estruturas de Controle",
+    "section": "4.7 Operador ternário",
+    "text": "4.7 Operador ternário\nconst idade = 17;\nconst status = idade &gt;= 18 ? \"Maior de idade\" : \"Menor de idade\";\nconsole.log(status);",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Operadores e Estruturas de Controle</span>"
+    ]
+  },
+  {
+    "objectID": "sections/3-operadores-controle.html#laço-for",
+    "href": "sections/3-operadores-controle.html#laço-for",
+    "title": "4  Operadores e Estruturas de Controle",
+    "section": "4.8 Laço for",
+    "text": "4.8 Laço for\nfor (let i = 1; i &lt;= 5; i++) {\n  console.log(`Valor: ${i}`);\n}",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Operadores e Estruturas de Controle</span>"
+    ]
+  },
+  {
+    "objectID": "sections/3-operadores-controle.html#laço-while",
+    "href": "sections/3-operadores-controle.html#laço-while",
+    "title": "4  Operadores e Estruturas de Controle",
+    "section": "4.9 Laço while",
+    "text": "4.9 Laço while\nlet contador = 1;\n\nwhile (contador &lt;= 3) {\n  console.log(contador);\n  contador++;\n}",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Operadores e Estruturas de Controle</span>"
+    ]
+  },
+  {
+    "objectID": "sections/3-operadores-controle.html#break-e-continue",
+    "href": "sections/3-operadores-controle.html#break-e-continue",
+    "title": "4  Operadores e Estruturas de Controle",
+    "section": "4.10 break e continue",
+    "text": "4.10 break e continue\nfor (let i = 1; i &lt;= 10; i++) {\n  if (i === 4) continue;\n  if (i === 8) break;\n  console.log(i);\n}",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Operadores e Estruturas de Controle</span>"
+    ]
+  },
+  {
+    "objectID": "sections/3-operadores-controle.html#exemplo-prático-orçamento-até-limite",
+    "href": "sections/3-operadores-controle.html#exemplo-prático-orçamento-até-limite",
+    "title": "4  Operadores e Estruturas de Controle",
+    "section": "4.11 Exemplo prático: orçamento até limite",
+    "text": "4.11 Exemplo prático: orçamento até limite\nconst gastos = [20, 35, 18, 40, 12];\nlet total = 0;\n\nfor (let i = 0; i &lt; gastos.length; i++) {\n  if (total + gastos[i] &gt; 90) {\n    console.log(\"Limite de orçamento atingido\");\n    break;\n  }\n\n  total += gastos[i];\n}\n\nconsole.log(`Total acumulado: R$ ${total}`);",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Operadores e Estruturas de Controle</span>"
+    ]
+  },
+  {
+    "objectID": "sections/3-operadores-controle.html#exercícios",
+    "href": "sections/3-operadores-controle.html#exercícios",
+    "title": "4  Operadores e Estruturas de Controle",
+    "section": "4.12 Exercícios",
+    "text": "4.12 Exercícios\n\nClassifique uma nota em A, B, C ou D.\nMostre os números pares de 2 a 20.\nCalcule a soma de 1 até 100 com laço.\nUse switch para exibir o nome do mês com base no número.\nDesafio: simule uma compra que para quando atingir um limite de gasto.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Operadores e Estruturas de Controle</span>"
+    ]
+  },
+  {
+    "objectID": "sections/4-funcoes.html",
+    "href": "sections/4-funcoes.html",
+    "title": "5  Funções",
+    "section": "",
+    "text": "5.1 Por que funções são importantes?\nFunções são blocos de código reutilizáveis.\nElas recebem dados de entrada, executam uma tarefa e podem devolver um resultado.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Funções</span>"
+    ]
+  },
+  {
+    "objectID": "sections/4-funcoes.html#por-que-funções-são-importantes",
+    "href": "sections/4-funcoes.html#por-que-funções-são-importantes",
+    "title": "5  Funções",
+    "section": "",
+    "text": "Evitam repetição de código.\nOrganizam melhor o programa.\nFacilitam testes e manutenção.\nPermitem dividir problemas grandes em partes menores.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Funções</span>"
+    ]
+  },
+  {
+    "objectID": "sections/4-funcoes.html#declaração-de-função",
+    "href": "sections/4-funcoes.html#declaração-de-função",
+    "title": "5  Funções",
+    "section": "5.2 Declaração de função",
+    "text": "5.2 Declaração de função\nfunction saudacao(nome) {\n  return `Olá, ${nome}!`;\n}\n\nconsole.log(saudacao(\"Marina\"));",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Funções</span>"
+    ]
+  },
+  {
+    "objectID": "sections/4-funcoes.html#parâmetros-e-retorno",
+    "href": "sections/4-funcoes.html#parâmetros-e-retorno",
+    "title": "5  Funções",
+    "section": "5.3 Parâmetros e retorno",
+    "text": "5.3 Parâmetros e retorno\nfunction media(n1, n2, n3) {\n  return (n1 + n2 + n3) / 3;\n}\n\nconst resultado = media(7, 8, 9);\nconsole.log(resultado);\n\n5.3.1 Exemplo do cotidiano estudantil\nfunction mediaPresenca(aula1, aula2, aula3, aula4) {\n  return (aula1 + aula2 + aula3 + aula4) / 4;\n}\n\nconst presenca = mediaPresenca(100, 100, 75, 100);\nconsole.log(`Média de presença: ${presenca}%`);",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Funções</span>"
+    ]
+  },
+  {
+    "objectID": "sections/4-funcoes.html#parâmetros-com-valor-padrão",
+    "href": "sections/4-funcoes.html#parâmetros-com-valor-padrão",
+    "title": "5  Funções",
+    "section": "5.4 Parâmetros com valor padrão",
+    "text": "5.4 Parâmetros com valor padrão\nfunction calcularIngresso(valor, taxaServico = 5) {\n  return valor + taxaServico;\n}\n\nconsole.log(calcularIngresso(30));    // 35\nconsole.log(calcularIngresso(30, 8)); // 38",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Funções</span>"
+    ]
+  },
+  {
+    "objectID": "sections/4-funcoes.html#função-anônima-em-variável",
+    "href": "sections/4-funcoes.html#função-anônima-em-variável",
+    "title": "5  Funções",
+    "section": "5.5 Função anônima em variável",
+    "text": "5.5 Função anônima em variável\nconst dobro = function (n) {\n  return n * 2;\n};\n\nconsole.log(dobro(9));",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Funções</span>"
+    ]
+  },
+  {
+    "objectID": "sections/4-funcoes.html#arrow-functions",
+    "href": "sections/4-funcoes.html#arrow-functions",
+    "title": "5  Funções",
+    "section": "5.6 Arrow functions",
+    "text": "5.6 Arrow functions\nconst quadrado = (n) =&gt; n * n;\nconsole.log(quadrado(6));\nExemplo com turismo:\nconst calcularGastoPasseio = (transporte, alimentacao, ingresso) =&gt;\n  transporte + alimentacao + ingresso;\n\nconst gastoTotal = calcularGastoPasseio(80, 55, 30);\nconsole.log(`Gasto total no passeio: R$ ${gastoTotal}`);",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Funções</span>"
+    ]
+  },
+  {
+    "objectID": "sections/4-funcoes.html#escopo",
+    "href": "sections/4-funcoes.html#escopo",
+    "title": "5  Funções",
+    "section": "5.7 Escopo",
+    "text": "5.7 Escopo\n\nvariáveis globais: acessíveis fora de funções;\nvariáveis locais: só existem dentro da função.\n\nlet curso = \"Informática\";\n\nfunction mostrarCurso() {\n  let modulo = 2;\n  console.log(curso);\n  console.log(modulo);\n}\n\nmostrarCurso();",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Funções</span>"
+    ]
+  },
+  {
+    "objectID": "sections/4-funcoes.html#funções-puras-e-efeitos-colaterais",
+    "href": "sections/4-funcoes.html#funções-puras-e-efeitos-colaterais",
+    "title": "5  Funções",
+    "section": "5.8 Funções puras e efeitos colaterais",
+    "text": "5.8 Funções puras e efeitos colaterais\nFunção pura: para a mesma entrada, sempre devolve a mesma saída e não altera estado externo.\nfunction somar(a, b) {\n  return a + b;\n}\nFunção com efeito colateral:\nlet contador = 0;\n\nfunction incrementarContador() {\n  contador++;\n}",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Funções</span>"
+    ]
+  },
+  {
+    "objectID": "sections/4-funcoes.html#função-que-calcula-x-função-que-exibe",
+    "href": "sections/4-funcoes.html#função-que-calcula-x-função-que-exibe",
+    "title": "5  Funções",
+    "section": "5.9 Função que calcula x função que exibe",
+    "text": "5.9 Função que calcula x função que exibe\nfunction calcularDesconto(valorCompra, porcentagem) {\n  return valorCompra - (valorCompra * porcentagem) / 100;\n}\n\nfunction mostrarPrecoFinal(valorOriginal, desconto) {\n  const precoFinal = calcularDesconto(valorOriginal, desconto);\n  console.log(`De R$ ${valorOriginal} por R$ ${precoFinal}`);\n}\n\nmostrarPrecoFinal(120, 10);",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Funções</span>"
+    ]
+  },
+  {
+    "objectID": "sections/4-funcoes.html#callback-função-passada-para-outra-função",
+    "href": "sections/4-funcoes.html#callback-função-passada-para-outra-função",
+    "title": "5  Funções",
+    "section": "5.10 Callback (função passada para outra função)",
+    "text": "5.10 Callback (função passada para outra função)\nfunction processarAluno(nome, callback) {\n  const mensagem = `Aluno: ${nome}`;\n  callback(mensagem);\n}\n\nprocessarAluno(\"Bruna\", (texto) =&gt; {\n  console.log(texto.toUpperCase());\n});",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Funções</span>"
+    ]
+  },
+  {
+    "objectID": "sections/4-funcoes.html#exemplo-integrado-roteiro-de-viagem",
+    "href": "sections/4-funcoes.html#exemplo-integrado-roteiro-de-viagem",
+    "title": "5  Funções",
+    "section": "5.11 Exemplo integrado: roteiro de viagem",
+    "text": "5.11 Exemplo integrado: roteiro de viagem\nfunction somarDespesas(listaDeValores) {\n  let total = 0;\n\n  for (const valor of listaDeValores) {\n    total += valor;\n  }\n\n  return total;\n}\n\nfunction calcularCustoPorPessoa(total, quantidadePessoas) {\n  return total / quantidadePessoas;\n}\n\nconst despesas = [90, 60, 40, 30];\nconst totalViagem = somarDespesas(despesas);\nconst custoIndividual = calcularCustoPorPessoa(totalViagem, 4);\n\nconsole.log(`Total da viagem: R$ ${totalViagem}`);\nconsole.log(`Custo por pessoa: R$ ${custoIndividual}`);",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Funções</span>"
+    ]
+  },
+  {
+    "objectID": "sections/4-funcoes.html#boas-práticas-para-funções",
+    "href": "sections/4-funcoes.html#boas-práticas-para-funções",
+    "title": "5  Funções",
+    "section": "5.12 Boas práticas para funções",
+    "text": "5.12 Boas práticas para funções\n\nUse nomes claros (calcularMedia, buscarAluno).\nFaça funções curtas e com um objetivo.\nPrefira return para reaproveitamento.\nEvite misturar cálculo com interface.\nTeste cenários comuns e cenários de erro.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Funções</span>"
+    ]
+  },
+  {
+    "objectID": "sections/4-funcoes.html#exercícios",
+    "href": "sections/4-funcoes.html#exercícios",
+    "title": "5  Funções",
+    "section": "5.13 Exercícios",
+    "text": "5.13 Exercícios\n\nCrie tempoCaminhada(distanciaKm, velocidadeKmH).\nCrie converterRealParaGuarani(real, cotacao).\nCrie custoViagemBonito(transporte, hospedagem, alimentacao, passeios).\nCrie mediaNotas(notas) para um array de notas.\nDesafio: situacaoAluno(media, frequencia) com regras definidas por você.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Funções</span>"
+    ]
+  },
+  {
+    "objectID": "sections/5-arrays-objetos.html",
+    "href": "sections/5-arrays-objetos.html",
+    "title": "6  Arrays e Objetos",
+    "section": "",
+    "text": "6.1 Arrays\nArrays e objetos são estruturas fundamentais para organizar dados.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Arrays e Objetos</span>"
+    ]
+  },
+  {
+    "objectID": "sections/5-arrays-objetos.html#arrays",
+    "href": "sections/5-arrays-objetos.html#arrays",
+    "title": "6  Arrays e Objetos",
+    "section": "",
+    "text": "const notas = [7.5, 8.0, 6.5, 9.0];\n\nconsole.log(notas[0]);      // primeiro item\nconsole.log(notas.length);  // quantidade de itens",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Arrays e Objetos</span>"
+    ]
+  },
+  {
+    "objectID": "sections/5-arrays-objetos.html#métodos-mais-usados-em-arrays",
+    "href": "sections/5-arrays-objetos.html#métodos-mais-usados-em-arrays",
+    "title": "6  Arrays e Objetos",
+    "section": "6.2 Métodos mais usados em arrays",
+    "text": "6.2 Métodos mais usados em arrays\nconst alunos = [\"Ana\", \"Bruno\"];\n\nalunos.push(\"Carla\");   // adiciona no fim\nconst removido = alunos.pop(); // remove do fim\n\nconsole.log(removido);\nconsole.log(alunos);\nOutros úteis:\nconst fila = [\"A\", \"B\", \"C\"];\nfila.shift();      // remove do início\nfila.unshift(\"X\"); // adiciona no início\nconsole.log(fila);",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Arrays e Objetos</span>"
+    ]
+  },
+  {
+    "objectID": "sections/5-arrays-objetos.html#percorrendo-arrays",
+    "href": "sections/5-arrays-objetos.html#percorrendo-arrays",
+    "title": "6  Arrays e Objetos",
+    "section": "6.3 Percorrendo arrays",
+    "text": "6.3 Percorrendo arrays\n\n6.3.1 for tradicional\nconst precos = [12, 30, 18];\nlet total = 0;\n\nfor (let i = 0; i &lt; precos.length; i++) {\n  total += precos[i];\n}\n\nconsole.log(`Total: R$ ${total}`);\n\n\n6.3.2 for...of\nconst cidades = [\"Ponta Porã\", \"Dourados\", \"Bonito\"];\n\nfor (const cidade of cidades) {\n  console.log(cidade);\n}",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Arrays e Objetos</span>"
+    ]
+  },
+  {
+    "objectID": "sections/5-arrays-objetos.html#map-filter-reduce",
+    "href": "sections/5-arrays-objetos.html#map-filter-reduce",
+    "title": "6  Arrays e Objetos",
+    "section": "6.4 map, filter, reduce",
+    "text": "6.4 map, filter, reduce\nconst numeros = [1, 2, 3, 4, 5];\n\nconst dobrados = numeros.map((n) =&gt; n * 2);\nconst pares = numeros.filter((n) =&gt; n % 2 === 0);\nconst soma = numeros.reduce((acc, n) =&gt; acc + n, 0);\n\nconsole.log(dobrados);\nconsole.log(pares);\nconsole.log(soma);",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Arrays e Objetos</span>"
+    ]
+  },
+  {
+    "objectID": "sections/5-arrays-objetos.html#objetos",
+    "href": "sections/5-arrays-objetos.html#objetos",
+    "title": "6  Arrays e Objetos",
+    "section": "6.5 Objetos",
+    "text": "6.5 Objetos\nconst aluno = {\n  nome: \"João\",\n  turma: \"2A\",\n  ativo: true,\n  exibir() {\n    return `${this.nome} - ${this.turma}`;\n  }\n};\n\nconsole.log(aluno.exibir());",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Arrays e Objetos</span>"
+    ]
+  },
+  {
+    "objectID": "sections/5-arrays-objetos.html#acessando-e-alterando-propriedades",
+    "href": "sections/5-arrays-objetos.html#acessando-e-alterando-propriedades",
+    "title": "6  Arrays e Objetos",
+    "section": "6.6 Acessando e alterando propriedades",
+    "text": "6.6 Acessando e alterando propriedades\nconst produto = {\n  nome: \"Caderno\",\n  preco: 25\n};\n\nconsole.log(produto.nome);\nproduto.preco = 22;\nproduto.estoque = 15;\nconsole.log(produto);",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Arrays e Objetos</span>"
+    ]
+  },
+  {
+    "objectID": "sections/5-arrays-objetos.html#array-de-objetos",
+    "href": "sections/5-arrays-objetos.html#array-de-objetos",
+    "title": "6  Arrays e Objetos",
+    "section": "6.7 Array de objetos",
+    "text": "6.7 Array de objetos\nMuito comum em sistemas:\nconst passeios = [\n  { local: \"Bonito\", preco: 120 },\n  { local: \"Pantanal\", preco: 200 },\n  { local: \"Campo Grande\", preco: 80 }\n];\n\nconst baratos = passeios.filter((p) =&gt; p.preco &lt;= 120);\nconsole.log(baratos);",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Arrays e Objetos</span>"
+    ]
+  },
+  {
+    "objectID": "sections/5-arrays-objetos.html#desestruturação",
+    "href": "sections/5-arrays-objetos.html#desestruturação",
+    "title": "6  Arrays e Objetos",
+    "section": "6.8 Desestruturação",
+    "text": "6.8 Desestruturação\nconst estudante = {\n  nome: \"Lívia\",\n  cidade: \"Ponta Porã\",\n  curso: \"Informática\"\n};\n\nconst { nome, cidade } = estudante;\nconsole.log(nome, cidade);",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Arrays e Objetos</span>"
+    ]
+  },
+  {
+    "objectID": "sections/5-arrays-objetos.html#spread-em-arrays-e-objetos",
+    "href": "sections/5-arrays-objetos.html#spread-em-arrays-e-objetos",
+    "title": "6  Arrays e Objetos",
+    "section": "6.9 Spread em arrays e objetos",
+    "text": "6.9 Spread em arrays e objetos\nconst base = [1, 2, 3];\nconst copia = [...base, 4];\n\nconst alunoBase = { nome: \"Rafa\", turma: \"1B\" };\nconst alunoAtualizado = { ...alunoBase, turma: \"2B\" };\n\nconsole.log(copia);\nconsole.log(alunoAtualizado);",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Arrays e Objetos</span>"
+    ]
+  },
+  {
+    "objectID": "sections/5-arrays-objetos.html#exercícios",
+    "href": "sections/5-arrays-objetos.html#exercícios",
+    "title": "6  Arrays e Objetos",
+    "section": "6.10 Exercícios",
+    "text": "6.10 Exercícios\n\nCrie um array com 10 números e exiba apenas os ímpares.\nDado um array de preços, calcule o total com reduce.\nCrie um objeto produto com nome, preço e estoque.\nCrie um array de objetos alunos com nome e nota; exiba só os aprovados.\nDesafio: monte uma lista de passeios com preço e exiba o mais barato.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Arrays e Objetos</span>"
+    ]
+  },
+  {
+    "objectID": "sections/6-estruturas-lineares.html",
+    "href": "sections/6-estruturas-lineares.html",
+    "title": "7  Vetores, Matrizes, Fila e Pilha",
+    "section": "",
+    "text": "7.1 Vetores (arrays unidimensionais)\nEste capítulo aprofunda estruturas lineares muito usadas em programação.\nVetores armazenam elementos em sequência e cada posição tem um índice.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Vetores, Matrizes, Fila e Pilha</span>"
+    ]
+  },
+  {
+    "objectID": "sections/6-estruturas-lineares.html#vetores-arrays-unidimensionais",
+    "href": "sections/6-estruturas-lineares.html#vetores-arrays-unidimensionais",
+    "title": "7  Vetores, Matrizes, Fila e Pilha",
+    "section": "",
+    "text": "7.1.1 Exemplo 1: notas de uma turma\nconst notas = [7.0, 8.5, 6.0, 9.0];\n\nconsole.log(`Primeira nota: ${notas[0]}`);\nconsole.log(`Quantidade de notas: ${notas.length}`);\n\n\n7.1.2 Exemplo 2: soma e média\nconst valores = [10, 20, 30, 40];\nlet soma = 0;\n\nfor (let i = 0; i &lt; valores.length; i++) {\n  soma += valores[i];\n}\n\nconst media = soma / valores.length;\nconsole.log(`Soma: ${soma} | Média: ${media}`);\n\n\n7.1.3 Exemplo 3: filtro de valores\nconst numeros = [3, 8, 11, 14, 19, 20];\nconst pares = numeros.filter((n) =&gt; n % 2 === 0);\n\nconsole.log(pares);",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Vetores, Matrizes, Fila e Pilha</span>"
+    ]
+  },
+  {
+    "objectID": "sections/6-estruturas-lineares.html#matrizes-arrays-bidimensionais",
+    "href": "sections/6-estruturas-lineares.html#matrizes-arrays-bidimensionais",
+    "title": "7  Vetores, Matrizes, Fila e Pilha",
+    "section": "7.2 Matrizes (arrays bidimensionais)",
+    "text": "7.2 Matrizes (arrays bidimensionais)\nUma matriz é um array de arrays, com linhas e colunas.\n\n7.2.1 Exemplo 1: acesso por linha e coluna\nconst matriz = [\n  [1, 2, 3],\n  [4, 5, 6],\n  [7, 8, 9]\n];\n\nconsole.log(matriz[1][2]); // 6\n\n\n7.2.2 Exemplo 2: percorrer todos os elementos\nconst tabela = [\n  [10, 20],\n  [30, 40],\n  [50, 60]\n];\n\nfor (let linha = 0; linha &lt; tabela.length; linha++) {\n  for (let coluna = 0; coluna &lt; tabela[linha].length; coluna++) {\n    console.log(`Posição [${linha}][${coluna}] = ${tabela[linha][coluna]}`);\n  }\n}\n\n\n7.2.3 Exemplo 3: diagonal principal\nconst m = [\n  [2, 1, 0],\n  [4, 3, 8],\n  [9, 7, 6]\n];\n\nlet diagonal = 0;\n\nfor (let i = 0; i &lt; m.length; i++) {\n  diagonal += m[i][i];\n}\n\nconsole.log(`Soma diagonal principal: ${diagonal}`);",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Vetores, Matrizes, Fila e Pilha</span>"
+    ]
+  },
+  {
+    "objectID": "sections/6-estruturas-lineares.html#fila-fifo-first-in-first-out",
+    "href": "sections/6-estruturas-lineares.html#fila-fifo-first-in-first-out",
+    "title": "7  Vetores, Matrizes, Fila e Pilha",
+    "section": "7.3 Fila (FIFO: First In, First Out)",
+    "text": "7.3 Fila (FIFO: First In, First Out)\nEm fila, o primeiro a entrar é o primeiro a sair.\n\n7.3.1 Exemplo 1: atendimento\nconst fila = [];\n\nfila.push(\"Aluno 1\");\nfila.push(\"Aluno 2\");\nfila.push(\"Aluno 3\");\n\nconst atendido = fila.shift();\nconsole.log(`Atendido: ${atendido}`);\nconsole.log(fila);\n\n\n7.3.2 Exemplo 2: próximo da fila\nconst filaSenhas = [\"A01\", \"A02\", \"A03\"];\nconsole.log(`Próximo: ${filaSenhas[0]}`);\n\n\n7.3.3 Exemplo 3: fila com validação\nconst filaLaboratorio = [];\n\nfunction chamarAluno() {\n  if (filaLaboratorio.length === 0) {\n    return \"Fila vazia\";\n  }\n\n  return filaLaboratorio.shift();\n}\n\nconsole.log(chamarAluno());\nfilaLaboratorio.push(\"Carlos\");\nconsole.log(chamarAluno());",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Vetores, Matrizes, Fila e Pilha</span>"
+    ]
+  },
+  {
+    "objectID": "sections/6-estruturas-lineares.html#pilha-lifo-last-in-first-out",
+    "href": "sections/6-estruturas-lineares.html#pilha-lifo-last-in-first-out",
+    "title": "7  Vetores, Matrizes, Fila e Pilha",
+    "section": "7.4 Pilha (LIFO: Last In, First Out)",
+    "text": "7.4 Pilha (LIFO: Last In, First Out)\nEm pilha, o último a entrar é o primeiro a sair.\n\n7.4.1 Exemplo 1: empilhar e desempilhar\nconst pilha = [];\n\npilha.push(\"Prato 1\");\npilha.push(\"Prato 2\");\npilha.push(\"Prato 3\");\n\nconst removido = pilha.pop();\nconsole.log(`Removido: ${removido}`);\nconsole.log(pilha);\n\n\n7.4.2 Exemplo 2: topo sem remover\nconst historico = [\"home\", \"produtos\", \"checkout\"];\nconst topo = historico[historico.length - 1];\n\nconsole.log(`Página atual: ${topo}`);\n\n\n7.4.3 Exemplo 3: desfazer ação\nconst acoes = [];\n\nfunction executar(acao) {\n  acoes.push(acao);\n}\n\nfunction desfazer() {\n  if (acoes.length === 0) return \"Nada para desfazer\";\n  return `Desfez: ${acoes.pop()}`;\n}\n\nexecutar(\"Digitou texto\");\nexecutar(\"Apagou linha\");\nconsole.log(desfazer());\nconsole.log(desfazer());\nconsole.log(desfazer());",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Vetores, Matrizes, Fila e Pilha</span>"
+    ]
+  },
+  {
+    "objectID": "sections/6-estruturas-lineares.html#aplicação-prática-combinando-as-estruturas",
+    "href": "sections/6-estruturas-lineares.html#aplicação-prática-combinando-as-estruturas",
+    "title": "7  Vetores, Matrizes, Fila e Pilha",
+    "section": "7.5 Aplicação prática combinando as estruturas",
+    "text": "7.5 Aplicação prática combinando as estruturas\nconst filaAtendimento = [\"Aluno A\", \"Aluno B\"];\nconst historicoChamadas = [];\nconst temposEspera = [4, 6, 3, 5];\n\nconst chamado = filaAtendimento.shift();\nhistoricoChamadas.push(chamado);\n\nconst mediaEspera =\n  temposEspera.reduce((acc, t) =&gt; acc + t, 0) / temposEspera.length;\n\nconsole.log(`Chamado agora: ${chamado}`);\nconsole.log(`Média de espera: ${mediaEspera} min`);",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Vetores, Matrizes, Fila e Pilha</span>"
+    ]
+  },
+  {
+    "objectID": "sections/6-estruturas-lineares.html#exercícios",
+    "href": "sections/6-estruturas-lineares.html#exercícios",
+    "title": "7  Vetores, Matrizes, Fila e Pilha",
+    "section": "7.6 Exercícios",
+    "text": "7.6 Exercícios\n\nCrie um vetor de 6 números e calcule a média.\nCrie uma matriz 3x2 e exiba só os valores maiores que 25.\nSimule uma fila com 4 pessoas e atenda 2.\nSimule uma pilha de páginas e implemente “voltar”.\nDesafio: combine fila e pilha em um sistema simples de atendimento escolar.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Vetores, Matrizes, Fila e Pilha</span>"
+    ]
+  },
+  {
+    "objectID": "sections/7-programacao-modular.html",
+    "href": "sections/7-programacao-modular.html",
+    "title": "8  Funções, Blocos, Procedimentos, Módulos e Parâmetros",
+    "section": "",
+    "text": "8.1 Blocos\nEste capítulo organiza conceitos importantes para escrever código legível, reutilizável e escalável.\nBloco é o trecho entre chaves {}. Ele delimita escopo.",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Funções, Blocos, Procedimentos, Módulos e Parâmetros</span>"
+    ]
+  },
+  {
+    "objectID": "sections/7-programacao-modular.html#blocos",
+    "href": "sections/7-programacao-modular.html#blocos",
+    "title": "8  Funções, Blocos, Procedimentos, Módulos e Parâmetros",
+    "section": "",
+    "text": "let turma = \"2A\";\n\n{\n  let turma = \"3A\";\n  console.log(`Dentro do bloco: ${turma}`);\n}\n\nconsole.log(`Fora do bloco: ${turma}`);",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Funções, Blocos, Procedimentos, Módulos e Parâmetros</span>"
+    ]
+  },
+  {
+    "objectID": "sections/7-programacao-modular.html#procedimentos",
+    "href": "sections/7-programacao-modular.html#procedimentos",
+    "title": "8  Funções, Blocos, Procedimentos, Módulos e Parâmetros",
+    "section": "8.2 Procedimentos",
+    "text": "8.2 Procedimentos\nProcedimento executa uma ação e normalmente não depende de retorno.\nfunction mostrarCabecalho() {\n  console.log(\"=== Sistema Acadêmico ===\");\n}\n\nmostrarCabecalho();\nCom parâmetro:\nfunction saudarAluno(nome) {\n  console.log(`Bem-vindo(a), ${nome}`);\n}\n\nsaudarAluno(\"Marina\");",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Funções, Blocos, Procedimentos, Módulos e Parâmetros</span>"
+    ]
+  },
+  {
+    "objectID": "sections/7-programacao-modular.html#funções-com-retorno",
+    "href": "sections/7-programacao-modular.html#funções-com-retorno",
+    "title": "8  Funções, Blocos, Procedimentos, Módulos e Parâmetros",
+    "section": "8.3 Funções com retorno",
+    "text": "8.3 Funções com retorno\nfunction calcularMedia(n1, n2, n3) {\n  return (n1 + n2 + n3) / 3;\n}\n\nconsole.log(calcularMedia(7, 8, 9));",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Funções, Blocos, Procedimentos, Módulos e Parâmetros</span>"
+    ]
+  },
+  {
+    "objectID": "sections/7-programacao-modular.html#passagem-de-parâmetros",
+    "href": "sections/7-programacao-modular.html#passagem-de-parâmetros",
+    "title": "8  Funções, Blocos, Procedimentos, Módulos e Parâmetros",
+    "section": "8.4 Passagem de parâmetros",
+    "text": "8.4 Passagem de parâmetros\n\n8.4.1 Primitivo: cópia por valor\nlet quantidade = 5;\n\nfunction alterarNumero(n) {\n  n = 99;\n}\n\nalterarNumero(quantidade);\nconsole.log(quantidade); // 5\n\n\n8.4.2 Objeto: referência compartilhada\nconst aluno = { nome: \"Ana\", nota: 8 };\n\nfunction atualizarNota(dados) {\n  dados.nota = 10;\n}\n\natualizarNota(aluno);\nconsole.log(aluno.nota); // 10\n\n\n8.4.3 Evitando mutação com spread\nconst tarefa = { titulo: \"Estudar\", concluida: false };\n\nfunction concluirSemMutar(item) {\n  return { ...item, concluida: true };\n}\n\nconst tarefaConcluida = concluirSemMutar(tarefa);\nconsole.log(tarefa);\nconsole.log(tarefaConcluida);",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Funções, Blocos, Procedimentos, Módulos e Parâmetros</span>"
+    ]
+  },
+  {
+    "objectID": "sections/7-programacao-modular.html#modularização",
+    "href": "sections/7-programacao-modular.html#modularização",
+    "title": "8  Funções, Blocos, Procedimentos, Módulos e Parâmetros",
+    "section": "8.5 Modularização",
+    "text": "8.5 Modularização\nQuando o projeto cresce, separar por arquivos ajuda muito.\n\n8.5.1 Export nomeado\nmatematica.js\nexport function somar(a, b) {\n  return a + b;\n}\nmain.js\nimport { somar } from \"./matematica.js\";\n\nconsole.log(somar(5, 7));\n\n\n8.5.2 Múltiplos exports\nboletim.js\nexport function media(a, b) {\n  return (a + b) / 2;\n}\n\nexport function aprovado(mediaFinal) {\n  return mediaFinal &gt;= 6;\n}\napp.js\nimport { media, aprovado } from \"./boletim.js\";\n\nconst m = media(7, 5);\nconsole.log(m);\nconsole.log(aprovado(m));\n\n\n8.5.3 Export default\nmensagem.js\nexport default function gerarMensagem(nome) {\n  return `Olá, ${nome}!`;\n}\nprincipal.js\nimport gerarMensagem from \"./mensagem.js\";\n\nconsole.log(gerarMensagem(\"Carlos\"));",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Funções, Blocos, Procedimentos, Módulos e Parâmetros</span>"
+    ]
+  },
+  {
+    "objectID": "sections/7-programacao-modular.html#estrutura-sugerida-para-projetos-pequenos",
+    "href": "sections/7-programacao-modular.html#estrutura-sugerida-para-projetos-pequenos",
+    "title": "8  Funções, Blocos, Procedimentos, Módulos e Parâmetros",
+    "section": "8.6 Estrutura sugerida para projetos pequenos",
+    "text": "8.6 Estrutura sugerida para projetos pequenos\nprojeto/\n  src/\n    calculos.js\n    validacoes.js\n    app.js",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Funções, Blocos, Procedimentos, Módulos e Parâmetros</span>"
+    ]
+  },
+  {
+    "objectID": "sections/7-programacao-modular.html#exemplo-integrador",
+    "href": "sections/7-programacao-modular.html#exemplo-integrador",
+    "title": "8  Funções, Blocos, Procedimentos, Módulos e Parâmetros",
+    "section": "8.7 Exemplo integrador",
+    "text": "8.7 Exemplo integrador\ncalculos.js\nexport function totalDespesas(lista) {\n  return lista.reduce((acc, item) =&gt; acc + item, 0);\n}\napp.js\nimport { totalDespesas } from \"./calculos.js\";\n\nconst gastos = [45, 30, 20, 10];\nconsole.log(`Total: R$ ${totalDespesas(gastos)}`);",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Funções, Blocos, Procedimentos, Módulos e Parâmetros</span>"
+    ]
+  },
+  {
+    "objectID": "sections/7-programacao-modular.html#exercícios",
+    "href": "sections/7-programacao-modular.html#exercícios",
+    "title": "8  Funções, Blocos, Procedimentos, Módulos e Parâmetros",
+    "section": "8.8 Exercícios",
+    "text": "8.8 Exercícios\n\nCrie um módulo conversoes.js com metro para centímetro.\nCrie um módulo boletim.js com funções de média e status.\nCrie um export default para formatar preço em reais.\nDesafio: monte um mini projeto com app.js, dados.js e calculos.js.",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Funções, Blocos, Procedimentos, Módulos e Parâmetros</span>"
+    ]
+  },
+  {
+    "objectID": "sections/8-poo-modulos.html",
+    "href": "sections/8-poo-modulos.html",
+    "title": "9  POO e Módulos",
+    "section": "",
+    "text": "9.1 Conceitos básicos de POO\nProgramação Orientada a Objetos (POO) ajuda a modelar o mundo real em código usando classes e objetos.",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>POO e Módulos</span>"
+    ]
+  },
+  {
+    "objectID": "sections/8-poo-modulos.html#conceitos-básicos-de-poo",
+    "href": "sections/8-poo-modulos.html#conceitos-básicos-de-poo",
+    "title": "9  POO e Módulos",
+    "section": "",
+    "text": "classe: molde para criar objetos;\nobjeto: instância da classe;\natributo: característica do objeto;\nmétodo: comportamento do objeto.",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>POO e Módulos</span>"
+    ]
+  },
+  {
+    "objectID": "sections/8-poo-modulos.html#criando-uma-classe",
+    "href": "sections/8-poo-modulos.html#criando-uma-classe",
+    "title": "9  POO e Módulos",
+    "section": "9.2 Criando uma classe",
+    "text": "9.2 Criando uma classe\nclass Pessoa {\n  constructor(nome, idade) {\n    this.nome = nome;\n    this.idade = idade;\n  }\n\n  apresentar() {\n    return `Meu nome é ${this.nome} e tenho ${this.idade} anos.`;\n  }\n}\n\nconst p1 = new Pessoa(\"Lia\", 17);\nconsole.log(p1.apresentar());",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>POO e Módulos</span>"
+    ]
+  },
+  {
+    "objectID": "sections/8-poo-modulos.html#encapsulando-regras-com-métodos",
+    "href": "sections/8-poo-modulos.html#encapsulando-regras-com-métodos",
+    "title": "9  POO e Módulos",
+    "section": "9.3 Encapsulando regras com métodos",
+    "text": "9.3 Encapsulando regras com métodos\nclass ContaEstudante {\n  constructor(saldoInicial = 0) {\n    this.saldo = saldoInicial;\n  }\n\n  depositar(valor) {\n    if (valor &lt;= 0) return;\n    this.saldo += valor;\n  }\n\n  sacar(valor) {\n    if (valor &gt; this.saldo) return \"Saldo insuficiente\";\n    this.saldo -= valor;\n    return \"Saque realizado\";\n  }\n}\n\nconst conta = new ContaEstudante(100);\nconta.depositar(50);\nconsole.log(conta.sacar(30));\nconsole.log(conta.saldo);",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>POO e Módulos</span>"
+    ]
+  },
+  {
+    "objectID": "sections/8-poo-modulos.html#herança",
+    "href": "sections/8-poo-modulos.html#herança",
+    "title": "9  POO e Módulos",
+    "section": "9.4 Herança",
+    "text": "9.4 Herança\nHerança permite reutilizar código de uma classe base.\nclass Pessoa {\n  constructor(nome, idade) {\n    this.nome = nome;\n    this.idade = idade;\n  }\n}\n\nclass Aluno extends Pessoa {\n  constructor(nome, idade, curso) {\n    super(nome, idade);\n    this.curso = curso;\n  }\n\n  dados() {\n    return `${this.nome} - ${this.curso}`;\n  }\n}\n\nconst aluno = new Aluno(\"Rafa\", 16, \"Informática\");\nconsole.log(aluno.dados());",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>POO e Módulos</span>"
+    ]
+  },
+  {
+    "objectID": "sections/8-poo-modulos.html#polimorfismo-ideia-prática",
+    "href": "sections/8-poo-modulos.html#polimorfismo-ideia-prática",
+    "title": "9  POO e Módulos",
+    "section": "9.5 Polimorfismo (ideia prática)",
+    "text": "9.5 Polimorfismo (ideia prática)\nDiferentes classes podem ter métodos com o mesmo nome e comportamentos específicos.\nclass Transporte {\n  calcularTempo() {\n    return \"Tempo padrão\";\n  }\n}\n\nclass Onibus extends Transporte {\n  calcularTempo() {\n    return \"Tempo estimado: 25 min\";\n  }\n}\n\nclass Bicicleta extends Transporte {\n  calcularTempo() {\n    return \"Tempo estimado: 18 min\";\n  }\n}\n\nconst opcoes = [new Onibus(), new Bicicleta()];\nopcoes.forEach((item) =&gt; console.log(item.calcularTempo()));",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>POO e Módulos</span>"
+    ]
+  },
+  {
+    "objectID": "sections/8-poo-modulos.html#relembrando-módulos-es",
+    "href": "sections/8-poo-modulos.html#relembrando-módulos-es",
+    "title": "9  POO e Módulos",
+    "section": "9.6 Relembrando módulos ES",
+    "text": "9.6 Relembrando módulos ES\n\n9.6.1 Export nomeado\nmatematica.js\nexport function somar(a, b) {\n  return a + b;\n}\nmain.js\nimport { somar } from \"./matematica.js\";\nconsole.log(somar(5, 7));\n\n\n9.6.2 Export default\nformatador.js\nexport default function formatarMoeda(valor) {\n  return `R$ ${valor.toFixed(2)}`;\n}\napp.js\nimport formatarMoeda from \"./formatador.js\";\nconsole.log(formatarMoeda(35.5));",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>POO e Módulos</span>"
+    ]
+  },
+  {
+    "objectID": "sections/8-poo-modulos.html#exemplo-integrado-classe-módulo",
+    "href": "sections/8-poo-modulos.html#exemplo-integrado-classe-módulo",
+    "title": "9  POO e Módulos",
+    "section": "9.7 Exemplo integrado: classe + módulo",
+    "text": "9.7 Exemplo integrado: classe + módulo\nproduto.js\nexport class Produto {\n  constructor(nome, preco) {\n    this.nome = nome;\n    this.preco = preco;\n  }\n\n  aplicarDesconto(percentual) {\n    this.preco -= this.preco * (percentual / 100);\n  }\n}\nindex.js\nimport { Produto } from \"./produto.js\";\n\nconst caderno = new Produto(\"Caderno\", 30);\ncaderno.aplicarDesconto(10);\nconsole.log(caderno);",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>POO e Módulos</span>"
+    ]
+  },
+  {
+    "objectID": "sections/8-poo-modulos.html#exercícios",
+    "href": "sections/8-poo-modulos.html#exercícios",
+    "title": "9  POO e Módulos",
+    "section": "9.8 Exercícios",
+    "text": "9.8 Exercícios\n\nCrie uma classe Produto com nome, preço e método de desconto.\nCrie Funcionario e Professor usando herança.\nCrie uma classe RoteiroTuristico com método para calcular custo total.\nSepare funções em módulos e importe no arquivo principal.\nDesafio: combine uma classe com persistência em array de objetos.",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>POO e Módulos</span>"
+    ]
+  },
+  {
+    "objectID": "sections/9-dom-eventos.html",
+    "href": "sections/9-dom-eventos.html",
+    "title": "10  DOM e Eventos",
+    "section": "",
+    "text": "10.1 Selecionando elementos\nDOM (Document Object Model) é a estrutura da página HTML que o JavaScript consegue manipular.\nCom DOM e eventos, você cria interfaces interativas.\nOutros seletores:",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>DOM e Eventos</span>"
+    ]
+  },
+  {
+    "objectID": "sections/9-dom-eventos.html#selecionando-elementos",
+    "href": "sections/9-dom-eventos.html#selecionando-elementos",
+    "title": "10  DOM e Eventos",
+    "section": "",
+    "text": "&lt;h2 id=\"titulo\"&gt;Loja Técnica&lt;/h2&gt;\n&lt;button id=\"botao\"&gt;Clique&lt;/button&gt;\nconst titulo = document.getElementById(\"titulo\");\nconst botao = document.getElementById(\"botao\");\n\ntitulo.textContent = \"Sistema Escolar\";\n\nconst primeiroCard = document.querySelector(\".card\");\nconst todosOsCards = document.querySelectorAll(\".card\");",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>DOM e Eventos</span>"
+    ]
+  },
+  {
+    "objectID": "sections/9-dom-eventos.html#alterando-estilos-e-classes",
+    "href": "sections/9-dom-eventos.html#alterando-estilos-e-classes",
+    "title": "10  DOM e Eventos",
+    "section": "10.2 Alterando estilos e classes",
+    "text": "10.2 Alterando estilos e classes\nconst card = document.querySelector(\".card\");\n\ncard.classList.add(\"ativo\");\ncard.classList.toggle(\"destaque\");\ncard.style.border = \"2px solid #1f6feb\";",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>DOM e Eventos</span>"
+    ]
+  },
+  {
+    "objectID": "sections/9-dom-eventos.html#eventos",
+    "href": "sections/9-dom-eventos.html#eventos",
+    "title": "10  DOM e Eventos",
+    "section": "10.3 Eventos",
+    "text": "10.3 Eventos\nbotao.addEventListener(\"click\", () =&gt; {\n  alert(\"Botão clicado!\");\n});\nEventos comuns:\n\nclick\ninput\nchange\nsubmit\nkeydown",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>DOM e Eventos</span>"
+    ]
+  },
+  {
+    "objectID": "sections/9-dom-eventos.html#formulários",
+    "href": "sections/9-dom-eventos.html#formulários",
+    "title": "10  DOM e Eventos",
+    "section": "10.4 Formulários",
+    "text": "10.4 Formulários\n&lt;form id=\"formAluno\"&gt;\n  &lt;input id=\"nome\" placeholder=\"Nome\" /&gt;\n  &lt;button type=\"submit\"&gt;Salvar&lt;/button&gt;\n&lt;/form&gt;\nconst form = document.getElementById(\"formAluno\");\n\nform.addEventListener(\"submit\", (event) =&gt; {\n  event.preventDefault();\n\n  const nome = document.getElementById(\"nome\").value.trim();\n\n  if (!nome) {\n    alert(\"Informe o nome\");\n    return;\n  }\n\n  console.log(`Aluno cadastrado: ${nome}`);\n});",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>DOM e Eventos</span>"
+    ]
+  },
+  {
+    "objectID": "sections/9-dom-eventos.html#criando-elementos-dinamicamente",
+    "href": "sections/9-dom-eventos.html#criando-elementos-dinamicamente",
+    "title": "10  DOM e Eventos",
+    "section": "10.5 Criando elementos dinamicamente",
+    "text": "10.5 Criando elementos dinamicamente\n&lt;ul id=\"lista\"&gt;&lt;/ul&gt;\nconst lista = document.getElementById(\"lista\");\nconst itens = [\"Caderno\", \"Caneta\", \"Lápis\"];\n\nfor (const item of itens) {\n  const li = document.createElement(\"li\");\n  li.textContent = item;\n  lista.appendChild(li);\n}",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>DOM e Eventos</span>"
+    ]
+  },
+  {
+    "objectID": "sections/9-dom-eventos.html#delegação-de-eventos",
+    "href": "sections/9-dom-eventos.html#delegação-de-eventos",
+    "title": "10  DOM e Eventos",
+    "section": "10.6 Delegação de eventos",
+    "text": "10.6 Delegação de eventos\nÚtil quando itens são criados dinamicamente.\nlista.addEventListener(\"click\", (event) =&gt; {\n  if (event.target.tagName === \"LI\") {\n    event.target.classList.toggle(\"feito\");\n  }\n});",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>DOM e Eventos</span>"
+    ]
+  },
+  {
+    "objectID": "sections/9-dom-eventos.html#exemplo-integrado-contador",
+    "href": "sections/9-dom-eventos.html#exemplo-integrado-contador",
+    "title": "10  DOM e Eventos",
+    "section": "10.7 Exemplo integrado: contador",
+    "text": "10.7 Exemplo integrado: contador\n&lt;p id=\"valor\"&gt;0&lt;/p&gt;\n&lt;button id=\"menos\"&gt;-&lt;/button&gt;\n&lt;button id=\"mais\"&gt;+&lt;/button&gt;\nconst campo = document.getElementById(\"valor\");\nconst botaoMenos = document.getElementById(\"menos\");\nconst botaoMais = document.getElementById(\"mais\");\n\nlet contador = 0;\n\nfunction renderizar() {\n  campo.textContent = contador;\n}\n\nbotaoMenos.addEventListener(\"click\", () =&gt; {\n  contador--;\n  renderizar();\n});\n\nbotaoMais.addEventListener(\"click\", () =&gt; {\n  contador++;\n  renderizar();\n});",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>DOM e Eventos</span>"
+    ]
+  },
+  {
+    "objectID": "sections/9-dom-eventos.html#exercícios",
+    "href": "sections/9-dom-eventos.html#exercícios",
+    "title": "10  DOM e Eventos",
+    "section": "10.8 Exercícios",
+    "text": "10.8 Exercícios\n\nCrie uma página com botão que altera a cor de fundo.\nFaça um contador com botões de aumentar e diminuir.\nValide um formulário para impedir envio com campo vazio.\nCrie uma lista de tarefas com botão de remover item.\nDesafio: implemente filtro de tarefas (todas, pendentes, concluídas).",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>DOM e Eventos</span>"
+    ]
+  },
+  {
+    "objectID": "sections/10-async-api.html",
+    "href": "sections/10-async-api.html",
+    "title": "11  Assincronismo e APIs",
+    "section": "",
+    "text": "11.1 Entendendo a ordem de execução\nNem toda tarefa no JavaScript termina imediatamente.\nChamamos isso de comportamento assíncrono.\nExemplos:\nSaída esperada:",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Assincronismo e APIs</span>"
+    ]
+  },
+  {
+    "objectID": "sections/10-async-api.html#entendendo-a-ordem-de-execução",
+    "href": "sections/10-async-api.html#entendendo-a-ordem-de-execução",
+    "title": "11  Assincronismo e APIs",
+    "section": "",
+    "text": "console.log(\"Início\");\n\nsetTimeout(() =&gt; {\n  console.log(\"Executou depois de 2 segundos\");\n}, 2000);\n\nconsole.log(\"Fim\");\n\n\nInício\nFim\nExecutou depois de 2 segundos",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Assincronismo e APIs</span>"
+    ]
+  },
+  {
+    "objectID": "sections/10-async-api.html#promises",
+    "href": "sections/10-async-api.html#promises",
+    "title": "11  Assincronismo e APIs",
+    "section": "11.2 Promises",
+    "text": "11.2 Promises\nPromise representa um resultado futuro: pendente, resolvido ou rejeitado.\nfunction buscarDados() {\n  return new Promise((resolve) =&gt; {\n    setTimeout(() =&gt; resolve(\"Dados carregados\"), 1000);\n  });\n}\n\nbuscarDados().then((mensagem) =&gt; console.log(mensagem));\nCom erro:\nfunction validarIdade(idade) {\n  return new Promise((resolve, reject) =&gt; {\n    if (idade &gt;= 18) resolve(\"Acesso liberado\");\n    else reject(new Error(\"Acesso negado\"));\n  });\n}",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Assincronismo e APIs</span>"
+    ]
+  },
+  {
+    "objectID": "sections/10-async-api.html#asyncawait",
+    "href": "sections/10-async-api.html#asyncawait",
+    "title": "11  Assincronismo e APIs",
+    "section": "11.3 async/await",
+    "text": "11.3 async/await\nasync e await deixam o código assíncrono mais legível.\nasync function executar() {\n  const resposta = await buscarDados();\n  console.log(resposta);\n}\n\nexecutar();",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Assincronismo e APIs</span>"
+    ]
+  },
+  {
+    "objectID": "sections/10-async-api.html#tratamento-de-erros-com-trycatch",
+    "href": "sections/10-async-api.html#tratamento-de-erros-com-trycatch",
+    "title": "11  Assincronismo e APIs",
+    "section": "11.4 Tratamento de erros com try/catch",
+    "text": "11.4 Tratamento de erros com try/catch\nasync function testarIdade() {\n  try {\n    const msg = await validarIdade(16);\n    console.log(msg);\n  } catch (erro) {\n    console.error(\"Erro:\", erro.message);\n  }\n}\n\ntestarIdade();",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Assincronismo e APIs</span>"
+    ]
+  },
+  {
+    "objectID": "sections/10-async-api.html#consumindo-api-com-fetch",
+    "href": "sections/10-async-api.html#consumindo-api-com-fetch",
+    "title": "11  Assincronismo e APIs",
+    "section": "11.5 Consumindo API com fetch",
+    "text": "11.5 Consumindo API com fetch\nasync function carregarUsuarios() {\n  const response = await fetch(\"https://jsonplaceholder.typicode.com/users\");\n  const usuarios = await response.json();\n  console.log(usuarios);\n}\n\ncarregarUsuarios();",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Assincronismo e APIs</span>"
+    ]
+  },
+  {
+    "objectID": "sections/10-async-api.html#verificando-status-http",
+    "href": "sections/10-async-api.html#verificando-status-http",
+    "title": "11  Assincronismo e APIs",
+    "section": "11.6 Verificando status HTTP",
+    "text": "11.6 Verificando status HTTP\nasync function buscarPost(id) {\n  const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`);\n\n  if (!response.ok) {\n    throw new Error(`Falha HTTP: ${response.status}`);\n  }\n\n  return response.json();\n}",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Assincronismo e APIs</span>"
+    ]
+  },
+  {
+    "objectID": "sections/10-async-api.html#exemplo-prático-previsão-do-tempo",
+    "href": "sections/10-async-api.html#exemplo-prático-previsão-do-tempo",
+    "title": "11  Assincronismo e APIs",
+    "section": "11.7 Exemplo prático: previsão do tempo",
+    "text": "11.7 Exemplo prático: previsão do tempo\nFluxo comum:\n\nusuário escolhe cidade;\naplicação chama API;\nmostra temperatura e condição do clima;\nem erro, exibe mensagem amigável.\n\nasync function carregarClima(url) {\n  try {\n    const response = await fetch(url);\n\n    if (!response.ok) {\n      throw new Error(\"Não foi possível buscar o clima\");\n    }\n\n    const dados = await response.json();\n    console.log(dados);\n  } catch (erro) {\n    console.error(\"Erro ao carregar clima:\", erro.message);\n  }\n}",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Assincronismo e APIs</span>"
+    ]
+  },
+  {
+    "objectID": "sections/10-async-api.html#exercícios",
+    "href": "sections/10-async-api.html#exercícios",
+    "title": "11  Assincronismo e APIs",
+    "section": "11.8 Exercícios",
+    "text": "11.8 Exercícios\n\nFaça uma função assíncrona que aguarde 3 segundos e retorne mensagem.\nConsuma uma API pública e mostre apenas os nomes retornados.\nTrate erros com try/catch no fetch.\nCrie função que busque um post por ID e valide status da resposta.\nDesafio: montar tela com busca e carregamento (loading) para uma API.",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Assincronismo e APIs</span>"
+    ]
+  },
+  {
+    "objectID": "sections/11-testes-boas-praticas.html",
+    "href": "sections/11-testes-boas-praticas.html",
+    "title": "12  Testes e Boas Práticas",
+    "section": "",
+    "text": "12.1 Boas práticas essenciais\nEscrever código que funciona é importante.\nEscrever código confiável e fácil de manter é essencial.",
+    "crumbs": [
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Testes e Boas Práticas</span>"
+    ]
+  },
+  {
+    "objectID": "sections/11-testes-boas-praticas.html#boas-práticas-essenciais",
+    "href": "sections/11-testes-boas-praticas.html#boas-práticas-essenciais",
+    "title": "12  Testes e Boas Práticas",
+    "section": "",
+    "text": "Use nomes claros para variáveis e funções.\nCrie funções pequenas com uma responsabilidade.\nEvite duplicação de código.\nTrate erros de forma explícita.\nComente apenas quando necessário.",
+    "crumbs": [
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Testes e Boas Práticas</span>"
+    ]
+  },
+  {
+    "objectID": "sections/11-testes-boas-praticas.html#exemplo-função-clara-e-validada",
+    "href": "sections/11-testes-boas-praticas.html#exemplo-função-clara-e-validada",
+    "title": "12  Testes e Boas Práticas",
+    "section": "12.2 Exemplo: função clara e validada",
+    "text": "12.2 Exemplo: função clara e validada\nfunction calcularMedia(notas) {\n  if (!Array.isArray(notas) || notas.length === 0) {\n    throw new Error(\"Informe um array de notas\");\n  }\n\n  const soma = notas.reduce((acc, n) =&gt; acc + n, 0);\n  return soma / notas.length;\n}",
+    "crumbs": [
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Testes e Boas Práticas</span>"
+    ]
+  },
+  {
+    "objectID": "sections/11-testes-boas-praticas.html#tratamento-de-erros",
+    "href": "sections/11-testes-boas-praticas.html#tratamento-de-erros",
+    "title": "12  Testes e Boas Práticas",
+    "section": "12.3 Tratamento de erros",
+    "text": "12.3 Tratamento de erros\nfunction dividir(a, b) {\n  if (b === 0) {\n    throw new Error(\"Divisão por zero não permitida\");\n  }\n\n  return a / b;\n}\n\ntry {\n  console.log(dividir(10, 0));\n} catch (erro) {\n  console.error(\"Erro:\", erro.message);\n}",
+    "crumbs": [
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Testes e Boas Práticas</span>"
+    ]
+  },
+  {
+    "objectID": "sections/11-testes-boas-praticas.html#validações-úteis",
+    "href": "sections/11-testes-boas-praticas.html#validações-úteis",
+    "title": "12  Testes e Boas Práticas",
+    "section": "12.4 Validações úteis",
+    "text": "12.4 Validações úteis\nfunction criarAluno(nome, idade) {\n  if (!nome || typeof nome !== \"string\") {\n    throw new Error(\"Nome inválido\");\n  }\n\n  if (typeof idade !== \"number\" || idade &lt; 0) {\n    throw new Error(\"Idade inválida\");\n  }\n\n  return { nome, idade };\n}",
+    "crumbs": [
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Testes e Boas Práticas</span>"
+    ]
+  },
+  {
+    "objectID": "sections/11-testes-boas-praticas.html#introdução-a-testes-unitários-com-vitest",
+    "href": "sections/11-testes-boas-praticas.html#introdução-a-testes-unitários-com-vitest",
+    "title": "12  Testes e Boas Práticas",
+    "section": "12.5 Introdução a testes unitários com Vitest",
+    "text": "12.5 Introdução a testes unitários com Vitest\nsum.js\nexport function sum(a, b) {\n  return a + b;\n}\nsum.test.js\nimport { describe, it, expect } from \"vitest\";\nimport { sum } from \"./sum.js\";\n\ndescribe(\"sum\", () =&gt; {\n  it(\"deve somar dois números\", () =&gt; {\n    expect(sum(2, 3)).toBe(5);\n  });\n});",
+    "crumbs": [
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Testes e Boas Práticas</span>"
+    ]
+  },
+  {
+    "objectID": "sections/11-testes-boas-praticas.html#testando-casos-de-erro",
+    "href": "sections/11-testes-boas-praticas.html#testando-casos-de-erro",
+    "title": "12  Testes e Boas Práticas",
+    "section": "12.6 Testando casos de erro",
+    "text": "12.6 Testando casos de erro\ndividir.test.js\nimport { describe, it, expect } from \"vitest\";\nimport { dividir } from \"./dividir.js\";\n\ndescribe(\"dividir\", () =&gt; {\n  it(\"deve lançar erro quando divisor é zero\", () =&gt; {\n    expect(() =&gt; dividir(10, 0)).toThrow(\"Divisão por zero\");\n  });\n});",
+    "crumbs": [
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Testes e Boas Práticas</span>"
+    ]
+  },
+  {
+    "objectID": "sections/11-testes-boas-praticas.html#cobertura-mínima-de-testes",
+    "href": "sections/11-testes-boas-praticas.html#cobertura-mínima-de-testes",
+    "title": "12  Testes e Boas Práticas",
+    "section": "12.7 Cobertura mínima de testes",
+    "text": "12.7 Cobertura mínima de testes\nPara funções críticas, tente cobrir:\n\ncaso comum;\ncaso de borda;\ncaso inválido.",
+    "crumbs": [
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Testes e Boas Práticas</span>"
+    ]
+  },
+  {
+    "objectID": "sections/11-testes-boas-praticas.html#checklist-de-revisão-antes-de-entregar",
+    "href": "sections/11-testes-boas-praticas.html#checklist-de-revisão-antes-de-entregar",
+    "title": "12  Testes e Boas Práticas",
+    "section": "12.8 Checklist de revisão antes de entregar",
+    "text": "12.8 Checklist de revisão antes de entregar\n\nO código está legível?\nHá validações mínimas?\nErros são tratados?\nExistem testes para as funções principais?\nOs nomes estão claros?",
+    "crumbs": [
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Testes e Boas Práticas</span>"
+    ]
+  },
+  {
+    "objectID": "sections/11-testes-boas-praticas.html#exercícios",
+    "href": "sections/11-testes-boas-praticas.html#exercícios",
+    "title": "12  Testes e Boas Práticas",
+    "section": "12.9 Exercícios",
+    "text": "12.9 Exercícios\n\nRefatore um código longo em funções menores.\nImplemente validações com throw e try/catch.\nEscreva 3 testes para funções matemáticas simples.\nEscreva teste para um cenário de erro.\nDesafio: testar uma função que recebe array e retorna média.",
+    "crumbs": [
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Testes e Boas Práticas</span>"
+    ]
+  },
+  {
+    "objectID": "sections/12-projeto-final.html",
+    "href": "sections/12-projeto-final.html",
+    "title": "13  Projeto Final Integrador",
+    "section": "",
+    "text": "13.1 Objetivo do projeto\nNeste capítulo, você vai aplicar os principais conceitos do livro em um projeto completo.\nDesenvolver um sistema de cadastro e organização de tarefas escolares.",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Projeto Final Integrador</span>"
+    ]
+  },
+  {
+    "objectID": "sections/12-projeto-final.html#funcionalidades-obrigatórias",
+    "href": "sections/12-projeto-final.html#funcionalidades-obrigatórias",
+    "title": "13  Projeto Final Integrador",
+    "section": "13.2 Funcionalidades obrigatórias",
+    "text": "13.2 Funcionalidades obrigatórias\n\nCadastrar tarefa com título e prazo.\nMarcar tarefa como concluída.\nExcluir tarefa.\nSalvar dados em localStorage.\nOrganizar código em funções e, se possível, módulos.",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Projeto Final Integrador</span>"
+    ]
+  },
+  {
+    "objectID": "sections/12-projeto-final.html#funcionalidades-recomendadas",
+    "href": "sections/12-projeto-final.html#funcionalidades-recomendadas",
+    "title": "13  Projeto Final Integrador",
+    "section": "13.3 Funcionalidades recomendadas",
+    "text": "13.3 Funcionalidades recomendadas\n\nFiltro por status (todas, pendentes, concluídas).\nBusca por texto.\nContador de tarefas concluídas e pendentes.\nValidação de formulário.",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Projeto Final Integrador</span>"
+    ]
+  },
+  {
+    "objectID": "sections/12-projeto-final.html#estrutura-sugerida",
+    "href": "sections/12-projeto-final.html#estrutura-sugerida",
+    "title": "13  Projeto Final Integrador",
+    "section": "13.4 Estrutura sugerida",
+    "text": "13.4 Estrutura sugerida\nprojeto/\n  index.html\n  style.css\n  app.js\nVersão modular:\nprojeto/\n  index.html\n  style.css\n  src/\n    app.js\n    storage.js\n    tarefas.js\n    ui.js",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Projeto Final Integrador</span>"
+    ]
+  },
+  {
+    "objectID": "sections/12-projeto-final.html#modelo-da-tarefa",
+    "href": "sections/12-projeto-final.html#modelo-da-tarefa",
+    "title": "13  Projeto Final Integrador",
+    "section": "13.5 Modelo da tarefa",
+    "text": "13.5 Modelo da tarefa\nconst tarefa = {\n  id: Date.now(),\n  titulo: \"Estudar JavaScript\",\n  prazo: \"2026-03-01\",\n  concluida: false\n};",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Projeto Final Integrador</span>"
+    ]
+  },
+  {
+    "objectID": "sections/12-projeto-final.html#etapa-1-interface-base",
+    "href": "sections/12-projeto-final.html#etapa-1-interface-base",
+    "title": "13  Projeto Final Integrador",
+    "section": "13.6 Etapa 1: interface base",
+    "text": "13.6 Etapa 1: interface base\nCampos mínimos:\n\ninput de título;\ninput de prazo;\nbotão de salvar;\nlista de tarefas.",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Projeto Final Integrador</span>"
+    ]
+  },
+  {
+    "objectID": "sections/12-projeto-final.html#etapa-2-estado-da-aplicação",
+    "href": "sections/12-projeto-final.html#etapa-2-estado-da-aplicação",
+    "title": "13  Projeto Final Integrador",
+    "section": "13.7 Etapa 2: estado da aplicação",
+    "text": "13.7 Etapa 2: estado da aplicação\nlet tarefas = [];",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Projeto Final Integrador</span>"
+    ]
+  },
+  {
+    "objectID": "sections/12-projeto-final.html#etapa-3-criar-tarefas",
+    "href": "sections/12-projeto-final.html#etapa-3-criar-tarefas",
+    "title": "13  Projeto Final Integrador",
+    "section": "13.8 Etapa 3: criar tarefas",
+    "text": "13.8 Etapa 3: criar tarefas\nfunction criarTarefa(titulo, prazo) {\n  return {\n    id: Date.now(),\n    titulo,\n    prazo,\n    concluida: false\n  };\n}",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Projeto Final Integrador</span>"
+    ]
+  },
+  {
+    "objectID": "sections/12-projeto-final.html#etapa-4-renderizar-lista",
+    "href": "sections/12-projeto-final.html#etapa-4-renderizar-lista",
+    "title": "13  Projeto Final Integrador",
+    "section": "13.9 Etapa 4: renderizar lista",
+    "text": "13.9 Etapa 4: renderizar lista\nfunction renderizarTarefas(lista) {\n  console.log(\"Renderizar\", lista);\n}\nDepois substitua o console.log pela renderização real no DOM.",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Projeto Final Integrador</span>"
+    ]
+  },
+  {
+    "objectID": "sections/12-projeto-final.html#etapa-5-concluir-e-remover",
+    "href": "sections/12-projeto-final.html#etapa-5-concluir-e-remover",
+    "title": "13  Projeto Final Integrador",
+    "section": "13.10 Etapa 5: concluir e remover",
+    "text": "13.10 Etapa 5: concluir e remover\nfunction alternarConclusao(id) {\n  tarefas = tarefas.map((t) =&gt;\n    t.id === id ? { ...t, concluida: !t.concluida } : t\n  );\n}\n\nfunction removerTarefa(id) {\n  tarefas = tarefas.filter((t) =&gt; t.id !== id);\n}",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Projeto Final Integrador</span>"
+    ]
+  },
+  {
+    "objectID": "sections/12-projeto-final.html#etapa-6-persistência",
+    "href": "sections/12-projeto-final.html#etapa-6-persistência",
+    "title": "13  Projeto Final Integrador",
+    "section": "13.11 Etapa 6: persistência",
+    "text": "13.11 Etapa 6: persistência\nfunction salvarNoStorage() {\n  localStorage.setItem(\"tarefas\", JSON.stringify(tarefas));\n}\n\nfunction carregarDoStorage() {\n  const dados = localStorage.getItem(\"tarefas\");\n  tarefas = dados ? JSON.parse(dados) : [];\n}",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Projeto Final Integrador</span>"
+    ]
+  },
+  {
+    "objectID": "sections/12-projeto-final.html#etapa-7-validação",
+    "href": "sections/12-projeto-final.html#etapa-7-validação",
+    "title": "13  Projeto Final Integrador",
+    "section": "13.12 Etapa 7: validação",
+    "text": "13.12 Etapa 7: validação\nfunction validarFormulario(titulo, prazo) {\n  if (!titulo.trim()) return \"Informe o título da tarefa\";\n  if (!prazo) return \"Informe o prazo\";\n  return null;\n}",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Projeto Final Integrador</span>"
+    ]
+  },
+  {
+    "objectID": "sections/12-projeto-final.html#roteiro-de-implementação",
+    "href": "sections/12-projeto-final.html#roteiro-de-implementação",
+    "title": "13  Projeto Final Integrador",
+    "section": "13.13 Roteiro de implementação",
+    "text": "13.13 Roteiro de implementação\n\nMontar HTML e CSS.\nImplementar criação de tarefa.\nRenderizar no DOM.\nImplementar concluir/remover.\nIntegrar localStorage.\nAdicionar filtros e busca.\nRevisar e testar.",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Projeto Final Integrador</span>"
+    ]
+  },
+  {
+    "objectID": "sections/12-projeto-final.html#critérios-de-avaliação",
+    "href": "sections/12-projeto-final.html#critérios-de-avaliação",
+    "title": "13  Projeto Final Integrador",
+    "section": "13.14 Critérios de avaliação",
+    "text": "13.14 Critérios de avaliação\n\nfuncionamento correto (40%);\norganização e legibilidade (25%);\nuso de boas práticas (15%);\ninterface e experiência do usuário (10%);\ndocumentação do projeto (10%).",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Projeto Final Integrador</span>"
+    ]
+  },
+  {
+    "objectID": "sections/12-projeto-final.html#desafios-extras",
+    "href": "sections/12-projeto-final.html#desafios-extras",
+    "title": "13  Projeto Final Integrador",
+    "section": "13.15 Desafios extras",
+    "text": "13.15 Desafios extras\n\nOrdenar por prazo.\nDestacar tarefas atrasadas automaticamente.\nExportar tarefas em JSON.\nCriar modo escuro com botão de alternância.",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Projeto Final Integrador</span>"
+    ]
+  },
+  {
+    "objectID": "sections/12-projeto-final.html#entrega-sugerida",
+    "href": "sections/12-projeto-final.html#entrega-sugerida",
+    "title": "13  Projeto Final Integrador",
+    "section": "13.16 Entrega sugerida",
+    "text": "13.16 Entrega sugerida\n\nRepositório com código fonte.\nREADME.md com instruções de uso.\nCapturas de tela da aplicação.\nLista de melhorias futuras.",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Projeto Final Integrador</span>"
+    ]
+  },
+  {
+    "objectID": "sections/2-variaveis-tipos.html#precisao-de-numeros",
+    "href": "sections/2-variaveis-tipos.html#precisao-de-numeros",
+    "title": "3  Variáveis e Tipos",
+    "section": "3.7 Precisao de numeros",
+    "text": "3.7 Precisao de numeros\nJavaScript usa ponto flutuante, entao algumas somas nao ficam exatas.\nconsole.log(0.1 + 0.2); // 0.30000000000000004\nEm valores de dinheiro, prefira trabalhar em centavos (inteiros) e formatar no final.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Variáveis e Tipos</span>"
+    ]
+  }
+]
