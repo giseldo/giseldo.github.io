@@ -2,7 +2,9 @@
 
 Sinta-se à vontade para explorar, aprender e se conectar! Aqui você encontra conteúdos sobre inteligência artificial e aprendizado de máquina.
 
-Acompanhe meus artigos técnicos no [Blog do Hashnode](https://giseldo.hashnode.dev/), além de publicações no [Blog do Medium](https://medium.com/@giseldoneo) e no [Blog do Substack](https://giseldo.substack.com/).
+Entre no Canal do [Discord](https://discord.gg/NTdaT2Uf37) para tirar dúvidas.
+
+Acompanhe artigos técnicos no [Blog do Hashnode](https://giseldo.hashnode.dev/), no [Blog do Medium](https://medium.com/@giseldoneo) e no [Blog do Substack](https://giseldo.substack.com/).
 
 Visite meu portfólio [Hugging Face](https://huggingface.co/giseldo) ou meu portfólio [Github](https://github.com/giseldo).
 
