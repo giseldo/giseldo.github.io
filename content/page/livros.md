@@ -44,8 +44,6 @@ Este livro apresenta os chatbots clássicos, baseados em AIML, e por que express
 
 ---
 
----
-
 {{< columns >}}
 {{< figure src="/images/livro/javascript/capa.png" width="75%" >}}
 {{< column >}}
