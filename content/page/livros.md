@@ -35,7 +35,7 @@ Este livro apresenta os chatbots clássicos, baseados em AIML, e por que express
 
 ## Arvore de Decisão com Python (versão beta)
 
-### Uma abordagem teorico-prática
+### Uma abordagem teórico-prática
 
 <a href="/images/livro/arvore/_book/index.html" target="_blank">Versão HTML (↗)</a></br>
 <a href="/images/livro/arvore/arvore.pdf" target="_blank">Versão PDF (↗)</a></br>
@@ -50,7 +50,7 @@ Este livro apresenta os chatbots clássicos, baseados em AIML, e por que express
 
 ## Javascript com Alana (versão beta)
 
-### Uma abordagem teorico-prática
+### Uma abordagem teórico-prática
 
 <a href="/images/livro/javascript/_book/index.html" target="_blank">Versão HTML (↗)</a></br>
 <a href="/images/livro/javascript/javascript.pdf" target="_blank">Versão PDF (↗)</a></br>
