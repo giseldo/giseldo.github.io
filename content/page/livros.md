@@ -50,7 +50,7 @@ Este livro apresenta os chatbots clássicos, baseados em AIML, e por que express
 {{< figure src="/images/livro/javascript/capa.png" width="75%" >}}
 {{< column >}}
 
-## Javascript com Alana
+## Javascript com Alana (versão beta)
 
 ### Uma abordagem teorico-prática
 
