@@ -13,7 +13,7 @@ toc: True
 {{< figure src="/images/livro/chatbots/capa.png" width="75%" >}}
 {{< column >}}
 
-## Construindo Chatbots
+## Construindo Chatbots (1.0)
 
 ### do Artificial Inteligence Markup Language e PLN até os modernos Large Language Models
 
@@ -26,6 +26,23 @@ Este livro apresenta os chatbots clássicos, baseados em AIML, e por que express
 <a href="https://github.com/giseldo/Livro-A-jornada-dos-Chatbots---Verde---C-digos" target="_blank">Código-fonte do Livro em Python (↗)</a> 
 
 {{< endcolumns >}}
+
+---
+
+{{< columns >}}
+{{< figure src="/images/livro/arvore/capa.png" width="75%" >}}
+{{< column >}}
+
+## Arvore de Decisão com Python (versão beta)
+
+### Uma abordagem teorico-prática
+
+<a href="/images/livro/arvore/_book/index.html" target="_blank">Versão HTML (↗)</a></br>
+<a href="/images/livro/arvore/arvore.pdf" target="_blank">Versão PDF (↗)</a></br>
+
+{{< endcolumns >}}
+
+---
 
 ---
 

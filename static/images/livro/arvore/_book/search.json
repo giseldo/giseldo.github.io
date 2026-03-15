@@ -1,0 +1,1912 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Árvore de Decisão Teoria e Prática com Python",
+    "section": "",
+    "text": "1 Árvore de Decisão Teoria e Prática com Python\nAo longo dos capítulos, o leitor vai encontrar três camadas complementares:",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Árvore de Decisão Teoria e Prática com Python</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#objetivos-gerais",
+    "href": "index.html#objetivos-gerais",
+    "title": "Árvore de Decisão Teoria e Prática com Python",
+    "section": "1.1 Objetivos gerais",
+    "text": "1.1 Objetivos gerais\nAo final do estudo, espera-se que o leitor seja capaz de:\n\nexplicar o que é uma árvore de decisão e como ela realiza previsões;\ndiferenciar classificação, regressão, pureza, impureza e ganho de informação;\ncompreender o papel de algoritmos clássicos como ID3, C4.5 e CART;\ntreinar, visualizar, avaliar e podar árvores no scikit-learn;\ninterpretar regras aprendidas e comunicar resultados para público técnico e não técnico;\nusar árvores como modelo final ou como etapa de análise exploratória.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Árvore de Decisão Teoria e Prática com Python</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#público-alvo",
+    "href": "index.html#público-alvo",
+    "title": "Árvore de Decisão Teoria e Prática com Python",
+    "section": "1.2 Público-alvo",
+    "text": "1.2 Público-alvo\nEste material foi escrito para:\n\nestudantes de ciência de dados, estatística, computação e engenharias;\nprofessores e instrutores que desejam uma base organizada para aulas;\nanalistas que precisam justificar previsões com regras compreensíveis;\nprofissionais em transição para machine learning que preferem modelos interpretáveis;\nleitores que desejam unir teoria e prática em um mesmo fluxo de aprendizado.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Árvore de Decisão Teoria e Prática com Python</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#conceitos-fundamentais",
+    "href": "index.html#conceitos-fundamentais",
+    "title": "Árvore de Decisão Teoria e Prática com Python",
+    "section": "1.3 Conceitos fundamentais",
+    "text": "1.3 Conceitos fundamentais\nAo longo do livro, vamos aprofundar alguns conceitos centrais:\n\nimpureza: mede o quanto as classes estão misturadas em um nó;\ncritério de divisão: regra matemática usada para escolher a melhor pergunta;\nganho de informação: quanto a divisão reduz a incerteza;\npré-poda: limitar o crescimento antes que a árvore fique grande demais;\npós-poda: reduzir a árvore depois do treino;\ngeneralização: capacidade de funcionar bem em dados novos.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Árvore de Decisão Teoria e Prática com Python</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#requisitos-técnicos",
+    "href": "index.html#requisitos-técnicos",
+    "title": "Árvore de Decisão Teoria e Prática com Python",
+    "section": "1.4 Requisitos técnicos",
+    "text": "1.4 Requisitos técnicos\nPara acompanhar os exemplos de código, recomenda-se Python 3.11+ e as bibliotecas abaixo.\npip install pandas numpy matplotlib seaborn scikit-learn",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Árvore de Decisão Teoria e Prática com Python</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#orientação-de-estudo",
+    "href": "index.html#orientação-de-estudo",
+    "title": "Árvore de Decisão Teoria e Prática com Python",
+    "section": "1.5 Orientação de estudo",
+    "text": "1.5 Orientação de estudo\nAproveite o livro como uma apostila de estudo progressivo.\n\nLeia os capítulos teóricos com calma antes de executar o código.\nRefaça os cálculos numéricos manualmente quando possível.\nCompare árvores simples e complexas em cada experimento.\nTente verbalizar as regras aprendidas como se estivesse explicando para outra pessoa.\nAo final de cada capítulo, pergunte-se não apenas “como fazer”, mas também “por que o modelo fez isso”.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Árvore de Decisão Teoria e Prática com Python</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#resumo",
+    "href": "index.html#resumo",
+    "title": "Árvore de Decisão Teoria e Prática com Python",
+    "section": "1.6 Resumo",
+    "text": "1.6 Resumo\nAs árvores de decisão são um dos métodos de aprendizado de máquina supervisionado mais populares e práticos, sendo amplamente utilizadas principalmente para tarefas de classificação (identificar a qual categoria um elemento pertence). Elas resolvem problemas utilizando uma estratégia de “dividir para conquistar”, onde um problema complexo é decomposto recursivamente em subproblemas mais simples.\nEstrutura de uma Árvore de Decisão A representação de uma árvore de decisão é muito natural e intuitiva, sendo composta por três elementos principais: * Nós internos (incluindo o nó raiz): Cada nó especifica um teste sobre um determinado atributo ou característica da instância (por exemplo, “Perspectiva do tempo”, “Idade” ou “Salário”). * Ramos (ou arestas): Cada ramo que desce de um nó corresponde a um dos possíveis resultados ou valores desse teste (por exemplo, “Ensolarado” ou “Nublado”). * Nós folha: Ficam nas extremidades da árvore e especificam o valor final da decisão, ou seja, a classe atribuída à instância (por exemplo, “Sim” ou “Não”).\nComo funciona a Classificação (Predição) Para classificar um novo exemplo, o processo começa no nó raiz. O sistema avalia o atributo daquele nó e segue o ramo correspondente ao valor que a instância possui. Esse teste é repetido nos próximos nós descendentes até que se alcance um nó folha, o qual fornecerá a classificação final.\nCada caminho percorrido da raiz até uma folha pode ser traduzido facilmente em uma regra lógica do tipo SE  ENTÃO  (ex: SE Perspectiva = Ensolarado E Umidade = Alta ENTÃO JogarTênis = Não), o que torna os modelos altamente interpretáveis por seres humanos.\nComo a árvore é construída (Treinamento) A construção do modelo a partir dos dados de treinamento geralmente é feita de forma descendente (top-down). O passo mais crucial dos algoritmos formadores de árvores (como ID3, C4.5 e CART) é decidir qual atributo testar em cada nó. O objetivo é escolher o atributo que melhor separa ou discrimina os exemplos de acordo com suas classes.\nPara fazer essa escolha, utilizam-se cálculos estatísticos: * Entropia: É uma medida da impureza, desordem ou aleatoriedade de uma coleção de exemplos. Se um nó contém exemplos de várias classes misturadas, a entropia é alta. Se todos os exemplos forem da mesma classe, a entropia é zero. * Ganho de Informação: Mede a redução esperada na entropia se particionarmos os dados usando um determinado atributo. O algoritmo calcula o ganho de informação para todos os atributos disponíveis e escolhe aquele que apresentar o maior valor (ou seja, o que melhor limpa a “impureza” dos dados) para ser o nó de decisão. Nota: Outras métricas matemáticas também podem ser usadas dependendo do algoritmo, como a Razão de Ganho ou o Índice Gini.\nO algoritmo repete esse processo de particionamento e escolha de atributos para cada novo subconjunto de dados criado, até que todos os exemplos de um ramo pertençam à mesma classe ou até que não restem mais atributos para testar.\nPrevenção de Erros (Poda) Um problema comum na indução de árvores de decisão é o sobre-ajustamento (overfitting). Isso ocorre quando a árvore cresce demais e se ajusta perfeitamente aos dados de treinamento, memorizando inclusive ruídos e erros, o que a faz perder a capacidade de generalizar e classificar corretamente novos dados. Para combater isso, aplicam-se técnicas de poda (pruning), que consistem em interromper o crescimento da árvore cedo ou remover ramos inteiros após a sua construção, transformando-os em folhas e deixando a árvore mais simples e confiável.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Árvore de Decisão Teoria e Prática com Python</span>"
+    ]
+  },
+  {
+    "objectID": "section/01-fundamentos.html",
+    "href": "section/01-fundamentos.html",
+    "title": "2  Fundamentos de Árvore de Decisão",
+    "section": "",
+    "text": "2.1 O que é uma árvore de decisão\nÁrvores de decisão estão entre os modelos mais didáticos de aprendizado supervisionado. Elas aprendem regras do tipo “se… então…” a partir de dados rotulados e organizam essas regras em uma estrutura hierárquica formada por perguntas sucessivas.\nA grande vantagem pedagógica desse modelo é que ele permite enxergar com relativa clareza o caminho que levou a uma previsão. Em vez de parecer uma caixa-preta, a árvore explicita quais atributos foram usados, em que ordem eles foram testados e por que determinados grupos foram separados.\nUma árvore de decisão recebe exemplos descritos por atributos e produz uma saída. Em problemas de classificação, a saída é uma classe, como aprovar ou reprovar, fraude ou não fraude, doente ou saudável. Em problemas de regressão, a saída é um valor numérico, como preço, demanda ou tempo.\nA ideia central é simples:\nA árvore nasce pela raiz, cresce em direção às folhas e, a cada etapa, busca um teste que reduza a mistura de classes nos subconjuntos gerados.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Fundamentos de Árvore de Decisão</span>"
+    ]
+  },
+  {
+    "objectID": "section/01-fundamentos.html#o-que-é-uma-árvore-de-decisão",
+    "href": "section/01-fundamentos.html#o-que-é-uma-árvore-de-decisão",
+    "title": "2  Fundamentos de Árvore de Decisão",
+    "section": "",
+    "text": "começamos com todos os exemplos em um único conjunto;\nescolhemos a pergunta que melhor separa esse conjunto;\ndividimos os dados em subconjuntos menores;\nrepetimos o processo recursivamente até que os grupos fiquem suficientemente homogêneos.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Fundamentos de Árvore de Decisão</span>"
+    ]
+  },
+  {
+    "objectID": "section/01-fundamentos.html#intuição-com-um-problema-simples",
+    "href": "section/01-fundamentos.html#intuição-com-um-problema-simples",
+    "title": "2  Fundamentos de Árvore de Decisão",
+    "section": "2.2 Intuição com um problema simples",
+    "text": "2.2 Intuição com um problema simples\nImagine um sistema de análise de crédito. Cada cliente possui atributos como renda, histórico de inadimplência, tempo de emprego e comprometimento de renda. Uma árvore pode aprender algo como:\nHistórico de inadimplência = sim?\n├── Sim: Negar crédito\n└── Não: Renda mensal &gt; 4000?\n    ├── Não: Analisar com cautela\n    └── Sim: Tempo de emprego &gt; 2 anos?\n        ├── Sim: Aprovar crédito\n        └── Não: Solicitar garantias\n\n\n\n\n\nflowchart TD\n    A[Histórico de inadimplência = sim?] --&gt;|Sim| B[Negar crédito]\n    A --&gt;|Não| C[Renda mensal &gt; 4000?]\n    C --&gt;|Não| D[Analisar com cautela]\n    C --&gt;|Sim| E[Tempo de emprego &gt; 2 anos?]\n    E --&gt;|Sim| F[Aprovar crédito]\n    E --&gt;|Não| G[Solicitar garantias]\n\n\n\n\n\n\nEsse tipo de estrutura aproxima muito o modelo do raciocínio humano. As árvores podem ser apresentadas como sequências de perguntas, ou como os atributos do conjunto de dados. Cada pergunta reduz a incerteza sobre a classe correta.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Fundamentos de Árvore de Decisão</span>"
+    ]
+  },
+  {
+    "objectID": "section/01-fundamentos.html#componentes-da-árvore",
+    "href": "section/01-fundamentos.html#componentes-da-árvore",
+    "title": "2  Fundamentos de Árvore de Decisão",
+    "section": "2.3 Componentes da árvore",
+    "text": "2.3 Componentes da árvore\nUma árvore possui três elementos fundamentais.\n\nNó raiz\n\nÉ o primeiro teste realizado. Em geral, corresponde ao atributo que mais ajuda a separar os dados logo no início.\n\nNós internos\n\nSão testes intermediários. Cada nó interno recebe um subconjunto de exemplos e decide qual nova pergunta deve ser feita naquele ponto.\n\nFolhas\n\nSão as respostas finais. Em classificação, a folha guarda a classe prevista. Em regressão, guarda um valor médio ou representativo do grupo.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Fundamentos de Árvore de Decisão</span>"
+    ]
+  },
+  {
+    "objectID": "section/01-fundamentos.html#como-uma-instância-percorre-a-árvore",
+    "href": "section/01-fundamentos.html#como-uma-instância-percorre-a-árvore",
+    "title": "2  Fundamentos de Árvore de Decisão",
+    "section": "2.4 Como uma instância percorre a árvore",
+    "text": "2.4 Como uma instância percorre a árvore\nClassificar um novo exemplo significa descer pela árvore.\n\nO processo começa no nó raiz.\nO valor do atributo correspondente é observado.\nO exemplo segue pelo ramo compatível com esse valor.\nO processo continua até chegar a uma folha.\n\nSe uma instância chega a uma folha com rótulo sim, então a previsão final é sim. Se chegar a uma folha com valor numérico, esse valor se torna a previsão.\nEssa interpretação operacional é importante porque mostra que uma árvore é, ao mesmo tempo, um modelo de previsão e um conjunto de regras executáveis.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Fundamentos de Árvore de Decisão</span>"
+    ]
+  },
+  {
+    "objectID": "section/01-fundamentos.html#representação-como-regras-simbólicas",
+    "href": "section/01-fundamentos.html#representação-como-regras-simbólicas",
+    "title": "2  Fundamentos de Árvore de Decisão",
+    "section": "2.5 Representação como regras simbólicas",
+    "text": "2.5 Representação como regras simbólicas\nUm ponto muito forte das árvores de decisão é sua equivalência com regras lógicas. Cada caminho da raiz até uma folha pode ser lido como uma conjunção de condições. O conjunto de caminhos pode ser visto como uma disjunção dessas conjunções.\nExemplo:\nSe perspectiva = ensolarado e umidade = normal, então jogar = sim\nSe perspectiva = nublado, então jogar = sim\nSe perspectiva = chuvoso e vento = fraco, então jogar = sim\nIsso ajuda bastante em domínios nos quais explicabilidade importa, como crédito, saúde, auditoria, diagnóstico e sistemas especialistas.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Fundamentos de Árvore de Decisão</span>"
+    ]
+  },
+  {
+    "objectID": "section/01-fundamentos.html#por-que-árvores-são-tão-populares",
+    "href": "section/01-fundamentos.html#por-que-árvores-são-tão-populares",
+    "title": "2  Fundamentos de Árvore de Decisão",
+    "section": "2.6 Por que árvores são tão populares",
+    "text": "2.6 Por que árvores são tão populares\nÁrvores de decisão ficaram famosas por várias razões práticas.\n\nSão fáceis de entender e explicar.\nExigem menos preparação de dados do que muitos outros modelos.\nLidam bem com relações não lineares.\nPodem trabalhar com atributos numéricos e categóricos.\nServem como ponto de partida para modelos mais avançados, como Random Forest e Gradient Boosting.\n\nNo contexto educacional, elas também são uma excelente porta de entrada para aprender conceitos centrais de machine learning: treino, teste, generalização, ruído, viés, overfitting e seleção de atributos.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Fundamentos de Árvore de Decisão</span>"
+    ]
+  },
+  {
+    "objectID": "section/01-fundamentos.html#tipos-de-problema-em-que-costumam-funcionar-bem",
+    "href": "section/01-fundamentos.html#tipos-de-problema-em-que-costumam-funcionar-bem",
+    "title": "2  Fundamentos de Árvore de Decisão",
+    "section": "2.7 Tipos de problema em que costumam funcionar bem",
+    "text": "2.7 Tipos de problema em que costumam funcionar bem\nÁrvores costumam ser especialmente adequadas quando:\n\nos exemplos podem ser descritos como pares atributo-valor;\na tarefa é de classificação discreta ou regressão estruturada;\na interpretação do modelo importa tanto quanto a acurácia;\nexiste possibilidade de interações não lineares entre variáveis;\nhá necessidade de comunicar regras para pessoas não técnicas.\n\nElas também aparecem com frequência em triagem médica, marketing, previsão de churn, análise de risco, detecção de inadimplência, classificação de documentos e apoio à decisão em processos internos.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Fundamentos de Árvore de Decisão</span>"
+    ]
+  },
+  {
+    "objectID": "section/01-fundamentos.html#vantagens",
+    "href": "section/01-fundamentos.html#vantagens",
+    "title": "2  Fundamentos de Árvore de Decisão",
+    "section": "2.8 Vantagens",
+    "text": "2.8 Vantagens\n\nInterpretabilidade\n\nTalvez seja a principal vantagem. Em muitos cenários, o valor da árvore não está apenas na previsão, mas em explicar por que aquela previsão foi feita.\n\nFlexibilidade\n\nA árvore consegue criar fronteiras de decisão complexas sem exigir normalização, padronização ou engenharia sofisticada logo no início.\n\nPouca preparação inicial\n\nModelos lineares costumam pedir mais cuidado com escala e relações funcionais. A árvore pode ser treinada rapidamente para produzir um baseline forte.\n\nCaptura de interações\n\nSe um atributo só faz sentido quando combinado com outro, a estrutura hierárquica da árvore naturalmente consegue modelar isso.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Fundamentos de Árvore de Decisão</span>"
+    ]
+  },
+  {
+    "objectID": "section/01-fundamentos.html#limitações",
+    "href": "section/01-fundamentos.html#limitações",
+    "title": "2  Fundamentos de Árvore de Decisão",
+    "section": "2.9 Limitações",
+    "text": "2.9 Limitações\nApesar da simplicidade, árvores isoladas também possuem fraquezas importantes.\n\nTendência a overfitting\n\nSe crescer demais, a árvore pode memorizar peculiaridades do conjunto de treino em vez de aprender padrões gerais.\n\nInstabilidade\n\nPequenas mudanças nos dados podem gerar estruturas diferentes. Isso acontece porque uma divisão ligeiramente distinta perto da raiz afeta toda a árvore abaixo.\n\nViés de seleção\n\nAlguns critérios podem favorecer atributos com muitos valores possíveis, caso o algoritmo não trate isso adequadamente.\n\nPerformance nem sempre é a melhor possível\n\nEm alguns problemas, métodos de conjunto baseados em árvores superam com folga uma única árvore.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Fundamentos de Árvore de Decisão</span>"
+    ]
+  },
+  {
+    "objectID": "section/01-fundamentos.html#o-princípio-da-árvore-pequena",
+    "href": "section/01-fundamentos.html#o-princípio-da-árvore-pequena",
+    "title": "2  Fundamentos de Árvore de Decisão",
+    "section": "2.10 O princípio da árvore pequena",
+    "text": "2.10 O princípio da árvore pequena\nUma ideia recorrente no estudo de árvores é a preferência por estruturas menores que expliquem bem os dados. Esse raciocínio conversa com o princípio da parcimônia: entre hipóteses com desempenho semelhante, preferimos a mais simples.\nNa prática, isso não quer dizer escolher sempre a menor árvore possível. Quer dizer buscar um equilíbrio entre:\n\nfidelidade aos dados de treino;\ncapacidade de generalização;\nfacilidade de interpretação.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Fundamentos de Árvore de Decisão</span>"
+    ]
+  },
+  {
+    "objectID": "section/01-fundamentos.html#exemplo-intuitivo-de-separação-progressiva",
+    "href": "section/01-fundamentos.html#exemplo-intuitivo-de-separação-progressiva",
+    "title": "2  Fundamentos de Árvore de Decisão",
+    "section": "2.11 Exemplo intuitivo de separação progressiva",
+    "text": "2.11 Exemplo intuitivo de separação progressiva\nPense em um conjunto com clientes que podem cancelar ou não um serviço. Se os dados estiverem todos misturados, a previsão é incerta. Ao perguntar primeiro número de chamados no suporte &gt; 3?, podemos separar um grupo mais propenso ao cancelamento. Em seguida, dentro de cada grupo, outra pergunta como tempo de contrato &gt; 12 meses? pode tornar a previsão ainda mais segura.\nA árvore funciona justamente assim: ela não tenta resolver o problema inteiro de uma vez. Ela quebra o problema em subproblemas locais.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Fundamentos de Árvore de Decisão</span>"
+    ]
+  },
+  {
+    "objectID": "section/01-fundamentos.html#árvore-como-modelo-e-como-ferramenta-de-análise",
+    "href": "section/01-fundamentos.html#árvore-como-modelo-e-como-ferramenta-de-análise",
+    "title": "2  Fundamentos de Árvore de Decisão",
+    "section": "2.12 Árvore como modelo e como ferramenta de análise",
+    "text": "2.12 Árvore como modelo e como ferramenta de análise\nMesmo quando a árvore não será o modelo final em produção, ela continua valiosa como instrumento de análise exploratória.\n\najuda a descobrir atributos importantes;\nsugere regras de negócio;\nrevela interações entre variáveis;\nmostra regiões do espaço de atributos mais arriscadas ou mais favoráveis.\n\nPor isso, aprender árvores de decisão é útil mesmo para quem depois vai trabalhar com ensembles, redes neurais ou modelos probabilísticos.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Fundamentos de Árvore de Decisão</span>"
+    ]
+  },
+  {
+    "objectID": "section/01-fundamentos.html#fechamento-do-capítulo",
+    "href": "section/01-fundamentos.html#fechamento-do-capítulo",
+    "title": "2  Fundamentos de Árvore de Decisão",
+    "section": "2.13 Fechamento do capítulo",
+    "text": "2.13 Fechamento do capítulo\nÁrvores de decisão são um excelente ponto de encontro entre teoria e prática. Elas permitem estudar conceitos formais de aprendizado supervisionado sem perder a intuição do processo decisório. Nos próximos capítulos, vamos detalhar como uma árvore escolhe suas perguntas, como ela mede a qualidade de uma divisão e como transformar essa teoria em modelos úteis com Python.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Fundamentos de Árvore de Decisão</span>"
+    ]
+  },
+  {
+    "objectID": "section/01-fundamentos.html#resumo-do-capítulo",
+    "href": "section/01-fundamentos.html#resumo-do-capítulo",
+    "title": "2  Fundamentos de Árvore de Decisão",
+    "section": "2.14 Resumo do capítulo",
+    "text": "2.14 Resumo do capítulo\n\nÁrvores de decisão organizam a previsão como sequências de testes.\nA estrutura raiz-nós-folhas aproxima o modelo de regras humanas.\nO grande atrativo da árvore é combinar interpretabilidade e utilidade prática.\nO grande risco é crescer demais e perder generalização.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Fundamentos de Árvore de Decisão</span>"
+    ]
+  },
+  {
+    "objectID": "section/01-fundamentos.html#erros-comuns",
+    "href": "section/01-fundamentos.html#erros-comuns",
+    "title": "2  Fundamentos de Árvore de Decisão",
+    "section": "2.15 Erros comuns",
+    "text": "2.15 Erros comuns\n\nachar que interpretável significa infalível;\nconfundir uma regra aprendida com verdade causal;\nsupor que a maior árvore é sempre a melhor;\nignorar a instabilidade estrutural causada por pequenas mudanças nos dados.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Fundamentos de Árvore de Decisão</span>"
+    ]
+  },
+  {
+    "objectID": "section/01-fundamentos.html#perguntas-de-revisão",
+    "href": "section/01-fundamentos.html#perguntas-de-revisão",
+    "title": "2  Fundamentos de Árvore de Decisão",
+    "section": "2.16 Perguntas de revisão",
+    "text": "2.16 Perguntas de revisão\n\nO que diferencia raiz, nó interno e folha?\nPor que a árvore é considerada um modelo interpretável?\nEm que sentido uma árvore pode representar uma disjunção de conjunções?\nPor que simplicidade e generalização costumam andar juntas?",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Fundamentos de Árvore de Decisão</span>"
+    ]
+  },
+  {
+    "objectID": "section/02-criterios-divisao.html",
+    "href": "section/02-criterios-divisao.html",
+    "title": "3  Critérios de Divisão",
+    "section": "",
+    "text": "3.1 Objetivos do capítulo\nUma árvore de decisão não escolhe perguntas ao acaso. Em cada nó, ela procura o teste que melhor organiza os dados locais. Essa escolha depende de um critério de divisão, isto é, de uma medida numérica que avalia o quanto uma partição melhora a separação entre as classes ou reduz o erro.\nAo final desta leitura, o leitor deve ser capaz de:",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Critérios de Divisão</span>"
+    ]
+  },
+  {
+    "objectID": "section/02-criterios-divisao.html#objetivos-do-capítulo",
+    "href": "section/02-criterios-divisao.html#objetivos-do-capítulo",
+    "title": "3  Critérios de Divisão",
+    "section": "",
+    "text": "explicar o que significa pureza e impureza em um nó;\ncalcular entropia e impureza Gini em exemplos simples;\ninterpretar ganho de informação como redução de incerteza;\nentender por que um atributo pode ser escolhido na raiz;\nreconhecer os limites práticos de uma escolha gulosa.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Critérios de Divisão</span>"
+    ]
+  },
+  {
+    "objectID": "section/02-criterios-divisao.html#o-problema-que-o-critério-resolve",
+    "href": "section/02-criterios-divisao.html#o-problema-que-o-critério-resolve",
+    "title": "3  Critérios de Divisão",
+    "section": "3.2 O problema que o critério resolve",
+    "text": "3.2 O problema que o critério resolve\nSuponha um conjunto com exemplos das classes A e B. Se o nó atual possui exemplos muito misturados, a incerteza sobre a classe correta é alta. O objetivo do algoritmo é encontrar uma divisão que gere filhos mais homogêneos.\nEm outras palavras, a pergunta ideal é aquela que reduz a desordem do conjunto.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Critérios de Divisão</span>"
+    ]
+  },
+  {
+    "objectID": "section/02-criterios-divisao.html#pureza-e-impureza",
+    "href": "section/02-criterios-divisao.html#pureza-e-impureza",
+    "title": "3  Critérios de Divisão",
+    "section": "3.3 Pureza e impureza",
+    "text": "3.3 Pureza e impureza\nUm nó puro contém exemplos de uma única classe. Um nó impuro contém classes misturadas.\nExemplos:\n\n10 A e 0 B: nó totalmente puro;\n9 A e 1 B: nó bastante puro;\n6 A e 4 B: nó moderadamente impuro;\n5 A e 5 B: nó altamente impuro.\n\nA árvore prefere testes que levem de um nó impuro para filhos mais puros.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Critérios de Divisão</span>"
+    ]
+  },
+  {
+    "objectID": "section/02-criterios-divisao.html#entropia",
+    "href": "section/02-criterios-divisao.html#entropia",
+    "title": "3  Critérios de Divisão",
+    "section": "3.4 Entropia",
+    "text": "3.4 Entropia\nA entropia vem da teoria da informação e mede a incerteza associada a uma distribuição de classes.\nPara classificação binária:\n\\[\nH(S) = -p_+ \\log_2(p_+) - p_- \\log_2(p_-)\n\\]\nonde:\n\np_+ é a proporção de exemplos positivos;\np_- é a proporção de exemplos negativos.\nInterpretação intuitiva\nSe todos os exemplos pertencem à mesma classe, a entropia é 0.\nSe as classes estão equilibradas, a entropia é máxima.\nQuanto maior a entropia, maior a incerteza sobre a classe de um exemplo escolhido ao acaso.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Critérios de Divisão</span>"
+    ]
+  },
+  {
+    "objectID": "section/02-criterios-divisao.html#tabela-intuitiva-de-entropia",
+    "href": "section/02-criterios-divisao.html#tabela-intuitiva-de-entropia",
+    "title": "3  Critérios de Divisão",
+    "section": "3.5 Tabela intuitiva de entropia",
+    "text": "3.5 Tabela intuitiva de entropia\nAntes de calcular um caso completo, vale entender a intuição da medida.\nEntropia responde a esta pergunta: quanto de incerteza existe sobre a classe de um exemplo escolhido ao acaso?\n\nquando o nó está concentrado em uma classe, a incerteza é baixa;\nquando o nó está equilibrado entre classes, a incerteza é alta.\n\nNo caso binário, o máximo ocorre em 50/50.\n\nimport math\n\ndef entropia_binaria(p):\n    if p in (0, 1):\n        return 0.0\n    return -(p * math.log2(p) + (1 - p) * math.log2(1 - p))\n\nfor positivos, total in [(10, 10), (9, 10), (8, 10), (7, 10), (6, 10), (5, 10)]:\n    p = positivos / total\n    print(f\"{positivos}/{total} positivos -&gt; entropia = {entropia_binaria(p):.3f}\")\n\n10/10 positivos -&gt; entropia = 0.000\n9/10 positivos -&gt; entropia = 0.469\n8/10 positivos -&gt; entropia = 0.722\n7/10 positivos -&gt; entropia = 0.881\n6/10 positivos -&gt; entropia = 0.971\n5/10 positivos -&gt; entropia = 1.000\nComo ler a tabela\n\n10/10: certeza total sobre a classe, entropia 0.000;\n9/10: ainda é fácil prever, então a entropia permanece baixa (0.469);\n8/10 e 7/10: a mistura aumenta e a entropia sobe;\n6/10: já estamos perto do equilíbrio, incerteza alta (0.971);\n5/10: equilíbrio perfeito, incerteza máxima no cenário binário (1.000).\n\nEssa progressão mostra a lógica da árvore de decisão: boas divisões são as que afastam os filhos de 50/50, deixando-os mais puros. Quando isso acontece, a entropia média após a divisão cai, e o ganho de informação aumenta.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Critérios de Divisão</span>"
+    ]
+  },
+  {
+    "objectID": "section/02-criterios-divisao.html#exemplo-numérico-detalhado-de-entropia",
+    "href": "section/02-criterios-divisao.html#exemplo-numérico-detalhado-de-entropia",
+    "title": "3  Critérios de Divisão",
+    "section": "3.6 Exemplo numérico detalhado de entropia",
+    "text": "3.6 Exemplo numérico detalhado de entropia\nSuponha um nó com 14 exemplos, sendo 9 positivos e 5 negativos.\n\\[\np_+ = 9/14 \\approx 0{,}643\n\\]\n\\[\np_- = 5/14 \\approx 0{,}357\n\\]\nSubstituindo na fórmula:\n\\[\nH(S) = -(0{,}643 \\cdot \\log_2 0{,}643 + 0{,}357 \\cdot \\log_2 0{,}357)\n\\]\nO resultado é aproximadamente 0.940.\n\nimport math\n\np_pos = 9 / 14\np_neg = 5 / 14\nentropia = -(p_pos * math.log2(p_pos) + p_neg * math.log2(p_neg))\nprint(round(entropia, 3))\n\n0.94\nEsse valor indica que o conjunto ainda possui mistura relevante entre classes. Não está no máximo de incerteza, mas tampouco está próximo da pureza total.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Critérios de Divisão</span>"
+    ]
+  },
+  {
+    "objectID": "section/02-criterios-divisao.html#ganho-de-informação",
+    "href": "section/02-criterios-divisao.html#ganho-de-informação",
+    "title": "3  Critérios de Divisão",
+    "section": "3.7 Ganho de informação",
+    "text": "3.7 Ganho de informação\nO ganho de informação mede a redução esperada na entropia depois da divisão por um atributo.\n\\[\nGanho(S, A) = H(S) - \\sum_{v \\in Valores(A)} \\frac{|S_v|}{|S|} H(S_v)\n\\]\nA lógica é direta:\n\ncalculamos a entropia antes da divisão;\ncalculamos a média ponderada das entropias dos filhos;\nsubtraímos os dois valores.\n\nQuanto maior o ganho, melhor foi a divisão.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Critérios de Divisão</span>"
+    ]
+  },
+  {
+    "objectID": "section/02-criterios-divisao.html#exemplo-passo-a-passo-de-ganho-de-informação",
+    "href": "section/02-criterios-divisao.html#exemplo-passo-a-passo-de-ganho-de-informação",
+    "title": "3  Critérios de Divisão",
+    "section": "3.8 Exemplo passo a passo de ganho de informação",
+    "text": "3.8 Exemplo passo a passo de ganho de informação\nConsidere novamente o conjunto com 14 exemplos (9 positivos, 5 negativos). Suponha que um atributo particione esse conjunto em dois filhos:\n\nFilho 1: 6 positivos e 2 negativos;\nFilho 2: 3 positivos e 3 negativos.\nEntropia do nó pai\n\nJá vimos que:\n\\[\nH(S) \\approx 0.940\n\\]\nEntropia do Filho 1\n\\[\nH(S_1) = -(6/8)\\log_2(6/8) - (2/8)\\log_2(2/8)\n\\]\nEntropia do Filho 2\n\\[\nH(S_2) = -(3/6)\\log_2(3/6) - (3/6)\\log_2(3/6) = 1.0\n\\]\nMédia ponderada após a divisão\n\\[\nH_{após} = (8/14)H(S_1) + (6/14)H(S_2)\n\\]\nGanho\n\\[\nGanho = H(S) - H_{após}\n\\]\n\ndef entropia(pos, neg):\n    total = pos + neg\n    if pos == 0 or neg == 0:\n        return 0.0\n    p_pos = pos / total\n    p_neg = neg / total\n    return -(p_pos * math.log2(p_pos) + p_neg * math.log2(p_neg))\n\npai = entropia(9, 5)\nfilho_1 = entropia(6, 2)\nfilho_2 = entropia(3, 3)\nentropia_após = (8/14) * filho_1 + (6/14) * filho_2\nganho = pai - entropia_após\n\nprint(\"Entropia pai:\", round(pai, 3))\nprint(\"Entropia filho 1:\", round(filho_1, 3))\nprint(\"Entropia filho 2:\", round(filho_2, 3))\nprint(\"Entropia após divisão:\", round(entropia_após, 3))\nprint(\"Ganho de informação:\", round(ganho, 3))\n\nEntropia pai: 0.94\nEntropia filho 1: 0.811\nEntropia filho 2: 1.0\nEntropia após divisão: 0.892\nGanho de informação: 0.048\n\nInterpretação do resultado\n\nO ganho será positivo porque a divisão produziu pelo menos um subconjunto mais organizado do que o conjunto original. Se compararmos vários atributos, a árvore tende a escolher aquele com maior ganho.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Critérios de Divisão</span>"
+    ]
+  },
+  {
+    "objectID": "section/02-criterios-divisao.html#exemplo-comparativo-entre-dois-atributos",
+    "href": "section/02-criterios-divisao.html#exemplo-comparativo-entre-dois-atributos",
+    "title": "3  Critérios de Divisão",
+    "section": "3.9 Exemplo comparativo entre dois atributos",
+    "text": "3.9 Exemplo comparativo entre dois atributos\nImagine dois atributos candidatos no mesmo nó pai.\n\nAtributo A: gera filhos (6+, 2-) e (3+, 3-).\nAtributo B: gera filhos (4+, 1-) e (5+, 4-).\n\nEmbora ambos reduzam alguma incerteza, A pode produzir ganho maior se separar melhor as classes. Esse tipo de comparação é exatamente o que o algoritmo faz em cada etapa.\n\ndef ganho_informacao(pai_pos, pai_neg, filhos):\n    total = pai_pos + pai_neg\n    entropia_pai = entropia(pai_pos, pai_neg)\n    entropia_filhos = 0.0\n    for pos, neg in filhos:\n        subtotal = pos + neg\n        entropia_filhos += (subtotal / total) * entropia(pos, neg)\n    return entropia_pai - entropia_filhos\n\nprint(\"Ganho atributo A:\", round(ganho_informacao(9, 5, [(6, 2), (3, 3)]), 3))\nprint(\"Ganho atributo B:\", round(ganho_informacao(9, 5, [(4, 1), (5, 4)]), 3))\n\nGanho atributo A: 0.048 Ganho atributo B: 0.045\n\n## Exemplo conceitual com o problema do tênis\n\nNos exemplos clássicos de indução, pergunta-se: qual atributo deve ir para a raiz? Se um atributo separa o conjunto em subconjuntos quase puros, ele tende a produzir alto ganho de informação. Por isso o ID3 adota esse critério para construir a árvore de maneira gulosa.\n\n## Impureza Gini\n\nOutro critério muito usado é a impureza Gini.\n\n$$\nGini(S) = 1 - \\sum_i p_i^2\n$$\n\nEm classificação binária:\n\n$$\nGini(S) = 1 - (p_+^2 + p_-^2)\n$$\n\n- Interpretação\n\n- `Gini = 0` indica pureza total;\n- valores maiores indicam maior mistura entre classes;\n- na prática, é um critério extremamente popular por ser eficiente e funcionar muito bem.\n\n## Tabela intuitiva de Gini\n\n::: {#e8dbef55 .cell}\n``` {.python .cell-code}\ndef gini_binario(p):\n    return 1 - (p**2 + (1 - p)**2)\n\nfor positivos, total in [(10, 10), (9, 10), (8, 10), (7, 10), (6, 10), (5, 10)]:\n    p = positivos / total\n    print(f\"{positivos}/{total} positivos -&gt; gini = {gini_binario(p):.3f}\")\n:::\nObserve que a lógica geral é a mesma da entropia: o valor cresce conforme o nó se aproxima de uma divisão equilibrada entre classes.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Critérios de Divisão</span>"
+    ]
+  },
+  {
+    "objectID": "section/02-criterios-divisao.html#exemplo-detalhado-de-gini",
+    "href": "section/02-criterios-divisao.html#exemplo-detalhado-de-gini",
+    "title": "3  Critérios de Divisão",
+    "section": "3.10 Exemplo detalhado de Gini",
+    "text": "3.10 Exemplo detalhado de Gini\nConsidere 10 amostras: 6 da classe A e 4 da classe B.\n\\[\nGini = 1 - (0{,}6^2 + 0{,}4^2) = 1 - (0{,}36 + 0{,}16) = 0{,}48\n\\]\nAgora compare com um nó mais puro: 9 da classe A e 1 da classe B.\n\\[\nGini = 1 - (0{,}9^2 + 0{,}1^2) = 1 - (0{,}81 + 0{,}01) = 0{,}18\n\\]\n\np_a = 6 / 10\np_b = 4 / 10\ngini = 1 - (p_a**2 + p_b**2)\nprint(round(gini, 3))\n\np_a = 9 / 10\np_b = 1 / 10\ngini = 1 - (p_a**2 + p_b**2)\nprint(round(gini, 3))\n\nNo segundo caso, o valor cai porque o nó está mais puro.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Critérios de Divisão</span>"
+    ]
+  },
+  {
+    "objectID": "section/02-criterios-divisao.html#entropia-ou-gini",
+    "href": "section/02-criterios-divisao.html#entropia-ou-gini",
+    "title": "3  Critérios de Divisão",
+    "section": "3.11 Entropia ou Gini?",
+    "text": "3.11 Entropia ou Gini?\nNa prática, as duas medidas costumam produzir resultados parecidos. As diferenças principais são:\n\nentropia tem interpretação mais ligada à informação;\nGini costuma ser computacionalmente simples e muito usado por padrão;\npequenas mudanças na árvore podem ocorrer dependendo do critério escolhido.\n\nNo scikit-learn, classificação aceita critérios como gini, entropy e log_loss.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Critérios de Divisão</span>"
+    ]
+  },
+  {
+    "objectID": "section/02-criterios-divisao.html#atributos-categóricos-e-numéricos",
+    "href": "section/02-criterios-divisao.html#atributos-categóricos-e-numéricos",
+    "title": "3  Critérios de Divisão",
+    "section": "3.12 Atributos categóricos e numéricos",
+    "text": "3.12 Atributos categóricos e numéricos\nEm problemas reais, nem sempre o atributo é categórico simples. Variáveis numéricas exigem encontrar um ponto de corte.\nExemplo:\n\nidade &lt;= 35.5\nrenda &lt;= 4200\ntempo_cliente &lt;= 18.5\n\nO algoritmo testa candidatos a corte e escolhe o que produz a melhor redução de impureza.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Critérios de Divisão</span>"
+    ]
+  },
+  {
+    "objectID": "section/02-criterios-divisao.html#por-que-a-escolha-é-gulosa",
+    "href": "section/02-criterios-divisao.html#por-que-a-escolha-é-gulosa",
+    "title": "3  Critérios de Divisão",
+    "section": "3.13 Por que a escolha é gulosa",
+    "text": "3.13 Por que a escolha é gulosa\nAlgoritmos clássicos de árvore, como ID3 e CART, fazem escolhas locais. Em cada nó, escolhem o melhor atributo naquele momento. Eles não exploram exaustivamente todas as árvores possíveis, porque isso seria computacionalmente inviável.\nEssa estratégia gulosa funciona muito bem na prática, mas também explica por que uma pequena alteração nos dados pode mudar a estrutura da árvore.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Critérios de Divisão</span>"
+    ]
+  },
+  {
+    "objectID": "section/02-criterios-divisao.html#quando-um-atributo-aparentemente-bom-engana",
+    "href": "section/02-criterios-divisao.html#quando-um-atributo-aparentemente-bom-engana",
+    "title": "3  Critérios de Divisão",
+    "section": "3.14 Quando um atributo aparentemente bom engana",
+    "text": "3.14 Quando um atributo aparentemente bom engana\nUm ponto importante da teoria clássica é que alguns atributos podem parecer bons por criarem muitas partições pequenas. Isso pode gerar ganho elevado no treino, mas baixa generalização. Por isso, a escolha do critério deve ser acompanhada por mecanismos de controle de complexidade, como profundidade máxima e poda.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Critérios de Divisão</span>"
+    ]
+  },
+  {
+    "objectID": "section/02-criterios-divisao.html#critérios-em-regressão",
+    "href": "section/02-criterios-divisao.html#critérios-em-regressão",
+    "title": "3  Critérios de Divisão",
+    "section": "3.15 Critérios em regressão",
+    "text": "3.15 Critérios em regressão\nQuando a saída é numérica, o problema muda. Em vez de reduzir mistura de classes, queremos reduzir dispersão dos valores do alvo.\nCritérios comuns incluem:\n\nredução da variância;\nerro quadrático médio;\nerro absoluto em algumas variantes.\n\nA ideia continua a mesma: separar os dados em grupos mais coerentes internamente.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Critérios de Divisão</span>"
+    ]
+  },
+  {
+    "objectID": "section/02-criterios-divisao.html#hiperparâmetros-ligados-a-divisão",
+    "href": "section/02-criterios-divisao.html#hiperparâmetros-ligados-a-divisão",
+    "title": "3  Critérios de Divisão",
+    "section": "3.16 Hiperparâmetros ligados a divisão",
+    "text": "3.16 Hiperparâmetros ligados a divisão\nOs principais controles no scikit-learn são:\n\ncriterion: define a medida usada no nó;\nsplitter: geralmente best ou random;\nmax_depth: limita profundidade;\nmin_samples_split: mínimo de exemplos para tentar dividir;\nmin_samples_leaf: mínimo de exemplos por folha;\nmax_leaf_nodes: limita número total de folhas;\nmin_impurity_decrease: exige ganho mínimo para aceitar divisão.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Critérios de Divisão</span>"
+    ]
+  },
+  {
+    "objectID": "section/02-criterios-divisao.html#resumo-do-capítulo",
+    "href": "section/02-criterios-divisao.html#resumo-do-capítulo",
+    "title": "3  Critérios de Divisão",
+    "section": "3.17 Resumo do capítulo",
+    "text": "3.17 Resumo do capítulo\nToda divisão em uma árvore de decisão tenta responder à mesma pergunta: “qual teste organiza melhor os dados neste ponto?”. Entropia, ganho de informação e Gini são formas matemáticas de transformar essa intuição em algoritmo.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Critérios de Divisão</span>"
+    ]
+  },
+  {
+    "objectID": "section/02-criterios-divisao.html#erros-comuns",
+    "href": "section/02-criterios-divisao.html#erros-comuns",
+    "title": "3  Critérios de Divisão",
+    "section": "3.18 Erros comuns",
+    "text": "3.18 Erros comuns\n\ncalcular entropia sem ponderar corretamente o tamanho dos filhos;\ncomparar divisões olhando apenas um subconjunto e não o ganho total;\nesquecer que atributos com muitos valores podem parecer bons no treino;\ntratar Gini e entropia como se um sempre fosse superior ao outro.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Critérios de Divisão</span>"
+    ]
+  },
+  {
+    "objectID": "section/02-criterios-divisao.html#perguntas-de-revisão",
+    "href": "section/02-criterios-divisao.html#perguntas-de-revisão",
+    "title": "3  Critérios de Divisão",
+    "section": "3.19 Perguntas de revisão",
+    "text": "3.19 Perguntas de revisão\n\nO que significa um nó puro?\nComo a entropia varia entre um nó puro e um nó equilibrado?\nO que o ganho de informação mede exatamente?\nQual a intuição por trás da impureza Gini?\nPor que a escolha local do melhor atributo é chamada de gulosa?",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Critérios de Divisão</span>"
+    ]
+  },
+  {
+    "objectID": "section/03-primeiro-modelo.html",
+    "href": "section/03-primeiro-modelo.html",
+    "title": "4  Primeiro Modelo em Python",
+    "section": "",
+    "text": "4.1 Escolha do dataset\nNeste capítulo, vamos sair da teoria e construir nossa primeira árvore de decisão com scikit-learn. O objetivo não é apenas treinar o modelo, mas observar como os conceitos de raiz, nós internos, folhas, impureza e profundidade aparecem concretamente.\nVamos usar o conjunto Iris, um clássico da literatura de machine learning. Ele contém medidas de flores de três espécies diferentes e é excelente para demonstrar classificação supervisionada.\nAs variáveis de entrada são:\nA variável alvo é a espécie da flor.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Primeiro Modelo em Python</span>"
+    ]
+  },
+  {
+    "objectID": "section/03-primeiro-modelo.html#escolha-do-dataset",
+    "href": "section/03-primeiro-modelo.html#escolha-do-dataset",
+    "title": "4  Primeiro Modelo em Python",
+    "section": "",
+    "text": "comprimento da sépala;\nlargura da sépala;\ncomprimento da pétala;\nlargura da pétala.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Primeiro Modelo em Python</span>"
+    ]
+  },
+  {
+    "objectID": "section/03-primeiro-modelo.html#preparando-os-dados",
+    "href": "section/03-primeiro-modelo.html#preparando-os-dados",
+    "title": "4  Primeiro Modelo em Python",
+    "section": "4.2 Preparando os dados",
+    "text": "4.2 Preparando os dados\n\nfrom sklearn.datasets import load_iris\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.tree import DecisionTreeClassifier\nfrom sklearn.metrics import accuracy_score, classification_report\n\niris = load_iris()\nX, y = iris.data, iris.target\n\nX_train, X_test, y_train, y_test = train_test_split(\n    X,\n    y,\n    test_size=0.3,\n    random_state=42,\n    stratify=y\n)\n\nprint(\"Formato de X:\", X.shape)\nprint(\"Classes:\", iris.target_names)\n\nFormato de X: (150, 4)\nClasses: ['setosa' 'versicolor' 'virginica']",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Primeiro Modelo em Python</span>"
+    ]
+  },
+  {
+    "objectID": "section/03-primeiro-modelo.html#treinando-uma-árvore-inicial",
+    "href": "section/03-primeiro-modelo.html#treinando-uma-árvore-inicial",
+    "title": "4  Primeiro Modelo em Python",
+    "section": "4.3 Treinando uma árvore inicial",
+    "text": "4.3 Treinando uma árvore inicial\n\nmodel = DecisionTreeClassifier(random_state=42)\nmodel.fit(X_train, y_train)\n\npred = model.predict(X_test)\nprint(\"Acurácia:\", accuracy_score(y_test, pred))\nprint(classification_report(y_test, pred, target_names=iris.target_names))\n\nAcurácia: 0.9333333333333333\n              precision    recall  f1-score   support\n\n      setosa       1.00      1.00      1.00        15\n  versicolor       1.00      0.80      0.89        15\n   virginica       0.83      1.00      0.91        15\n\n    accuracy                           0.93        45\n   macro avg       0.94      0.93      0.93        45\nweighted avg       0.94      0.93      0.93        45\nEsse primeiro modelo já nos permite observar um ponto importante: árvores costumam se ajustar muito bem a datasets pequenos e estruturados, mas isso não significa automaticamente que vão generalizar bem em qualquer contexto.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Primeiro Modelo em Python</span>"
+    ]
+  },
+  {
+    "objectID": "section/03-primeiro-modelo.html#o-que-a-árvore-aprendeu",
+    "href": "section/03-primeiro-modelo.html#o-que-a-árvore-aprendeu",
+    "title": "4  Primeiro Modelo em Python",
+    "section": "4.4 O que a árvore aprendeu",
+    "text": "4.4 O que a árvore aprendeu\nDepois do treino, a árvore passa a ter uma estrutura interna com informações como:\n\nqual atributo foi usado na raiz;\nquais pontos de corte foram escolhidos;\nquantas amostras chegaram a cada nó;\nqual foi a impureza observada em cada etapa.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Primeiro Modelo em Python</span>"
+    ]
+  },
+  {
+    "objectID": "section/03-primeiro-modelo.html#visualizando-a-árvore",
+    "href": "section/03-primeiro-modelo.html#visualizando-a-árvore",
+    "title": "4  Primeiro Modelo em Python",
+    "section": "4.5 Visualizando a árvore",
+    "text": "4.5 Visualizando a árvore\n\nimport matplotlib.pyplot as plt\nfrom sklearn.tree import plot_tree\n\nplt.figure(figsize=(16, 9))\nplot_tree(\n    model,\n    feature_names=iris.feature_names,\n    class_names=iris.target_names,\n    filled=True,\n    rounded=True,\n    fontsize=9\n)\nplt.show()\n\n\n\n\nSaída\n\n\n\n4.5.1 Como ler o gráfico\nEm cada nó, você costuma encontrar:\n\na regra de divisão, como petal length (cm) &lt;= 2.45;\na impureza do nó;\no número de amostras naquele ponto;\na distribuição das classes;\na classe majoritária prevista.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Primeiro Modelo em Python</span>"
+    ]
+  },
+  {
+    "objectID": "section/03-primeiro-modelo.html#interpretando-a-raiz",
+    "href": "section/03-primeiro-modelo.html#interpretando-a-raiz",
+    "title": "4  Primeiro Modelo em Python",
+    "section": "4.6 Interpretando a raiz",
+    "text": "4.6 Interpretando a raiz\nA raiz normalmente concentra a pergunta mais informativa de todo o problema. No Iris, é comum que medidas da pétala apareçam cedo na árvore, porque elas separam muito bem certas espécies.\nQuando um atributo aparece perto da raiz, isso sugere que ele tem grande utilidade discriminativa para aquele conjunto de dados.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Primeiro Modelo em Python</span>"
+    ]
+  },
+  {
+    "objectID": "section/03-primeiro-modelo.html#medindo-complexidade-da-árvore",
+    "href": "section/03-primeiro-modelo.html#medindo-complexidade-da-árvore",
+    "title": "4  Primeiro Modelo em Python",
+    "section": "4.7 Medindo complexidade da árvore",
+    "text": "4.7 Medindo complexidade da árvore\nPodemos inspecionar algumas propriedades do modelo.\n\nprint(\"Profundidade da árvore:\", model.get_depth())\nprint(\"Número de folhas:\", model.get_n_leaves())\n\nProfundidade da árvore: 5\nNúmero de folhas: 8\nEsses dois números ajudam a entender se a árvore está simples ou excessivamente detalhada.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Primeiro Modelo em Python</span>"
+    ]
+  },
+  {
+    "objectID": "section/03-primeiro-modelo.html#comparando-uma-árvore-mais-controlada",
+    "href": "section/03-primeiro-modelo.html#comparando-uma-árvore-mais-controlada",
+    "title": "4  Primeiro Modelo em Python",
+    "section": "4.8 Comparando uma árvore mais controlada",
+    "text": "4.8 Comparando uma árvore mais controlada\nUma boa prática é comparar o modelo livre com uma versão limitada.\n\nshallow_model = DecisionTreeClassifier(max_depth=3, random_state=42)\nshallow_model.fit(X_train, y_train)\n\nshallow_pred = shallow_model.predict(X_test)\nprint(\"Acurácia árvore rasa:\", accuracy_score(y_test, shallow_pred))\nprint(\"Profundidade:\", shallow_model.get_depth())\nprint(\"Folhas:\", shallow_model.get_n_leaves())\n\nAcurácia árvore rasa: 0.9777777777777777\nProfundidade: 3\nFolhas: 5\nEsse tipo de comparação mostra algo essencial: aumentar complexidade não garante melhora em dados novos.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Primeiro Modelo em Python</span>"
+    ]
+  },
+  {
+    "objectID": "section/03-primeiro-modelo.html#importância-das-variáveis",
+    "href": "section/03-primeiro-modelo.html#importância-das-variáveis",
+    "title": "4  Primeiro Modelo em Python",
+    "section": "4.9 Importância das variáveis",
+    "text": "4.9 Importância das variáveis\nOutra análise útil é observar a importância dos atributos.\n\nimport pandas as pd\n\nimportance = pd.Series(model.feature_importances_, index=iris.feature_names)\nprint(importance.sort_values(ascending=False))\n\npetal length (cm)    0.541176\npetal width (cm)     0.430252\nsepal width (cm)     0.028571\nsepal length (cm)    0.000000\ndtype: float64\n\n4.9.1 Cuidado com a interpretação\nImportância de atributo é útil, mas não deve ser lida como verdade absoluta. Ela depende da estrutura aprendida pela árvore e da forma como as variáveis competem entre si para entrar nas divisões.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Primeiro Modelo em Python</span>"
+    ]
+  },
+  {
+    "objectID": "section/03-primeiro-modelo.html#fazendo-previsões-em-novos-exemplos",
+    "href": "section/03-primeiro-modelo.html#fazendo-previsões-em-novos-exemplos",
+    "title": "4  Primeiro Modelo em Python",
+    "section": "4.10 Fazendo previsões em novos exemplos",
+    "text": "4.10 Fazendo previsões em novos exemplos\n\nnovo_exemplo = [[5.1, 3.5, 1.4, 0.2]]\nclasse_prevista = model.predict(novo_exemplo)[0]\nprobabilidades = model.predict_proba(novo_exemplo)[0]\n\nprint(\"Classe prevista:\", iris.target_names[classe_prevista])\nprint(\"Probabilidades:\", probabilidades)\n\nClasse prevista: setosa\nProbabilidades: [1. 0. 0.]\nIsso reforça a diferença entre:\n\npredict: devolve a classe final;\npredict_proba: devolve a distribuição estimada entre classes na folha.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Primeiro Modelo em Python</span>"
+    ]
+  },
+  {
+    "objectID": "section/03-primeiro-modelo.html#exportando-regras-textuais",
+    "href": "section/03-primeiro-modelo.html#exportando-regras-textuais",
+    "title": "4  Primeiro Modelo em Python",
+    "section": "4.11 Exportando regras textuais",
+    "text": "4.11 Exportando regras textuais\nQuando quisermos uma representação mais textual da árvore, podemos usar export_text.\n\nfrom sklearn.tree import export_text\n\nrules = export_text(model, feature_names=list(iris.feature_names))\nprint(rules)\n\n|--- petal length (cm) &lt;= 2.45\n|   |--- class: 0\n|--- petal length (cm) &gt;  2.45\n|   |--- petal width (cm) &lt;= 1.55\n|   |   |--- petal length (cm) &lt;= 4.95\n|   |   |   |--- class: 1\n|   |   |--- petal length (cm) &gt;  4.95\n|   |   |   |--- class: 2\n|   |--- petal width (cm) &gt;  1.55\n|   |   |--- petal width (cm) &lt;= 1.70\n|   |   |   |--- sepal width (cm) &lt;= 2.85\n|   |   |   |   |--- class: 1\n|   |   |   |--- sepal width (cm) &gt;  2.85\n|   |   |   |   |--- class: 2\n|   |   |--- petal width (cm) &gt;  1.70\n|   |   |   |--- petal length (cm) &lt;= 4.85\n|   |   |   |   |--- sepal width (cm) &lt;= 3.00\n|   |   |   |   |   |--- class: 2\n|   |   |   |   |--- sepal width (cm) &gt;  3.00\n|   |   |   |   |   |--- class: 1\n|   |   |   |--- petal length (cm) &gt;  4.85\n|   |   |   |   |--- class: 2\nEsse formato é excelente para documentação, ensino e discussão com pessoas que preferem texto a gráfico.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Primeiro Modelo em Python</span>"
+    ]
+  },
+  {
+    "objectID": "section/03-primeiro-modelo.html#boas-práticas-desde-o-primeiro-modelo",
+    "href": "section/03-primeiro-modelo.html#boas-práticas-desde-o-primeiro-modelo",
+    "title": "4  Primeiro Modelo em Python",
+    "section": "4.12 Boas práticas desde o primeiro modelo",
+    "text": "4.12 Boas práticas desde o primeiro modelo\nMesmo em exemplos simples, vale manter algumas disciplinas:\n\nseparar treino e teste;\nfixar random_state para reprodutibilidade;\ncomparar versões mais simples e mais complexas;\nolhar além da acurácia;\ninterpretar a árvore aprendida.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Primeiro Modelo em Python</span>"
+    ]
+  },
+  {
+    "objectID": "section/03-primeiro-modelo.html#fechamento-do-capítulo",
+    "href": "section/03-primeiro-modelo.html#fechamento-do-capítulo",
+    "title": "4  Primeiro Modelo em Python",
+    "section": "4.13 Fechamento do capítulo",
+    "text": "4.13 Fechamento do capítulo\nNosso primeiro modelo mostrou que árvores de decisão podem ser treinadas rapidamente e lidas com relativa facilidade. No entanto, ainda falta responder a perguntas importantes: como avaliar melhor a qualidade do modelo, como ajustar hiperparâmetros e como evitar que a árvore fique mais complexa do que o necessário. Esse será o foco do próximo capítulo.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Primeiro Modelo em Python</span>"
+    ]
+  },
+  {
+    "objectID": "section/03-primeiro-modelo.html#resumo-do-capítulo",
+    "href": "section/03-primeiro-modelo.html#resumo-do-capítulo",
+    "title": "4  Primeiro Modelo em Python",
+    "section": "4.14 Resumo do capítulo",
+    "text": "4.14 Resumo do capítulo\n\nO treino em Python materializa conceitos como raiz, profundidade e folhas.\nA visualização da árvore ajuda a interpretar regras e cortes aprendidos.\nComparar uma árvore livre com uma árvore rasa é um bom hábito didático.\nImportância de atributos e exportação textual ampliam a interpretabilidade.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Primeiro Modelo em Python</span>"
+    ]
+  },
+  {
+    "objectID": "section/03-primeiro-modelo.html#erros-comuns",
+    "href": "section/03-primeiro-modelo.html#erros-comuns",
+    "title": "4  Primeiro Modelo em Python",
+    "section": "4.15 Erros comuns",
+    "text": "4.15 Erros comuns\n\nolhar apenas a acurácia e ignorar estrutura da árvore;\ntreinar sem separar treino e teste;\ninterpretar importância de atributos como causalidade;\nassumir que a primeira árvore treinada já está pronta para uso final.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Primeiro Modelo em Python</span>"
+    ]
+  },
+  {
+    "objectID": "section/03-primeiro-modelo.html#perguntas-de-revisão",
+    "href": "section/03-primeiro-modelo.html#perguntas-de-revisão",
+    "title": "4  Primeiro Modelo em Python",
+    "section": "4.16 Perguntas de revisão",
+    "text": "4.16 Perguntas de revisão\n\nO que você observa em cada nó quando usa plot_tree?\nPor que vale a pena comparar árvores com profundidades diferentes?\nO que predict_proba adiciona a interpretação?\nEm que situações export_text pode ser mais útil do que o gráfico?",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Primeiro Modelo em Python</span>"
+    ]
+  },
+  {
+    "objectID": "section/04-avaliacao-ajuste.html",
+    "href": "section/04-avaliacao-ajuste.html",
+    "title": "5  Avaliação e Ajuste",
+    "section": "",
+    "text": "5.1 Separação entre treino e teste\nTreinar um modelo é apenas parte do trabalho. Um modelo aparentemente bom pode estar apenas decorando o conjunto de treino. Avaliação adequada significa medir desempenho em dados não vistos e interpretar os resultados com critério.\nA primeira barreira contra o autoengano em machine learning é separar os dados em conjuntos distintos.\nNo capítulo anterior usamos apenas treino e teste. Agora vamos ampliar essa avaliação.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Avaliação e Ajuste</span>"
+    ]
+  },
+  {
+    "objectID": "section/04-avaliacao-ajuste.html#separação-entre-treino-e-teste",
+    "href": "section/04-avaliacao-ajuste.html#separação-entre-treino-e-teste",
+    "title": "5  Avaliação e Ajuste",
+    "section": "",
+    "text": "treino: usado para ajustar o modelo;\nvalidação: usado para comparar configurações;\nteste: usado para medir desempenho final de forma mais honesta.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Avaliação e Ajuste</span>"
+    ]
+  },
+  {
+    "objectID": "section/04-avaliacao-ajuste.html#métricas-para-classificação",
+    "href": "section/04-avaliacao-ajuste.html#métricas-para-classificação",
+    "title": "5  Avaliação e Ajuste",
+    "section": "5.2 Métricas para classificação",
+    "text": "5.2 Métricas para classificação\nEm classificação, a acurácia é útil, mas não basta em todos os contextos.\n\n5.2.1 Accuracy\nIndica a proporção de previsões corretas.\n\n\n5.2.2 Precision\nEntre os exemplos previstos como positivos, quantos eram de fato positivos.\n\n\n5.2.3 Recall\nEntre os exemplos realmente positivos, quantos foram encontrados.\n\n\n5.2.4 F1-score\nMédia harmônica entre precision e recall. É muito útil quando existe desequilíbrio entre o custo de falsos positivos e falsos negativos.\n\n\n5.2.5 Matriz de confusão\nMostra com mais detalhe onde o modelo está acertando e errando.\n\nfrom sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay\n\ncm = confusion_matrix(y_test, pred)\nprint(cm)\n\ndisp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=iris.target_names)\ndisp.plot()",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Avaliação e Ajuste</span>"
+    ]
+  },
+  {
+    "objectID": "section/04-avaliacao-ajuste.html#relatório-de-classificação",
+    "href": "section/04-avaliacao-ajuste.html#relatório-de-classificação",
+    "title": "5  Avaliação e Ajuste",
+    "section": "5.3 Relatório de classificação",
+    "text": "5.3 Relatório de classificação\n\nfrom sklearn.metrics import classification_report\n\nprint(classification_report(y_test, pred, target_names=iris.target_names))\n\nEsse relatório é útil porque resume várias métricas por classe.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Avaliação e Ajuste</span>"
+    ]
+  },
+  {
+    "objectID": "section/04-avaliacao-ajuste.html#por-que-validação-cruzada-importa",
+    "href": "section/04-avaliacao-ajuste.html#por-que-validação-cruzada-importa",
+    "title": "5  Avaliação e Ajuste",
+    "section": "5.4 Por que validação cruzada importa",
+    "text": "5.4 Por que validação cruzada importa\nUma única divisão treino-teste pode ser injusta com o modelo ou benevolente demais. A validação cruzada reduz essa dependência de uma partição específica.\nNa validação cruzada k-fold, dividimos os dados em k partes. O modelo treina em k-1 partes e valida na parte restante. Repetimos isso k vezes, mudando o bloco de validação.\n\nfrom sklearn.model_selection import cross_val_score\n\nscores = cross_val_score(\n    DecisionTreeClassifier(random_staté=42),\n    X,\n    y,\n    cv=5,\n    scoring=\"accuracy\"\n)\n\nprint(\"Scores:\", scores)\nprint(\"Média:\", scores.mean())\nprint(\"Desvio padrão:\", scores.std())\n\n\n5.4.1 Como interpretar\n\nmédia alta sugere bom desempenho médio;\ndesvio padrão alto sugere instabilidade;\nmédia baixa pode indicar que o modelo não está adequado ou que faltam ajustes.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Avaliação e Ajuste</span>"
+    ]
+  },
+  {
+    "objectID": "section/04-avaliacao-ajuste.html#ajustando-hiperparâmetros",
+    "href": "section/04-avaliacao-ajuste.html#ajustando-hiperparâmetros",
+    "title": "5  Avaliação e Ajuste",
+    "section": "5.5 Ajustando hiperparâmetros",
+    "text": "5.5 Ajustando hiperparâmetros\nUma árvore possui vários controles de complexidade. O papel do ajuste é encontrar configurações que generalizem melhor.\n\n5.5.1 Parâmetros mais importantes\n\nmax_depth: limita profundidade total;\nmin_samples_split: exige número mínimo para dividir um nó;\nmin_samples_leaf: evita folhas pequenas demais;\ncritérion: muda a função de qualidade da divisão;\nccp_alpha: controla poda por custo-complexidade.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Avaliação e Ajuste</span>"
+    ]
+  },
+  {
+    "objectID": "section/04-avaliacao-ajuste.html#grid-search",
+    "href": "section/04-avaliacao-ajuste.html#grid-search",
+    "title": "5  Avaliação e Ajuste",
+    "section": "5.6 Grid Search",
+    "text": "5.6 Grid Search\n\nfrom sklearn.model_selection import GridSearchCV\n\nparam_grid = {\n    \"max_depth\": [2, 3, 4, 5, None],\n    \"min_samples_split\": [2, 5, 10],\n    \"min_samples_leaf\": [1, 2, 4],\n    \"critérion\": [\"gini\", \"entropy\"]\n}\n\ngrid = GridSearchCV(\n    DecisionTreeClassifier(random_staté=42),\n    param_grid=param_grid,\n    cv=5,\n    scoring=\"accuracy\",\n    n_jobs=-1\n)\n\ngrid.fit(X_train, y_train)\nprint(\"Melhores parâmetros:\", grid.best_params_)\nprint(\"Melhor score CV:\", grid.best_score_)",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Avaliação e Ajuste</span>"
+    ]
+  },
+  {
+    "objectID": "section/04-avaliacao-ajuste.html#avaliando-o-melhor-modelo-no-teste",
+    "href": "section/04-avaliacao-ajuste.html#avaliando-o-melhor-modelo-no-teste",
+    "title": "5  Avaliação e Ajuste",
+    "section": "5.7 Avaliando o melhor modelo no teste",
+    "text": "5.7 Avaliando o melhor modelo no teste\n\nbest_model = grid.best_estimator_\nbest_pred = best_model.predict(X_test)\n\nprint(\"Accuracy no teste:\", accuracy_score(y_test, best_pred))\nprint(classification_report(y_test, best_pred, target_names=iris.target_names))\n\nEsse passo é importante porque a escolha do melhor conjunto de hiperparâmetros foi feita olhando para validação, não para o teste final.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Avaliação e Ajuste</span>"
+    ]
+  },
+  {
+    "objectID": "section/04-avaliacao-ajuste.html#vieses-de-avaliação-comuns",
+    "href": "section/04-avaliacao-ajuste.html#vieses-de-avaliação-comuns",
+    "title": "5  Avaliação e Ajuste",
+    "section": "5.8 Vieses de avaliação comuns",
+    "text": "5.8 Vieses de avaliação comuns\n\n5.8.1 Avaliar no treino\nSe medirmos o modelo no mesmo conjunto que o treinou, o resultado tende a ser otimista demais.\n\n\n5.8.2 Ajustar repetidamente olhando o teste\nO conjunto de teste deve ser preservado como referência final. Usar o teste para tomar decisões sucessivas vaza informação.\n\n\n5.8.3 Escolher só pela acurácia\nEm dados desbalanceados, acurácia pode esconder um modelo ruim para a classe de maior interesse.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Avaliação e Ajuste</span>"
+    ]
+  },
+  {
+    "objectID": "section/04-avaliacao-ajuste.html#diagnóstico-prático-de-uma-árvore",
+    "href": "section/04-avaliacao-ajuste.html#diagnóstico-prático-de-uma-árvore",
+    "title": "5  Avaliação e Ajuste",
+    "section": "5.9 Diagnóstico prático de uma árvore",
+    "text": "5.9 Diagnóstico prático de uma árvore\nAo avaliar uma árvore, pergunte:\n\nela está muito profunda?\no desempenho no treino está muito acima do teste?\nexistem folhas com poucas amostras?\na estrutura aprendida faz sentido para o domínio?\na variação entre folds está alta?",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Avaliação e Ajuste</span>"
+    ]
+  },
+  {
+    "objectID": "section/04-avaliacao-ajuste.html#curva-de-complexidade",
+    "href": "section/04-avaliacao-ajuste.html#curva-de-complexidade",
+    "title": "5  Avaliação e Ajuste",
+    "section": "5.10 Curva de complexidade",
+    "text": "5.10 Curva de complexidade\nUma estratégia didática interessante é testar profundidades crescentes e observar o desempenho.\n\nfrom sklearn.metrics import f1_score\n\nfor depth in [1, 2, 3, 4, 5, None]:\n    clf = DecisionTreeClassifier(max_depth=depth, random_staté=42)\n    clf.fit(X_train, y_train)\n    pred_depth = clf.predict(X_test)\n    print(\n        f\"depth={depth} | acc={accuracy_score(y_test, pred_depth):.3f} | \"\n        f\"f1_macro={f1_score(y_test, pred_depth, average='macro'):.3f}\"\n    )\n\nEsse experimento ajuda a visualizar a relação entre simplicidade e desempenho.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Avaliação e Ajuste</span>"
+    ]
+  },
+  {
+    "objectID": "section/04-avaliacao-ajuste.html#fechamento-do-capítulo",
+    "href": "section/04-avaliacao-ajuste.html#fechamento-do-capítulo",
+    "title": "5  Avaliação e Ajuste",
+    "section": "5.11 Fechamento do capítulo",
+    "text": "5.11 Fechamento do capítulo\nAvaliar bem uma árvore significa medir desempenho com honestidade, comparar configurações de maneira sistemática e interpretar os erros com atenção. No próximo capítulo, vamos aprofundar um dos riscos mais importantes desse modelo: o overfitting, e veremos como a poda ajuda a manter a árvore útil e interpretável.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Avaliação e Ajuste</span>"
+    ]
+  },
+  {
+    "objectID": "section/04-avaliacao-ajuste.html#resumo-do-capítulo",
+    "href": "section/04-avaliacao-ajuste.html#resumo-do-capítulo",
+    "title": "5  Avaliação e Ajuste",
+    "section": "5.12 Resumo do capítulo",
+    "text": "5.12 Resumo do capítulo\n\nAvaliar bem é tão importante quanto treinar bem.\nValidação cruzada reduz a dependência de uma única divisão treino-teste.\nGrid search ajuda a explorar hiperparâmetros de forma sistemática.\nO teste final deve ser preservado para avaliação honesta.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Avaliação e Ajuste</span>"
+    ]
+  },
+  {
+    "objectID": "section/04-avaliacao-ajuste.html#erros-comuns",
+    "href": "section/04-avaliacao-ajuste.html#erros-comuns",
+    "title": "5  Avaliação e Ajuste",
+    "section": "5.13 Erros comuns",
+    "text": "5.13 Erros comuns\n\nusar o conjunto de teste para ajustar decisões repetidas vezes;\nescolher modelo só pela acurácia;\nignorar variação entre folds;\nconfundir score alto no treino com capacidade de generalização.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Avaliação e Ajuste</span>"
+    ]
+  },
+  {
+    "objectID": "section/04-avaliacao-ajuste.html#perguntas-de-revisão",
+    "href": "section/04-avaliacao-ajuste.html#perguntas-de-revisão",
+    "title": "5  Avaliação e Ajuste",
+    "section": "5.14 Perguntas de revisão",
+    "text": "5.14 Perguntas de revisão\n\nQual é a diferença entre treino, validação e teste?\nQuando a acurácia pode ser enganosa?\nO que a validação cruzada ajuda a reduzir?\nPor que o melhor modelo do grid deve ser avaliado depois no teste?",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Avaliação e Ajuste</span>"
+    ]
+  },
+  {
+    "objectID": "section/05-poda-overfitting.html",
+    "href": "section/05-poda-overfitting.html",
+    "title": "6  Poda e Overfitting",
+    "section": "",
+    "text": "6.1 O que é overfitting\nÁrvores de decisão aprendem rápido, mas justamente por isso podem crescer demais. Quando a árvore continua criando divisões para capturar detalhes muito específicos do treino, ela deixa de representar padrões gerais e passa a memorizar ruído. Esse fenômeno é o overfitting.\nOverfitting acontece quando o modelo se ajusta excessivamente aos dados de treinamento e perde capacidade de generalização. Em uma árvore, isso aparece de maneira muito visível: a estrutura fica profunda, ramificada e cheia de folhas com poucas amostras.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Poda e Overfitting</span>"
+    ]
+  },
+  {
+    "objectID": "section/05-poda-overfitting.html#sinais-típicos",
+    "href": "section/05-poda-overfitting.html#sinais-típicos",
+    "title": "6  Poda e Overfitting",
+    "section": "6.2 Sinais típicos",
+    "text": "6.2 Sinais típicos\n\ndesempenho excelente no treino;\ndesempenho bem pior no teste;\nárvore muito alta ou com muitas folhas;\nregras muito específicas e pouco intuitivas;\nalta sensibilidade a pequenas mudanças nos dados.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Poda e Overfitting</span>"
+    ]
+  },
+  {
+    "objectID": "section/05-poda-overfitting.html#por-que-árvores-sofrem-com-isso",
+    "href": "section/05-poda-overfitting.html#por-que-árvores-sofrem-com-isso",
+    "title": "6  Poda e Overfitting",
+    "section": "6.3 Por que árvores sofrem com isso",
+    "text": "6.3 Por que árvores sofrem com isso\nComo a construção é gulosa e local, a árvore aceita novas divisões sempre que elas parecem melhorar a pureza dos nós. Sem restrições, esse processo continua até restarem grupos muito pequenos ou totalmente puros no treino.\nEm muitos casos, pureza extrema no treino significa apenas memorização.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Poda e Overfitting</span>"
+    ]
+  },
+  {
+    "objectID": "section/05-poda-overfitting.html#pré-poda",
+    "href": "section/05-poda-overfitting.html#pré-poda",
+    "title": "6  Poda e Overfitting",
+    "section": "6.4 Pré-poda",
+    "text": "6.4 Pré-poda\nPré-poda significa impedir que a árvore cresca demais desde o início.\n\n6.4.1 Hiperparâmetros mais usados\n\nmax_depth: limita quantos níveis a árvore pode ter;\nmin_samples_split: exige um mínimo para tentar nova divisão;\nmin_samples_leaf: garante um mínimo por folha;\nmax_leaf_nodes: controla o número total de folhas;\nmin_impurity_decrease: exige ganho mínimo de qualidade.\n\n\n\n6.4.2 Exemplo\n\nfrom sklearn.tree import DecisionTreeClassifier\n\npre_pruned = DecisionTreeClassifier(\n    max_depth=4,\n    min_samples_split=10,\n    min_samples_leaf=5,\n    random_staté=42\n)\npre_pruned.fit(X_train, y_train)",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Poda e Overfitting</span>"
+    ]
+  },
+  {
+    "objectID": "section/05-poda-overfitting.html#pos-poda",
+    "href": "section/05-poda-overfitting.html#pos-poda",
+    "title": "6  Poda e Overfitting",
+    "section": "6.5 Pos-poda",
+    "text": "6.5 Pos-poda\nPós-poda significa deixar a árvore crescer mais e depois remover ramos que não compensam sua complexidade. No scikit-learn, isso aparece na poda por custo-complexidade usando ccp_alpha.\nA ideia é equilibrar duas forças:\n\nerro de ajuste;\ntamanho da árvore.\n\nQuanto maior o ccp_alpha, maior a penalização da complexidade e menor tende a ficar a árvore.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Poda e Overfitting</span>"
+    ]
+  },
+  {
+    "objectID": "section/05-poda-overfitting.html#caminho-de-poda",
+    "href": "section/05-poda-overfitting.html#caminho-de-poda",
+    "title": "6  Poda e Overfitting",
+    "section": "6.6 Caminho de poda",
+    "text": "6.6 Caminho de poda\n\npath = DecisionTreeClassifier(random_staté=42).cost_complexity_pruning_path(X_train, y_train)\nccp_alphas = path.ccp_alphas\n\nmodels = []\nfor alpha in ccp_alphas:\n    clf = DecisionTreeClassifier(random_staté=42, ccp_alpha=alpha)\n    clf.fit(X_train, y_train)\n    models.append(clf)\n\nprint(\"Total de modelos testados:\", len(models))\nprint(\"Primeiros alphas:\", ccp_alphas[:10])",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Poda e Overfitting</span>"
+    ]
+  },
+  {
+    "objectID": "section/05-poda-overfitting.html#comparando-alphas-na-prática",
+    "href": "section/05-poda-overfitting.html#comparando-alphas-na-prática",
+    "title": "6  Poda e Overfitting",
+    "section": "6.7 Comparando alphas na prática",
+    "text": "6.7 Comparando alphas na prática\n\nresults = []\nfor alpha in ccp_alphas:\n    clf = DecisionTreeClassifier(random_staté=42, ccp_alpha=alpha)\n    clf.fit(X_train, y_train)\n    train_score = clf.score(X_train, y_train)\n    test_score = clf.score(X_test, y_test)\n    results.append((alpha, clf.get_depth(), clf.get_n_leaves(), train_score, test_score))\n\nfor row in results[:10]:\n    print(row)\n\nA comparação acima mostra algo valioso: conforme o alpha cresce, a árvore simplifica. Em algum ponto, simplificar ajuda a generalizar; depois disso, simplificar demais passa a reduzir desempenho.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Poda e Overfitting</span>"
+    ]
+  },
+  {
+    "objectID": "section/05-poda-overfitting.html#como-escolher-ccp_alpha",
+    "href": "section/05-poda-overfitting.html#como-escolher-ccp_alpha",
+    "title": "6  Poda e Overfitting",
+    "section": "6.8 Como escolher ccp_alpha",
+    "text": "6.8 Como escolher ccp_alpha\nO jeito mais seguro é usar validação cruzada. A escolha não deve depender apenas do score no treino ou de uma única divisão teste.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Poda e Overfitting</span>"
+    ]
+  },
+  {
+    "objectID": "section/05-poda-overfitting.html#complexidade-versus-interpretabilidade",
+    "href": "section/05-poda-overfitting.html#complexidade-versus-interpretabilidade",
+    "title": "6  Poda e Overfitting",
+    "section": "6.9 Complexidade versus interpretabilidade",
+    "text": "6.9 Complexidade versus interpretabilidade\nPoda não serve apenas para melhorar desempenho. Ela também deixa o modelo mais fácil de explicar. Em ambientes corporativos, uma árvore um pouco menos precisa, mas muito mais clara, pode ser preferível a uma estrutura enorme e difícil de justificar.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Poda e Overfitting</span>"
+    ]
+  },
+  {
+    "objectID": "section/05-poda-overfitting.html#exemplo-de-leitura-de-negócio",
+    "href": "section/05-poda-overfitting.html#exemplo-de-leitura-de-negócio",
+    "title": "6  Poda e Overfitting",
+    "section": "6.10 Exemplo de leitura de negócio",
+    "text": "6.10 Exemplo de leitura de negócio\nUma árvore de churn sem poda pode produzir dezenas de regras microespecíficas. Depois da poda, talvez sobrem algumas regras fortes, como:\n\nmuitos chamados ao suporte aumentam risco de cancelamento;\npouco tempo de contrato combinado com alto gasto aumenta vulnerabilidade;\nclientes antigos com baixo atrito tendem a permanecer.\n\nEssas regras são muito mais acionáveis.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Poda e Overfitting</span>"
+    ]
+  },
+  {
+    "objectID": "section/05-poda-overfitting.html#underfitting-também-existe",
+    "href": "section/05-poda-overfitting.html#underfitting-também-existe",
+    "title": "6  Poda e Overfitting",
+    "section": "6.11 Underfitting também existe",
+    "text": "6.11 Underfitting também existe\nNem toda simplificação é boa. Se limitarmos demais a profundidade ou exigirmos folhas muito grandes, a árvore pode se tornar incapaz de capturar padrões importantes. Isso produz underfitting: desempenho ruim até mesmo no treino.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Poda e Overfitting</span>"
+    ]
+  },
+  {
+    "objectID": "section/05-poda-overfitting.html#sinais-de-underfitting",
+    "href": "section/05-poda-overfitting.html#sinais-de-underfitting",
+    "title": "6  Poda e Overfitting",
+    "section": "6.12 Sinais de underfitting",
+    "text": "6.12 Sinais de underfitting\n\nbaixa acurácia no treino e no teste;\nárvore rasa demais;\nregras excessivamente genéricas;\nincapacidade de separar grupos claramente distintos.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Poda e Overfitting</span>"
+    ]
+  },
+  {
+    "objectID": "section/05-poda-overfitting.html#estratégia-prática-recomendada",
+    "href": "section/05-poda-overfitting.html#estratégia-prática-recomendada",
+    "title": "6  Poda e Overfitting",
+    "section": "6.13 Estratégia prática recomendada",
+    "text": "6.13 Estratégia prática recomendada\nUma abordagem equilibrada costuma ser:\n\ntreinar uma árvore inicial para entender o problema;\nmedir profundidade, número de folhas e desempenho em treino e teste;\najustar max_depth, min_samples_leaf e min_samples_split;\ntestar poda com ccp_alpha;\nescolher o ponto em que simplicidade e desempenho ficam bem equilibrados.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Poda e Overfitting</span>"
+    ]
+  },
+  {
+    "objectID": "section/05-poda-overfitting.html#fechamento-do-capítulo",
+    "href": "section/05-poda-overfitting.html#fechamento-do-capítulo",
+    "title": "6  Poda e Overfitting",
+    "section": "6.14 Fechamento do capítulo",
+    "text": "6.14 Fechamento do capítulo\nUma boa árvore não é necessariamente a maior nem a mais pura no treino. É a que consegue representar os padrões relevantes sem se prender a detalhes acidentais. No próximo capítulo, vamos ver como essa lógica aparece tanto em classificação quanto em regressão.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Poda e Overfitting</span>"
+    ]
+  },
+  {
+    "objectID": "section/05-poda-overfitting.html#resumo-do-capítulo",
+    "href": "section/05-poda-overfitting.html#resumo-do-capítulo",
+    "title": "6  Poda e Overfitting",
+    "section": "6.15 Resumo do capítulo",
+    "text": "6.15 Resumo do capítulo\n\nOverfitting aparece quando a árvore memoriza detalhes do treino.\nPré-poda impede crescimento excessivo desde o início.\nPós-poda simplifica a árvore depois do treino.\nO melhor ponto costuma equilibrar simplicidade, desempenho e interpretabilidade.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Poda e Overfitting</span>"
+    ]
+  },
+  {
+    "objectID": "section/05-poda-overfitting.html#erros-comuns",
+    "href": "section/05-poda-overfitting.html#erros-comuns",
+    "title": "6  Poda e Overfitting",
+    "section": "6.16 Erros comuns",
+    "text": "6.16 Erros comuns\n\nconcluir que mais profundidade sempre melhora o modelo;\npodar demais e gerar underfitting;\nescolher ccp_alpha olhando apenas treino;\nignorar folhas com poucas amostras.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Poda e Overfitting</span>"
+    ]
+  },
+  {
+    "objectID": "section/05-poda-overfitting.html#perguntas-de-revisão",
+    "href": "section/05-poda-overfitting.html#perguntas-de-revisão",
+    "title": "6  Poda e Overfitting",
+    "section": "6.17 Perguntas de revisão",
+    "text": "6.17 Perguntas de revisão\n\nComo reconhecer sinais de overfitting em uma árvore?\nO que diferencia pre-poda e pos-poda?\nQual o papel de ccp_alpha?\nPor que uma árvore mais simples pode ser preferível em negócio?",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Poda e Overfitting</span>"
+    ]
+  },
+  {
+    "objectID": "section/06-classificacao-regressao.html",
+    "href": "section/06-classificacao-regressao.html",
+    "title": "7  Classificação e Regressão",
+    "section": "",
+    "text": "7.1 Classificação\nÁrvores de decisão não se limitam a problemas de classificação. A mesma estrutura geral também pode ser usada para prever valores contínuos. O que muda e o critério usado para construir a árvore e a natureza da previsão feita nas folhas.\nNa classificação, o objetivo e atribuir uma catégoria.\nExemplos:\nO modelo mais comum em Python e DecisionTreeClassifier.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Classificação e Regressão</span>"
+    ]
+  },
+  {
+    "objectID": "section/06-classificacao-regressao.html#classificação",
+    "href": "section/06-classificacao-regressao.html#classificação",
+    "title": "7  Classificação e Regressão",
+    "section": "",
+    "text": "aprovar ou reprovar crédito;\ndetectar spam ou não spam;\nprever cancelamento ou permanencia;\nclassificar espécie de planta.\n\n\n\n7.1.1 Como a previsão e feita\nCada folha armazena a distribuição das classes que chegaram até ela. A previsão final geralmente corresponde a classe majoritária da folha.\n\n\n7.1.2 Medidas tipicas\n\naccuracy;\nprecision;\nrecall;\nf1-score;\nROC AUC em alguns contextos;\nmatriz de confusão.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Classificação e Regressão</span>"
+    ]
+  },
+  {
+    "objectID": "section/06-classificacao-regressao.html#regressão",
+    "href": "section/06-classificacao-regressao.html#regressão",
+    "title": "7  Classificação e Regressão",
+    "section": "7.2 Regressão",
+    "text": "7.2 Regressão\nNa regressão, a saída e numerica.\nExemplos:\n\nprever preço de imovel;\nestimar consumo de energia;\nprojetar tempo de aténdimento;\ncalcular demanda futura.\n\nO modelo correspondente e DecisionTreeRegressor.\n\n7.2.1 Como a previsão e feita\nEm cada folha, o modelo produz um valor numérico, normalmente relacionado a média dos alvos observados naquele grupo.\n\n\n7.2.2 Medidas tipicas\n\nMAE;\nMSE;\nRMSE;\nR2.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Classificação e Regressão</span>"
+    ]
+  },
+  {
+    "objectID": "section/06-classificacao-regressao.html#o-que-muda-no-critério-de-divisão",
+    "href": "section/06-classificacao-regressao.html#o-que-muda-no-critério-de-divisão",
+    "title": "7  Classificação e Regressão",
+    "section": "7.3 O que muda no critério de divisão",
+    "text": "7.3 O que muda no critério de divisão\nNa classificação, a árvore tenta reduzir mistura de classes. Na regressão, ela tenta reduzir dispersão dos valores do alvo. Assim, embora a estrutura pareca a mesma, a função objetivo e diferente.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Classificação e Regressão</span>"
+    ]
+  },
+  {
+    "objectID": "section/06-classificacao-regressao.html#exemplo-de-regressão-com-dados-sintéticos",
+    "href": "section/06-classificacao-regressao.html#exemplo-de-regressão-com-dados-sintéticos",
+    "title": "7  Classificação e Regressão",
+    "section": "7.4 Exemplo de regressão com dados sintéticos",
+    "text": "7.4 Exemplo de regressão com dados sintéticos\n\nfrom sklearn.datasets import make_regression\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.tree import DecisionTreeRegressor\nfrom sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score\n\nX_reg, y_reg = make_regression(\n    n_samples=1000,\n    n_features=6,\n    n_informative=4,\n    noise=15,\n    random_staté=42\n)\n\nX_train_reg, X_test_reg, y_train_reg, y_test_reg = train_test_split(\n    X_reg,\n    y_reg,\n    test_size=0.2,\n    random_staté=42\n)\n\nreg = DecisionTreeRegressor(max_depth=6, random_staté=42)\nreg.fit(X_train_reg, y_train_reg)\npred_reg = reg.predict(X_test_reg)\n\nprint(\"MAE:\", mean_absolute_error(y_test_reg, pred_reg))\nprint(\"MSE:\", mean_squared_error(y_test_reg, pred_reg))\nprint(\"R2:\", r2_score(y_test_reg, pred_reg))",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Classificação e Regressão</span>"
+    ]
+  },
+  {
+    "objectID": "section/06-classificacao-regressao.html#comparando-profundidades-na-regressão",
+    "href": "section/06-classificacao-regressao.html#comparando-profundidades-na-regressão",
+    "title": "7  Classificação e Regressão",
+    "section": "7.5 Comparando profundidades na regressão",
+    "text": "7.5 Comparando profundidades na regressão\n\nfor depth in [2, 4, 6, 10, None]:\n    reg = DecisionTreeRegressor(max_depth=depth, random_staté=42)\n    reg.fit(X_train_reg, y_train_reg)\n    pred_reg = reg.predict(X_test_reg)\n    print(\n        f\"depth={depth} | \"\n        f\"MAE={mean_absolute_error(y_test_reg, pred_reg):.2f} | \"\n        f\"R2={r2_score(y_test_reg, pred_reg):.3f}\"\n    )\n\nEsse experimento costuma mostrar que profundidades muito grandes podem criar curvas de previsão fragmentadas demais.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Classificação e Regressão</span>"
+    ]
+  },
+  {
+    "objectID": "section/06-classificacao-regressao.html#visualmente-o-que-a-árvore-faz-na-regressão",
+    "href": "section/06-classificacao-regressao.html#visualmente-o-que-a-árvore-faz-na-regressão",
+    "title": "7  Classificação e Regressão",
+    "section": "7.6 Visualmente, o que a árvore faz na regressão",
+    "text": "7.6 Visualmente, o que a árvore faz na regressão\nEnquanto modelos lineares produzem superficies suaves, árvores de regressão particionam o espaco de atributos em regioes. Em cada regiao, a previsão tende a ser constante ou aproximadamente constante. Isso torna o modelo flexível, mas também sujeito a cortes abruptos.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Classificação e Regressão</span>"
+    ]
+  },
+  {
+    "objectID": "section/06-classificacao-regressao.html#quando-usar-classificação-e-quando-usar-regressão",
+    "href": "section/06-classificacao-regressao.html#quando-usar-classificação-e-quando-usar-regressão",
+    "title": "7  Classificação e Regressão",
+    "section": "7.7 Quando usar classificação e quando usar regressão",
+    "text": "7.7 Quando usar classificação e quando usar regressão\nA resposta depende da variável alvo.\n\nSe o alvo representa catégorias, use classificação.\nSe o alvo representa quantidade numerica, use regressão.\n\nParece obvio, mas ha casos de fronteira. Por exemplo, prever faixa de risco pode ser classificação; prever probabilidade de inadimplencia pode ser modelado de outras formas; prever valor de perda e regressão.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Classificação e Regressão</span>"
+    ]
+  },
+  {
+    "objectID": "section/06-classificacao-regressao.html#vantagens-compartilhadas",
+    "href": "section/06-classificacao-regressao.html#vantagens-compartilhadas",
+    "title": "7  Classificação e Regressão",
+    "section": "7.8 Vantagens compartilhadas",
+    "text": "7.8 Vantagens compartilhadas\nTanto em classificação quanto em regressão, árvores oferecem:\n\ninterpretabilidade;\ncapacidade de modelar não linearidades;\npouca exigencia de pre-processamento inicial;\npossibilidade de identificar regras locais de comportamento.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Classificação e Regressão</span>"
+    ]
+  },
+  {
+    "objectID": "section/06-classificacao-regressao.html#cuidados-compartilhados",
+    "href": "section/06-classificacao-regressao.html#cuidados-compartilhados",
+    "title": "7  Classificação e Regressão",
+    "section": "7.9 Cuidados compartilhados",
+    "text": "7.9 Cuidados compartilhados\nAs duas variantes exigem aténcao para:\n\noverfitting;\ninstabilidade estrutural;\nnecessidade de validação cruzada;\nleitura critica das regras aprendidas.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Classificação e Regressão</span>"
+    ]
+  },
+  {
+    "objectID": "section/06-classificacao-regressao.html#relação-com-ensembles",
+    "href": "section/06-classificacao-regressao.html#relação-com-ensembles",
+    "title": "7  Classificação e Regressão",
+    "section": "7.10 Relação com ensembles",
+    "text": "7.10 Relação com ensembles\nRandom Forest e Gradient Boosting usam várias árvores combinadas. Entender bem uma única árvore fácilita muito o aprendizado desses modelos mais fortes, porque os principios basicos de divisão, profundidade, folhas e controle de complexidade contínuam relevantes.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Classificação e Regressão</span>"
+    ]
+  },
+  {
+    "objectID": "section/06-classificacao-regressao.html#fechamento-do-capítulo",
+    "href": "section/06-classificacao-regressao.html#fechamento-do-capítulo",
+    "title": "7  Classificação e Regressão",
+    "section": "7.11 Fechamento do capítulo",
+    "text": "7.11 Fechamento do capítulo\nÁrvores de decisão formam uma família versatil. O mesmo mecanismo de particionar o espaco de atributos pode servir tanto para escolher uma classe quanto para estimar um valor numérico. No próximo capítulo, vamos reunir esses conceitos em um estudo de caso mais completo, cobrindo preparação, treino, avaliação e interpretação.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Classificação e Regressão</span>"
+    ]
+  },
+  {
+    "objectID": "section/06-classificacao-regressao.html#resumo-do-capítulo",
+    "href": "section/06-classificacao-regressao.html#resumo-do-capítulo",
+    "title": "7  Classificação e Regressão",
+    "section": "7.12 Resumo do capítulo",
+    "text": "7.12 Resumo do capítulo\n\nA mesma estrutura de árvore pode servir a classificação e regressão.\nO que muda principalmente e o critério usado nas divisoes e o tipo de saída das folhas.\nEm classificação, as folhas representam classes; em regressão, valores numéricos.\nControle de complexidade contínua sendo essencial nos dois casos.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Classificação e Regressão</span>"
+    ]
+  },
+  {
+    "objectID": "section/06-classificacao-regressao.html#erros-comuns",
+    "href": "section/06-classificacao-regressao.html#erros-comuns",
+    "title": "7  Classificação e Regressão",
+    "section": "7.13 Erros comuns",
+    "text": "7.13 Erros comuns\n\nusar metricas de classificação em problema de regressão ou vice-versa;\nsupor que a interpretabilidade elimina necessidade de validação;\nesquecer que árvores de regressão produzem previsões em degraus;\ncomparar modelos sem alinhar a natureza do alvo.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Classificação e Regressão</span>"
+    ]
+  },
+  {
+    "objectID": "section/06-classificacao-regressao.html#perguntas-de-revisão",
+    "href": "section/06-classificacao-regressao.html#perguntas-de-revisão",
+    "title": "7  Classificação e Regressão",
+    "section": "7.14 Perguntas de revisão",
+    "text": "7.14 Perguntas de revisão\n\nQual a principal diferenca entre DecisionTreeClassifier e DecisionTreeRegressor?\nQue tipo de metrica faz sentido em regressão?\nPor que a profundidade excessiva também prejudica regressão?\nO que aproxima uma árvore isolada dos ensembles baseados em árvores?",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Classificação e Regressão</span>"
+    ]
+  },
+  {
+    "objectID": "section/07-estudo-caso.html",
+    "href": "section/07-estudo-caso.html",
+    "title": "8  Estudo de Caso Completo",
+    "section": "",
+    "text": "8.1 Contexto do problema\nNeste capítulo, vamos organizar um fluxo de trabalho mais próximo do que acontece em um projeto real. O problema escolhido será previsão de churn, isto é, estimar se um cliente tende a cancelar um serviço.\nO foco aqui não é apenas treinar um modelo, mas estruturar o pensamento:\nEm churn, geralmente queremos identificar clientes com maior risco de cancelamento para agir antes da perda acontecer. Uma árvore de decisão é particularmente útil nesse contexto porque transforma o problema em regras compreensíveis para equipes de negócio.",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Estudo de Caso Completo</span>"
+    ]
+  },
+  {
+    "objectID": "section/07-estudo-caso.html#passo-1-gerando-uma-base-sintética-plausível",
+    "href": "section/07-estudo-caso.html#passo-1-gerando-uma-base-sintética-plausível",
+    "title": "8  Estudo de Caso Completo",
+    "section": "8.2 Passo 1: gerando uma base sintética plausível",
+    "text": "8.2 Passo 1: gerando uma base sintética plausível\n\nimport numpy as np\nimport pandas as pd\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.tree import DecisionTreeClassifier\nfrom sklearn.metrics import accuracy_score, f1_score, classification_report\n\nnp.random.seed(42)\nn = 1000\n\ndf = pd.DataFrame({\n    \"idade\": np.random.randint(18, 70, n),\n    \"tempo_cliente\": np.random.randint(1, 120, n),\n    \"gasto_mensal\": np.random.normal(120, 40, n).clip(20, 400),\n    \"suporte_chamados\": np.random.poisson(2, n),\n    \"atrasos_pagamento\": np.random.poisson(1, n),\n    \"usa_app\": np.random.binomial(1, 0.7, n),\n})\n\nlogit = (\n    -2.2\n    + 0.012 * df[\"idade\"]\n    - 0.022 * df[\"tempo_cliente\"]\n    + 0.010 * df[\"gasto_mensal\"]\n    + 0.35 * df[\"suporte_chamados\"]\n    + 0.45 * df[\"atrasos_pagamento\"]\n    - 0.60 * df[\"usa_app\"]\n)\n\nprob = 1 / (1 + np.exp(-logit))\ndf[\"churn\"] = (np.random.rand(n) &lt; prob).astype(int)\n\nprint(df.head())\nprint(df[\"churn\"].mean())",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Estudo de Caso Completo</span>"
+    ]
+  },
+  {
+    "objectID": "section/07-estudo-caso.html#passo-2-separando-atributos-e-alvo",
+    "href": "section/07-estudo-caso.html#passo-2-separando-atributos-e-alvo",
+    "title": "8  Estudo de Caso Completo",
+    "section": "8.3 Passo 2: separando atributos e alvo",
+    "text": "8.3 Passo 2: separando atributos e alvo\n\nX = df.drop(columns=[\"churn\"])\ny = df[\"churn\"]\n\nX_train, X_test, y_train, y_test = train_test_split(\n    X,\n    y,\n    test_size=0.25,\n    random_staté=42,\n    stratify=y\n)\n\nprint(X_train.shape, X_test.shape)",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Estudo de Caso Completo</span>"
+    ]
+  },
+  {
+    "objectID": "section/07-estudo-caso.html#passo-3-treinando-uma-árvore-interpretável",
+    "href": "section/07-estudo-caso.html#passo-3-treinando-uma-árvore-interpretável",
+    "title": "8  Estudo de Caso Completo",
+    "section": "8.4 Passo 3: treinando uma árvore interpretável",
+    "text": "8.4 Passo 3: treinando uma árvore interpretável\n\nclf = DecisionTreeClassifier(\n    max_depth=5,\n    min_samples_leaf=15,\n    random_staté=42\n)\nclf.fit(X_train, y_train)\n\npred = clf.predict(X_test)\nprint(\"Accuracy:\", accuracy_score(y_test, pred))\nprint(\"F1:\", f1_score(y_test, pred))\nprint(classification_report(y_test, pred))\n\nEsses hiperparâmetros foram escolhidos para equilibrar clareza e desempenho. Em problemas de negócio, uma árvore um pouco mais compacta pode ser mais útil do que uma estrutura enorme com pequenas vantagens marginais.",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Estudo de Caso Completo</span>"
+    ]
+  },
+  {
+    "objectID": "section/07-estudo-caso.html#passo-4-lendo-a-importância-das-variáveis",
+    "href": "section/07-estudo-caso.html#passo-4-lendo-a-importância-das-variáveis",
+    "title": "8  Estudo de Caso Completo",
+    "section": "8.5 Passo 4: lendo a importância das variáveis",
+    "text": "8.5 Passo 4: lendo a importância das variáveis\n\nimportances = pd.Series(clf.feature_importances_, index=X.columns)\nprint(importances.sort_values(ascending=False))\n\n\n8.5.1 Interpretação\nSe suporte_chamados e atrasos_pagamento aparecem no topo, isso sugere que experiência ruim e atrito operacional estão associados ao cancelamento. Se tempo_cliente tiver importância alta, o modelo pode estar distinguindo clientes ainda pouco fidelizados.",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Estudo de Caso Completo</span>"
+    ]
+  },
+  {
+    "objectID": "section/07-estudo-caso.html#passo-5-visualizando-a-árvore",
+    "href": "section/07-estudo-caso.html#passo-5-visualizando-a-árvore",
+    "title": "8  Estudo de Caso Completo",
+    "section": "8.6 Passo 5: visualizando a árvore",
+    "text": "8.6 Passo 5: visualizando a árvore\n\nimport matplotlib.pyplot as plt\nfrom sklearn.tree import plot_tree\n\nplt.figure(figsize=(18, 10))\nplot_tree(\n    clf,\n    feature_names=X.columns,\n    class_names=[\"permanece\", \"churn\"],\n    filled=True,\n    rounded=True,\n    fontsize=9\n)\nplt.show()\n\nAo olhar a árvore, tente responder:\n\nqual variável foi para a raiz?\nquais pontos de corte apareceram?\nexistem folhas muito pequenas?\nas regras parecem coerentes com o domínio?",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Estudo de Caso Completo</span>"
+    ]
+  },
+  {
+    "objectID": "section/07-estudo-caso.html#passo-6-extraindo-regras-textuais",
+    "href": "section/07-estudo-caso.html#passo-6-extraindo-regras-textuais",
+    "title": "8  Estudo de Caso Completo",
+    "section": "8.7 Passo 6: extraindo regras textuais",
+    "text": "8.7 Passo 6: extraindo regras textuais\n\nfrom sklearn.tree import export_text\n\nprint(export_text(clf, feature_names=list(X.columns)))\n\nEsse formato ajuda a comunicar o resultado para pessoas não técnicas.",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Estudo de Caso Completo</span>"
+    ]
+  },
+  {
+    "objectID": "section/07-estudo-caso.html#passo-7-comparando-com-uma-árvore-mais-profunda",
+    "href": "section/07-estudo-caso.html#passo-7-comparando-com-uma-árvore-mais-profunda",
+    "title": "8  Estudo de Caso Completo",
+    "section": "8.8 Passo 7: comparando com uma árvore mais profunda",
+    "text": "8.8 Passo 7: comparando com uma árvore mais profunda\n\ncomplex_clf = DecisionTreeClassifier(random_staté=42)\ncomplex_clf.fit(X_train, y_train)\n\npred_complex = complex_clf.predict(X_test)\nprint(\"Accuracy árvore livre:\", accuracy_score(y_test, pred_complex))\nprint(\"F1 árvore livre:\", f1_score(y_test, pred_complex))\nprint(\"Depth árvore livre:\", complex_clf.get_depth())\nprint(\"Folhas árvore livre:\", complex_clf.get_n_leaves())\n\nA comparação evidencia um ponto importante do livro inteiro: nem sempre a árvore mais complexa é a mais interessante.",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Estudo de Caso Completo</span>"
+    ]
+  },
+  {
+    "objectID": "section/07-estudo-caso.html#passo-8-validação-de-negócio",
+    "href": "section/07-estudo-caso.html#passo-8-validação-de-negócio",
+    "title": "8  Estudo de Caso Completo",
+    "section": "8.9 Passo 8: validação de negócio",
+    "text": "8.9 Passo 8: validação de negócio\nEm projetos reais, score não basta. É preciso verificar se as regras são acionáveis.\nExemplos de perguntas úteis:\n\nclientes com muitos chamados estão recebendo suporte insuficiente?\natrasos em pagamento refletem dificuldade financeira ou falha operacional?\nusuários que não usam o app estão menos engajados com o serviço?\nclientes novos precisam de onboarding melhor?",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Estudo de Caso Completo</span>"
+    ]
+  },
+  {
+    "objectID": "section/07-estudo-caso.html#passo-9-possíveis-ações-práticas",
+    "href": "section/07-estudo-caso.html#passo-9-possíveis-ações-práticas",
+    "title": "8  Estudo de Caso Completo",
+    "section": "8.10 Passo 9: possíveis ações práticas",
+    "text": "8.10 Passo 9: possíveis ações práticas\nSe a árvore identificar grupos de alto risco, algumas ações podem ser desenhadas:\n\ncampanha de retenção para clientes com alto gasto e muitos chamados;\noferta de suporte proativo para clientes novos;\nautomação de cobrança e regularização para perfis com atrasos;\nincentivo ao uso do aplicativo para aumentar engajamento.",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Estudo de Caso Completo</span>"
+    ]
+  },
+  {
+    "objectID": "section/07-estudo-caso.html#passo-10-próximos-refinamentos",
+    "href": "section/07-estudo-caso.html#passo-10-próximos-refinamentos",
+    "title": "8  Estudo de Caso Completo",
+    "section": "8.11 Passo 10: próximos refinamentos",
+    "text": "8.11 Passo 10: próximos refinamentos\nEm um projeto real, poderíamos ainda:\n\nusar validação cruzada para ajustar hiperparâmetros;\navaliar desbalanceamento de classes;\ntestar poda com ccp_alpha;\ncomparar com Random Forest e Gradient Boosting;\ncalibrar probabilidades, se necessário.",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Estudo de Caso Completo</span>"
+    ]
+  },
+  {
+    "objectID": "section/07-estudo-caso.html#fechamento-do-capítulo",
+    "href": "section/07-estudo-caso.html#fechamento-do-capítulo",
+    "title": "8  Estudo de Caso Completo",
+    "section": "8.12 Fechamento do capítulo",
+    "text": "8.12 Fechamento do capítulo\nEste estudo de caso mostrou que uma árvore de decisão pode servir ao mesmo tempo como modelo preditivo e ferramenta de descoberta de regras. Em contextos empresariais, essa combinação é poderosa porque permite transformar previsões em ações concretas. No último capítulo, vamos consolidar o aprendizado com exercícios práticos.",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Estudo de Caso Completo</span>"
+    ]
+  },
+  {
+    "objectID": "section/07-estudo-caso.html#resumo-do-capítulo",
+    "href": "section/07-estudo-caso.html#resumo-do-capítulo",
+    "title": "8  Estudo de Caso Completo",
+    "section": "8.13 Resumo do capítulo",
+    "text": "8.13 Resumo do capítulo\n\nUm estudo de caso mostra a árvore como ferramenta de previsão e de descoberta de regras.\nA interpretabilidade ajuda a ligar score a ação de negócio.\nComparar uma árvore compacta com uma árvore livre é uma forma concreta de estudar complexidade.\nO valor prático da árvore aumenta quando as regras se tornam acionáveis.",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Estudo de Caso Completo</span>"
+    ]
+  },
+  {
+    "objectID": "section/07-estudo-caso.html#erros-comuns",
+    "href": "section/07-estudo-caso.html#erros-comuns",
+    "title": "8  Estudo de Caso Completo",
+    "section": "8.14 Erros comuns",
+    "text": "8.14 Erros comuns\n\nfocar apenas em score e ignorar a utilidade operacional das regras;\ninterpretar importância de atributo sem contexto de negócio;\nconstruir uma árvore excessivamente detalhada para um público não técnico;\ndeixar de validar se a regra faz sentido fora da amostra sintética.",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Estudo de Caso Completo</span>"
+    ]
+  },
+  {
+    "objectID": "section/07-estudo-caso.html#perguntas-de-revisão",
+    "href": "section/07-estudo-caso.html#perguntas-de-revisão",
+    "title": "8  Estudo de Caso Completo",
+    "section": "8.15 Perguntas de revisão",
+    "text": "8.15 Perguntas de revisão\n\nPor que churn é um problema interessante para árvores de decisão?\nO que uma variável importante sugere, e o que ela não prova?\nPor que uma árvore mais simples pode ser mais útil para negócio?\nQue tipo de ação prática pode surgir da leitura das regras?",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Estudo de Caso Completo</span>"
+    ]
+  },
+  {
+    "objectID": "section/08-exercicios.html",
+    "href": "section/08-exercicios.html",
+    "title": "9  Exercícios Práticos",
+    "section": "",
+    "text": "9.1 Exercício 1: intuição estrutural\nEste capítulo foi pensado para transformar leitura em domínio real do assunto. Tente resolver os exercícios sem consultar imédiatamente o gabarito. O ganho maior vem do processo de pensar nas escolhas do modelo.\nExplique com suas palavras:",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Exercícios Práticos</span>"
+    ]
+  },
+  {
+    "objectID": "section/08-exercicios.html#exercício-1-intuição-estrutural",
+    "href": "section/08-exercicios.html#exercício-1-intuição-estrutural",
+    "title": "9  Exercícios Práticos",
+    "section": "",
+    "text": "o que representa a raiz de uma árvore;\no que significa um nó ser puro;\npor que uma folha pode ser entendida como uma decisão final;\npor que uma árvore muito grande pode generalizar pior.",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Exercícios Práticos</span>"
+    ]
+  },
+  {
+    "objectID": "section/08-exercicios.html#exercício-2-gini-e-entropia",
+    "href": "section/08-exercicios.html#exercício-2-gini-e-entropia",
+    "title": "9  Exercícios Práticos",
+    "section": "9.2 Exercício 2: Gini e entropia",
+    "text": "9.2 Exercício 2: Gini e entropia\nConsidere um nó com 12 exemplos, dos quais 9 pertencem a classe A e 3 a classe B.\n\nCalcule a impureza Gini.\nCalcule a entropia.\nExplique o que esses valores dizem sobre a pureza do nó.\nCompare com um nó contendo 6 exemplos de cada classe.",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Exercícios Práticos</span>"
+    ]
+  },
+  {
+    "objectID": "section/08-exercicios.html#exercício-3-primeira-árvore-no-iris",
+    "href": "section/08-exercicios.html#exercício-3-primeira-árvore-no-iris",
+    "title": "9  Exercícios Práticos",
+    "section": "9.3 Exercício 3: primeira árvore no Iris",
+    "text": "9.3 Exercício 3: primeira árvore no Iris\nTreine uma DecisionTreeClassifier no Iris com max_depth=3.\n\nCompare com o modelo sem limite de profundidade.\nAvalie accuracy e f1_macro.\nCompare profundidade e número de folhas.\nInterprete a diferenca entre simplicidade e desempenho.",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Exercícios Práticos</span>"
+    ]
+  },
+  {
+    "objectID": "section/08-exercicios.html#exercício-4-leitura-da-árvore",
+    "href": "section/08-exercicios.html#exercício-4-leitura-da-árvore",
+    "title": "9  Exercícios Práticos",
+    "section": "9.4 Exercício 4: leitura da árvore",
+    "text": "9.4 Exercício 4: leitura da árvore\nDepois de treinar o modelo no Iris:\n\nplote a árvore;\nidentifique o atributo da raiz;\nescreva duas regras da raiz até folhas;\ndiga por que esses atributos parecem informativos.",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Exercícios Práticos</span>"
+    ]
+  },
+  {
+    "objectID": "section/08-exercicios.html#exercício-5-validação-cruzada",
+    "href": "section/08-exercicios.html#exercício-5-validação-cruzada",
+    "title": "9  Exercícios Práticos",
+    "section": "9.5 Exercício 5: validação cruzada",
+    "text": "9.5 Exercício 5: validação cruzada\nUse cross_val_score com cv=5 para comparar os seguintes modelos:\n\nDecisionTreeClassifier(max_depth=2)\nDecisionTreeClassifier(max_depth=3)\nDecisionTreeClassifier(max_depth=5)\nDecisionTreeClassifier()\n\nResponda:\n\nqual profundidade teve melhor média?\nqual configuração pareceu mais estavel?\nha evidencias de overfitting nas configurações mais profundas?",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Exercícios Práticos</span>"
+    ]
+  },
+  {
+    "objectID": "section/08-exercicios.html#exercício-6-ajuste-com-grid-search",
+    "href": "section/08-exercicios.html#exercício-6-ajuste-com-grid-search",
+    "title": "9  Exercícios Práticos",
+    "section": "9.6 Exercício 6: ajuste com Grid Search",
+    "text": "9.6 Exercício 6: ajuste com Grid Search\nAjuste uma árvore para o Iris usando os hiperparâmetros:\n\nmax_depth: [2, 3, 4, 5, None]\nmin_samples_split: [2, 5, 10]\nmin_samples_leaf: [1, 2, 4]\ncritérion: [\"gini\", \"entropy\"]\n\nDepois:\n\nmostre os melhores parâmetros;\navalie no conjunto de teste;\nexplique por que a melhor combinação pode ter funcionado.",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Exercícios Práticos</span>"
+    ]
+  },
+  {
+    "objectID": "section/08-exercicios.html#exercício-7-poda-por-custo-complexidade",
+    "href": "section/08-exercicios.html#exercício-7-poda-por-custo-complexidade",
+    "title": "9  Exercícios Práticos",
+    "section": "9.7 Exercício 7: poda por custo-complexidade",
+    "text": "9.7 Exercício 7: poda por custo-complexidade\nNo mesmo problema:\n\ngere o caminho de ccp_alpha;\ntreine várias árvores com alphas diferentes;\ncompare profundidade, número de folhas e desempenho;\ntente encontrar o ponto em que a simplificação ainda preserva a qualidade.",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Exercícios Práticos</span>"
+    ]
+  },
+  {
+    "objectID": "section/08-exercicios.html#exercício-8-regressão-sintética",
+    "href": "section/08-exercicios.html#exercício-8-regressão-sintética",
+    "title": "9  Exercícios Práticos",
+    "section": "9.8 Exercício 8: regressão sintética",
+    "text": "9.8 Exercício 8: regressão sintética\nCrie um problema com make_regression e compare:\n\nDecisionTreeRegressor(max_depth=3)\nDecisionTreeRegressor(max_depth=6)\nDecisionTreeRegressor(max_depth=10)\nDecisionTreeRegressor()\n\nAvalie com:\n\nMAE\nMSE\nR2\n\nExplique o efeito do aumento da profundidade.",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Exercícios Práticos</span>"
+    ]
+  },
+  {
+    "objectID": "section/08-exercicios.html#exercício-9-estudo-de-caso-de-churn",
+    "href": "section/08-exercicios.html#exercício-9-estudo-de-caso-de-churn",
+    "title": "9  Exercícios Práticos",
+    "section": "9.9 Exercício 9: estudo de caso de churn",
+    "text": "9.9 Exercício 9: estudo de caso de churn\nNo dataset sintético do capítulo anterior:\n\nteste min_samples_leaf em [1, 5, 10, 20];\ncompare max_depth em [3, 4, 5, 6, None];\nverifique quais variáveis mais aparecem na parte superior da árvore;\nescreva três interpretações de negócio a partir das regras aprendidas.",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Exercícios Práticos</span>"
+    ]
+  },
+  {
+    "objectID": "section/08-exercicios.html#exercício-10-critica-de-modelo",
+    "href": "section/08-exercicios.html#exercício-10-critica-de-modelo",
+    "title": "9  Exercícios Práticos",
+    "section": "9.10 Exercício 10: critica de modelo",
+    "text": "9.10 Exercício 10: critica de modelo\nEscreva um pequeno parecer técnico respondendo:\n\nquando uma árvore isolada e uma boa escolha;\nquando ela pode ser insuficiente;\nem que situações voce priorizaria interpretabilidade;\nquando faria sentido migrar para Random Forest ou Gradient Boosting.",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Exercícios Práticos</span>"
+    ]
+  },
+  {
+    "objectID": "section/08-exercicios.html#gabarito-inicial-para-apoio",
+    "href": "section/08-exercicios.html#gabarito-inicial-para-apoio",
+    "title": "9  Exercícios Práticos",
+    "section": "9.11 Gabarito inicial para apoio",
+    "text": "9.11 Gabarito inicial para apoio\nO objetivo do gabarito abaixo não e entregar todas as respostas, mas fornecer um ponto de partida para implementação.\n\nfrom sklearn.datasets import load_iris, make_regression\nfrom sklearn.model_selection import train_test_split, cross_val_score, GridSearchCV\nfrom sklearn.tree import DecisionTreeClassifier, DecisionTreeRegressor\nfrom sklearn.metrics import accuracy_score, f1_score, mean_absolute_error, r2_score\n\n# Classificação com Iris\nX, y = load_iris(return_X_y=True)\nX_train, X_test, y_train, y_test = train_test_split(\n    X,\n    y,\n    test_size=0.3,\n    random_staté=42,\n    stratify=y\n)\n\nfor depth in [None, 3]:\n    clf = DecisionTreeClassifier(max_depth=depth, random_staté=42)\n    clf.fit(X_train, y_train)\n    pred = clf.predict(X_test)\n    print(\n        f\"depth={depth} | acc={accuracy_score(y_test, pred):.3f} | \"\n        f\"f1_macro={f1_score(y_test, pred, average='macro'):.3f} | \"\n        f\"depth_real={clf.get_depth()} | leaves={clf.get_n_leaves()}\"\n    )\n\n# Validação cruzada\nfor depth in [2, 3, 5, None]:\n    clf = DecisionTreeClassifier(max_depth=depth, random_staté=42)\n    scores = cross_val_score(clf, X, y, cv=5, scoring=\"accuracy\")\n    print(f\"depth={depth} | média={scores.mean():.3f} | desvio={scores.std():.3f}\")\n\n# Grid search\nparam_grid = {\n    \"max_depth\": [2, 3, 4, 5, None],\n    \"min_samples_split\": [2, 5, 10],\n    \"min_samples_leaf\": [1, 2, 4],\n    \"critérion\": [\"gini\", \"entropy\"]\n}\n\ngrid = GridSearchCV(\n    DecisionTreeClassifier(random_staté=42),\n    param_grid=param_grid,\n    cv=5,\n    scoring=\"accuracy\",\n    n_jobs=-1\n)\ngrid.fit(X_train, y_train)\nprint(grid.best_params_)\n\n# Regressão\nX_reg, y_reg = make_regression(n_samples=500, n_features=5, noise=20, random_staté=42)\nX_train_reg, X_test_reg, y_train_reg, y_test_reg = train_test_split(\n    X_reg,\n    y_reg,\n    test_size=0.2,\n    random_staté=42\n)\n\nfor depth in [3, 6, 10, None]:\n    reg = DecisionTreeRegressor(max_depth=depth, random_staté=42)\n    reg.fit(X_train_reg, y_train_reg)\n    pred_reg = reg.predict(X_test_reg)\n    print(\n        f\"depth={depth} | MAE={mean_absolute_error(y_test_reg, pred_reg):.2f} | \"\n        f\"R2={r2_score(y_test_reg, pred_reg):.3f}\"\n    )\n\nUse esse bloco como base e amplie as respostas conceituais por escrito. Em aprendizado de maquina, saber justificar a escolha do modelo e tao importante quanto executar o código.",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Exercícios Práticos</span>"
+    ]
+  },
+  {
+    "objectID": "section/08-exercicios.html#como-usar-este-capítulo",
+    "href": "section/08-exercicios.html#como-usar-este-capítulo",
+    "title": "9  Exercícios Práticos",
+    "section": "9.12 Como usar este capítulo",
+    "text": "9.12 Como usar este capítulo\n\nresolva primeiro sem consultar o gabarito;\nescreva as respostas conceituais em texto, não apenas em código;\ncompare suas solucoes com os principios vistos nos capítulos teóricos;\nrevise especialmente os exercícios em que a estrutura da árvore ficou diferente do esperado.",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Exercícios Práticos</span>"
+    ]
+  },
+  {
+    "objectID": "section/08-exercicios.html#erros-comuns",
+    "href": "section/08-exercicios.html#erros-comuns",
+    "title": "9  Exercícios Práticos",
+    "section": "9.13 Erros comuns",
+    "text": "9.13 Erros comuns\n\nresponder apenas com código, sem interpretação;\ncomparar modelos sem relatar metricas e profundidade;\nesquecer de justificar por que um hiperparametro funcionou melhor;\ntratar o gabarito como resposta final em vez de ponto de partida.",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Exercícios Práticos</span>"
+    ]
+  },
+  {
+    "objectID": "section/08-exercicios.html#perguntas-finais-de-autoavaliação",
+    "href": "section/08-exercicios.html#perguntas-finais-de-autoavaliação",
+    "title": "9  Exercícios Práticos",
+    "section": "9.14 Perguntas finais de autoavaliação",
+    "text": "9.14 Perguntas finais de autoavaliação\n\nVoce consegue calcular entropia e Gini manualmente em exemplos simples?\nVoce consegue explicar diferencas entre ID3, C4.5 e CART?\nVoce sabe treinar, visualizar e podar uma árvore em Python?\nVoce consegue transformar uma árvore em regras compreensíveis para negócio?",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Exercícios Práticos</span>"
+    ]
+  },
+  {
+    "objectID": "section/09-id3-c45-cart.html",
+    "href": "section/09-id3-c45-cart.html",
+    "title": "10  ID3, C4.5 e CART",
+    "section": "",
+    "text": "10.1 Objetivos do capítulo\nDepois de entender os critérios de divisão, o passo seguinte é conectar esses critérios aos algoritmos clássicos de indução de árvores. Nesta etapa, três nomes aparecem com frequência na literatura e no ensino de aprendizado de máquina: ID3, C4.5 e CART.\nEmbora hoje muitas pessoas usem diretamente bibliotecas como scikit-learn, compreender esses algoritmos ajuda bastante a entender por que as árvores se comportam da forma que se comportam.\nAo final deste capítulo, o leitor deve ser capaz de:",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>ID3, C4.5 e CART</span>"
+    ]
+  },
+  {
+    "objectID": "section/09-id3-c45-cart.html#objetivos-do-capítulo",
+    "href": "section/09-id3-c45-cart.html#objetivos-do-capítulo",
+    "title": "10  ID3, C4.5 e CART",
+    "section": "",
+    "text": "descrever a lógica geral de indução top-down;\nexplicar o papel do ganho de informação no ID3;\nreconhecer as melhorias introduzidas pelo C4.5;\ncompreender a proposta do CART e sua relevância prática;\ndiferenciar esses algoritmos em nível conceitual.",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>ID3, C4.5 e CART</span>"
+    ]
+  },
+  {
+    "objectID": "section/09-id3-c45-cart.html#a-ideia-geral-de-indução-top-down",
+    "href": "section/09-id3-c45-cart.html#a-ideia-geral-de-indução-top-down",
+    "title": "10  ID3, C4.5 e CART",
+    "section": "10.2 A ideia geral de indução top-down",
+    "text": "10.2 A ideia geral de indução top-down\nA maior parte dos algoritmos clássicos constrói a árvore de cima para baixo.\n\nComeça-se com todos os exemplos no nó raiz.\nEscolhe-se o melhor atributo para dividir esse conjunto.\nCriam-se ramos para os resultados possíveis do teste.\nO processo é repetido recursivamente em cada subconjunto.\nA construção para quando os exemplos ficam suficientemente homogêneos, quando faltam atributos ou quando algum critério de parada é atingido.\n\nEssa estratégia é chamada de gulosa porque a escolha do atributo é feita localmente, sem revisar todas as alternativas possíveis para a árvore inteira.",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>ID3, C4.5 e CART</span>"
+    ]
+  },
+  {
+    "objectID": "section/09-id3-c45-cart.html#o-algoritmo-id3",
+    "href": "section/09-id3-c45-cart.html#o-algoritmo-id3",
+    "title": "10  ID3, C4.5 e CART",
+    "section": "10.3 O algoritmo ID3",
+    "text": "10.3 O algoritmo ID3\nO ID3, associado a Quinlan, é um dos algoritmos mais clássicos de aprendizado de árvores de decisão. Seu critério principal é o ganho de informação.\n\n10.3.1 Ideia central\nEm cada nó, o ID3 escolhe o atributo que mais reduz a entropia do conjunto local.\n\n\n10.3.2 Visão conceitual do procedimento\n\nse todos os exemplos do nó pertencem à mesma classe, cria-se uma folha;\nse não há mais atributos disponíveis, usa-se a classe majoritária;\ncaso contrário, escolhe-se o melhor atributo segundo ganho de informação;\no processo continua recursivamente em cada ramo.\n\n\n\n10.3.3 Pseudocódigo conceitual\nID3(exemplos, atributos):\n  se todos os exemplos são da mesma classe:\n    retorna folha\n  se não restam atributos:\n    retorna folha com classe majoritária\n  escolhe o atributo com maior ganho de informação\n  cria um nó para esse atributo\n  para cada valor do atributo:\n    cria um ramo\n    chama ID3 para o subconjunto correspondente",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>ID3, C4.5 e CART</span>"
+    ]
+  },
+  {
+    "objectID": "section/09-id3-c45-cart.html#forças-do-id3",
+    "href": "section/09-id3-c45-cart.html#forças-do-id3",
+    "title": "10  ID3, C4.5 e CART",
+    "section": "10.4 Forças do ID3",
+    "text": "10.4 Forças do ID3\n\nalta clareza conceitual;\nforte valor didático;\nboa conexão entre teoria da informação e classificação;\ncapacidade de construir regras simbólicas interpretáveis.",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>ID3, C4.5 e CART</span>"
+    ]
+  },
+  {
+    "objectID": "section/09-id3-c45-cart.html#limitações-do-id3",
+    "href": "section/09-id3-c45-cart.html#limitações-do-id3",
+    "title": "10  ID3, C4.5 e CART",
+    "section": "10.5 Limitações do ID3",
+    "text": "10.5 Limitações do ID3\nApesar de elegante, o ID3 possui limitações clássicas.\n\nfoi pensado principalmente para classificação;\nlida de forma mais natural com atributos categóricos;\npode favorecer atributos com muitos valores distintos;\nnão é, por si só, um mecanismo completo de poda robusta, como nas variantes posteriores.",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>ID3, C4.5 e CART</span>"
+    ]
+  },
+  {
+    "objectID": "section/09-id3-c45-cart.html#o-problema-do-viés-por-muitos-valores",
+    "href": "section/09-id3-c45-cart.html#o-problema-do-viés-por-muitos-valores",
+    "title": "10  ID3, C4.5 e CART",
+    "section": "10.6 O problema do viés por muitos valores",
+    "text": "10.6 O problema do viés por muitos valores\nImagine dois atributos:\n\ncódigo_cliente, com muitos valores quase únicos;\ninadimplencia_previa, com poucos valores e forte significado.\n\nUm atributo com muitos valores pode gerar partições pequenas demais e aparentar grande ganho no treino, mesmo sem generalizar bem. Esse tipo de problema motivou refinamentos posteriores.",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>ID3, C4.5 e CART</span>"
+    ]
+  },
+  {
+    "objectID": "section/09-id3-c45-cart.html#c4.5",
+    "href": "section/09-id3-c45-cart.html#c4.5",
+    "title": "10  ID3, C4.5 e CART",
+    "section": "10.7 C4.5",
+    "text": "10.7 C4.5\nO C4.5 pode ser visto como uma extensão importante do ID3. Ele preserva a ideia de construção top-down, mas introduz mecanismos mais sofisticados para problemas reais.\n\n10.7.1 Melhorias conceituais associadas ao C4.5\n\ntratamento mais flexível de atributos contínuos;\nmelhor tratamento de valores ausentes;\nuso de critérios que reduzem o viés por atributos com muitos valores;\npoda posterior para melhorar generalização.\n\n\n\n10.7.2 Gain ratio\nUma ideia frequentemente associada ao C4.5 é o uso do gain ratio, que ajusta o ganho de informação pela forma como o atributo divide os dados. Isso reduz a tendência de favorecer atributos com muitos valores.\nEm termos intuitivos, o algoritmo pergunta não apenas “quanto esse atributo reduz a incerteza?”, mas também “essa redução veio de uma divisão razoável ou de uma fragmentação excessiva?”.",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>ID3, C4.5 e CART</span>"
+    ]
+  },
+  {
+    "objectID": "section/09-id3-c45-cart.html#tratamento-de-atributos-contínuos",
+    "href": "section/09-id3-c45-cart.html#tratamento-de-atributos-contínuos",
+    "title": "10  ID3, C4.5 e CART",
+    "section": "10.8 Tratamento de atributos contínuos",
+    "text": "10.8 Tratamento de atributos contínuos\nEm domínios reais, muitos atributos são numéricos: idade, renda, temperatura, saldo, tempo, consumo, score. O C4.5 considera pontos de corte e transforma um atributo contínuo em testes do tipo:\n\nidade &lt;= 35.5\nsaldo &lt;= 1200\ntempo_contrato &lt;= 18\n\nEssa ideia foi crucial para a aplicabilidade prática das árvores.",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>ID3, C4.5 e CART</span>"
+    ]
+  },
+  {
+    "objectID": "section/09-id3-c45-cart.html#poda-no-c4.5",
+    "href": "section/09-id3-c45-cart.html#poda-no-c4.5",
+    "title": "10  ID3, C4.5 e CART",
+    "section": "10.9 Poda no C4.5",
+    "text": "10.9 Poda no C4.5\nA poda entra para reduzir complexidade e melhorar generalização. O algoritmo aceita que a árvore inicial possa crescer mais e, em seguida, remove ramos cuja contribuição não justifica a complexidade adicional.",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>ID3, C4.5 e CART</span>"
+    ]
+  },
+  {
+    "objectID": "section/09-id3-c45-cart.html#cart",
+    "href": "section/09-id3-c45-cart.html#cart",
+    "title": "10  ID3, C4.5 e CART",
+    "section": "10.10 CART",
+    "text": "10.10 CART\nCART significa Classification and Regression Trees. Esse nome já sinaliza um diferencial importante: o algoritmo foi formulado tanto para classificação quanto para regressão.\n\n10.10.1 Características conceituais do CART\n\nusa divisões binárias;\npode ser aplicado à classificação e à regressão;\npopularizou a lógica de poda por custo-complexidade;\nestá fortemente ligado a implementações modernas.",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>ID3, C4.5 e CART</span>"
+    ]
+  },
+  {
+    "objectID": "section/09-id3-c45-cart.html#divisões-binárias",
+    "href": "section/09-id3-c45-cart.html#divisões-binárias",
+    "title": "10  ID3, C4.5 e CART",
+    "section": "10.11 Divisões binárias",
+    "text": "10.11 Divisões binárias\nEnquanto alguns materiais didáticos apresentam árvores com vários ramos por atributo categórico, o CART trabalha de forma muito natural com divisões binárias. Isso significa que cada nó produz dois filhos.\nExemplos:\n\nidade &lt;= 35.5 versus idade &gt; 35.5;\nregiao in {sul, sudeste} versus regiao fora desse grupo.\n\nEssa estrutura binária simplifica vários aspectos computacionais e aparece claramente em muitas bibliotecas atuais.",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>ID3, C4.5 e CART</span>"
+    ]
+  },
+  {
+    "objectID": "section/09-id3-c45-cart.html#cart-em-classificação-e-regressão",
+    "href": "section/09-id3-c45-cart.html#cart-em-classificação-e-regressão",
+    "title": "10  ID3, C4.5 e CART",
+    "section": "10.12 CART em classificação e regressão",
+    "text": "10.12 CART em classificação e regressão\nNo caso de classificação, o CART costuma usar medidas como Gini para avaliar a qualidade da divisão. Na regressão, usa critérios associados à redução da variância ou do erro.\nPor isso, o CART se tornou particularmente influente na prática moderna e em famílias inteiras de modelos baseados em árvores.",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>ID3, C4.5 e CART</span>"
+    ]
+  },
+  {
+    "objectID": "section/09-id3-c45-cart.html#relação-com-o-scikit-learn",
+    "href": "section/09-id3-c45-cart.html#relação-com-o-scikit-learn",
+    "title": "10  ID3, C4.5 e CART",
+    "section": "10.13 Relação com o scikit-learn",
+    "text": "10.13 Relação com o scikit-learn\nNa prática, quando treinamos uma DecisionTreeClassifier ou DecisionTreeRegressor no scikit-learn, estamos muito mais próximos da família conceitual do CART do que do ID3 puro.\nIsso significa que, mesmo estudando ID3 e C4.5, o leitor deve entender que a implementação corrente da biblioteca segue uma linha mais próxima de:\n\ndivisões binárias;\ncritérios como Gini e entropia para classificação;\npoda por custo-complexidade com ccp_alpha.",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>ID3, C4.5 e CART</span>"
+    ]
+  },
+  {
+    "objectID": "section/09-id3-c45-cart.html#comparação-conceitual-resumida",
+    "href": "section/09-id3-c45-cart.html#comparação-conceitual-resumida",
+    "title": "10  ID3, C4.5 e CART",
+    "section": "10.14 Comparação conceitual resumida",
+    "text": "10.14 Comparação conceitual resumida\n\n10.14.1 ID3\n\nfortemente didático;\nusa ganho de informação;\nassociado ao estudo clássico de indução;\nmais limitado diante de atributos contínuos e questões práticas modernas.\n\n\n\n10.14.2 C4.5\n\namplia o ID3;\nlida melhor com atributos contínuos e valores ausentes;\nintroduz refinamentos como gain ratio;\nincorpora poda mais estruturada.\n\n\n\n10.14.3 CART\n\ntrabalha com divisões binárias;\ncobre classificação e regressão;\ntem enorme relevância prática;\ninspira bastante as implementações de uso corrente.",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>ID3, C4.5 e CART</span>"
+    ]
+  },
+  {
+    "objectID": "section/09-id3-c45-cart.html#por-que-estudar-algoritmos-clássicos-se-a-biblioteca-já-faz-tudo",
+    "href": "section/09-id3-c45-cart.html#por-que-estudar-algoritmos-clássicos-se-a-biblioteca-já-faz-tudo",
+    "title": "10  ID3, C4.5 e CART",
+    "section": "10.15 Por que estudar algoritmos clássicos se a biblioteca já faz tudo?",
+    "text": "10.15 Por que estudar algoritmos clássicos se a biblioteca já faz tudo?\nPorque a biblioteca treina a árvore, mas não substitui o entendimento.\nQuem compreende ID3, C4.5 e CART consegue:\n\ninterpretar melhor o comportamento do modelo;\nexplicar por que determinado critério foi escolhido;\nidentificar limitações de generalização;\ntomar decisões mais conscientes sobre hiperparâmetros e poda.",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>ID3, C4.5 e CART</span>"
+    ]
+  },
+  {
+    "objectID": "section/09-id3-c45-cart.html#resumo-do-capítulo",
+    "href": "section/09-id3-c45-cart.html#resumo-do-capítulo",
+    "title": "10  ID3, C4.5 e CART",
+    "section": "10.16 Resumo do capítulo",
+    "text": "10.16 Resumo do capítulo\nID3, C4.5 e CART representam momentos centrais na evolução das árvores de decisão. O ID3 formaliza a indução top-down guiada por ganho de informação. O C4.5 amplia essa proposta para lidar melhor com problemas reais. O CART consolida uma abordagem extremamente prática, binária e aplicável tanto à classificação quanto à regressão.\nNo próximo capítulo, vamos sair da formulação algorítmica e voltar ao uso concreto em Python, observando como essas ideias aparecem em uma árvore treinada de fato.",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>ID3, C4.5 e CART</span>"
+    ]
+  },
+  {
+    "objectID": "section/09-id3-c45-cart.html#erros-comuns",
+    "href": "section/09-id3-c45-cart.html#erros-comuns",
+    "title": "10  ID3, C4.5 e CART",
+    "section": "10.17 Erros comuns",
+    "text": "10.17 Erros comuns\n\nestudar apenas a API moderna e ignorar a intuição dos algoritmos clássicos;\nimaginar que ID3, C4.5 e CART são equivalentes em todos os detalhes;\nesquecer o problema do viés por atributos com muitos valores;\nsupor que bibliotecas atuais implementam ID3 puro.",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>ID3, C4.5 e CART</span>"
+    ]
+  },
+  {
+    "objectID": "section/09-id3-c45-cart.html#perguntas-de-revisão",
+    "href": "section/09-id3-c45-cart.html#perguntas-de-revisão",
+    "title": "10  ID3, C4.5 e CART",
+    "section": "10.18 Perguntas de revisão",
+    "text": "10.18 Perguntas de revisão\n\nQual é a ideia central do ID3?\nO que o C4.5 melhora em relação ao ID3?\nPor que o CART é tão importante na prática moderna?\nComo as divisões binárias influenciam a estrutura da árvore?",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>ID3, C4.5 e CART</span>"
+    ]
+  },
+  {
+    "objectID": "section/10-interpretacao-regras.html",
+    "href": "section/10-interpretacao-regras.html",
+    "title": "11  Interpretação de Regras e Importância de Atributos",
+    "section": "",
+    "text": "11.1 Objetivos do capítulo\nUma das maiores vantagens das árvores de decisão é que elas não servem apenas para prever. Elas também ajudam a explicar, comunicar e organizar conhecimento sobre o problema. Neste capítulo, o foco deixa de ser apenas desempenho e passa a incluir interpretabilidade.\nAo final da leitura, o leitor deve ser capaz de:",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Interpretação de Regras e Importância de Atributos</span>"
+    ]
+  },
+  {
+    "objectID": "section/10-interpretacao-regras.html#objetivos-do-capítulo",
+    "href": "section/10-interpretacao-regras.html#objetivos-do-capítulo",
+    "title": "11  Interpretação de Regras e Importância de Atributos",
+    "section": "",
+    "text": "transformar caminhos da árvore em regras compreensíveis;\ninterpretar folhas, probabilidades e distribuições de classe;\nusar importância de atributos com critério;\ncomunicar resultados para público técnico e não técnico;\ndistinguir explicação legítima de interpretação apressada.",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Interpretação de Regras e Importância de Atributos</span>"
+    ]
+  },
+  {
+    "objectID": "section/10-interpretacao-regras.html#cada-caminho-é-uma-regra",
+    "href": "section/10-interpretacao-regras.html#cada-caminho-é-uma-regra",
+    "title": "11  Interpretação de Regras e Importância de Atributos",
+    "section": "11.2 Cada caminho é uma regra",
+    "text": "11.2 Cada caminho é uma regra\nUma árvore pode ser lida como um conjunto de regras condicionais. Cada caminho da raiz até uma folha corresponde a uma regra do tipo:\nSe condição 1 e condição 2 e condição 3, então classe prevista = X\nExemplo:\nSe suporte_chamados &gt; 3\n e tempo_cliente &lt;= 12\n e atrasos_pagamento &gt; 1\nentão churn = alto\nEssa forma textual é extremamente útil para documentação, auditoria e comunicação com áreas de negócio.",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Interpretação de Regras e Importância de Atributos</span>"
+    ]
+  },
+  {
+    "objectID": "section/10-interpretacao-regras.html#como-interpretar-uma-folha",
+    "href": "section/10-interpretacao-regras.html#como-interpretar-uma-folha",
+    "title": "11  Interpretação de Regras e Importância de Atributos",
+    "section": "11.3 Como interpretar uma folha",
+    "text": "11.3 Como interpretar uma folha\nUma folha não deve ser vista apenas como um rótulo final. Em geral, ela também carrega informações sobre:\n\nquantidade de amostras que chegaram ali;\ndistribuição das classes nesse subconjunto;\nconfiança relativa da previsão;\npureza ou mistura residual daquele grupo.\n\nUma folha com 300 exemplos e classe majoritária muito clara conta uma história diferente de uma folha com 4 exemplos e distribuição equilibrada entre classes.",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Interpretação de Regras e Importância de Atributos</span>"
+    ]
+  },
+  {
+    "objectID": "section/10-interpretacao-regras.html#exemplo-de-exportação-textual",
+    "href": "section/10-interpretacao-regras.html#exemplo-de-exportação-textual",
+    "title": "11  Interpretação de Regras e Importância de Atributos",
+    "section": "11.4 Exemplo de exportação textual",
+    "text": "11.4 Exemplo de exportação textual\n\nfrom sklearn.datasets import load_iris\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.tree import DecisionTreeClassifier, export_text\n\nX, y = load_iris(return_X_y=True)\nfeature_names = load_iris().feature_names\n\nX_train, X_test, y_train, y_test = train_test_split(\n    X, y, test_size=0.3, random_state=42, stratify=y\n)\n\nclf = DecisionTreeClassifier(max_depth=3, random_state=42)\nclf.fit(X_train, y_train)\n\nprint(export_text(clf, feature_names=list(feature_names)))\n\nAo ler a saída, procure identificar:\n\nqual atributo aparece na raiz;\nquais cortes aparecem primeiro;\nquais regras são curtas e quais são mais profundas;\nonde a árvore parece mais confiante ou mais hesitante.",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Interpretação de Regras e Importância de Atributos</span>"
+    ]
+  },
+  {
+    "objectID": "section/10-interpretacao-regras.html#importância-de-atributos",
+    "href": "section/10-interpretacao-regras.html#importância-de-atributos",
+    "title": "11  Interpretação de Regras e Importância de Atributos",
+    "section": "11.5 Importância de atributos",
+    "text": "11.5 Importância de atributos\nBibliotecas como scikit-learn disponibilizam uma medida de importância de atributo baseada na redução de impureza proporcionada por cada variável ao longo da árvore.\n\nimport pandas as pd\nfrom sklearn.datasets import load_iris\nfrom sklearn.tree import DecisionTreeClassifier\n\niris = load_iris()\nclf = DecisionTreeClassifier(random_state=42)\nclf.fit(iris.data, iris.target)\n\nimportancias = pd.Series(clf.feature_importances_, index=iris.feature_names)\nprint(importancias.sort_values(ascending=False))",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Interpretação de Regras e Importância de Atributos</span>"
+    ]
+  },
+  {
+    "objectID": "section/10-interpretacao-regras.html#como-ler-a-importância-com-responsabilidade",
+    "href": "section/10-interpretacao-regras.html#como-ler-a-importância-com-responsabilidade",
+    "title": "11  Interpretação de Regras e Importância de Atributos",
+    "section": "11.6 Como ler a importância com responsabilidade",
+    "text": "11.6 Como ler a importância com responsabilidade\nSe uma variável tem importância alta, isso indica que ela contribuiu bastante para as divisões da árvore. No entanto, isso não significa automaticamente causalidade, relevância universal ou independência em relação a outras variáveis.\n\n11.6.1 Cuidados importantes\n\nimportância não é causalidade;\nimportância depende do conjunto de dados disponível;\natributos correlacionados podem disputar espaço entre si;\npequenas mudanças nos dados podem alterar a árvore e a importância;\numa variável pouco usada na árvore não é necessariamente irrelevante em outros modelos.",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Interpretação de Regras e Importância de Atributos</span>"
+    ]
+  },
+  {
+    "objectID": "section/10-interpretacao-regras.html#regras-globais-e-regras-locais",
+    "href": "section/10-interpretacao-regras.html#regras-globais-e-regras-locais",
+    "title": "11  Interpretação de Regras e Importância de Atributos",
+    "section": "11.7 Regras globais e regras locais",
+    "text": "11.7 Regras globais e regras locais\nUma forma útil de pensar é separar dois níveis de interpretação.\n\n11.7.1 Interpretação global\nBusca entender a lógica geral da árvore:\n\nquais atributos aparecem perto da raiz;\nquais grupos principais foram separados;\ncomo a complexidade foi distribuída.\n\n\n\n11.7.2 Interpretação local\nBusca entender uma previsão específica:\n\npor que este exemplo caiu nesta folha?\nquais condições foram satisfeitas?\nqual conjunto de regras levou a essa decisão?",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Interpretação de Regras e Importância de Atributos</span>"
+    ]
+  },
+  {
+    "objectID": "section/10-interpretacao-regras.html#exemplo-de-interpretação-local",
+    "href": "section/10-interpretacao-regras.html#exemplo-de-interpretação-local",
+    "title": "11  Interpretação de Regras e Importância de Atributos",
+    "section": "11.8 Exemplo de interpretação local",
+    "text": "11.8 Exemplo de interpretação local\nSuponha um cliente com:\n\nmuitos chamados no suporte;\npouco tempo de contrato;\nhistórico recente de atraso.\n\nSe a árvore conduz esse cliente até uma folha de alto risco de churn, podemos reconstruir o caminho e apresentar essa previsão como uma regra explícita. Isso torna a ação muito mais clara do que simplesmente dizer “o score foi alto”.",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Interpretação de Regras e Importância de Atributos</span>"
+    ]
+  },
+  {
+    "objectID": "section/10-interpretacao-regras.html#quando-a-interpretabilidade-é-mais-valiosa-que-alguns-pontos-de-score",
+    "href": "section/10-interpretacao-regras.html#quando-a-interpretabilidade-é-mais-valiosa-que-alguns-pontos-de-score",
+    "title": "11  Interpretação de Regras e Importância de Atributos",
+    "section": "11.9 Quando a interpretabilidade é mais valiosa que alguns pontos de score",
+    "text": "11.9 Quando a interpretabilidade é mais valiosa que alguns pontos de score\nEm muitos contextos, uma árvore ligeiramente menos precisa pode ser preferida a um modelo mais opaco se houver necessidade de:\n\nauditoria;\nprestação de contas;\nvalidação por especialistas do domínio;\ncomunicação para gestores;\ndefinição de políticas ou regras internas.",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Interpretação de Regras e Importância de Atributos</span>"
+    ]
+  },
+  {
+    "objectID": "section/10-interpretacao-regras.html#comunicando-resultados-para-público-não-técnico",
+    "href": "section/10-interpretacao-regras.html#comunicando-resultados-para-público-não-técnico",
+    "title": "11  Interpretação de Regras e Importância de Atributos",
+    "section": "11.10 Comunicando resultados para público não técnico",
+    "text": "11.10 Comunicando resultados para público não técnico\nAo apresentar uma árvore para público não técnico, evite falar primeiro em entropia, Gini ou hiperparâmetros. Comece por perguntas como:\n\nquais perfis estão mais associados ao resultado?\nquais sinais aparecem mais cedo na decisão?\nque grupos a árvore separou?\nquais regras podem ser transformadas em ação?\n\nDepois, se necessário, detalhe o mecanismo técnico.",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Interpretação de Regras e Importância de Atributos</span>"
+    ]
+  },
+  {
+    "objectID": "section/10-interpretacao-regras.html#boas-práticas-de-documentação",
+    "href": "section/10-interpretacao-regras.html#boas-práticas-de-documentação",
+    "title": "11  Interpretação de Regras e Importância de Atributos",
+    "section": "11.11 Boas práticas de documentação",
+    "text": "11.11 Boas práticas de documentação\nAo documentar uma árvore para uso prático, inclua:\n\nobjetivo do modelo;\nvariável alvo;\nprincipais atributos usados;\nregras mais relevantes;\nmétricas principais;\nlimites conhecidos do modelo;\ncuidados de interpretação.",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Interpretação de Regras e Importância de Atributos</span>"
+    ]
+  },
+  {
+    "objectID": "section/10-interpretacao-regras.html#o-perigo-da-falsa-simplicidade",
+    "href": "section/10-interpretacao-regras.html#o-perigo-da-falsa-simplicidade",
+    "title": "11  Interpretação de Regras e Importância de Atributos",
+    "section": "11.12 O perigo da falsa simplicidade",
+    "text": "11.12 O perigo da falsa simplicidade\nO fato de a árvore ser visualmente intuitiva não significa que toda interpretação será correta. Há riscos de:\n\nconfundir correlação com causa;\nsuperestimar a robustez de um ramo com poucas amostras;\nignorar instabilidade estrutural;\ntratar uma regra local como se fosse uma lei geral do domínio.\n\nInterpretar bem exige unir leitura da estrutura com conhecimento do problema.",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Interpretação de Regras e Importância de Atributos</span>"
+    ]
+  },
+  {
+    "objectID": "section/10-interpretacao-regras.html#árvore-como-ferramenta-de-descoberta",
+    "href": "section/10-interpretacao-regras.html#árvore-como-ferramenta-de-descoberta",
+    "title": "11  Interpretação de Regras e Importância de Atributos",
+    "section": "11.13 Árvore como ferramenta de descoberta",
+    "text": "11.13 Árvore como ferramenta de descoberta\nMesmo quando o modelo final em produção não é uma única árvore, ela continua sendo muito útil para:\n\ndescobrir variáveis promissoras;\nrevelar interações entre atributos;\npropor hipóteses de negócio;\norientar engenharias de variável;\nexplicar rapidamente um domínio para a equipe.",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Interpretação de Regras e Importância de Atributos</span>"
+    ]
+  },
+  {
+    "objectID": "section/10-interpretacao-regras.html#resumo-do-capítulo",
+    "href": "section/10-interpretacao-regras.html#resumo-do-capítulo",
+    "title": "11  Interpretação de Regras e Importância de Atributos",
+    "section": "11.14 Resumo do capítulo",
+    "text": "11.14 Resumo do capítulo\nInterpretar uma árvore de decisão significa transformar estrutura em significado. Cada caminho pode ser lido como regra, cada folha como grupo de comportamento e cada atributo importante como um sinal potencialmente relevante. Quando bem utilizada, a árvore é, ao mesmo tempo, um modelo preditivo e uma linguagem para explicar o problema.\nCom esse repertório, o leitor está pronto para consolidar o estudo com os exercícios finais do livro.",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Interpretação de Regras e Importância de Atributos</span>"
+    ]
+  },
+  {
+    "objectID": "section/10-interpretacao-regras.html#erros-comuns",
+    "href": "section/10-interpretacao-regras.html#erros-comuns",
+    "title": "11  Interpretação de Regras e Importância de Atributos",
+    "section": "11.15 Erros comuns",
+    "text": "11.15 Erros comuns\n\ninterpretar importância de atributos como causalidade;\napresentar regras sem informar suporte ou contexto;\nconfundir explicação local com regra global do domínio;\nignorar que folhas com poucas amostras exigem cautela.",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Interpretação de Regras e Importância de Atributos</span>"
+    ]
+  },
+  {
+    "objectID": "section/10-interpretacao-regras.html#perguntas-de-revisão",
+    "href": "section/10-interpretacao-regras.html#perguntas-de-revisão",
+    "title": "11  Interpretação de Regras e Importância de Atributos",
+    "section": "11.16 Perguntas de revisão",
+    "text": "11.16 Perguntas de revisão\n\nComo transformar um caminho da árvore em regra textual?\nO que uma folha informa além da classe final?\nPor que importância de atributo não deve ser lida como causalidade?\nComo comunicar regras da árvore para público não técnico?",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Interpretação de Regras e Importância de Atributos</span>"
+    ]
+  },
+  {
+    "objectID": "section/11-arvore-vs-random-forest.html",
+    "href": "section/11-arvore-vs-random-forest.html",
+    "title": "12  Árvore de Decisão versus Random Forest e Ensembles",
+    "section": "",
+    "text": "12.1 Objetivos do capítulo\nUma árvore de decisão isolada é excelente para aprender, explicar e produzir regras claras. No entanto, em muitos problemas reais, modelos de conjunto baseados em árvores conseguem desempenho preditivo superior. Este capítulo compara a árvore isolada com Random Forest e outras estratégias de ensemble.\nAo final da leitura, o leitor deve ser capaz de:",
+    "crumbs": [
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Árvore de Decisão versus Random Forest e Ensembles</span>"
+    ]
+  },
+  {
+    "objectID": "section/11-arvore-vs-random-forest.html#objetivos-do-capítulo",
+    "href": "section/11-arvore-vs-random-forest.html#objetivos-do-capítulo",
+    "title": "12  Árvore de Decisão versus Random Forest e Ensembles",
+    "section": "",
+    "text": "explicar por que uma árvore isolada é instável;\nentender a intuição do Random Forest;\nreconhecer quando priorizar interpretabilidade ou desempenho;\nenxergar a árvore isolada como base conceitual para modelos mais fortes.",
+    "crumbs": [
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Árvore de Decisão versus Random Forest e Ensembles</span>"
+    ]
+  },
+  {
+    "objectID": "section/11-arvore-vs-random-forest.html#por-que-uma-única-árvore-pode-ser-insuficiente",
+    "href": "section/11-arvore-vs-random-forest.html#por-que-uma-única-árvore-pode-ser-insuficiente",
+    "title": "12  Árvore de Decisão versus Random Forest e Ensembles",
+    "section": "12.2 Por que uma única árvore pode ser insuficiente",
+    "text": "12.2 Por que uma única árvore pode ser insuficiente\nUma árvore individual tem várias qualidades, mas também sofre com problemas conhecidos:\n\nalta variância;\nsensibilidade a pequenas mudanças nos dados;\ntendência a overfitting quando cresce demais;\ndesempenho por vezes inferior ao de modelos combinados.\n\nIsso acontece porque toda a estrutura depende de escolhas locais em cada divisão. Se a raiz muda, todo o restante pode mudar junto.",
+    "crumbs": [
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Árvore de Decisão versus Random Forest e Ensembles</span>"
+    ]
+  },
+  {
+    "objectID": "section/11-arvore-vs-random-forest.html#a-intuição-do-ensemble",
+    "href": "section/11-arvore-vs-random-forest.html#a-intuição-do-ensemble",
+    "title": "12  Árvore de Decisão versus Random Forest e Ensembles",
+    "section": "12.3 A intuição do ensemble",
+    "text": "12.3 A intuição do ensemble\nEm vez de depender de uma única árvore, um ensemble combina várias árvores. A ideia geral é que o conjunto seja mais robusto do que qualquer árvore individual.\nDuas famílias muito importantes são:\n\nbagging, do qual o Random Forest é o exemplo mais famoso;\nboosting, usado em técnicas como Gradient Boosting, XGBoost, LightGBM e CatBoost.",
+    "crumbs": [
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Árvore de Decisão versus Random Forest e Ensembles</span>"
+    ]
+  },
+  {
+    "objectID": "section/11-arvore-vs-random-forest.html#random-forest",
+    "href": "section/11-arvore-vs-random-forest.html#random-forest",
+    "title": "12  Árvore de Decisão versus Random Forest e Ensembles",
+    "section": "12.4 Random Forest",
+    "text": "12.4 Random Forest\nO Random Forest constrói várias árvores sobre amostras reamostradas dos dados e combina suas previsões.\n\n12.4.1 Ideia central\n\ncada árvore vê uma variação do conjunto de treino;\nem cada divisão, apenas um subconjunto aleatório de atributos é considerado;\nas previsões finais são agregadas por votação, no caso de classificação, ou por média, no caso de regressão.\n\nEsse processo reduz a variância e torna o modelo mais estável.",
+    "crumbs": [
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Árvore de Decisão versus Random Forest e Ensembles</span>"
+    ]
+  },
+  {
+    "objectID": "section/11-arvore-vs-random-forest.html#o-que-o-random-forest-ganha",
+    "href": "section/11-arvore-vs-random-forest.html#o-que-o-random-forest-ganha",
+    "title": "12  Árvore de Decisão versus Random Forest e Ensembles",
+    "section": "12.5 O que o Random Forest ganha",
+    "text": "12.5 O que o Random Forest ganha\n\nmaior robustez;\nmelhor generalização em muitos problemas;\nmenor sensibilidade a pequenas perturbações nos dados;\nboa capacidade de modelar interações complexas.",
+    "crumbs": [
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Árvore de Decisão versus Random Forest e Ensembles</span>"
+    ]
+  },
+  {
+    "objectID": "section/11-arvore-vs-random-forest.html#o-que-o-random-forest-perde",
+    "href": "section/11-arvore-vs-random-forest.html#o-que-o-random-forest-perde",
+    "title": "12  Árvore de Decisão versus Random Forest e Ensembles",
+    "section": "12.6 O que o Random Forest perde",
+    "text": "12.6 O que o Random Forest perde\n\nmenor transparência em comparação com uma única árvore;\ndificuldade maior para comunicar uma regra simples única;\ncusto computacional mais alto;\ninterpretação menos direta para público não técnico.",
+    "crumbs": [
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Árvore de Decisão versus Random Forest e Ensembles</span>"
+    ]
+  },
+  {
+    "objectID": "section/11-arvore-vs-random-forest.html#comparação-prática-de-intuição",
+    "href": "section/11-arvore-vs-random-forest.html#comparação-prática-de-intuição",
+    "title": "12  Árvore de Decisão versus Random Forest e Ensembles",
+    "section": "12.7 Comparação prática de intuição",
+    "text": "12.7 Comparação prática de intuição\n\n12.7.1 Árvore isolada\nPense nela como um especialista que toma decisão seguindo uma única cadeia clara de regras.\n\n\n12.7.2 Random Forest\nPense nele como um comitê de especialistas. Cada um olha para os dados de forma um pouco diferente. A decisão final vem da agregação dessas opiniões.",
+    "crumbs": [
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Árvore de Decisão versus Random Forest e Ensembles</span>"
+    ]
+  },
+  {
+    "objectID": "section/11-arvore-vs-random-forest.html#quando-a-árvore-isolada-é-a-melhor-escolha",
+    "href": "section/11-arvore-vs-random-forest.html#quando-a-árvore-isolada-é-a-melhor-escolha",
+    "title": "12  Árvore de Decisão versus Random Forest e Ensembles",
+    "section": "12.8 Quando a árvore isolada é a melhor escolha",
+    "text": "12.8 Quando a árvore isolada é a melhor escolha\nUma única árvore costuma ser muito adequada quando:\n\ninterpretabilidade é requisito central;\no modelo precisa virar regra de negócio ou política interna;\no objetivo inclui ensino ou explicação do problema;\ndeseja-se um baseline rápido e claro;\no domínio exige auditoria e justificativa direta da previsão.",
+    "crumbs": [
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Árvore de Decisão versus Random Forest e Ensembles</span>"
+    ]
+  },
+  {
+    "objectID": "section/11-arvore-vs-random-forest.html#quando-o-random-forest-tende-a-ser-melhor",
+    "href": "section/11-arvore-vs-random-forest.html#quando-o-random-forest-tende-a-ser-melhor",
+    "title": "12  Árvore de Decisão versus Random Forest e Ensembles",
+    "section": "12.9 Quando o Random Forest tende a ser melhor",
+    "text": "12.9 Quando o Random Forest tende a ser melhor\nO Random Forest costuma ser uma boa escolha quando:\n\no foco principal é desempenho preditivo;\na instabilidade da árvore isolada atrapalha;\nhá volume razoável de dados;\na relação entre variáveis e alvo é mais complexa;\naceita-se trocar parte da interpretabilidade por robustez.",
+    "crumbs": [
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Árvore de Decisão versus Random Forest e Ensembles</span>"
+    ]
+  },
+  {
+    "objectID": "section/11-arvore-vs-random-forest.html#e-o-boosting",
+    "href": "section/11-arvore-vs-random-forest.html#e-o-boosting",
+    "title": "12  Árvore de Decisão versus Random Forest e Ensembles",
+    "section": "12.10 E o boosting?",
+    "text": "12.10 E o boosting?\nNo boosting, as árvores são construídas sequencialmente. Cada nova árvore tenta corrigir erros das anteriores. Em muitos contextos, isso produz desempenho ainda maior do que bagging.\nPor outro lado, o boosting tende a exigir mais cuidado com ajuste e costuma ser ainda menos transparente do que uma única árvore.",
+    "crumbs": [
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Árvore de Decisão versus Random Forest e Ensembles</span>"
+    ]
+  },
+  {
+    "objectID": "section/11-arvore-vs-random-forest.html#exemplo-simples-em-python",
+    "href": "section/11-arvore-vs-random-forest.html#exemplo-simples-em-python",
+    "title": "12  Árvore de Decisão versus Random Forest e Ensembles",
+    "section": "12.11 Exemplo simples em Python",
+    "text": "12.11 Exemplo simples em Python\n\nfrom sklearn.datasets import load_iris\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.tree import DecisionTreeClassifier\nfrom sklearn.ensemble import RandomForestClassifier\nfrom sklearn.metrics import accuracy_score, f1_score\n\nX, y = load_iris(return_X_y=True)\nX_train, X_test, y_train, y_test = train_test_split(\n    X, y, test_size=0.3, random_state=42, stratify=y\n)\n\ntree_model = DecisionTreeClassifier(max_depth=3, random_state=42)\nforest_model = RandomForestClassifier(n_estimators=200, random_state=42)\n\ntree_model.fit(X_train, y_train)\nforest_model.fit(X_train, y_train)\n\ntree_pred = tree_model.predict(X_test)\nforest_pred = forest_model.predict(X_test)\n\nprint(\"Árvore | acc:\", accuracy_score(y_test, tree_pred), \"| f1_macro:\", f1_score(y_test, tree_pred, average=\"macro\"))\nprint(\"Forest | acc:\", accuracy_score(y_test, forest_pred), \"| f1_macro:\", f1_score(y_test, forest_pred, average=\"macro\"))\n\nEsse exemplo não prova que o Random Forest sempre vencerá, mas ajuda a mostrar como a comparação pode ser feita na prática.",
+    "crumbs": [
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Árvore de Decisão versus Random Forest e Ensembles</span>"
+    ]
+  },
+  {
+    "objectID": "section/11-arvore-vs-random-forest.html#a-árvore-isolada-continua-importante",
+    "href": "section/11-arvore-vs-random-forest.html#a-árvore-isolada-continua-importante",
+    "title": "12  Árvore de Decisão versus Random Forest e Ensembles",
+    "section": "12.12 A árvore isolada continua importante",
+    "text": "12.12 A árvore isolada continua importante\nMesmo quando o modelo final escolhido é um ensemble, a árvore individual continua sendo essencial para o aprendizado conceitual. Entender bem uma árvore ajuda a compreender:\n\npureza e impureza;\nprofundidade e folhas;\ndivisões binárias;\ncritérios de separação;\nimportância de atributos;\nefeitos de poda e controle de complexidade.",
+    "crumbs": [
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Árvore de Decisão versus Random Forest e Ensembles</span>"
+    ]
+  },
+  {
+    "objectID": "section/11-arvore-vs-random-forest.html#resumo-do-capítulo",
+    "href": "section/11-arvore-vs-random-forest.html#resumo-do-capítulo",
+    "title": "12  Árvore de Decisão versus Random Forest e Ensembles",
+    "section": "12.13 Resumo do capítulo",
+    "text": "12.13 Resumo do capítulo\n\nA árvore isolada privilegia clareza e interpretabilidade.\nO Random Forest privilegia robustez e desempenho médio.\nEnsembles reduzem a fragilidade estrutural de uma única árvore.\nA escolha entre um e outro depende do equilíbrio entre explicabilidade e performance.",
+    "crumbs": [
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Árvore de Decisão versus Random Forest e Ensembles</span>"
+    ]
+  },
+  {
+    "objectID": "section/11-arvore-vs-random-forest.html#erros-comuns",
+    "href": "section/11-arvore-vs-random-forest.html#erros-comuns",
+    "title": "12  Árvore de Decisão versus Random Forest e Ensembles",
+    "section": "12.14 Erros comuns",
+    "text": "12.14 Erros comuns\n\ntratar o Random Forest como substituto automático em qualquer problema;\nabandonar a árvore isolada sem aprender seus fundamentos;\ncomparar modelos sem considerar a interpretabilidade como critério;\nescolher ensemble mais complexo sem necessidade prática clara.",
+    "crumbs": [
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Árvore de Decisão versus Random Forest e Ensembles</span>"
+    ]
+  },
+  {
+    "objectID": "section/11-arvore-vs-random-forest.html#perguntas-de-revisão",
+    "href": "section/11-arvore-vs-random-forest.html#perguntas-de-revisão",
+    "title": "12  Árvore de Decisão versus Random Forest e Ensembles",
+    "section": "12.15 Perguntas de revisão",
+    "text": "12.15 Perguntas de revisão\n\nPor que uma árvore isolada tende a ter alta variância?\nComo o Random Forest reduz instabilidade?\nEm que contexto uma única árvore pode ser preferível mesmo com score menor?\nO que o estudo da árvore isolada ensina sobre ensembles?",
+    "crumbs": [
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Árvore de Decisão versus Random Forest e Ensembles</span>"
+    ]
+  },
+  {
+    "objectID": "section/12-glossario.html",
+    "href": "section/12-glossario.html",
+    "title": "13  Glossário Técnico",
+    "section": "",
+    "text": "Este glossário reúne termos centrais usados ao longo do livro. A ideia é oferecer uma referência rápida para revisão.\n\nAcurácia\n\nProporção de previsões corretas sobre o total de exemplos avaliados.\n\nAtributo\n\nVariável de entrada usada para descrever cada exemplo.\n\nBagging\n\nEstratégia de ensemble que combina modelos treinados em diferentes reamostragens dos dados para reduzir variância.\n\nCART\n\nSigla para Classification and Regression Trees, família de algoritmos de árvore com grande relevância prática.\n\nClasse majoritária\n\nClasse mais frequente em um conjunto de exemplos ou em uma folha.\n\nClassificação\n\nTarefa de prever categorias discretas.\n\nCritério de divisão\n\nMedida usada para decidir qual atributo ou corte produz a melhor separação em um nó.\n\nEntropia\n\nMedida de incerteza ou impureza derivada da teoria da informação.\n\nEnsemble\n\nModelo formado pela combinação de vários modelos base, como várias árvores.\n\nFolha\n\nNó terminal da árvore onde a previsão final é produzida.\n\nGain ratio\n\nRefinamento do ganho de informação usado para reduzir o viés por atributos com muitos valores.\n\nGanho de informação\n\nRedução esperada da entropia após uma divisão.\n\nGeneralização\n\nCapacidade do modelo de funcionar bem em dados não vistos durante o treino.\n\nGradient Boosting\n\nFamília de ensembles sequenciais em que novas árvores corrigem erros das anteriores.\n\nGrid Search\n\nProcedimento sistemático de teste de combinações de hiperparâmetros.\n\nGini\n\nMedida de impureza muito usada em árvores de classificação.\n\nHiperparâmetro\n\nConfiguração definida antes do treino, como profundidade máxima ou número mínimo de amostras por folha.\n\nID3\n\nAlgoritmo clássico de indução de árvores guiado por ganho de informação.\n\nImpureza\n\nGrau de mistura entre classes dentro de um nó.\n\nInstabilidade estrutural\n\nSensibilidade da árvore a pequenas mudanças no conjunto de treino.\n\nInterpretabilidade\n\nFacilidade com que humanos conseguem entender o funcionamento e as previsões do modelo.\n\nNó interno\n\nNó que realiza um teste e envia os exemplos para ramos descendentes.\n\nNó raiz\n\nPrimeiro nó da árvore, onde a decisão começa.\n\nOverfitting\n\nSituação em que o modelo se ajusta demais ao treino e perde generalização.\n\nPoda\n\nProcesso de simplificação da árvore para reduzir complexidade e melhorar generalização.\n\nPós-poda\n\nRedução da árvore após o treino.\n\nPre-poda\n\nRestrições aplicadas durante o crescimento da árvore.\n\nPrecision\n\nEntre as previsões positivas, proporção das que realmente são positivas.\n\nPureza\n\nEstado em que um nó contém exemplos de uma única classe ou de distribuição muito concentrada.\n\nRandom Forest\n\nEnsemble de várias árvores treinadas com bagging e seleção aleatória de atributos.\n\nRecall\n\nEntre os exemplos realmente positivos, proporção dos que foram encontrados pelo modelo.\n\nRegressão\n\nTarefa de prever valores numéricos contínuos.\n\nRegra de decisão\n\nDescrição textual de um caminho da raiz até uma folha.\n\nSplitter\n\nMecanismo que define como a biblioteca procura o melhor corte em um nó.\n\nTeste\n\nConjunto de dados reservado para avaliação final do modelo.\n\nTreino\n\nConjunto de dados usado para ajustar os parâmetros do modelo.\n\nUnderfitting\n\nSituação em que o modelo é simples demais para capturar os padrões do problema.\n\nValidação cruzada\n\nMétodo de avaliação em que os dados são divididos em vários subconjuntos para treino e validação repetidos.\n\nVariância do modelo\n\nSensibilidade do modelo a mudanças no conjunto de treino.",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Glossário Técnico</span>"
+    ]
+  }
+]

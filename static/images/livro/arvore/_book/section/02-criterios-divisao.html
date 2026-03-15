@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>3&nbsp; Critérios de Divisão – Árvore de Decisão Teoria e Prática com Python</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../section/03-primeiro-modelo.html" rel="next">
+<link href="../section/01-fundamentos.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-d9ea66fcd6c317012447f26e9c021348.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../section/02-criterios-divisao.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Critérios de Divisão</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Árvore de Decisão Teoria e Prática com Python</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Árvore de Decisão Teoria e Prática com Python</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../section/01-fundamentos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Fundamentos de Árvore de Decisão</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../section/02-criterios-divisao.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Critérios de Divisão</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../section/03-primeiro-modelo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Primeiro Modelo em Python</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../section/04-avaliacao-ajuste.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Avaliação e Ajuste</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../section/05-poda-overfitting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Poda e Overfitting</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../section/06-classificacao-regressao.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classificação e Regressão</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../section/07-estudo-caso.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Estudo de Caso Completo</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../section/08-exercicios.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Exercícios Práticos</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../section/09-id3-c45-cart.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">ID3, C4.5 e CART</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../section/10-interpretacao-regras.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Interpretação de Regras e Importância de Atributos</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../section/11-arvore-vs-random-forest.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Árvore de Decisão versus Random Forest e Ensembles</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../section/12-glossario.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Glossário Técnico</span></span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#objetivos-do-capítulo" id="toc-objetivos-do-capítulo" class="nav-link active" data-scroll-target="#objetivos-do-capítulo"><span class="header-section-number">3.1</span> Objetivos do capítulo</a></li>
+  <li><a href="#o-problema-que-o-critério-resolve" id="toc-o-problema-que-o-critério-resolve" class="nav-link" data-scroll-target="#o-problema-que-o-critério-resolve"><span class="header-section-number">3.2</span> O problema que o critério resolve</a></li>
+  <li><a href="#pureza-e-impureza" id="toc-pureza-e-impureza" class="nav-link" data-scroll-target="#pureza-e-impureza"><span class="header-section-number">3.3</span> Pureza e impureza</a></li>
+  <li><a href="#entropia" id="toc-entropia" class="nav-link" data-scroll-target="#entropia"><span class="header-section-number">3.4</span> Entropia</a></li>
+  <li><a href="#tabela-intuitiva-de-entropia" id="toc-tabela-intuitiva-de-entropia" class="nav-link" data-scroll-target="#tabela-intuitiva-de-entropia"><span class="header-section-number">3.5</span> Tabela intuitiva de entropia</a></li>
+  <li><a href="#exemplo-numérico-detalhado-de-entropia" id="toc-exemplo-numérico-detalhado-de-entropia" class="nav-link" data-scroll-target="#exemplo-numérico-detalhado-de-entropia"><span class="header-section-number">3.6</span> Exemplo numérico detalhado de entropia</a></li>
+  <li><a href="#ganho-de-informação" id="toc-ganho-de-informação" class="nav-link" data-scroll-target="#ganho-de-informação"><span class="header-section-number">3.7</span> Ganho de informação</a></li>
+  <li><a href="#exemplo-passo-a-passo-de-ganho-de-informação" id="toc-exemplo-passo-a-passo-de-ganho-de-informação" class="nav-link" data-scroll-target="#exemplo-passo-a-passo-de-ganho-de-informação"><span class="header-section-number">3.8</span> Exemplo passo a passo de ganho de informação</a></li>
+  <li><a href="#exemplo-comparativo-entre-dois-atributos" id="toc-exemplo-comparativo-entre-dois-atributos" class="nav-link" data-scroll-target="#exemplo-comparativo-entre-dois-atributos"><span class="header-section-number">3.9</span> Exemplo comparativo entre dois atributos</a></li>
+  <li><a href="#exemplo-detalhado-de-gini" id="toc-exemplo-detalhado-de-gini" class="nav-link" data-scroll-target="#exemplo-detalhado-de-gini"><span class="header-section-number">3.10</span> Exemplo detalhado de Gini</a></li>
+  <li><a href="#entropia-ou-gini" id="toc-entropia-ou-gini" class="nav-link" data-scroll-target="#entropia-ou-gini"><span class="header-section-number">3.11</span> Entropia ou Gini?</a></li>
+  <li><a href="#atributos-categóricos-e-numéricos" id="toc-atributos-categóricos-e-numéricos" class="nav-link" data-scroll-target="#atributos-categóricos-e-numéricos"><span class="header-section-number">3.12</span> Atributos categóricos e numéricos</a></li>
+  <li><a href="#por-que-a-escolha-é-gulosa" id="toc-por-que-a-escolha-é-gulosa" class="nav-link" data-scroll-target="#por-que-a-escolha-é-gulosa"><span class="header-section-number">3.13</span> Por que a escolha é gulosa</a></li>
+  <li><a href="#quando-um-atributo-aparentemente-bom-engana" id="toc-quando-um-atributo-aparentemente-bom-engana" class="nav-link" data-scroll-target="#quando-um-atributo-aparentemente-bom-engana"><span class="header-section-number">3.14</span> Quando um atributo aparentemente bom engana</a></li>
+  <li><a href="#critérios-em-regressão" id="toc-critérios-em-regressão" class="nav-link" data-scroll-target="#critérios-em-regressão"><span class="header-section-number">3.15</span> Critérios em regressão</a></li>
+  <li><a href="#hiperparâmetros-ligados-a-divisão" id="toc-hiperparâmetros-ligados-a-divisão" class="nav-link" data-scroll-target="#hiperparâmetros-ligados-a-divisão"><span class="header-section-number">3.16</span> Hiperparâmetros ligados a divisão</a></li>
+  <li><a href="#resumo-do-capítulo" id="toc-resumo-do-capítulo" class="nav-link" data-scroll-target="#resumo-do-capítulo"><span class="header-section-number">3.17</span> Resumo do capítulo</a></li>
+  <li><a href="#erros-comuns" id="toc-erros-comuns" class="nav-link" data-scroll-target="#erros-comuns"><span class="header-section-number">3.18</span> Erros comuns</a></li>
+  <li><a href="#perguntas-de-revisão" id="toc-perguntas-de-revisão" class="nav-link" data-scroll-target="#perguntas-de-revisão"><span class="header-section-number">3.19</span> Perguntas de revisão</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Critérios de Divisão</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Uma árvore de decisão não escolhe perguntas ao acaso. Em cada nó, ela procura o teste que melhor organiza os dados locais. Essa escolha depende de um critério de divisão, isto é, de uma medida numérica que avalia o quanto uma partição melhora a separação entre as classes ou reduz o erro.</p>
+<section id="objetivos-do-capítulo" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="objetivos-do-capítulo"><span class="header-section-number">3.1</span> Objetivos do capítulo</h2>
+<p>Ao final desta leitura, o leitor deve ser capaz de:</p>
+<ul>
+<li>explicar o que significa pureza e impureza em um nó;</li>
+<li>calcular entropia e impureza Gini em exemplos simples;</li>
+<li>interpretar ganho de informação como redução de incerteza;</li>
+<li>entender por que um atributo pode ser escolhido na raiz;</li>
+<li>reconhecer os limites práticos de uma escolha gulosa.</li>
+</ul>
+</section>
+<section id="o-problema-que-o-critério-resolve" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="o-problema-que-o-critério-resolve"><span class="header-section-number">3.2</span> O problema que o critério resolve</h2>
+<p>Suponha um conjunto com exemplos das classes <code>A</code> e <code>B</code>. Se o nó atual possui exemplos muito misturados, a incerteza sobre a classe correta é alta. O objetivo do algoritmo é encontrar uma divisão que gere filhos mais homogêneos.</p>
+<p>Em outras palavras, a pergunta ideal é aquela que reduz a desordem do conjunto.</p>
+</section>
+<section id="pureza-e-impureza" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="pureza-e-impureza"><span class="header-section-number">3.3</span> Pureza e impureza</h2>
+<p>Um nó puro contém exemplos de uma única classe. Um nó impuro contém classes misturadas.</p>
+<p>Exemplos:</p>
+<ul>
+<li><code>10 A e 0 B</code>: nó totalmente puro;</li>
+<li><code>9 A e 1 B</code>: nó bastante puro;</li>
+<li><code>6 A e 4 B</code>: nó moderadamente impuro;</li>
+<li><code>5 A e 5 B</code>: nó altamente impuro.</li>
+</ul>
+<p>A árvore prefere testes que levem de um nó impuro para filhos mais puros.</p>
+</section>
+<section id="entropia" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="entropia"><span class="header-section-number">3.4</span> Entropia</h2>
+<p>A entropia vem da teoria da informação e mede a incerteza associada a uma distribuição de classes.</p>
+<p>Para classificação binária:</p>
+<p><span class="math display">\[
+H(S) = -p_+ \log_2(p_+) - p_- \log_2(p_-)
+\]</span></p>
+<p>onde:</p>
+<ul>
+<li><p><code>p_+</code> é a proporção de exemplos positivos;</p></li>
+<li><p><code>p_-</code> é a proporção de exemplos negativos.</p></li>
+<li><p>Interpretação intuitiva</p></li>
+<li><p>Se todos os exemplos pertencem à mesma classe, a entropia é <code>0</code>.</p></li>
+<li><p>Se as classes estão equilibradas, a entropia é máxima.</p></li>
+<li><p>Quanto maior a entropia, maior a incerteza sobre a classe de um exemplo escolhido ao acaso.</p></li>
+</ul>
+</section>
+<section id="tabela-intuitiva-de-entropia" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="tabela-intuitiva-de-entropia"><span class="header-section-number">3.5</span> Tabela intuitiva de entropia</h2>
+<p>Antes de calcular um caso completo, vale entender a intuição da medida.</p>
+<p>Entropia responde a esta pergunta: <strong>quanto de incerteza existe sobre a classe de um exemplo escolhido ao acaso?</strong></p>
+<ul>
+<li>quando o nó está concentrado em uma classe, a incerteza é baixa;</li>
+<li>quando o nó está equilibrado entre classes, a incerteza é alta.</li>
+</ul>
+<p>No caso binário, o máximo ocorre em <code>50/50</code>.</p>
+<div id="b3e5eda8" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> entropia_binaria(p):</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> p <span class="kw">in</span> (<span class="dv">0</span>, <span class="dv">1</span>):</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="fl">0.0</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="op">-</span>(p <span class="op">*</span> math.log2(p) <span class="op">+</span> (<span class="dv">1</span> <span class="op">-</span> p) <span class="op">*</span> math.log2(<span class="dv">1</span> <span class="op">-</span> p))</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> positivos, total <span class="kw">in</span> [(<span class="dv">10</span>, <span class="dv">10</span>), (<span class="dv">9</span>, <span class="dv">10</span>), (<span class="dv">8</span>, <span class="dv">10</span>), (<span class="dv">7</span>, <span class="dv">10</span>), (<span class="dv">6</span>, <span class="dv">10</span>), (<span class="dv">5</span>, <span class="dv">10</span>)]:</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    p <span class="op">=</span> positivos <span class="op">/</span> total</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>positivos<span class="sc">}</span><span class="ss">/</span><span class="sc">{</span>total<span class="sc">}</span><span class="ss"> positivos -&gt; entropia = </span><span class="sc">{</span>entropia_binaria(p)<span class="sc">:.3f}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<pre class="{text}"><code>10/10 positivos -&gt; entropia = 0.000
+9/10 positivos -&gt; entropia = 0.469
+8/10 positivos -&gt; entropia = 0.722
+7/10 positivos -&gt; entropia = 0.881
+6/10 positivos -&gt; entropia = 0.971
+5/10 positivos -&gt; entropia = 1.000</code></pre>
+<p>Como ler a tabela</p>
+<ul>
+<li><code>10/10</code>: certeza total sobre a classe, entropia <code>0.000</code>;</li>
+<li><code>9/10</code>: ainda é fácil prever, então a entropia permanece baixa (<code>0.469</code>);</li>
+<li><code>8/10</code> e <code>7/10</code>: a mistura aumenta e a entropia sobe;</li>
+<li><code>6/10</code>: já estamos perto do equilíbrio, incerteza alta (<code>0.971</code>);</li>
+<li><code>5/10</code>: equilíbrio perfeito, incerteza máxima no cenário binário (<code>1.000</code>).</li>
+</ul>
+<p>Essa progressão mostra a lógica da árvore de decisão: boas divisões são as que afastam os filhos de <code>50/50</code>, deixando-os mais puros. Quando isso acontece, a entropia média após a divisão cai, e o ganho de informação aumenta.</p>
+</section>
+<section id="exemplo-numérico-detalhado-de-entropia" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="exemplo-numérico-detalhado-de-entropia"><span class="header-section-number">3.6</span> Exemplo numérico detalhado de entropia</h2>
+<p>Suponha um nó com 14 exemplos, sendo 9 positivos e 5 negativos.</p>
+<p><span class="math display">\[
+p_+ = 9/14 \approx 0{,}643
+\]</span></p>
+<p><span class="math display">\[
+p_- = 5/14 \approx 0{,}357
+\]</span></p>
+<p>Substituindo na fórmula:</p>
+<p><span class="math display">\[
+H(S) = -(0{,}643 \cdot \log_2 0{,}643 + 0{,}357 \cdot \log_2 0{,}357)
+\]</span></p>
+<p>O resultado é aproximadamente <code>0.940</code>.</p>
+<div id="582c6cd6" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>p_pos <span class="op">=</span> <span class="dv">9</span> <span class="op">/</span> <span class="dv">14</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>p_neg <span class="op">=</span> <span class="dv">5</span> <span class="op">/</span> <span class="dv">14</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>entropia <span class="op">=</span> <span class="op">-</span>(p_pos <span class="op">*</span> math.log2(p_pos) <span class="op">+</span> p_neg <span class="op">*</span> math.log2(p_neg))</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">round</span>(entropia, <span class="dv">3</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<pre class="{text}"><code>0.94</code></pre>
+<p>Esse valor indica que o conjunto ainda possui mistura relevante entre classes. Não está no máximo de incerteza, mas tampouco está próximo da pureza total.</p>
+</section>
+<section id="ganho-de-informação" class="level2" data-number="3.7">
+<h2 data-number="3.7" class="anchored" data-anchor-id="ganho-de-informação"><span class="header-section-number">3.7</span> Ganho de informação</h2>
+<p>O ganho de informação mede a redução esperada na entropia depois da divisão por um atributo.</p>
+<p><span class="math display">\[
+Ganho(S, A) = H(S) - \sum_{v \in Valores(A)} \frac{|S_v|}{|S|} H(S_v)
+\]</span></p>
+<p>A lógica é direta:</p>
+<ul>
+<li>calculamos a entropia antes da divisão;</li>
+<li>calculamos a média ponderada das entropias dos filhos;</li>
+<li>subtraímos os dois valores.</li>
+</ul>
+<p>Quanto maior o ganho, melhor foi a divisão.</p>
+</section>
+<section id="exemplo-passo-a-passo-de-ganho-de-informação" class="level2" data-number="3.8">
+<h2 data-number="3.8" class="anchored" data-anchor-id="exemplo-passo-a-passo-de-ganho-de-informação"><span class="header-section-number">3.8</span> Exemplo passo a passo de ganho de informação</h2>
+<p>Considere novamente o conjunto com 14 exemplos (<code>9 positivos</code>, <code>5 negativos</code>). Suponha que um atributo particione esse conjunto em dois filhos:</p>
+<ul>
+<li><p>Filho 1: <code>6 positivos</code> e <code>2 negativos</code>;</p></li>
+<li><p>Filho 2: <code>3 positivos</code> e <code>3 negativos</code>.</p></li>
+<li><p>Entropia do nó pai</p></li>
+</ul>
+<p>Já vimos que:</p>
+<p><span class="math display">\[
+H(S) \approx 0.940
+\]</span></p>
+<p>Entropia do Filho 1</p>
+<p><span class="math display">\[
+H(S_1) = -(6/8)\log_2(6/8) - (2/8)\log_2(2/8)
+\]</span></p>
+<p>Entropia do Filho 2</p>
+<p><span class="math display">\[
+H(S_2) = -(3/6)\log_2(3/6) - (3/6)\log_2(3/6) = 1.0
+\]</span></p>
+<p>Média ponderada após a divisão</p>
+<p><span class="math display">\[
+H_{após} = (8/14)H(S_1) + (6/14)H(S_2)
+\]</span></p>
+<p>Ganho</p>
+<p><span class="math display">\[
+Ganho = H(S) - H_{após}
+\]</span></p>
+<div id="ab5ba722" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> entropia(pos, neg):</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    total <span class="op">=</span> pos <span class="op">+</span> neg</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> pos <span class="op">==</span> <span class="dv">0</span> <span class="kw">or</span> neg <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="fl">0.0</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    p_pos <span class="op">=</span> pos <span class="op">/</span> total</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    p_neg <span class="op">=</span> neg <span class="op">/</span> total</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="op">-</span>(p_pos <span class="op">*</span> math.log2(p_pos) <span class="op">+</span> p_neg <span class="op">*</span> math.log2(p_neg))</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>pai <span class="op">=</span> entropia(<span class="dv">9</span>, <span class="dv">5</span>)</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>filho_1 <span class="op">=</span> entropia(<span class="dv">6</span>, <span class="dv">2</span>)</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>filho_2 <span class="op">=</span> entropia(<span class="dv">3</span>, <span class="dv">3</span>)</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>entropia_após <span class="op">=</span> (<span class="dv">8</span><span class="op">/</span><span class="dv">14</span>) <span class="op">*</span> filho_1 <span class="op">+</span> (<span class="dv">6</span><span class="op">/</span><span class="dv">14</span>) <span class="op">*</span> filho_2</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>ganho <span class="op">=</span> pai <span class="op">-</span> entropia_após</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Entropia pai:"</span>, <span class="bu">round</span>(pai, <span class="dv">3</span>))</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Entropia filho 1:"</span>, <span class="bu">round</span>(filho_1, <span class="dv">3</span>))</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Entropia filho 2:"</span>, <span class="bu">round</span>(filho_2, <span class="dv">3</span>))</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Entropia após divisão:"</span>, <span class="bu">round</span>(entropia_após, <span class="dv">3</span>))</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Ganho de informação:"</span>, <span class="bu">round</span>(ganho, <span class="dv">3</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<pre class="{text}"><code>Entropia pai: 0.94
+Entropia filho 1: 0.811
+Entropia filho 2: 1.0
+Entropia após divisão: 0.892
+Ganho de informação: 0.048</code></pre>
+<ul>
+<li>Interpretação do resultado</li>
+</ul>
+<p>O ganho será positivo porque a divisão produziu pelo menos um subconjunto mais organizado do que o conjunto original. Se compararmos vários atributos, a árvore tende a escolher aquele com maior ganho.</p>
+</section>
+<section id="exemplo-comparativo-entre-dois-atributos" class="level2" data-number="3.9">
+<h2 data-number="3.9" class="anchored" data-anchor-id="exemplo-comparativo-entre-dois-atributos"><span class="header-section-number">3.9</span> Exemplo comparativo entre dois atributos</h2>
+<p>Imagine dois atributos candidatos no mesmo nó pai.</p>
+<ul>
+<li>Atributo <code>A</code>: gera filhos <code>(6+, 2-)</code> e <code>(3+, 3-)</code>.</li>
+<li>Atributo <code>B</code>: gera filhos <code>(4+, 1-)</code> e <code>(5+, 4-)</code>.</li>
+</ul>
+<p>Embora ambos reduzam alguma incerteza, <code>A</code> pode produzir ganho maior se separar melhor as classes. Esse tipo de comparação é exatamente o que o algoritmo faz em cada etapa.</p>
+<div id="8b708b7c" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> ganho_informacao(pai_pos, pai_neg, filhos):</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    total <span class="op">=</span> pai_pos <span class="op">+</span> pai_neg</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    entropia_pai <span class="op">=</span> entropia(pai_pos, pai_neg)</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    entropia_filhos <span class="op">=</span> <span class="fl">0.0</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> pos, neg <span class="kw">in</span> filhos:</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>        subtotal <span class="op">=</span> pos <span class="op">+</span> neg</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>        entropia_filhos <span class="op">+=</span> (subtotal <span class="op">/</span> total) <span class="op">*</span> entropia(pos, neg)</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> entropia_pai <span class="op">-</span> entropia_filhos</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Ganho atributo A:"</span>, <span class="bu">round</span>(ganho_informacao(<span class="dv">9</span>, <span class="dv">5</span>, [(<span class="dv">6</span>, <span class="dv">2</span>), (<span class="dv">3</span>, <span class="dv">3</span>)]), <span class="dv">3</span>))</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Ganho atributo B:"</span>, <span class="bu">round</span>(ganho_informacao(<span class="dv">9</span>, <span class="dv">5</span>, [(<span class="dv">4</span>, <span class="dv">1</span>), (<span class="dv">5</span>, <span class="dv">4</span>)]), <span class="dv">3</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Ganho atributo A: 0.048 Ganho atributo B: 0.045</p>
+<pre><code>
+## Exemplo conceitual com o problema do tênis
+
+Nos exemplos clássicos de indução, pergunta-se: qual atributo deve ir para a raiz? Se um atributo separa o conjunto em subconjuntos quase puros, ele tende a produzir alto ganho de informação. Por isso o ID3 adota esse critério para construir a árvore de maneira gulosa.
+
+## Impureza Gini
+
+Outro critério muito usado é a impureza Gini.
+
+$$
+Gini(S) = 1 - \sum_i p_i^2
+$$
+
+Em classificação binária:
+
+$$
+Gini(S) = 1 - (p_+^2 + p_-^2)
+$$
+
+- Interpretação
+
+- `Gini = 0` indica pureza total;
+- valores maiores indicam maior mistura entre classes;
+- na prática, é um critério extremamente popular por ser eficiente e funcionar muito bem.
+
+## Tabela intuitiva de Gini
+
+::: {#e8dbef55 .cell}
+``` {.python .cell-code}
+def gini_binario(p):
+    return 1 - (p**2 + (1 - p)**2)
+
+for positivos, total in [(10, 10), (9, 10), (8, 10), (7, 10), (6, 10), (5, 10)]:
+    p = positivos / total
+    print(f"{positivos}/{total} positivos -&gt; gini = {gini_binario(p):.3f}")</code></pre>
+<p>:::</p>
+<p>Observe que a lógica geral é a mesma da entropia: o valor cresce conforme o nó se aproxima de uma divisão equilibrada entre classes.</p>
+</section>
+<section id="exemplo-detalhado-de-gini" class="level2" data-number="3.10">
+<h2 data-number="3.10" class="anchored" data-anchor-id="exemplo-detalhado-de-gini"><span class="header-section-number">3.10</span> Exemplo detalhado de Gini</h2>
+<p>Considere 10 amostras: 6 da classe A e 4 da classe B.</p>
+<p><span class="math display">\[
+Gini = 1 - (0{,}6^2 + 0{,}4^2) = 1 - (0{,}36 + 0{,}16) = 0{,}48
+\]</span></p>
+<p>Agora compare com um nó mais puro: 9 da classe A e 1 da classe B.</p>
+<p><span class="math display">\[
+Gini = 1 - (0{,}9^2 + 0{,}1^2) = 1 - (0{,}81 + 0{,}01) = 0{,}18
+\]</span></p>
+<div id="adcc152b" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>p_a <span class="op">=</span> <span class="dv">6</span> <span class="op">/</span> <span class="dv">10</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>p_b <span class="op">=</span> <span class="dv">4</span> <span class="op">/</span> <span class="dv">10</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>gini <span class="op">=</span> <span class="dv">1</span> <span class="op">-</span> (p_a<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> p_b<span class="op">**</span><span class="dv">2</span>)</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">round</span>(gini, <span class="dv">3</span>))</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>p_a <span class="op">=</span> <span class="dv">9</span> <span class="op">/</span> <span class="dv">10</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>p_b <span class="op">=</span> <span class="dv">1</span> <span class="op">/</span> <span class="dv">10</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>gini <span class="op">=</span> <span class="dv">1</span> <span class="op">-</span> (p_a<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> p_b<span class="op">**</span><span class="dv">2</span>)</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">round</span>(gini, <span class="dv">3</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>No segundo caso, o valor cai porque o nó está mais puro.</p>
+</section>
+<section id="entropia-ou-gini" class="level2" data-number="3.11">
+<h2 data-number="3.11" class="anchored" data-anchor-id="entropia-ou-gini"><span class="header-section-number">3.11</span> Entropia ou Gini?</h2>
+<p>Na prática, as duas medidas costumam produzir resultados parecidos. As diferenças principais são:</p>
+<ul>
+<li>entropia tem interpretação mais ligada à informação;</li>
+<li>Gini costuma ser computacionalmente simples e muito usado por padrão;</li>
+<li>pequenas mudanças na árvore podem ocorrer dependendo do critério escolhido.</li>
+</ul>
+<p>No <code>scikit-learn</code>, classificação aceita critérios como <code>gini</code>, <code>entropy</code> e <code>log_loss</code>.</p>
+</section>
+<section id="atributos-categóricos-e-numéricos" class="level2" data-number="3.12">
+<h2 data-number="3.12" class="anchored" data-anchor-id="atributos-categóricos-e-numéricos"><span class="header-section-number">3.12</span> Atributos categóricos e numéricos</h2>
+<p>Em problemas reais, nem sempre o atributo é categórico simples. Variáveis numéricas exigem encontrar um ponto de corte.</p>
+<p>Exemplo:</p>
+<ul>
+<li><code>idade &lt;= 35.5</code></li>
+<li><code>renda &lt;= 4200</code></li>
+<li><code>tempo_cliente &lt;= 18.5</code></li>
+</ul>
+<p>O algoritmo testa candidatos a corte e escolhe o que produz a melhor redução de impureza.</p>
+</section>
+<section id="por-que-a-escolha-é-gulosa" class="level2" data-number="3.13">
+<h2 data-number="3.13" class="anchored" data-anchor-id="por-que-a-escolha-é-gulosa"><span class="header-section-number">3.13</span> Por que a escolha é gulosa</h2>
+<p>Algoritmos clássicos de árvore, como ID3 e CART, fazem escolhas locais. Em cada nó, escolhem o melhor atributo naquele momento. Eles não exploram exaustivamente todas as árvores possíveis, porque isso seria computacionalmente inviável.</p>
+<p>Essa estratégia gulosa funciona muito bem na prática, mas também explica por que uma pequena alteração nos dados pode mudar a estrutura da árvore.</p>
+</section>
+<section id="quando-um-atributo-aparentemente-bom-engana" class="level2" data-number="3.14">
+<h2 data-number="3.14" class="anchored" data-anchor-id="quando-um-atributo-aparentemente-bom-engana"><span class="header-section-number">3.14</span> Quando um atributo aparentemente bom engana</h2>
+<p>Um ponto importante da teoria clássica é que alguns atributos podem parecer bons por criarem muitas partições pequenas. Isso pode gerar ganho elevado no treino, mas baixa generalização. Por isso, a escolha do critério deve ser acompanhada por mecanismos de controle de complexidade, como profundidade máxima e poda.</p>
+</section>
+<section id="critérios-em-regressão" class="level2" data-number="3.15">
+<h2 data-number="3.15" class="anchored" data-anchor-id="critérios-em-regressão"><span class="header-section-number">3.15</span> Critérios em regressão</h2>
+<p>Quando a saída é numérica, o problema muda. Em vez de reduzir mistura de classes, queremos reduzir dispersão dos valores do alvo.</p>
+<p>Critérios comuns incluem:</p>
+<ul>
+<li>redução da variância;</li>
+<li>erro quadrático médio;</li>
+<li>erro absoluto em algumas variantes.</li>
+</ul>
+<p>A ideia continua a mesma: separar os dados em grupos mais coerentes internamente.</p>
+</section>
+<section id="hiperparâmetros-ligados-a-divisão" class="level2" data-number="3.16">
+<h2 data-number="3.16" class="anchored" data-anchor-id="hiperparâmetros-ligados-a-divisão"><span class="header-section-number">3.16</span> Hiperparâmetros ligados a divisão</h2>
+<p>Os principais controles no <code>scikit-learn</code> são:</p>
+<ul>
+<li><code>criterion</code>: define a medida usada no nó;</li>
+<li><code>splitter</code>: geralmente <code>best</code> ou <code>random</code>;</li>
+<li><code>max_depth</code>: limita profundidade;</li>
+<li><code>min_samples_split</code>: mínimo de exemplos para tentar dividir;</li>
+<li><code>min_samples_leaf</code>: mínimo de exemplos por folha;</li>
+<li><code>max_leaf_nodes</code>: limita número total de folhas;</li>
+<li><code>min_impurity_decrease</code>: exige ganho mínimo para aceitar divisão.</li>
+</ul>
+</section>
+<section id="resumo-do-capítulo" class="level2" data-number="3.17">
+<h2 data-number="3.17" class="anchored" data-anchor-id="resumo-do-capítulo"><span class="header-section-number">3.17</span> Resumo do capítulo</h2>
+<p>Toda divisão em uma árvore de decisão tenta responder à mesma pergunta: “qual teste organiza melhor os dados neste ponto?”. Entropia, ganho de informação e Gini são formas matemáticas de transformar essa intuição em algoritmo.</p>
+</section>
+<section id="erros-comuns" class="level2" data-number="3.18">
+<h2 data-number="3.18" class="anchored" data-anchor-id="erros-comuns"><span class="header-section-number">3.18</span> Erros comuns</h2>
+<ul>
+<li>calcular entropia sem ponderar corretamente o tamanho dos filhos;</li>
+<li>comparar divisões olhando apenas um subconjunto e não o ganho total;</li>
+<li>esquecer que atributos com muitos valores podem parecer bons no treino;</li>
+<li>tratar Gini e entropia como se um sempre fosse superior ao outro.</li>
+</ul>
+</section>
+<section id="perguntas-de-revisão" class="level2" data-number="3.19">
+<h2 data-number="3.19" class="anchored" data-anchor-id="perguntas-de-revisão"><span class="header-section-number">3.19</span> Perguntas de revisão</h2>
+<ol type="1">
+<li>O que significa um nó puro?</li>
+<li>Como a entropia varia entre um nó puro e um nó equilibrado?</li>
+<li>O que o ganho de informação mede exatamente?</li>
+<li>Qual a intuição por trás da impureza Gini?</li>
+<li>Por que a escolha local do melhor atributo é chamada de gulosa?</li>
+</ol>
+
+
+</section>
+
+</main> <!-- /main -->
+﻿<script>
+document.addEventListener("DOMContentLoaded", function () {
+  function isTypingTarget(element) {
+    if (!element) {
+      return false;
+    }
+
+    const tagName = element.tagName;
+    return (
+      element.isContentEditable ||
+      tagName === "INPUT" ||
+      tagName === "TEXTAREA" ||
+      tagName === "SELECT"
+    );
+  }
+
+  document.addEventListener("keydown", function (event) {
+    if (event.defaultPrevented || event.altKey || event.ctrlKey || event.metaKey) {
+      return;
+    }
+
+    if (isTypingTarget(document.activeElement)) {
+      return;
+    }
+
+    const relation = event.key === "ArrowLeft"
+      ? "prev"
+      : event.key === "ArrowRight"
+        ? "next"
+        : null;
+
+    if (!relation) {
+      return;
+    }
+
+    const link = document.querySelector('link[rel="' + relation + '"]');
+    if (link && link.href) {
+      window.location.href = link.href;
+    }
+  });
+});
+</script>
+
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/giseldo\.github\.io\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../section/01-fundamentos.html" class="pagination-link" aria-label="Fundamentos de Árvore de Decisão">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Fundamentos de Árvore de Decisão</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../section/03-primeiro-modelo.html" class="pagination-link" aria-label="Primeiro Modelo em Python">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Primeiro Modelo em Python</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Este livro foi escrito por Giseldo Neo.</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Todos os direitos reservados, proibida a reprodução.</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

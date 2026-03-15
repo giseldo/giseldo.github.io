@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>2&nbsp; Fundamentos de Árvore de Decisão – Árvore de Decisão Teoria e Prática com Python</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../section/02-criterios-divisao.html" rel="next">
+<link href="../index.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-d9ea66fcd6c317012447f26e9c021348.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+
+
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../section/01-fundamentos.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Fundamentos de Árvore de Decisão</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Árvore de Decisão Teoria e Prática com Python</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Árvore de Decisão Teoria e Prática com Python</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../section/01-fundamentos.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Fundamentos de Árvore de Decisão</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../section/02-criterios-divisao.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Critérios de Divisão</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../section/03-primeiro-modelo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Primeiro Modelo em Python</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../section/04-avaliacao-ajuste.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Avaliação e Ajuste</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../section/05-poda-overfitting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Poda e Overfitting</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../section/06-classificacao-regressao.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classificação e Regressão</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../section/07-estudo-caso.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Estudo de Caso Completo</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../section/08-exercicios.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Exercícios Práticos</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../section/09-id3-c45-cart.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">ID3, C4.5 e CART</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../section/10-interpretacao-regras.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Interpretação de Regras e Importância de Atributos</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../section/11-arvore-vs-random-forest.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Árvore de Decisão versus Random Forest e Ensembles</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../section/12-glossario.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Glossário Técnico</span></span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#o-que-é-uma-árvore-de-decisão" id="toc-o-que-é-uma-árvore-de-decisão" class="nav-link active" data-scroll-target="#o-que-é-uma-árvore-de-decisão"><span class="header-section-number">2.1</span> O que é uma árvore de decisão</a></li>
+  <li><a href="#intuição-com-um-problema-simples" id="toc-intuição-com-um-problema-simples" class="nav-link" data-scroll-target="#intuição-com-um-problema-simples"><span class="header-section-number">2.2</span> Intuição com um problema simples</a></li>
+  <li><a href="#componentes-da-árvore" id="toc-componentes-da-árvore" class="nav-link" data-scroll-target="#componentes-da-árvore"><span class="header-section-number">2.3</span> Componentes da árvore</a></li>
+  <li><a href="#como-uma-instância-percorre-a-árvore" id="toc-como-uma-instância-percorre-a-árvore" class="nav-link" data-scroll-target="#como-uma-instância-percorre-a-árvore"><span class="header-section-number">2.4</span> Como uma instância percorre a árvore</a></li>
+  <li><a href="#representação-como-regras-simbólicas" id="toc-representação-como-regras-simbólicas" class="nav-link" data-scroll-target="#representação-como-regras-simbólicas"><span class="header-section-number">2.5</span> Representação como regras simbólicas</a></li>
+  <li><a href="#por-que-árvores-são-tão-populares" id="toc-por-que-árvores-são-tão-populares" class="nav-link" data-scroll-target="#por-que-árvores-são-tão-populares"><span class="header-section-number">2.6</span> Por que árvores são tão populares</a></li>
+  <li><a href="#tipos-de-problema-em-que-costumam-funcionar-bem" id="toc-tipos-de-problema-em-que-costumam-funcionar-bem" class="nav-link" data-scroll-target="#tipos-de-problema-em-que-costumam-funcionar-bem"><span class="header-section-number">2.7</span> Tipos de problema em que costumam funcionar bem</a></li>
+  <li><a href="#vantagens" id="toc-vantagens" class="nav-link" data-scroll-target="#vantagens"><span class="header-section-number">2.8</span> Vantagens</a></li>
+  <li><a href="#limitações" id="toc-limitações" class="nav-link" data-scroll-target="#limitações"><span class="header-section-number">2.9</span> Limitações</a></li>
+  <li><a href="#o-princípio-da-árvore-pequena" id="toc-o-princípio-da-árvore-pequena" class="nav-link" data-scroll-target="#o-princípio-da-árvore-pequena"><span class="header-section-number">2.10</span> O princípio da árvore pequena</a></li>
+  <li><a href="#exemplo-intuitivo-de-separação-progressiva" id="toc-exemplo-intuitivo-de-separação-progressiva" class="nav-link" data-scroll-target="#exemplo-intuitivo-de-separação-progressiva"><span class="header-section-number">2.11</span> Exemplo intuitivo de separação progressiva</a></li>
+  <li><a href="#árvore-como-modelo-e-como-ferramenta-de-análise" id="toc-árvore-como-modelo-e-como-ferramenta-de-análise" class="nav-link" data-scroll-target="#árvore-como-modelo-e-como-ferramenta-de-análise"><span class="header-section-number">2.12</span> Árvore como modelo e como ferramenta de análise</a></li>
+  <li><a href="#fechamento-do-capítulo" id="toc-fechamento-do-capítulo" class="nav-link" data-scroll-target="#fechamento-do-capítulo"><span class="header-section-number">2.13</span> Fechamento do capítulo</a></li>
+  <li><a href="#resumo-do-capítulo" id="toc-resumo-do-capítulo" class="nav-link" data-scroll-target="#resumo-do-capítulo"><span class="header-section-number">2.14</span> Resumo do capítulo</a></li>
+  <li><a href="#erros-comuns" id="toc-erros-comuns" class="nav-link" data-scroll-target="#erros-comuns"><span class="header-section-number">2.15</span> Erros comuns</a></li>
+  <li><a href="#perguntas-de-revisão" id="toc-perguntas-de-revisão" class="nav-link" data-scroll-target="#perguntas-de-revisão"><span class="header-section-number">2.16</span> Perguntas de revisão</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Fundamentos de Árvore de Decisão</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Árvores de decisão estão entre os modelos mais didáticos de aprendizado supervisionado. Elas aprendem regras do tipo “se… então…” a partir de dados rotulados e organizam essas regras em uma estrutura hierárquica formada por perguntas sucessivas.</p>
+<p>A grande vantagem pedagógica desse modelo é que ele permite enxergar com relativa clareza o caminho que levou a uma previsão. Em vez de parecer uma caixa-preta, a árvore explicita quais atributos foram usados, em que ordem eles foram testados e por que determinados grupos foram separados.</p>
+<section id="o-que-é-uma-árvore-de-decisão" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="o-que-é-uma-árvore-de-decisão"><span class="header-section-number">2.1</span> O que é uma árvore de decisão</h2>
+<p>Uma árvore de decisão recebe exemplos descritos por atributos e produz uma saída. Em problemas de classificação, a saída é uma classe, como <code>aprovar</code> ou <code>reprovar</code>, <code>fraude</code> ou <code>não fraude</code>, <code>doente</code> ou <code>saudável</code>. Em problemas de regressão, a saída é um valor numérico, como preço, demanda ou tempo.</p>
+<p>A ideia central é simples:</p>
+<ul>
+<li>começamos com todos os exemplos em um único conjunto;</li>
+<li>escolhemos a pergunta que melhor separa esse conjunto;</li>
+<li>dividimos os dados em subconjuntos menores;</li>
+<li>repetimos o processo recursivamente até que os grupos fiquem suficientemente homogêneos.</li>
+</ul>
+<p>A árvore nasce pela raiz, cresce em direção às folhas e, a cada etapa, busca um teste que reduza a mistura de classes nos subconjuntos gerados.</p>
+</section>
+<section id="intuição-com-um-problema-simples" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="intuição-com-um-problema-simples"><span class="header-section-number">2.2</span> Intuição com um problema simples</h2>
+<p>Imagine um sistema de análise de crédito. Cada cliente possui atributos como renda, histórico de inadimplência, tempo de emprego e comprometimento de renda. Uma árvore pode aprender algo como:</p>
+<pre class="{text}"><code>Histórico de inadimplência = sim?
+├── Sim: Negar crédito
+└── Não: Renda mensal &gt; 4000?
+    ├── Não: Analisar com cautela
+    └── Sim: Tempo de emprego &gt; 2 anos?
+        ├── Sim: Aprovar crédito
+        └── Não: Solicitar garantias</code></pre>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Histórico de inadimplência = sim?] --&gt;|Sim| B[Negar crédito]
+    A --&gt;|Não| C[Renda mensal &gt; 4000?]
+    C --&gt;|Não| D[Analisar com cautela]
+    C --&gt;|Sim| E[Tempo de emprego &gt; 2 anos?]
+    E --&gt;|Sim| F[Aprovar crédito]
+    E --&gt;|Não| G[Solicitar garantias]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>Esse tipo de estrutura aproxima muito o modelo do raciocínio humano. As árvores podem ser apresentadas como sequências de perguntas, ou como os atributos do conjunto de dados. Cada pergunta reduz a incerteza sobre a classe correta.</p>
+</section>
+<section id="componentes-da-árvore" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="componentes-da-árvore"><span class="header-section-number">2.3</span> Componentes da árvore</h2>
+<p>Uma árvore possui três elementos fundamentais.</p>
+<ul>
+<li>Nó raiz</li>
+</ul>
+<p>É o primeiro teste realizado. Em geral, corresponde ao atributo que mais ajuda a separar os dados logo no início.</p>
+<ul>
+<li>Nós internos</li>
+</ul>
+<p>São testes intermediários. Cada nó interno recebe um subconjunto de exemplos e decide qual nova pergunta deve ser feita naquele ponto.</p>
+<ul>
+<li>Folhas</li>
+</ul>
+<p>São as respostas finais. Em classificação, a folha guarda a classe prevista. Em regressão, guarda um valor médio ou representativo do grupo.</p>
+</section>
+<section id="como-uma-instância-percorre-a-árvore" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="como-uma-instância-percorre-a-árvore"><span class="header-section-number">2.4</span> Como uma instância percorre a árvore</h2>
+<p>Classificar um novo exemplo significa descer pela árvore.</p>
+<ol type="1">
+<li>O processo começa no nó raiz.</li>
+<li>O valor do atributo correspondente é observado.</li>
+<li>O exemplo segue pelo ramo compatível com esse valor.</li>
+<li>O processo continua até chegar a uma folha.</li>
+</ol>
+<p>Se uma instância chega a uma folha com rótulo <code>sim</code>, então a previsão final é <code>sim</code>. Se chegar a uma folha com valor numérico, esse valor se torna a previsão.</p>
+<p>Essa interpretação operacional é importante porque mostra que uma árvore é, ao mesmo tempo, um modelo de previsão e um conjunto de regras executáveis.</p>
+</section>
+<section id="representação-como-regras-simbólicas" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="representação-como-regras-simbólicas"><span class="header-section-number">2.5</span> Representação como regras simbólicas</h2>
+<p>Um ponto muito forte das árvores de decisão é sua equivalência com regras lógicas. Cada caminho da raiz até uma folha pode ser lido como uma conjunção de condições. O conjunto de caminhos pode ser visto como uma disjunção dessas conjunções.</p>
+<p>Exemplo:</p>
+<pre class="text"><code>Se perspectiva = ensolarado e umidade = normal, então jogar = sim
+Se perspectiva = nublado, então jogar = sim
+Se perspectiva = chuvoso e vento = fraco, então jogar = sim</code></pre>
+<p>Isso ajuda bastante em domínios nos quais explicabilidade importa, como crédito, saúde, auditoria, diagnóstico e sistemas especialistas.</p>
+</section>
+<section id="por-que-árvores-são-tão-populares" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="por-que-árvores-são-tão-populares"><span class="header-section-number">2.6</span> Por que árvores são tão populares</h2>
+<p>Árvores de decisão ficaram famosas por várias razões práticas.</p>
+<ul>
+<li>São fáceis de entender e explicar.</li>
+<li>Exigem menos preparação de dados do que muitos outros modelos.</li>
+<li>Lidam bem com relações não lineares.</li>
+<li>Podem trabalhar com atributos numéricos e categóricos.</li>
+<li>Servem como ponto de partida para modelos mais avançados, como Random Forest e Gradient Boosting.</li>
+</ul>
+<p>No contexto educacional, elas também são uma excelente porta de entrada para aprender conceitos centrais de machine learning: treino, teste, generalização, ruído, viés, overfitting e seleção de atributos.</p>
+</section>
+<section id="tipos-de-problema-em-que-costumam-funcionar-bem" class="level2" data-number="2.7">
+<h2 data-number="2.7" class="anchored" data-anchor-id="tipos-de-problema-em-que-costumam-funcionar-bem"><span class="header-section-number">2.7</span> Tipos de problema em que costumam funcionar bem</h2>
+<p>Árvores costumam ser especialmente adequadas quando:</p>
+<ul>
+<li>os exemplos podem ser descritos como pares atributo-valor;</li>
+<li>a tarefa é de classificação discreta ou regressão estruturada;</li>
+<li>a interpretação do modelo importa tanto quanto a acurácia;</li>
+<li>existe possibilidade de interações não lineares entre variáveis;</li>
+<li>há necessidade de comunicar regras para pessoas não técnicas.</li>
+</ul>
+<p>Elas também aparecem com frequência em triagem médica, marketing, previsão de churn, análise de risco, detecção de inadimplência, classificação de documentos e apoio à decisão em processos internos.</p>
+</section>
+<section id="vantagens" class="level2" data-number="2.8">
+<h2 data-number="2.8" class="anchored" data-anchor-id="vantagens"><span class="header-section-number">2.8</span> Vantagens</h2>
+<ul>
+<li>Interpretabilidade</li>
+</ul>
+<p>Talvez seja a principal vantagem. Em muitos cenários, o valor da árvore não está apenas na previsão, mas em explicar por que aquela previsão foi feita.</p>
+<ul>
+<li>Flexibilidade</li>
+</ul>
+<p>A árvore consegue criar fronteiras de decisão complexas sem exigir normalização, padronização ou engenharia sofisticada logo no início.</p>
+<ul>
+<li>Pouca preparação inicial</li>
+</ul>
+<p>Modelos lineares costumam pedir mais cuidado com escala e relações funcionais. A árvore pode ser treinada rapidamente para produzir um baseline forte.</p>
+<ul>
+<li>Captura de interações</li>
+</ul>
+<p>Se um atributo só faz sentido quando combinado com outro, a estrutura hierárquica da árvore naturalmente consegue modelar isso.</p>
+</section>
+<section id="limitações" class="level2" data-number="2.9">
+<h2 data-number="2.9" class="anchored" data-anchor-id="limitações"><span class="header-section-number">2.9</span> Limitações</h2>
+<p>Apesar da simplicidade, árvores isoladas também possuem fraquezas importantes.</p>
+<ul>
+<li>Tendência a overfitting</li>
+</ul>
+<p>Se crescer demais, a árvore pode memorizar peculiaridades do conjunto de treino em vez de aprender padrões gerais.</p>
+<ul>
+<li>Instabilidade</li>
+</ul>
+<p>Pequenas mudanças nos dados podem gerar estruturas diferentes. Isso acontece porque uma divisão ligeiramente distinta perto da raiz afeta toda a árvore abaixo.</p>
+<ul>
+<li>Viés de seleção</li>
+</ul>
+<p>Alguns critérios podem favorecer atributos com muitos valores possíveis, caso o algoritmo não trate isso adequadamente.</p>
+<ul>
+<li>Performance nem sempre é a melhor possível</li>
+</ul>
+<p>Em alguns problemas, métodos de conjunto baseados em árvores superam com folga uma única árvore.</p>
+</section>
+<section id="o-princípio-da-árvore-pequena" class="level2" data-number="2.10">
+<h2 data-number="2.10" class="anchored" data-anchor-id="o-princípio-da-árvore-pequena"><span class="header-section-number">2.10</span> O princípio da árvore pequena</h2>
+<p>Uma ideia recorrente no estudo de árvores é a preferência por estruturas menores que expliquem bem os dados. Esse raciocínio conversa com o princípio da parcimônia: entre hipóteses com desempenho semelhante, preferimos a mais simples.</p>
+<p>Na prática, isso não quer dizer escolher sempre a menor árvore possível. Quer dizer buscar um equilíbrio entre:</p>
+<ul>
+<li>fidelidade aos dados de treino;</li>
+<li>capacidade de generalização;</li>
+<li>facilidade de interpretação.</li>
+</ul>
+</section>
+<section id="exemplo-intuitivo-de-separação-progressiva" class="level2" data-number="2.11">
+<h2 data-number="2.11" class="anchored" data-anchor-id="exemplo-intuitivo-de-separação-progressiva"><span class="header-section-number">2.11</span> Exemplo intuitivo de separação progressiva</h2>
+<p>Pense em um conjunto com clientes que podem cancelar ou não um serviço. Se os dados estiverem todos misturados, a previsão é incerta. Ao perguntar primeiro <code>número de chamados no suporte &gt; 3?</code>, podemos separar um grupo mais propenso ao cancelamento. Em seguida, dentro de cada grupo, outra pergunta como <code>tempo de contrato &gt; 12 meses?</code> pode tornar a previsão ainda mais segura.</p>
+<p>A árvore funciona justamente assim: ela não tenta resolver o problema inteiro de uma vez. Ela quebra o problema em subproblemas locais.</p>
+</section>
+<section id="árvore-como-modelo-e-como-ferramenta-de-análise" class="level2" data-number="2.12">
+<h2 data-number="2.12" class="anchored" data-anchor-id="árvore-como-modelo-e-como-ferramenta-de-análise"><span class="header-section-number">2.12</span> Árvore como modelo e como ferramenta de análise</h2>
+<p>Mesmo quando a árvore não será o modelo final em produção, ela continua valiosa como instrumento de análise exploratória.</p>
+<ul>
+<li>ajuda a descobrir atributos importantes;</li>
+<li>sugere regras de negócio;</li>
+<li>revela interações entre variáveis;</li>
+<li>mostra regiões do espaço de atributos mais arriscadas ou mais favoráveis.</li>
+</ul>
+<p>Por isso, aprender árvores de decisão é útil mesmo para quem depois vai trabalhar com ensembles, redes neurais ou modelos probabilísticos.</p>
+</section>
+<section id="fechamento-do-capítulo" class="level2" data-number="2.13">
+<h2 data-number="2.13" class="anchored" data-anchor-id="fechamento-do-capítulo"><span class="header-section-number">2.13</span> Fechamento do capítulo</h2>
+<p>Árvores de decisão são um excelente ponto de encontro entre teoria e prática. Elas permitem estudar conceitos formais de aprendizado supervisionado sem perder a intuição do processo decisório. Nos próximos capítulos, vamos detalhar como uma árvore escolhe suas perguntas, como ela mede a qualidade de uma divisão e como transformar essa teoria em modelos úteis com Python.</p>
+</section>
+<section id="resumo-do-capítulo" class="level2" data-number="2.14">
+<h2 data-number="2.14" class="anchored" data-anchor-id="resumo-do-capítulo"><span class="header-section-number">2.14</span> Resumo do capítulo</h2>
+<ul>
+<li>Árvores de decisão organizam a previsão como sequências de testes.</li>
+<li>A estrutura raiz-nós-folhas aproxima o modelo de regras humanas.</li>
+<li>O grande atrativo da árvore é combinar interpretabilidade e utilidade prática.</li>
+<li>O grande risco é crescer demais e perder generalização.</li>
+</ul>
+</section>
+<section id="erros-comuns" class="level2" data-number="2.15">
+<h2 data-number="2.15" class="anchored" data-anchor-id="erros-comuns"><span class="header-section-number">2.15</span> Erros comuns</h2>
+<ul>
+<li>achar que interpretável significa infalível;</li>
+<li>confundir uma regra aprendida com verdade causal;</li>
+<li>supor que a maior árvore é sempre a melhor;</li>
+<li>ignorar a instabilidade estrutural causada por pequenas mudanças nos dados.</li>
+</ul>
+</section>
+<section id="perguntas-de-revisão" class="level2" data-number="2.16">
+<h2 data-number="2.16" class="anchored" data-anchor-id="perguntas-de-revisão"><span class="header-section-number">2.16</span> Perguntas de revisão</h2>
+<ol type="1">
+<li>O que diferencia raiz, nó interno e folha?</li>
+<li>Por que a árvore é considerada um modelo interpretável?</li>
+<li>Em que sentido uma árvore pode representar uma disjunção de conjunções?</li>
+<li>Por que simplicidade e generalização costumam andar juntas?</li>
+</ol>
+
+
+</section>
+
+</main> <!-- /main -->
+﻿<script>
+document.addEventListener("DOMContentLoaded", function () {
+  function isTypingTarget(element) {
+    if (!element) {
+      return false;
+    }
+
+    const tagName = element.tagName;
+    return (
+      element.isContentEditable ||
+      tagName === "INPUT" ||
+      tagName === "TEXTAREA" ||
+      tagName === "SELECT"
+    );
+  }
+
+  document.addEventListener("keydown", function (event) {
+    if (event.defaultPrevented || event.altKey || event.ctrlKey || event.metaKey) {
+      return;
+    }
+
+    if (isTypingTarget(document.activeElement)) {
+      return;
+    }
+
+    const relation = event.key === "ArrowLeft"
+      ? "prev"
+      : event.key === "ArrowRight"
+        ? "next"
+        : null;
+
+    if (!relation) {
+      return;
+    }
+
+    const link = document.querySelector('link[rel="' + relation + '"]');
+    if (link && link.href) {
+      window.location.href = link.href;
+    }
+  });
+});
+</script>
+
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/giseldo\.github\.io\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../index.html" class="pagination-link" aria-label="Árvore de Decisão Teoria e Prática com Python">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Árvore de Decisão Teoria e Prática com Python</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../section/02-criterios-divisao.html" class="pagination-link" aria-label="Critérios de Divisão">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Critérios de Divisão</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Este livro foi escrito por Giseldo Neo.</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Todos os direitos reservados, proibida a reprodução.</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
