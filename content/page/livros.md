@@ -37,8 +37,8 @@ Este livro apresenta os chatbots clássicos, baseados em AIML, e por que express
 
 ### Uma abordagem teórico-prática
 
-<a href="/images/livro/arvore/_book/index.html" target="_blank">Versão HTML (↗)</a></br>
-<a href="/images/livro/arvore/arvore.pdf" target="_blank">Versão PDF (↗)</a></br>
+<a href="https://giseldo.github.io/Livro-Giseldo----rvore-de-decis-o/" target="_blank">Versão HTML (↗)</a></br>
+<!-- <a href="/images/livro/arvore/arvore.pdf" target="_blank">Versão PDF (↗)</a></br> -->
 
 {{< endcolumns >}}
 
