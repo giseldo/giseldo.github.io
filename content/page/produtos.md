@@ -1,13 +1,11 @@
 ---
-title: 'Produtos de Software'
+title: 'Software'
 comments: false
 menus: 'main'
 weight: 4
 draft: false
 toc: true
 ---
-
-<!-- Quando o sistema usa banco de dados, por causa da  limitação da conta gratuita do supabase, é necessário iniciar o servidor. Portanto envie um email para giseldo@gmail.com com o nome do projeto que deseja testar se o mesmo utilizar banco de dados para superar esta limitação. -->
 
 ## Índice
 
@@ -25,7 +23,12 @@ Neo Gestão Turma V0 (neon)
 
 <!-- Neo Advocate -->
 
-- [V0](#V0)
+- Kleber
+  - [chronostask - Um gerenciador de tarefas](#chronostask)
+  - [calliopetts - Converter texto em audio](#calliopetts)
+  - [concentrare - Pomodoro com tarefas](#concentrare) 
+
+- V0
   - [NeoScholarSearch - Um busca de artigos no Semantic Scholar](#neoscholarsearch---um-busca-de-artigos-no-semantic-scholar)
   - [NeoSistemaEspecialista - Um sistema especialista (supabase)](#neosistemaespecialista---um-sistema-especialista-supabase)
   - [NeoSP - Estimador de Story Points com Inteligência Artificial](#neosp---estimador-de-story-points-com-inteligência-artificial)
@@ -35,17 +38,17 @@ Neo Gestão Turma V0 (neon)
   - [NeoAIMLEditor - Cria Chatbots com AIML](#neoaimleditor---cria-chatbots-com-aiml)
   - [NeoDeteccaoFraude -  Detecção de fraudes em contratos com IA (beta)](#neodeteccaofraude---detecção-de-fraudes-em-contratos-com-ia-beta)
   - [NeoBPMNEditorIO - Crie diagramas BPMN conversando com BPMN.io](#neobpmneditorio---crie-diagramas-bpmn-conversando-com-bpmnio)
-- [Bolt](#bolt)
+- Bolt
   - [NeoBPMNEditor - Um simples modelador visual de BPMN](#neobpmneditor---um-simples-modelador-visual-de-bpmn)
   - [NeoReadability - Text Readability Analyzer](#neoreadability---text-readability-analyzer)
-- [Lovable](#lovable)
+- Lovable
   - [NeoMarkdowL - Um simples editor de Markdow](#neomarkdowl---um-simples-editor-de-markdow)
   - [NeoLatex - Um simples editor de Latex](#neolatex---um-simples-editor-de-latex)
   - [NeoMermaid - Um simples editor de Mermaid](#neomermaid---um-simples-editor-de-mermaid)
   - [NeoCursos - Venda de cursos on-line (supabase)](#neocursos---venda-de-cursos-on-line-supabase)
   - [NeoPLNChatbot - Construtor de Chatbots com PLN (intenção e response)](#neoplnchatbot---construtor-de-chatbots-com-pln-intenção-e-response)
   - [NeoPDFEditor - Neo PDF Editor](#neopdfeditor---neo-pdf-editor)
-- [Outros](#outros)
+- Outros
   - [NeoAVA - Ambiente Virtual de Aprendizagem com Autorregulação (streamlit)](#neoava---ambiente-virtual-de-aprendizagem-com-autorregulação-streamlit)
   - [Chatbot baseado no chatbot Eliza de 1966 (hugging face)](#chatbot-baseado-no-chatbot-eliza-de-1966-hugging-face)
   - [NeoChatbots - Chatbots com RAG (fora do ar) (hugging face)](#neochatbots---chatbots-com-rag-fora-do-ar-hugging-face)
@@ -58,7 +61,40 @@ Neo Gestão Turma V0 (neon)
 
 ---
 
+## Kleber
+
+### chronostask
+
+- [Demo on-line(↗)](https://chronostask.vercel.app/)
+
+![alt text](/images/chronotask.png)
+
+### calliopetts
+
+- [Demo on-line(↗)](https://calliopetts.vercel.app/)
+
+![alt text](/images/calliopetts.png)
+
+### concentrare
+
+- [Demo on-line(↗)](https://concentrare.vercel.app/)
+
+![alt text](/images/concentrare.png)
+
+
+
 ## V0
+
+## Neoqrcode
+
+Gerador de QRCODE
+
+![Neoqrcode](/images/neoqrcode.png)
+
+- [Demo on-line(↗)](https://v0-neo-scholar-search.vercel.app)
+
+- [Código-fonte (↗)](https://github.com/giseldo/neoqrcode)
+
 
 ### NeoScholarSearch - Um busca de artigos no Semantic Scholar
 
@@ -192,7 +228,7 @@ Neo Gestão Turma V0 (neon)
 
 ![image](https://github.com/user-attachments/assets/b5cbf3f0-6518-46e0-8a0c-0fe1998f4185) -->
 
-## Bolt
+## Vibe codadas no Bolt
 
 ### NeoBPMNEditor - Um simples modelador visual de BPMN
 
