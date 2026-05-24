@@ -38,7 +38,8 @@ Este livro apresenta os chatbots clássicos, baseados em AIML, e por que express
 ### Uma abordagem teórico-prática
 
 <a href="https://giseldo.github.io/Livro-Giseldo----rvore-de-decis-o/" target="_blank">Versão HTML (↗)</a></br>
-<!-- <a href="/images/livro/arvore/arvore.pdf" target="_blank">Versão PDF (↗)</a></br> -->
+<a href="https://giseldo.github.io/Livro-Giseldo----rvore-de-decis-o/%C3%81rvore-de-Decis%C3%A3o-Teoria-e-Pr%C3%A1tica-com-Python.pdf" target="_blank">Versão PDF (↗)</a></br>
+<a href="https://github.com/giseldo/Livro-Giseldo----rvore-de-decis-o/" target="_blank">Source Code (↗)</a></br>
 
 {{< endcolumns >}}
 
@@ -52,13 +53,9 @@ Este livro apresenta os chatbots clássicos, baseados em AIML, e por que express
 
 ### Uma abordagem teórico-prática
 
-
 <a href="https://giseldo.github.io/Introducao-a-Programacao-em-Java" target="_blank">Versão HTML (↗)</a></br>
 <a href="https://raw.githubusercontent.com/giseldo/Introducao-a-Programacao-em-Java/6ee15994d9c44871eb13824b1f275421f5893f06/docs/Introducao-a-Programacao-em-Java.pdf" target="_blank">Versão PDF (↗)</a></br>
---
 <a href="https://giseldo.github.io/java-slides-pdfs-quarto/" target="_blank">Slides (↗)</a></br>
---
-
 <a href="https://github.com/giseldo/Introducao-a-Programacao-em-Java" target="_blank">Source Code (↗)</a></br>
 
 {{< endcolumns >}}
@@ -75,6 +72,7 @@ Este livro apresenta os chatbots clássicos, baseados em AIML, e por que express
 
 <a href="/images/livro/javascript/_book/index.html" target="_blank">Versão HTML (↗)</a></br>
 <a href="/images/livro/javascript/javascript.pdf" target="_blank">Versão PDF (↗)</a></br>
+
 
 {{< endcolumns >}}
 
