@@ -54,9 +54,9 @@ Este livro apresenta os chatbots clássicos, baseados em AIML, e por que express
 ### Uma abordagem teórico-prática
 
 <a href="https://giseldo.github.io/Introducao-a-Programacao-em-Java" target="_blank">Versão HTML (↗)</a></br>
-<a href="https://raw.githubusercontent.com/giseldo/Introducao-a-Programacao-em-Java/6ee15994d9c44871eb13824b1f275421f5893f06/docs/Introducao-a-Programacao-em-Java.pdf" target="_blank">Versão PDF (↗)</a></br>
-<a href="https://giseldo.github.io/java-slides-pdfs-quarto/" target="_blank">Slides (↗)</a></br>
-<a href="https://github.com/giseldo/Introducao-a-Programacao-em-Java" target="_blank">Source Code (↗)</a></br>
+<a href="https://giseldo.github.io/Introducao-a-Programacao-em-Java/Introdu%C3%A7%C3%A3o-a-Programa%C3%A7%C3%A3o-com-Java-com-Chatbots.pdf" target="_blank">Versão PDF (↗)</a></br>
+<a href="https://giseldo.github.io/java-slides-pdfs-quarto/" target="_blank">Versão HTML Slides - (beta) (↗)</a></br>
+<a href="https://github.com/giseldo/Introducao-a-Programacao-em-Java" target="_blank">Source Code Github Files(↗)</a></br>
 
 {{< endcolumns >}}
 
@@ -89,7 +89,7 @@ Este livro apresenta os chatbots clássicos, baseados em AIML, e por que express
 Este livro fornece uma visão inicial e objetiva sobre a teoria e a aplicação prática da regressão linear no contexto do aprendizado de máquina com python. Ele é adequado para iniciantes que estão começando sua jornada no aprendizado de máquina e da regressão linear, mas que já conhecem o básico da linguagem python. Ao longo dos capítulos, apresentamos os conceitos e suposições da regressão até as aplicações e diagnósticos de modelos, passando por estudos de caso e o uso de bibliotecas de software utilizadas como Python e Scikit-learn. Os exercícios ao final de cada capítulo são elaborados para reforçar este aprendizado.
 
 <a href="/images/livro/reg/_book/index.html" target="_blank">Versão HTML (↗)</a></br>
-<a href="/images/livro/reg/reg.pdf" target="_blank">Download do Livro em PDF (↗)</a> 
+<a href="/images/livro/reg/reg.pdf" target="_blank">Versão PDF (↗)</a> 
 </br>
 <a href="https://www.amazon.com.br/gp/product/B0DCT4M7GH" target="_blank">Adquirir e-pub na Amazon (↗)</a> 
 </br>
@@ -113,7 +113,7 @@ O processamento de linguagem natural (PLN) tem se tornado cada vez mais relevant
 suas futuras explorações no mundo do processamento de linguagem natural.
 
 <a href="/images/livro/vetorizacao/_book/index.html" target="_blank">Versão HTML (↗)</a></br>
-<a href="/images/livro/vetorizacao/vetorizacao.pdf" target="_blank">Download do Livro em PDF (↗)</a> </br>
+<a href="/images/livro/vetorizacao/vetorizacao.pdf" target="_blank">Versão PDF (↗)</a> </br>
 <a href="https://www.amazon.com.br/gp/product/B0DGB9W7MW" target="_blank">Adquirir e-pub na Amazon (↗)</a> </br>
 <a href="https://loja.uiclap.com/titulo/ua65564" target="_blank">Adquirir PDF na UICLAP (↗)</a> 
 
