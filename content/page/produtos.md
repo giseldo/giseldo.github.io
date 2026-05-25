@@ -23,6 +23,9 @@ Neo Gestão Turma V0 (neon)
 
 <!-- Neo Advocate -->
 
+- Neon
+  - [Neomindmap - Um criador de mapa mental](#neomindmap)
+
 - Kleber
   - [chronostask - Um gerenciador de tarefas](#chronostask)
   - [calliopetts - Converter texto em audio](#calliopetts)
@@ -63,6 +66,8 @@ Neo Gestão Turma V0 (neon)
 
 ## Neon
 
+---
+
 ### Neomindmap
 
 - [Demo on-line(↗)](https://neomindmap.vercel.app/)
@@ -95,6 +100,8 @@ Neo Gestão Turma V0 (neon)
 
 ## V0
 
+---
+
 ## Neoqrcode
 
 Gerador de QRCODE
@@ -105,6 +112,7 @@ Gerador de QRCODE
 
 - [Código-fonte (↗)](https://github.com/giseldo/neoqrcode)
 
+---
 
 ### NeoScholarSearch - Um busca de artigos no Semantic Scholar
 
