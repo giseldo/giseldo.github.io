@@ -46,7 +46,7 @@ Este livro apresenta os chatbots clássicos, baseados em AIML, e por que express
 ---
 
 {{< columns >}}
-{{< figure src="https://raw.githubusercontent.com/giseldo/Introducao-a-Programacao-em-Java/6ee15994d9c44871eb13824b1f275421f5893f06/capa.png" width="75%" >}}
+{{< figure src="/images/livro/java/capa.png" width="75%" >}}
 {{< column >}}
 
 ## Introdução a Programação com Java (versão beta)
