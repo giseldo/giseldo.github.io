@@ -70,8 +70,8 @@ Este livro apresenta os chatbots clássicos, baseados em AIML, e por que express
 
 ### Uma abordagem teórico-prática
 
-<a href="/images/livro/javascript/_book/index.html" target="_blank">Versão HTML (↗)</a></br>
-<a href="/images/livro/javascript/javascript.pdf" target="_blank">Versão PDF (↗)</a></br>
+<a href="https://giseldo.github.io/livro-javascript/" target="_blank">Versão HTML (↗)</a></br>
+<a href="https://giseldo.github.io/livro-javascript/Introdução-a-JavaScript.pdf" target="_blank">Versão PDF (↗)</a></br>
 
 
 {{< endcolumns >}}
