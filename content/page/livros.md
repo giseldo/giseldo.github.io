@@ -19,11 +19,26 @@ toc: True
 
 ### Teoria e Prática com Python
 
-Este livro apresenta os chatbots clássicos, baseados em AIML, e por que expressões regulares ainda são ferramentas utilizadas no desenvolvimento de bots. Em capítulos dedicados ao Processamento de Linguagem Natural (PLN), técnicas como tokenização, lematização e análise sintática ganham vida por meio de exemplos aplicáveis, preparando o leitor para dar seus próprios passos no mundo da IA conversacional. Transformers, Word2Vec e os Modelos de Linguagem Grande (LLMs), incluindo BERT, GPT e LLaMA.
+<!-- Este livro apresenta os chatbots clássicos, baseados em AIML, e por que expressões regulares ainda são ferramentas utilizadas no desenvolvimento de bots. Em capítulos dedicados ao Processamento de Linguagem Natural (PLN), técnicas como tokenização, lematização e análise sintática ganham vida por meio de exemplos aplicáveis, preparando o leitor para dar seus próprios passos no mundo da IA conversacional. Transformers, Word2Vec e os Modelos de Linguagem Grande (LLMs), incluindo BERT, GPT e LLaMA. -->
 
 <a href="/images/livro/chatbots/_book/index.html" target="_blank">Versão HTML (↗)</a></br>
 <a href="/images/livro/chatbots/chatbots.pdf" target="_blank">Versão PDF (↗)</a></br>
 <a href="https://github.com/giseldo/Livro-A-jornada-dos-Chatbots---Verde---C-digos" target="_blank">Código-fonte do Livro em Python (↗)</a> 
+
+{{< endcolumns >}}
+
+---
+
+{{< columns >}}
+{{< figure src="/images/livro/llm/capa.png" width="75%" >}}
+{{< column >}}
+
+## Modelos de Linguagem com Python (versão beta)
+
+### Uma abordagem teórico-prática
+
+<a href="https://giseldo.github.io/Livro-Giseldo---Explicando-Transformer-v5/" target="_blank">Versão HTML (↗)</a></br>
+<a href="https://giseldo.github.io/Livro-Giseldo---Explicando-Transformer-v5/Livro-Giseldo---Explicando-Transformer-v5.pdf" target="_blank">Versão PDF (↗)</a></br>
 
 {{< endcolumns >}}
 
@@ -39,7 +54,6 @@ Este livro apresenta os chatbots clássicos, baseados em AIML, e por que express
 
 <a href="https://giseldo.github.io/Livro-Giseldo----rvore-de-decis-o/" target="_blank">Versão HTML (↗)</a></br>
 <a href="https://giseldo.github.io/Livro-Giseldo----rvore-de-decis-o/%C3%81rvore-de-Decis%C3%A3o-Teoria-e-Pr%C3%A1tica-com-Python.pdf" target="_blank">Versão PDF (↗)</a></br>
-<a href="https://github.com/giseldo/Livro-Giseldo----rvore-de-decis-o/" target="_blank">Source Code (↗)</a></br>
 
 {{< endcolumns >}}
 
@@ -56,7 +70,6 @@ Este livro apresenta os chatbots clássicos, baseados em AIML, e por que express
 <a href="https://giseldo.github.io/Introducao-a-Programacao-em-Java" target="_blank">Versão HTML (↗)</a></br>
 <a href="https://giseldo.github.io/Introducao-a-Programacao-em-Java/Introdu%C3%A7%C3%A3o-a-Programa%C3%A7%C3%A3o-com-Java-com-Chatbots.pdf" target="_blank">Versão PDF (↗)</a></br>
 <a href="https://giseldo.github.io/java-slides-pdfs-quarto/" target="_blank">Versão HTML Slides - (beta) (↗)</a></br>
-<a href="https://github.com/giseldo/Introducao-a-Programacao-em-Java" target="_blank">Source Code Github Files(↗)</a></br>
 
 {{< endcolumns >}}
 
@@ -82,11 +95,11 @@ Este livro apresenta os chatbots clássicos, baseados em AIML, e por que express
 {{< figure src="/images/livro/reg/capa.png" width="75%" >}}
 {{< column >}}
 
-## Regressão Linear com Aprendizagem de Máquina
+## Regressão Linear com Aprendizagem de Máquina (versão beta)
 
 ### Teoria e Prática com Python
 
-Este livro fornece uma visão inicial e objetiva sobre a teoria e a aplicação prática da regressão linear no contexto do aprendizado de máquina com python. Ele é adequado para iniciantes que estão começando sua jornada no aprendizado de máquina e da regressão linear, mas que já conhecem o básico da linguagem python. Ao longo dos capítulos, apresentamos os conceitos e suposições da regressão até as aplicações e diagnósticos de modelos, passando por estudos de caso e o uso de bibliotecas de software utilizadas como Python e Scikit-learn. Os exercícios ao final de cada capítulo são elaborados para reforçar este aprendizado.
+<!-- Este livro fornece uma visão inicial e objetiva sobre a teoria e a aplicação prática da regressão linear no contexto do aprendizado de máquina com python. Ele é adequado para iniciantes que estão começando sua jornada no aprendizado de máquina e da regressão linear, mas que já conhecem o básico da linguagem python. Ao longo dos capítulos, apresentamos os conceitos e suposições da regressão até as aplicações e diagnósticos de modelos, passando por estudos de caso e o uso de bibliotecas de software utilizadas como Python e Scikit-learn. Os exercícios ao final de cada capítulo são elaborados para reforçar este aprendizado. -->
 
 <a href="/images/livro/reg/_book/index.html" target="_blank">Versão HTML (↗)</a></br>
 <a href="/images/livro/reg/reg.pdf" target="_blank">Versão PDF (↗)</a> 
@@ -103,7 +116,7 @@ Este livro fornece uma visão inicial e objetiva sobre a teoria e a aplicação 
 {{< figure src="/images/livro/vetorizacao/capa.png" width="75%" >}}
 {{< column >}}
 
-## Processamento de Linguagem Natural 
+## Processamento de Linguagem Natural (versão beta)
 
 ### Vetorização de Texto
 
@@ -121,7 +134,7 @@ suas futuras explorações no mundo do processamento de linguagem natural.
 
 ---
 
-## Contos do Sistema Solar (ficção)
+## Contos do Sistema Solar (ficção - versão beta)
 
 {{< columns >}}
 {{< figure src="/images/livro/contos/capa.png" width="75%" >}}
