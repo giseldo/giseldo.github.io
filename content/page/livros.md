@@ -30,36 +30,6 @@ toc: True
 ---
 
 {{< columns >}}
-{{< figure src="/images/livro/llm/capa.png" width="75%" >}}
-{{< column >}}
-
-## Modelos de Linguagem com Python (versão beta)
-
-### Uma abordagem teórico-prática
-
-<a href="https://giseldo.github.io/Livro-Giseldo---Explicando-Transformer-v5/" target="_blank">Versão HTML (↗)</a></br>
-<a href="https://giseldo.github.io/Livro-Giseldo---Explicando-Transformer-v5/Livro-Giseldo---Explicando-Transformer-v5.pdf" target="_blank">Versão PDF (↗)</a></br>
-
-{{< endcolumns >}}
-
----
-
-{{< columns >}}
-{{< figure src="/images/livro/arvore/capa.png" width="75%" >}}
-{{< column >}}
-
-## Árvore de Decisão com Python (versão beta)
-
-### Uma abordagem teórico-prática
-
-<a href="https://giseldo.github.io/Livro-Giseldo----rvore-de-decis-o/" target="_blank">Versão HTML (↗)</a></br>
-<a href="https://giseldo.github.io/Livro-Giseldo----rvore-de-decis-o/%C3%81rvore-de-Decis%C3%A3o-Teoria-e-Pr%C3%A1tica-com-Python.pdf" target="_blank">Versão PDF (↗)</a></br>
-
-{{< endcolumns >}}
-
----
-
-{{< columns >}}
 {{< figure src="/images/livro/java/capa.png" width="75%" >}}
 {{< column >}}
 
@@ -69,6 +39,7 @@ toc: True
 
 <a href="https://giseldo.github.io/Introducao-a-Programacao-em-Java" target="_blank">Versão HTML (↗)</a></br>
 <a href="https://giseldo.github.io/Introducao-a-Programacao-em-Java/Introdu%C3%A7%C3%A3o-a-Programa%C3%A7%C3%A3o-com-Java-com-Chatbots.pdf" target="_blank">Versão PDF (↗)</a></br>
+<a href="https://giseldo.github.io/Introducao-a-Programacao-em-Java/Introdu%C3%A7%C3%A3o-a-Programa%C3%A7%C3%A3o-com-Java-com-Chatbots.epub" target="_blank">Versão ePub (↗)</a></br>
 <a href="https://giseldo.github.io/java-slides-pdfs-quarto/" target="_blank">Versão HTML Slides - (beta) (↗)</a></br>
 
 {{< endcolumns >}}
@@ -85,7 +56,40 @@ toc: True
 
 <a href="https://giseldo.github.io/livro-javascript/" target="_blank">Versão HTML (↗)</a></br>
 <a href="https://giseldo.github.io/livro-javascript/Introdução-a-JavaScript.pdf" target="_blank">Versão PDF (↗)</a></br>
+<a href="https://giseldo.github.io/livro-javascript/Introdução-a-JavaScript.epub" target="_blank">Versão epub (↗)</a></br>
 
+
+{{< endcolumns >}}
+
+---
+
+{{< columns >}}
+{{< figure src="/images/livro/arvore/capa.png" width="75%" >}}
+{{< column >}}
+
+## Árvore de Decisão com Python (versão beta)
+
+### Uma abordagem teórico-prática
+
+<a href="https://giseldo.github.io/Livro-Giseldo----rvore-de-decis-o/" target="_blank">Versão HTML (↗)</a></br>
+<a href="https://giseldo.github.io/Livro-Giseldo----rvore-de-decis-o/%C3%81rvore-de-Decis%C3%A3o-Teoria-e-Pr%C3%A1tica-com-Python.pdf" target="_blank">Versão PDF (↗)</a></br>
+<a href="https://giseldo.github.io/Livro-Giseldo----rvore-de-decis-o/%C3%81rvore-de-Decis%C3%A3o-Teoria-e-Pr%C3%A1tica-com-Python.epub" target="_blank">Versão ePub (↗)</a></br>
+
+{{< endcolumns >}}
+
+---
+
+{{< columns >}}
+{{< figure src="/images/livro/llm/capa.png" width="75%" >}}
+{{< column >}}
+
+## Modelos de Linguagem com Python (versão beta)
+
+### Uma abordagem teórico-prática
+
+<a href="https://giseldo.github.io/Livro-Giseldo---Explicando-Transformer-v5/" target="_blank">Versão HTML (↗)</a></br>
+<a href="https://giseldo.github.io/Livro-Giseldo---Explicando-Transformer-v5/Livro-Giseldo---Explicando-Transformer-v5.pdf" target="_blank">Versão PDF (↗)</a></br>
+<a href="https://giseldo.github.io/Livro-Giseldo---Explicando-Transformer-v5/Livro-Giseldo---Explicando-Transformer-v5.epub" target="_blank">Versão PDF (↗)</a></br>
 
 {{< endcolumns >}}
 
@@ -106,7 +110,7 @@ toc: True
 </br>
 <a href="https://www.amazon.com.br/gp/product/B0DCT4M7GH" target="_blank">Adquirir e-pub na Amazon (↗)</a> 
 </br>
-<a href="https://loja.uiclap.com/titulo/ua63343/" target="_blank">Adquirir PDF na UICLAP (↗)</a> 
+<!-- <a href="https://loja.uiclap.com/titulo/ua63343/" target="_blank">Adquirir PDF na UICLAP (↗)</a>  -->
 
 {{< endcolumns >}}
 
@@ -122,13 +126,13 @@ toc: True
 
 ### Teoria e Prática com Python
 
-O processamento de linguagem natural (PLN) tem se tornado cada vez mais relevante na era da informação, onde a habilidade de transformar dados textuais em insights acionáveis é crucial. Este livro oferece uma introdução concisa, porém abrangente, ao processo de vetorização de texto, uma técnica fundamental em PLN. Espero que este livro seja um ponto de partida útil para 
-suas futuras explorações no mundo do processamento de linguagem natural.
+<!-- O processamento de linguagem natural (PLN) tem se tornado cada vez mais relevante na era da informação, onde a habilidade de transformar dados textuais em insights acionáveis é crucial. Este livro oferece uma introdução concisa, porém abrangente, ao processo de vetorização de texto, uma técnica fundamental em PLN. Espero que este livro seja um ponto de partida útil para 
+suas futuras explorações no mundo do processamento de linguagem natural. -->
 
 <a href="/images/livro/vetorizacao/_book/index.html" target="_blank">Versão HTML (↗)</a></br>
 <a href="/images/livro/vetorizacao/vetorizacao.pdf" target="_blank">Versão PDF (↗)</a> </br>
 <a href="https://www.amazon.com.br/gp/product/B0DGB9W7MW" target="_blank">Adquirir e-pub na Amazon (↗)</a> </br>
-<a href="https://loja.uiclap.com/titulo/ua65564" target="_blank">Adquirir PDF na UICLAP (↗)</a> 
+<!-- <a href="https://loja.uiclap.com/titulo/ua65564" target="_blank">Adquirir PDF na UICLAP (↗)</a>  -->
 
 {{< endcolumns >}}
 
