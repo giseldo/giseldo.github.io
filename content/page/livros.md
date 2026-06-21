@@ -55,9 +55,10 @@ toc: True
 
 ### Uma abordagem teórico-prática
 
-<a href="https://giseldo.github.io/Livro-Giseldo----rvore-de-decis-o/" target="_blank">Versão HTML (↗)</a></br>
-<a href="https://giseldo.github.io/Livro-Giseldo----rvore-de-decis-o/%C3%81rvore-de-Decis%C3%A3o-Teoria-e-Pr%C3%A1tica-com-Python.pdf" target="_blank">Versão PDF (↗)</a></br>
-<a href="https://giseldo.github.io/Livro-Giseldo----rvore-de-decis-o/%C3%81rvore-de-Decis%C3%A3o-Teoria-e-Pr%C3%A1tica-com-Python.epub" target="_blank">Versão ePub (↗)</a></br>
+<a href="https://giseldo.github.io/livro-arvore-de-decisao/" target="_blank">Versão HTML (↗)</a></br>
+<a href="https://giseldo.github.io/livro-arvore-de-decisao/%C3%81rvore-de-Decis%C3%A3o-Teoria-e-Pr%C3%A1tica-com-Python.pdf" target="_blank">Versão PDF (↗)</a></br>
+<a href="https://giseldo.github.io/livro-arvore-de-decisao/%C3%81rvore-de-Decis%C3%A3o-Teoria-e-Pr%C3%A1tica-com-Python.epub" target="_blank">Versão ePub (↗)</a></br>
+<a href="https://loja.uiclap.com/titulo/ua180327/" target="_blank">Adquirir PDF na UICLAP (↗)</a></br>
 
 {{< endcolumns >}}
 
