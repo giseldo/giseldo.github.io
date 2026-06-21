@@ -31,23 +31,6 @@ toc: True
 ---
 
 {{< columns >}}
-{{< figure src="/images/livro/java/capa.png" width="75%" >}}
-{{< column >}}
-
-## Introdução a Programação com Java (versão beta)
-
-### Uma abordagem teórico-prática
-
-<a href="https://giseldo.github.io/Introducao-a-Programacao-em-Java" target="_blank">Versão HTML (↗)</a></br>
-<a href="https://giseldo.github.io/Introducao-a-Programacao-em-Java/Introdu%C3%A7%C3%A3o-a-Programa%C3%A7%C3%A3o-com-Java-com-Chatbots.pdf" target="_blank">Versão PDF (↗)</a></br>
-<a href="https://giseldo.github.io/Introducao-a-Programacao-em-Java/Introdu%C3%A7%C3%A3o-a-Programa%C3%A7%C3%A3o-com-Java-com-Chatbots.epub" target="_blank">Versão ePub (↗)</a></br>
-<a href="https://giseldo.github.io/java-slides-pdfs-quarto/" target="_blank">Versão HTML Slides - (beta) (↗)</a></br>
-
-{{< endcolumns >}}
-
----
-
-{{< columns >}}
 {{< figure src="/images/livro/javascript/capa.png" width="75%" >}}
 {{< column >}}
 
@@ -75,6 +58,23 @@ toc: True
 <a href="https://giseldo.github.io/Livro-Giseldo----rvore-de-decis-o/" target="_blank">Versão HTML (↗)</a></br>
 <a href="https://giseldo.github.io/Livro-Giseldo----rvore-de-decis-o/%C3%81rvore-de-Decis%C3%A3o-Teoria-e-Pr%C3%A1tica-com-Python.pdf" target="_blank">Versão PDF (↗)</a></br>
 <a href="https://giseldo.github.io/Livro-Giseldo----rvore-de-decis-o/%C3%81rvore-de-Decis%C3%A3o-Teoria-e-Pr%C3%A1tica-com-Python.epub" target="_blank">Versão ePub (↗)</a></br>
+
+{{< endcolumns >}}
+
+---
+
+{{< columns >}}
+{{< figure src="/images/livro/java/capa.png" width="75%" >}}
+{{< column >}}
+
+## Introdução a Programação com Java (versão beta)
+
+### Uma abordagem teórico-prática
+
+<a href="https://giseldo.github.io/Introducao-a-Programacao-em-Java" target="_blank">Versão HTML (↗)</a></br>
+<a href="https://giseldo.github.io/Introducao-a-Programacao-em-Java/Introdu%C3%A7%C3%A3o-a-Programa%C3%A7%C3%A3o-com-Java-com-Chatbots.pdf" target="_blank">Versão PDF (↗)</a></br>
+<a href="https://giseldo.github.io/Introducao-a-Programacao-em-Java/Introdu%C3%A7%C3%A3o-a-Programa%C3%A7%C3%A3o-com-Java-com-Chatbots.epub" target="_blank">Versão ePub (↗)</a></br>
+<a href="https://giseldo.github.io/java-slides-pdfs-quarto/" target="_blank">Versão HTML Slides - (beta) (↗)</a></br>
 
 {{< endcolumns >}}
 
