@@ -143,7 +143,7 @@ suas futuras explorações no mundo do processamento de linguagem natural. -->
 {{< column >}}
 
 <a href="https://giseldo.github.io/livro-contos-do-sistema-solar/" target="_blank">Versão HTML (↗)</a></br>
-<a href="https://giseldo.github.io/livro-contos-do-sistema-solar/contos.pdf" target="_blank">Versão em PDF (↗)</a> 
+<a href="https://giseldo.github.io/livro-contos-do-sistema-solar/contos.pdf" target="_blank">Versão em PDF (↗)</a> </br>
 <a href="https://loja.uiclap.com/titulo/ua116145" target="_blank">Adquirir PDF na UICLAP (↗)</a> 
 
 {{< endcolumns >}}
