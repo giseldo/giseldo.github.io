@@ -52,12 +52,12 @@ toc: True
 
 ## Introdução a Javascript (versão beta)
 
-### Uma abordagem teórico-prática
+### Uma abordagem autorregulada
 
 <a href="https://giseldo.github.io/livro-javascript/" target="_blank">Versão HTML (↗)</a></br>
 <a href="https://giseldo.github.io/livro-javascript/Introdução-a-JavaScript.pdf" target="_blank">Versão PDF (↗)</a></br>
 <a href="https://giseldo.github.io/livro-javascript/Introdução-a-JavaScript.epub" target="_blank">Versão epub (↗)</a></br>
-
+<a href="https://loja.uiclap.com/titulo/ua180152" target="_blank">Comprar o livro na UICLAP (↗)</a></br>
 
 {{< endcolumns >}}
 
