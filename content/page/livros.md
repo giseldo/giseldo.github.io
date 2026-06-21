@@ -24,6 +24,7 @@ toc: True
 <a href="/images/livro/chatbots/_book/index.html" target="_blank">Versão HTML (↗)</a></br>
 <a href="/images/livro/chatbots/chatbots.pdf" target="_blank">Versão PDF (↗)</a></br>
 <a href="https://github.com/giseldo/Livro-A-jornada-dos-Chatbots---Verde---C-digos" target="_blank">Código-fonte do Livro em Python (↗)</a> 
+<a href="[https://loja.uiclap.com/titulo/ua116145](https://loja.uiclap.com/titulo/ua180323/)" target="_blank">Adquirir PDF na UICLAP (↗)</a> 
 
 {{< endcolumns >}}
 
