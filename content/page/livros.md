@@ -122,9 +122,7 @@ toc: True
 
 ## Processamento de Linguagem Natural (versão beta)
 
-### Vetorização de Texto
-
-### Teoria e Prática com Python
+### Vetorização de Texto - Teoria e Prática com Python
 
 <!-- O processamento de linguagem natural (PLN) tem se tornado cada vez mais relevante na era da informação, onde a habilidade de transformar dados textuais em insights acionáveis é crucial. Este livro oferece uma introdução concisa, porém abrangente, ao processo de vetorização de texto, uma técnica fundamental em PLN. Espero que este livro seja um ponto de partida útil para 
 suas futuras explorações no mundo do processamento de linguagem natural. -->
@@ -138,13 +136,14 @@ suas futuras explorações no mundo do processamento de linguagem natural. -->
 
 ---
 
-## Contos do Sistema Solar (ficção - versão beta)
+## Contos do Sistema Solar
 
 {{< columns >}}
 {{< figure src="/images/livro/contos/capa.png" width="75%" >}}
 {{< column >}}
 
 <a href="/images/livro/contos/_book/index.html" target="_blank">Versão HTML (↗)</a></br>
-<a href="/images/livro/contos/contos.pdf" target="_blank">Download do Livro em PDF (↗)</a> 
+<a href="/images/livro/contos/contos.pdf" target="_blank">Versão em PDF (↗)</a> 
+<a href="https://loja.uiclap.com/titulo/ua116145" target="_blank">Adquirir PDF na UICLAP (↗)</a> 
 
 {{< endcolumns >}}
