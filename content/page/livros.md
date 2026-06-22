@@ -86,7 +86,7 @@ toc: True
 {{< figure src="/images/livro/llm/capa.png" width="75%" >}}
 {{< column >}}
 
-## Modelos de Linguagem com Python (versão beta)
+## Modelos de Linguagem com Python (versão rascunho)
 
 ### Uma abordagem teórico-prática
 
