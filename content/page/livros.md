@@ -72,9 +72,10 @@ toc: True
 
 ### Uma abordagem teórico-prática
 
-<a href="https://giseldo.github.io/Introducao-a-Programacao-em-Java" target="_blank">Versão HTML (↗)</a></br>
-<a href="https://giseldo.github.io/Introducao-a-Programacao-em-Java/Introdu%C3%A7%C3%A3o-a-Programa%C3%A7%C3%A3o-com-Java-com-Chatbots.pdf" target="_blank">Versão PDF (↗)</a></br>
-<a href="https://giseldo.github.io/Introducao-a-Programacao-em-Java/Introdu%C3%A7%C3%A3o-a-Programa%C3%A7%C3%A3o-com-Java-com-Chatbots.epub" target="_blank">Versão ePub (↗)</a></br>
+<a href="https://giseldo.github.io/livro-java/" target="_blank">Versão HTML (↗)</a> </br>
+<a href="https://giseldo.github.io/livro-java/Introdu%C3%A7%C3%A3o-a-Programa%C3%A7%C3%A3o-com-Java-com-Chatbots.pdf" target="_blank">Versão PDF (↗)</a> </br>
+<a href="https://giseldo.github.io/livro-java/Introdu%C3%A7%C3%A3o-a-Programa%C3%A7%C3%A3o-com-Java-com-Chatbots.epub" target="_blank">Versão ePub (↗)</a> </br>
+<a href="https://loja.uiclap.com/titulo/ua180344/" target="_blank">Adquirir PDF na UICLAP (↗)</a></br>
 <a href="https://giseldo.github.io/java-slides-pdfs-quarto/" target="_blank">Versão HTML Slides - (beta) (↗)</a></br>
 
 {{< endcolumns >}}
