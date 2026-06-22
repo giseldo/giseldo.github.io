@@ -133,7 +133,7 @@ suas futuras explorações no mundo do processamento de linguagem natural. -->
 <a href="/images/livro/vetorizacao/_book/index.html" target="_blank">Versão HTML (↗)</a></br>
 <a href="/images/livro/vetorizacao/vetorizacao.pdf" target="_blank">Versão PDF (↗)</a> </br>
 <a href="https://www.amazon.com.br/gp/product/B0DGB9W7MW" target="_blank">Adquirir e-pub na Amazon (↗)</a> </br>
-<!-- <a href="https://loja.uiclap.com/titulo/ua65564" target="_blank">Adquirir PDF na UICLAP (↗)</a>  -->
+<a href="https://loja.uiclap.com/titulo/ua65564" target="_blank">Adquirir PDF na UICLAP (↗)</a></br>
 
 {{< endcolumns >}}
 
