@@ -40,7 +40,7 @@ toc: True
 
 <a href="https://giseldo.github.io/livro-javascript/" target="_blank">Versão HTML (↗)</a></br>
 <a href="https://giseldo.github.io/livro-javascript/Introdução-a-JavaScript.pdf" target="_blank">Versão PDF (↗)</a></br>
-<a href="https://giseldo.github.io/livro-javascript/Introdução-a-JavaScript.epub" target="_blank">Versão epub (↗)</a></br>
+<a href="https://giseldo.github.io/livro-javascript/Introdução-a-JavaScript.epub" target="_blank">Versão ePub (↗)</a></br>
 <a href="https://loja.uiclap.com/titulo/ua180152" target="_blank">Adquirir PDF na UICLAP (↗)</a></br>
 
 {{< endcolumns >}}
