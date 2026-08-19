@@ -19,102 +19,88 @@ Neo Gestão Turma V0 (neon)
 [https://v0.dev/chat/neo-classroom-clone-D6qhyfkw8hvhttps://v0.dev/chat/neo-classroom-clone-D6qhyfkw8h](https://v0.dev/chat/neo-gestao-turma-Lb1HachUMdR)v 
 -->
 
+<!-- 
+
+### NeoDinamicaSistemas - Um Criador de Dinâmica de Sistemas (versão beta) (não usa banco de dados)
+
+- [Demo on-line(↗)](https://v0-dynamic-system-diagrams.vercel.app/)
+- [Código-fonte (↗)](https://github.com/giseldo/neodinamicasistemas-v0)
+![image](https://github.com/user-attachments/assets/e94d03bb-c9e9-4207-943c-fefb1fda3a25)
+![image](https://github.com/user-attachments/assets/0cbfc7ea-ee5d-49f3-9b0a-17724a96ee1c) 
+
+-->
+
 <!-- Neo Dinamica Sistemas -->
 
 <!-- Neo Advocate -->
 
-- Neon
-  - [Neomindmap - Um criador de mapa mental](#neomindmap)
-
-- Kleber
-  - [chronostask - Um gerenciador de tarefas](#chronostask)
-  - [calliopetts - Converter texto em audio](#calliopetts)
-  - [concentrare - Pomodoro com tarefas](#concentrare) 
-
-- V0
-  - [NeoScholarSearch - Um busca de artigos no Semantic Scholar](#neoscholarsearch---um-busca-de-artigos-no-semantic-scholar)
-  - [NeoSistemaEspecialista - Um sistema especialista (supabase)](#neosistemaespecialista---um-sistema-especialista-supabase)
-  - [NeoSP - Estimador de Story Points com Inteligência Artificial](#neosp---estimador-de-story-points-com-inteligência-artificial)
-  - [NeoGeradorQuestoes - Um Gerador de Questões com Inteligência Artificial](#neogeradorquestoes---um-gerador-de-questões-com-inteligência-artificial)
-  - [NeoMarkdow - Um Editor markdown com Inteligência Artificial](#neomarkdow---um-editor-markdown-com-inteligência-artificial)
-  - [NeoKambamPomodoro - Um Kambam com Pomodoro (neon)](#neokambampomodoro---um-kambam-com-pomodoro-neon)
-  - [NeoAIMLEditor - Cria Chatbots com AIML](#neoaimleditor---cria-chatbots-com-aiml)
-  - [NeoDeteccaoFraude -  Detecção de fraudes em contratos com IA (beta)](#neodeteccaofraude---detecção-de-fraudes-em-contratos-com-ia-beta)
-  - [NeoBPMNEditorIO - Crie diagramas BPMN conversando com BPMN.io](#neobpmneditorio---crie-diagramas-bpmn-conversando-com-bpmnio)
-- Bolt
-  - [NeoBPMNEditor - Um simples modelador visual de BPMN](#neobpmneditor---um-simples-modelador-visual-de-bpmn)
-  - [NeoReadability - Text Readability Analyzer](#neoreadability---text-readability-analyzer)
-- Lovable
-  - [NeoMarkdowL - Um simples editor de Markdow](#neomarkdowl---um-simples-editor-de-markdow)
-  - [NeoLatex - Um simples editor de Latex](#neolatex---um-simples-editor-de-latex)
-  - [NeoMermaid - Um simples editor de Mermaid](#neomermaid---um-simples-editor-de-mermaid)
-  - [NeoCursos - Venda de cursos on-line (supabase)](#neocursos---venda-de-cursos-on-line-supabase)
-  - [NeoPLNChatbot - Construtor de Chatbots com PLN (intenção e response)](#neoplnchatbot---construtor-de-chatbots-com-pln-intenção-e-response)
-  - [NeoPDFEditor - Neo PDF Editor](#neopdfeditor---neo-pdf-editor)
-- Outros
-  - [NeoAVA - Ambiente Virtual de Aprendizagem com Autorregulação (streamlit)](#neoava---ambiente-virtual-de-aprendizagem-com-autorregulação-streamlit)
-  - [Chatbot baseado no chatbot Eliza de 1966 (hugging face)](#chatbot-baseado-no-chatbot-eliza-de-1966-hugging-face)
-  - [NeoChatbots - Chatbots com RAG (fora do ar) (hugging face)](#neochatbots---chatbots-com-rag-fora-do-ar-hugging-face)
-  - [NeoStudy - Um Gerador de Plano de estudo com IA (fora do ar) (hugging face)](#neostudy---um-gerador-de-plano-de-estudo-com-ia-fora-do-ar-hugging-face)
-  - [NeoCalendar - Calendário de eventos científicos (hugging face)](#neocalendar---calendário-de-eventos-científicos-hugging-face)
-  - [Previsão de Notas com aprendizagem de máquina (hugging face)](#previsão-de-notas-com-aprendizagem-de-máquina-hugging-face)
-  - [Neo Google Sala de Aula (protótipo) (lovable)](#neo-google-sala-de-aula-protótipo-lovable)
-  - [NeoUST - User Story Tutor - Um software para Previsão e melhoria de User Stories (streamlit)](#neoust---user-story-tutor---um-software-para-previsão-e-melhoria-de-user-stories-streamlit)
-  - [NeoSE - Um simples Sistema Especialista (streamlit)](#neose---um-simples-sistema-especialista-streamlit)
+- [NeoMindMap - Um criador de mapa mental](#neomindmap)
+- [NeoMarkdow - Um Editor markdown com Inteligência Artificial](#neomarkdow)
+- [Neoqrcode](#neoqrcode)
+- [Neurobio](#neurobio)
+- [NeoScholarSearch - Um busca de artigos no Semantic Scholar](#neoscholarsearch)
+- [NeoSistemaEspecialista - Um sistema especialista (supabase)](#neosistemaespecialista)
+- [NeoGeradorQuestoes - Um Gerador de Questões com Inteligência Artificial](#neogeradorquestoes)
+- [NeoKambamPomodoro - Um Kambam com Pomodoro (neon)](#neokambampomodoro---um-kambam-com-pomodoro-neon)
+- [NeoAIMLEditor - Cria Chatbots com AIML](#neoaimleditor---cria-chatbots-com-aiml)
+- [NeoDeteccaoFraude -  Detecção de fraudes em contratos com IA (beta)](#neodeteccaofraude---detecção-de-fraudes-em-contratos-com-ia-beta)
+- [NeoBPMNEditorIO - Crie diagramas BPMN conversando com BPMN.io](#neobpmneditorio---crie-diagramas-bpmn-conversando-com-bpmnio)
+<!-- BOLT -->
+- [NeoBPMNEditor - Um simples modelador visual de BPMN](#neobpmneditor---um-simples-modelador-visual-de-bpmn)
+- [NeoReadability - Text Readability Analyzer](#neoreadability---text-readability-analyzer)
+<!-- LOVABLE -->
+- [NeoMarkdowL - Um simples editor de Markdow](#neomarkdowl---um-simples-editor-de-markdow)
+- [NeoLatex - Um simples editor de Latex](#neolatex---um-simples-editor-de-latex)
+- [NeoMermaid - Um simples editor de Mermaid](#neomermaid---um-simples-editor-de-mermaid)
+- [NeoCursos - Venda de cursos on-line (supabase)](#neocursos---venda-de-cursos-on-line-supabase)
+- [NeoPLNChatbot - Construtor de Chatbots com PLN (intenção e response)](#neoplnchatbot---construtor-de-chatbots-com-pln-intenção-e-response)
+- [NeoPDFEditor - Neo PDF Editor](#neopdfeditor---neo-pdf-editor)
+<!-- OUTROS -->
+- [NeoAVA - Ambiente Virtual de Aprendizagem com Autorregulação (streamlit)](#neoava---ambiente-virtual-de-aprendizagem-com-autorregulação-streamlit)
+- [Chatbot baseado no chatbot Eliza de 1966 (hugging face)](#chatbot-baseado-no-chatbot-eliza-de-1966-hugging-face)
+- [NeoChatbots - Chatbots com RAG (fora do ar) (hugging face)](#neochatbots---chatbots-com-rag-fora-do-ar-hugging-face)
+- [NeoStudy - Um Gerador de Plano de estudo com IA (fora do ar) (hugging face)](#neostudy---um-gerador-de-plano-de-estudo-com-ia-fora-do-ar-hugging-face)
+- [NeoCalendar - Calendário de eventos científicos (hugging face)](#neocalendar---calendário-de-eventos-científicos-hugging-face)
+- [Previsão de Notas com aprendizagem de máquina (hugging face)](#previsão-de-notas-com-aprendizagem-de-máquina-hugging-face)
+- [Neo Google Sala de Aula (protótipo) (lovable)](#neo-google-sala-de-aula-protótipo-lovable)
+- [NeoUST - User Story Tutor - Um software para Previsão e melhoria de User Stories (streamlit)](#neoust---user-story-tutor---um-software-para-previsão-e-melhoria-de-user-stories-streamlit)
+- [NeoSE - Um simples Sistema Especialista (streamlit)](#neose---um-simples-sistema-especialista-streamlit)
+- [NeoSP - Estimador de Story Points com Inteligência Artificial](#neosp---estimador-de-story-points-com-inteligência-artificial)
 
 ---
 
-## Neon
+- Projetos do Kleber
+  - [chronostask - Um gerenciador de tarefas](#chronostask)
+  - [calliopetts - Converter texto em audio](#calliopetts)
+  - [concentrare - Pomodoro com tarefas](#concentrare) 
 
 ---
 
 ### Neomindmap
 
+**Criador de mapas mentais**
+
 - [Demo on-line(↗)](https://neomindmap.vercel.app/)
 
-![alt text](/images/neomindmap.png)
-
----
-
-## Kleber
-
-### chronostask
-
-- [Demo on-line(↗)](https://chronostask.vercel.app/)
-
-![alt text](/images/chronotask.png)
-
-### calliopetts
-
-- [Demo on-line(↗)](https://calliopetts.vercel.app/)
-
-![alt text](/images/calliopetts.png)
-
-### concentrare
-
-- [Demo on-line(↗)](https://concentrare.vercel.app/)
-
-![alt text](/images/concentrare.png)
-
----
-
-## V0
+- ![alt text](/images/neomindmap.png)
 
 ---
 
 ## Neoqrcode
 
-Gerador de QRCODE
-
-![Neoqrcode](/images/neoqrcode.png)
+**Gerador de QRCODE**
 
 - [Demo on-line(↗)](https://v0-neo-scholar-search.vercel.app)
 
 - [Código-fonte (↗)](https://github.com/giseldo/neoqrcode)
 
+- ![Neoqrcode](/images/neoqrcode.png)
+
 ---
 
-### NeoScholarSearch - Um busca de artigos no Semantic Scholar
+## NeoScholarSearch
+
+**Um busca de artigos no Semantic Scholar**
 
 - [Demo on-line(↗)](https://v0-neo-scholar-search.vercel.app)
 
@@ -126,7 +112,11 @@ Gerador de QRCODE
 
 ---
 
-### NeoSistemaEspecialista - Um sistema especialista (supabase)
+### NeoSistemaEspecialista 
+
+**Um criador de sistemas especialistas** 
+
+<!-- supabase -->
 
 - [Demo on-line(↗)](https://neosistemaespecialista.vercel.app/)
 
@@ -138,21 +128,9 @@ Gerador de QRCODE
 
 ---
 
-### NeoSP - Estimador de Story Points com Inteligência Artificial
+### NeoGeradorQuestoes 
 
-- [Demo on-line(↗)](https://neosp.vercel.app)
-
-- [Código-fonte (↗)](https://github.com/giseldo/estimador_de_story_points)
-
-![image](https://github.com/user-attachments/assets/c7c83382-4655-413c-b658-c28f39933d46)
-
-![image](https://github.com/user-attachments/assets/7e6c2397-7d8c-4154-bf32-e4c56d11b825)
-
-![image](https://github.com/user-attachments/assets/3bcaab4c-4d4d-4c4b-90ba-43d9f938bde9)
-
----
-
-### NeoGeradorQuestoes - Um Gerador de Questões com Inteligência Artificial
+**Um Gerador de Questões com Inteligência Artificial**
 
 - [Demo on-line(↗)](https://neogeradordequestoes.vercel.app/)
 
@@ -164,7 +142,9 @@ Gerador de QRCODE
 
 ---
 
-### NeoMarkdow - Um Editor markdown com Inteligência Artificial
+### NeoMarkdow 
+
+**Um Editor markdown com Inteligência Artificial**
 
 - [Demo on-line(↗)](https://neomarkdowneditor.vercel.app/)
 
@@ -177,18 +157,6 @@ Gerador de QRCODE
 ![image](https://github.com/user-attachments/assets/3fb3666c-c381-4254-b380-0034e1d5463a)
 
 ---
-
-<!-- ### NeoDinamicaSistemas - Um Criador de Dinâmica de Sistemas (versão beta) (não usa banco de dados)
-
-- [Demo on-line(↗)](https://v0-dynamic-system-diagrams.vercel.app/)
-
-- [Código-fonte (↗)](https://github.com/giseldo/neodinamicasistemas-v0)
-
-![image](https://github.com/user-attachments/assets/e94d03bb-c9e9-4207-943c-fefb1fda3a25)
-
-![image](https://github.com/user-attachments/assets/0cbfc7ea-ee5d-49f3-9b0a-17724a96ee1c) 
-
---- -->
 
 ### NeoKanbamPomodoro - Um Kambam com Pomodoro (neon)
 
@@ -424,3 +392,43 @@ Um Google Sala de aula com métricas
 [NeoSE](https://giseldo-neo-sistema-especialista.hf.space)
 
 ![image](https://github.com/user-attachments/assets/72a0aded-fecd-4d85-803f-6de38c58d161)
+
+---
+
+### NeoSP 
+
+**Estimador de Story Points com Inteligência Artificial**
+
+- [Demo on-line(↗)](https://neosp.vercel.app)
+
+- [Código-fonte (↗)](https://github.com/giseldo/estimador_de_story_points)
+
+![image](https://github.com/user-attachments/assets/c7c83382-4655-413c-b658-c28f39933d46)
+
+![image](https://github.com/user-attachments/assets/7e6c2397-7d8c-4154-bf32-e4c56d11b825)
+
+![image](https://github.com/user-attachments/assets/3bcaab4c-4d4d-4c4b-90ba-43d9f938bde9)
+
+---
+
+## Kleber
+
+### chronostask
+
+- [Demo on-line(↗)](https://chronostask.vercel.app/)
+
+![alt text](/images/chronotask.png)
+
+### calliopetts
+
+- [Demo on-line(↗)](https://calliopetts.vercel.app/)
+
+![alt text](/images/calliopetts.png)
+
+### concentrare
+
+- [Demo on-line(↗)](https://concentrare.vercel.app/)
+
+![alt text](/images/concentrare.png)
+
+
