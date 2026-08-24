@@ -96,10 +96,10 @@ toc: True
 ---
 
 {{< columns >}}
-{{< figure src="/images/livro/mat/capa.png" width="75%" >}}
+{{< figure src="/images/livro/capa.png" width="75%" >}}
 {{< column >}}
 
-## Modelos de Linguagem com Python (versão rascunho)
+## Fundamentos Matemáticos para Modelos de Linguagem (versão rascunho)
 
 **Uma abordagem teórico-prática**
 
