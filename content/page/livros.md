@@ -96,6 +96,21 @@ toc: True
 ---
 
 {{< columns >}}
+{{< figure src="/images/livro/mat/capa.png" width="75%" >}}
+{{< column >}}
+
+## Modelos de Linguagem com Python (versão rascunho)
+
+**Uma abordagem teórico-prática**
+
+<a href="https://giseldo.github.io/livro-fundamentos-matematicos/" target="_blank">Versão HTML (↗)</a></br>
+<a href="https://giseldo.github.io/livro-fundamentos-matematicos/Fundamentos-Matem%C3%A1ticos-para-LLMs.pdf" target="_blank">Versão PDF (↗)</a></br>
+
+{{< endcolumns >}}
+
+---
+
+{{< columns >}}
 {{< figure src="/images/livro/reg/capa.png" width="75%" >}}
 {{< column >}}
 
