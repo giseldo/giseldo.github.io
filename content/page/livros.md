@@ -88,8 +88,10 @@ toc: True
 
 **Uma abordagem teórico-prática**
 
-<a href="https://giseldo.github.io/Livro-Giseldo---Explicando-Transformer-v5/" target="_blank">Versão HTML (↗)</a></br>
-<a href="https://giseldo.github.io/Livro-Giseldo---Explicando-Transformer-v5/Livro-Giseldo---Explicando-Transformer-v5.pdf" target="_blank">Versão PDF (↗)</a></br>
+
+
+<a href="https://giseldo.github.io/livro-modelo-de-linguagem/" target="_blank">Versão HTML (↗)</a></br>
+<a href="https://giseldo.github.io/livro-modelo-de-linguagem/Modelos-de-Linguagem-com-Python.pdf" target="_blank">Versão PDF (↗)</a></br>
 
 {{< endcolumns >}}
 
