@@ -82,7 +82,7 @@ toc: true
 
 ### Axis
 
-- [Link (↗)](https://axis.vercel.app/)
+- [Link (↗)](https://axis-ifal.vercel.app/)
 
 -  ![image](https://github.com/user-attachments/assets/b8135ef3-cf1c-419d-906c-bf79c1ed7592)
 
@@ -94,7 +94,7 @@ toc: true
 
 - [Link (↗)](https://neomindmap.vercel.app/)
 
-- ![image](/images/neomindmap.png)
+![image](/images/neomindmap.png)
 
 ---
 
@@ -106,7 +106,7 @@ toc: true
 
 <!-- [Código-fonte (↗)](https://github.com/giseldo/neoqrcode) -->
 
-- ![image](/images/neoqrcode.png)
+![image](/images/neoqrcode.png)
 
 ---
 
