@@ -21,6 +21,8 @@ toc: true
 <!-- Neo Dinamica Sistemas --> <!-- Neo Advocate -->
 
 - [NeoChatDesktop - Converse com modelos de linguagem](#neochatdesktop)
+- [Mathx - Matemática divertida](#mathx)
+- [Axis - Auxílio ao estudante](#axis)
 - [NeoMindMap - Um criador de mapa mental](#neomindmap)
 - [NeoMarkdow - Um Editor markdown com Inteligência Artificial](#neomarkdow)
 - [Neoqrcode - Cria QRCode](#neoqrcode)
@@ -29,27 +31,27 @@ toc: true
 - [NeoSistemaEspecialista - Um sistema especialista (supabase)](#neosistemaespecialista)
 - [NeoGeradorQuestoes - Um Gerador de Questões com Inteligência Artificial](#neogeradorquestoes)
 - [NeoKambamPomodoro - Um Kambam com Pomodoro (neon)](#neokambampomodoro---um-kambam-com-pomodoro-neon)
-- [NeoAIMLEditor - Cria Chatbots com AIML](#neoaimleditor---cria-chatbots-com-aiml)
-- [NeoDeteccaoFraude -  Detecção de fraudes em contratos com IA (beta)](#neodeteccaofraude---detecção-de-fraudes-em-contratos-com-ia-beta)
-- [NeoBPMNEditorIO - Crie diagramas BPMN conversando com BPMN.io](#neobpmneditorio---crie-diagramas-bpmn-conversando-com-bpmnio)
-- [NeoBPMNEditor - Um simples modelador visual de BPMN](#neobpmneditor---um-simples-modelador-visual-de-bpmn) <!-- BOLT -->
-- [NeoReadability - Text Readability Analyzer](#neoreadability---text-readability-analyzer)
-- [NeoMarkdowL - Um simples editor de Markdow](#neomarkdowl---um-simples-editor-de-markdow) <!-- LOVABLE -->
-- [NeoLatex - Um simples editor de Latex](#neolatex---um-simples-editor-de-latex)
-- [NeoMermaid - Um simples editor de Mermaid](#neomermaid---um-simples-editor-de-mermaid)
-- [NeoCursos - Venda de cursos on-line (supabase)](#neocursos---venda-de-cursos-on-line-supabase)
-- [NeoPLNChatbot - Construtor de Chatbots com PLN (intenção e response)](#neoplnchatbot---construtor-de-chatbots-com-pln-intenção-e-response)
-- [NeoPDFEditor - Neo PDF Editor](#neopdfeditor---neo-pdf-editor)
-- [NeoAVA - Ambiente Virtual de Aprendizagem com Autorregulação](#neoava---ambiente-virtual-de-aprendizagem-com-autorregulação) <!-- OUTROS -->
-- [Chatbot baseado no chatbot Eliza de 1966 (hugging face)](#chatbot-baseado-no-chatbot-eliza-de-1966-hugging-face)
-- [NeoChatbots - Chatbots com RAG (fora do ar) (hugging face)](#neochatbots---chatbots-com-rag-fora-do-ar-hugging-face)
-- [NeoStudy - Um Gerador de Plano de estudo com IA (fora do ar) (hugging face)](#neostudy---um-gerador-de-plano-de-estudo-com-ia-fora-do-ar-hugging-face)
-- [NeoCalendar - Calendário de eventos científicos (hugging face)](#neocalendar---calendário-de-eventos-científicos-hugging-face)
-- [Previsão de Notas com aprendizagem de máquina (hugging face)](#previsão-de-notas-com-aprendizagem-de-máquina-hugging-face)
-- [Neo Google Sala de Aula (protótipo) (lovable)](#neo-google-sala-de-aula-protótipo-lovable)
-- [NeoUST - User Story Tutor - Um software para Previsão e melhoria de User Stories (streamlit)](#neoust---user-story-tutor---um-software-para-previsão-e-melhoria-de-user-stories-streamlit)
-- [NeoSE - Um simples Sistema Especialista (streamlit)](#neose---um-simples-sistema-especialista-streamlit)
-- [NeoSP - Estimador de Story Points com Inteligência Artificial](#neosp---estimador-de-story-points-com-inteligência-artificial)
+- [NeoAIMLEditor - Cria Chatbots com AIML](#neoaimleditor)
+- [NeoDeteccaoFraude -  Detecção de fraudes em contratos com IA (beta)](#neodeteccaofraude)
+- [NeoBPMNEditorIO - Crie diagramas BPMN conversando com BPMN.io](#neobpmneditorio)
+- [NeoBPMNEditor - Um simples modelador visual de BPMN](#neobpmneditor) 
+- [NeoReadability - Text Readability Analyzer](#neoreadability)
+- [NeoMarkdowL - Um simples editor de Markdow](#neomarkdowl)
+- [NeoLatex - Um simples editor de Latex](#neolatex)
+- [NeoMermaid - Um simples editor de Mermaid](#neomermaid)
+- [NeoCursos - Venda de cursos on-line (supabase)](#neocursos)
+- [NeoPLNChatbot - Construtor de Chatbots com PLN (intenção e response)](#neoplnchatbot)
+- [NeoPDFEditor - Neo PDF Editor](#neopdfeditor)
+- [NeoAVA - Ambiente Virtual de Aprendizagem com Autorregulação](#neoava)
+- [Chatbot Eliza](#chatbot-eliza)
+- [NeoChatbots - Chatbots com RAG](#neochatbots)
+- [NeoStudy - Um Gerador de Plano de estudo com IA](#neostudy)
+- [NeoCalendar - Calendário de eventos científicos](#neocalendar)
+- [Previsão de Notas com aprendizagem de máquina](#previsão-de-notas-com-aprendizagem-de-máquina-hugging-face)
+- [Neo Google Sala de Aula](#neo-google-sala-de-aula)
+- [NeoUST - User Story Tutor - Um software para Previsão e melhoria de User Stories (streamlit)](#neo-user-story-tutor)
+- [Neo Sistema Especialista - Um simples Sistema Especialista (streamlit)](#neo-sistema-especialista)
+- [Neo Story Point - Estimador de Story Points com Inteligência Artificial](#neo-story-point)
 
 ---
 
@@ -168,7 +170,9 @@ toc: true
 
 ---
 
-### NeoKanbamPomodoro - Um Kambam com Pomodoro (neon)
+### NeoKanbamPomodoro
+
+**Um Kambam com Pomodoro**
 
 - [Link (↗)](https://neokanbampomodoro.vercel.app/)
 
@@ -180,7 +184,9 @@ toc: true
 
 ---
 
-### NeoAIMLEditor - Cria Chatbots com AIML
+### NeoAIMLEditor
+
+**Cria Chatbots com AIML**
 
 - [Link (↗)](https://v0-aiml-chatbot-editor.vercel.app)
 
@@ -192,7 +198,9 @@ toc: true
 
 ---
 
-### NeoDeteccaoFraude -  Detecção de fraudes em contratos com IA (beta)
+### NeoDeteccaoFraude 
+
+**Detecção de fraudes em contratos com IA (beta)**
 
 - [Link (↗)](https://neodetccaofraude.vercel.app/)
 
@@ -204,7 +212,9 @@ toc: true
 
 ---
 
-### NeoBPMNEditorIO - Crie diagramas BPMN conversando com BPMN.io
+### NeoBPMNEditorIO 
+
+**Crie diagramas BPMN conversando com BPMN.io**
 
 - [Link (↗)](https://v0-business-process-modeler.vercel.app/)
 
@@ -214,7 +224,9 @@ toc: true
 
 ---
 
-### NeoBPMNEditor - Um simples modelador visual de BPMN
+### NeoBPMNEditor
+
+**Um simples modelador visual de BPMN**
 
 - [Link (↗)](https://giseldo.github.io/neobpmn/)
 
@@ -224,7 +236,7 @@ toc: true
 
 ---
 
-### NeoReadability - Text Readability Analyzer
+### NeoReadability
 
 Text Readability Analyzer
 
@@ -236,7 +248,9 @@ Text Readability Analyzer
 
 ---
 
-### NeoMarkdow - Um simples editor de Markdow
+### NeoMarkdow 
+
+**Um simples editor de Markdow**
 
 - [Link (↗)](https://clean-markdown-canvas.lovable.app/)
 
@@ -246,7 +260,9 @@ Text Readability Analyzer
 
 ---
 
-### NeoLatex - Um simples editor de Latex
+### NeoLatex 
+
+**Um simples editor de Latex**
 
 - [Link (↗)](https://clean-latex-canvas.lovable.app/)
 
@@ -256,7 +272,9 @@ Text Readability Analyzer
 
 ---
 
-### NeoMermaid - Um simples editor de Mermaid
+### NeoMermaid 
+
+**Um simples editor de Mermaid**
 
 - [Link (↗)](https://clean-mermaid.lovable.app/)
 
@@ -266,7 +284,9 @@ Text Readability Analyzer
 
 ---
 
-### NeoCursos - Venda de cursos on-line (supabase)
+### NeoCursos 
+
+**Venda de cursos on-line**
 
 - [Link (↗)](https://skill-up-course-portal.lovable.app/)
 
@@ -276,7 +296,9 @@ Text Readability Analyzer
 
 ---
 
-### NeoPLNChatbot - Construtor de Chatbots com PLN (intenção e response)
+### NeoPLNChatbot 
+
+**Construtor de Chatbots com PLN (intenção e response)**
 
 - [Link (↗)](https://flow-buddy-chat.lovable.app/)
 
@@ -288,7 +310,9 @@ Text Readability Analyzer
 
 ---
 
-### NeoPDFEditor - Neo PDF Editor 
+### NeoPDFEditor 
+
+**Neo PDF Editor**
 
 Exlui páginas do PDF e realiza Merge
 
@@ -300,7 +324,9 @@ Exlui páginas do PDF e realiza Merge
 
 ---
 
-### NeoAVA - Ambiente Virtual de Aprendizagem com Autorregulação (streamlit) 
+### NeoAVA 
+
+**Ambiente Virtual de Aprendizagem com Autorregulação**
 
 - [Link (↗)](https://autorregulacao.streamlit.app/)
 
@@ -308,7 +334,7 @@ Exlui páginas do PDF e realiza Merge
 
 ---
 
-### Chatbot baseado no chatbot Eliza de 1966 (hugging face)
+### Chatbot Eliza
 
 **Versão do Eliza com casamento de padrão**
 
@@ -328,7 +354,9 @@ Exlui páginas do PDF e realiza Merge
 
 ---
 
-### NeoChatbots - Chatbots com RAG (fora do ar) (hugging face)
+### NeoChatbots
+
+**Chatbots com RAG**
 
 Chatbots com inteligência artificial. Um chatbot que conversa sobre o manual do aluno do IFAL e outro que conversa sobre o regimento do IFAL
 
@@ -338,7 +366,9 @@ Chatbots com inteligência artificial. Um chatbot que conversa sobre o manual do
 
 ---
 
-### NeoStudy - Um Gerador de Plano de estudo com IA (fora do ar) (hugging face)
+### NeoStudy
+
+**Um Gerador de Plano de estudo com IA**
 
 - [Link (↗)](https://giseldo.github.io/study/)
 
@@ -346,7 +376,9 @@ Chatbots com inteligência artificial. Um chatbot que conversa sobre o manual do
 
 ---
 
-### NeoCalendar - Calendário de eventos científicos (hugging face)
+### NeoCalendar
+
+**Calendário de eventos científicos**
 
 - [Link (↗)](https://giseldo-eventos-v2.hf.space)
 
@@ -362,9 +394,9 @@ Chatbots com inteligência artificial. Um chatbot que conversa sobre o manual do
 
 ---
 
-### Neo Google Sala de Aula (protótipo) (lovable)
+### Neo Google Sala de Aula
 
-Um Google Sala de aula com métricas
+**Um Google Sala de aula com métricas**
 
 - [Link (↗)](https://student-insight-classroom-metrics.lovable.app/)
 
@@ -376,13 +408,19 @@ Um Google Sala de aula com métricas
 
 ---
 
-### NeoUST - User Story Tutor - Um software para Previsão e melhoria de User Stories (streamlit)
+### Neo User Story Tutor 
+
+**Um software para Previsão e melhoria de User Stories**
 
 - [Link (↗)](https://giseldo-userstory.static.hf.space) 
 
 ---
 
-### NeoSE - Um simples Sistema Especialista (streamlit) (versão beta) (hugging face)
+### Neo Sistema Especialista
+
+**Um simples Sistema Especialista**
+
+(streamlit) (versão beta) (hugging face)
 
 - [Link (↗)](https://giseldo-neo-sistema-especialista.hf.space)
 
@@ -390,7 +428,7 @@ Um Google Sala de aula com métricas
 
 ---
 
-### NeoSP 
+### Neo Story Point 
 
 **Estimador de Story Points com Inteligência Artificial**
 
@@ -408,11 +446,15 @@ Um Google Sala de aula com métricas
 
 ## Kleber
 
+---
+
 ### chronostask
 
 - [Link (↗)](https://chronostask.vercel.app/)
 
 ![image](/images/chronotask.png)
+
+---
 
 ### calliopetts
 
@@ -420,17 +462,23 @@ Um Google Sala de aula com métricas
 
 ![image](/images/calliopetts.png)
 
+---
+
 ### concentrare
 
 - [Link (↗)](https://concentrare.vercel.app/)
 
 ![image](/images/concentrare.png)
 
+---
+
 ### Estudio Markdown
 
 - [Link (↗)](https://mdstudioreader.vercel.app/)
 
 ![image](https://github.com/user-attachments/assets/b4a01f16-ae77-4f78-84ef-46f89615a8d7)
+
+---
 
 ### Confluxgray
 
