@@ -9,9 +9,11 @@ toc: true
 
 ## Índice
 
+<!-- NeoAdvocate - Um software de gestão de advocacia (prototipo)
+- [Link (↗)](https://v0-new-project-rvge2mxlgpt.vercel.app/) [Código-fonte (↗)](https://github.com/giseldo/neoadvocate)  [image](https://github.com/user-attachments/assets/c8d9dffa-9bb3-44e8-a077-ef0c4f2f6bc6) ![image](https://github.com/user-attachments/assets/b5cbf3f0-6518-46e0-8a0c-0fe1998f4185) -->
 <!-- Neo ClassRoom V0 (supabase) https://v0.dev/chat/neo-classroom-clone-D6qhyfkw8hvhttps://v0.dev/chat/neo-classroom-clone-D6qhyfkw8hv  -->
 <!-- Neo Gestão Turma V0 (neon) https://v0.dev/chat/neo-classroom-clone-D6qhyfkw8hvhttps://v0.dev/chat/neo-classroom-clone-D6qhyfkw8h](https://v0.dev/chat/neo-gestao-turma-Lb1HachUMdR)  -->
-<!-- ### NeoDinamicaSistemas - Um Criador de Dinâmica de Sistemas (versão beta) (não usa banco de dados)
+<!-- NeoDinamicaSistemas - Um Criador de Dinâmica de Sistemas (versão beta) (não usa banco de dados)
 - [Demo on-line(↗)](https://v0-dynamic-system-diagrams.vercel.app/)
 - [Código-fonte (↗)](https://github.com/giseldo/neodinamicasistemas-v0)
 ![image](https://github.com/user-attachments/assets/e94d03bb-c9e9-4207-943c-fefb1fda3a25)
@@ -55,16 +57,32 @@ toc: true
   - [chronostask - Um gerenciador de tarefas](#chronostask)
   - [calliopetts - Converter texto em audio](#calliopetts)
   - [concentrare - Pomodoro com tarefas](#concentrare)
-  - [studiomarkdow - Pomodoro com tarefas](#estudio_markdown)
+  - [studiomarkdow - Pomodoro com tarefas](#estudio-markdown)
   - [confluxgray - Jogo](#confluxgray) 
 
 ---
 
 ### Neochatdesktop
 
-- [Link(↗)](https://neochatdesktop.vercel.app/)
+- [Link (↗)](https://neochatdesktop.vercel.app/)
 
 -  ![image](https://github.com/user-attachments/assets/e1917a81-965d-48ac-8da0-115e0dfc8717)
+
+---
+
+### Mathx
+
+- [Link (↗)](https://mathx2.vercel.app/)
+
+-  ![image](https://github.com/user-attachments/assets/0b5a6621-08cc-4f90-bd91-22491ec46fb0)
+
+---
+
+### Axis
+
+- [Link (↗)](https://axis.vercel.app/)
+
+-  ![image](https://github.com/user-attachments/assets/b8135ef3-cf1c-419d-906c-bf79c1ed7592)
 
 ---
 
@@ -72,7 +90,7 @@ toc: true
 
 **Criador de mapas mentais**
 
-- [Link(↗)](https://neomindmap.vercel.app/)
+- [Link (↗)](https://neomindmap.vercel.app/)
 
 - ![image](/images/neomindmap.png)
 
@@ -82,7 +100,7 @@ toc: true
 
 **Gerador de QRCODE**
 
-- [Link(↗)](https://v0-neo-scholar-search.vercel.app)
+- [Link (↗)](https://v0-neo-scholar-search.vercel.app)
 
 <!-- [Código-fonte (↗)](https://github.com/giseldo/neoqrcode) -->
 
@@ -94,7 +112,7 @@ toc: true
 
 **Um busca de artigos no Semantic Scholar**
 
-- [Link(↗)](https://v0-neo-scholar-search.vercel.app)
+- [Link (↗)](https://v0-neo-scholar-search.vercel.app)
 
 <!-- [Código-fonte (↗)](https://github.com/giseldo/v0-supabase-expert-sistema) -->
 
@@ -110,7 +128,7 @@ toc: true
 
 <!-- supabase -->
 
-- [Link(↗)](https://neosistemaespecialista.vercel.app/)
+- [Link (↗)](https://neosistemaespecialista.vercel.app/)
 
 <!-- [Código-fonte (↗)](https://github.com/giseldo/v0-supabase-expert-sistema) -->
 
@@ -124,7 +142,7 @@ toc: true
 
 **Um Gerador de Questões com Inteligência Artificial**
 
-- [Link(↗)](https://neogeradordequestoes.vercel.app/)
+- [Link (↗)](https://neogeradordequestoes.vercel.app/)
 
 <!-- [Código-fonte (↗)](https://github.com/giseldo/v0-gerador-de-questoes) -->
 
@@ -138,7 +156,7 @@ toc: true
 
 **Um Editor markdown com Inteligência Artificial**
 
-- [Link(↗)](https://neomarkdowneditor.vercel.app/)
+- [Link (↗)](https://neomarkdowneditor.vercel.app/)
 
 <!-- [Código-fonte (↗)](https://github.com/giseldo/markdown-editor) -->
 
@@ -152,7 +170,7 @@ toc: true
 
 ### NeoKanbamPomodoro - Um Kambam com Pomodoro (neon)
 
-- [Link(↗)](https://neokanbampomodoro.vercel.app/)
+- [Link (↗)](https://neokanbampomodoro.vercel.app/)
 
 <!-- [Código-fonte (↗)](https://github.com/giseldo/v0-gerador-de-questoes) -->
 
@@ -164,7 +182,7 @@ toc: true
 
 ### NeoAIMLEditor - Cria Chatbots com AIML
 
-- [Link(↗)](https://v0-aiml-chatbot-editor.vercel.app)
+- [Link (↗)](https://v0-aiml-chatbot-editor.vercel.app)
 
 <!-- [Código-fonte (↗)](https://github.com/giseldo/v0-gerador-de-questoes) -->
 
@@ -176,7 +194,7 @@ toc: true
 
 ### NeoDeteccaoFraude -  Detecção de fraudes em contratos com IA (beta)
 
-- [Link(↗)](https://neodetccaofraude.vercel.app/)
+- [Link (↗)](https://neodetccaofraude.vercel.app/)
 
 <!-- [Código-fonte (↗)](https://github.com/giseldo/fraud-detection) -->
 
@@ -188,7 +206,7 @@ toc: true
 
 ### NeoBPMNEditorIO - Crie diagramas BPMN conversando com BPMN.io
 
-- [Link(↗)](https://v0-business-process-modeler.vercel.app/)
+- [Link (↗)](https://v0-business-process-modeler.vercel.app/)
 
 <!-- [Código-fonte (↗)](https://github.com/giseldo/bpmn-flow) -->
 
@@ -196,21 +214,9 @@ toc: true
 
 ---
 
-<!-- ### NeoAdvocate - Um software de gestão de advocacia (prototipo)
-
-- [Link(↗)](https://v0-new-project-rvge2mxlgpt.vercel.app/)
-
-<!-- [Código-fonte (↗)](https://github.com/giseldo/neoadvocate) -->
-
-![image](https://github.com/user-attachments/assets/c8d9dffa-9bb3-44e8-a077-ef0c4f2f6bc6)
-
-![image](https://github.com/user-attachments/assets/b5cbf3f0-6518-46e0-8a0c-0fe1998f4185) -->
-
-<!-- Vibe codadas no Bolt -->
-
 ### NeoBPMNEditor - Um simples modelador visual de BPMN
 
-- [Link(↗)](https://giseldo.github.io/neobpmn/)
+- [Link (↗)](https://giseldo.github.io/neobpmn/)
 
 <!-- [Código-fonte (↗)](https://github.com/giseldo/neobpmn) -->
 
@@ -230,11 +236,9 @@ Text Readability Analyzer
 
 ---
 
-<!-- Lovable -->
+### NeoMarkdow - Um simples editor de Markdow
 
-### NeoMarkdowL - Um simples editor de Markdow
-
-- [Link(↗)](https://clean-markdown-canvas.lovable.app/)
+- [Link (↗)](https://clean-markdown-canvas.lovable.app/)
 
 <!-- [Código-fonte (↗)](https://github.com/giseldo/clean-markdown-canvas) -->
 
@@ -244,7 +248,7 @@ Text Readability Analyzer
 
 ### NeoLatex - Um simples editor de Latex
 
-- [Link(↗)](https://clean-latex-canvas.lovable.app/)
+- [Link (↗)](https://clean-latex-canvas.lovable.app/)
 
 <!-- [Código-fonte (↗)](https://github.com/giseldo/clean-latex-canvas) -->
 
@@ -254,7 +258,7 @@ Text Readability Analyzer
 
 ### NeoMermaid - Um simples editor de Mermaid
 
-- [Link(↗)](https://clean-mermaid.lovable.app/)
+- [Link (↗)](https://clean-mermaid.lovable.app/)
 
 <!-- [Código-fonte (↗)](https://github.com/giseldo/clean-mermaid) -->
 
@@ -264,7 +268,7 @@ Text Readability Analyzer
 
 ### NeoCursos - Venda de cursos on-line (supabase)
 
-- [Link(↗)](https://skill-up-course-portal.lovable.app/)
+- [Link (↗)](https://skill-up-course-portal.lovable.app/)
 
 <!-- [Código-fonte (↗)](https://github.com/giseldo/skill-up-course-portal) -->
 
@@ -274,7 +278,7 @@ Text Readability Analyzer
 
 ### NeoPLNChatbot - Construtor de Chatbots com PLN (intenção e response)
 
-- [Link(↗)](https://flow-buddy-chat.lovable.app/)
+- [Link (↗)](https://flow-buddy-chat.lovable.app/)
 
 <!-- [Código-fonte (↗)](https://github.com/giseldo/flow-buddy-chat) -->
 
@@ -288,7 +292,7 @@ Text Readability Analyzer
 
 Exlui páginas do PDF e realiza Merge
 
-- [Link(↗)](https://neo-pdf-editor.lovable.app)
+- [Link (↗)](https://neo-pdf-editor.lovable.app)
 
 <!-- [Código-fonte (↗)](https://github.com/giseldo/neo-pdf-editor) -->
 
@@ -298,7 +302,7 @@ Exlui páginas do PDF e realiza Merge
 
 ### NeoAVA - Ambiente Virtual de Aprendizagem com Autorregulação (streamlit) 
 
-- [Link(↗)](https://autorregulacao.streamlit.app/)
+- [Link (↗)](https://autorregulacao.streamlit.app/)
 
 ![image](/images/neoava.png)
 
@@ -308,7 +312,7 @@ Exlui páginas do PDF e realiza Merge
 
 **Versão do Eliza com casamento de padrão**
 
-- [Link(↗)](https://giseldo-eliza-raiz.hf.space)
+- [Link (↗)](https://giseldo-eliza-raiz.hf.space)
 
 <!-- [Código-fonte (↗)](https://huggingface.co/spaces/giseldo/eliza_raiz/tree/main) -->
 
@@ -316,7 +320,7 @@ Exlui páginas do PDF e realiza Merge
 
 **Versão do Eliza com LLM**
 
-- [Link(↗)](https://giseldo-eliza-llm.hf.space)
+- [Link (↗)](https://giseldo-eliza-llm.hf.space)
 
 <!-- [Código-fonte (↗)](https://huggingface.co/spaces/giseldo/eliza_raiz/tree/main) -->
 
@@ -328,7 +332,7 @@ Exlui páginas do PDF e realiza Merge
 
 Chatbots com inteligência artificial. Um chatbot que conversa sobre o manual do aluno do IFAL e outro que conversa sobre o regimento do IFAL
 
-- [Link(↗)](https://giseldo.github.io/ifal/)
+- [Link (↗)](https://giseldo.github.io/ifal/)
 
 ![image](/images/pages/chatbots.png)
 
@@ -336,7 +340,7 @@ Chatbots com inteligência artificial. Um chatbot que conversa sobre o manual do
 
 ### NeoStudy - Um Gerador de Plano de estudo com IA (fora do ar) (hugging face)
 
-- [Link(↗)](https://giseldo.github.io/study/)
+- [Link (↗)](https://giseldo.github.io/study/)
 
 ![image](/images/pages/planoestudo.png)
 
@@ -344,7 +348,7 @@ Chatbots com inteligência artificial. Um chatbot que conversa sobre o manual do
 
 ### NeoCalendar - Calendário de eventos científicos (hugging face)
 
-- [Link(↗)](https://giseldo-eventos-v2.hf.space)
+- [Link (↗)](https://giseldo-eventos-v2.hf.space)
 
 ![image](/images/pages/calendario.png)
 
@@ -352,7 +356,7 @@ Chatbots com inteligência artificial. Um chatbot que conversa sobre o manual do
 
 ### Previsão de Notas com aprendizagem de máquina (hugging face)
 
-- [Link(↗)](https://giseldo-predictstudentperformance.hf.space)
+- [Link (↗)](https://giseldo-predictstudentperformance.hf.space)
 
 ![image](/images/pages/previsao.png)
 
@@ -362,7 +366,7 @@ Chatbots com inteligência artificial. Um chatbot que conversa sobre o manual do
 
 Um Google Sala de aula com métricas
 
-- [Link(↗)](https://student-insight-classroom-metrics.lovable.app/)
+- [Link (↗)](https://student-insight-classroom-metrics.lovable.app/)
 
 <!-- [Código-fonte (↗)](https://github.com/giseldo/student-insight-classroom-metrics) -->
 
@@ -374,13 +378,13 @@ Um Google Sala de aula com métricas
 
 ### NeoUST - User Story Tutor - Um software para Previsão e melhoria de User Stories (streamlit)
 
-- [Link(↗)](https://giseldo-userstory.static.hf.space) 
+- [Link (↗)](https://giseldo-userstory.static.hf.space) 
 
 ---
 
 ### NeoSE - Um simples Sistema Especialista (streamlit) (versão beta) (hugging face)
 
-- [Link(↗)](https://giseldo-neo-sistema-especialista.hf.space)
+- [Link (↗)](https://giseldo-neo-sistema-especialista.hf.space)
 
 ![image](https://github.com/user-attachments/assets/72a0aded-fecd-4d85-803f-6de38c58d161)
 
@@ -390,7 +394,7 @@ Um Google Sala de aula com métricas
 
 **Estimador de Story Points com Inteligência Artificial**
 
-- [Link(↗)](https://neosp.vercel.app)
+- [Link (↗)](https://neosp.vercel.app)
 
 <!-- [Código-fonte (↗)](https://github.com/giseldo/estimador_de_story_points) -->
 
@@ -406,25 +410,25 @@ Um Google Sala de aula com métricas
 
 ### chronostask
 
-- [Link(↗)](https://chronostask.vercel.app/)
+- [Link (↗)](https://chronostask.vercel.app/)
 
 ![image](/images/chronotask.png)
 
 ### calliopetts
 
-- [Link(↗)](https://calliopetts.vercel.app/)
+- [Link (↗)](https://calliopetts.vercel.app/)
 
 ![image](/images/calliopetts.png)
 
 ### concentrare
 
-- [Link(↗)](https://concentrare.vercel.app/)
+- [Link (↗)](https://concentrare.vercel.app/)
 
 ![image](/images/concentrare.png)
 
 ### Estudio Markdown
 
-- [Link(↗)](https://mdstudioreader.vercel.app/)
+- [Link (↗)](https://mdstudioreader.vercel.app/)
 
 ![image](https://github.com/user-attachments/assets/b4a01f16-ae77-4f78-84ef-46f89615a8d7)
 
