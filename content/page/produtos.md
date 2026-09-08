@@ -73,7 +73,8 @@ Neo Gestão Turma V0 (neon)
   - [chronostask - Um gerenciador de tarefas](#chronostask)
   - [calliopetts - Converter texto em audio](#calliopetts)
   - [concentrare - Pomodoro com tarefas](#concentrare)
-  - [studiomarkdow - Pomodoro com tarefas](#estudio_markdown) 
+  - [studiomarkdow - Pomodoro com tarefas](#estudio_markdown)
+  - [confluxgray - Jogo](#confluxgray) 
 
 ---
 
@@ -416,24 +417,29 @@ Um Google Sala de aula com métricas
 
 ### chronostask
 
-- [Demo on-line(↗)](https://chronostask.vercel.app/)
+- [Link(↗)](https://chronostask.vercel.app/)
 
 ![alt text](/images/chronotask.png)
 
 ### calliopetts
 
-- [Demo on-line(↗)](https://calliopetts.vercel.app/)
+- [Link(↗)](https://calliopetts.vercel.app/)
 
 ![alt text](/images/calliopetts.png)
 
 ### concentrare
 
-- [Demo on-line(↗)](https://concentrare.vercel.app/)
+- [Link(↗)](https://concentrare.vercel.app/)
 
 ![alt text](/images/concentrare.png)
 
 ### Estudio Markdown
-- [Demo on-line(↗)](https://mdstudioreader.vercel.app/)
+
+- [Link(↗)](https://mdstudioreader.vercel.app/)
 
 ![image](https://github.com/user-attachments/assets/b4a01f16-ae77-4f78-84ef-46f89615a8d7)
+
+### Confluxgray
+
+- [Link(↗)](https://conflux-gray.vercel.app/)
 
