@@ -72,7 +72,8 @@ Neo Gestão Turma V0 (neon)
 - Projetos do Kleber
   - [chronostask - Um gerenciador de tarefas](#chronostask)
   - [calliopetts - Converter texto em audio](#calliopetts)
-  - [concentrare - Pomodoro com tarefas](#concentrare) 
+  - [concentrare - Pomodoro com tarefas](#concentrare)
+  - [studiomarkdow - Pomodoro com tarefas](#estudio_markdown) 
 
 ---
 
