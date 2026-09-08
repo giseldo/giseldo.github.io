@@ -64,8 +64,9 @@ toc: true
 
 - [Link(↗)](https://neochatdesktop.vercel.app/)
 
-- - ![image](https://github.com/user-attachments/assets/e1917a81-965d-48ac-8da0-115e0dfc8717)
+-  ![image](https://github.com/user-attachments/assets/e1917a81-965d-48ac-8da0-115e0dfc8717)
 
+---
 
 ### Neomindmap
 
