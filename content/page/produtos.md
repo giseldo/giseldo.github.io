@@ -435,5 +435,5 @@ Um Google Sala de aula com métricas
 ### Estudio Markdown
 - [Demo on-line(↗)](https://mdstudioreader.vercel.app/)
 
-<img width="1226" height="845" alt="image" src="https://github.com/user-attachments/assets/b4a01f16-ae77-4f78-84ef-46f89615a8d7" />
+![image](https://github.com/user-attachments/assets/b4a01f16-ae77-4f78-84ef-46f89615a8d7)
 
