@@ -68,7 +68,7 @@ toc: true
 
 - [Link (↗)](https://neochatdesktop.vercel.app/)
 
--  ![image](https://github.com/user-attachments/assets/e1917a81-965d-48ac-8da0-115e0dfc8717)
+![image](https://github.com/user-attachments/assets/e1917a81-965d-48ac-8da0-115e0dfc8717)
 
 ---
 
@@ -76,7 +76,7 @@ toc: true
 
 - [Link (↗)](https://mathx2.vercel.app/)
 
--  ![image](https://github.com/user-attachments/assets/0b5a6621-08cc-4f90-bd91-22491ec46fb0)
+![image](https://github.com/user-attachments/assets/0b5a6621-08cc-4f90-bd91-22491ec46fb0)
 
 ---
 
@@ -84,7 +84,7 @@ toc: true
 
 - [Link (↗)](https://axis-ifal.vercel.app/)
 
--  ![image](https://github.com/user-attachments/assets/b8135ef3-cf1c-419d-906c-bf79c1ed7592)
+![image](https://github.com/user-attachments/assets/b8135ef3-cf1c-419d-906c-bf79c1ed7592)
 
 ---
 
