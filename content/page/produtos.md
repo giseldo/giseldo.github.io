@@ -9,35 +9,23 @@ toc: true
 
 ## Índice
 
-<!-- 
-Neo ClassRoom V0 (supabase)
-https://v0.dev/chat/neo-classroom-clone-D6qhyfkw8hvhttps://v0.dev/chat/neo-classroom-clone-D6qhyfkw8hv 
--->
-
-<!-- 
-Neo Gestão Turma V0 (neon)
-[https://v0.dev/chat/neo-classroom-clone-D6qhyfkw8hvhttps://v0.dev/chat/neo-classroom-clone-D6qhyfkw8h](https://v0.dev/chat/neo-gestao-turma-Lb1HachUMdR)v 
--->
-
-<!-- 
-
-### NeoDinamicaSistemas - Um Criador de Dinâmica de Sistemas (versão beta) (não usa banco de dados)
-
+<!-- Neo ClassRoom V0 (supabase)
+https://v0.dev/chat/neo-classroom-clone-D6qhyfkw8hvhttps://v0.dev/chat/neo-classroom-clone-D6qhyfkw8hv  -->
+<!-- Neo Gestão Turma V0 (neon)
+[https://v0.dev/chat/neo-classroom-clone-D6qhyfkw8hvhttps://v0.dev/chat/neo-classroom-clone-D6qhyfkw8h](https://v0.dev/chat/neo-gestao-turma-Lb1HachUMdR)  -->
+<!-- ### NeoDinamicaSistemas - Um Criador de Dinâmica de Sistemas (versão beta) (não usa banco de dados)
 - [Demo on-line(↗)](https://v0-dynamic-system-diagrams.vercel.app/)
 - [Código-fonte (↗)](https://github.com/giseldo/neodinamicasistemas-v0)
 ![image](https://github.com/user-attachments/assets/e94d03bb-c9e9-4207-943c-fefb1fda3a25)
-![image](https://github.com/user-attachments/assets/0cbfc7ea-ee5d-49f3-9b0a-17724a96ee1c) 
-
--->
-
+![image](https://github.com/user-attachments/assets/0cbfc7ea-ee5d-49f3-9b0a-17724a96ee1c) -->
 <!-- Neo Dinamica Sistemas -->
-
 <!-- Neo Advocate -->
 
+- [NeoChatDesktop - Converse com modelos de linguagem](#neochatdesktop)
 - [NeoMindMap - Um criador de mapa mental](#neomindmap)
 - [NeoMarkdow - Um Editor markdown com Inteligência Artificial](#neomarkdow)
-- [Neoqrcode](#neoqrcode)
-- [Neurobio](#neurobio)
+- [Neoqrcode - Cria QRCode](#neoqrcode)
+- [Neurobio - Gera material para neurodivergentes](#neurobio)
 - [NeoScholarSearch - Um busca de artigos no Semantic Scholar](#neoscholarsearch)
 - [NeoSistemaEspecialista - Um sistema especialista (supabase)](#neosistemaespecialista)
 - [NeoGeradorQuestoes - Um Gerador de Questões com Inteligência Artificial](#neogeradorquestoes)
@@ -45,18 +33,15 @@ Neo Gestão Turma V0 (neon)
 - [NeoAIMLEditor - Cria Chatbots com AIML](#neoaimleditor---cria-chatbots-com-aiml)
 - [NeoDeteccaoFraude -  Detecção de fraudes em contratos com IA (beta)](#neodeteccaofraude---detecção-de-fraudes-em-contratos-com-ia-beta)
 - [NeoBPMNEditorIO - Crie diagramas BPMN conversando com BPMN.io](#neobpmneditorio---crie-diagramas-bpmn-conversando-com-bpmnio)
-<!-- BOLT -->
-- [NeoBPMNEditor - Um simples modelador visual de BPMN](#neobpmneditor---um-simples-modelador-visual-de-bpmn)
+- [NeoBPMNEditor - Um simples modelador visual de BPMN](#neobpmneditor---um-simples-modelador-visual-de-bpmn) <!-- BOLT -->
 - [NeoReadability - Text Readability Analyzer](#neoreadability---text-readability-analyzer)
-<!-- LOVABLE -->
-- [NeoMarkdowL - Um simples editor de Markdow](#neomarkdowl---um-simples-editor-de-markdow)
+- [NeoMarkdowL - Um simples editor de Markdow](#neomarkdowl---um-simples-editor-de-markdow) <!-- LOVABLE -->
 - [NeoLatex - Um simples editor de Latex](#neolatex---um-simples-editor-de-latex)
 - [NeoMermaid - Um simples editor de Mermaid](#neomermaid---um-simples-editor-de-mermaid)
 - [NeoCursos - Venda de cursos on-line (supabase)](#neocursos---venda-de-cursos-on-line-supabase)
 - [NeoPLNChatbot - Construtor de Chatbots com PLN (intenção e response)](#neoplnchatbot---construtor-de-chatbots-com-pln-intenção-e-response)
 - [NeoPDFEditor - Neo PDF Editor](#neopdfeditor---neo-pdf-editor)
-<!-- OUTROS -->
-- [NeoAVA - Ambiente Virtual de Aprendizagem com Autorregulação (streamlit)](#neoava---ambiente-virtual-de-aprendizagem-com-autorregulação-streamlit)
+- [NeoAVA - Ambiente Virtual de Aprendizagem com Autorregulação](#neoava---ambiente-virtual-de-aprendizagem-com-autorregulação) <!-- OUTROS -->
 - [Chatbot baseado no chatbot Eliza de 1966 (hugging face)](#chatbot-baseado-no-chatbot-eliza-de-1966-hugging-face)
 - [NeoChatbots - Chatbots com RAG (fora do ar) (hugging face)](#neochatbots---chatbots-com-rag-fora-do-ar-hugging-face)
 - [NeoStudy - Um Gerador de Plano de estudo com IA (fora do ar) (hugging face)](#neostudy---um-gerador-de-plano-de-estudo-com-ia-fora-do-ar-hugging-face)
@@ -88,7 +73,7 @@ Neo Gestão Turma V0 (neon)
 
 ---
 
-## Neoqrcode
+### Neoqrcode
 
 **Gerador de QRCODE**
 
@@ -100,7 +85,7 @@ Neo Gestão Turma V0 (neon)
 
 ---
 
-## NeoScholarSearch
+### NeoScholarSearch
 
 **Um busca de artigos no Semantic Scholar**
 
@@ -216,7 +201,7 @@ Neo Gestão Turma V0 (neon)
 
 ![image](https://github.com/user-attachments/assets/b5cbf3f0-6518-46e0-8a0c-0fe1998f4185) -->
 
-## Vibe codadas no Bolt
+<!-- Vibe codadas no Bolt -->
 
 ### NeoBPMNEditor - Um simples modelador visual de BPMN
 
@@ -240,7 +225,7 @@ Text Readability Analyzer
 
 ---
 
-## Lovable
+<!-- Lovable -->
 
 ### NeoMarkdowL - Um simples editor de Markdow
 
@@ -304,8 +289,6 @@ Exlui páginas do PDF e realiza Merge
 ![image](/images/neopdfeditor.png)
 
 ---
-
-## Outros
 
 ### NeoAVA - Ambiente Virtual de Aprendizagem com Autorregulação (streamlit) 
 
