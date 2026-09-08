@@ -21,6 +21,7 @@ toc: true
 <!-- Neo Dinamica Sistemas --> <!-- Neo Advocate -->
 
 - [NeoChatDesktop - Converse com modelos de linguagem](#neochatdesktop)
+- [NeoReview - Sistema para suportar revisão sistemática](#neoreview)
 - [Mathx - Matemática divertida](#mathx)
 - [Axis - Auxílio ao estudante](#axis)
 - [NeoMindMap - Um criador de mapa mental](#neomindmap)
@@ -30,7 +31,7 @@ toc: true
 - [NeoScholarSearch - Um busca de artigos no Semantic Scholar](#neoscholarsearch)
 - [NeoSistemaEspecialista - Um sistema especialista (supabase)](#neosistemaespecialista)
 - [NeoGeradorQuestoes - Um Gerador de Questões com Inteligência Artificial](#neogeradorquestoes)
-- [NeoKambamPomodoro - Um Kambam com Pomodoro (neon)](#neokambampomodoro---um-kambam-com-pomodoro-neon)
+- [NeoKambamPomodoro - Um Kambam com Pomodoro (neon)](#neokambampomodoro)
 - [NeoAIMLEditor - Cria Chatbots com AIML](#neoaimleditor)
 - [NeoDeteccaoFraude -  Detecção de fraudes em contratos com IA (beta)](#neodeteccaofraude)
 - [NeoBPMNEditorIO - Crie diagramas BPMN conversando com BPMN.io](#neobpmneditorio)
@@ -66,13 +67,28 @@ toc: true
 
 ### Neochatdesktop
 
+**Seu novo Workspace de IA**
+**Use os Modelos Mistral, Groq e Deepssek em uma aplicação desktop**
+
 - [Link (↗)](https://neochatdesktop.vercel.app/)
 
 ![image](https://github.com/user-attachments/assets/e1917a81-965d-48ac-8da0-115e0dfc8717)
 
 ---
 
+### Neoreview
+
+**Sistema para revisões sistemáticas**
+
+- [Link (↗)](https://neoreeview.vercel.app/)
+
+![image]((https://github.com/user-attachments/assets/a15c47fb-857d-478e-91c7-da7240795be3)
+
+---
+
 ### Mathx
+
+**Ensina matemática**
 
 - [Link (↗)](https://mathx2.vercel.app/)
 
@@ -81,6 +97,8 @@ toc: true
 ---
 
 ### Axis
+
+**Auxilia Alunos**
 
 - [Link (↗)](https://axis-ifal.vercel.app/)
 
