@@ -20,48 +20,50 @@ toc: true
 ![image](https://github.com/user-attachments/assets/0cbfc7ea-ee5d-49f3-9b0a-17724a96ee1c) -->
 <!-- Neo Dinamica Sistemas --> <!-- Neo Advocate -->
 
-- [NeoChatDesktop - Converse com modelos de linguagem](#neochatdesktop)
-- [NeoReview - Sistema para suportar revisão sistemática](#neoreview)
+- [Neo Chat Desktop - Converse com modelos de linguagem](#neochatdesktop)
+- [Neo Review - Sistema para suportar revisão sistemática](#neoreview)
 - [Mathx - Matemática divertida](#mathx)
 - [Axis - Auxílio ao estudante](#axis)
-- [NeoMindMap - Um criador de mapa mental](#neomindmap)
-- [NeoMarkdow - Um Editor markdown com Inteligência Artificial](#neomarkdow)
-- [Neoqrcode - Cria QRCode](#neoqrcode)
+- [Neo Mind Map - Um criador de mapa mental](#neomindmap)
+- [Neo Markdow - Um Editor markdown com Inteligência Artificial](#neomarkdow)
+- [Neo Qrcode - Cria QRCode](#neoqrcode)
+- [Neo Java Rancho - Aprendendo java com Jogos](#neojavarancho)
+- [Neo Java Palavras - Aprendendo java com Jogos](#neojavapalavras)
 - [Neurobio - Gera material para neurodivergentes](#neurobio)
-- [NeoScholarSearch - Um busca de artigos no Semantic Scholar](#neoscholarsearch)
-- [NeoSistemaEspecialista - Um sistema especialista (supabase)](#neosistemaespecialista)
-- [NeoGeradorQuestoes - Um Gerador de Questões com Inteligência Artificial](#neogeradorquestoes)
-- [NeoKambamPomodoro - Um Kambam com Pomodoro (neon)](#neokambampomodoro)
-- [NeoAIMLEditor - Cria Chatbots com AIML](#neoaimleditor)
-- [NeoDeteccaoFraude -  Detecção de fraudes em contratos com IA (beta)](#neodeteccaofraude)
-- [NeoBPMNEditorIO - Crie diagramas BPMN conversando com BPMN.io](#neobpmneditorio)
-- [NeoBPMNEditor - Um simples modelador visual de BPMN](#neobpmneditor) 
-- [NeoReadability - Text Readability Analyzer](#neoreadability)
-- [NeoMarkdowL - Um simples editor de Markdow](#neomarkdowl)
-- [NeoLatex - Um simples editor de Latex](#neolatex)
-- [NeoMermaid - Um simples editor de Mermaid](#neomermaid)
-- [NeoCursos - Venda de cursos on-line (supabase)](#neocursos)
-- [NeoPLNChatbot - Construtor de Chatbots com PLN (intenção e response)](#neoplnchatbot)
-- [NeoPDFEditor - Neo PDF Editor](#neopdfeditor)
-- [NeoAVA - Ambiente Virtual de Aprendizagem com Autorregulação](#neoava)
+- [Neo Scholar Search - Um busca de artigos no Semantic Scholar](#neoscholarsearch)
+- [Neo Sistema Especialista - Um sistema especialista (supabase)](#neosistemaespecialista)
+- [Neo Gerador Questoes - Um Gerador de Questões com Inteligência Artificial](#neogeradorquestoes)
+- [Neo Kambam Pomodoro - Um Kambam com Pomodoro (neon)](#neokambampomodoro)
+- [Neo AIML Editor - Cria Chatbots com AIML](#neoaimleditor)
+- [Neo Deteccao Fraude -  Detecção de fraudes em contratos com IA (beta)](#neodeteccaofraude)
+- [Neo BPMN EditorIO - Crie diagramas BPMN conversando com BPMN.io](#neobpmneditorio)
+- [Neo BPMN Editor - Um simples modelador visual de BPMN](#neobpmneditor) 
+- [Neo Readability - Text Readability Analyzer](#neoreadability)
+- [Neo MarkdowL - Um simples editor de Markdow](#neomarkdowl)
+- [Neo Latex - Um simples editor de Latex](#neolatex)
+- [Neo Mermaid - Um simples editor de Mermaid](#neomermaid)
+- [Neo Cursos - Venda de cursos on-line (supabase)](#neocursos)
+- [Neo PLN Chatbot - Construtor de Chatbots com PLN (intenção e response)](#neoplnchatbot)
+- [Neo PDF Editor - Neo PDF Editor](#neopdfeditor)
+- [Neo AVA - Ambiente Virtual de Aprendizagem com Autorregulação](#neoava)
 - [Chatbot Eliza](#chatbot-eliza)
-- [NeoChatbots - Chatbots com RAG](#neochatbots)
-- [NeoStudy - Um Gerador de Plano de estudo com IA](#neostudy)
-- [NeoCalendar - Calendário de eventos científicos](#neocalendar)
+- [Neo Chatbots - Chatbots com RAG](#neochatbots)
+- [Neo Study - Um Gerador de Plano de estudo com IA](#neostudy)
+- [Neo Calendar - Calendário de eventos científicos](#neocalendar)
 - [Previsão de Notas com aprendizagem de máquina](#previsão-de-notas-com-aprendizagem-de-máquina-hugging-face)
 - [Neo Google Sala de Aula](#neo-google-sala-de-aula)
-- [NeoUST - User Story Tutor - Um software para Previsão e melhoria de User Stories (streamlit)](#neo-user-story-tutor)
+- [Neo User Story Tutor - Um software para Previsão e melhoria de User Stories (streamlit)](#neo-user-story-tutor)
 - [Neo Sistema Especialista - Um simples Sistema Especialista (streamlit)](#neo-sistema-especialista)
 - [Neo Story Point - Estimador de Story Points com Inteligência Artificial](#neo-story-point)
 
 ---
 
 - Projetos do Kleber
-  - [chronostask - Um gerenciador de tarefas](#chronostask)
-  - [calliopetts - Converter texto em audio](#calliopetts)
-  - [concentrare - Pomodoro com tarefas](#concentrare)
-  - [studiomarkdow - Pomodoro com tarefas](#estudio-markdown)
-  - [confluxgray - Jogo](#confluxgray) 
+  - [Chronos Task - Um gerenciador de tarefas](#chronostask)
+  - [Callio Petts - Converter texto em audio](#calliopetts)
+  - [Concentrare - Pomodoro com tarefas](#concentrare)
+  - [Studio Markdow - Pomodoro com tarefas](#estudio-markdown)
+  - [Confluxgray - Jogo](#confluxgray) 
 
 ---
 
@@ -125,6 +127,16 @@ toc: true
 <!-- [Código-fonte (↗)](https://github.com/giseldo/neoqrcode) -->
 
 ![image](/images/neoqrcode.png)
+
+---
+
+### Neojavarancho
+
+**Gerador de QRCODE**
+
+- [Link (↗)](https://javarancho.vercel.app/)
+
+![image](https://github.com/user-attachments/assets/3a8a7673-09aa-4015-bd99-a6116b845ef5)
 
 ---
 
