@@ -84,7 +84,7 @@ toc: true
 
 - [Link (↗)](https://neoreeview.vercel.app/)
 
-![image]((https://github.com/user-attachments/assets/a15c47fb-857d-478e-91c7-da7240795be3)
+![image](https://github.com/user-attachments/assets/a15c47fb-857d-478e-91c7-da7240795be3)
 
 ---
 
