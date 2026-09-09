@@ -132,9 +132,19 @@ toc: true
 
 ### Neojavarancho
 
-**Gerador de QRCODE**
+**Jogo para aprender java, clone do javaranch**
 
 - [Link (↗)](https://javarancho.vercel.app/)
+
+![image](https://github.com/user-attachments/assets/3a8a7673-09aa-4015-bd99-a6116b845ef5)
+
+---
+
+### Neojavapalavras
+
+**Jogo para aprender as palavras reservadas em java**
+
+- [Link (↗)](https://neojavapalavras.vercel.app/)
 
 ![image](https://github.com/user-attachments/assets/3a8a7673-09aa-4015-bd99-a6116b845ef5)
 
