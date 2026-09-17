@@ -82,7 +82,7 @@ toc: true
 
 **Sistema para revisões sistemáticas**
 
-- [Link (↗)](https://neoreeview.vercel.app/)
+- [Link (↗)](https://neoreview.vercel.app/)
 
 ![image](https://github.com/user-attachments/assets/a15c47fb-857d-478e-91c7-da7240795be3)
 
