@@ -25,6 +25,7 @@ toc: true
 - [Mathx - Matemática divertida](#mathx)
 - [Axis - Auxílio ao estudante](#axis)
 - [Neo Mind Map - Um criador de mapa mental](#neomindmap)
+- [Neo Mermaid - Um simples editor de Mermaid](#neomermaid)
 - [Neo Markdow - Um Editor markdown com Inteligência Artificial](#neomarkdow)
 - [Neo Qrcode - Cria QRCode](#neoqrcode)
 - [Neo Java Rancho - Aprendendo java com Jogos](#neojavarancho)
@@ -39,9 +40,8 @@ toc: true
 - [Neo BPMN EditorIO - Crie diagramas BPMN conversando com BPMN.io](#neobpmneditorio)
 - [Neo BPMN Editor - Um simples modelador visual de BPMN](#neobpmneditor) 
 - [Neo Readability - Text Readability Analyzer](#neoreadability)
-- [Neo MarkdowL - Um simples editor de Markdow](#neomarkdowl)
+- [Neo Markdow - Um simples editor de Markdow](#neomarkdow)
 - [Neo Latex - Um simples editor de Latex](#neolatex)
-- [Neo Mermaid - Um simples editor de Mermaid](#neomermaid)
 - [Neo Cursos - Venda de cursos on-line (supabase)](#neocursos)
 - [Neo PLN Chatbot - Construtor de Chatbots com PLN (intenção e response)](#neoplnchatbot)
 - [Neo PDF Editor - Neo PDF Editor](#neopdfeditor)
@@ -115,6 +115,20 @@ toc: true
 - [Link (↗)](https://neomindmap.vercel.app/)
 
 ![image](/images/neomindmap.png)
+
+---
+
+### NeoMermaid 
+
+**Um simples editor de Mermaid**
+
+- [Link (↗)](https://neomermaid.lovable.app/)
+
+<!-- [Link (↗)](https://clean-mermaid.lovable.app/) -->
+
+<!-- [Código-fonte (↗)](https://github.com/giseldo/clean-mermaid) -->
+
+![image](/images/mermaideditor.png)
 
 ---
 
@@ -309,18 +323,6 @@ Text Readability Analyzer
 <!-- [Código-fonte (↗)](https://github.com/giseldo/clean-latex-canvas) -->
 
 ![image](/images/latexeditor.png)
-
----
-
-### NeoMermaid 
-
-**Um simples editor de Mermaid**
-
-- [Link (↗)](https://clean-mermaid.lovable.app/)
-
-<!-- [Código-fonte (↗)](https://github.com/giseldo/clean-mermaid) -->
-
-![image](/images/mermaideditor.png)
 
 ---
 
