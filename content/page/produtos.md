@@ -63,7 +63,8 @@ toc: true
   - [Callio Petts - Converter texto em audio](#calliopetts)
   - [Concentrare - Pomodoro com tarefas](#concentrare)
   - [Studio Markdow - Pomodoro com tarefas](#estudio-markdown)
-  - [Confluxgray - Jogo](#confluxgray) 
+  - [Conflux - Jogo](#conflux)
+  - [Curso Digitação](#curso-digitacao)
 
 ---
 
@@ -490,7 +491,7 @@ Chatbots com inteligência artificial. Um chatbot que conversa sobre o manual do
 
 ---
 
-### chronostask
+### Chronostask
 
 - [Link (↗)](https://chronostask.vercel.app/)
 
@@ -498,7 +499,7 @@ Chatbots com inteligência artificial. Um chatbot que conversa sobre o manual do
 
 ---
 
-### calliopetts
+### Calliopetts
 
 - [Link (↗)](https://calliopetts.vercel.app/)
 
@@ -506,7 +507,7 @@ Chatbots com inteligência artificial. Um chatbot que conversa sobre o manual do
 
 ---
 
-### concentrare
+### Concentrare
 
 - [Link (↗)](https://concentrare.vercel.app/)
 
@@ -522,7 +523,17 @@ Chatbots com inteligência artificial. Um chatbot que conversa sobre o manual do
 
 ---
 
-### Confluxgray
+### Conflux
 
-- [Link(↗)](https://conflux-gray.vercel.app/)
+- [Link(↗)](https://confluxtd.vercel.app/)
+
+![image](https://github.com/user-attachments/assets/c72a3740-5ee7-44fa-a9f4-deddac659487)
+
+---
+
+### Curso Digitação
+
+**Curso de digitação do amigo do kleber**
+
+- [Link(↗)](https://curso-de-digitacao.vercel.app/)
 
