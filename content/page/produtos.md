@@ -122,7 +122,7 @@ toc: true
 
 **Um simples editor de Mermaid**
 
-- [Link (↗)](https://neomermaid.lovable.app/)
+- [Link (↗)](https://neomermaid.vercel.app/)
 
 <!-- [Link (↗)](https://clean-mermaid.lovable.app/) -->
 
