@@ -70,8 +70,7 @@ toc: true
 
 ### Neochatdesktop
 
-**Seu novo Workspace de IA**
-**Use os Modelos Mistral, Groq e Deepssek em uma aplicação desktop**
+**Um Workspace de IA para conversar com Mistral, Groq e Deepssek em uma aplicação desktop**
 
 - [Link (↗)](https://neochatdesktop.vercel.app/)
 
