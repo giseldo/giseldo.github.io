@@ -160,7 +160,7 @@ toc: true
 
 - [Link (↗)](https://neojavapalavras.vercel.app/)
 
-![image](https://github.com/user-attachments/assets/3a8a7673-09aa-4015-bd99-a6116b845ef5)
+![image](https://github.com/user-attachments/assets/898f7719-9a4b-4b49-b2b3-3710700263b5)
 
 ---
 
