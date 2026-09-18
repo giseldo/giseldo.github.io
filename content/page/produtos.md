@@ -358,7 +358,7 @@ Text Readability Analyzer
 
 Exlui páginas do PDF e realiza Merge
 
-- [Link (↗)](https://neo-pdf-editor.lovable.app)
+- [Link (↗)](https://neopdfeditor.vercel.app)
 
 <!-- [Código-fonte (↗)](https://github.com/giseldo/neo-pdf-editor) -->
 
