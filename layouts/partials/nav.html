@@ -1,101 +1,63 @@
-<nav class="navbar navbar-default navbar-fixed-top navbar-custom">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
-        <span class="sr-only">{{ i18n "toggleNavigation" }}</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="{{ "" | absLangURL }}">{{ .Site.Title }}</a>
-    </div>
-
-    <div class="collapse navbar-collapse" id="main-navbar">
-      <ul class="nav navbar-nav navbar-right">
-        {{ range .Site.Menus.main.ByWeight }}
-          {{ if .HasChildren }}
-            <li class="navlinks-container">
-              <a class="navlinks-parent" role="button" tabindex="0">{{ .Name }}</a>
-              <div class="navlinks-children">
-                {{ range .Children }}
-                  <a href="{{ .URL | relLangURL }}">{{ .Name }}</a>
-                {{ end }}
-              </div>
-            </li>
-          {{ else }}
-            <li>
-              <a title="{{ .Name }}" href="{{ .URL  | relLangURL }}">{{ .Name }}</a>
-            </li>
-          {{ end }}
-        {{ end }}
-
-        {{ if hugo.IsMultilingual }}
-          {{ if ge (len .Site.Languages) 3 }}
-            <li class="navlinks-container">
-              <a class="navlinks-parent" role="button" tabindex="0">{{ i18n "languageSwitcherLabel" }}</a>
-              <div class="navlinks-children">
-                {{ range .Translations }}
-                  {{ if not (eq .Lang $.Site.Language.Lang) }}
-                  <a href="{{ .Permalink }}">{{ default .Lang .Site.Language.LanguageName }}</a>
-                  {{ end }}
-                {{ end }}
-              </div>
-            </li>
-          {{ else }}
-            <li>
-              {{ if .IsTranslated }}
-                {{ range .Translations }}
-                  <a href="{{ .Permalink }}">{{ default .Lang .Site.Language.LanguageName }}</a>
-                {{ end}}
-              {{ end }}
-            </li>
-          {{ end }}
-        {{ end }}
-
-        {{ if isset .Site.Params "gcse" }}
-          <li>
-            <a href="#modalSearch" data-toggle="modal" data-target="#modalSearch" style="outline: none;">
-              <span class="hidden-sm hidden-md hidden-lg">{{ i18n "gcseLabelShort" }}</span> <span id="searchGlyph" class="glyphicon glyphicon-search"></span>
-            </a>
-          </li>
-        {{ end }}
-      </ul>
-    </div>
-
-    {{ if isset .Site.Params "logo" }}
-      <div class="avatar-container">
-        <div class="avatar-img-border">
-          <a title="{{ .Site.Title }}" href="{{ "" | absLangURL }}">
-          {{- $image := resources.Get ( $.Site.Params.logo) -}}
-          {{ if $image }}
-            <img class="avatar-img" src="{{ ($image.Fit "300x300 webp q100").Permalink }}" alt="{{ .Site.Title }}" />
-          {{else}}
-            <img class="avatar-img" src="{{ .Site.Params.logo | absURL }}" alt="{{ .Site.Title }}" />
-           {{end}}
-          </a>
-        </div>
-      </div>
-    {{ end }}
-
+{{- $ctx := . -}}
+{{- /* Separa o menu "main" (hugo.toml + front matter "menus") em páginas internas e links externos, mantendo a ordem do weight */ -}}
+{{- $internos := slice -}}
+{{- $externos := slice -}}
+{{- range .Site.Menus.main.ByWeight -}}
+  {{- if hasPrefix .URL "http" -}}
+    {{- $externos = $externos | append . -}}
+  {{- else -}}
+    {{- $internos = $internos | append . -}}
+  {{- end -}}
+{{- end -}}
+<aside class="sidebar" id="barra-lateral" aria-label="Barra lateral">
+  <div class="sidebar-top">
+    <a class="brand" href="{{ "" | absLangURL }}">
+      {{- if fileExists "static/img/avatar-icon.png" }}
+      <img class="brand-mark" src="{{ "img/avatar-icon.png" | absURL }}" alt="" width="28" height="28">
+      {{- end }}
+      <span class="brand-name">{{ .Site.Title }}</span>
+    </a>
+    <button type="button" class="icon-btn sidebar-close" data-nav-close aria-label="Fechar menu">{{ partial "icon.html" "close" }}</button>
   </div>
-</nav>
 
-<!-- Search Modal -->
-{{ if isset .Site.Params "gcse" }}
-  <div id="modalSearch" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">{{ i18n "gcseLabelLong" . }}</h4>
-        </div>
-        <div class="modal-body">
-          <gcse:search></gcse:search>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">{{ i18n "gcseClose" }}</button>
-        </div>
-      </div>
-    </div>
+  <nav class="sidebar-nav" aria-label="Principal">
+    <a class="menu-item" href="{{ "" | absLangURL }}"{{ if .IsHome }} aria-current="page"{{ end }}>
+      {{ partial "icon.html" "home" }}<span>Início</span>
+    </a>
+
+    {{- with $internos }}
+    <p class="menu-label">Páginas</p>
+    {{- range . }}
+    {{ partial "menu-link.html" (dict "item" . "pagina" $ctx) }}
+    {{- end }}
+    {{- end }}
+
+    {{- with $externos }}
+    <p class="menu-label">Links</p>
+    {{- range . }}
+    {{ partial "menu-link.html" (dict "item" . "pagina" $ctx) }}
+    {{- end }}
+    {{- end }}
+  </nav>
+
+  <div class="sidebar-foot">
+    <ul class="social" aria-label="Redes sociais">
+      {{- range .Site.Data.beautifulhugo.social.social_icons }}
+        {{- if isset $.Site.Params.author .id }}
+          {{- $valor := index $.Site.Params.author .id }}
+          {{- $href := cond (or (hasPrefix $valor "http://") (hasPrefix $valor "https://")) $valor (printf .url $valor) }}
+      <li>
+        <a class="icon-btn" {{ if .rel }}rel="{{ .rel }}" {{ end }}href="{{ $href }}" title="{{ .title }}" aria-label="{{ .title }}">
+          <i class="{{ .icon }}" aria-hidden="true"></i>
+        </a>
+      </li>
+        {{- end }}
+      {{- end }}
+    </ul>
+
+    <button type="button" class="menu-item" data-theme-toggle>
+      {{ partial "icon.html" "moon" }}{{ partial "icon.html" "sun" }}<span data-theme-label>Usar tema escuro</span>
+    </button>
   </div>
-{{ end }}
+</aside>
+<div class="scrim" data-nav-close></div>

@@ -3,16 +3,25 @@
 {{ end }}
 
 <!DOCTYPE html>
-<html lang="{{ .Lang }}" itemscope itemtype="http://schema.org/WebPage">
+<html lang="pt-BR" class="no-js" itemscope itemtype="http://schema.org/WebPage">
   <head>
     {{ partial "head.html" . }}
   </head>
   <body>
-    {{ partial "nav.html" . }}
-    {{ block "header" . }}{{ partial "header.html" . }}{{ end }}
-    {{ block "main" . }}{{ end }}
-    {{ partial "footer.html" . }}
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+    <div class="app">
+      {{ partial "nav.html" . }}
+      <div class="app-main">
+        {{ partial "topbar.html" . }}
+        <main id="conteudo" class="main" tabindex="-1">
+          {{ block "header" . }}{{ partial "header.html" . }}{{ end }}
+          {{ block "main" . }}{{ end }}
+        </main>
+        {{ partial "footer.html" . }}
+      </div>
+    </div>
+    {{ partial "load-photoswipe-theme.html" . }}
+    {{ partial "scripts.html" . }}
     {{ block "footer" . }}{{ end }}
   </body>
 </html>
-

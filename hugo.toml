@@ -2,6 +2,8 @@ baseurl = "https://giseldo.github.io"
 DefaultContentLanguage = "br"
 title = "IA com GN"
 theme = "beautifulhugo"
+# postagens antigas (.txt) ficam guardadas, mas fora do site por enquanto
+ignoreFiles = ["content/post/.*\\.txt$"]
 pygmentsStyle = "trac"
 pygmentsUseClasses = true
 pygmentsCodeFences = true
@@ -24,7 +26,8 @@ pygmentsCodefencesGuessSyntax = true
   subtitle = "com Giseldo Neo"
   # logo = "img/avatar-icon.png" 
   favicon = "img/favicon.ico"
-  dateFormat = "January 2, 2006"
+  dateFormat = "02/01/2006"
+  mainSections = ["post"]
   commit = false
   comments = true
   readingTime = true
@@ -46,17 +49,23 @@ pygmentsCodefencesGuessSyntax = true
   discord = "https://discord.gg/NTdaT2Uf37"
 
 [[menu.main]]
-    name = "Blog (↗)"
-    url = "http://giseldo.hashnode.dev/"
+    name = "Blog"
+    url = "/post/"
+    identifier = "blog"
     weight = 1
+
+[[menu.main]]
+    name = "Hashnode (↗)"
+    url = "http://giseldo.hashnode.dev/"
+    weight = 2
 
 [[menu.main]]
     name = "Cursos (↗)"
     url = "http://giseldo.github.io/cursos/"
-    weight = 2
+    weight = 3
 
 [[menu.main]]
     name = "Youtube (↗)"
     url = "http://youtube.com/giseldoneo"
-    weight = 3
+    weight = 4
 

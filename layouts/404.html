@@ -1,15 +1,15 @@
 {{ define "header" }}<!-- No header on 404 pages -->{{ end }}
 {{ define "main" }}
-  <div role="main" class="container main-content">
-    <div class="text-center">
-      <h1 class="error-emoji"></h1>
-      <p class="error-text">{{ i18n "pageNotFound" }}</p>
-    </div>
+  <div class="content container not-found">
+    <p class="not-found-emoji error-emoji" aria-hidden="true"></p>
+    <h1>{{ i18n "pageNotFound" }}</h1>
+    <p class="page-subtitle">Confira o endereço ou volte para o início.</p>
+    <a class="btn btn-primary" href="{{ "" | absLangURL }}">Ir para o início</a>
   </div>
 <script>
   var errorEmojiContainer = document.getElementsByClassName('error-emoji')[0];
   var emojiArray = [
-    '\\(o_o)/', '(o^^)o', '(˚Δ˚)b', '(^-^*)', '(≥o≤)', '(^_^)b', '(·_·)',
+    '\\(o_o)/', '(o^^)o', '(˚Δ˚)b', '(^-^*)', '(≥o≤)', '(^_^)b', '(·_·)',
     '(=\'X\'=)', '(>_<)', '(;-;)', '\\(^Д^)/',
   ];
   var errorEmoji = emojiArray[Math.floor(Math.random() * emojiArray.length)];

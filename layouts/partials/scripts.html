@@ -1,0 +1,27 @@
+{{- if .Site.Params.selfHosted -}}
+<script defer src="{{ "js/katex.min.js" | absURL }}"></script>
+<script defer src="{{ "js/auto-render.min.js" | absURL }}" onload="renderMathInElement(document.body);"></script>
+<script src="{{ "js/jquery-3.7.0.slim.min.js" | absURL }}"></script>
+{{- else -}}
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.js" integrity="sha384-G0zcxDFp5LWZtDuRMnBkk3EphCK1lhEf4UEyEM693ka574TZGwo4IWwS6QLzM/2t" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+<script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha384-w5y/xIeYixWvfM+A1cEbmHPURnvyqmVg5eVENruEdDjcyRLUSNej7512JQGspFUr" crossorigin="anonymous"></script>
+{{- end }}
+
+<script src="{{ "js/vibe.js" | absURL }}"></script>
+
+{{- if .Site.Params.useHLJS }}
+<script src="{{ "js/highlight.min.js" | absURL }}"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+{{- end -}}
+
+{{- if .Site.Params.selfHosted -}}
+<script src="{{ "js/photoswipe.min.js" | absURL }}"></script>
+<script src="{{ "js/photoswipe-ui-default.min.js" | absURL }}"></script>
+{{- else -}}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script>
+{{- end }}
+<script src="{{ "js/load-photoswipe.js" | absURL }}"></script>
+
+{{- partial "footer_custom.html" . }}

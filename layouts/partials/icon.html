@@ -1,0 +1,31 @@
+{{- /* Ícones de traço fino (1,5px) que herdam currentColor. Uso: {{ partial "icon.html" "home" }} */ -}}
+{{- $n := . -}}
+<svg class="icon icon-{{ $n }}" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+{{- if eq $n "home" -}}
+<path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/>
+{{- else if eq $n "menu" -}}
+<path d="M4 7h16M4 12h16M4 17h16"/>
+{{- else if eq $n "close" -}}
+<path d="m6 6 12 12M18 6 6 18"/>
+{{- else if eq $n "external" -}}
+<path d="M7 17 17 7M8 7h9v9"/>
+{{- else if eq $n "moon" -}}
+<path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/>
+{{- else if eq $n "sun" -}}
+<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>
+{{- else if eq $n "livros" -}}
+<path d="M5 4h13a1 1 0 0 1 1 1v13H6.5A1.5 1.5 0 0 0 5 19.5z"/><path d="M5 19.5A1.5 1.5 0 0 0 6.5 21H19"/>
+{{- else if eq $n "pesquisas" -}}
+<path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 1.8 3h10.4a2 2 0 0 0 1.8-3l-5-9V3M7.5 15h9"/>
+{{- else if eq $n "produtos" -}}
+<path d="m8 8-4 4 4 4M16 8l4 4-4 4M13.5 5l-3 14"/>
+{{- else if eq $n "podcast" -}}
+<rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/>
+{{- else if eq $n "jogos" -}}
+<path d="M6 8h12a4 4 0 0 1 4 4v1.5a3.5 3.5 0 0 1-6 2.4L14.5 14h-5L8 15.9a3.5 3.5 0 0 1-6-2.4V12a4 4 0 0 1 4-4zM7.5 11v3M6 12.5h3M16 12h.01M18 13.5h.01"/>
+{{- else if eq $n "sobre" -}}
+<circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/>
+{{- else -}}
+<path d="M7 3h7l5 5v13H7zM14 3v5h5"/>
+{{- end -}}
+</svg>

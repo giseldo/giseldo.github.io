@@ -1,43 +1,34 @@
-<article class="post-preview">
-    <a href="{{ .Permalink }}">
-        <h2 class="post-title">{{ .Title }}</h2>
-        {{ if .Params.subtitle }}
-        <h3 class="post-subtitle">
-            {{ .Params.subtitle }}
-        </h3>
-        {{ end }}
-        {{ if .Params.image }}
-        <img src="{{ .Params.image }}" alt="{{ .Title }}" class="img-title" />
-        {{ end }}
-        {{ if .Params.video }}
-        <video loop autoplay muted playsinline class="img-title">
-            <source src="{{ .Params.video }}">
-        </video>
-        {{ end }}
-    </a>
+<article class="post-card">
+    <h2 class="post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+    {{ with .Params.subtitle }}
+    <p class="post-subtitle">{{ . }}</p>
+    {{ end }}
+    {{ if .Params.image }}
+    <img src="{{ .Params.image }}" alt="" class="img-title" />
+    {{ end }}
+    {{ if .Params.video }}
+    <video loop autoplay muted playsinline class="img-title">
+        <source src="{{ .Params.video }}">
+    </video>
+    {{ end }}
 
-    <p class="post-meta">
+    {{ if eq .Type "post" }}
+    <div class="post-meta">
         {{ partial "post_meta.html" . }}
-    </p>
-    <div class="post-entry">
-        {{ if or (.Truncated) (.Params.summary) }}
-        {{ .Summary }}
-        <a href="{{ .Permalink }}" class="post-read-more">[{{ i18n "readMore" }}]</a>
-        {{ else }}
-        {{ .Content }}
-        {{ end }}
     </div>
+    {{ end }}
+
+    {{- /* Cartão mostra o "description" do front matter, se existir; senão, um trecho em texto puro. O conteúdo completo fica na página. */ -}}
+    <div class="post-entry">
+        <p>{{ with .Description }}{{ . }}{{ else }}{{ .Summary | plainify | truncate 240 }}{{ end }}</p>
+    </div>
+    <a href="{{ .Permalink }}" class="post-read-more" aria-label="{{ i18n "readMore" }}: {{ .Title }}">{{ i18n "readMore" }} &rarr;</a>
 
     {{ if .Params.tags }}
     <div class="blog-tags">
         {{ range .Params.tags }}
-       <!-- Fix for "https://github.com/halogenica/beautifulhugo/issues/349".
-       From "https://github.com/dovidio/personalwebsite/commit/34762e94c29fd2c26c16c45f8ae2de21bdf9b46d".
-       <a href="{{ $.Site.LanguagePrefix | absURL }}/tags/{{ . | urlize }}/">{{ . }}</a>&nbsp;
-       -->
-       <a href="{{"tags" | absLangURL}}/{{ . | urlize }}/">{{ . }}</a>&nbsp;
-        {{ end }} 
+        <a href="{{"tags" | absLangURL}}/{{ . | urlize }}/">{{ . }}</a>
+        {{ end }}
     </div>
     {{ end }}
-
 </article>

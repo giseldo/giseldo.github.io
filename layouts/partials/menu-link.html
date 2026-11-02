@@ -1,0 +1,11 @@
+{{- /* Item do menu "main". Recebe dict "item" (entrada do menu) e "pagina" (página atual).
+       Links externos abrem em nova aba e ganham a seta; páginas internas ganham ícone pelo nome do arquivo. */ -}}
+{{- $item := .item -}}
+{{- $ext := hasPrefix $item.URL "http" -}}
+{{- $icone := $item.Identifier | default "file" -}}
+{{- with $item.Page }}{{ with .File }}{{ $icone = .ContentBaseName }}{{ end }}{{ end -}}
+<a class="menu-item" href="{{ if $ext }}{{ $item.URL }}{{ else }}{{ $item.URL | relLangURL }}{{ end }}"{{ if $ext }} target="_blank" rel="noopener"{{ else if eq $.pagina.RelPermalink $item.URL }} aria-current="page"{{ end }}>
+  {{- if not $ext }}{{ partial "icon.html" $icone }}{{ end }}
+  <span>{{ strings.TrimSuffix " (↗)" $item.Name }}</span>
+  {{- if $ext }}{{ partial "icon.html" "external" }}{{ end -}}
+</a>
