@@ -1,14 +1,28 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Posts on IA com GN</title>
-    <link>http://localhost:1313/post/</link>
-    <description>Recent content in Posts on IA com GN</description>
-    <generator>Hugo</generator>
-    <language>br</language>
-    <managingEditor>giseldo@gmail.com (Giseldo Neo)</managingEditor>
-    <webMaster>giseldo@gmail.com (Giseldo Neo)</webMaster>
-    <lastBuildDate></lastBuildDate>
-    <atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
-  </channel>
+	<channel>
+		<title>Blog on IA com GN</title>
+		<link>http://localhost:1313/post/</link>
+		<description>Recent content in Blog on IA com GN</description>
+		<generator>Hugo</generator>
+		<language>br</language>
+		
+			<managingEditor>giseldo@gmail.com (Giseldo Neo)</managingEditor>
+		
+		
+			<webMaster>giseldo@gmail.com (Giseldo Neo)</webMaster>
+		
+		
+		
+			<lastBuildDate>Mon, 02 Nov 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Primeira postagem do blog</title>
+				<link>http://localhost:1313/post/2026-11-02-primeira-postagem/</link>
+				<pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate><author>giseldo@gmail.com (Giseldo Neo)</author>
+				<guid>http://localhost:1313/post/2026-11-02-primeira-postagem/</guid>
+				<description>&lt;p&gt;Este é o primeiro texto da nova área de blog. A partir de agora, as postagens são escritas aqui mesmo, em Markdown, e publicadas junto com o resto do site.&lt;/p&gt;&#xA;&lt;h2 id=&#34;como-criar-uma-nova-postagem&#34;&gt;Como criar uma nova postagem&lt;/h2&gt;&#xA;&lt;p&gt;No terminal, dentro da pasta do projeto:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo new post/minha-postagem.md&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;O arquivo nasce em &lt;code&gt;content/post/&lt;/code&gt; como rascunho (&lt;code&gt;draft: true&lt;/code&gt;). Quando terminar, troque para &lt;code&gt;draft: false&lt;/code&gt; e faça o commit.&lt;/p&gt;&#xA;&lt;h2 id=&#34;o-que-vem-a-seguir&#34;&gt;O que vem a seguir&lt;/h2&gt;&#xA;&lt;p&gt;Substitua este texto pelo assunto que você quiser: basta editar &lt;code&gt;content/post/2026-11-02-primeira-postagem.md&lt;/code&gt;.&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>

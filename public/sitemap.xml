@@ -15,15 +15,22 @@
     <loc>http://localhost:1313/page/sobre/</loc>
   </url><url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2017-03-20T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/post/</loc>
-    <lastmod>2017-03-20T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/blog/</loc>
+    <lastmod>2026-11-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/post/2026-11-02-primeira-postagem/</loc>
+    <lastmod>2026-11-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2026-11-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
   </url><url>
     <loc>http://localhost:1313/page/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
   </url>
 </urlset>
