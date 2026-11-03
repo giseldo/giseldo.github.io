@@ -1,11 +1,5 @@
 {{ define "main" }}
   <div class="content container">
-    {{ with .Content }}
-      <section class="card prose">
-        {{.}}
-      </section>
-    {{ end }}
-
     <div class="posts-list">
       {{ $pag := .Paginate (where site.RegularPages "Type" "in" site.Params.mainSections) }}
       {{ range $pag.Pages }}
@@ -14,5 +8,12 @@
     </div>
 
     {{ partial "pager.html" . }}
+
+    {{- /* Texto de boas-vindas (content/_index.md): fica depois das postagens */ -}}
+    {{ with .Content }}
+      <section class="card prose">
+        {{.}}
+      </section>
+    {{ end }}
   </div>
 {{ end }}
