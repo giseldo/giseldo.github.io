@@ -1,6 +1,6 @@
 baseurl = "https://giseldo.github.io"
 DefaultContentLanguage = "br"
-title = "IA com GN"
+title = "Giseldo Neo"
 theme = "beautifulhugo"
 # postagens antigas (.txt) ficam guardadas, mas fora do site por enquanto
 ignoreFiles = ["content/post/.*\\.txt$"]
@@ -22,8 +22,8 @@ pygmentsCodefencesGuessSyntax = true
     id = "G-GFJR491N4J"
 
 [Params]
-  homeTitle = "Inteligência Artificial" 
-  subtitle = "com Giseldo Neo"
+  homeTitle = "Giseldo Neo"
+  subtitle = "Inteligência artificial, código e experimentos com Giseldo Neo."
   # logo = "img/avatar-icon.png" 
   favicon = "img/favicon.ico"
   dateFormat = "02/01/2006"

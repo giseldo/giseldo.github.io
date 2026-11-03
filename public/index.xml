@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
-		<title>IA com GN</title>
+		<title>Giseldo Neo</title>
 		<link>http://localhost:1313/</link>
-		<description>Recent content on IA com GN</description>
+		<description>Recent content on Giseldo Neo</description>
 		<generator>Hugo</generator>
 		<language>br</language>
 		
@@ -64,7 +64,7 @@
 				<link>http://localhost:1313/post/neochat-mistral/</link>
 				<pubDate>Mon, 02 Nov 2026 21:31:58 -0300</pubDate><author>giseldo@gmail.com (Giseldo Neo)</author>
 				<guid>http://localhost:1313/post/neochat-mistral/</guid>
-				<description>&lt;p&gt;Vibe-codei um cliente desktop para conversar com os modelos do Mistral AI &lt;a href=&#34;https://mistral.ai&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://mistral.ai&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;No momento em que escrevo este post (02/11/2026) a empresa Mistral AI ainda não tinha um aplicativo desktop nos mesmos moldes do ChatGPT e do Codex. Devido a essa necessidade pessoal desenvolvi um para conversar com os modelos da Mistral (DeepSeek, GLM e Mistral smaill, medium e large).&lt;/p&gt;&#xA;&lt;p&gt;O Acesso é BYK (Bring your Key) via API, mas também funciona com o login integrado do vibe-cli.&lt;/p&gt;</description>
+				<description>&lt;h1 id=&#34;neochat-mistral-um-cliente-desktop-para-os-modelos-de-ia-da-mistral-desenvolvido-em-rust&#34;&gt;NeoChat Mistral: um cliente desktop para os modelos de IA da Mistral, desenvolvido em Rust&lt;/h1&gt;&#xA;&lt;p&gt;Recentemente, desenvolvi o &lt;strong&gt;NeoChat Mistral&lt;/strong&gt;, uma aplicação desktop escrita em &lt;strong&gt;Rust&lt;/strong&gt; que permite interagir com os modelos de inteligência artificial disponibilizados pela &lt;a href=&#34;https://mistral.ai&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Mistral AI&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/neochat-mistral.png&#34; alt=&#34;Interface do NeoChat Mistral&#34;&gt;&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;strong&gt;Aviso importante:&lt;/strong&gt; O NeoChat Mistral é um projeto independente, de código aberto e não oficial. Não possui vínculo, parceria, patrocínio ou afiliação com a Mistral AI.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;h3 id=&#34;motivação&#34;&gt;Motivação&lt;/h3&gt;&#xA;&lt;p&gt;Até o momento em que escrevo esta publicação (02/11/2026), a Mistral AI ainda não disponibilizava um aplicativo desktop nos mesmos moldes dos clientes oferecidos pelo ChatGPT e pelo Codex.&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>Primeira postagem do blog</title>
