@@ -18,3 +18,10 @@ node_modules/
 *.bak
 *.swp
 *.swo
+# Neon books backend local artifacts
+books-api/node_modules/
+*.zip
+.env
+.env.local
+.neon/
+books-private-staging/

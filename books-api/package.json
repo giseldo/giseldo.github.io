@@ -1,0 +1,13 @@
+{
+  "name": "livros-api",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@aws-sdk/client-s3": "latest",
+    "@aws-sdk/s3-presigned-post": "latest",
+    "@aws-sdk/s3-request-presigner": "latest",
+    "@neondatabase/serverless": "latest",
+    "files-sdk": "latest",
+    "jose": "latest"
+  }
+}
