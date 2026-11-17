@@ -13,6 +13,19 @@ draft: false
     <label>Senha<br><input type="password" name="password" required autocomplete="current-password"></label><br>
     <button type="submit">Entrar</button>
   </form>
+  <form data-recovery-form hidden>
+    <h3>Redefinir senha</h3>
+    <label>E-mail<br><input type="email" name="recovery-email" required autocomplete="email"></label><br>
+    <button type="submit">Enviar recuperação</button>
+  </form>
+  <form data-reset-form hidden>
+    <h3>Escolher nova senha</h3>
+    <label>Nova senha<br><input type="password" name="new-password" required minlength="8" autocomplete="new-password"></label><br>
+    <label>Confirmar senha<br><input type="password" name="confirm-password" required minlength="8" autocomplete="new-password"></label><br>
+    <button type="submit">Salvar nova senha</button>
+  </form>
+  <button type="button" data-recovery>Esqueci minha senha</button>
+  <button type="button" data-back-login hidden>Voltar para o login</button>
   <button type="button" data-logout hidden>Sair</button>
   <p data-message role="status"></p>
   <ul data-books-list></ul>
