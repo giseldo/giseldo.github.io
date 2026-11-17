@@ -13,6 +13,14 @@ draft: false
     <label>Senha<br><input type="password" name="password" required autocomplete="current-password"></label><br>
     <button type="submit">Entrar</button>
   </form>
+  <button type="button" data-otp-login>Entrar com código por e-mail</button>
+  <form data-otp-form hidden>
+    <h3>Confirmar e-mail</h3>
+    <p>Digite o código enviado para seu e-mail.</p>
+    <label>Código<br><input type="text" name="otp" inputmode="numeric" autocomplete="one-time-code" minlength="6" maxlength="8" required></label><br>
+    <button type="submit">Confirmar código</button>
+    <button type="button" data-resend-otp>Enviar outro código</button>
+  </form>
   <form data-recovery-form hidden>
     <h3>Redefinir senha</h3>
     <label>E-mail<br><input type="email" name="recovery-email" required autocomplete="email"></label><br>
