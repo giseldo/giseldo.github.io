@@ -23,7 +23,20 @@ Qualquer pessoa pode criar uma conta pelo botão **Criar conta** da página, mas
 
 Pré-requisito: ative o cadastro por e-mail/senha nas configurações do Neon Auth (antes estava desativado). Depois execute de novo o `books-api/schema.sql` e publique a Function.
 
-### Aprovar um usuário
+### Página de administração
+
+Aprove ou recuse pedidos em `/page/admin-livros/` (não aparece no menu). Ela lista os pedidos pendentes, deixa escolher os livros a liberar e aprova ou recusa com um clique.
+
+Apenas administradores acessam as rotas `/admin` da API. Defina na Function (variáveis de ambiente) o seu ID de usuário do Neon Auth e/ou e-mail, separados por vírgula:
+
+```
+ADMIN_USER_IDS=id1
+ADMIN_EMAILS=voce@exemplo.com
+```
+
+O e-mail só funciona se o JWT do Neon Auth trouxer o campo `email`; o ID sempre funciona. Depois de definir, publique a Function de novo.
+
+### Aprovar um usuário pelo SQL (alternativa)
 
 No SQL Editor do Neon:
 
