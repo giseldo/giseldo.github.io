@@ -29,7 +29,9 @@ async function authenticatedUser(request) {
   if (!authorization?.startsWith("Bearer ")) return null;
   try {
     const { payload } = await jwtVerify(authorization.slice(7), jwks, { issuer });
-    return typeof payload.sub === "string" ? payload.sub : null;
+    return typeof payload.sub === "string"
+      ? { id: payload.sub, email: typeof payload.email === "string" ? payload.email : null }
+      : null;
   } catch {
     return null;
   }
@@ -40,8 +42,20 @@ export default {
     if (request.method === "OPTIONS") return new Response(null, { headers: cors(request) });
     if (request.method !== "GET") return json(request, { error: "Método não permitido" }, 405);
 
-    const userId = await authenticatedUser(request);
-    if (!userId) return json(request, { error: "Faça login para acessar os livros" }, 401);
+    const user = await authenticatedUser(request);
+    if (!user) return json(request, { error: "Faça login para acessar os livros" }, 401);
+    const userId = user.id;
+
+    // Registra o primeiro acesso como pendente; a aprovação é feita manualmente no Neon.
+    await sql`
+      INSERT INTO user_approvals (user_id, email)
+      VALUES (${userId}, ${user.email})
+      ON CONFLICT (user_id) DO NOTHING
+    `;
+    const [approval] = await sql`SELECT status FROM user_approvals WHERE user_id = ${userId}`;
+    if (approval?.status !== "approved") {
+      return json(request, { status: approval?.status ?? "pending", books: [] }, 403);
+    }
 
     const books = await sql`
       SELECT b.id, b.title, b.description, b.file_key
