@@ -13,6 +13,8 @@ const otpInput = root.querySelector("[name=otp]");
 const message = root.querySelector("[data-message]");
 const booksList = root.querySelector("[data-books-list]");
 const logout = root.querySelector("[data-logout]");
+const signupForm = root.querySelector("[data-signup-form]");
+const signupButton = root.querySelector("[data-signup]");
 const recoveryForm = root.querySelector("[data-recovery-form]");
 const resetForm = root.querySelector("[data-reset-form]");
 const recoveryButton = root.querySelector("[data-recovery]");
@@ -30,8 +32,10 @@ function showLogin() {
   loginForm.hidden = false;
   otpForm.hidden = true;
   recoveryForm.hidden = true;
+  signupForm.hidden = true;
   resetForm.hidden = true;
   otpLoginButton.hidden = false;
+  signupButton.hidden = false;
   recoveryButton.hidden = false;
   backLoginButton.hidden = true;
 }
@@ -40,8 +44,10 @@ function showOtp() {
   loginForm.hidden = true;
   otpForm.hidden = false;
   recoveryForm.hidden = true;
+  signupForm.hidden = true;
   resetForm.hidden = true;
   otpLoginButton.hidden = true;
+  signupButton.hidden = true;
   recoveryButton.hidden = true;
   backLoginButton.hidden = false;
   otpInput.focus();
@@ -51,8 +57,22 @@ function showRecovery() {
   loginForm.hidden = true;
   otpForm.hidden = true;
   recoveryForm.hidden = false;
+  signupForm.hidden = true;
   resetForm.hidden = true;
   otpLoginButton.hidden = true;
+  signupButton.hidden = true;
+  recoveryButton.hidden = true;
+  backLoginButton.hidden = false;
+}
+
+function showSignup() {
+  loginForm.hidden = true;
+  otpForm.hidden = true;
+  recoveryForm.hidden = true;
+  signupForm.hidden = false;
+  resetForm.hidden = true;
+  otpLoginButton.hidden = true;
+  signupButton.hidden = true;
   recoveryButton.hidden = true;
   backLoginButton.hidden = false;
 }
@@ -61,8 +81,10 @@ function showReset() {
   loginForm.hidden = true;
   otpForm.hidden = true;
   recoveryForm.hidden = true;
+  signupForm.hidden = true;
   resetForm.hidden = false;
   otpLoginButton.hidden = true;
+  signupButton.hidden = true;
   recoveryButton.hidden = true;
   backLoginButton.hidden = false;
 }
@@ -71,6 +93,17 @@ async function loadBooks() {
   const tokenResult = await auth.token();
   if (tokenResult.error || !tokenResult.data?.token) return false;
   const result = await fetch(apiUrl, { headers: { Authorization: `Bearer ${tokenResult.data.token}` } });
+  if (result.status === 403) {
+    const { status } = await result.json().catch(() => ({}));
+    showMessage(
+      status === "rejected"
+        ? "Seu pedido de acesso não foi aprovado."
+        : "Sua conta foi criada e aguarda aprovação. Você poderá entrar assim que for liberada.",
+      status === "rejected"
+    );
+    showLoggedInPending();
+    return "pending";
+  }
   if (!result.ok) return false;
   const { books } = await result.json();
   booksList.innerHTML = books.length
@@ -79,10 +112,21 @@ async function loadBooks() {
   loginForm.hidden = true;
   otpForm.hidden = true;
   otpLoginButton.hidden = true;
+  signupButton.hidden = true;
   recoveryButton.hidden = true;
   logout.hidden = false;
   showMessage("Acesso autorizado. Os links expiram em 5 minutos.");
   return true;
+}
+
+function showLoggedInPending() {
+  loginForm.hidden = true;
+  otpForm.hidden = true;
+  signupForm.hidden = true;
+  otpLoginButton.hidden = true;
+  signupButton.hidden = true;
+  recoveryButton.hidden = true;
+  logout.hidden = false;
 }
 
 async function requestOtp() {
@@ -109,13 +153,40 @@ loginForm.addEventListener("submit", async (event) => {
       showMessage("E-mail ou senha inválidos. Você também pode entrar usando um código por e-mail.", true);
       return;
     }
-    if (!(await loadBooks())) showMessage("A conta ainda não possui acesso aos livros.", true);
+    const loaded = await loadBooks();
+    if (!loaded) showMessage("A conta ainda não possui acesso aos livros.", true);
   } catch (error) {
     showMessage("Não foi possível concluir o login. Tente novamente.", true);
   }
 });
 
 otpLoginButton.addEventListener("click", requestOtp);
+
+signupButton.addEventListener("click", () => {
+  showSignup();
+  signupForm.querySelector("[name=signup-email]").value = email.value;
+  showMessage("Preencha os dados para solicitar acesso.");
+});
+
+signupForm.addEventListener("submit", async (event) => {
+  event.preventDefault();
+  const signupEmail = signupForm.querySelector("[name=signup-email]").value.trim();
+  const signupPassword = signupForm.querySelector("[name=signup-password]").value;
+  showMessage("Criando conta...");
+  try {
+    const result = await auth.signUp.email({
+      email: signupEmail,
+      password: signupPassword,
+      name: signupEmail.split("@")[0],
+    });
+    if (result.error) return showMessage("Não foi possível criar a conta. Verifique os dados ou tente entrar.", true);
+    signupForm.reset();
+    showLogin();
+    showMessage("Conta criada. Se pedirmos a confirmação do e-mail, verifique sua caixa de entrada. O acesso aos livros só será liberado após aprovação.");
+  } catch (error) {
+    showMessage("Não foi possível conectar ao serviço de autenticação.", true);
+  }
+});
 
 resendOtpButton.addEventListener("click", async () => {
   email.value = pendingOtpEmail;
@@ -128,7 +199,8 @@ otpForm.addEventListener("submit", async (event) => {
   try {
     const result = await auth.signIn.emailOtp({ email: pendingOtpEmail, otp: otpInput.value.trim(), disableSignUp: true });
     if (result.error) return showMessage("Código inválido ou expirado.", true);
-    if (!(await loadBooks())) showMessage("A conta ainda não possui acesso aos livros.", true);
+    const loaded = await loadBooks();
+    if (!loaded) showMessage("A conta ainda não possui acesso aos livros.", true);
   } catch (error) {
     showMessage("Não foi possível confirmar o código. Tente novamente.", true);
   }

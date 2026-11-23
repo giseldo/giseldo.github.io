@@ -6,12 +6,25 @@ CREATE TABLE IF NOT EXISTS protected_books (
   created_at TIMESTAMPTZ NOT NULL DEFAULT now()
 );
 
+CREATE TABLE IF NOT EXISTS user_approvals (
+  user_id TEXT PRIMARY KEY,
+  email TEXT,
+  status TEXT NOT NULL DEFAULT 'pending' CHECK (status IN ('pending', 'approved', 'rejected')),
+  requested_at TIMESTAMPTZ NOT NULL DEFAULT now(),
+  decided_at TIMESTAMPTZ
+);
+
 CREATE TABLE IF NOT EXISTS book_permissions (
   user_id TEXT NOT NULL,
   book_id TEXT NOT NULL REFERENCES protected_books(id) ON DELETE CASCADE,
   granted_at TIMESTAMPTZ NOT NULL DEFAULT now(),
   PRIMARY KEY (user_id, book_id)
 );
+
+-- Usuários que já tinham livros liberados continuam aprovados.
+INSERT INTO user_approvals (user_id, status, decided_at)
+SELECT DISTINCT user_id, 'approved', now() FROM book_permissions
+ON CONFLICT (user_id) DO NOTHING;
 
 CREATE INDEX IF NOT EXISTS book_permissions_user_id_idx
   ON book_permissions (user_id);

@@ -36,6 +36,13 @@ draft: false
     <button type="submit">Entrar</button>
   </form>
   <button type="button" data-otp-login>Entrar com código por e-mail</button>
+  <form data-signup-form hidden>
+    <h3>Solicitar acesso</h3>
+    <p>Crie sua conta. O acesso aos livros só é liberado depois da aprovação manual.</p>
+    <label>E-mail<input type="email" name="signup-email" required autocomplete="email"></label>
+    <label>Senha<input type="password" name="signup-password" required minlength="8" autocomplete="new-password"></label>
+    <button type="submit">Criar conta</button>
+  </form>
   <form data-otp-form hidden>
     <h3>Confirmar e-mail</h3>
     <p>Digite o código enviado para seu e-mail.</p>
@@ -54,6 +61,7 @@ draft: false
     <label>Confirmar senha<input type="password" name="confirm-password" required minlength="8" autocomplete="new-password"></label>
     <button type="submit">Salvar nova senha</button>
   </form>
+  <button type="button" data-signup>Criar conta</button>
   <button type="button" data-recovery>Esqueci minha senha</button>
   <button type="button" data-back-login hidden>Voltar para o login</button>
   <button type="button" data-logout hidden>Sair</button>
