@@ -43,6 +43,15 @@ draft: false
     <button type="submit">Confirmar código</button>
     <button type="button" data-resend-otp>Enviar outro código</button>
   </form>
+  <form data-signup-form hidden>
+    <h3>Criar conta</h3>
+    <p>Depois do cadastro, o acesso a cada livro é liberado pelo autor.</p>
+    <label>Nome<input type="text" name="signup-name" required autocomplete="name"></label>
+    <label>E-mail<input type="email" name="signup-email" required autocomplete="email"></label>
+    <label>Senha<input type="password" name="signup-password" required minlength="8" autocomplete="new-password"></label>
+    <label>Confirmar senha<input type="password" name="signup-confirm" required minlength="8" autocomplete="new-password"></label>
+    <button type="submit">Criar conta</button>
+  </form>
   <form data-recovery-form hidden>
     <h3>Redefinir senha</h3>
     <label>E-mail<input type="email" name="recovery-email" required autocomplete="email"></label>
@@ -54,6 +63,7 @@ draft: false
     <label>Confirmar senha<input type="password" name="confirm-password" required minlength="8" autocomplete="new-password"></label>
     <button type="submit">Salvar nova senha</button>
   </form>
+  <button type="button" data-signup>Criar nova conta</button>
   <button type="button" data-recovery>Esqueci minha senha</button>
   <button type="button" data-back-login hidden>Voltar para o login</button>
   <button type="button" data-logout hidden>Sair</button>

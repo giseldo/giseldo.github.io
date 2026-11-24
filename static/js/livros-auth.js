@@ -19,6 +19,8 @@ const recoveryButton = root.querySelector("[data-recovery]");
 const otpLoginButton = root.querySelector("[data-otp-login]");
 const resendOtpButton = root.querySelector("[data-resend-otp]");
 const backLoginButton = root.querySelector("[data-back-login]");
+const signupForm = root.querySelector("[data-signup-form]");
+const signupButton = root.querySelector("[data-signup]");
 let pendingOtpEmail = "";
 
 function showMessage(text, error = false) {
@@ -26,45 +28,25 @@ function showMessage(text, error = false) {
   message.dataset.error = error ? "true" : "false";
 }
 
-function showLogin() {
-  loginForm.hidden = false;
-  otpForm.hidden = true;
-  recoveryForm.hidden = true;
-  resetForm.hidden = true;
-  otpLoginButton.hidden = false;
-  recoveryButton.hidden = false;
-  backLoginButton.hidden = true;
+function showView(activeForm) {
+  for (const form of [loginForm, otpForm, signupForm, recoveryForm, resetForm]) {
+    form.hidden = form !== activeForm;
+  }
+  const isLogin = activeForm === loginForm;
+  otpLoginButton.hidden = !isLogin;
+  signupButton.hidden = !isLogin;
+  recoveryButton.hidden = !isLogin;
+  backLoginButton.hidden = isLogin;
 }
+
+const showLogin = () => showView(loginForm);
+const showRecovery = () => showView(recoveryForm);
+const showReset = () => showView(resetForm);
+const showSignup = () => showView(signupForm);
 
 function showOtp() {
-  loginForm.hidden = true;
-  otpForm.hidden = false;
-  recoveryForm.hidden = true;
-  resetForm.hidden = true;
-  otpLoginButton.hidden = true;
-  recoveryButton.hidden = true;
-  backLoginButton.hidden = false;
+  showView(otpForm);
   otpInput.focus();
-}
-
-function showRecovery() {
-  loginForm.hidden = true;
-  otpForm.hidden = true;
-  recoveryForm.hidden = false;
-  resetForm.hidden = true;
-  otpLoginButton.hidden = true;
-  recoveryButton.hidden = true;
-  backLoginButton.hidden = false;
-}
-
-function showReset() {
-  loginForm.hidden = true;
-  otpForm.hidden = true;
-  recoveryForm.hidden = true;
-  resetForm.hidden = false;
-  otpLoginButton.hidden = true;
-  recoveryButton.hidden = true;
-  backLoginButton.hidden = false;
 }
 
 async function loadBooks() {
@@ -76,10 +58,8 @@ async function loadBooks() {
   booksList.innerHTML = books.length
     ? books.map((book) => `<li><a href="${book.url}" target="_blank" rel="noopener">${book.title}</a></li>`).join("")
     : "<li>Nenhum livro liberado para esta conta.</li>";
-  loginForm.hidden = true;
-  otpForm.hidden = true;
-  otpLoginButton.hidden = true;
-  recoveryButton.hidden = true;
+  showView(null);
+  backLoginButton.hidden = true;
   logout.hidden = false;
   showMessage("Acesso autorizado. Os links expiram em 5 minutos.");
   return true;
@@ -131,6 +111,39 @@ otpForm.addEventListener("submit", async (event) => {
     if (!(await loadBooks())) showMessage("A conta ainda não possui acesso aos livros.", true);
   } catch (error) {
     showMessage("Não foi possível confirmar o código. Tente novamente.", true);
+  }
+});
+
+signupButton.addEventListener("click", () => {
+  showSignup();
+  signupForm.querySelector("[name=signup-email]").value = email.value;
+  showMessage("Preencha os dados para criar sua conta.");
+});
+
+signupForm.addEventListener("submit", async (event) => {
+  event.preventDefault();
+  const name = signupForm.querySelector("[name=signup-name]").value.trim();
+  const signupEmail = signupForm.querySelector("[name=signup-email]").value.trim();
+  const signupPassword = signupForm.querySelector("[name=signup-password]").value;
+  const confirm = signupForm.querySelector("[name=signup-confirm]").value;
+  if (signupPassword !== confirm) return showMessage("As senhas não coincidem.", true);
+  showMessage("Criando conta...");
+  try {
+    const result = await auth.signUp.email({ name, email: signupEmail, password: signupPassword });
+    if (result.error) {
+      const exists = /exist|already/i.test(result.error.message || result.error.code || "");
+      return showMessage(exists ? "Já existe uma conta com este e-mail. Use o login ou recupere a senha." : "Não foi possível criar a conta.", true);
+    }
+    signupForm.reset();
+    if (await loadBooks()) {
+      showMessage("Conta criada. O acesso aos livros será liberado pelo autor.");
+    } else {
+      email.value = signupEmail;
+      showLogin();
+      showMessage("Conta criada. Confirme seu e-mail, se solicitado, e depois entre.");
+    }
+  } catch (error) {
+    showMessage("Não foi possível conectar ao serviço de autenticação.", true);
   }
 });
 

@@ -19,7 +19,7 @@ Os livros protegidos devem ser enviados ao bucket privado `livros-privados`, usa
 
 ## Liberar acesso
 
-O cadastro público está desativado. Crie cada usuário autorizado no Neon Auth e depois associe os livros na tabela `book_permissions`:
+A página `acesso-livros` tem um formulário "Criar nova conta" (`auth.signUp.email`). Para funcionar, o cadastro por e-mail e senha precisa estar habilitado no Neon Auth (console do Neon → Auth → configurações). Uma conta nova não vê nenhum livro até receber permissão. Para liberar, pegue o ID do usuário no Neon Auth e associe os livros na tabela `book_permissions`:
 
 ```sql
 INSERT INTO book_permissions (user_id, book_id)
