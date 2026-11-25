@@ -12,7 +12,7 @@ draft: false
   [data-books-access] form { display:grid; gap:1rem; margin:1rem 0; }
   [data-books-access] form[hidden], [data-books-access] [hidden] { display:none !important; }
   [data-books-access] label { display:block; font-weight:600; line-height:1.5; }
-  [data-books-access] label input { display:block; width:100%; box-sizing:border-box; min-height:50px; margin-top:.4rem; padding:.75rem 1rem; font:inherit; color:inherit; background:var(--body-background,#fff); border:1px solid #94a3b8; border-radius:10px; }
+  [data-books-access] label input { display:block; width:100%; box-sizing:border-box; min-height:50px; margin-top:.4rem; padding:.75rem 1rem; font:inherit; color:var(--text-default); background:var(--bg-input); caret-color:var(--text-default); border:1px solid #94a3b8; border-radius:10px; }
   [data-books-access] button, [data-books-access] [data-books-list] a { display:inline-flex; align-items:center; justify-content:center; box-sizing:border-box; min-height:48px; padding:.75rem 1.25rem; border:1px solid #64748b; border-radius:10px; font:inherit; font-weight:650; line-height:1.4; text-align:center; cursor:pointer; text-decoration:none; transition:background .15s,transform .15s; }
   [data-books-access] form button[type=submit], [data-books-access] [data-books-list] a { background:var(--book-accent); border-color:var(--book-accent); color:#fff; }
   [data-books-access] button:hover, [data-books-access] [data-books-list] a:hover { filter:brightness(.92); transform:translateY(-1px); }
