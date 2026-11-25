@@ -14,7 +14,7 @@ function cors(request) {
   return {
     "Access-Control-Allow-Origin": allowedOrigins.has(origin) ? origin : "https://giseldo.github.io",
     "Access-Control-Allow-Headers": "Authorization, Content-Type",
-    "Access-Control-Allow-Methods": "GET, OPTIONS",
+    "Access-Control-Allow-Methods": "GET, DELETE, OPTIONS",
     "Content-Type": "application/json",
     "Vary": "Origin",
   };
@@ -35,13 +35,36 @@ async function authenticatedUser(request) {
   }
 }
 
+// Apaga a conta do próprio usuário. O ID vem do token verificado, nunca do corpo do pedido.
+// O e-mail digitado na confirmação precisa ser o da conta. Sessões e credenciais saem em cascata.
+async function deleteAccount(request, userId) {
+  const body = await request.json().catch(() => null);
+  const email = typeof body?.email === "string" ? body.email.trim() : "";
+  if (!email) return json(request, { error: "Confirme o e-mail da conta" }, 400);
+
+  const deleted = await sql`
+    WITH removed AS (
+      DELETE FROM neon_auth."user"
+      WHERE id::text = ${userId} AND lower(email) = lower(${email})
+      RETURNING id::text AS id
+    ), permissions AS (
+      DELETE FROM book_permissions WHERE user_id IN (SELECT id FROM removed)
+    )
+    SELECT id FROM removed
+  `;
+  if (!deleted.length) return json(request, { error: "O e-mail não corresponde à conta" }, 403);
+  return json(request, { deleted: true });
+}
+
 export default {
   async fetch(request) {
     if (request.method === "OPTIONS") return new Response(null, { headers: cors(request) });
-    if (request.method !== "GET") return json(request, { error: "Método não permitido" }, 405);
+    if (request.method !== "GET" && request.method !== "DELETE") return json(request, { error: "Método não permitido" }, 405);
 
     const userId = await authenticatedUser(request);
     if (!userId) return json(request, { error: "Faça login para acessar os livros" }, 401);
+
+    if (request.method === "DELETE") return deleteAccount(request, userId);
 
     const books = await sql`
       SELECT b.id, b.title, b.description, b.file_key

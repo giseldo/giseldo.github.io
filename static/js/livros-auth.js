@@ -21,6 +21,9 @@ const resendOtpButton = root.querySelector("[data-resend-otp]");
 const backLoginButton = root.querySelector("[data-back-login]");
 const signupForm = root.querySelector("[data-signup-form]");
 const signupButton = root.querySelector("[data-signup]");
+const deleteForm = root.querySelector("[data-delete-form]");
+const deleteButton = root.querySelector("[data-delete-account]");
+const cancelDeleteButton = root.querySelector("[data-cancel-delete]");
 let pendingOtpEmail = "";
 // Preenchida só entre o cadastro e a confirmação do e-mail, para entrar sem pedir a senha de novo.
 let pendingSignupPassword = "";
@@ -39,6 +42,8 @@ function showView(activeForm) {
   signupButton.hidden = !isLogin;
   recoveryButton.hidden = !isLogin;
   backLoginButton.hidden = isLogin;
+  deleteButton.hidden = true;
+  deleteForm.hidden = true;
 }
 
 const showLogin = () => showView(loginForm);
@@ -74,6 +79,7 @@ async function loadBooks() {
   showView(null);
   backLoginButton.hidden = true;
   logout.hidden = false;
+  deleteButton.hidden = false;
   showMessage(books.length
     ? "Acesso autorizado. Os links expiram em 5 minutos."
     : "Sua conta está aguardando aprovação do autor. Depois da liberação, recarregue esta página para ver os livros.");
@@ -233,10 +239,57 @@ resetForm.addEventListener("submit", async (event) => {
 
 logout.addEventListener("click", async () => {
   await auth.signOut();
+  showSignedOut("Sessão encerrada.");
+});
+
+function showSignedOut(text) {
   showLogin();
   logout.hidden = true;
   booksList.innerHTML = "";
-  showMessage("Sessão encerrada.");
+  showMessage(text);
+}
+
+function showDeleteConfirmation(open) {
+  deleteForm.reset();
+  deleteForm.hidden = !open;
+  deleteButton.hidden = open;
+}
+
+deleteButton.addEventListener("click", () => {
+  showDeleteConfirmation(true);
+  deleteForm.querySelector("[name=delete-email]").focus();
+});
+
+cancelDeleteButton.addEventListener("click", () => showDeleteConfirmation(false));
+
+deleteForm.addEventListener("submit", async (event) => {
+  event.preventDefault();
+  const confirmation = deleteForm.querySelector("[name=delete-email]").value.trim();
+  const submit = deleteForm.querySelector("[type=submit]");
+  submit.disabled = true;
+  showMessage("Excluindo conta...");
+  try {
+    const tokenResult = await request(() => auth.token());
+    if (tokenResult.error || !tokenResult.data?.token) {
+      return showMessage("Sua sessão expirou. Saia, entre novamente e repita a exclusão.", true);
+    }
+    const result = await fetch(apiUrl, {
+      method: "DELETE",
+      headers: { Authorization: `Bearer ${tokenResult.data.token}`, "Content-Type": "application/json" },
+      body: JSON.stringify({ email: confirmation }),
+    });
+    if (result.status === 403) return showMessage("O e-mail digitado não é o desta conta.", true);
+    if (!result.ok) return showMessage("Não foi possível excluir a conta. Tente novamente.", true);
+    // A conta já não existe: o signOut só limpa a sessão guardada no navegador, e pode falhar.
+    await auth.signOut().catch(() => {});
+    deleteForm.reset();
+    loginForm.reset();
+    showSignedOut("Sua conta foi excluída.");
+  } catch (error) {
+    showMessage("Não foi possível conectar ao serviço. Tente novamente.", true);
+  } finally {
+    submit.disabled = false;
+  }
 });
 
 if (new URLSearchParams(window.location.search).has("token")) {

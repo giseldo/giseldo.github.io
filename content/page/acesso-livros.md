@@ -15,6 +15,7 @@ draft: false
   [data-books-access] label input { display:block; width:100%; box-sizing:border-box; min-height:50px; margin-top:.4rem; padding:.75rem 1rem; font:inherit; color:var(--text-default); background:var(--bg-input); caret-color:var(--text-default); border:1px solid #94a3b8; border-radius:10px; }
   [data-books-access] button, [data-books-access] [data-books-list] a { display:inline-flex; align-items:center; justify-content:center; box-sizing:border-box; min-height:48px; padding:.75rem 1.25rem; border:1px solid #64748b; border-radius:10px; font:inherit; font-weight:650; line-height:1.4; text-align:center; cursor:pointer; text-decoration:none; transition:background .15s,transform .15s; }
   [data-books-access] form button[type=submit], [data-books-access] [data-books-list] a { background:var(--book-accent); border-color:var(--book-accent); color:#fff; }
+  [data-books-access] form[data-delete-form] button[type=submit] { background:#b91c1c; border-color:#b91c1c; }
   [data-books-access] button:hover, [data-books-access] [data-books-list] a:hover { filter:brightness(.92); transform:translateY(-1px); }
   [data-books-access] button:focus-visible, [data-books-access] input:focus-visible, [data-books-access] a:focus-visible { outline:3px solid #60a5fa; outline-offset:3px; }
   [data-books-access] > button { margin:.4rem .5rem .4rem 0; }
@@ -63,10 +64,18 @@ draft: false
     <label>Confirmar senha<input type="password" name="confirm-password" required minlength="8" autocomplete="new-password"></label>
     <button type="submit">Salvar nova senha</button>
   </form>
+  <form data-delete-form hidden>
+    <h3>Excluir minha conta</h3>
+    <p>Esta ação não pode ser desfeita. Sua conta e o acesso aos livros serão apagados. Para confirmar, digite o e-mail da conta.</p>
+    <label>E-mail da conta<input type="email" name="delete-email" required autocomplete="off"></label>
+    <button type="submit">Excluir definitivamente</button>
+    <button type="button" data-cancel-delete>Cancelar</button>
+  </form>
   <button type="button" data-signup>Criar nova conta</button>
   <button type="button" data-recovery>Esqueci minha senha</button>
   <button type="button" data-back-login hidden>Voltar para o login</button>
   <button type="button" data-logout hidden>Sair</button>
+  <button type="button" data-delete-account hidden>Excluir minha conta</button>
   <p data-message role="status"></p>
   <ul data-books-list></ul>
 </section>

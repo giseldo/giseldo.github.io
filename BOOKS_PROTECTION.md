@@ -13,6 +13,10 @@ neon functions deploy livrosapi --project-id shiny-waterfall-71868294 --branch b
 
 Depois, copie a URL retornada pela Function para o atributo `data-api-url` em `content/page/acesso-livros.md`.
 
+## Exclusão de conta
+
+Depois de entrar, a pessoa pode excluir o próprio cadastro. A página envia um `DELETE` à Function, que apaga a conta em `neon_auth."user"` (sessões e credenciais saem em cascata) e as linhas em `book_permissions`. Qualquer mudança em `books-api/src` só vale depois de um novo deploy da Function.
+
 ## Arquivos privados
 
 Os livros protegidos devem ser enviados ao bucket privado `livros-privados`, usando as chaves listadas em `books-api/schema.sql`. Não publique esses arquivos novamente em `static/` ou no GitHub Pages.
