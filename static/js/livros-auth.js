@@ -22,6 +22,8 @@ const backLoginButton = root.querySelector("[data-back-login]");
 const signupForm = root.querySelector("[data-signup-form]");
 const signupButton = root.querySelector("[data-signup]");
 let pendingOtpEmail = "";
+// Preenchida só entre o cadastro e a confirmação do e-mail, para entrar sem pedir a senha de novo.
+let pendingSignupPassword = "";
 
 function showMessage(text, error = false) {
   message.textContent = text;
@@ -66,29 +68,49 @@ async function loadBooks() {
   const result = await fetch(apiUrl, { headers: { Authorization: `Bearer ${tokenResult.data.token}` } });
   if (!result.ok) return false;
   const { books } = await result.json();
-  booksList.innerHTML = books.length
-    ? books.map((book) => `<li><a href="${book.url}" target="_blank" rel="noopener">${book.title}</a></li>`).join("")
-    : "<li>Nenhum livro liberado para esta conta.</li>";
+  booksList.innerHTML = books
+    .map((book) => `<li><a href="${book.url}" target="_blank" rel="noopener">${book.title}</a></li>`)
+    .join("");
   showView(null);
   backLoginButton.hidden = true;
   logout.hidden = false;
-  showMessage("Acesso autorizado. Os links expiram em 5 minutos.");
+  showMessage(books.length
+    ? "Acesso autorizado. Os links expiram em 5 minutos."
+    : "Sua conta está aguardando aprovação do autor. Depois da liberação, recarregue esta página para ver os livros.");
   return true;
 }
 
-async function requestOtp() {
-  const requestedEmail = email.value.trim();
-  if (!requestedEmail) return showMessage("Informe seu e-mail antes de solicitar o código.", true);
-  pendingOtpEmail = requestedEmail;
+async function sendCode(type) {
   showMessage("Enviando código por e-mail...");
   try {
-    const result = await request(() => auth.emailOtp.sendVerificationOtp({ email: pendingOtpEmail, type: "sign-in" }));
+    const result = await request(() => auth.emailOtp.sendVerificationOtp({ email: pendingOtpEmail, type }));
     if (result.error) return showMessage("Não foi possível enviar o código.", true);
-    showOtp();
     showMessage("Código enviado. Verifique sua caixa de entrada e o spam.");
+    return true;
   } catch (error) {
     showMessage("Não foi possível conectar ao serviço de autenticação.", true);
   }
+}
+
+async function requestLoginCode() {
+  const requestedEmail = email.value.trim();
+  if (!requestedEmail) return showMessage("Informe seu e-mail antes de solicitar o código.", true);
+  pendingOtpEmail = requestedEmail;
+  pendingSignupPassword = "";
+  if (await sendCode("sign-in")) showOtp();
+}
+
+// Usado só logo após o cadastro: confirma o e-mail e então entra com a senha escolhida.
+async function confirmSignup(otp) {
+  const result = await request(() => auth.emailOtp.verifyEmail({ email: pendingOtpEmail, otp }));
+  if (result.error) return showMessage("Código inválido ou expirado.", true);
+  const signIn = await request(() => auth.signIn.email({ email: pendingOtpEmail, password: pendingSignupPassword }));
+  pendingSignupPassword = "";
+  otpForm.reset();
+  if (!signIn.error && (await loadBooks())) return;
+  email.value = pendingOtpEmail;
+  showLogin();
+  showMessage("E-mail confirmado. Agora entre com seu e-mail e senha.");
 }
 
 loginForm.addEventListener("submit", async (event) => {
@@ -97,6 +119,9 @@ loginForm.addEventListener("submit", async (event) => {
   try {
     const result = await request(() => auth.signIn.email({ email: email.value.trim(), password: password.value }));
     if (result.error) {
+      if (result.error.code === "EMAIL_NOT_VERIFIED") {
+        return showMessage("Seu e-mail ainda não foi confirmado. Verifique a caixa de entrada e o spam, ou entre com um código por e-mail.", true);
+      }
       showMessage("E-mail ou senha inválidos. Você também pode entrar usando um código por e-mail.", true);
       return;
     }
@@ -106,17 +131,15 @@ loginForm.addEventListener("submit", async (event) => {
   }
 });
 
-otpLoginButton.addEventListener("click", requestOtp);
+otpLoginButton.addEventListener("click", requestLoginCode);
 
-resendOtpButton.addEventListener("click", async () => {
-  email.value = pendingOtpEmail;
-  await requestOtp();
-});
+resendOtpButton.addEventListener("click", () => sendCode(pendingSignupPassword ? "email-verification" : "sign-in"));
 
 otpForm.addEventListener("submit", async (event) => {
   event.preventDefault();
   showMessage("Confirmando código...");
   try {
+    if (pendingSignupPassword) return await confirmSignup(otpInput.value.trim());
     const result = await request(() => auth.signIn.emailOtp({ email: pendingOtpEmail, otp: otpInput.value.trim(), disableSignUp: true }));
     if (result.error) return showMessage("Código inválido ou expirado.", true);
     if (!(await loadBooks())) showMessage("A conta ainda não possui acesso aos livros.", true);
@@ -149,13 +172,13 @@ signupForm.addEventListener("submit", async (event) => {
       return showMessage(exists ? "Já existe uma conta com este e-mail. Use o login ou recupere a senha." : "Não foi possível criar a conta.", true);
     }
     signupForm.reset();
-    if (await loadBooks()) {
-      showMessage("Conta criada. O acesso aos livros será liberado pelo autor.");
-    } else {
-      email.value = signupEmail;
-      showLogin();
-      showMessage("Conta criada. Confirme seu e-mail, se solicitado, e depois entre.");
-    }
+    // Se o cadastro já abriu uma sessão, não há e-mail para confirmar.
+    if (await loadBooks()) return;
+    pendingOtpEmail = signupEmail;
+    pendingSignupPassword = signupPassword;
+    otpForm.reset();
+    showOtp();
+    await sendCode("email-verification");
   } catch (error) {
     showMessage("Não foi possível conectar ao serviço de autenticação.", true);
   }
@@ -168,6 +191,7 @@ recoveryButton.addEventListener("click", () => {
 });
 
 backLoginButton.addEventListener("click", () => {
+  pendingSignupPassword = "";
   showLogin();
   showMessage("");
 });
