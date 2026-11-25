@@ -9,5 +9,8 @@
     "@neondatabase/serverless": "latest",
     "files-sdk": "latest",
     "jose": "latest"
+  },
+  "scripts": {
+    "permissoes": "node scripts/permissoes.js"
   }
 }
