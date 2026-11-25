@@ -49,8 +49,19 @@ function showOtp() {
   otpInput.focus();
 }
 
+// A biblioteca lança uma exceção quando o servidor recusa o pedido. Aqui a recusa
+// volta como result.error, e só as falhas sem resposta HTTP continuam como exceção.
+async function request(operation) {
+  try {
+    return await operation();
+  } catch (error) {
+    if (!error?.status) throw error;
+    return { error: error.error || error };
+  }
+}
+
 async function loadBooks() {
-  const tokenResult = await auth.token();
+  const tokenResult = await request(() => auth.token());
   if (tokenResult.error || !tokenResult.data?.token) return false;
   const result = await fetch(apiUrl, { headers: { Authorization: `Bearer ${tokenResult.data.token}` } });
   if (!result.ok) return false;
@@ -71,7 +82,7 @@ async function requestOtp() {
   pendingOtpEmail = requestedEmail;
   showMessage("Enviando código por e-mail...");
   try {
-    const result = await auth.emailOtp.sendVerificationOtp({ email: pendingOtpEmail, type: "sign-in" });
+    const result = await request(() => auth.emailOtp.sendVerificationOtp({ email: pendingOtpEmail, type: "sign-in" }));
     if (result.error) return showMessage("Não foi possível enviar o código.", true);
     showOtp();
     showMessage("Código enviado. Verifique sua caixa de entrada e o spam.");
@@ -84,7 +95,7 @@ loginForm.addEventListener("submit", async (event) => {
   event.preventDefault();
   showMessage("Entrando...");
   try {
-    const result = await auth.signIn.email({ email: email.value.trim(), password: password.value });
+    const result = await request(() => auth.signIn.email({ email: email.value.trim(), password: password.value }));
     if (result.error) {
       showMessage("E-mail ou senha inválidos. Você também pode entrar usando um código por e-mail.", true);
       return;
@@ -106,7 +117,7 @@ otpForm.addEventListener("submit", async (event) => {
   event.preventDefault();
   showMessage("Confirmando código...");
   try {
-    const result = await auth.signIn.emailOtp({ email: pendingOtpEmail, otp: otpInput.value.trim(), disableSignUp: true });
+    const result = await request(() => auth.signIn.emailOtp({ email: pendingOtpEmail, otp: otpInput.value.trim(), disableSignUp: true }));
     if (result.error) return showMessage("Código inválido ou expirado.", true);
     if (!(await loadBooks())) showMessage("A conta ainda não possui acesso aos livros.", true);
   } catch (error) {
@@ -129,8 +140,11 @@ signupForm.addEventListener("submit", async (event) => {
   if (signupPassword !== confirm) return showMessage("As senhas não coincidem.", true);
   showMessage("Criando conta...");
   try {
-    const result = await auth.signUp.email({ name, email: signupEmail, password: signupPassword });
+    const result = await request(() => auth.signUp.email({ name, email: signupEmail, password: signupPassword }));
     if (result.error) {
+      if (result.error.code === "EMAIL_PASSWORD_SIGN_UP_DISABLED") {
+        return showMessage("O cadastro de novas contas está desativado no momento.", true);
+      }
       const exists = /exist|already/i.test(result.error.message || result.error.code || "");
       return showMessage(exists ? "Já existe uma conta com este e-mail. Use o login ou recupere a senha." : "Não foi possível criar a conta.", true);
     }
@@ -163,10 +177,10 @@ recoveryForm.addEventListener("submit", async (event) => {
   const recoveryEmail = recoveryForm.querySelector("[name=recovery-email]").value;
   showMessage("Enviando link de recuperação...");
   try {
-    const result = await auth.requestPasswordReset({
+    const result = await request(() => auth.requestPasswordReset({
       email: recoveryEmail,
       redirectTo: window.location.href.split("?")[0],
-    });
+    }));
     if (result.error) return showMessage("Não foi possível enviar o link de recuperação.", true);
     showMessage("Verifique seu e-mail para escolher uma nova senha.");
   } catch (error) {
@@ -183,7 +197,7 @@ resetForm.addEventListener("submit", async (event) => {
   if (!token) return showMessage("O link de recuperação é inválido ou expirou.", true);
   showMessage("Salvando nova senha...");
   try {
-    const result = await auth.resetPassword({ newPassword, token });
+    const result = await request(() => auth.resetPassword({ newPassword, token }));
     if (result.error) return showMessage("O link expirou ou é inválido.", true);
     window.history.replaceState({}, document.title, window.location.pathname);
     showLogin();
