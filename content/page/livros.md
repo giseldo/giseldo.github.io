@@ -135,6 +135,8 @@ suas futuras explorações no mundo do processamento de linguagem natural. -->
 <a href="/page/acesso-livros/">Acessar versão protegida</a></br>
 <a href="https://loja.uiclap.com/titulo/ua116145" target="_blank">Adquirir PDF na UICLAP (↗)</a> 
 
+{{< endcolumns >}}
+
 ---
 
 ## Contos de Viçosa (versão rascunho)
@@ -144,5 +146,21 @@ suas futuras explorações no mundo do processamento de linguagem natural. -->
 {{< column >}}
 
 <a href="/page/acesso-livros/">Acessar versão protegida</a> </br>
+
+{{< endcolumns >}}
+
+---
+
+## Noções de Matemática Discreta aplicada à Matemática Financeira
+
+{{< columns >}}
+{{< figure src="/images/livro/matematicadiscreta/capa.png" width="75%" >}}
+{{< column >}}
+
+Livro de Aldo Agustinho Alves e Giseldo da Silva Neo que apresenta conceitos matemáticos e os aplica a situações do cotidiano, como descontos, compras a prazo e financiamentos: razão, proporção e porcentagem, progressões, logaritmos e exponenciais, juros simples e compostos e sistemas de amortização SAC e Price.
+
+<a href="/page/acesso-livros/">Acessar versão protegida</a></br>
+<a href="https://leanpub.com/noesdematemticabsicaaplicadamatemticafinanceira" target="_blank">Adquirir na Leanpub (↗)</a></br>
+<a href="https://loja.uiclap.com/titulo/ua222488" target="_blank">Adquirir PDF na UICLAP (↗)</a></br>
 
 {{< endcolumns >}}

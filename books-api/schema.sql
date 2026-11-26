@@ -24,6 +24,7 @@ VALUES
   ('reg', 'Regressão Linear com Aprendizagem de Máquina', 'reg/reg.pdf'),
   ('vetorizacao', 'Processamento de Linguagem Natural', 'vetorizacao/vetorizacao.pdf'),
   ('contos', 'Contos do Sistema Solar', 'contos/contos.pdf'),
-  ('contosvicosa', 'Contos de Viçosa', 'contosvicosa/contosvicosa.pdf')
+  ('contosvicosa', 'Contos de Viçosa', 'contosvicosa/contosvicosa.pdf'),
+  ('matematicadiscreta', 'Noções de Matemática Discreta aplicada à Matemática Financeira', 'matematicadiscreta/matematicadiscreta.pdf')
 ON CONFLICT (id) DO UPDATE
 SET title = EXCLUDED.title, file_key = EXCLUDED.file_key;
